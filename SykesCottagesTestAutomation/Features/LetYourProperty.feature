@@ -10,7 +10,7 @@ Scenario: Assert that the user can navigate to the Let Your Property page
 @LetYourProperty
 Scenario: Assert that the Let Your Property page loads
 	Given I have navigated to the Let Your Property page
-	Then the relevant page title is diplayed
+	Then the Let Your Property page is diplayed
 
 @LetYourProperty
 Scenario: Assert that the enquiry form is displayed

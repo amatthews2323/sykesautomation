@@ -7,8 +7,6 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class CommonSteps
     {
-        //public IWebDriver driver;
-
         public class SharedDriver
         {
             public IWebDriver driver;

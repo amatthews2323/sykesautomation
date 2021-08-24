@@ -8,21 +8,21 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        readonly string url = "https://tech.staging.sykescottages.co.uk/";
-        //public IWebDriver driver;
-
         public Hooks(SharedDriver context) : base(context)
         {
         }
 
+        readonly string url = "https://tech.staging.sykescottages.co.uk/";
+
         [BeforeScenario]
         public void StartTest()
         {
-            //driver = new FirefoxDriver
-            shared.driver = new ChromeDriver(@"C:\Users\gary.smith\AppData\Roaming\Microsoft\Windows\Start Menu\Programs")
-            {
-                Url = url
-            };
+            //FirefoxDriver
+            //shared.driver = new FirefoxDriver
+
+            //ChromeDriver
+            shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
+            shared.driver.Navigate().GoToUrl(url);
 
             //Maximise browser window
             shared.driver.Manage().Window.Maximize();

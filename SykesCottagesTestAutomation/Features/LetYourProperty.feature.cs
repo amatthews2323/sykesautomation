@@ -148,7 +148,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the Let Your Property page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
- testRunner.Then("the relevant page title is diplayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the Let Your Property page is diplayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
