@@ -1,5 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Edge;
 using System;
 using TechTalk.SpecFlow;
 
@@ -17,11 +19,17 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            //FirefoxDriver
-            //shared.driver = new FirefoxDriver
+            //EdgeDriver
+            shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers\Edge");
+
+            //FirefoxDriver 
+            //FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");   
+            //service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+            //shared.driver = new FirefoxDriver(service);
 
             //ChromeDriver
-            shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
+            //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
+
             shared.driver.Navigate().GoToUrl(url);
 
             //Maximise browser window

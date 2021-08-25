@@ -16,12 +16,12 @@ namespace SykesCottagesTestAutomation
 
         public CommonSteps(SharedDriver context)
         {
-            this.shared = context;
+            shared = context;
         }
 
         public void AssertPageTitle(string title)
         {
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(5000);
             string pageTitle = shared.driver.Title;
             Assert.IsTrue(pageTitle.Contains(title), pageTitle + " does not match " + title);
         }
