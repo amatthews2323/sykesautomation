@@ -33,7 +33,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the enquiry form is displayed")]
         public void ThenTheEnquiryFormIsDisplayed()
         {
-            Assert.IsTrue(shared.driver.FindElement(By.XPath("//div[@class='c-lyc-form js-enquiry-form']")).Displayed, "Enquiry form not found");
+            Assert.IsTrue(shared.driver.FindElement(By.XPath("//div[contains(@class,'js-enquiry-form')]")).Displayed, "Enquiry form not found");
         }
 
         [Then(@"the Let Your Property page is diplayed")]
