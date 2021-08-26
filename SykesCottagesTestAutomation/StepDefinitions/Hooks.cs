@@ -10,20 +10,13 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public Hooks(SharedDriver context) : base(context)
-        {
-        }
-
-        readonly string tech = "https://tech.staging.sykescottages.co.uk/";
-        readonly string prod = "https://product.staging.sykescottages.co.uk/";
-        readonly string cro = "https://cro.staging.sykescottages.co.uk";
-        readonly string ma = "https://project.staging.sykescottages.co.uk";
+        readonly string baseUrl = SetBaseUrl("Tech"); //Set base URL: Tech | Prod | Cro | M&A | Live
 
         [BeforeScenario]
         public void StartTest()
         {
-            SelectBrowser(BrowserType.Edge); //Set browser: Chrome | Friefox | Edge
-            shared.driver.Navigate().GoToUrl(prod); //Launch website: tech | prod | cro | ma
+            SelectBrowser(BrowserType.Chrome); //Set browser: Chrome | Friefox | Edge
+            shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
 
@@ -75,6 +68,37 @@ namespace SykesCottagesTestAutomation
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
                     break;
             }
+        }
+
+        public static string SetBaseUrl(string envType)
+        {
+            string url;
+            if (envType == "Tech")
+            {
+                url = "https://tech.staging.sykescottages.co.uk/";
+                return url;
+            }
+            if (envType == "Prod")
+            {
+                url = "https://product.staging.sykescottages.co.uk/";
+                return url;
+            }
+            if (envType == "Cro")
+            {
+                url = "https://cro.staging.sykescottages.co.uk";
+                return url;
+            }
+            if (envType == "M&A")
+            {
+                url = "https://project.staging.sykescottages.co.uk";
+                return url;
+            }
+            url = "https://tech.staging.sykescottages.co.uk/";
+            return url;
+        }
+
+        public Hooks(SharedDriver context) : base(context)
+        {
         }
     }
 }
