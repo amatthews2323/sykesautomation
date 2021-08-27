@@ -1,3 +1,6 @@
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -10,12 +13,50 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
+        private readonly FeatureContext _featureContext;
+        private readonly ScenarioContext _scenarioContext;
+
+        public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
+        {
+            _featureContext = featureContext;
+            _scenarioContext = scenarioContext;
+        }
+
         readonly string baseUrl = SetBaseUrl("Tech"); //Set base URL: Tech | Prod | Cro | M&A | Live
+
+        private static ExtentTest featureName;
+        private static ExtentTest scenario;
+        private static ExtentReports extent;
+        public static string ReportPath;
+
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            //Initialize the Report
+            var htmlReporter = new ExtentHtmlReporter(@"C:\Logs\ExtentReport.html");
+            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+            htmlReporter.Config.ReportName = "Automation Test Report";
+            extent = new ExtentReports();
+            extent.AttachReporter(htmlReporter);
+        }
+
+        [BeforeFeature]
+        public static void BeforeFeature(FeatureContext featureContext)
+        {
+            //Create dynamic feature name
+            featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
+        }
 
         [BeforeScenario]
         public void StartTest()
         {
-            SelectBrowser(BrowserType.Chrome); //Set browser: Chrome | Friefox | Edge
+            //Create feature name
+            featureName = extent.CreateTest<Feature>(_featureContext.FeatureInfo.Title);
+
+            //Get scenario name
+            scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
+
+            SelectBrowser(BrowserType.Chrome); //Set browser: Chrome | Firefox | Edge
             shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
@@ -35,11 +76,46 @@ namespace SykesCottagesTestAutomation
             }
         }
 
+        [AfterStep]
+        public void InsertReportingSteps()
+        {
+            var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
+
+            if (_scenarioContext.TestError == null)
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text);
+                else if (stepType == "When")
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text);
+                else if (stepType == "Then")
+                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text);
+                else if (stepType == "And")
+                    scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text);
+            }
+            else if (_scenarioContext.TestError != null)
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+                else if (stepType == "When")
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+                else if (stepType == "Then")
+                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+                else if (stepType == "And")
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+            }
+        }
+
         [AfterScenario]
         public void EndTest()
         {
             shared.driver.Quit();
             shared.driver.Dispose();
+        }
+
+        [AfterTestRun]
+        public static void AfterTestRun()
+        {
+            extent.Flush();
         }
 
         public enum BrowserType
@@ -93,12 +169,13 @@ namespace SykesCottagesTestAutomation
                 url = "https://project.staging.sykescottages.co.uk";
                 return url;
             }
+            if (envType == "Live")
+            {
+                url = "https://www.sykescottages.co.uk/";
+                return url;
+            }
             url = "https://tech.staging.sykescottages.co.uk/";
             return url;
-        }
-
-        public Hooks(SharedDriver context) : base(context)
-        {
         }
     }
 }

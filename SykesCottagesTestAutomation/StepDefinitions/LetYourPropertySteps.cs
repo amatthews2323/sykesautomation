@@ -21,7 +21,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheLetYourPropertyPage()
         {
             Click("Let Your Property");
-            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
+            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Propppperty");
         }
 
         [When(@"I click the Let your property button")]
