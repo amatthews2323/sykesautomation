@@ -6,6 +6,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
 using System;
+using System.Reflection;
 using TechTalk.SpecFlow;
 
 namespace SykesCottagesTestAutomation
@@ -15,6 +16,11 @@ namespace SykesCottagesTestAutomation
     {
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
+        private static ExtentTest featureName;
+        private static ExtentTest scenario;
+        private static ExtentReports extent;
+        public static string ReportPath;
+        readonly string baseUrl = SetBaseUrl("Tech"); //Set base URL: Tech | Product | Cro | M&A | Live
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
         {
@@ -22,17 +28,11 @@ namespace SykesCottagesTestAutomation
             _scenarioContext = scenarioContext;
         }
 
-        readonly string baseUrl = SetBaseUrl("Tech"); //Set base URL: Tech | Prod | Cro | M&A | Live
-
-        private static ExtentTest featureName;
-        private static ExtentTest scenario;
-        private static ExtentReports extent;
-        public static string ReportPath;
-
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
             //Initialize the Report
+            //DateTime now = DateTime.Now;
             var htmlReporter = new ExtentHtmlReporter(@"C:\Logs\ExtentReport.html");
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             htmlReporter.Config.ReportName = "Automation Test Report";
@@ -51,7 +51,7 @@ namespace SykesCottagesTestAutomation
         public void StartTest()
         {
             //Create feature name
-            featureName = extent.CreateTest<Feature>(_featureContext.FeatureInfo.Title);
+            //featureName = extent.CreateTest<Feature>(_featureContext.FeatureInfo.Title);
 
             //Get scenario name
             scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
@@ -81,28 +81,44 @@ namespace SykesCottagesTestAutomation
         {
             var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
 
+/*            PropertyInfo pInfo = typeof(ScenarioContext).GetProperty("TestStatus", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            MethodInfo getter = pInfo.GetGetMethod(nonPublic: true);
+            object TestResult = getter.Invoke(_scenarioContext.ScenarioInfo, null);*/
+
             if (_scenarioContext.TestError == null)
             {
                 if (stepType == "Given")
                     scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "When")
+                else if(stepType == "When")
                     scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "Then")
+                else if(stepType == "Then")
                     scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text);
-                else if (stepType == "And")
+                else if(stepType == "And")
                     scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text);
             }
             else if (_scenarioContext.TestError != null)
             {
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
-                else if (stepType == "When")
-                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
-                else if (stepType == "Then")
-                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                else if(stepType == "When")
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                else if(stepType == "Then")
+                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
                 else if (stepType == "And")
-                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.InnerException);
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
             }
+
+/*            if (TestResult.ToString() == "StepDefinitionPending")
+            {
+                if (stepType == "Given")
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
+                else if (stepType == "When")
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
+                else if (stepType == "Then")
+                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
+                else if (stepType == "And")
+                    scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
+            }*/
         }
 
         [AfterScenario]
@@ -154,7 +170,7 @@ namespace SykesCottagesTestAutomation
                 url = "https://tech.staging.sykescottages.co.uk/";
                 return url;
             }
-            if (envType == "Prod")
+            if (envType == "Product")
             {
                 url = "https://product.staging.sykescottages.co.uk/";
                 return url;

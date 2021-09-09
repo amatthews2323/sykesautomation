@@ -23,7 +23,7 @@ namespace SykesCottagesTestAutomation
         {
             System.Threading.Thread.Sleep(5000);
             string pageTitle = shared.driver.Title;
-            Assert.IsTrue(pageTitle.Contains(title), pageTitle + " does not match " + title);
+            Assert.IsTrue(pageTitle.Contains(title), "Page title '" + pageTitle + "' does not match '" + title + "'");
         }
 
         public void Click(string text)

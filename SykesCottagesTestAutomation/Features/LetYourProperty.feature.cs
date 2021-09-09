@@ -157,12 +157,10 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Assert that the enquiry form is displayed")]
         [NUnit.Framework.CategoryAttribute("LetYourProperty")]
-        [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         public virtual void AssertThatTheEnquiryFormIsDisplayed()
         {
             string[] tagsOfScenario = new string[] {
-                    "LetYourProperty",
-                    "EnquiryForm"};
+                    "LetYourProperty"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Assert that the enquiry form is displayed", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 16

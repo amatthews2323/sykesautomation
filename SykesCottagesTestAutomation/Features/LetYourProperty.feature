@@ -12,7 +12,7 @@ Scenario: Assert that the Let Your Property page loads
 	Given I have navigated to the Let Your Property page
 	Then the Let Your Property page is diplayed
 
-@LetYourProperty @EnquiryForm
+@LetYourProperty
 Scenario: Assert that the enquiry form is displayed
 	Given I have navigated to the Let Your Property page
 	Then the enquiry form is displayed
