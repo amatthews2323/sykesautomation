@@ -1,12 +1,9 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
-using System;
-using System.Reflection;
 using TechTalk.SpecFlow;
 
 namespace SykesCottagesTestAutomation
@@ -20,7 +17,8 @@ namespace SykesCottagesTestAutomation
         private static ExtentTest scenario;
         private static ExtentReports extent;
         public static string ReportPath;
-        readonly string baseUrl = SetBaseUrl("Tech"); //Set base URL: Tech | Product | Cro | M&A | Live
+        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | M&A | Live
+        private string baseUrl = SetBaseUrl(Environemt); 
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
         {
@@ -50,40 +48,20 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            //Create feature name
-            //featureName = extent.CreateTest<Feature>(_featureContext.FeatureInfo.Title);
-
-            //Get scenario name
-            scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title);
-
             SelectBrowser(BrowserType.Chrome); //Set browser: Chrome | Firefox | Edge
+
             shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
+            ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
 
-            //If pop-up displayed, accept cookies
-            IWebElement acceptCookiesButton = shared.driver.FindElement(By.XPath("//button[contains(text(),'Accept All Cookies')]"));
-            try
-            {
-                if (acceptCookiesButton.Displayed)
-                {
-                    acceptCookiesButton.Click();
-                }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Accept cookies button not found");
-            }
+            scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
         }
 
         [AfterStep]
         public void InsertReportingSteps()
         {
             var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
-
-/*            PropertyInfo pInfo = typeof(ScenarioContext).GetProperty("TestStatus", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
-            MethodInfo getter = pInfo.GetGetMethod(nonPublic: true);
-            object TestResult = getter.Invoke(_scenarioContext.ScenarioInfo, null);*/
 
             if (_scenarioContext.TestError == null)
             {
@@ -107,18 +85,6 @@ namespace SykesCottagesTestAutomation
                 else if (stepType == "And")
                     scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
             }
-
-/*            if (TestResult.ToString() == "StepDefinitionPending")
-            {
-                if (stepType == "Given")
-                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
-                else if (stepType == "When")
-                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
-                else if (stepType == "Then")
-                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
-                else if (stepType == "And")
-                    scenario.CreateNode<And>(_scenarioContext.StepContext.StepInfo.Text).Skip("Step not executed");
-            }*/
         }
 
         [AfterScenario]
