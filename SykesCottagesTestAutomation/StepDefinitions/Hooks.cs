@@ -1,10 +1,12 @@
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.Gherkin.Model;
-using AventStack.ExtentReports.Reporter;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
 using TechTalk.SpecFlow;
+using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
+using System;
 
 namespace SykesCottagesTestAutomation
 {
@@ -16,8 +18,9 @@ namespace SykesCottagesTestAutomation
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
+        private static ExtentKlovReporter klov;
         public static string ReportPath;
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | M&A | Live
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | M&A | Live
         private string baseUrl = SetBaseUrl(Environemt); 
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
@@ -30,11 +33,24 @@ namespace SykesCottagesTestAutomation
         public static void BeforeTestRun()
         {
             //Initialize the Report
-            //DateTime now = DateTime.Now;
             var htmlReporter = new ExtentHtmlReporter(@"C:\Logs\ExtentReport.html");
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             htmlReporter.Config.ReportName = "Automation Test Report";
             extent = new ExtentReports();
+
+            /*            klov = new ExtentKlovReporter();
+                        klov.InitMongoDbConnection("localhost", 27017);
+                        klov.ProjectName = "Sykes Automated Test";
+                        klov.KlovUrl = "http://localhost:5689";
+                        klov.ReportName = "Let Your Property Report" + DateTime.Now.ToString();*/
+
+/*            ExtentKlovReporter klov = new ExtentKlovReporter("project", "build");
+            klov.InitMongoDbConnection("localhost", 27017);
+            klov.ProjectName = "Sykes Automated Test";
+            klov.InitKlovServerConnection("http://localhost");
+            klov.ReportName = "Let Your Property Report" + DateTime.Now.ToString();
+            extent.AttachReporter(htmlReporter, klov);*/
+
             extent.AttachReporter(htmlReporter);
         }
 
@@ -76,14 +92,16 @@ namespace SykesCottagesTestAutomation
             }
             else if (_scenarioContext.TestError != null)
             {
+                var mediaEntity = TakeScreenshot(_scenarioContext.ScenarioInfo.Title.Trim());
+
                 if (stepType == "Given")
-                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                    scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message, mediaEntity);
                 else if(stepType == "When")
-                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message, mediaEntity);
                 else if(stepType == "Then")
-                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                    scenario.CreateNode<Then>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message, mediaEntity);
                 else if (stepType == "And")
-                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message);
+                    scenario.CreateNode<When>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message, mediaEntity);
             }
         }
 
@@ -158,6 +176,13 @@ namespace SykesCottagesTestAutomation
             }
             url = "https://tech.staging.sykescottages.co.uk/";
             return url;
+        }
+
+        public MediaEntityModelProvider TakeScreenshot(string Name)
+        {
+            var screenshot = ((ITakesScreenshot)shared.driver).GetScreenshot().AsBase64EncodedString;
+
+            return MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, Name).Build();
         }
     }
 }

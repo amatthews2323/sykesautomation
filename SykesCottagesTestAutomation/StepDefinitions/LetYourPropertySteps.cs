@@ -46,7 +46,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the Let Your Property page is diplayed")]
         public void ThenTheLetYourPropertyPageIsDisplayed()
         {
-            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
+            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Proppppppperty");
         }
     }
 }
