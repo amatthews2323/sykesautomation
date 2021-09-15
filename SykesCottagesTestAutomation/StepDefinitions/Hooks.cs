@@ -13,15 +13,17 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
+
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
-        private static ExtentKlovReporter klov;
+        //private static ExtentKlovReporter klov;
         public static string ReportPath;
-        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | M&A | Live
-        private string baseUrl = SetBaseUrl(Environemt); 
+        private readonly string baseUrl = SetBaseUrl(Environemt); 
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
         {
@@ -38,13 +40,7 @@ namespace SykesCottagesTestAutomation
             htmlReporter.Config.ReportName = "Automation Test Report";
             extent = new ExtentReports();
 
-            /*            klov = new ExtentKlovReporter();
-                        klov.InitMongoDbConnection("localhost", 27017);
-                        klov.ProjectName = "Sykes Automated Test";
-                        klov.KlovUrl = "http://localhost:5689";
-                        klov.ReportName = "Let Your Property Report" + DateTime.Now.ToString();*/
-
-/*            ExtentKlovReporter klov = new ExtentKlovReporter("project", "build");
+            /*ExtentKlovReporter klov = new ExtentKlovReporter("project", "build");
             klov.InitMongoDbConnection("localhost", 27017);
             klov.ProjectName = "Sykes Automated Test";
             klov.InitKlovServerConnection("http://localhost");
@@ -64,8 +60,7 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            SelectBrowser(BrowserType.Chrome); //Set browser: Chrome | Firefox | Edge
-
+            SelectBrowser(Browser); //Select driver
             shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
@@ -118,26 +113,20 @@ namespace SykesCottagesTestAutomation
             extent.Flush();
         }
 
-        public enum BrowserType
+        //internal void SelectBrowser(BrowserType browserType)
+        internal void SelectBrowser(string browser)
         {
-            Chrome,
-            Firefox,
-            Edge
-        }
-
-        internal void SelectBrowser(BrowserType browserType)
-        {
-            switch (browserType)
+            switch (browser)
             {
-                case BrowserType.Chrome:
+                case "Chrome":
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
                     break;
-                case BrowserType.Firefox:
+                case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");   
                     service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
                     shared.driver = new FirefoxDriver(service);
                     break;
-                case BrowserType.Edge:
+                case "Edge":
                     shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers\Edge");
                     break;
                 default:
@@ -164,7 +153,7 @@ namespace SykesCottagesTestAutomation
                 url = "https://cro.staging.sykescottages.co.uk";
                 return url;
             }
-            if (envType == "M&A")
+            if (envType == "Project")
             {
                 url = "https://project.staging.sykescottages.co.uk";
                 return url;
