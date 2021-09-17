@@ -15,14 +15,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
-            if (Hooks.Environemt != "Live")
-            {
-                AssertPageTitle("Holiday Cottages To Rent - UK Holidays | Sykes Cottages");
-            }
-            else
-            {
-                AssertPageTitle("Holiday Cottages To Rent - UK Cottage Holidays");
-            }
+            AssertPageTitle("Holiday Cottages To Rent - UK Cottage Holidays");
         }
 
         [Given(@"I have navigated to the Let Your Property page")]
@@ -32,10 +25,18 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
         }
 
-        [When(@"I click the Let your property button")]
-        public void IClickTheLetYourPropertyButton()
+        [When(@"I click the '(.*)' link")]
+        public void IClickTheLink(string value)
         {
-            Click("Let Your Property");
+            Click(value);
+        }
+
+        [When(@"I click the '(.*)' header link under '(.*)'")]
+        public void WhenIClickTheHeaderLinkUnder(string headedLink, string headerMenu)
+        {
+            MouseOver(headerMenu);
+            MouseOver(headedLink);
+            Click(headedLink);
         }
 
         [Then(@"the enquiry form is displayed")]
@@ -44,7 +45,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             Assert.IsTrue(shared.driver.FindElement(By.XPath("//div[contains(@class,'js-enquiry-form')]")).Displayed, "Enquiry form not found");
         }
 
-        [Then(@"the Let Your Property page is diplayed")]
+        [Then(@"the Let Your Property page is displayed")]
         public void ThenTheLetYourPropertyPageIsDisplayed()
         {
             AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
@@ -65,7 +66,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             if (Hooks.Environemt != "Live")
             {
-                Click("enquiry-button lyc-cta lyc-cta--blue u-full-width js-enquiry-form-button");
+                Click("submit");
             }
             else
             {
@@ -84,6 +85,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             {
                 Console.WriteLine("Step skipped on Live environment");
             }
+        }
+
+        [Then(@"the '(.*)' page is displayed")]
+        public void ThenPageIsDisplayed(string value)
+        {
+            AssertPageTitle(value);
         }
     }
 }

@@ -4,13 +4,8 @@
 @LetYourProperty
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
-	When I click the Let your property button
-	Then the Let Your Property page is diplayed
-
-@LetYourProperty
-Scenario: The Let Your Property page loads
-	Given I have navigated to the Let Your Property page
-	Then the Let Your Property page is diplayed
+	When I click the 'Let Your Property' link
+	Then the Let Your Property page is displayed
 
 @LetYourProperty
 Scenario: The enquiry form is displayed
