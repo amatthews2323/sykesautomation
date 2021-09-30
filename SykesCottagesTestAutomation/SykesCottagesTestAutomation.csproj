@@ -38,4 +38,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Drivers\Chrome\" />
+  </ItemGroup>
+
 </Project>

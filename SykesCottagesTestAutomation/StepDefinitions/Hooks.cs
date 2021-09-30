@@ -6,15 +6,15 @@ using TechTalk.SpecFlow;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
-using System;
 
 namespace SykesCottagesTestAutomation
 {
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
+        public static string Experiment = "";
 
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
@@ -23,7 +23,7 @@ namespace SykesCottagesTestAutomation
         private static ExtentReports extent;
         //private static ExtentKlovReporter klov;
         public static string ReportPath;
-        private readonly string baseUrl = SetBaseUrl(Environemt); 
+        public static string baseUrl = SetBaseUrl(Environemt);
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
         {
@@ -60,12 +60,7 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            SelectBrowser(Browser); //Select driver
-            shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
-            shared.driver.Manage().Window.Maximize(); //Maximise browser window
-            System.Threading.Thread.Sleep(2000); //Wait for the page to load
-            ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
-
+            LaunchBrowser();
             scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
         }
 
@@ -111,6 +106,15 @@ namespace SykesCottagesTestAutomation
         public static void AfterTestRun()
         {
             extent.Flush();
+        }
+
+        public void LaunchBrowser()
+        {
+            SelectBrowser(Browser); //Select driver
+            shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
+            shared.driver.Manage().Window.Maximize(); //Maximise browser window
+            System.Threading.Thread.Sleep(2000); //Wait for the page to load
+            ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
         }
 
         //internal void SelectBrowser(BrowserType browserType)

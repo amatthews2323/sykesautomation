@@ -15,7 +15,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
-            AssertPageTitle("Holiday Cottages To Rent - UK Cottage Holidays");
+            AssertPageTitle("Holiday Cottages To Rent - UK Holidays");
         }
 
         [Given(@"I have navigated to the Let Your Property page")]
@@ -91,6 +91,21 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenPageIsDisplayed(string value)
         {
             AssertPageTitle(value);
+        }
+
+        [Given(@"I have navigated to the Let Your Property Dev Tools page")]
+        public void GivenIHaveNavigatedToTheLetYourPropertyDevToolsPage()
+        {
+            shared.driver.Navigate().GoToUrl(Hooks.baseUrl + "/letyourcottage/?dev_tools=product");
+        }
+
+        [When(@"I select the following experiments '(.*)'")]
+        public void WhenISelectTheFollowingExperiments(string experimentId)
+        {
+            Type("experiment-search", experimentId);
+            System.Threading.Thread.Sleep(2000);
+            shared.driver.FindElement(By.XPath("//li[contains(@data-name'" + experimentId + "')]")).Click();
+            System.Threading.Thread.Sleep(2000);
         }
     }
 }
