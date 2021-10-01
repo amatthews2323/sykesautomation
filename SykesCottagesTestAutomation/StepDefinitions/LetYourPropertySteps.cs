@@ -15,7 +15,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
-            AssertPageTitle("Holiday Cottages To Rent - UK Holidays");
+            AssertPageTitle("Holiday Cottages To Rent");
         }
 
         [Given(@"I have navigated to the Let Your Property page")]

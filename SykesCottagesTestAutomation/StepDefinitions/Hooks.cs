@@ -12,9 +12,9 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
-        public static string Experiment = "";
+        public static string Experiments = "17640, 17571";
 
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
@@ -111,10 +111,25 @@ namespace SykesCottagesTestAutomation
         public void LaunchBrowser()
         {
             SelectBrowser(Browser); //Select driver
-            shared.driver.Navigate().GoToUrl(baseUrl); //Launch website
+            shared.driver.Navigate().GoToUrl(baseUrl + "?dev_tools=product"); //Launch website
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
             ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
+            //Select experiement(s)
+            if (Experiments != null)
+            {
+                Click("Dev Tools");
+                var primeArray = Experiments.Split(",");
+                for (int i = 0; i < primeArray.Length; i++)
+                {
+                    var Experiment = primeArray[i].Trim();
+                    Type("experiment-search", Experiment.ToString());
+                    System.Threading.Thread.Sleep(1000);
+                    shared.driver.FindElement(By.XPath("//li[contains(@data-name,'" + Experiment + "')]")).Click();
+                }
+                shared.driver.Navigate().Refresh();
+                System.Threading.Thread.Sleep(2000);
+            }
         }
 
         //internal void SelectBrowser(BrowserType browserType)
@@ -154,12 +169,12 @@ namespace SykesCottagesTestAutomation
             }
             if (envType == "Cro")
             {
-                url = "https://cro.staging.sykescottages.co.uk";
+                url = "https://cro.staging.sykescottages.co.uk/";
                 return url;
             }
             if (envType == "Project")
             {
-                url = "https://project.staging.sykescottages.co.uk";
+                url = "https://project.staging.sykescottages.co.uk/";
                 return url;
             }
             if (envType == "Live")

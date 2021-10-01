@@ -64,6 +64,7 @@ namespace SykesCottagesTestAutomation
 
         public void Type(string value, string text)
         {
+            shared.driver.FindElement(By.XPath("//input[@*='" + value + "']|//input[contains(text(),'" + value + "')]")).Clear();
             shared.driver.FindElement(By.XPath("//input[@*='" + value + "']|//input[contains(text(),'" + value + "')]")).SendKeys(text);
         }
 
