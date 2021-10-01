@@ -1,13 +1,6 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@Experiment
-Scenario: The user can access the specified experiment
-	Given I have navigated to the Let Your Property Dev Tools page
-	When I click the 'Dev Tools' link
-	And I select the following experiments '17282'
-	##Then the experiment is applied
-
 @LetYourProperty
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage

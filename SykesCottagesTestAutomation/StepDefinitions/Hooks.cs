@@ -12,16 +12,15 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
-        public static string Experiments = "17640, 17571";
+        public static string Environemt = "Product"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Browser = "Firefox"; //Set browser: Chrome | Firefox | Edge
+        public static string Experiments = "";
 
         private readonly FeatureContext _featureContext;
         private readonly ScenarioContext _scenarioContext;
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
-        //private static ExtentKlovReporter klov;
         public static string ReportPath;
         public static string baseUrl = SetBaseUrl(Environemt);
 
@@ -39,28 +38,20 @@ namespace SykesCottagesTestAutomation
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             htmlReporter.Config.ReportName = "Automation Test Report";
             extent = new ExtentReports();
-
-            /*ExtentKlovReporter klov = new ExtentKlovReporter("project", "build");
-            klov.InitMongoDbConnection("localhost", 27017);
-            klov.ProjectName = "Sykes Automated Test";
-            klov.InitKlovServerConnection("http://localhost");
-            klov.ReportName = "Let Your Property Report" + DateTime.Now.ToString();
-            extent.AttachReporter(htmlReporter, klov);*/
-
             extent.AttachReporter(htmlReporter);
         }
 
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            //Create dynamic feature name
-            featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
+            featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title); //Create dynamic feature name
         }
 
         [BeforeScenario]
         public void StartTest()
         {
             LaunchBrowser();
+            SelectExperiment();
             scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
         }
 
@@ -115,15 +106,18 @@ namespace SykesCottagesTestAutomation
             shared.driver.Manage().Window.Maximize(); //Maximise browser window
             System.Threading.Thread.Sleep(2000); //Wait for the page to load
             ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
-            //Select experiement(s)
-            if (Experiments != null)
+        }
+
+        public void SelectExperiment()
+        {
+            if (Experiments != "")
             {
                 Click("Dev Tools");
                 var primeArray = Experiments.Split(",");
                 for (int i = 0; i < primeArray.Length; i++)
                 {
-                    var Experiment = primeArray[i].Trim();
-                    Type("experiment-search", Experiment.ToString());
+                    string Experiment = primeArray[i].ToString().Trim();
+                    Type("experiment-search", Experiment);
                     System.Threading.Thread.Sleep(1000);
                     shared.driver.FindElement(By.XPath("//li[contains(@data-name,'" + Experiment + "')]")).Click();
                 }
@@ -132,7 +126,6 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        //internal void SelectBrowser(BrowserType browserType)
         internal void SelectBrowser(string browser)
         {
             switch (browser)

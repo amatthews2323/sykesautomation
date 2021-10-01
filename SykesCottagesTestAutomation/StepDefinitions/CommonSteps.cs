@@ -59,7 +59,7 @@ namespace SykesCottagesTestAutomation
             IWebElement element = shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]"));
             Actions action = new Actions(shared.driver);
             action.MoveToElement(element).Perform();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(2000);
         }
 
         public void Type(string value, string text)
