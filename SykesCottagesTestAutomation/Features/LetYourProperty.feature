@@ -14,10 +14,10 @@ Scenario: The enquiry form is displayed
 
 @LetYourProperty
 Scenario: The Sykes sub-domains are displayed correctly
-	Given I have navigated to <subdomain>
-	Then the <title> page is displayed
+	Given I am accessing <Subdomain>
+	Then the following text is displayed on the page: <Title>
 	Examples:
-	| subdomain                                                   | title                    |
+	| Subdomain                                                   | Title                    |
 	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay               |
 	| https://www.coastandcountry.co.uk/letyourcottage/           | Coast & Country Cottages |
 	| https://www.cornishcottageholidays.co.uk/letyourcottage/    | Cornish Cottage Holidays |

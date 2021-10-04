@@ -88,15 +88,9 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"the '(.*)' page is displayed")]
-        public void ThenPageIsDisplayed(string value)
+        public void ThenThePageIsDisplayed(string value)
         {
             AssertPageTitle(value);
-        }
-
-        [Given(@"I have navigated to the Let Your Property Dev Tools page")]
-        public void GivenIHaveNavigatedToTheLetYourPropertyDevToolsPage()
-        {
-            shared.driver.Navigate().GoToUrl(Hooks.baseUrl + "/letyourcottage/?dev_tools=product");
         }
 
         [When(@"I select the following experiments '(.*)'")]
@@ -108,16 +102,16 @@ namespace SykesCottagesTestAutomation.BaseClass
             System.Threading.Thread.Sleep(2000);
         }
 
-        [Given(@"I have navigated to (.*)")]
-        public void GivenIHaveNavigatedTo(string page)
+        [Given(@"I am accessing (.*)")]
+        public void GivenIAmAccessing(string page)
         {
             shared.driver.Navigate().GoToUrl(page);
         }
 
-        [Then(@"the (.*) page is displayed")]
-        public void ThenThePageIsDisplayed(string title)
+        [Then(@"the following text is displayed on the page: (.*)")]
+        public void ThenTheFollowingTextIsDisplayedOnThePage(string text)
         {
-            AssertText(title);
+            AssertText(text);
         }
     }
 }
