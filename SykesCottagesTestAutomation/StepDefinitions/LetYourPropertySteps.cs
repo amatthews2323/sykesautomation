@@ -107,6 +107,18 @@ namespace SykesCottagesTestAutomation.BaseClass
             shared.driver.FindElement(By.XPath("//li[contains(@data-name'" + experimentId + "')]")).Click();
             System.Threading.Thread.Sleep(2000);
         }
+
+        [Given(@"I have navigated to (.*)")]
+        public void GivenIHaveNavigatedTo(string page)
+        {
+            shared.driver.Navigate().GoToUrl(page);
+        }
+
+        [Then(@"the (.*) page is displayed")]
+        public void ThenThePageIsDisplayed(string title)
+        {
+            AssertText(title);
+        }
     }
 }
 

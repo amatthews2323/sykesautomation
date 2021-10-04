@@ -29,6 +29,11 @@ namespace SykesCottagesTestAutomation
             Assert.IsTrue(pageTitle.Contains(title), "Page title '" + pageTitle + "' does not match '" + title + "'");
         }
 
+        public void AssertText(string text)
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),'" + text + "')]")).Count != 0);
+        }
+
         public void Click(string value)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
