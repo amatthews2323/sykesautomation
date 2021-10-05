@@ -74,7 +74,7 @@ namespace SykesCottagesTestAutomation.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The user can navigate to the \"Advertising and marketing your holiday let\" page")]
+        [NUnit.Framework.DescriptionAttribute("The user can navigate to the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
         [NUnit.Framework.TestCaseAttribute("Advertising and marketing your holiday let", "Advertising and Marketing Your Holiday Let", null)]
         [NUnit.Framework.TestCaseAttribute("Buying, owning and selling a holiday let", "Buying, Owning & Selling a Holiday Let", null)]
@@ -83,7 +83,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestCaseAttribute("Holiday let mortgages", "Mortgages for Holiday Lets | Second Homes", null)]
         [NUnit.Framework.TestCaseAttribute("How to run your holiday let", "Running Your Holiday Let | Cost & Cleaning", null)]
         [NUnit.Framework.TestCaseAttribute("Tax information on holiday lets", "Tax Information for Holiday Homes | Rules & Relief", null)]
-        public virtual void TheUserCanNavigateToTheAdvertisingAndMarketingYourHolidayLetPage(string link, string pageTitle, string[] exampleTags)
+        public virtual void TheUserCanNavigateToTheInformationCentrePages(string link, string pageTitle, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "InformationCentre"};
@@ -95,7 +95,7 @@ namespace SykesCottagesTestAutomation.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Link", link);
             argumentsOfScenario.Add("PageTitle", pageTitle);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the \"Advertising and marketing your holiday let\" page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

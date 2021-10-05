@@ -1,7 +1,4 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Edge;
 using TechTalk.SpecFlow;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
@@ -22,7 +19,7 @@ namespace SykesCottagesTestAutomation
         private static ExtentTest scenario;
         private static ExtentReports extent;
         public static string ReportPath;
-        public static string baseUrl = SetBaseUrl(Environemt);
+
 
         public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
         {
@@ -50,8 +47,6 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            LaunchBrowser();
-            SelectExperiment();
             scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
         }
 
@@ -97,86 +92,6 @@ namespace SykesCottagesTestAutomation
         public static void AfterTestRun()
         {
             extent.Flush();
-        }
-
-        public void LaunchBrowser()
-        {
-            SelectBrowser(Browser); //Select driver
-            shared.driver.Navigate().GoToUrl(baseUrl + "?dev_tools=product"); //Launch website
-            shared.driver.Manage().Window.Maximize(); //Maximise browser window
-            System.Threading.Thread.Sleep(2000); //Wait for the page to load
-            ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
-        }
-
-        public void SelectExperiment()
-        {
-            if (Experiments != "")
-            {
-                Click("Dev Tools");
-                var primeArray = Experiments.Split(",");
-                for (int i = 0; i < primeArray.Length; i++)
-                {
-                    string Experiment = primeArray[i].ToString().Trim();
-                    Type("experiment-search", Experiment);
-                    System.Threading.Thread.Sleep(1000);
-                    shared.driver.FindElement(By.XPath("//li[contains(@data-name,'" + Experiment + "')]")).Click();
-                }
-                shared.driver.Navigate().Refresh();
-                System.Threading.Thread.Sleep(2000);
-            }
-        }
-
-        internal void SelectBrowser(string browser)
-        {
-            switch (browser)
-            {
-                case "Chrome":
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
-                    break;
-                case "Firefox":
-                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");   
-                    service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
-                    shared.driver = new FirefoxDriver(service);
-                    break;
-                case "Edge":
-                    shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers\Edge");
-                    break;
-                default:
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
-                    break;
-            }
-        }
-
-        public static string SetBaseUrl(string envType)
-        {
-            string url;
-            if (envType == "Tech")
-            {
-                url = "https://tech.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Product")
-            {
-                url = "https://product.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Cro")
-            {
-                url = "https://cro.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Project")
-            {
-                url = "https://project.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Live")
-            {
-                url = "https://www.sykescottages.co.uk/";
-                return url;
-            }
-            url = "https://tech.staging.sykescottages.co.uk/";
-            return url;
         }
 
         public MediaEntityModelProvider TakeScreenshot(string Name)

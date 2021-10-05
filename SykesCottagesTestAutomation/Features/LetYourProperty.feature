@@ -9,10 +9,33 @@ Scenario: The user can navigate to the Let Your Property page
 
 @LetYourProperty
 Scenario: The enquiry form is displayed
-	Given I have navigated to the Let Your Property page
+	Given I have navigated to the 'letyourcottage' page
 	Then the enquiry form is displayed
 
 @LetYourProperty
+Scenario: The relevant page sections are displayed
+	Given I have navigated to the 'letyourcottage' page
+	Then the following sections are dislpayed
+	| Section                                  |
+	| Gain exposure through our partners       |
+	| How much could I earn letting with Sykes |
+	| What do our owners say                   |
+	| Holiday letting made easy                |
+	| Request your free owner information pack |
+	| Are you thinking of buying               |
+
+@LetYourProperty @Enquiry
+Scenario: The user can submit their details
+	Given I have navigated to the 'letyourcottage' page
+	When I enter my details on the enquiry form
+	| Key           | Value                         |
+	| Full name     | Test Owner                    |
+	| Email address | sykescottagestest@example.org |
+	| Phone number  | 07000000000                   |
+	And I click the Get Started button
+	Then I am directed to the Property Letting Dashboard page
+
+@LetYourProperty @Subdomains
 Scenario: The Sykes sub-domains are displayed correctly
 	Given I am accessing <Subdomain>
 	Then the following text is displayed on the page: <Title>
@@ -32,14 +55,3 @@ Scenario: The Sykes sub-domains are displayed correctly
 	| https://www.menaiholidays.co.uk/letyourcottage/             | Menai Holiday Cottages   |
 	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage            |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal        |
-
-@LetYourProperty
-Scenario: The user can submit their details
-	Given I have navigated to the Let Your Property page
-	When I enter my details on the enquiry form
-	| Key           | Value                         |
-	| Full name     | Test Owner                    |
-	| Email address | sykescottagestest@example.org |
-	| Phone number  | 07000000000                   |
-	And I click the Get Started button
-	Then I am directed to the Property Letting Dashboard page

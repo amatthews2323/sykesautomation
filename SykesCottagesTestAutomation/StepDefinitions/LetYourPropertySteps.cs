@@ -2,6 +2,7 @@
 using TechTalk.SpecFlow;
 using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -15,14 +16,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
+            LaunchBrowser();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
-        [Given(@"I have navigated to the Let Your Property page")]
-        public void GivenIHaveNavigatedToTheLetYourPropertyPage()
+        [Given(@"I have navigated to the '(.*)' page")]
+        public void GivenIHaveNavigatedToThePage(string path = "")
         {
-            Click("Let Your Property");
-            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
+            LaunchBrowser("", path);
         }
 
         [When(@"I click the '(.*)' link")]
@@ -93,6 +94,17 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertPageTitle(value);
         }
 
+        [Then(@"the following sections are dislpayed")]
+        public void ThenTheFollowingSectionsAreDislpayed(Table table)
+        {
+            var sections = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var section in sections)
+            {
+                ScrollTo(section);
+                AssertText(section.ToString());
+            }
+        }
+
         [When(@"I select the following experiments '(.*)'")]
         public void WhenISelectTheFollowingExperiments(string experimentId)
         {
@@ -103,9 +115,9 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Given(@"I am accessing (.*)")]
-        public void GivenIAmAccessing(string page)
+        public void GivenIAmAccessing(string domain = "")
         {
-            shared.driver.Navigate().GoToUrl(page);
+            LaunchBrowser(domain);
         }
 
         [Then(@"the following text is displayed on the page: (.*)")]
