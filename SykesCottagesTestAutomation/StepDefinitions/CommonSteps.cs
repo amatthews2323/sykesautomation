@@ -8,6 +8,8 @@ using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace SykesCottagesTestAutomation
 {
@@ -97,10 +99,13 @@ namespace SykesCottagesTestAutomation
 
         public void SelectBrowser(string browser)
         {
+            //string browser = Environment.GetEnvironmentVariable("browser", EnvironmentVariableTarget.Process);
+
             switch (browser)
             {
                 case "Chrome":
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
+                    //shared.driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
                     break;
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");
@@ -122,15 +127,32 @@ namespace SykesCottagesTestAutomation
             System.Threading.Thread.Sleep(value);
         }
 
+        public void WaitUntilExists(string value)
+        {
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
+        }
+
+        public void WaitUntilVisible(string value)
+        {
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
+        }
+
+        public void WaitUntilClickable(string value)
+        {
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
+        }
+
         public void ScrollTo(string value)
         {
+            WaitASecond(2);
             string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
                                            + "var elementTop = arguments[0].getBoundingClientRect().top;"
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
             ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
-            WaitASecond(2);
+            WaitUntilVisible(value);
         }
 
         public void AssertPageTitle(string title)
@@ -142,7 +164,7 @@ namespace SykesCottagesTestAutomation
         public void AssertText(string text)
         {
             Console.WriteLine("Assert the following text is present on the page: " + text);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),'" + text + "')]")).Count != 0);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),'" + text + "')]")).Count != 0, "Text not found");
         }
 
         public void Click(string value)
@@ -192,6 +214,15 @@ namespace SykesCottagesTestAutomation
                 dictionary.Add(row[0], row[1]);
             }
             return dictionary;
+        }
+
+
+        public void Screenshot(string title = "")
+        {
+            //Take the screenshot
+            Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
+            //Save the screenshot
+            image.SaveAsFile("C://Logs//Screenshot_" + title + ".png", ScreenshotImageFormat.Png);
         }
     }
 }
