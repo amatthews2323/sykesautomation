@@ -39,6 +39,7 @@ Scenario: The user can submit their details
 Scenario: The Sykes sub-domains are displayed correctly
 	Given I am accessing <Subdomain>
 	Then the following text is displayed on the page: <Title>
+	And the enquiry form is displayed
 	Examples:
 	| Subdomain                                                   | Title                    |
 	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay               |

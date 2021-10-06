@@ -14,8 +14,6 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class CommonSteps
     {
-        public string baseUrl = SetBaseUrl(Hooks.Environemt);
-
         public class SharedDriver
         {
             public IWebDriver driver;
@@ -60,43 +58,41 @@ namespace SykesCottagesTestAutomation
             return url;
         }
 
-        public void LaunchBrowser(string domain = "", string path = "")
+        public void LaunchWebsite(string domain = "", string path = "")
         {
+            //Check for domain override
             if (domain == "")
             {
-                domain = baseUrl;
+                domain = SetBaseUrl(Hooks.Environemt);
             }
 
-            SelectBrowser(Hooks.Browser); //Select driver
+            SelectBrowser(Hooks.Browser); //Set driver and browser
 
             //Check for experiments
             if (Hooks.Experiments != "")
             {
-                shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website
-                shared.driver.Manage().Window.Maximize(); //Maximise browser window
-                System.Threading.Thread.Sleep(2000); //Wait for the page to load
-                ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
+                shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website with Dev Tools activated
                 
                 //Apply experiments
                 Click("Dev Tools");
-                var primeArray = Hooks.Experiments.Split(",");
-                for (int i = 0; i < primeArray.Length; i++)
+                var array = Hooks.Experiments.Split(",");
+                for (int i = 0; i < array.Length; i++)
                 {
-                    string Experiment = primeArray[i].ToString().Trim();
+                    string Experiment = array[i].ToString().Trim();
                     Type("experiment-search", Experiment);
-                    System.Threading.Thread.Sleep(1000);
+                    WaitASecond();
                     shared.driver.FindElement(By.XPath("//li[contains(@data-name,'" + Experiment + "')]")).Click();
                 }
                 shared.driver.Navigate().Refresh();
-                System.Threading.Thread.Sleep(2000);
+                WaitASecond(2);
             }
             else
             {
                 shared.driver.Navigate().GoToUrl(domain + path); //Launch website
-                shared.driver.Manage().Window.Maximize(); //Maximise browser window
-                System.Threading.Thread.Sleep(2000); //Wait for the page to load
-                ClickIfDisplayed("Accept All Cookies"); //If pop-up displayed, accept cookies
             }
+            shared.driver.Manage().Window.Maximize(); //Maximise the browser window
+            WaitASecond(2);
+            ClickIfDisplayed("Accept All Cookies"); //If the pop-up is displayed, accept cookies
         }
 
         public void SelectBrowser(string browser)
@@ -120,6 +116,12 @@ namespace SykesCottagesTestAutomation
             }
         }
 
+        public void WaitASecond(int seconds = 1)
+        {
+            int value = seconds * 1000;
+            System.Threading.Thread.Sleep(value);
+        }
+
         public void ScrollTo(string value)
         {
             string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
@@ -128,7 +130,7 @@ namespace SykesCottagesTestAutomation
             ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
-            System.Threading.Thread.Sleep(2000);
+            WaitASecond(2);
         }
 
         public void AssertPageTitle(string title)
@@ -148,7 +150,7 @@ namespace SykesCottagesTestAutomation
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
             element.Click();
-            System.Threading.Thread.Sleep(2000);
+            WaitASecond(2);
         }
 
         public void ClickIfDisplayed(string value)
@@ -158,7 +160,7 @@ namespace SykesCottagesTestAutomation
                 if (shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")).Displayed)
                 {
                     shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")).Click();
-                    System.Threading.Thread.Sleep(2000);
+                    WaitASecond(2);
                 }
             }
             catch (Exception)
@@ -172,13 +174,14 @@ namespace SykesCottagesTestAutomation
             IWebElement element = shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]"));
             Actions action = new Actions(shared.driver);
             action.MoveToElement(element).Perform();
-            System.Threading.Thread.Sleep(2000);
+            WaitASecond(2);
         }
 
         public void Type(string value, string text)
         {
-            shared.driver.FindElement(By.XPath("//input[@*='" + value + "']|//input[contains(text(),'" + value + "')]")).Clear();
-            shared.driver.FindElement(By.XPath("//input[@*='" + value + "']|//input[contains(text(),'" + value + "')]")).SendKeys(text);
+            IWebElement element = shared.driver.FindElement(By.XPath("//input[@*='" + value + "']|//input[contains(text(),'" + value + "')]"));
+            element.Clear();
+            element.SendKeys(text);
         }
 
         public static Dictionary<string, string> ToDictionary(Table table)

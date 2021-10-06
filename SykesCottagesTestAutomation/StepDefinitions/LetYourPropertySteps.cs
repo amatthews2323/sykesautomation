@@ -16,14 +16,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
-            LaunchBrowser();
+            LaunchWebsite();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
         [Given(@"I have navigated to the '(.*)' page")]
         public void GivenIHaveNavigatedToThePage(string path = "")
         {
-            LaunchBrowser("", path);
+            LaunchWebsite("", path);
         }
 
         [When(@"I click the '(.*)' link")]
@@ -32,8 +32,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(value);
         }
 
-        [When(@"I click the '(.*)' header link under '(.*)'")]
-        public void WhenIClickTheHeaderLinkUnder(string headedLink, string headerMenu)
+        [When(@"I click the '(.*)' navigation link under '(.*)'")]
+        public void WhenIClickTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
             MouseOver(headerMenu);
             MouseOver(headedLink);
@@ -105,19 +105,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [When(@"I select the following experiments '(.*)'")]
-        public void WhenISelectTheFollowingExperiments(string experimentId)
-        {
-            Type("experiment-search", experimentId);
-            System.Threading.Thread.Sleep(2000);
-            shared.driver.FindElement(By.XPath("//li[contains(@data-name'" + experimentId + "')]")).Click();
-            System.Threading.Thread.Sleep(2000);
-        }
-
         [Given(@"I am accessing (.*)")]
         public void GivenIAmAccessing(string domain = "")
         {
-            LaunchBrowser(domain);
+            LaunchWebsite(domain);
         }
 
         [Then(@"the following text is displayed on the page: (.*)")]

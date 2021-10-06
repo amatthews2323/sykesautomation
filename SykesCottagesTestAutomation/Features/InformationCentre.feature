@@ -4,8 +4,8 @@
 @InformationCentre
 Scenario: The user can navigate to the Information Centre pages
 	Given I am on the Sykes Homepage
-	When I click the 'Holiday homes for sale' header link under 'Let Your Property'
-	And I click the '<Link>' header link under 'Information Centre'
+	When I click the 'Holiday homes for sale' navigation link under 'Let Your Property'
+	And I click the '<Link>' navigation link under 'Information Centre'
 	Then the '<PageTitle>' page is displayed
 	Examples:
 	| Link                                       | PageTitle                                           |

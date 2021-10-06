@@ -11,19 +11,15 @@ namespace SykesCottagesTestAutomation
     {
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
-        public static string Experiments = "";
-
-        private readonly FeatureContext _featureContext;
-        private readonly ScenarioContext _scenarioContext;
+        public static string Experiments = ""; //Set experiment(s) - comma separated list
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
         public static string ReportPath;
+        private readonly ScenarioContext _scenarioContext;
 
-
-        public Hooks(SharedDriver context, FeatureContext featureContext, ScenarioContext scenarioContext) : base(context)
+        public Hooks(SharedDriver context, ScenarioContext scenarioContext) : base(context)
         {
-            _featureContext = featureContext;
             _scenarioContext = scenarioContext;
         }
 

@@ -120,10 +120,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.When("I click the \'Holiday homes for sale\' header link under \'Let Your Property\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click the \'Holiday homes for sale\' navigation link under \'Let Your Property\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
- testRunner.And(string.Format("I click the \'{0}\' header link under \'Information Centre\'", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I click the \'{0}\' navigation link under \'Information Centre\'", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
  testRunner.Then(string.Format("the \'{0}\' page is displayed", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
