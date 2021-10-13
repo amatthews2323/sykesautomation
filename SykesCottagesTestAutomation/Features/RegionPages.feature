@@ -1,5 +1,5 @@
 ﻿Feature: RegionPages
-	Region Centre page content and functionality
+	Region pages content and functionality
 
 @RegionPages
 Scenario: The Regional pages are displayed correctly
