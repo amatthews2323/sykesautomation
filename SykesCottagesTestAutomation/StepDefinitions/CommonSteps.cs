@@ -152,6 +152,7 @@ namespace SykesCottagesTestAutomation
                                            + "var elementTop = arguments[0].getBoundingClientRect().top;"
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
             ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")));
+            WaitASecond(2);
             WaitUntilVisible(value);
         }
 
@@ -165,6 +166,12 @@ namespace SykesCottagesTestAutomation
         {
             Console.WriteLine("Assert the following text is present on the page: " + text);
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),'" + text + "')]")).Count != 0, "Text not found");
+        }
+
+        public void AssertElement(string value)
+        {
+            Console.WriteLine("Assert the following element is present on the page: " + value);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*='" + value + "']|//*[contains(text(),'" + value + "')]")).Count != 0, "Element not found");
         }
 
         public void Click(string value)

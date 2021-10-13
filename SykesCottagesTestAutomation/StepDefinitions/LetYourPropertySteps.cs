@@ -20,19 +20,19 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
-        [Given(@"I have navigated to the '(.*)' page")]
+        [Given(@"I have navigated to the (.*) page")]
         public void GivenIHaveNavigatedToThePage(string path = "")
         {
             LaunchWebsite("", path);
         }
 
-        [When(@"I click the '(.*)' link")]
+        [When(@"I click the (.*) link")]
         public void IClickTheLink(string value)
         {
             Click(value);
         }
 
-        [When(@"I click the '(.*)' navigation link under '(.*)'")]
+        [When(@"I click the (.*) navigation link under (.*)")]
         public void WhenIClickTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
             MouseOver(headerMenu);
@@ -44,12 +44,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheEnquiryFormIsDisplayed()
         {
             Assert.IsTrue(shared.driver.FindElement(By.XPath("//div[contains(@class,'js-enquiry-form')]")).Displayed, "Enquiry form not found");
-        }
-
-        [Then(@"the Let Your Property page is displayed")]
-        public void ThenTheLetYourPropertyPageIsDisplayed()
-        {
-            AssertPageTitle("Holiday Letting Agents For Cottages, Holiday Homes & Property");
         }
 
         [When(@"I enter my details on the enquiry form")]
@@ -88,8 +82,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the '(.*)' page is displayed")]
-        public void ThenThePageIsDisplayed(string value)
+        [Then(@"the following page title is displayed: (.*)")]
+        public void ThenTheFollowingPageTitleIsDisplayed(string value)
         {
             AssertPageTitle(value);
         }
@@ -115,6 +109,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingTextIsDisplayedOnThePage(string text)
         {
             AssertText(text);
+        }
+
+        [Then(@"the following element is displayed on the page: (.*)")]
+        public void ThenTheFollowingElementIsDisplayedOnThePage(string value)
+        {
+            AssertElement(value);
         }
     }
 }
