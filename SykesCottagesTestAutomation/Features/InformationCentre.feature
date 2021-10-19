@@ -1,6 +1,12 @@
 ﻿Feature: InformationCentre
 	Information Centre page content and functionality
 
+@HolidayHomesForSale
+Scenario: The user can navigate to the Let Your Property page
+	Given I am on the Sykes Homepage
+	When I click the Holiday homes for sale navigation link under Let Your Property
+	Then the following page title is displayed: Holiday Homes for Sale UK
+
 @InformationCentre
 Scenario: The user can navigate to the Information Centre pages
 	Given I am on the Sykes Homepage

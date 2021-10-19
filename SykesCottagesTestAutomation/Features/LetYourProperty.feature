@@ -24,7 +24,7 @@ Scenario: The relevant page sections are displayed
 	| Are you thinking of buying         |
 	| Request your free                  |
 
-@LetYourProperty @Enquiry
+@LetYourProperty
 Scenario: The user can submit their details
 	Given I have navigated to the letyourcottage page
 	When I enter my details on the enquiry form
@@ -35,7 +35,7 @@ Scenario: The user can submit their details
 	And I click the Get Started button
 	Then I am directed to the Property Letting Dashboard page
 
-@LetYourProperty @Subdomains
+@Subdomains
 Scenario: The Sykes sub-domains are displayed correctly
 	Given I am accessing <Subdomain>
 	Then the following text is displayed on the page: <Title>
