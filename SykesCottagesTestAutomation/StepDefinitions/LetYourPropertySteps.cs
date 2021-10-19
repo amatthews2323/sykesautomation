@@ -24,6 +24,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToThePage(string path = "")
         {
             LaunchWebsite("", path);
+            CloseAllPopups();
         }
 
         [When(@"I click the (.*) link")]
@@ -103,6 +104,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmAccessing(string domain = "")
         {
             LaunchWebsite(domain);
+            CloseAllPopups();
         }
 
         [Then(@"the following text is displayed on the page: (.*)")]

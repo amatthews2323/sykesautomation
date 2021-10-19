@@ -192,13 +192,15 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "Gain exposure through our partners"});
                 table1.AddRow(new string[] {
-                            "How much could I earn letting with Sykes"});
-                table1.AddRow(new string[] {
                             "What do our owners say"});
+                table1.AddRow(new string[] {
+                            "How much could I earn"});
                 table1.AddRow(new string[] {
                             "Holiday letting made easy"});
                 table1.AddRow(new string[] {
                             "Are you thinking of buying"});
+                table1.AddRow(new string[] {
+                            "Request your free"});
 #line 18
  testRunner.Then("the following sections are dislpayed", ((string)(null)), table1, "Then ");
 #line hidden
@@ -217,7 +219,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "Enquiry"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can submit their details", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 27
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -237,7 +239,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 28
+#line 29
  testRunner.Given("I have navigated to the letyourcottage page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -252,13 +254,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
-#line 29
+#line 30
  testRunner.When("I enter my details on the enquiry form", ((string)(null)), table2, "When ");
 #line hidden
-#line 34
+#line 35
  testRunner.And("I click the Get Started button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 36
  testRunner.Then("I am directed to the Property Letting Dashboard page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -297,7 +299,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Subdomain", subdomain);
             argumentsOfScenario.Add("Title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sykes sub-domains are displayed correctly", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
+#line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -317,13 +319,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
+#line 40
  testRunner.Given(string.Format("I am accessing {0}", subdomain), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
+#line 41
  testRunner.Then(string.Format("the following text is displayed on the page: {0}", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 41
+#line 42
  testRunner.And("the enquiry form is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

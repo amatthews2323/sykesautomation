@@ -16,12 +16,13 @@ Scenario: The enquiry form is displayed
 Scenario: The relevant page sections are displayed
 	Given I have navigated to the letyourcottage page
 	Then the following sections are dislpayed
-	| Section                                  |
-	| Gain exposure through our partners       |
-	| How much could I earn letting with Sykes |
-	| What do our owners say                   |
-	| Holiday letting made easy                |
-	| Are you thinking of buying               |
+	| Section                            |
+	| Gain exposure through our partners |
+	| What do our owners say             |
+	| How much could I earn              |
+	| Holiday letting made easy          |
+	| Are you thinking of buying         |
+	| Request your free                  |
 
 @LetYourProperty @Enquiry
 Scenario: The user can submit their details
