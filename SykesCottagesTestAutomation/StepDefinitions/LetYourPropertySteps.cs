@@ -51,17 +51,24 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterMyDetailsOnTheEnquiryForm(Table table)
         {
             var dictionary = ToDictionary(table);
-
             Type("form_first_name", dictionary["Full name"]);
             Type("form_email", dictionary["Email address"]);
             Type("form_phone", dictionary["Phone number"]);
         }
 
-        [When(@"I click the Get Started button")]
-        public void WhenIClickTheGetStartedButton()
+        [Given(@"I have submitted an enquiry with the following details")]
+        public void GivenIHaveSubmittedAnEnquiryWithTheFollowingDetails(Table table)
         {
             if (Hooks.Environemt != "Live")
             {
+                LaunchWebsite("", "letyourcottage");
+                CloseAllPopups();
+
+                var dictionary = ToDictionary(table);
+                Type("form_first_name", dictionary["Full name"]);
+                Type("form_email", dictionary["Email address"]);
+                Type("form_phone", dictionary["Phone number"]);
+
                 Click("submit");
             }
             else
@@ -100,6 +107,23 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [Then(@"the following elements are dislpayed on the page")]
+        public void ThenTheFollowingElementsAreDislpayedOnThePage(Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                ScrollTo(element);
+                AssertElement(element.ToString());
+            }
+        }
+
+        [When(@"I click the (.*) button")]
+        public void ThenIClickTheButton(string element)
+        {
+            Click(element);
+        }
+
         [Given(@"I am accessing (.*)")]
         public void GivenIAmAccessing(string domain = "")
         {
@@ -117,6 +141,43 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingElementIsDisplayedOnThePage(string value)
         {
             AssertElement(value);
+        }
+
+        [Then(@"I can complete the digital online process using the following details")]
+        public void ThenICanCompleteTheDigitalOnlineProcessUsingTheFollowingDetails(Table table)
+        {
+            var dictionary = ToDictionary(table);
+            Click("Next");
+
+            //Step 1
+            Click("o-toggle__box o-toggle-wrapper__box o-toggle-wrapper__box");
+            Click("Next");
+
+            //Step 2
+            Type("location", dictionary["Postcode"]);
+            Click("Search");
+            Click("Expand area");
+            Click("Select Address");
+            WaitASecond();
+            Click("Next");
+
+            //Step 3
+            int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
+            for (int i = 1; i < bedrooms; i++)
+            {
+                ClickButton("+");
+            }
+            WaitASecond();
+            Click("Next");
+
+            //Step 4
+            int guests = int.Parse(dictionary["Number of guests"]);
+            for (int i = 1; i < guests; i++)
+            {
+                shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")).Click();
+            }
+            WaitASecond();
+            Click("Finish");
         }
     }
 }

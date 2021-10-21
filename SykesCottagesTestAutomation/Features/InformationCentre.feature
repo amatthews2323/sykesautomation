@@ -14,11 +14,12 @@ Scenario: The user can navigate to the Information Centre pages
 	And I click the <Link> navigation link under Information Centre
 	Then the following page title is displayed: <PageTitle>
 	Examples:
-	| Link                                       | PageTitle                                           |
-	| Advertising and marketing your holiday let | Advertising and Marketing Your Holiday Let          |
-	| Buying, owning and selling a holiday let   | Buying, Owning & Selling a Holiday Let              |
-	| Investment advice for holiday lets         | Investment in Holiday Homes \| Holiday Let Business |
-	| Legal regulations for holiday lets         | Legal Regulations for Holiday Lets                  |
-	| Holiday let mortgages                      | Mortgages for Holiday Lets \| Second Homes          |
-	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning         |
-	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief |
+	| Link                                       | PageTitle                                                 |
+	| Sykes Gems winners 2019                    | Sykes Gems Winners 2019 \| Owner Awards \| Sykes Cottages |
+	| Advertising and marketing your holiday let | Advertising and Marketing Your Holiday Let                |
+	| Buying, owning and selling a holiday let   | Buying, Owning & Selling a Holiday Let                    |
+	| Investment advice for holiday lets         | Investment in Holiday Homes \| Holiday Let Business       |
+	| Legal regulations for holiday lets         | Legal Regulations for Holiday Lets                        |
+	| Holiday let mortgages                      | Mortgages for Holiday Lets \| Second Homes                |
+	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning               |
+	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief       |

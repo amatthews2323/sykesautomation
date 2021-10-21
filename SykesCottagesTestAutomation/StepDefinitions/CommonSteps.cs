@@ -71,8 +71,10 @@ namespace SykesCottagesTestAutomation
             //Check for experiments
             if (Hooks.Experiments != "")
             {
-                shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website with Dev Tools activated
-                
+                shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website with Dev Tools activated                                                 
+                shared.driver.Manage().Window.Maximize(); //Maximise the browser window
+                WaitASecond(2);
+
                 //Apply experiments
                 Click("Dev Tools");
                 var array = Hooks.Experiments.Split(",");
@@ -89,10 +91,9 @@ namespace SykesCottagesTestAutomation
             else
             {
                 shared.driver.Navigate().GoToUrl(domain + path); //Launch website
+                shared.driver.Manage().Window.Maximize(); //Maximise the browser window
+                WaitASecond(2);
             }
-            //Maximise the browser window
-            shared.driver.Manage().Window.Maximize();
-            WaitASecond(2);
         }
 
         public void SelectBrowser(string browser)
@@ -197,6 +198,14 @@ namespace SykesCottagesTestAutomation
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]")));
+            element.Click();
+            WaitASecond(2);
+        }
+
+        public void ClickButton(string value)
+        {
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//button[@*=\"" + value + "\"]|//button[contains(text(),\"" + value + "\")]")));
             element.Click();
             WaitASecond(2);
         }
