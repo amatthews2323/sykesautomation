@@ -2,10 +2,21 @@
 	Information Centre page content and functionality
 
 @HolidayHomesForSale
-Scenario: The user can navigate to the Let Your Property page
+Scenario: The user can navigate to the Holiday Homes for Sale page
 	Given I am on the Sykes Homepage
 	When I click the Holiday homes for sale navigation link under Let Your Property
 	Then the following page title is displayed: Holiday Homes for Sale UK
+
+@HolidayHomesForSale
+Scenario: The relevent elements are present on the Holiday Homes for Sale page
+	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
+	Then the following elements are dislpayed on the page
+         | Element                           |
+         | Holiday Homes for Sale UK         |
+         | Enquire with Sykes today          |
+         | container_sykes_grid              |
+         | View more holiday homes for sale  |
+         | How much could I earn with Sykes? |
 
 @InformationCentre
 Scenario: The user can navigate to the Information Centre pages
@@ -23,3 +34,23 @@ Scenario: The user can navigate to the Information Centre pages
 	| Holiday let mortgages                      | Mortgages for Holiday Lets \| Second Homes                |
 	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning               |
 	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief       |
+
+@InformationCentre
+Scenario: The relevent elements are present on the Information Centre pages
+	Given I have navigated to the following page: <Path>
+	Then the following elements are dislpayed on the page
+         | Element                                            |
+         | Complete the form to receive your information pack |
+         | <Header>                                           |
+         | Are you thinking of buying?                        |
+         | Other frequently asked questions                   |
+         | How much could I earn with Sykes?                  |
+	Examples:
+	| Path                                              | Header                                     |
+	| letyourcottage/marketing-your-holiday-let         | Advertising and marketing your holiday let |
+	| letyourcottage/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
+	| letyourcottage/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
+	| letyourcottage/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
+	| letyourcottage/holiday-let-mortgages              | Holiday let mortgages                      |
+	| letyourcottage/how-to-run-your-holiday-let        | How to run your holiday let                |
+	| letyourcottage/Tax-information-on-holiday-lets    | Tax information on holiday lets            |

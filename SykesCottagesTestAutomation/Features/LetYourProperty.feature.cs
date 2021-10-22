@@ -146,7 +146,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 12
- testRunner.Given("I have navigated to the letyourcottage page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
  testRunner.Then("the enquiry form is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -185,24 +185,24 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 17
- testRunner.Given("I have navigated to the letyourcottage page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "What do our owners say"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "How much could I earn"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Request your free"});
 #line 18
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table1, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -238,22 +238,22 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 29
- testRunner.Given("I have navigated to the letyourcottage page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 30
- testRunner.When("I enter my details on the enquiry form", ((string)(null)), table2, "When ");
+ testRunner.When("I enter my details on the enquiry form", ((string)(null)), table4, "When ");
 #line hidden
 #line 35
  testRunner.And("I click the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -294,33 +294,33 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 40
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table3, "Given ");
+ testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table5, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table4.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Phone Call"});
-                table4.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Continue Online"});
-                table4.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Pack Download"});
-                table4.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Holiday Homes for Sale"});
 #line 45
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table4, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table6, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -355,38 +355,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table5.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table5.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table5.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 54
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table5, "Given ");
+ testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table7, "Given ");
 #line hidden
 #line 59
  testRunner.When("I click the Continue Online button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Postcode",
                             "LA231LJ"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Number of bedrooms",
                             "2"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Number of guests",
                             "4"});
 #line 60
- testRunner.Then("I can complete the digital online process using the following details", ((string)(null)), table6, "Then ");
+ testRunner.Then("I can complete the digital online process using the following details", ((string)(null)), table8, "Then ");
 #line hidden
 #line 65
  testRunner.And("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +

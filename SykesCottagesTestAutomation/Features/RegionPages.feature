@@ -3,7 +3,7 @@
 
 @RegionPages
 Scenario: The Regional pages are displayed correctly
-	Given I have navigated to the <Path> page
+	Given I have navigated to the following page: <Path>
 	Then the following text is displayed on the page: <Region>
 	Examples:
 	| Path                                                      | Region                     |

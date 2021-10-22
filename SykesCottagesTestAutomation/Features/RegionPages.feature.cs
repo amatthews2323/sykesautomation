@@ -121,7 +121,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given(string.Format("I have navigated to the {0} page", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.Then(string.Format("the following text is displayed on the page: {0}", region), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

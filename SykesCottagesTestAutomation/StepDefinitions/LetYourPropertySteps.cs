@@ -20,8 +20,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
-        [Given(@"I have navigated to the (.*) page")]
-        public void GivenIHaveNavigatedToThePage(string path = "")
+        [Given(@"I have navigated to the following page: (.*)")]
+        public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite("", path);
             CloseAllPopups();

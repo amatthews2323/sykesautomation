@@ -9,12 +9,12 @@ Scenario: The user can navigate to the Let Your Property page
 
 @LetYourProperty
 Scenario: The enquiry form is displayed on the Let Your Property page
-	Given I have navigated to the letyourcottage page
+	Given I have navigated to the following page: letyourcottage
 	Then the enquiry form is displayed
 
 @LetYourProperty
 Scenario: The relevant sections are displayed on the Let Your Property page
-	Given I have navigated to the letyourcottage page
+	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
 	| Section                            |
 	| Gain exposure through our partners |
@@ -26,7 +26,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 
 @OwnerCreation
 Scenario: The user can submit the enquiry form
-	Given I have navigated to the letyourcottage page
+	Given I have navigated to the following page: letyourcottage
 	When I enter my details on the enquiry form
 	| Key           | Value                         |
 	| Full name     | Test Owner                    |

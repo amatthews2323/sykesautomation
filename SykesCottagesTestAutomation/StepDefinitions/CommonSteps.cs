@@ -143,10 +143,11 @@ namespace SykesCottagesTestAutomation
 
         public void CloseAllPopups()
         {
+            WaitASecond();
             //If the pop-up is displayed, accept cookies
             ClickIfDisplayed("Accept All Cookies");
             //Dismiss the tint overlay 
-            ClickIfDisplayed("o-overlay-tint o-overlay-tint--default");
+            ClickIfDisplayed("nonenquiry6941");
             //If any alerts are displayed, close them
             try
             {
@@ -161,7 +162,7 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Issue closing pop-up alerts");
+                Console.WriteLine("No alerts found");
             }
         }
 
@@ -173,7 +174,6 @@ namespace SykesCottagesTestAutomation
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
             ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]")));
             WaitASecond(2);
-            WaitUntilVisible(value);
         }
 
         public void AssertPageTitle(string title)
@@ -222,7 +222,7 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Accept cookies button not found");
+                Console.WriteLine(value + " not found");
             }
         }
 

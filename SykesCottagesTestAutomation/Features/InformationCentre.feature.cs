@@ -74,14 +74,14 @@ namespace SykesCottagesTestAutomation.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The user can navigate to the Let Your Property page")]
+        [NUnit.Framework.DescriptionAttribute("The user can navigate to the Holiday Homes for Sale page")]
         [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        public virtual void TheUserCanNavigateToTheLetYourPropertyPage()
+        public virtual void TheUserCanNavigateToTheHolidayHomesForSalePage()
         {
             string[] tagsOfScenario = new string[] {
                     "HolidayHomesForSale"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -116,6 +116,57 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
+        [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
+        public virtual void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "HolidayHomesForSale"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 11
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 12
+ testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table1.AddRow(new string[] {
+                            "Holiday Homes for Sale UK"});
+                table1.AddRow(new string[] {
+                            "Enquire with Sykes today"});
+                table1.AddRow(new string[] {
+                            "container_sykes_grid"});
+                table1.AddRow(new string[] {
+                            "View more holiday homes for sale"});
+                table1.AddRow(new string[] {
+                            "How much could I earn with Sykes?"});
+#line 13
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The user can navigate to the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
         [NUnit.Framework.TestCaseAttribute("Sykes Gems winners 2019", "Sykes Gems Winners 2019 | Owner Awards | Sykes Cottages", null)]
@@ -139,7 +190,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Link", link);
             argumentsOfScenario.Add("PageTitle", pageTitle);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -159,17 +210,82 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 12
+#line 23
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
+#line 24
  testRunner.When("I click the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 25
  testRunner.And(string.Format("I click the {0} navigation link under Information Centre", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 26
  testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Information Centre pages")]
+        [NUnit.Framework.CategoryAttribute("InformationCentre")]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/marketing-your-holiday-let", "Advertising and marketing your holiday let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/buy-own-sell-holiday-lets", "Buying, owning and selling a holiday let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/investment-advice-for-holiday-lets", "Investment advice for holiday lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/legal-regulations-for-holiday-lets", "Legal regulations for holiday lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/holiday-let-mortgages", "Holiday let mortgages", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/how-to-run-your-holiday-let", "How to run your holiday let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/Tax-information-on-holiday-lets", "Tax information on holiday lets", null)]
+        public virtual void TheReleventElementsArePresentOnTheInformationCentrePages(string path, string header, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "InformationCentre"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Path", path);
+            argumentsOfScenario.Add("Header", header);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 39
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 40
+ testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table2.AddRow(new string[] {
+                            "Complete the form to receive your information pack"});
+                table2.AddRow(new string[] {
+                            string.Format("{0}", header)});
+                table2.AddRow(new string[] {
+                            "Are you thinking of buying?"});
+                table2.AddRow(new string[] {
+                            "Other frequently asked questions"});
+                table2.AddRow(new string[] {
+                            "How much could I earn with Sykes?"});
+#line 41
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
