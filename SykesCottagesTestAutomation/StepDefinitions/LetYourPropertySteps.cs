@@ -102,7 +102,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             var sections = table.Rows.Select(r => r[0]).ToArray();
             foreach (var section in sections)
             {
-                ScrollTo(section);
                 AssertText(section.ToString());
             }
         }
@@ -113,7 +112,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
-                ScrollTo(element);
                 AssertElement(element.ToString());
             }
         }

@@ -73,7 +73,6 @@ namespace SykesCottagesTestAutomation
             {
                 shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website with Dev Tools activated                                                 
                 shared.driver.Manage().Window.Maximize(); //Maximise the browser window
-                WaitASecond(2);
 
                 //Apply experiments
                 Click("Dev Tools");
@@ -86,13 +85,12 @@ namespace SykesCottagesTestAutomation
                     shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
                 }
                 shared.driver.Navigate().Refresh();
-                WaitASecond(2);
+                WaitASecond();
             }
             else
             {
                 shared.driver.Navigate().GoToUrl(domain + path); //Launch website
                 shared.driver.Manage().Window.Maximize(); //Maximise the browser window
-                WaitASecond(2);
             }
         }
 
@@ -143,7 +141,6 @@ namespace SykesCottagesTestAutomation
 
         public void CloseAllPopups()
         {
-            WaitASecond();
             //If the pop-up is displayed, accept cookies
             ClickIfDisplayed("Accept All Cookies");
             //Dismiss the tint overlay 
@@ -156,7 +153,7 @@ namespace SykesCottagesTestAutomation
                     while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
                     {
                         shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Click();
-                        WaitASecond(1);
+                        WaitASecond();
                     }
                 }
             }
@@ -168,7 +165,6 @@ namespace SykesCottagesTestAutomation
 
         public void ScrollTo(string value)
         {
-            WaitASecond(2);
             string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
                                            + "var elementTop = arguments[0].getBoundingClientRect().top;"
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
@@ -199,7 +195,7 @@ namespace SykesCottagesTestAutomation
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]")));
             element.Click();
-            WaitASecond(2);
+            WaitASecond();
         }
 
         public void ClickButton(string value)
@@ -207,7 +203,7 @@ namespace SykesCottagesTestAutomation
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//button[@*=\"" + value + "\"]|//button[contains(text(),\"" + value + "\")]")));
             element.Click();
-            WaitASecond(2);
+            WaitASecond();
         }
 
         public void ClickIfDisplayed(string value)
@@ -217,7 +213,7 @@ namespace SykesCottagesTestAutomation
                 if (shared.driver.FindElement(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]")).Displayed)
                 {
                     shared.driver.FindElement(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]")).Click();
-                    WaitASecond(2);
+                    WaitASecond(1);
                 }
             }
             catch (Exception)
@@ -231,7 +227,7 @@ namespace SykesCottagesTestAutomation
             IWebElement element = shared.driver.FindElement(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]"));
             Actions action = new Actions(shared.driver);
             action.MoveToElement(element).Perform();
-            WaitASecond(2);
+            WaitASecond();
         }
 
         public void Type(string value, string text)
@@ -250,7 +246,6 @@ namespace SykesCottagesTestAutomation
             }
             return dictionary;
         }
-
 
         public void Screenshot(string title = "")
         {

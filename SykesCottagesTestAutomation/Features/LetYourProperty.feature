@@ -1,7 +1,7 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@LetYourProperty
+@Navigation
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
 	When I click the Let Your Property link

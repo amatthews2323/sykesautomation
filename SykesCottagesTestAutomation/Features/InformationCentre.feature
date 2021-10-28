@@ -1,7 +1,7 @@
 ﻿Feature: InformationCentre
 	Information Centre page content and functionality
 
-@HolidayHomesForSale
+@Navigation
 Scenario: The user can navigate to the Holiday Homes for Sale page
 	Given I am on the Sykes Homepage
 	When I click the Holiday homes for sale navigation link under Let Your Property
@@ -13,12 +13,11 @@ Scenario: The relevent elements are present on the Holiday Homes for Sale page
 	Then the following elements are dislpayed on the page
          | Element                           |
          | Holiday Homes for Sale UK         |
-         | Enquire with Sykes today          |
          | container_sykes_grid              |
          | View more holiday homes for sale  |
          | How much could I earn with Sykes? |
 
-@InformationCentre
+@Navigation
 Scenario: The user can navigate to the Information Centre pages
 	Given I am on the Sykes Homepage
 	When I click the Holiday homes for sale navigation link under Let Your Property
@@ -39,12 +38,11 @@ Scenario: The user can navigate to the Information Centre pages
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
-         | Element                                            |
-         | Complete the form to receive your information pack |
-         | <Header>                                           |
-         | Are you thinking of buying?                        |
-         | Other frequently asked questions                   |
-         | How much could I earn with Sykes?                  |
+         | Element                           |
+         | form-heading-container            |
+         | <Header>                          |
+         | Are you thinking of buying?       |
+         | How much could I earn with Sykes? |
 	Examples:
 	| Path                                              | Header                                     |
 	| letyourcottage/marketing-your-holiday-let         | Advertising and marketing your holiday let |
