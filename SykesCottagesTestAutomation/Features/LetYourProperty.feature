@@ -50,16 +50,16 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	| Holiday Homes for Sale |
 
 @OwnerCreation
-Scenario: The user can complete the digital onboarding process
+Scenario: The user can add a property via the digital onboarding process
 	Given I have submitted an enquiry with the following details
 	| Key           | Value                         |
 	| Full name     | Test Owner                    |
 	| Email address | sykescottagestest@example.org |
 	| Phone number  | 07000000000                   |
 	When I click the Continue Online button
-	Then I can complete the digital online process using the following details
-	| Key                | Value   |
-	| Postcode           | LA231LJ |
-	| Number of bedrooms | 2       |
-	| Number of guests   | 4       |
+	Then I can complete the property creation process
+	| Key                | Value  |
+	| Postcode           | Random |
+	| Number of bedrooms | 2      |
+	| Number of guests   | 4      |
 	And the following page title is displayed: Thank you for your enquiry | Sykes Cottages

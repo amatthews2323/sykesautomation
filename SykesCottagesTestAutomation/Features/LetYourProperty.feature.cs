@@ -327,14 +327,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The user can complete the digital onboarding process")]
+        [NUnit.Framework.DescriptionAttribute("The user can add a property via the digital onboarding process")]
         [NUnit.Framework.CategoryAttribute("OwnerCreation")]
-        public virtual void TheUserCanCompleteTheDigitalOnboardingProcess()
+        public virtual void TheUserCanAddAPropertyViaTheDigitalOnboardingProcess()
         {
             string[] tagsOfScenario = new string[] {
                     "OwnerCreation"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can complete the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property via the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -378,7 +378,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Value"});
                 table8.AddRow(new string[] {
                             "Postcode",
-                            "LA231LJ"});
+                            "Random"});
                 table8.AddRow(new string[] {
                             "Number of bedrooms",
                             "2"});
@@ -386,7 +386,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Number of guests",
                             "4"});
 #line 60
- testRunner.Then("I can complete the digital online process using the following details", ((string)(null)), table8, "Then ");
+ testRunner.Then("I can complete the property creation process", ((string)(null)), table8, "Then ");
 #line hidden
 #line 65
  testRunner.And("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +

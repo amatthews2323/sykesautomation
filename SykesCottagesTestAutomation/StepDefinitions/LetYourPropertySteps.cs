@@ -67,7 +67,7 @@ namespace SykesCottagesTestAutomation.BaseClass
                 var dictionary = ToDictionary(table);
                 Type("form_first_name", dictionary["Full name"]);
                 Type("form_email", dictionary["Email address"]);
-                Type("form_phone", dictionary["Phone number"]);
+                TypeIfDisplayed("form_phone", dictionary["Phone number"]);
 
                 Click("submit");
             }
@@ -141,20 +141,25 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertElement(value);
         }
 
-        [Then(@"I can complete the digital online process using the following details")]
-        public void ThenICanCompleteTheDigitalOnlineProcessUsingTheFollowingDetails(Table table)
+        [Then(@"I can complete the property creation process")]
+        public void ThenICanCompleteThePropertyCreationProcess(Table table)
         {
             var dictionary = ToDictionary(table);
+            string postcode = dictionary["Postcode"];
+            if (postcode == "Random" | postcode == "")
+            {
+                postcode = GetPostcode();
+            }
             Click("Next");
 
             //Step 1
-            Click("o-toggle__box o-toggle-wrapper__box o-toggle-wrapper__box");
+            Click("I have a property I’d like to list", "Yes");
             Click("Next");
 
             //Step 2
-            Type("location", dictionary["Postcode"]);
+            Type("location", postcode);
             Click("Search");
-            Click("Expand area");
+            ClickIfDisplayed("Expand area");
             Click("Select Address");
             WaitASecond();
             Click("Next");
