@@ -16,15 +16,16 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
-	| Section                            |
-	| Gain exposure through our partners |
-	| What do our owners say             |
-	| How much could I earn              |
-	| Holiday letting made easy          |
-	| Are you thinking of buying         |
-	| Request your free                  |
+	| Section                                       |
+	| Gain exposure through our partners            |
+	| What do our owners say                        |
+	| How much could I earn                         |
+	| Holiday letting made easy                     |
+#	| Let the holiday experts answer your questions | 
+	| Are you thinking of buying                    |
+	| Request your free                             |
 
-@OwnerCreation
+@DigitalOnboarding
 Scenario: The user can submit the enquiry form
 	Given I have navigated to the following page: letyourcottage
 	When I enter my details on the enquiry form
@@ -35,7 +36,7 @@ Scenario: The user can submit the enquiry form
 	And I click the submit button
 	Then I am directed to the Property Letting Dashboard page
 
-@OwnerCreation
+@DigitalOnboarding
 Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	Given I have submitted an enquiry with the following details
 	| Key           | Value                         |
@@ -49,7 +50,7 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	| Pack Download          |
 	| Holiday Homes for Sale |
 
-@OwnerCreation
+@DigitalOnboarding
 Scenario: The user can add a property via the digital onboarding process
 	Given I have submitted an enquiry with the following details
 	| Key           | Value                         |
@@ -63,3 +64,9 @@ Scenario: The user can add a property via the digital onboarding process
 	| Number of bedrooms | 2      |
 	| Number of guests   | 4      |
 	And the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+
+
+@HolmesExperiments
+Scenario: Get all active experiments
+	Given I am accessing http://holmes.staging.sykes.cloud/experiments
+	Then I store the experiment IDs

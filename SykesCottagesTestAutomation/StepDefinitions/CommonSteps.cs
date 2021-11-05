@@ -2,10 +2,10 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
-using NUnit.Framework;
-using TechTalk.SpecFlow;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using NUnit.Framework;
+using TechTalk.SpecFlow;
 using System;
 using System.Collections.Generic;
 

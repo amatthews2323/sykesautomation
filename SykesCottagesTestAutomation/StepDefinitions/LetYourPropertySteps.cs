@@ -3,6 +3,8 @@ using TechTalk.SpecFlow;
 using NUnit.Framework;
 using System;
 using System.Linq;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -53,7 +55,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             var dictionary = ToDictionary(table);
             Type("form_first_name", dictionary["Full name"]);
             Type("form_email", dictionary["Email address"]);
-            Type("form_phone", dictionary["Phone number"]);
+            TypeIfDisplayed("form_phone", dictionary["Phone number"]);
         }
 
         [Given(@"I have submitted an enquiry with the following details")]
@@ -181,6 +183,38 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
             WaitASecond();
             Click("Finish");
+        }
+
+        [Then(@"I store the experiment IDs")]
+        public void ThenIStoreTheExperimentIDs()
+        {
+            WaitASecond(5);
+            ScrollTo("currentPage");
+            int a = 1;
+            while (a < 15)
+            {
+                IList<IWebElement> elementTexts = shared.driver.FindElements(By.XPath("//a[contains(text(),'KEP-')]|//a[contains(text(),'TES-')]|//a[contains(text(),'SDA-')]"));
+                string[] elementIDs = new string[elementTexts.Count];
+                int i = 0;
+                foreach (IWebElement element in elementTexts)
+                {
+                    elementIDs[i++] = Regex.Replace(element.Text, "[^0-9]", "");
+                }
+                Console.WriteLine("{0}", string.Join(",", elementIDs));
+                try
+                {
+                    if (shared.driver.FindElement(By.XPath("//li[@class='ng-scope']/a[text()='Next']")).Displayed)
+                    {
+                        shared.driver.FindElement(By.XPath("//li[@class='ng-scope']/a[text()='Next']")).Click();
+                        WaitASecond(1);
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Next button not found");
+                }
+                a++;
+            }
         }
     }
 }

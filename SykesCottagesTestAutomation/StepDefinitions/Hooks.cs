@@ -9,9 +9,11 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
+        public static string ExtentReportName = "LYP Automated Test Report";
+
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
@@ -29,7 +31,12 @@ namespace SykesCottagesTestAutomation
             //Initialize the Report
             var htmlReporter = new ExtentHtmlReporter(@"C:\Logs\ExtentReport.html");
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
-            htmlReporter.Config.ReportName = "Automation Test Report";
+            ExtentReportName = ExtentReportName + " | Environment: " + Environemt + " | Browser: " + Browser;
+            if (Experiments != "")
+            {
+                ExtentReportName = ExtentReportName + " | Experiments: " + Experiments;
+            }
+            htmlReporter.Config.ReportName = ExtentReportName;
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
         }
