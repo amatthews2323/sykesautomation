@@ -210,11 +210,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The user can submit the enquiry form")]
-        [NUnit.Framework.CategoryAttribute("OwnerCreation")]
+        [NUnit.Framework.CategoryAttribute("DigitalOnboarding")]
         public virtual void TheUserCanSubmitTheEnquiryForm()
         {
             string[] tagsOfScenario = new string[] {
-                    "OwnerCreation"};
+                    "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can submit the enquiry form", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 29
@@ -267,11 +267,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Property Letting Dashboard")]
-        [NUnit.Framework.CategoryAttribute("OwnerCreation")]
+        [NUnit.Framework.CategoryAttribute("DigitalOnboarding")]
         public virtual void TheRelevantSectionsAreDisplayedOnThePropertyLettingDashboard()
         {
             string[] tagsOfScenario = new string[] {
-                    "OwnerCreation"};
+                    "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Property Letting Dashboard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 40
@@ -328,11 +328,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The user can add a property via the digital onboarding process")]
-        [NUnit.Framework.CategoryAttribute("OwnerCreation")]
+        [NUnit.Framework.CategoryAttribute("DigitalOnboarding")]
         public virtual void TheUserCanAddAPropertyViaTheDigitalOnboardingProcess()
         {
             string[] tagsOfScenario = new string[] {
-                    "OwnerCreation"};
+                    "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property via the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 54
@@ -430,6 +430,45 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 72
  testRunner.Then("I store the experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Check active experiments")]
+        [NUnit.Framework.CategoryAttribute("Experiments")]
+        public virtual void CheckActiveExperiments()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Experiments"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check active experiments", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 75
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 76
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 77
+ testRunner.Then("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

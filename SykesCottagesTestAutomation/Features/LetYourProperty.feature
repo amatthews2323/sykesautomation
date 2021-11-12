@@ -70,3 +70,8 @@ Scenario: The user can add a property via the digital onboarding process
 Scenario: Get all active experiments
 	Given I am accessing http://holmes.staging.sykes.cloud/experiments
 	Then I store the experiment IDs
+
+@Experiments
+Scenario: Check active experiments
+	Given I have navigated to the following page: letyourcottage
+	Then I store the active experiment IDs

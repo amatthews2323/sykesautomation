@@ -216,6 +216,14 @@ namespace SykesCottagesTestAutomation.BaseClass
                 a++;
             }
         }
+
+        [Then(@"I store the active experiment IDs")]
+        public void ThenIStoreTheActiveExperimentIDs()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)shared.driver;
+            var experimentIds = js.ExecuteScript("return experimental_experiments");
+            Console.WriteLine("Active experiments: " + experimentIds);
+        }
     }
 }
 
