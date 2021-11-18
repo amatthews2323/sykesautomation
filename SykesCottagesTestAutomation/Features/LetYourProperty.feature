@@ -17,7 +17,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
 	| Section                                       |
-	| Gain exposure through our partners            |
+	| partner							            |
 	| What do our owners say                        |
 	| How much could I earn                         |
 	| Holiday letting made easy                     |
@@ -64,14 +64,3 @@ Scenario: The user can add a property via the digital onboarding process
 	| Number of bedrooms | 2      |
 	| Number of guests   | 4      |
 	And the following page title is displayed: Thank you for your enquiry | Sykes Cottages
-
-
-@HolmesExperiments
-Scenario: Get all active experiments
-	Given I am accessing http://holmes.staging.sykes.cloud/experiments
-	Then I store the experiment IDs
-
-@Experiments
-Scenario: Check active experiments
-	Given I have navigated to the following page: letyourcottage
-	Then I store the active experiment IDs

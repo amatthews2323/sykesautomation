@@ -15,6 +15,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
         }
 
+        private string activeExperiments;
+
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
@@ -27,6 +29,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite("", path);
             CloseAllPopups();
+        }
+
+        [When(@"I navigate to (.*)")]
+        public void WhenINavigateTo(string url = "")
+        {
+            shared.driver.Navigate().GoToUrl(url);
         }
 
         [When(@"I click the (.*) link")]
@@ -217,12 +225,39 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"I store the active experiment IDs")]
-        public void ThenIStoreTheActiveExperimentIDs()
+        [When(@"I store the active experiment IDs")]
+        public void WhenIStoreTheActiveExperimentIDs()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)shared.driver;
-            var experimentIds = js.ExecuteScript("return experimental_experiments");
-            Console.WriteLine("Active experiments: " + experimentIds);
+            activeExperiments = GetJavaScriptText("experimental_experiments");
+        }
+
+        [When(@"I search for the experiment details")]
+        public void WhenISearchForTheExperimentDetails()
+        {
+            WaitASecond(2);
+            Console.WriteLine("Experiment details:");
+            var array = activeExperiments.Split(",");
+            for (int i = 0; i < array.Length; i++)
+            {
+                string id = array[i].ToString().Trim();
+                Type("text_search", id);
+                WaitASecond();
+                string experimentId = shared.driver.FindElement(By.XPath("//a[@class='ng-binding']")).Text;
+                string experimentName = shared.driver.FindElement(By.XPath("//p[@class='name ng-binding']")).Text;
+                Console.WriteLine(experimentId + " " + experimentName);
+            }
+        }
+
+        [When(@"I apply the following experiment: (.*)")]
+        public void WhenIApplyTheFollowingExperiment(string experimentId)
+        {
+            ApplyExperiment(experimentId);
+        }
+
+        [When(@"I set the window to tablet size")]
+        public void GivenISetTheWindowToTabletSize()
+        {
+            SetWindowSize(768, 1024);
         }
     }
 }

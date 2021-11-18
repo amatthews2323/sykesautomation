@@ -8,6 +8,7 @@ using NUnit.Framework;
 using TechTalk.SpecFlow;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace SykesCottagesTestAutomation
 {
@@ -95,6 +96,16 @@ namespace SykesCottagesTestAutomation
             }
         }
 
+        public void ApplyExperiment(string experimentId)
+        {
+            Click("Dev Tools");
+            Type("experiment-search", experimentId);
+            WaitASecond();
+            shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + experimentId + "\")]")).Click();
+            shared.driver.Navigate().Refresh();
+            WaitASecond();
+        }
+
         public void SelectBrowser(string browser)
         {
             switch (browser)
@@ -114,6 +125,11 @@ namespace SykesCottagesTestAutomation
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
                     break;
             }
+        }
+
+        public void SetWindowSize(int width = 768, int height = 1024)
+        {
+            shared.driver.Manage().Window.Size = new Size(width, height);
         }
 
         public string XPath(string value1, string value2, string element = "*")
@@ -242,7 +258,7 @@ namespace SykesCottagesTestAutomation
 
         public void Type(string value1, string text, string value2 = "Alternative value")
         {
-            Console.WriteLine("Type \"" + text + "\" into the \"" + value1 + "\" field");
+            //Console.WriteLine("Type \"" + text + "\" into the \"" + value1 + "\" field");
             IWebElement element = shared.driver.FindElement(By.XPath(XPath(value1, value2, "input")));
             element.Clear();
             element.SendKeys(text);
@@ -264,6 +280,14 @@ namespace SykesCottagesTestAutomation
             {
                 Console.WriteLine(value1 + " not found");
             }
+        }
+
+        public string GetJavaScriptText(string jsObject)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)shared.driver;
+            string jsText = (string)js.ExecuteScript("return " + jsObject);
+            Console.WriteLine("JS text: " + jsText);
+            return jsText;
         }
 
         public string GetPostcode()

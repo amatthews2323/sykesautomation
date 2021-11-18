@@ -147,18 +147,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table1.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table1.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "container_sykes_grid"});
-                table1.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table1.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
 #line 13
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table1, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table7, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -270,18 +270,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table2.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "form-heading-container"});
-                table2.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table2.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Are you thinking of buying?"});
-                table2.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
 #line 40
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table2, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table8, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
