@@ -79,7 +79,6 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/run-holiday-let-as-business", "How to Run a Holiday Let as a Business", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/leading-holiday-let-agency", "Why You Should Let Your Property With The Leading Holiday Lettings Agency", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-management-services", "How Sykes Can Manage Your Holiday Home", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/why-become-a-sykes-holiday-cottage-owner", "Why You Should Become a Sykes Holiday Cottage Owner", null)]
         public virtual void TheLandingPagesAreDisplayedCorrectly(string path, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -116,19 +115,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
- testRunner.Then(string.Format("the following text is displayed on the page: {0}", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
+                            string.Format("{0}", title)});
+                table10.AddRow(new string[] {
                             "form-heading-container"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Reading time"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Download your free owner information pack"});
-#line 8
- testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table9, "And ");
+#line 7
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table10, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

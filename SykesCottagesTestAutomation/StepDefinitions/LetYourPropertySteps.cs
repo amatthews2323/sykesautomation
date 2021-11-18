@@ -201,7 +201,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             int a = 1;
             while (a < 15)
             {
-                IList<IWebElement> elementTexts = shared.driver.FindElements(By.XPath("//a[contains(text(),'KEP-')]|//a[contains(text(),'TES-')]|//a[contains(text(),'SDA-')]"));
+                IList<IWebElement> elementTexts = shared.driver.FindElements(By.XPath("//a[contains(text(),'KEP-')]"));
                 string[] elementIDs = new string[elementTexts.Count];
                 int i = 0;
                 foreach (IWebElement element in elementTexts)

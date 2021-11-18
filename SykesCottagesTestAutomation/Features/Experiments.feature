@@ -77,3 +77,12 @@ Scenario: Experiment LetYourCottages_FullHeightHero17731
     Then the following elements are dislpayed on the page
          | Element                      |
          | o-icon o-icon-down-full-hero |
+
+@Experiments
+Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17973
+    Then the following elements are dislpayed on the page
+         | Element                                                        |
+         | Let your property with Sykes and earn up to £125,000 per year* |
+         | Get started today                                              |

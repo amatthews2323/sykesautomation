@@ -187,22 +187,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 17
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "partner"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "What do our owners say"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "How much could I earn"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Request your free"});
 #line 18
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table10, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table11, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -240,20 +240,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 30
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 31
- testRunner.When("I enter my details on the enquiry form", ((string)(null)), table11, "When ");
+ testRunner.When("I enter my details on the enquiry form", ((string)(null)), table12, "When ");
 #line hidden
 #line 36
  testRunner.And("I click the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -294,33 +294,33 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table12.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 41
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table12, "Given ");
+ testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table13, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Phone Call"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Continue Online"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Pack Download"});
-                table13.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Holiday Homes for Sale"});
 #line 46
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table13, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table14, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -355,38 +355,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table14.AddRow(new string[] {
-                            "Full name",
-                            "Test Owner"});
-                table14.AddRow(new string[] {
-                            "Email address",
-                            "sykescottagestest@example.org"});
-                table14.AddRow(new string[] {
-                            "Phone number",
-                            "07000000000"});
-#line 55
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table14, "Given ");
-#line hidden
-#line 60
- testRunner.When("I click the Continue Online button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
                 TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table15.AddRow(new string[] {
+                            "Full name",
+                            "Test Owner"});
+                table15.AddRow(new string[] {
+                            "Email address",
+                            "sykescottagestest@example.org"});
+                table15.AddRow(new string[] {
+                            "Phone number",
+                            "07000000000"});
+#line 55
+ testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table15, "Given ");
+#line hidden
+#line 60
+ testRunner.When("I click the Continue Online button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table16.AddRow(new string[] {
                             "Postcode",
                             "Random"});
-                table15.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "Number of bedrooms",
                             "2"});
-                table15.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "Number of guests",
                             "4"});
 #line 61
- testRunner.Then("I can complete the property creation process", ((string)(null)), table15, "Then ");
+ testRunner.Then("I can complete the property creation process", ((string)(null)), table16, "Then ");
 #line hidden
 #line 66
  testRunner.And("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
