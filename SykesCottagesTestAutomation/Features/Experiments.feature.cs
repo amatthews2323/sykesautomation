@@ -504,14 +504,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 84
  testRunner.When("I apply the following experiment: 17973", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 85
+    testRunner.Then("the following element is not displayed on the page: form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
                 table7.AddRow(new string[] {
                             "Let your property with Sykes and earn up to £125,000 per year*"});
                 table7.AddRow(new string[] {
                             "Get started today"});
-#line 85
-    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table7, "Then ");
+#line 86
+    testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table7, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

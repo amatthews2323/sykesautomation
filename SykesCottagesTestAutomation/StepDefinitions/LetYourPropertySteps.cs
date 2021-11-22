@@ -126,6 +126,17 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [Then(@"the following elements are not dislpayed on the page")]
+        public void ThenTheFollowingElementsAreNotDislpayedOnThePage(Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                AssertElementNotPresent(element.ToString());
+            }
+        }
+
+
         [When(@"I click the (.*) button")]
         public void ThenIClickTheButton(string element)
         {
@@ -149,6 +160,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingElementIsDisplayedOnThePage(string value)
         {
             AssertElement(value);
+        }
+
+        [Then(@"the following element is not displayed on the page: (.*)")]
+        public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
+        {
+            AssertElementNotPresent(value);
         }
 
         [Then(@"I can complete the property creation process")]
