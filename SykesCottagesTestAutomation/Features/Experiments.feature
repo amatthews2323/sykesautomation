@@ -88,3 +88,8 @@ Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
          | Let your property with Sykes and earn up to £125,000 per year* |
          | Get started today                                              |
 
+@Experiments
+Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17921
+    Then the following element is not displayed on the page: We are still open as usual
