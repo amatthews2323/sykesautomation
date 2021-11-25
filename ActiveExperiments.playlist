@@ -1,0 +1,72 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="SykesCottagesTestAutomation" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="SykesCottagesTestAutomation.Features" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="ExperimentsFeature" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_FloatingActionButtonDesktopTablet17853" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_FloatingActionButtonDesktopTablet17853" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_AlertTob17803" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_AlertTob17803" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_FullHeightHero17731" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_FullHeightHero17731" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_PnoProcess17640" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_PnoProcess17640" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_AddingWebinars17805" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_AddingWebinars17805" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_PartnersInfoGraphic17791" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_PartnersInfoGraphic17791" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_SingleCTAWithinTheHero17973" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_SingleCTAWithinTheHero17973" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveWeAreStillOpen17921" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveWeAreStillOpen17921" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
