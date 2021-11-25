@@ -10,7 +10,7 @@ Scenario: The user can navigate to the Let Your Property page
 @LetYourProperty
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	Then the enquiry form is displayed
+	Then the following element is displayed on the page: form-heading-container
 
 @LetYourProperty
 Scenario: The relevant sections are displayed on the Let Your Property page
@@ -21,7 +21,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	| What do our owners say                        |
 	| How much could I earn                         |
 	| Holiday letting made easy                     |
-#	| Let the holiday experts answer your questions | 
+#	| Let the holiday experts answer your questions |
 	| Are you thinking of buying                    |
 	| Request your free                             |
 

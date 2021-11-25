@@ -4,8 +4,13 @@
 @Subdomains
 Scenario: The Sykes sub-domains are displayed correctly
 	Given I am accessing <Subdomain>
-	Then the following text is displayed on the page: <Title>
-	And the enquiry form is displayed
+	Then the following elements are dislpayed on the page
+	| Element                   |
+	| <Title>                   |
+	| form-heading-container    |
+	| partner                   |
+	| Holiday letting made easy |
+	| Request a free owner pack |
 	Examples:
 	| Subdomain                                                   | Title                    |
 	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay               |

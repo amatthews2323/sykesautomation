@@ -51,12 +51,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(headedLink);
         }
 
-        [Then(@"the enquiry form is displayed")]
-        public void ThenTheEnquiryFormIsDisplayed()
-        {
-            Assert.IsTrue(shared.driver.FindElement(By.XPath("//div[contains(@class,'js-enquiry-form')]")).Displayed, "Enquiry form not found");
-        }
-
         [When(@"I enter my details on the enquiry form")]
         public void WhenIEnterMyDetailsOnTheEnquiryForm(Table table)
         {

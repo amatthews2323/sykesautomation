@@ -5,6 +5,7 @@
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed on the page: <Region>
+	And the following element is displayed on the page: form-heading-container
 	Examples:
 	| Path                                                      | Region                     |
 	| letyourcottage/In-Your-Area/South-West                    | South West                 |
