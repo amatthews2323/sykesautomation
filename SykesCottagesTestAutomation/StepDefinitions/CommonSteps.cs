@@ -74,34 +74,25 @@ namespace SykesCottagesTestAutomation
             if (Hooks.Experiments != "")
             {
                 shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); //Launch website with Dev Tools activated                                                 
-                shared.driver.Manage().Window.Maximize(); //Maximise the browser window
-
-                //Apply experiments
-                Click("Dev Tools");
-                var array = Hooks.Experiments.Split(",");
-                for (int i = 0; i < array.Length; i++)
-                {
-                    string Experiment = array[i].ToString().Trim();
-                    Type("experiment-search", Experiment);
-                    WaitASecond();
-                    shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
-                }
-                shared.driver.Navigate().Refresh();
-                WaitASecond();
+                ApplyExperiment(Hooks.Experiments);
             }
             else
             {
                 shared.driver.Navigate().GoToUrl(domain + path); //Launch website
-                shared.driver.Manage().Window.Maximize(); //Maximise the browser window
             }
         }
 
-        public void ApplyExperiment(string experimentId)
+        public void ApplyExperiment(string experimentIds)
         {
             Click("Dev Tools");
-            Type("experiment-search", experimentId);
-            WaitASecond();
-            shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + experimentId + "\")]")).Click();
+            var array = experimentIds.Split(",");
+            for (int i = 0; i < array.Length; i++)
+            {
+                string Experiment = array[i].ToString().Trim();
+                Type("experiment-search", Experiment);
+                WaitASecond();
+                shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
+            }
             shared.driver.Navigate().Refresh();
             WaitASecond();
         }
@@ -127,9 +118,30 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        public void SetWindowSize(int width = 768, int height = 1024)
+        public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
         {
-            shared.driver.Manage().Window.Size = new Size(width, height);
+            Console.WriteLine("Set browser size to " + viewpoint);
+            if (viewpoint.Contains("Max"))
+            {
+                shared.driver.Manage().Window.Maximize(); //Maximise
+            }
+            if (viewpoint == "Desktop")
+            {
+                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop dimentions
+            }
+            if (viewpoint == "Tablet")
+            {
+                shared.driver.Manage().Window.Size = new Size(768, 1024); //iPad dimensions
+            }
+            if (viewpoint == "Mobile")
+            {
+                shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
+            }
+            if (viewpoint == "Custom")
+            {
+                shared.driver.Manage().Window.Size = new Size(width, height);
+            }
+            shared.driver.Manage().Window.Maximize(); //Maximise by default
         }
 
         public string XPath(string value1, string value2, string element = "*")

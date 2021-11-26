@@ -21,6 +21,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
+            CloseAllPopups();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
@@ -29,6 +31,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite("", path);
             CloseAllPopups();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
         [When(@"I navigate to (.*)")]
@@ -67,6 +70,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             {
                 LaunchWebsite("", "letyourcottage");
                 CloseAllPopups();
+                SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
 
                 var dictionary = ToDictionary(table);
                 Type("form_first_name", dictionary["Full name"]);
@@ -142,6 +146,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite(domain);
             CloseAllPopups();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
         [Then(@"the following text is displayed on the page: (.*)")]
@@ -268,8 +273,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I set the window to tablet size")]
         public void GivenISetTheWindowToTabletSize()
         {
-            SetWindowSize(768, 1024);
+            SetBrowserSize("Tablet");
         }
     }
 }
-

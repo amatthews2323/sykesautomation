@@ -12,7 +12,10 @@ namespace SykesCottagesTestAutomation
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
-        public static string ExtentReportName = "LYP Automated Test Report";
+        public static string BrowserSize = ""; //Set the size of the browser: Max | Desktop | Tablet | Mobile | Custom
+        public static int PageWidth = 768; //Set the browser window width
+        public static int PageHeight = 1024; //Set the browser window height
+        public static string ExtentReportName = "LYP Automated Test Report"; //Set the Extort Report name
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;
