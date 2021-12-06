@@ -16,6 +16,9 @@ Scenario: The relevent elements are present on the Holiday Homes for Sale page
          | container_sykes_grid              |
          | View more holiday homes for sale  |
          | How much could I earn with Sykes? |
+         | c-alert__icon-wrap                |
+         | Enquire with Sykes today          |
+         | Get started                       |
 
 @Navigation
 Scenario: The user can navigate to the Information Centre pages

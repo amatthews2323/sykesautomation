@@ -9,8 +9,8 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
         public static string BrowserSize = ""; //Set the size of the browser: Max | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width

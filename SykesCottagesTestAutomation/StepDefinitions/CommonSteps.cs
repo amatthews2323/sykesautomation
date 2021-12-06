@@ -95,6 +95,7 @@ namespace SykesCottagesTestAutomation
             }
             shared.driver.Navigate().Refresh();
             WaitASecond();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
         public void SelectBrowser(string browser)
@@ -102,7 +103,7 @@ namespace SykesCottagesTestAutomation
             switch (browser)
             {
                 case "Chrome":
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
+                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome", new ChromeOptions { Proxy = null });
                     break;
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");
@@ -276,7 +277,7 @@ namespace SykesCottagesTestAutomation
 
         public void Type(string value1, string text, string value2 = "Alternative value")
         {
-            //Console.WriteLine("Type \"" + text + "\" into the \"" + value1 + "\" field");
+            Console.WriteLine("Type \"" + text + "\" into the \"" + value1 + "\" field");
             IWebElement element = shared.driver.FindElement(By.XPath(XPath(value1, value2, "input")));
             element.Clear();
             element.SendKeys(text);

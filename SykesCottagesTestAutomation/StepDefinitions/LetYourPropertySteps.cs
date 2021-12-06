@@ -16,6 +16,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         private string activeExperiments;
+        public string emailAddress;
 
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
@@ -40,8 +41,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             shared.driver.Navigate().GoToUrl(url);
         }
 
-        [When(@"I click the (.*) link")]
-        public void IClickTheLink(string value)
+        [When(@"I click (.*)")]
+        public void IClick(string value)
         {
             Click(value);
         }
@@ -58,9 +59,9 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterMyDetailsOnTheEnquiryForm(Table table)
         {
             var dictionary = ToDictionary(table);
-            Type("form_first_name", dictionary["Full name"]);
-            Type("form_email", dictionary["Email address"]);
-            TypeIfDisplayed("form_phone", dictionary["Phone number"]);
+            Type("first_name", dictionary["Full name"]);
+            Type("email", dictionary["Email address"]);
+            TypeIfDisplayed("phone", dictionary["Phone number"]);
         }
 
         [Given(@"I have submitted an enquiry with the following details")]
@@ -73,9 +74,19 @@ namespace SykesCottagesTestAutomation.BaseClass
                 SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
 
                 var dictionary = ToDictionary(table);
-                Type("form_first_name", dictionary["Full name"]);
-                Type("form_email", dictionary["Email address"]);
-                TypeIfDisplayed("form_phone", dictionary["Phone number"]);
+                Type("first_name", dictionary["Full name"]);
+
+                if (dictionary["Email address"] == "Random")
+                {
+                    Random r = new Random();
+                    emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
+                    Type("email", emailAddress);
+                }
+                else
+                {
+                    Type("email", dictionary["Email address"]);
+                }
+                TypeIfDisplayed("phone", dictionary["Phone number"]);
 
                 Click("submit");
             }
@@ -134,7 +145,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-
         [When(@"I click the (.*) button")]
         public void ThenIClickTheButton(string element)
         {
@@ -167,46 +177,113 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertElementNotPresent(value);
         }
 
-        [Then(@"I can complete the property creation process")]
-        public void ThenICanCompleteThePropertyCreationProcess(Table table)
+        [When(@"I enter an email address without an @ symbol")]
+        public void WhenIEnterAnEmailAddressWithoutAnSymbol()
         {
-            var dictionary = ToDictionary(table);
-            string postcode = dictionary["Postcode"];
-            if (postcode == "Random" | postcode == "")
-            {
-                postcode = GetPostcode();
-            }
-            Click("Next");
+            Type("email", "test.com");
+        }
 
+        [When(@"I enter an email address without a valid domain")]
+        public void WhenIEnterAnEmailAddressWithoutAValidDomain()
+        {
+            Type("email", "test@test");
+        }
+
+        [When(@"I enter a phone number with a non-numerical character")]
+        public void WhenIEnterAPhoneNumberWithANon_NumericalCharacter()
+        {
+            Type("phone", "test");
+        }
+
+        [When(@"I enter a phone number with less than 10 digits")]
+        public void WhenIEnterAPhoneNumberWithLessThanDigits()
+        {
+            Type("phone", "070000000");
+        }
+
+        [When(@"I enter a phone number with more than 15 digits")]
+        public void WhenIEnterAPhoneNumberWithMoreThanDigits()
+        {
+            Type("phone", "0700000000000000");
+        }
+
+        [Then(@"I can add a property with the following postcode: (.*)")]
+        public void ThenICanCompleteThePropertyCreationProcess(string postcode = "")
+        {
             //Step 1
             Click("I have a property I’d like to list", "Yes");
             Click("Next");
 
             //Step 2
+            if (postcode == "Random" | postcode == "")
+            {
+                postcode = GetPostcode();
+            }
             Type("location", postcode);
             Click("Search");
             ClickIfDisplayed("Expand area");
             Click("Select Address");
             WaitASecond();
-            Click("Next");
-
-            //Step 3
-            int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
-            for (int i = 1; i < bedrooms; i++)
-            {
-                ClickButton("+");
-            }
-            WaitASecond();
-            Click("Next");
-
-            //Step 4
-            int guests = int.Parse(dictionary["Number of guests"]);
-            for (int i = 1; i < guests; i++)
-            {
-                shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")).Click();
-            }
-            WaitASecond();
             Click("Finish");
+
+            /*            //Step 3
+                        int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
+                        for (int i = 1; i < bedrooms; i++)
+                        {
+                            ClickButton("+");
+                        }
+                        WaitASecond();
+                        Click("Next");
+
+                        //Step 4
+                        int guests = int.Parse(dictionary["Number of guests"]);
+                        for (int i = 1; i < guests; i++)
+                        {
+                            shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")).Click();
+                        }
+                        WaitASecond();
+                        Click("Finish");*/
+        }
+
+        [Then(@"I can create an account using password: (.*)")]
+        public void ThenICanCreateAnAccountUsingPassword(string password)
+        {
+            Click("Start taking bookings");
+            Type("password", password);
+            Click("Create my account");
+        }
+
+        [Then(@"I can register my account via the email")]
+        public void ThenICanRegisterMyAccountViaTheEmail()
+        {
+            LaunchWebsite("https://mailcatcher.staging.sykes.cloud/");
+            Click(emailAddress);
+
+        }
+
+        [Then(@"I can sign in to my account using the following details")]
+        public void ThenICanSignInToMyAccountUsingTheFollowingDetails(Table table)
+        {
+            LaunchWebsite("", "account/login");
+
+            var dictionary = ToDictionary(table);
+            if (dictionary["Username"] == "Random")
+            {
+                Type("email", emailAddress);
+            }
+            else
+            {
+                Type("email", dictionary["Username"]);
+            }
+            Type("password", dictionary["Password"]);
+
+            Click("submit");
+        }
+
+        [Then(@"I can complete the digital onboarding process using the following deatils")]
+        public void ThenICanCompleteTheDigitalOnboardingProcessUsingTheFollowingDeatils(Table table)
+        {
+            
         }
 
         [Then(@"I store the experiment IDs")]

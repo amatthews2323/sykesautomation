@@ -13,18 +13,25 @@ Scenario: Get all active experiments in a given session
 	Given I am accessing http://holmes.prod.sykes.cloud/experiments
 	When I search for the experiment details
 
-@Experiments
-Scenario: Experiment LetYourCottages_PnoProcess17640
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ManagedServicesPage17994
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17640
-	Then the following elements are dislpayed on the page
-         | Element                |
-         | How to list with Sykes |
-         | Request for contact    |
-         | Self-service           |
-         | Start taking bookings  |
+	When I apply the following experiment: 17994
+	Then the following text is displayed on the page: Holiday home management with Sykes
+    When I click /letyourcottage/managed-services
+    Then the following elements are dislpayed on the page
+         | Element                   |
+         | Holiday home management   |
+         | hero-slideshow            |
+         | form-heading-container    |
+         | Managed services at Sykes |
+         | What are the benefits     |
+         | Partially managed         |
+         | Fully managed             |
+         | Resource centre           |
+         | Share page                |
 
-@Experiments
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17791
@@ -38,7 +45,7 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
          | expedia logo               |
          | tripadvisor logo           |
 
-@Experiments
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_AddingWebinars17805
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17805
@@ -51,7 +58,22 @@ Scenario: Experiment LetYourCottages_AddingWebinars17805
          | Thinking of buying a property                 |
          | New to letting                                |
 
-@Experiments
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17853
+    And I set the window to tablet size
+	Then the following elements are dislpayed on the page
+         | Element                       |
+         | Floating action button mobile |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17921
+    Then the following element is not displayed on the page: We are still open as usual
+
+@SuccessfulExperiments
 Scenario: Experiment LetYourCottages_AlertTob17803
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
 	When I apply the following experiment: 17803
@@ -61,24 +83,7 @@ Scenario: Experiment LetYourCottages_AlertTob17803
          | Enquire with Sykes today |
          | Get started              |
 
-@Experiments
-Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17853
-    And I set the window to tablet size
-	Then the following elements are dislpayed on the page
-         | Element                       |
-         | Floating action button mobile |
-
-@Experiments
-Scenario: Experiment LetYourCottages_FullHeightHero17731
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17731
-    Then the following elements are dislpayed on the page
-         | Element                      |
-         | o-icon o-icon-down-full-hero |
-
-@Experiments
+@FailedExperiments
 Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17973
@@ -88,8 +93,21 @@ Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
          | Let your property with Sykes and earn up to £125,000 per year* |
          | Get started today                                              |
 
-@Experiments
-Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+@FailedExperiments
+Scenario: Experiment LetYourCottages_PnoProcess17640
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17921
-    Then the following element is not displayed on the page: We are still open as usual
+	When I apply the following experiment: 17640
+	Then the following elements are dislpayed on the page
+         | Element                |
+         | How to list with Sykes |
+         | Request for contact    |
+         | Self-service           |
+         | Start taking bookings  |
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_FullHeightHero17731
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17731
+    Then the following elements are dislpayed on the page
+         | Element                      |
+         | o-icon o-icon-down-full-hero |

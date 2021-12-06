@@ -147,18 +147,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table8.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table8.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "container_sykes_grid"});
-                table8.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table8.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
+                table16.AddRow(new string[] {
+                            "c-alert__icon-wrap"});
+                table16.AddRow(new string[] {
+                            "Enquire with Sykes today"});
+                table16.AddRow(new string[] {
+                            "Get started"});
 #line 13
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table8, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table16, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -188,7 +194,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Link", link);
             argumentsOfScenario.Add("PageTitle", pageTitle);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 21
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -208,16 +214,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 22
+#line 25
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 23
+#line 26
  testRunner.When("I click the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 27
  testRunner.And(string.Format("I click the {0} navigation link under Information Centre", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 25
+#line 28
  testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -247,7 +253,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Path", path);
             argumentsOfScenario.Add("Header", header);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -267,21 +273,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
+#line 42
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table9.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "form-heading-container"});
-                table9.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table9.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "Are you thinking of buying?"});
-                table9.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-#line 40
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table9, "Then ");
+#line 43
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table17, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
