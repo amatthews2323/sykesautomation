@@ -190,16 +190,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.When("I click Get started", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table19.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Please enter a full name."});
-                table19.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Please enter an email address."});
-                table19.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Please enter a contact number."});
 #line 19
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table19, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table20, "Then ");
 #line hidden
 #line 24
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -288,22 +288,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 43
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "partner"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "What do our owners say"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "How much could I earn"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table20.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Request your free"});
 #line 44
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table20, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table21, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

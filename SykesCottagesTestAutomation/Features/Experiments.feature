@@ -14,6 +14,17 @@ Scenario: Get all active experiments in a given session
 	When I search for the experiment details
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18065
+	Then the following elements are dislpayed on the page
+         | Element                          |
+         | We're here to help               |
+         | Get in touch                     |
+         | Give us a call                   |
+         | Enquire about letting with Sykes |
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_ManagedServicesPage17994
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17994
