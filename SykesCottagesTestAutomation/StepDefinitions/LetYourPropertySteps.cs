@@ -97,6 +97,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [When(@"I submit the enquiry form")]
+        public void WhenISubmitTheEnquiryForm()
+        {
+            shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+        }
+
         [Then(@"I am directed to the Property Letting Dashboard page")]
         public void ThenIAmDirectedToThePropertyLettingDashboardPage()
         {
@@ -181,31 +187,31 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I enter an email address without an @ symbol")]
         public void WhenIEnterAnEmailAddressWithoutAnSymbol()
         {
-            Type("email", "test.com");
+            Type("heroform_email", "test.com");
         }
 
         [When(@"I enter an email address without a valid domain")]
         public void WhenIEnterAnEmailAddressWithoutAValidDomain()
         {
-            Type("email", "test@test");
+            Type("heroform_email", "test@test");
         }
 
         [When(@"I enter a phone number with a non-numerical character")]
         public void WhenIEnterAPhoneNumberWithANon_NumericalCharacter()
         {
-            Type("phone", "test");
+            Type("heroform_phone", "test");
         }
 
         [When(@"I enter a phone number with less than 10 digits")]
         public void WhenIEnterAPhoneNumberWithLessThanDigits()
         {
-            Type("phone", "070000000");
+            Type("heroform_phone", "070000000");
         }
 
         [When(@"I enter a phone number with more than 15 digits")]
         public void WhenIEnterAPhoneNumberWithMoreThanDigits()
         {
-            Type("phone", "0700000000000000");
+            Type("heroform_phone", "0700000000000000");
         }
 
         [Then(@"I can add a property with the following postcode: (.*)")]
