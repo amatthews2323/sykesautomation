@@ -217,7 +217,7 @@ namespace SykesCottagesTestAutomation
         public void AssertText(string value1, string value2 = "Alternative value")
         {
             Console.WriteLine("Assert the following text is present on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value1 + "\")]|//*[contains(text(),\"" + value2 + "\")]")).Count != 0, "Text not found");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value1 + "\")]|//*[contains(text(),\"" + value2 + "\")]|//*[contains(., \"" + value1 + "\")]|//*[contains(., \"" + value2 + "\")]")).Count != 0, "Text not found");
         }
 
         public void AssertElement(string value1, string value2 = "Alternative value")
@@ -229,7 +229,7 @@ namespace SykesCottagesTestAutomation
         public void AssertElementNotPresent(string value1, string value2 = "Alternative value")
         {
             Console.WriteLine("Assert the following element is present on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*=\""+ value1 +"\"]|//*[contains(text(),\"" + value1 + "\")]")).Count == 0, "Element displayed in error");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*=\""+ value1 +"\"]|//*[contains(text(),\"" + value1 + "\")]|//*[@*=\"" + value2 + "\"]|//*[contains(text(),\"" + value2 + "\")]")).Count == 0, "Element displayed in error");
         }
 
         public void Click(string value1, string value2 = "Alternative value")

@@ -5,12 +5,11 @@
 @DigitalOnboarding
 Scenario: The user can submit the enquiry form
 	Given I have navigated to the following page: letyourcottage
-	When I enter my details on the enquiry form
+	When I submit an enquiry with the following details
 	| Key           | Value                         |
 	| Full name     | Test Owner                    |
 	| Email address | sykescottagestest@example.org |
 	| Phone number  | 07000000000                   |
-	And I click submit
 	Then I am directed to the Property Letting Dashboard page
 
 @DigitalOnboarding

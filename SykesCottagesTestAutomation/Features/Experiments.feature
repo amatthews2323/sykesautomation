@@ -57,19 +57,6 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
          | tripadvisor logo           |
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_AddingWebinars17805
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17805
-	Then the following elements are dislpayed on the page
-         | Element                                       |
-         | Let the holiday experts answer your questions |
-         | webinar-video                                 |
-         | Listing with Sykes                            |
-         | Watch more                                    |
-         | Thinking of buying a property                 |
-         | New to letting                                |
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17853
@@ -77,6 +64,20 @@ Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
 	Then the following elements are dislpayed on the page
          | Element                       |
          | Floating action button mobile |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18066
+	Then the following text is displayed on the page: Download the Sykes staycation index
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ReferAFriend18136
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18136
+	Then the following elements are dislpayed on the page
+         | Element        |
+         | Refer a friend |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
@@ -93,6 +94,19 @@ Scenario: Experiment LetYourCottages_AlertTob17803
          | c-alert__icon-wrap       |
          | Enquire with Sykes today |
          | Get started              |
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_AddingWebinars17805
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17805
+	Then the following elements are dislpayed on the page
+         | Element                                       |
+         | Let the holiday experts answer your questions |
+         | webinar-video                                 |
+         | Listing with Sykes                            |
+         | Watch more                                    |
+         | Thinking of buying a property                 |
+         | New to letting                                |
 
 @FailedExperiments
 Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973

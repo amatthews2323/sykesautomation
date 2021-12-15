@@ -55,13 +55,14 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(headedLink);
         }
 
-        [When(@"I enter my details on the enquiry form")]
-        public void WhenIEnterMyDetailsOnTheEnquiryForm(Table table)
+        [When(@"I submit an enquiry with the following details")]
+        public void WhenISubmitAnEnquiryWithTheFollowingDetails(Table table)
         {
             var dictionary = ToDictionary(table);
-            Type("first_name", dictionary["Full name"]);
-            Type("email", dictionary["Email address"]);
-            TypeIfDisplayed("phone", dictionary["Phone number"]);
+            Type("heroform_first_name", dictionary["Full name"]);
+            Type("heroform_email", dictionary["Email address"]);
+            Type("heroform_phone", dictionary["Phone number"]);
+            shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
         }
 
         [Given(@"I have submitted an enquiry with the following details")]
@@ -74,21 +75,21 @@ namespace SykesCottagesTestAutomation.BaseClass
                 SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
 
                 var dictionary = ToDictionary(table);
-                Type("first_name", dictionary["Full name"]);
+                Type("heroform_first_name", dictionary["Full name"]);
 
                 if (dictionary["Email address"] == "Random")
                 {
                     Random r = new Random();
                     emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
-                    Type("email", emailAddress);
+                    Type("heroform_email", emailAddress);
                 }
                 else
                 {
-                    Type("email", dictionary["Email address"]);
+                    Type("heroform_email", dictionary["Email address"]);
                 }
-                TypeIfDisplayed("phone", dictionary["Phone number"]);
+                Type("heroform_phone", dictionary["Phone number"]);
 
-                Click("submit");
+                shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
             }
             else
             {
