@@ -47,8 +47,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(value);
         }
 
-        [When(@"I click the (.*) navigation link under (.*)")]
-        public void WhenIClickTheNavigationLinkUnder(string headedLink, string headerMenu)
+        [When(@"I select the (.*) navigation link under (.*)")]
+        public void WhenISelectTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
             MouseOver(headerMenu);
             MouseOver(headedLink);
@@ -182,6 +182,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
         {
             AssertElementNotPresent(value);
+        }
+
+        [When(@"I scroll down the page")]
+        public void WhenIScrollDownThePage()
+        {
+            ScrollTo("page-footer container_sykes_grid");
         }
 
         [When(@"I enter an email address without an @ symbol")]

@@ -13,6 +13,17 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following element is displayed on the page: form-heading-container
 
 @LetYourProperty
+Scenario: The transparent header is displayed on the Let Your Property page
+	Given I have navigated to the following page: letyourcottage
+	Then the following element is displayed on the page: nav_top u-clearfix nav_top_17485
+
+@LetYourProperty
+Scenario: The floating action button is displayed on the Let Your Property page
+	Given I have navigated to the following page: letyourcottage
+	When I scroll down the page
+	Then the following element is displayed on the page: Back To Top Button
+
+@LetYourProperty
 Scenario: The relevant validation is in place on the enquiry form
 	Given I have navigated to the following page: letyourcottage
 	When I submit the enquiry form
@@ -45,6 +56,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	| Section                    |
 	| partner                    |
 	| What do our owners say     |
+	| We are still open as usual |
 	| How much could I earn      |
 	| Holiday letting made easy  |
 	| Are you thinking of buying |

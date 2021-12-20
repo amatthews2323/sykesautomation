@@ -132,6 +132,69 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The user can navigate to the Region pages")]
+        [NUnit.Framework.CategoryAttribute("Navigation")]
+        [NUnit.Framework.TestCaseAttribute("South West", "South West Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("South of England", "South of England Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Heart of England", "Heart of England Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("East Anglia", "Norfolk and Suffolk Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Peak District", "Peak District Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("North York Moors and Coast", "Yorkshire Moors & Coast Holiday Letting Agents | Sykes", null)]
+        [NUnit.Framework.TestCaseAttribute("Lake District and Cumbria", "Lake District & Cumbria Holiday Letting Agents | Sykes", null)]
+        [NUnit.Framework.TestCaseAttribute("Northumberland", "Northumberland Holiday Letting Agents | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Wales", "Wales Holiday Letting Agents | Welsh Holiday Lets | Sykes", null)]
+        [NUnit.Framework.TestCaseAttribute("Ireland", "Ireland Holiday Letting Agents | Irish Holiday Lets | Sykes", null)]
+        [NUnit.Framework.TestCaseAttribute("Scotland", "Scotland Holiday Letting Agents | Scottish Holiday Lets | Sykes", null)]
+        public virtual void TheUserCanNavigateToTheRegionPages(string link, string pageTitle, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Navigation"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Link", link);
+            argumentsOfScenario.Add("PageTitle", pageTitle);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Region pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+ testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 26
+ testRunner.When("I select the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 27
+ testRunner.And(string.Format("I select the {0} navigation link under Your Location", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+ testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -45,29 +45,29 @@
     <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.22" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="WebDriverManager" Version="2.12.3" />
+    <Content Remove="C:\Users\gary.smith\source\repos\SykesCottagesTestAutomation\SykesCottagesTestAutomation\bin\Debug\netcoreapp3.1\\geckodriver.exe" />
+    <Content Remove="C:\Users\gary.smith\source\repos\SykesCottagesTestAutomation\SykesCottagesTestAutomation\bin\Debug\netcoreapp3.1\\geckodriver.exe" />
+    <Content Remove="C:\Users\gary.smith\source\repos\SykesCottagesTestAutomation\SykesCottagesTestAutomation\bin\Debug\netcoreapp3.1\\geckodriver.exe" />
 	  <Content Include="$(TargetDir)\geckodriver.exe" CopyToPublishDirectory="Always">
 		  <Link>geckodriver.exe</Link>
 	  </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Drivers\Chrome\chromedriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Drivers\Edge\MicrosoftWebDriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Drivers\Edge\msedgedriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Drivers\Firefox\geckodriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Folder Include="Drivers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Drivers\Chrome\" />
-    <Folder Include="Drivers\Edge\" />
+    <None Update="Drivers\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\geckodriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\MicrosoftWebDriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

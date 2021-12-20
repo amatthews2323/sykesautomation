@@ -79,12 +79,6 @@ Scenario: Experiment LetYourCottages_ReferAFriend18136
          | Element        |
          | Refer a friend |
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17921
-    Then the following element is not displayed on the page: We are still open as usual
-
 @SuccessfulExperiments
 Scenario: Experiment LetYourCottages_AlertTob17803
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
@@ -94,6 +88,12 @@ Scenario: Experiment LetYourCottages_AlertTob17803
          | c-alert__icon-wrap       |
          | Enquire with Sykes today |
          | Get started              |
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17921
+    Then the following element is not displayed on the page: We are still open as usual
 
 @FailedExperiments
 Scenario: Experiment LetYourCottages_AddingWebinars17805

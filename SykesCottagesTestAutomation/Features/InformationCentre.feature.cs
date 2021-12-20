@@ -106,7 +106,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.When("I click the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
  testRunner.Then("the following page title is displayed: Holiday Homes for Sale UK", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -173,14 +173,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The user can navigate to the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("Navigation")]
-        [NUnit.Framework.TestCaseAttribute("Sykes Gems winners 2019", "Sykes Gems Winners 2019 | Owner Awards | Sykes Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("Advertising and marketing your holiday let", "Advertising and Marketing Your Holiday Let", null)]
-        [NUnit.Framework.TestCaseAttribute("Buying, owning and selling a holiday let", "Buying, Owning & Selling a Holiday Let", null)]
-        [NUnit.Framework.TestCaseAttribute("Investment advice for holiday lets", "Investment in Holiday Homes | Holiday Let Business", null)]
-        [NUnit.Framework.TestCaseAttribute("Legal regulations for holiday lets", "Legal Regulations for Holiday Lets", null)]
-        [NUnit.Framework.TestCaseAttribute("Holiday let mortgages", "Mortgages for Holiday Lets | Second Homes", null)]
-        [NUnit.Framework.TestCaseAttribute("How to run your holiday let", "Running Your Holiday Let | Cost & Cleaning", null)]
-        [NUnit.Framework.TestCaseAttribute("Tax information on holiday lets", "Tax Information for Holiday Homes | Rules & Relief", null)]
+        [NUnit.Framework.TestCaseAttribute("Advertising and marketing your holiday let", "Advertising and Marketing Your Holiday Let | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Buying, owner and selling a holiday let", "Buying, Owning & Selling a Holiday Let | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Investment advice for holiday lets", "Investment in Holiday Homes | Holiday Let Business | Sykes", null)]
+        [NUnit.Framework.TestCaseAttribute("Legal regulations for holiday lets", "Legal Regulations for Holiday Lets | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Holiday let mortgages", "Mortgages for Holiday Lets | Second Homes | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("How to run your holiday let", "Running Your Holiday Let | Cost & Cleaning | Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Tax information on holiday lets", "Tax Information for Holiday Homes | Rules & Relief | Sykes", null)]
         public virtual void TheUserCanNavigateToTheInformationCentrePages(string link, string pageTitle, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -218,10 +217,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 26
- testRunner.When("I click the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
- testRunner.And(string.Format("I click the {0} navigation link under Information Centre", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I select the {0} navigation link under Information Centre", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
  testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -253,7 +252,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Path", path);
             argumentsOfScenario.Add("Header", header);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 41
+#line 40
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -273,7 +272,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 42
+#line 41
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
@@ -286,7 +285,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Are you thinking of buying?"});
                 table19.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-#line 43
+#line 42
  testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table19, "Then ");
 #line hidden
             }

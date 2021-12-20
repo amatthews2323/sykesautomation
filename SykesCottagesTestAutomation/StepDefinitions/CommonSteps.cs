@@ -9,6 +9,7 @@ using TechTalk.SpecFlow;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace SykesCottagesTestAutomation
 {
@@ -59,6 +60,55 @@ namespace SykesCottagesTestAutomation
             return url;
         }
 
+        public void SelectBrowser(string browser)
+        {
+            
+            switch (browser)
+            {
+                case "Chrome":
+                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", new ChromeOptions { Proxy = null });
+                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+                    break;
+                case "Firefox":
+                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers", "geckodriver.exe");
+                    service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+                    shared.driver = new FirefoxDriver(service);
+                    break;
+                case "Edge":
+                    shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers");
+                    break;
+                default:
+                    shared.driver = new ChromeDriver(new ChromeOptions { Proxy = null });
+                    break;
+            }
+        }
+
+        public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
+        {
+            Console.WriteLine("Set browser size to " + viewpoint);
+            if (viewpoint.Contains("Max"))
+            {
+                shared.driver.Manage().Window.Maximize(); //Maximise
+            }
+            if (viewpoint == "Desktop")
+            {
+                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop dimentions
+            }
+            if (viewpoint == "Tablet")
+            {
+                shared.driver.Manage().Window.Size = new Size(768, 1024); //iPad dimensions
+            }
+            if (viewpoint == "Mobile")
+            {
+                shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
+            }
+            if (viewpoint == "Custom")
+            {
+                shared.driver.Manage().Window.Size = new Size(width, height);
+            }
+            shared.driver.Manage().Window.Maximize(); //Maximise by default
+        }
+
         public void LaunchWebsite(string domain = "", string path = "")
         {
             //Check for domain override
@@ -96,53 +146,6 @@ namespace SykesCottagesTestAutomation
             shared.driver.Navigate().Refresh();
             WaitASecond();
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-        }
-
-        public void SelectBrowser(string browser)
-        {
-            switch (browser)
-            {
-                case "Chrome":
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome", new ChromeOptions { Proxy = null });
-                    break;
-                case "Firefox":
-                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers\Firefox", "geckodriver.exe");
-                    service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
-                    shared.driver = new FirefoxDriver(service);
-                    break;
-                case "Edge":
-                    shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers\Edge");
-                    break;
-                default:
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers\Chrome");
-                    break;
-            }
-        }
-
-        public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
-        {
-            Console.WriteLine("Set browser size to " + viewpoint);
-            if (viewpoint.Contains("Max"))
-            {
-                shared.driver.Manage().Window.Maximize(); //Maximise
-            }
-            if (viewpoint == "Desktop")
-            {
-                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop dimentions
-            }
-            if (viewpoint == "Tablet")
-            {
-                shared.driver.Manage().Window.Size = new Size(768, 1024); //iPad dimensions
-            }
-            if (viewpoint == "Mobile")
-            {
-                shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
-            }
-            if (viewpoint == "Custom")
-            {
-                shared.driver.Manage().Window.Size = new Size(width, height);
-            }
-            shared.driver.Manage().Window.Maximize(); //Maximise by default
         }
 
         public string XPath(string value1, string value2, string element = "*")
