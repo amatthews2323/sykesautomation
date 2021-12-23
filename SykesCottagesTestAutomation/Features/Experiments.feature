@@ -14,6 +14,12 @@ Scenario: Get all active experiments in a given session
 	When I search for the experiment details
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_ChangeTextForm17977
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17977
+	Then the following text is displayed on the page: Complete the form to begin your holiday letting journey
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18065
@@ -43,6 +49,25 @@ Scenario: Experiment LetYourCottages_ManagedServicesPage17994
          | Share page                |
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17853
+    And I set the window size to Tablet
+	Then the following element is displayed on the page: Floating action button mobile
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18066
+	Then the following text is displayed on the page: Download the Sykes staycation index
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ReferAFriend18136
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18136
+	Then the following element is displayed on the page: Refer a friend
+
+@FailedExperiments
 Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17791
@@ -55,39 +80,6 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
          | vrbo logo                  |
          | expedia logo               |
          | tripadvisor logo           |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17853
-    And I set the window to tablet size
-	Then the following elements are dislpayed on the page
-         | Element                       |
-         | Floating action button mobile |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18066
-	Then the following text is displayed on the page: Download the Sykes staycation index
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ReferAFriend18136
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18136
-	Then the following elements are dislpayed on the page
-         | Element        |
-         | Refer a friend |
-
-@SuccessfulExperiments
-Scenario: Experiment LetYourCottages_AlertTob17803
-	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
-	When I apply the following experiment: 17803
-	Then the following elements are dislpayed on the page
-         | Element                  |
-         | c-alert__icon-wrap       |
-         | Enquire with Sykes today |
-         | Get started              |
 
 @FailedExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
@@ -133,6 +125,4 @@ Scenario: Experiment LetYourCottages_PnoProcess17640
 Scenario: Experiment LetYourCottages_FullHeightHero17731
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17731
-    Then the following elements are dislpayed on the page
-         | Element                      |
-         | o-icon o-icon-down-full-hero |
+    Then the following element is displayed on the page: o-icon o-icon-down-full-hero

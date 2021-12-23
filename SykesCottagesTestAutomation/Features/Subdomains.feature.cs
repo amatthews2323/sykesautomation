@@ -126,20 +126,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am accessing {0}", subdomain), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table23.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table23.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "form-heading-container"});
-                table23.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "partner"});
-                table23.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table23.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Request a free owner pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table23, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table19, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

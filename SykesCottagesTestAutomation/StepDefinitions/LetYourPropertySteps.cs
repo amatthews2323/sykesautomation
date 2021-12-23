@@ -152,20 +152,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [When(@"I click the (.*) button")]
-        public void ThenIClickTheButton(string element)
-        {
-            Click(element);
-        }
-
-        [Given(@"I am accessing (.*)")]
-        public void GivenIAmAccessing(string domain = "")
-        {
-            LaunchWebsite(domain);
-            CloseAllPopups();
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-        }
-
         [Then(@"the following text is displayed on the page: (.*)")]
         public void ThenTheFollowingTextIsDisplayedOnThePage(string text)
         {
@@ -182,6 +168,20 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
         {
             AssertElementNotPresent(value);
+        }
+
+        [When(@"I click the (.*) button")]
+        public void ThenIClickTheButton(string element)
+        {
+            Click(element);
+        }
+
+        [Given(@"I am accessing (.*)")]
+        public void GivenIAmAccessing(string domain = "")
+        {
+            LaunchWebsite(domain);
+            CloseAllPopups();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
         [When(@"I scroll down the page")]
@@ -360,10 +360,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             ApplyExperiment(experimentId);
         }
 
-        [When(@"I set the window to tablet size")]
-        public void GivenISetTheWindowToTabletSize()
+        [When(@"I set the window size to (.*)")]
+        public void GivenISetTheWindowSizeTo(string windowSize)
         {
-            SetBrowserSize("Tablet");
+            SetBrowserSize(windowSize);
         }
     }
 }

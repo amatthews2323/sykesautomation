@@ -67,7 +67,11 @@ namespace SykesCottagesTestAutomation
             {
                 case "Chrome":
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", new ChromeOptions { Proxy = null });
-                    new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+                    //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
+                    
+                    //ChromeOptions options = new ChromeOptions();
+                    //options.AddArguments("load-extension=/C:/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0");
+                    //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options);
                     break;
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers", "geckodriver.exe");
@@ -86,7 +90,7 @@ namespace SykesCottagesTestAutomation
         public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
         {
             Console.WriteLine("Set browser size to " + viewpoint);
-            if (viewpoint.Contains("Max"))
+            if (viewpoint.Contains("Max") | viewpoint.Contains(""))
             {
                 shared.driver.Manage().Window.Maximize(); //Maximise
             }
@@ -106,7 +110,7 @@ namespace SykesCottagesTestAutomation
             {
                 shared.driver.Manage().Window.Size = new Size(width, height);
             }
-            shared.driver.Manage().Window.Maximize(); //Maximise by default
+            //shared.driver.Manage().Window.Maximize(); //Maximise by default
         }
 
         public void LaunchWebsite(string domain = "", string path = "")
@@ -179,6 +183,7 @@ namespace SykesCottagesTestAutomation
 
         public void CloseAllPopups()
         {
+            WaitASecond(1);
             //If the pop-up is displayed, accept cookies
             ClickIfDisplayed("Accept All Cookies");
             //Dismiss the tint overlay 
