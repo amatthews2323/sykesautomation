@@ -67,10 +67,11 @@ namespace SykesCottagesTestAutomation
             {
                 case "Chrome":
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", new ChromeOptions { Proxy = null });
+                    
                     //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
                     
                     //ChromeOptions options = new ChromeOptions();
-                    //options.AddArguments("load-extension=/C:/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0");
+                    //options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0");
                     //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options);
                     break;
                 case "Firefox":
