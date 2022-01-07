@@ -14,12 +14,6 @@ Scenario: Get all active experiments in a given session
 	When I search for the experiment details
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_ChangeTextForm17977
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17977
-	Then the following text is displayed on the page: Complete the form to begin your holiday letting journey
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18065
@@ -47,13 +41,6 @@ Scenario: Experiment LetYourCottages_ManagedServicesPage17994
          | Fully managed             |
          | Resource centre           |
          | Share page                |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17853
-    And I set the window size to Tablet
-	Then the following element is displayed on the page: Floating action button mobile
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
@@ -126,3 +113,23 @@ Scenario: Experiment LetYourCottages_FullHeightHero17731
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17731
     Then the following element is displayed on the page: o-icon o-icon-down-full-hero
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_RelaxedValidationEnquiry17573
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17573
+    And I click submit
+    Then the following element is not displayed on the page: Please enter a contact number.
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_ChangeTextForm17977
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17977
+	Then the following text is displayed on the page: Complete the form to begin your holiday letting journey
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17853
+    And I set the window size to Tablet
+	Then the following element is displayed on the page: Floating action button mobile
