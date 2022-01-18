@@ -20,22 +20,22 @@ namespace SykesCottagesTestAutomation.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("InformationCentre")]
-    public partial class InformationCentreFeature
+    [NUnit.Framework.DescriptionAttribute("CMSPages")]
+    public partial class CMSPagesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "InformationCentre.feature"
+#line 1 "CMSPages.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "InformationCentre", "\tInformation Centre page content and functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CMSPages", "\tContent Managed page content and functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -116,61 +116,6 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
-        [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        public virtual void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "HolidayHomesForSale"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 12
- testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table14.AddRow(new string[] {
-                            "Holiday Homes for Sale UK"});
-                table14.AddRow(new string[] {
-                            "container_sykes_grid"});
-                table14.AddRow(new string[] {
-                            "View more holiday homes for sale"});
-                table14.AddRow(new string[] {
-                            "How much could I earn with Sykes?"});
-                table14.AddRow(new string[] {
-                            "c-alert__icon-wrap"});
-                table14.AddRow(new string[] {
-                            "Enquire with Sykes today"});
-                table14.AddRow(new string[] {
-                            "Get started"});
-#line 13
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table14, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The user can navigate to the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("Navigation")]
         [NUnit.Framework.TestCaseAttribute("Advertising and marketing your holiday let", "Advertising and Marketing Your Holiday Let | Sykes Cottages", null)]
@@ -193,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Link", link);
             argumentsOfScenario.Add("PageTitle", pageTitle);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 24
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -213,16 +158,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 25
+#line 12
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 26
+#line 13
  testRunner.When("I select the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 27
+#line 14
  testRunner.And(string.Format("I select the {0} navigation link under Information Centre", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 15
  testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -252,7 +197,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Path", path);
             argumentsOfScenario.Add("Header", header);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 40
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -272,21 +217,83 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 41
+#line 28
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table15.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "form-heading-container"});
-                table15.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table15.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "Are you thinking of buying?"});
-                table15.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-#line 42
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table15, "Then ");
+#line 29
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
+        [NUnit.Framework.CategoryAttribute("ManagedServices")]
+        public virtual void TheReleventElementsArePresentOnTheManagedServicesPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ManagedServices"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 46
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 47
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 48
+ testRunner.When("I click /letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table2.AddRow(new string[] {
+                            "Holiday home management"});
+                table2.AddRow(new string[] {
+                            "hero-slideshow"});
+                table2.AddRow(new string[] {
+                            "form-heading-container"});
+                table2.AddRow(new string[] {
+                            "Managed services at Sykes"});
+                table2.AddRow(new string[] {
+                            "What are the benefits"});
+                table2.AddRow(new string[] {
+                            "Partially managed"});
+                table2.AddRow(new string[] {
+                            "Fully managed"});
+                table2.AddRow(new string[] {
+                            "Resource centre"});
+                table2.AddRow(new string[] {
+                            "Share page"});
+#line 49
+    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -1,12 +1,12 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-@Experiments
+@HolmesExperiments
 Scenario: Get all active experiments from Holmes
 	Given I am accessing http://holmes.staging.sykes.cloud/experiments
 	Then I store the experiment IDs
 
-@Experiments
+@HolmesExperiments
 Scenario: Get all active experiments in a given session
 	Given I have navigated to the following page: letyourcottage
 	When I store the active experiment IDs
@@ -14,33 +14,16 @@ Scenario: Get all active experiments in a given session
 	When I search for the experiment details
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
+Scenario: Experiment LetYourCottages_TestimonialRefocus18099
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18065
+	When I apply the following experiment: 18099
 	Then the following elements are dislpayed on the page
-         | Element                          |
-         | We're here to help               |
-         | Get in touch                     |
-         | Give us a call                   |
-         | Enquire about letting with Sykes |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ManagedServicesPage17994
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17994
-	Then the following text is displayed on the page: Holiday home management with Sykes
-    When I click /letyourcottage/managed-services
-    Then the following elements are dislpayed on the page
-         | Element                   |
-         | Holiday home management   |
-         | hero-slideshow            |
-         | form-heading-container    |
-         | Managed services at Sykes |
-         | What are the benefits     |
-         | Partially managed         |
-         | Fully managed             |
-         | Resource centre           |
-         | Share page                |
+         | Element                                                                             |
+         | testimonial-slider                                                                  |
+         | Sykes instilled a lot of confidence in us and now I wouldn’t use anybody else       |
+         | Sykes have taken the stress out of us taking bookings, they are so professional     |
+         | It is great working with Sykes - they are always available and they pay you quickly |
+    And the following element is not displayed on the page: What do our owners say?
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
@@ -53,6 +36,17 @@ Scenario: Experiment LetYourCottages_ReferAFriend18136
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18136
 	Then the following element is displayed on the page: Refer a friend
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18065
+	Then the following elements are dislpayed on the page
+         | Element                          |
+         | We're here to help               |
+         | Get in touch                     |
+         | Give us a call                   |
+         | Enquire about letting with Sykes |
 
 @FailedExperiments
 Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791

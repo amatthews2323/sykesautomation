@@ -48,30 +48,6 @@
                   <Property Name="Class" Value="ExperimentsFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_AlternativeMethodsOfContact18065" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_AlternativeMethodsOfContact18065" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ChangeTextForm17977" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ChangeTextForm17977" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_FloatingActionButtonDesktopTablet17853" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_FloatingActionButtonDesktopTablet17853" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ManagedServicesPage17994" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ManagedServicesPage17994" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ReferAFriend18136" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_ReferAFriend18136" />
@@ -83,13 +59,25 @@
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_StaycationGuideDownload18066" />
                       </Rule>
                     </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_TestimonialRefocus18099" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_TestimonialRefocus18099" />
+                      </Rule>
+                    </Rule>
                   </Rule>
                 </Rule>
                 <Rule Match="All">
-                  <Property Name="Class" Value="InformationCentreFeature" />
+                  <Property Name="Class" Value="CMSPagesFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.InformationCentreFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheManagedServicesPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheManagedServicesPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday-let&quot;,&quot;Advertising and marketing your holiday let&quot;,null)" />
                         <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,&quot;Buying, owning and selling a holiday let&quot;,null)" />
@@ -98,12 +86,6 @@
                         <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,&quot;Holiday let mortgages&quot;,null)" />
                         <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holiday-let&quot;,&quot;How to run your holiday let&quot;,null)" />
                         <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-holiday-lets&quot;,&quot;Tax information on holiday lets&quot;,null)" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.InformationCentreFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
                       </Rule>
                     </Rule>
                   </Rule>
@@ -117,6 +99,17 @@
                         <Property Name="DisplayName" Value="TheLandingPagesAreDisplayedCorrectly(&quot;letyourcottage/information/run-holiday-let-as-business&quot;,&quot;How to Run a Holiday Let as a Business&quot;,null)" />
                         <Property Name="DisplayName" Value="TheLandingPagesAreDisplayedCorrectly(&quot;letyourcottage/information/leading-holiday-let-agency&quot;,&quot;Why You Should Let Your Property With The Leading Holiday Lettings Agency&quot;,null)" />
                         <Property Name="DisplayName" Value="TheLandingPagesAreDisplayedCorrectly(&quot;letyourcottage/information/holiday-management-services&quot;,&quot;How Sykes Can Manage Your Holiday Home&quot;,null)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="HHFSFeature" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.HHFSFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
                       </Rule>
                     </Rule>
                   </Rule>

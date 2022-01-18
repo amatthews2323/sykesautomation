@@ -53,11 +53,12 @@ Scenario: The relevant validation is in place on the enquiry form
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
-	| Section                    |
-	| partner                    |
-	| What do our owners say     |
-	| We are still open as usual |
-	| How much could I earn      |
-	| Holiday letting made easy  |
-	| Are you thinking of buying |
-	| Request your free          |
+	| Section                            |
+	| partner                            |
+#	| What do our owners say             |
+	| We are still open as usual         |
+	| How much could I earn              |
+	| Holiday home management with Sykes |
+	| Holiday letting made easy          |
+	| Are you thinking of buying         |
+	| Request your free                  |

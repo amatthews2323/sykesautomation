@@ -1,24 +1,11 @@
-﻿Feature: InformationCentre
-	Information Centre page content and functionality
+﻿Feature: CMSPages
+	Content Managed page content and functionality
 
 @Navigation
 Scenario: The user can navigate to the Holiday Homes for Sale page
 	Given I am on the Sykes Homepage
 	When I select the Holiday homes for sale navigation link under Let Your Property
 	Then the following page title is displayed: Holiday Homes for Sale UK
-
-@HolidayHomesForSale
-Scenario: The relevent elements are present on the Holiday Homes for Sale page
-	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
-	Then the following elements are dislpayed on the page
-         | Element                           |
-         | Holiday Homes for Sale UK         |
-         | container_sykes_grid              |
-         | View more holiday homes for sale  |
-         | How much could I earn with Sykes? |
-         | c-alert__icon-wrap                |
-         | Enquire with Sykes today          |
-         | Get started                       |
 
 @Navigation
 Scenario: The user can navigate to the Information Centre pages
@@ -54,3 +41,19 @@ Scenario: The relevent elements are present on the Information Centre pages
 	| letyourcottage/holiday-let-mortgages              | Holiday let mortgages                      |
 	| letyourcottage/how-to-run-your-holiday-let        | How to run your holiday let                |
 	| letyourcottage/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
+
+@ManagedServices
+Scenario: The relevent elements are present on the Managed Services page
+	Given I have navigated to the following page: letyourcottage
+	When I click /letyourcottage/managed-services
+    Then the following elements are dislpayed on the page
+         | Element                   |
+         | Holiday home management   |
+         | hero-slideshow            |
+         | form-heading-container    |
+         | Managed services at Sykes |
+         | What are the benefits     |
+         | Partially managed         |
+         | Fully managed             |
+         | Resource centre           |
+         | Share page                |
