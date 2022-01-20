@@ -3,6 +3,7 @@ using TechTalk.SpecFlow;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
 using AventStack.ExtentReports.Reporter;
+using System;
 
 namespace SykesCottagesTestAutomation
 {
@@ -12,6 +13,7 @@ namespace SykesCottagesTestAutomation
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
+        public static string SaveScreenshots = ""; //Take a screenshot at the end of each scenario
         public static string BrowserSize = ""; //Set the browser window size: Max | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width
         public static int PageHeight = 1024; //Set the browser window height
@@ -90,6 +92,10 @@ namespace SykesCottagesTestAutomation
         [AfterScenario]
         public void EndTest()
         {
+            if (SaveScreenshots.Contains("Y"))
+            {
+                Screenshot(_scenarioContext.ScenarioInfo.Title.Trim() + " " + DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss"));
+            }
             shared.driver.Quit();
             shared.driver.Dispose();
         }

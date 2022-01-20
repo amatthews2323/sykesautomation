@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using WebDriverManager.DriverConfigs.Impl;
+using System.IO;
 
 namespace SykesCottagesTestAutomation
 {
@@ -335,10 +336,17 @@ namespace SykesCottagesTestAutomation
 
         public void Screenshot(string title = "")
         {
+            //Name of directory
+            string dir = @"C://Logs//" + DateTime.Now.ToString("yyyy-MM-dd");
+            // If directory does not exist, create it
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
             //Take the screenshot
             Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
             //Save the screenshot
-            image.SaveAsFile("C://Logs//Screenshot_" + title + ".png", ScreenshotImageFormat.Png);
+            image.SaveAsFile(dir + "//" + title + ".png", ScreenshotImageFormat.Png);
         }
     }
 }
