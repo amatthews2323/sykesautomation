@@ -271,14 +271,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 29
  testRunner.When("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table18.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Please enter a full name."});
-                table18.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Please enter an email address."});
 #line 30
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table18, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table20, "Then ");
 #line hidden
 #line 35
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -367,24 +367,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 54
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "partner"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "We are still open as usual"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "How much could I earn"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Holiday home management with Sykes"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Request your free"});
 #line 55
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table19, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table21, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

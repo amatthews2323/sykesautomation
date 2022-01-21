@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using WebDriverManager.DriverConfigs.Impl;
 using System.IO;
+using WDSE.ScreenshotMaker;
+using WDSE.Decorators;
+using WDSE;
 
 namespace SykesCottagesTestAutomation
 {
@@ -343,10 +346,14 @@ namespace SykesCottagesTestAutomation
             {
                 Directory.CreateDirectory(dir);
             }
-            //Take the screenshot
-            Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
-            //Save the screenshot
-            image.SaveAsFile(dir + "//" + title + ".png", ScreenshotImageFormat.Png);
+
+            //Take full webpage screenshot
+            VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
+            shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + title + ".png", ImageMagick.MagickFormat.Png);
+
+            //Take current viewable area screenshot
+            //Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
+            //image.SaveAsFile(dir + "//" + title + ".png", ScreenshotImageFormat.Png);
         }
     }
 }

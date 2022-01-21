@@ -13,6 +13,31 @@ Scenario: Get all active experiments in a given session
 	Given I am accessing http://holmes.prod.sykes.cloud/experiments
 	When I search for the experiment details
 
+@InProgressExperiments
+Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18292
+	Then the following elements are not dislpayed on the page
+		| Example                                |
+		| Putting your property in the spotlight |
+		| Are you thinking of buying             |
+		| Back to Top                            |
+
+@InProgressExperiments
+Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18283
+	Then the following text is displayed on the page: Complete the form to receive your free information pack
+
+@InProgressExperiments
+Scenario: Experiment LetYourCottages_PromoteBedrock18334
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18334
+	Then the following elements are dislpayed on the page
+         | Element                                      |
+         | Looking to get started with holiday letting? |
+         | Open content hub                             |
+
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_TestimonialRefocus18099
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
