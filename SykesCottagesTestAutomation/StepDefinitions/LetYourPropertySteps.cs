@@ -176,6 +176,19 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(element);
         }
 
+        [Then(@"the following slick dot is highlighted (.*)")]
+        public void ThenTheFollowingSlickDotIsHighlighted(int value)
+        {
+            Console.WriteLine("Assert the relevant slick dot is highlighted");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//ul[@class='slick-dots']/li[" + value + "]//self::*[@class='slick-active']")).Count != 0, "Element not found");
+        }
+
+        [Then(@"I wait (.*) seconds")]
+        public void ThenIWaitSeconds(int value)
+        {
+            WaitASecond(value);
+        }
+
         [Given(@"I am accessing (.*)")]
         public void GivenIAmAccessing(string domain = "")
         {

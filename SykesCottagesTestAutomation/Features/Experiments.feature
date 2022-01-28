@@ -13,7 +13,7 @@ Scenario: Get all active experiments in a given session
 	Given I am accessing http://holmes.prod.sykes.cloud/experiments
 	When I search for the experiment details
 
-@InProgressExperiments
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18292
@@ -23,13 +23,13 @@ Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 		| Are you thinking of buying             |
 		| Back to Top                            |
 
-@InProgressExperiments
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18283
 	Then the following text is displayed on the page: Complete the form to receive your free information pack
 
-@InProgressExperiments
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_PromoteBedrock18334
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18334
@@ -37,6 +37,18 @@ Scenario: Experiment LetYourCottages_PromoteBedrock18334
          | Element                                      |
          | Looking to get started with holiday letting? |
          | Open content hub                             |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18347
+	Then the following slick dot is highlighted 1
+	And I wait 12 seconds
+	And the following slick dot is highlighted 2
+	And I wait 10 seconds
+	And the following slick dot is highlighted 3
+	When I click holiday properties already working with Sykes
+	Then the following slick dot is highlighted 4
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_TestimonialRefocus18099
@@ -51,16 +63,22 @@ Scenario: Experiment LetYourCottages_TestimonialRefocus18099
     And the following element is not displayed on the page: What do our owners say?
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
+Scenario: Experiment LetYourCottages_TrustPilotPromotion18351
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18066
-	Then the following text is displayed on the page: Download the Sykes staycation index
+	When I apply the following experiment: 18351
+	Then the following element is displayed on the page: Customer reviews powered by Trustpilot
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ReferAFriend18136
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18136
 	Then the following element is displayed on the page: Refer a friend
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18066
+	Then the following text is displayed on the page: Download the Sykes staycation index
 
 @FailedExperiments
 Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065

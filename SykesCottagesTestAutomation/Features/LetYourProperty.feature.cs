@@ -372,15 +372,11 @@ this.ScenarioInitialize(scenarioInfo);
                 table21.AddRow(new string[] {
                             "partner"});
                 table21.AddRow(new string[] {
-                            "We are still open as usual"});
-                table21.AddRow(new string[] {
                             "How much could I earn"});
                 table21.AddRow(new string[] {
                             "Holiday home management with Sykes"});
                 table21.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table21.AddRow(new string[] {
-                            "Are you thinking of buying"});
                 table21.AddRow(new string[] {
                             "Request your free"});
 #line 55

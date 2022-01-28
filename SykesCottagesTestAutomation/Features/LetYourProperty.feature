@@ -56,9 +56,9 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	| Section                            |
 	| partner                            |
 #	| What do our owners say             |
-	| We are still open as usual         |
+#	| We are still open as usual         |
 	| How much could I earn              |
 	| Holiday home management with Sykes |
 	| Holiday letting made easy          |
-	| Are you thinking of buying         |
+#	| Are you thinking of buying         |
 	| Request your free                  |

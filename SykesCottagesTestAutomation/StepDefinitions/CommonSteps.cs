@@ -127,7 +127,7 @@ namespace SykesCottagesTestAutomation
             }
 
             SelectBrowser(Hooks.Browser); //Set the driver and browser
-            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(30); //Set the timeout to 30 seconds
+            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.TimeOut); //Set the timeout to 30 seconds
 
             //Check for experiments
             if (Hooks.Experiments != "")
