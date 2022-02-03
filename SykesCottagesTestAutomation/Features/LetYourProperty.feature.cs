@@ -271,14 +271,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 29
  testRunner.When("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table20.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Please enter a full name."});
-                table20.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Please enter an email address."});
+                table19.AddRow(new string[] {
+                            "Please enter a contact number."});
 #line 30
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table20, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table19, "Then ");
 #line hidden
 #line 35
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -344,7 +346,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LetYourProperty"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 53
+#line 52
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -364,23 +366,125 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 53
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Section"});
+                table20.AddRow(new string[] {
+                            "Gain exposure through our partners"});
+                table20.AddRow(new string[] {
+                            "How much could I earn"});
+                table20.AddRow(new string[] {
+                            "Holiday home management with Sykes"});
+                table20.AddRow(new string[] {
+                            "Holiday letting made easy"});
+                table20.AddRow(new string[] {
+                            "Request your free"});
+                table20.AddRow(new string[] {
+                            "Looking to get started with holiday letting?"});
 #line 54
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table20, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The page sections are displayed is the correct order")]
+        [NUnit.Framework.TestCaseAttribute("Gain exposure through our partners", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("What do our owners say?", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("How can Sykes elevate your holiday letting experience?", "5", null)]
+        [NUnit.Framework.TestCaseAttribute("How much could I earn", "6", null)]
+        [NUnit.Framework.TestCaseAttribute("Holiday home management with Sykes", "7", null)]
+        [NUnit.Framework.TestCaseAttribute("Putting your property in the spotlight", "8", null)]
+        [NUnit.Framework.TestCaseAttribute("Holiday letting made easy", "9", null)]
+        [NUnit.Framework.TestCaseAttribute("Are you thinking of buying", "10", null)]
+        [NUnit.Framework.TestCaseAttribute("Request your free", "11", null)]
+        public virtual void ThePageSectionsAreDisplayedIsTheCorrectOrder(string section, string position, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Section", section);
+            argumentsOfScenario.Add("Position", position);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The page sections are displayed is the correct order", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 67
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 68
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 69
+ testRunner.Then(string.Format("the {0} section is displayed at position {1}", section, position), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The Thinking of Buying Guide section is displayed on the Let Your Property page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        public virtual void TheThinkingOfBuyingGuideSectionIsDisplayedOnTheLetYourPropertyPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Thinking of Buying Guide section is displayed on the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 83
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 84
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Section"});
+                            "Element"});
                 table21.AddRow(new string[] {
-                            "partner"});
+                            "Looking to get started with holiday letting?"});
                 table21.AddRow(new string[] {
-                            "How much could I earn"});
-                table21.AddRow(new string[] {
-                            "Holiday home management with Sykes"});
-                table21.AddRow(new string[] {
-                            "Holiday letting made easy"});
-                table21.AddRow(new string[] {
-                            "Request your free"});
-#line 55
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table21, "Then ");
+                            "Explore guides & resources"});
+#line 85
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table21, "Then ");
+#line hidden
+#line 89
+ testRunner.When("I click Explore guides & resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 90
+ testRunner.Then("the following page title is displayed: Buying a Holiday Let Information Centre | " +
+                        "Sykes Holiday Cottages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

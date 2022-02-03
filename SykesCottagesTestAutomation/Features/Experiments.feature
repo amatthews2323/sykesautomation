@@ -14,6 +14,18 @@ Scenario: Get all active experiments in a given session
 	When I search for the experiment details
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_MoveCalculatorControl18349
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18349
+	Then the how-much-could-i-earn section is displayed at position 5
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
+	Given I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?dev_tools=product
+	When I apply the following experiment: 18277
+	Then the testimonials_region_pc section is displayed at position 2
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18292
@@ -30,13 +42,20 @@ Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283
 	Then the following text is displayed on the page: Complete the form to receive your free information pack
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_PromoteBedrock18334
+Scenario: Experiment LetYourCottages_TOBAlertModal18279
+	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
+	When I apply the following experiment: 18279
+	And I select the alert Get Started button
+	And I select the close icon on the form
+	Then the following element is displayed on the page: Enquire with Sykes today
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RelaxingValidationEnquiry18282
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18334
-	Then the following elements are dislpayed on the page
-         | Element                                      |
-         | Looking to get started with holiday letting? |
-         | Open content hub                             |
+	When I apply the following experiment: 18282
+	When I enter a phone number with spaces and +44
+	And I submit the enquiry form
+	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
@@ -170,3 +189,9 @@ Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
 	When I apply the following experiment: 17853
     And I set the window size to Tablet
 	Then the following element is displayed on the page: Floating action button mobile
+
+@FailedExperiments
+Scenario: Experiment LetYourCottages_AverageMonthlyIncomeProjection17432
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17432
+	Then the following text is displayed on the page: Average monthly income

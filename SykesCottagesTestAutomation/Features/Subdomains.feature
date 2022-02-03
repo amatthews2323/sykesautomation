@@ -12,18 +12,20 @@ Scenario: The Sykes sub-domains are displayed correctly
 	| Holiday letting made easy |
 	| Request a free owner pack |
 	Examples:
-	| Subdomain                                                   | Title                    |
-	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay               |
-	| https://www.coastandcountry.co.uk/letyourcottage/           | Coast & Country Cottages |
-	| https://www.cornishcottageholidays.co.uk/letyourcottage/    | Cornish Cottage Holidays |
-	| https://www.dream-cottages.co.uk/letyourcottage/            | Dream Cottages           |
-	| https://www.heartofthelakes.co.uk/letyourcottage/           | Heart of the Lakes       |
-	| https://www.helpfulholidays.co.uk/letyourcottage/           | Helpful Holidays         |
-	| https://www.hogansirishcottages.com/letyourcottage/         | Hogans Irish Cottages    |
-	| https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/ | Lake District            |
-	| https://www.lakescottageholiday.co.uk/letyourcottage/       | Lakes Cottage Holidays   |
-	| https://www.lakelovers.co.uk/letyourcottage/                | Lakelovers               |
-	| https://www.manorcottages.co.uk/letyourcottage/             | Manor Cottages           |
-	| https://www.menaiholidays.co.uk/letyourcottage/             | Menai Holiday Cottages   |
-	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage            |
-	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal        |
+	| Subdomain                                                   | Title                      |
+	| https://www.character-cottages.co.uk/letyourcottage/        | Character Cottages         |
+	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay                 |
+	| https://www.coastandcountry.co.uk/letyourcottage/           | Coast & Country Cottages   |
+	| https://www.cornishcottageholidays.co.uk/letyourcottage/    | Cornish Cottage Holidays   |
+	| https://www.dream-cottages.co.uk/letyourcottage/            | Dream Cottages             |
+	| https://www.heartofthelakes.co.uk/letyourcottage/           | Heart of the Lakes         |
+	| https://www.helpfulholidays.co.uk/letyourcottage/           | Helpful Holidays           |
+	| https://www.hogansirishcottages.com/letyourcottage/         | Hogans Irish Cottages      |
+	| https://www.johnbraycornishholidays.co.uk/letyourcottage/   | John Bray Cornish Holidays |
+	| https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/ | Lake District              |
+	| https://www.lakescottageholiday.co.uk/letyourcottage/       | Lakes Cottage Holidays     |
+	| https://www.lakelovers.co.uk/letyourcottage/                | Lakelovers                 |
+	| https://www.manorcottages.co.uk/letyourcottage/             | Manor Cottages             |
+	| https://www.menaiholidays.co.uk/letyourcottage/             | Menai Holiday Cottages     |
+	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
+	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |

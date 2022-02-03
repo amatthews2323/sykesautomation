@@ -31,7 +31,7 @@ Scenario: The relevant validation is in place on the enquiry form
 	| Element                        |
 	| Please enter a full name.      |
 	| Please enter an email address. |
-	#| Please enter a contact number. |
+	| Please enter a contact number. |
 	When I enter an email address without an @ symbol
 	And I submit the enquiry form
 	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
@@ -48,17 +48,43 @@ Scenario: The relevant validation is in place on the enquiry form
 	And I submit the enquiry form
 	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
 
-
 @LetYourProperty
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
-	| Section                            |
-	| partner                            |
-#	| What do our owners say             |
-#	| We are still open as usual         |
-	| How much could I earn              |
-	| Holiday home management with Sykes |
-	| Holiday letting made easy          |
-#	| Are you thinking of buying         |
-	| Request your free                  |
+	| Section                                      |
+	| Gain exposure through our partners           |
+#   | What do our owners say					   |
+#   | We are still open as usual				   |
+	| How much could I earn                        |
+	| Holiday home management with Sykes           |
+	| Holiday letting made easy                    |
+#	| Are you thinking of buying				   |
+	| Request your free                            |
+    | Looking to get started with holiday letting? |
+
+#@LetYourProperty
+Scenario: The page sections are displayed is the correct order
+	Given I have navigated to the following page: letyourcottage
+	Then the <Section> section is displayed at position <Position>
+	Examples:
+	| Section                                                | Position |
+	| Gain exposure through our partners                     | 3        |
+	| What do our owners say?                                | 4        |
+	| How can Sykes elevate your holiday letting experience? | 5        |
+	| How much could I earn                                  | 6        |
+	| Holiday home management with Sykes                     | 7        |
+	| Putting your property in the spotlight                 | 8        |
+	| Holiday letting made easy                              | 9        |
+	| Are you thinking of buying                             | 10       |
+	| Request your free                                      | 11       |
+
+@ThinkingOfBuying
+Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
+	Given I have navigated to the following page: letyourcottage
+	Then the following elements are dislpayed on the page
+         | Element                                      |
+         | Looking to get started with holiday letting? |
+         | Explore guides & resources                   |
+	When I click Explore guides & resources
+	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages

@@ -47,6 +47,20 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(value);
         }
 
+        [When(@"I select the alert Get Started button")]
+        public void WhenISelectTheAlertGetStartedButton()
+        {
+            shared.driver.FindElement(By.XPath("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]")).Click();
+            WaitASecond();
+        }
+
+        [When(@"I select the close icon on the form")]
+        public void WhenISelectTheCloseIconOnTheForm()
+        {
+            shared.driver.FindElement(By.XPath("//div[@class='o-overlay__content']/button[@title='Close form']")).Click();
+            WaitASecond();
+        }
+
         [When(@"I select the (.*) navigation link under (.*)")]
         public void WhenISelectTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
@@ -203,6 +217,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             ScrollTo("page-footer container_sykes_grid");
         }
 
+        [Then(@"the (.*) section is displayed at position (.*)")]
+        public void ThenTheSectionIsDisplayedAtPosition(string section, int position)
+        {
+            Console.WriteLine("Assert the " + section + "section is displayed at position " + position);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//section[" + position + " and contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(text(),'" + section + "')]")).Count != 0, "Text not found");
+        }
+
         [When(@"I enter an email address without an @ symbol")]
         public void WhenIEnterAnEmailAddressWithoutAnSymbol()
         {
@@ -231,6 +252,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterAPhoneNumberWithMoreThanDigits()
         {
             Type("heroform_phone", "0700000000000000");
+        }
+
+        [When(@"I enter a phone number with spaces and \+(.*)")]
+        public void WhenIEnterAPhoneNumberWithSpacesAnd(int p0)
+        {
+            Type("heroform_phone", "+44 7000 000 000");
         }
 
         [Then(@"I can add a property with the following postcode: (.*)")]
