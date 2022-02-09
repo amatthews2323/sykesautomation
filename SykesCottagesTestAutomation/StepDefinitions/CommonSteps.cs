@@ -249,7 +249,7 @@ namespace SykesCottagesTestAutomation
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, value2))));
-            Console.WriteLine("Click the \"" + value1 + "\" button");
+            Console.WriteLine("Click \"" + value1 + "\"");
             element.Click();
             WaitASecond();
         }
@@ -258,7 +258,7 @@ namespace SykesCottagesTestAutomation
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, value2, "button"))));
-            Console.WriteLine("Click \"" + value1 + "\"");
+            Console.WriteLine("Click the \"" + value1 + "\" button");
             element.Click();
             WaitASecond();
         }
@@ -278,6 +278,13 @@ namespace SykesCottagesTestAutomation
             {
                 Console.WriteLine(value1 + " not found");
             }
+        }
+
+        public void SelectFromDropdown(string option, string dropdown)
+        {
+            Console.WriteLine("Select option \"" + option + "\" from the \"" + dropdown + "\" dropdown");
+            shared.driver.FindElement(By.XPath("//select[@*=\"" + dropdown + "\"]/option[@*=\"" + option + "\"]|//select[@*=\"" + dropdown + "\"]/option[contains(text(),\"" + option + "\")]")).Click();
+            WaitASecond();
         }
 
         public void MouseOver(string value1, string value2 = "Alternative value")
@@ -340,7 +347,7 @@ namespace SykesCottagesTestAutomation
         public void Screenshot(string title = "")
         {
             //Name of directory
-            string dir = @"C://Logs//" + DateTime.Now.ToString("yyyy-MM-dd");
+            string dir = @"C://Logs//Screenshots//" + DateTime.Now.ToString("yyyy-MM-dd");
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
             {

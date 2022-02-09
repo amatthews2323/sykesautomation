@@ -31,7 +31,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite("", path);
-            CloseAllPopups();
+            ClickIfDisplayed("Accept All Cookies");
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
@@ -188,6 +188,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenIClickTheButton(string element)
         {
             Click(element);
+        }
+
+        [When(@"I select option (.*) from the (.*) dropdown")]
+        public void WhenISelectOptionFromTheDropdown(string option, string dropdown)
+        {
+            SelectFromDropdown(option, dropdown);
         }
 
         [Then(@"the following slick dot is highlighted (.*)")]

@@ -1,23 +1,44 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-@HolmesExperiments
-Scenario: Get all active experiments from Holmes
-	Given I am accessing http://holmes.staging.sykes.cloud/experiments
-	Then I store the experiment IDs
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18473
+	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
+	And the following elements are not dislpayed on the page
+		| Elements                                |
+		| o-icon c-alert__icon o-icon--size-large |
+		| c-alert__cta cta_tint js-alert-close    |
 
-@HolmesExperiments
-Scenario: Get all active experiments in a given session
-	Given I have navigated to the following page: letyourcottage
-	When I store the active experiment IDs
-	Given I am accessing http://holmes.prod.sykes.cloud/experiments
-	When I search for the experiment details
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InformationPageAlerts18281
+	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: 18281
+	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_CalculatorInteraction18462
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18462
+	Then the following element is displayed on the page: Please select your region
+	When I select option South West from the region dropdown
+	Then the following element is displayed on the page: homepage_calculator_cta_blue
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18458
+	Then the following elements are not dislpayed on the page
+		| Element                              |
+		| An owner has just completed the form |
+		| A new property has just gone live    |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_MoveCalculatorControl18349
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18349
-	Then the how-much-could-i-earn section is displayed at position 5
+	Then the How much could I earn section is displayed at position 4
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
@@ -30,7 +51,7 @@ Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18292
 	Then the following elements are not dislpayed on the page
-		| Example                                |
+		| Element                                |
 		| Putting your property in the spotlight |
 		| Are you thinking of buying             |
 		| Back to Top                            |
@@ -82,10 +103,12 @@ Scenario: Experiment LetYourCottages_TestimonialRefocus18099
     And the following element is not displayed on the page: What do our owners say?
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_TrustPilotPromotion18351
+Scenario: Experiment LetYourCottages_TrustpilotFunctionUpdate18527
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18351
+	When I apply the following experiment: 18527
 	Then the following element is displayed on the page: Customer reviews powered by Trustpilot
+	When I click Customer reviews powered by Trustpilot
+	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ReferAFriend18136
@@ -93,13 +116,13 @@ Scenario: Experiment LetYourCottages_ReferAFriend18136
 	When I apply the following experiment: 18136
 	Then the following element is displayed on the page: Refer a friend
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18066
 	Then the following text is displayed on the page: Download the Sykes staycation index
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18065
@@ -110,7 +133,7 @@ Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
          | Give us a call                   |
          | Enquire about letting with Sykes |
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17791
@@ -124,13 +147,13 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
          | expedia logo               |
          | tripadvisor logo           |
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17921
     Then the following element is not displayed on the page: We are still open as usual
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_AddingWebinars17805
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17805
@@ -143,7 +166,7 @@ Scenario: Experiment LetYourCottages_AddingWebinars17805
          | Thinking of buying a property                 |
          | New to letting                                |
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17973
@@ -153,7 +176,7 @@ Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
          | Let your property with Sykes and earn up to £125,000 per year* |
          | Get started today                                              |
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_PnoProcess17640
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17640
@@ -164,34 +187,46 @@ Scenario: Experiment LetYourCottages_PnoProcess17640
          | Self-service           |
          | Start taking bookings  |
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_FullHeightHero17731
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17731
     Then the following element is displayed on the page: o-icon o-icon-down-full-hero
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_RelaxedValidationEnquiry17573
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17573
     And I click submit
     Then the following element is not displayed on the page: Please enter a contact number.
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_ChangeTextForm17977
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17977
 	Then the following text is displayed on the page: Complete the form to begin your holiday letting journey
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17853
     And I set the window size to Tablet
 	Then the following element is displayed on the page: Floating action button mobile
 
-@FailedExperiments
+@DisabledExperiments
 Scenario: Experiment LetYourCottages_AverageMonthlyIncomeProjection17432
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17432
 	Then the following text is displayed on the page: Average monthly income
+
+@HolmesExperiments
+Scenario: Get all active experiments from Holmes
+	Given I am accessing http://holmes.staging.sykes.cloud/experiments
+	Then I store the experiment IDs
+
+@HolmesExperiments
+Scenario: Get all active experiments in a given session
+	Given I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Given I am accessing http://holmes.prod.sykes.cloud/experiments
+	When I search for the experiment details
