@@ -186,28 +186,34 @@ namespace SykesCottagesTestAutomation
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, value2))));
         }
 
-        public void CloseAllPopups()
+        public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
         {
             WaitASecond(1);
             //If the pop-up is displayed, accept cookies
-            ClickIfDisplayed("Accept All Cookies");
+            if (acceptCookies == "Yes")
+            {
+                ClickIfDisplayed("Accept All Cookies");
+            }
             //Dismiss the tint overlay 
             ClickIfDisplayed("nonenquiry6941");
             //If any alerts are displayed, close them
-            try
+            if (dismissAlerts == "Yes")
             {
-                if (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
+                try
                 {
-                    while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
+                    if (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
                     {
-                        shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Click();
-                        WaitASecond();
+                        while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
+                        {
+                            shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Click();
+                            WaitASecond();
+                        }
                     }
                 }
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("No alerts found");
+                catch (Exception)
+                {
+                    Console.WriteLine("No alerts found");
+                }
             }
         }
 

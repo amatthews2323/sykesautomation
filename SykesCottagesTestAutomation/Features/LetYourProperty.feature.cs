@@ -480,7 +480,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table23, "Then ");
 #line hidden
 #line 89
- testRunner.When("I click Explore guides & resources", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click /letyourcottage/advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 90
  testRunner.Then("the following page title is displayed: Buying a Holiday Let Information Centre | " +

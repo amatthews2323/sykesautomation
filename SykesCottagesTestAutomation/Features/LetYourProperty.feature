@@ -86,5 +86,5 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Element                                      |
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
-	When I click Explore guides & resources
+	When I click /letyourcottage/advice
 	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages

@@ -31,7 +31,15 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite("", path);
-            ClickIfDisplayed("Accept All Cookies");
+            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "Yes");
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+        }
+
+        [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
+        public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
+        {
+            LaunchWebsite("", path);
+            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "No");
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 

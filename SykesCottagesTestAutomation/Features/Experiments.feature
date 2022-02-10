@@ -2,6 +2,12 @@
 	Test specific experiments
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18474
+	Then the following element is displayed on the page: platform-slider slick-initialized slick-slider
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18473
@@ -13,7 +19,7 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_InformationPageAlerts18281
-	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	Given I have navigated to the following page without dismissing alerts: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: 18281
 	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
 
@@ -27,7 +33,7 @@ Scenario: Experiment LetYourCottages_CalculatorInteraction18462
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Given I have navigated to the following page without dismissing alerts: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18458
 	Then the following elements are not dislpayed on the page
 		| Element                              |
@@ -64,7 +70,7 @@ Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_TOBAlertModal18279
-	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
+	Given I have navigated to the following page without dismissing alerts: letyourcottage/holiday-homes-for-sale/?dev_tools=product
 	When I apply the following experiment: 18279
 	And I select the alert Get Started button
 	And I select the close icon on the form
