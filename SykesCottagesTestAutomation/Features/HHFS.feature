@@ -1,7 +1,7 @@
 ﻿Feature: HHFS
 	Holiday Homes for Sale page content and functionality
 
-@HolidayHomesForSale
+@HolidayHomesForSale @ProductionRegressionSuite
 Scenario: The relevent elements are present on the Holiday Homes for Sale page
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
 	Then the following elements are dislpayed on the page

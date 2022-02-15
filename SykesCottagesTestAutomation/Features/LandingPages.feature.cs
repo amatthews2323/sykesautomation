@@ -76,13 +76,15 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Landing pages are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("LandingPages")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/run-holiday-let-as-business", "How to Run a Holiday Let as a Business", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/leading-holiday-let-agency", "Why You Should Let Your Property With The Leading Holiday Lettings Agency", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-management-services", "How Sykes Can Manage Your Holiday Home", null)]
         public virtual void TheLandingPagesAreDisplayedCorrectly(string path, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "LandingPages"};
+                    "LandingPages",
+                    "ProductionRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -115,18 +117,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table20.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table20.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "form-heading-container"});
-                table20.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "Reading time"});
-                table20.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "Download your free owner information pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table20, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table22, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

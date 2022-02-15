@@ -76,6 +76,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Sykes sub-domains are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("Subdomains")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", "Character Cottages", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", "Coast & Country Cottages", null)]
@@ -95,7 +96,8 @@ namespace SykesCottagesTestAutomation.Features
         public virtual void TheSykesSub_DomainsAreDisplayedCorrectly(string subdomain, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Subdomains"};
+                    "Subdomains",
+                    "ProductionRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -128,20 +130,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am accessing {0}", subdomain), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table24.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table24.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "form-heading-container"});
-                table24.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "partner"});
-                table24.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table24.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "Request a free owner pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table24, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table26, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

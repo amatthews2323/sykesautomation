@@ -7,23 +7,23 @@ Scenario: The user can navigate to the Let Your Property page
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
-@LetYourProperty
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed on the page: form-heading-container
 
-@LetYourProperty
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed on the page: nav_top u-clearfix nav_top_17485
 
-@LetYourProperty
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll down the page
 	Then the following element is displayed on the page: Back To Top Button
 
-@LetYourProperty
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The relevant validation is in place on the enquiry form
 	Given I have navigated to the following page: letyourcottage
 	When I submit the enquiry form
@@ -48,7 +48,7 @@ Scenario: The relevant validation is in place on the enquiry form
 	And I submit the enquiry form
 	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
 
-@LetYourProperty
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following sections are dislpayed
@@ -63,7 +63,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	| Request your free                            |
     | Looking to get started with holiday letting? |
 
-#@LetYourProperty
+#@LetYourProperty @ProductionRegressionSuite
 Scenario: The page sections are displayed is the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the <Section> section is displayed at position <Position>
@@ -79,7 +79,7 @@ Scenario: The page sections are displayed is the correct order
 	| Are you thinking of buying                             | 10       |
 	| Request your free                                      | 11       |
 
-@ThinkingOfBuying
+@ThinkingOfBuying @ProductionRegressionSuite
 Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed on the page

@@ -23,7 +23,7 @@ Scenario: The user can navigate to the Information Centre pages
 	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning \| Sykes Cottages |
 	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief \| Sykes  |
 
-@InformationCentre
+@InformationCentre @ProductionRegressionSuite
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
@@ -42,7 +42,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 	| letyourcottage/how-to-run-your-holiday-let        | How to run your holiday let                |
 	| letyourcottage/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
 
-@ManagedServices
+@ManagedServices @ProductionRegressionSuite
 Scenario: The relevent elements are present on the Managed Services page
 	Given I have navigated to the following page: letyourcottage
 	When I click /letyourcottage/managed-services

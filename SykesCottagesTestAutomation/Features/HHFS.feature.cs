@@ -76,10 +76,12 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
         [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         public virtual void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
         {
             string[] tagsOfScenario = new string[] {
-                    "HolidayHomesForSale"};
+                    "HolidayHomesForSale",
+                    "ProductionRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
@@ -105,24 +107,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "container_sykes_grid"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table19.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table19, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table21, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -10,42 +10,24 @@
               <Property Name="Namespace" Value="SykesCottagesTestAutomation.Features" />
               <Rule Match="Any">
                 <Rule Match="All">
-                  <Property Name="Class" Value="LetYourPropertyFeature" />
+                  <Property Name="Class" Value="CMSPagesFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheEnquiryFormIsDisplayedOnTheLetYourPropertyPage" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheLetYourPropertyPage" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday-let&quot;,&quot;Advertising and marketing your holiday let&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,&quot;Buying, owning and selling a holiday let&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/investment-advice-for-holiday-lets&quot;,&quot;Investment advice for holiday lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/legal-regulations-for-holiday-lets&quot;,&quot;Legal regulations for holiday lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,&quot;Holiday let mortgages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holiday-let&quot;,&quot;How to run your holiday let&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-holiday-lets&quot;,&quot;Tax information on holiday lets&quot;,null)" />
                       </Rule>
                     </Rule>
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheFloatingActionButtonIsDisplayedOnTheLetYourPropertyPage" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheManagedServicesPage" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheFloatingActionButtonIsDisplayedOnTheLetYourPropertyPage" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantSectionsAreDisplayedOnTheLetYourPropertyPage" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheLetYourPropertyPage" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheTransparentHeaderIsDisplayedOnTheLetYourPropertyPage" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheTransparentHeaderIsDisplayedOnTheLetYourPropertyPage" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheThinkingOfBuyingGuideSectionIsDisplayedOnTheLetYourPropertyPage" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheThinkingOfBuyingGuideSectionIsDisplayedOnTheLetYourPropertyPage" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheManagedServicesPage" />
                       </Rule>
                     </Rule>
                   </Rule>
@@ -63,12 +45,6 @@
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ContrastAlertsOnLYP18473" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_ContrastAlertsOnLYP18473" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_EnquiryFormCopyUpdate18283" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_EnquiryFormCopyUpdate18283" />
                       </Rule>
                     </Rule>
                     <Rule Match="All">
@@ -114,6 +90,12 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
@@ -126,18 +108,6 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_TOBAlertModal18279" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_TOBAlertModal18279" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_TestimonialRefocus18099" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_TestimonialRefocus18099" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_TrustpilotFunctionUpdate18527" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_TrustpilotFunctionUpdate18527" />
@@ -146,24 +116,12 @@
                   </Rule>
                 </Rule>
                 <Rule Match="All">
-                  <Property Name="Class" Value="CMSPagesFeature" />
+                  <Property Name="Class" Value="HHFSFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheManagedServicesPage" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.HHFSFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheManagedServicesPage" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday-let&quot;,&quot;Advertising and marketing your holiday let&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,&quot;Buying, owning and selling a holiday let&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/investment-advice-for-holiday-lets&quot;,&quot;Investment advice for holiday lets&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/legal-regulations-for-holiday-lets&quot;,&quot;Legal regulations for holiday lets&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,&quot;Holiday let mortgages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holiday-let&quot;,&quot;How to run your holiday let&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-holiday-lets&quot;,&quot;Tax information on holiday lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
                       </Rule>
                     </Rule>
                   </Rule>
@@ -182,12 +140,42 @@
                   </Rule>
                 </Rule>
                 <Rule Match="All">
-                  <Property Name="Class" Value="HHFSFeature" />
+                  <Property Name="Class" Value="LetYourPropertyFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.HHFSFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheEnquiryFormIsDisplayedOnTheLetYourPropertyPage" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheLetYourPropertyPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheFloatingActionButtonIsDisplayedOnTheLetYourPropertyPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheFloatingActionButtonIsDisplayedOnTheLetYourPropertyPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantSectionsAreDisplayedOnTheLetYourPropertyPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheLetYourPropertyPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheThinkingOfBuyingGuideSectionIsDisplayedOnTheLetYourPropertyPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheThinkingOfBuyingGuideSectionIsDisplayedOnTheLetYourPropertyPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheTransparentHeaderIsDisplayedOnTheLetYourPropertyPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheTransparentHeaderIsDisplayedOnTheLetYourPropertyPage" />
                       </Rule>
                     </Rule>
                   </Rule>

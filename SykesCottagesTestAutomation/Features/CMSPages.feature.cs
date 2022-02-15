@@ -177,6 +177,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/marketing-your-holiday-let", "Advertising and marketing your holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/buy-own-sell-holiday-lets", "Buying, owning and selling a holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/investment-advice-for-holiday-lets", "Investment advice for holiday lets", null)]
@@ -187,7 +188,8 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void TheReleventElementsArePresentOnTheInformationCentrePages(string path, string header, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "InformationCentre"};
+                    "InformationCentre",
+                    "ProductionRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -240,10 +242,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
         [NUnit.Framework.CategoryAttribute("ManagedServices")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         public virtual void TheReleventElementsArePresentOnTheManagedServicesPage()
         {
             string[] tagsOfScenario = new string[] {
-                    "ManagedServices"};
+                    "ManagedServices",
+                    "ProductionRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 46

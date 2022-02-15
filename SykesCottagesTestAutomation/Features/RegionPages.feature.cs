@@ -76,6 +76,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Regional pages are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("RegionPages")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-West", "South West", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-of-England", "South of England", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/Heart-of-England", "Heart of England", null)]
@@ -90,7 +91,8 @@ namespace SykesCottagesTestAutomation.Features
         public virtual void TheRegionalPagesAreDisplayedCorrectly(string path, string region, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "RegionPages"};
+                    "RegionPages",
+                    "ProductionRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
