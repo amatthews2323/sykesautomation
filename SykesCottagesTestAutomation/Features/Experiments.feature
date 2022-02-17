@@ -2,6 +2,16 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ExtendManagedServicesSection18466
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18466
+	Then the following elements are dislpayed on the page
+         | Element                                                            |
+         | What is the difference between partially managed service and fully |
+         | Partially managed                                                  |
+         | Fully managed                                                      |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18461
