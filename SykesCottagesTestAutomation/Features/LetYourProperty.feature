@@ -54,14 +54,14 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 	Then the following sections are dislpayed
 	| Section                                      |
 	| Gain exposure through our partners           |
-#   | What do our owners say					   |
-#   | We are still open as usual				   |
+	| What do our owners say                       |
 	| How much could I earn                        |
+	| We are still open as usual                   |
 	| Holiday home management with Sykes           |
+	| Putting your property in the spotlight       |
 	| Holiday letting made easy                    |
-#	| Are you thinking of buying				   |
-	| Request your free                            |
-    | Looking to get started with holiday letting? |
+	| Request your free owner information pack     |
+	| Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
 Scenario: The page sections are displayed is the correct order
@@ -77,7 +77,7 @@ Scenario: The page sections are displayed is the correct order
 	| Putting your property in the spotlight                 | 8        |
 	| Holiday letting made easy                              | 9        |
 	| Are you thinking of buying                             | 10       |
-	| Request your free                                      | 11       |
+	| Request your free owner information pack               | 11       |
 
 @ThinkingOfBuying @ProductionRegressionSuite
 Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
@@ -88,3 +88,19 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Explore guides & resources                   |
 	When I click /letyourcottage/advice
 	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
+
+@MobileApp @ProductionRegressionSuite
+Scenario: The relevant sections are displayed on the Mobile App homepage
+	Given I have navigated to the following page: letyourcottage/?app_view=true
+	When I set the window size to Mobile
+	Then the following sections are dislpayed
+	| Section                                      |
+	| Gain exposure through our partners           |
+	| What do our owners say                       |
+	| How much could I earn                        |
+	| We are still open as usual                   |
+	| Holiday home management with Sykes           |
+	| Putting your property in the spotlight       |
+	| Holiday letting made easy                    |
+	| Request your free owner information pack	   |
+	| Looking to get started with holiday letting? |

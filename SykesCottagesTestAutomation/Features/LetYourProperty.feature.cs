@@ -384,13 +384,19 @@ this.ScenarioInitialize(scenarioInfo);
                 table25.AddRow(new string[] {
                             "Gain exposure through our partners"});
                 table25.AddRow(new string[] {
+                            "What do our owners say"});
+                table25.AddRow(new string[] {
                             "How much could I earn"});
+                table25.AddRow(new string[] {
+                            "We are still open as usual"});
                 table25.AddRow(new string[] {
                             "Holiday home management with Sykes"});
                 table25.AddRow(new string[] {
+                            "Putting your property in the spotlight"});
+                table25.AddRow(new string[] {
                             "Holiday letting made easy"});
                 table25.AddRow(new string[] {
-                            "Request your free"});
+                            "Request your free owner information pack"});
                 table25.AddRow(new string[] {
                             "Looking to get started with holiday letting?"});
 #line 54
@@ -410,7 +416,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("Putting your property in the spotlight", "8", null)]
         [NUnit.Framework.TestCaseAttribute("Holiday letting made easy", "9", null)]
         [NUnit.Framework.TestCaseAttribute("Are you thinking of buying", "10", null)]
-        [NUnit.Framework.TestCaseAttribute("Request your free", "11", null)]
+        [NUnit.Framework.TestCaseAttribute("Request your free owner information pack", "11", null)]
         public virtual void ThePageSectionsAreDisplayedIsTheCorrectOrder(string section, string position, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -497,6 +503,70 @@ this.ScenarioInitialize(scenarioInfo);
 #line 90
  testRunner.Then("the following page title is displayed: Buying a Holiday Let Information Centre | " +
                         "Sykes Holiday Cottages", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Mobile App homepage")]
+        [NUnit.Framework.CategoryAttribute("MobileApp")]
+        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        public virtual void TheRelevantSectionsAreDisplayedOnTheMobileAppHomepage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "MobileApp",
+                    "ProductionRegressionSuite"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Mobile App homepage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 93
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 94
+ testRunner.Given("I have navigated to the following page: letyourcottage/?app_view=true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 95
+ testRunner.When("I set the window size to Mobile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Section"});
+                table27.AddRow(new string[] {
+                            "Gain exposure through our partners"});
+                table27.AddRow(new string[] {
+                            "What do our owners say"});
+                table27.AddRow(new string[] {
+                            "How much could I earn"});
+                table27.AddRow(new string[] {
+                            "We are still open as usual"});
+                table27.AddRow(new string[] {
+                            "Holiday home management with Sykes"});
+                table27.AddRow(new string[] {
+                            "Putting your property in the spotlight"});
+                table27.AddRow(new string[] {
+                            "Holiday letting made easy"});
+                table27.AddRow(new string[] {
+                            "Request your free owner information pack"});
+                table27.AddRow(new string[] {
+                            "Looking to get started with holiday letting?"});
+#line 96
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table27, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
