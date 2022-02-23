@@ -1,8 +1,8 @@
 ﻿Feature: Subdomains
 	Let Your Property subdomain content and functionality
 
-@Subdomains @ProductionRegressionSuite
-Scenario: The Sykes sub-domains are displayed correctly
+@SisterSites @ProductionRegressionSuite
+Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <Subdomain>
 	Then the following elements are dislpayed on the page
 	| Element                   |

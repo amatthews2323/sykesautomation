@@ -2,9 +2,40 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18585
+	Then the following elements are dislpayed on the page
+         | Element                                                             |
+         | /images/let_your_cottage/letting_easy/market-leading.png            |
+         | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
+         | /images/let_your_cottage/letting_easy/dedicated-account-manager.png |
+         | /images/let_your_cottage/letting_easy/helpline-24h.png              |
+         | /images/let_your_cottage/letting_easy/full-property-management.png  |
+         | /images/let_your_cottage/letting_easy/photography.png               |
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_RemoveAlreadyStartedLogin18580
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18580
+	Then the following element is not displayed on the page: Already started?
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ExtendedManagedServicesSectionLinkToTop18639
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18466
+	And I apply the following experiment: 18639
+	When I scroll to the following element: Partially managed
+	And I select the Partially Managed Enquire Now button
+	Then the enquiry form is displayed with the tint applied
+	When I select the Fully Managed Enquire Now button
+	Then the enquiry form is displayed with the tint applied
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ExtendManagedServicesSection18466
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18466
+	When I scroll to the following element: Partially managed
 	Then the following elements are dislpayed on the page
          | Element                                                            |
          | What is the difference between partially managed service and fully |
@@ -53,12 +84,6 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 		| Elements                                |
 		| o-icon c-alert__icon o-icon--size-large |
 		| c-alert__cta cta_tint js-alert-close    |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_InformationPageAlerts18281
-	Given I have navigated to the following page without dismissing alerts: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: 18281
-	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_CalculatorInteraction18462
@@ -130,6 +155,12 @@ Scenario: Experiment LetYourCottages_ReferAFriend18136
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18136
 	Then the following element is displayed on the page: Refer a friend
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_InformationPageAlerts18281
+	Given I have navigated to the following page without dismissing alerts: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: 18281
+	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_TOBAlertModal18279

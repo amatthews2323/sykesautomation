@@ -74,8 +74,8 @@ namespace SykesCottagesTestAutomation.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The Sykes sub-domains are displayed correctly")]
-        [NUnit.Framework.CategoryAttribute("Subdomains")]
+        [NUnit.Framework.DescriptionAttribute("The Sykes sister sites are displayed correctly")]
+        [NUnit.Framework.CategoryAttribute("SisterSites")]
         [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", "Character Cottages", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
@@ -93,10 +93,10 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestCaseAttribute("https://www.menaiholidays.co.uk/letyourcottage/", "Menai Holiday Cottages", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.welsh-cottages.co.uk/letyourcottage/", "Welsh Cottage", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.yorkshirecoastalcottages.com/cottage-owners/", "Yorkshire Coastal", null)]
-        public virtual void TheSykesSub_DomainsAreDisplayedCorrectly(string subdomain, string title, string[] exampleTags)
+        public virtual void TheSykesSisterSitesAreDisplayedCorrectly(string subdomain, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "Subdomains",
+                    "SisterSites",
                     "ProductionRegressionSuite"};
             if ((exampleTags != null))
             {
@@ -106,7 +106,7 @@ namespace SykesCottagesTestAutomation.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Subdomain", subdomain);
             argumentsOfScenario.Add("Title", title);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sykes sub-domains are displayed correctly", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sykes sister sites are displayed correctly", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -130,20 +130,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am accessing {0}", subdomain), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table28.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table28.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "form-heading-container"});
-                table28.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "partner"});
-                table28.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table28.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "Request a free owner pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table28, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table30, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

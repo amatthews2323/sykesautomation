@@ -107,24 +107,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "container_sykes_grid"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table22, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table23, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

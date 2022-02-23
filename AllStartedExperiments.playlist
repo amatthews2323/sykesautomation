@@ -1,0 +1,126 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="SykesCottagesTestAutomation" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="SykesCottagesTestAutomation.Features" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="ExperimentsFeature" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_CalculatorInteraction18462" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_CalculatorInteraction18462" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ContrastAlertsOnLYP18473" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ContrastAlertsOnLYP18473" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_CreateTextSupportEnquiry18460" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_CreateTextSupportEnquiry18460" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ExtendManagedServicesSection18466" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ExtendManagedServicesSection18466" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_IncludeMultipleImages18474" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_IncludeMultipleImages18474" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_LoopingImageOnHero18461" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_LoopingImageOnHero18461" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_MoveCalculatorControl18349" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_MoveCalculatorControl18349" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_MoveRegionalTestimonials18277" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_MoveRegionalTestimonials18277" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ReferAFriend18136" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ReferAFriend18136" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RelaxingValidationEnquiry18282" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RelaxingValidationEnquiry18282" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveAlertMessagesonLYP18458" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveAlertMessagesonLYP18458" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveAlreadyStartedLogin18580" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveAlreadyStartedLogin18580" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ReplaceIconsWithimages18585" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ReplaceIconsWithimages18585" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_SlowHeroTextAndAddInteraction18347" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_SlowHeroTextAndAddInteraction18347" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_TrustpilotFunctionUpdate18527" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_TrustpilotFunctionUpdate18527" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

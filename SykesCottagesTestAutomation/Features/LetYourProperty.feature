@@ -20,7 +20,7 @@ Scenario: The transparent header is displayed on the Let Your Property page
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	When I scroll down the page
+	When I scroll to the following element: page-footer container_sykes_grid
 	Then the following element is displayed on the page: Back To Top Button
 
 @LetYourProperty @ProductionRegressionSuite
@@ -104,3 +104,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Holiday letting made easy                    |
 	| Request your free owner information pack	   |
 	| Looking to get started with holiday letting? |
+	And the following elements are not dislpayed on the page
+	| Element                          |
+	| contact-to-book mobile           |
+	| navbar-toggle collapsed          |

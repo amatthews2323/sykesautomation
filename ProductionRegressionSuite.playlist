@@ -48,15 +48,27 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_CreateTextSupportEnquiry18460" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_CreateTextSupportEnquiry18460" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ExtendManagedServicesSection18466" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ExtendManagedServicesSection18466" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_IncludeMultipleImages18474" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_IncludeMultipleImages18474" />
                       </Rule>
                     </Rule>
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_InformationPageAlerts18281" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_LoopingImageOnHero18461" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_InformationPageAlerts18281" />
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_LoopingImageOnHero18461" />
                       </Rule>
                     </Rule>
                     <Rule Match="All">
@@ -90,6 +102,12 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveAlreadyStartedLogin18580" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveAlreadyStartedLogin18580" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSecondHeroCopy18494" />
@@ -99,6 +117,12 @@
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_RemoveSectionsFromLYP18292" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ReplaceIconsWithimages18585" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_ReplaceIconsWithimages18585" />
                       </Rule>
                     </Rule>
                     <Rule Match="All">
@@ -161,6 +185,12 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantSectionsAreDisplayedOnTheMobileAppHomepage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheMobileAppHomepage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LetYourPropertyFeature.TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="TheRelevantValidationIsInPlaceOnTheEnquiryForm" />
@@ -205,24 +235,24 @@
                   <Property Name="Class" Value="SubdomainsFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.SubdomainsFeature.TheSykesSub_DomainsAreDisplayedCorrectly" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.SubdomainsFeature.TheSykesSisterSitesAreDisplayedCorrectly" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.character-cottages.co.uk/letyourcottage/&quot;,&quot;Character Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.carbisbayholidays.co.uk/letyourcottage/&quot;,&quot;Carbis Bay&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.coastandcountry.co.uk/letyourcottage/&quot;,&quot;Coast &amp; Country Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.cornishcottageholidays.co.uk/letyourcottage/&quot;,&quot;Cornish Cottage Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.dream-cottages.co.uk/letyourcottage/&quot;,&quot;Dream Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.heartofthelakes.co.uk/letyourcottage/&quot;,&quot;Heart of the Lakes&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.helpfulholidays.co.uk/letyourcottage/&quot;,&quot;Helpful Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.hogansirishcottages.com/letyourcottage/&quot;,&quot;Hogans Irish Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.johnbraycornishholidays.co.uk/letyourcottage/&quot;,&quot;John Bray Cornish Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/&quot;,&quot;Lake District&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.lakescottageholiday.co.uk/letyourcottage/&quot;,&quot;Lakes Cottage Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.lakelovers.co.uk/letyourcottage/&quot;,&quot;Lakelovers&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.manorcottages.co.uk/letyourcottage/&quot;,&quot;Manor Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.menaiholidays.co.uk/letyourcottage/&quot;,&quot;Menai Holiday Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.welsh-cottages.co.uk/letyourcottage/&quot;,&quot;Welsh Cottage&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSub_DomainsAreDisplayedCorrectly(&quot;https://www.yorkshirecoastalcottages.com/cottage-owners/&quot;,&quot;Yorkshire Coastal&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.character-cottages.co.uk/letyourcottage/&quot;,&quot;Character Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.carbisbayholidays.co.uk/letyourcottage/&quot;,&quot;Carbis Bay&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.coastandcountry.co.uk/letyourcottage/&quot;,&quot;Coast &amp; Country Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.cornishcottageholidays.co.uk/letyourcottage/&quot;,&quot;Cornish Cottage Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.dream-cottages.co.uk/letyourcottage/&quot;,&quot;Dream Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.heartofthelakes.co.uk/letyourcottage/&quot;,&quot;Heart of the Lakes&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.helpfulholidays.co.uk/letyourcottage/&quot;,&quot;Helpful Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.hogansirishcottages.com/letyourcottage/&quot;,&quot;Hogans Irish Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.johnbraycornishholidays.co.uk/letyourcottage/&quot;,&quot;John Bray Cornish Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/&quot;,&quot;Lake District&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakescottageholiday.co.uk/letyourcottage/&quot;,&quot;Lakes Cottage Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakelovers.co.uk/letyourcottage/&quot;,&quot;Lakelovers&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.manorcottages.co.uk/letyourcottage/&quot;,&quot;Manor Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.menaiholidays.co.uk/letyourcottage/&quot;,&quot;Menai Holiday Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.welsh-cottages.co.uk/letyourcottage/&quot;,&quot;Welsh Cottage&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.yorkshirecoastalcottages.com/cottage-owners/&quot;,&quot;Yorkshire Coastal&quot;,null)" />
                       </Rule>
                     </Rule>
                   </Rule>

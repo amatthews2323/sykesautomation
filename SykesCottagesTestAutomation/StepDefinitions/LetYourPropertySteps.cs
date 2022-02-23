@@ -62,6 +62,28 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitASecond();
         }
 
+        [When(@"I select the Partially Managed Enquire Now button")]
+        public void WhenISelectThePartiallyManagedEnquireNowButton()
+        {
+            shared.driver.FindElement(By.XPath("//*[text()='Partially managed']//parent::div//following-sibling::div//a")).Click();
+            WaitASecond(5);
+        }
+
+        [When(@"I select the Fully Managed Enquire Now button")]
+        public void WhenISelectTheFullyManagedEnquireNowButton()
+        {
+            shared.driver.FindElement(By.XPath("//*[text()='Fully managed']//parent::div//following-sibling::div//a")).Click();
+            WaitASecond(5);
+        }
+
+        [Then(@"the enquiry form is displayed with the tint applied")]
+        public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto' and @style='z-index: 100000;']")).Count == 1, "Enquiry form displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']")).Count == 1, "Tint displayed");
+        }
+
+
         [When(@"I select the close icon on the form")]
         public void WhenISelectTheCloseIconOnTheForm()
         {
@@ -225,10 +247,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
-        [When(@"I scroll down the page")]
-        public void WhenIScrollDownThePage()
+        [When(@"I scroll to the following element: (.*)")]
+        public void WhenIScrollToTheFollowingElement(string element)
         {
-            ScrollTo("page-footer container_sykes_grid");
+            ScrollTo(element);
         }
 
         [Then(@"the (.*) section is displayed at position (.*)")]
