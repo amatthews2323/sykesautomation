@@ -27,11 +27,11 @@ Scenario: The user can navigate to the Information Centre pages
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
-         | Element                           |
-         | form-heading-container            |
-         | <Header>                          |
-         | Are you thinking of buying?       |
-         | How much could I earn with Sykes? |
+    | Element                           |
+    | form-heading-container            |
+    | <Header>                          |
+    | Are you thinking of buying?       |
+    | How much could I earn with Sykes? |
 	Examples:
 	| Path                                              | Header                                     |
 	| letyourcottage/marketing-your-holiday-let         | Advertising and marketing your holiday let |
@@ -45,6 +45,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 @ManagedServices @ProductionRegressionSuite
 Scenario: The relevent elements are present on the Managed Services page
 	Given I have navigated to the following page: letyourcottage
+	When I scroll to the following element: Holiday home management with Sykes
 	When I click /letyourcottage/managed-services
     Then the following elements are dislpayed on the page
          | Element                   |

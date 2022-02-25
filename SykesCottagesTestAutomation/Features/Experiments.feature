@@ -2,6 +2,12 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ProgressBar18576
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18576
+	Then the following element is displayed on the page: progressbar
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18585
@@ -144,13 +150,7 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	When I click holiday properties already working with Sykes
 	Then the following slick dot is highlighted 4
 
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_TrustpilotFunctionUpdate18527
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18527
-	Then the following element is displayed on the page: Customer reviews powered by Trustpilot
-
-@ActiveExperiments @ProductionRegressionSuite
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_ReferAFriend18136
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18136

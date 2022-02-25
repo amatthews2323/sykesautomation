@@ -274,6 +274,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 48
+ testRunner.When("I scroll to the following element: Holiday home management with Sykes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 49
  testRunner.When("I click /letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -296,7 +299,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Resource centre"});
                 table2.AddRow(new string[] {
                             "Share page"});
-#line 49
+#line 50
     testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table2, "Then ");
 #line hidden
             }

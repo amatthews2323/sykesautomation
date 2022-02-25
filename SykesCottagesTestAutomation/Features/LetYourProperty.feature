@@ -10,7 +10,23 @@ Scenario: The user can navigate to the Let Your Property page
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	Then the following element is displayed on the page: form-heading-container
+	Then the following elements are dislpayed on the page
+	| Element                                                                                                                                                        |
+	| form-heading-container                                                                                                                                         |
+	| Complete the form to receive your information pack                                                                                                             |
+	| heroform_first_name                                                                                                                                            |
+	| heroform_first_name_validation_error                                                                                                                           |
+	| heroform_email                                                                                                                                                 |
+	| heroform_email_validation_error                                                                                                                                |
+	| heroform_phone                                                                                                                                                 |
+	| heroform_phone_validation_error                                                                                                                                |
+	| marketing_email                                                                                                                                                |
+	| marketing_phone                                                                                                                                                |
+	| marketing_sms                                                                                                                                                  |
+	| marketing_post                                                                                                                                                 |
+	| Your details will be stored and used to send you information about our property letting services. You can opt out or unsubscribe at any time by contacting us. |
+	| /terms/privacypolicy                                                                                                                                           |
+	| submit                                                                                                                                                         |
 
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -51,17 +67,18 @@ Scenario: The relevant validation is in place on the enquiry form
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	Then the following sections are dislpayed
-	| Section                                      |
-	| Gain exposure through our partners           |
-	| What do our owners say                       |
-	| How much could I earn                        |
-	| We are still open as usual                   |
-	| Holiday home management with Sykes           |
-	| Putting your property in the spotlight       |
-	| Holiday letting made easy                    |
-	| Request your free owner information pack     |
-	| Looking to get started with holiday letting? |
+	Then the following elements are dislpayed on the page
+    | Element                                      |
+    | Customer reviews powered by Trustpilot       |
+    | Gain exposure through our partners           |
+    | What do our owners say                       |
+    | How much could I earn                        |
+    | We are still open as usual                   |
+    | Holiday home management with Sykes           |
+    | Putting your property in the spotlight       |
+    | Holiday letting made easy                    |
+    | Request your free owner information pack     |
+    | Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
 Scenario: The page sections are displayed is the correct order
