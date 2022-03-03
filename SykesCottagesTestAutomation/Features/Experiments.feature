@@ -2,10 +2,77 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18529
+	Then the following elements are dislpayed on the page
+		 | Element                                                                                                                              |
+		 | List your property for a welcome gift of your choice                                                                                 |
+		 | Sign your contract by 1st April 2022 and get your property taking bookings by 1st June 2022 to earn a welcome gift of your choice... |
+		 | /letyourcottage/information/welcome-gift/                                                                                            |
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18581
+	Then the enquiry form submit button is disabled
+	When I enter the following details in the enquiry form
+		| Key           | Value                         |
+		| Full name     | Test Owner                    |
+		| Email address | sykescottagestest@example.org |
+		| Phone number  | 07000000000                   |
+	And I click form-heading-container
+	Then the enquiry form submit button is not disabled
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_TestimonialsCarousel18584
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18584
+	Then the Testimonials carousel is displayed on the page
+	When I click /images/sykes/letyourcottage/icons/arrow-prev.svg
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18486
+	Then the How Much Could I Earn CTA is not displayed
+	And the Holiday Letting Made Easy CTA is not displayed
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InactivityExitModal18457
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18457
+	Then I wait 305 seconds
+	And the following elements are dislpayed on the page
+	     | Element                  |
+	     | idleform                 |
+	     | We're ready when you are |
+	     | Open form                |
+	When I click Open form
+	Then the following elements are dislpayed on the page
+	     | Element                                   |
+	     | inactive-form_first_name                  |
+	     | inactive-form_first_name_validation_error |
+	     | inactive-form_email                       |
+	     | inactive-form_email_validation_error      |
+	     | inactive-form_phone                       |
+	     | inactive-form_phone_validation_error      |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ProgressBar18576
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18576
 	Then the following element is displayed on the page: progressbar
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18552
+	Then the following elements are dislpayed on the page
+	     | Element                                                            |
+	     | hero-banner managed-services                                       |
+	     | We tailor our managed service package to suit your specific needs. |
+	     | /letyourcottage/managed-services/                                  |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
@@ -76,12 +143,6 @@ Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 		| *Based on a 7 bedroom property in the Lake District with bookings between October 2017 to September 2018.                           |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18474
-	Then the following element is displayed on the page: platform-slider slick-initialized slick-slider
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18473
@@ -109,34 +170,10 @@ Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
 		| A new property has just gone live    |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_MoveCalculatorControl18349
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18349
-	Then the How much could I earn section is displayed at position 4
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
 	Given I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?dev_tools=product
 	When I apply the following experiment: 18277
 	Then the testimonials_region_pc section is displayed at position 2
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18292
-	Then the following elements are not dislpayed on the page
-		| Element                                |
-		| Putting your property in the spotlight |
-		| Are you thinking of buying             |
-		| Back to Top                            |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_RelaxingValidationEnquiry18282
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18282
-	When I enter a phone number with spaces and +44
-	And I submit the enquiry form
-	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
@@ -149,6 +186,22 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	And the following slick dot is highlighted 3
 	When I click holiday properties already working with Sykes
 	Then the following slick dot is highlighted 4
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18474
+	Then the following element is displayed on the page: platform-slider slick-initialized slick-slider
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18292
+	Then the following elements are not dislpayed on the page
+		| Element                                |
+		| Putting your property in the spotlight |
+		| Are you thinking of buying             |
+		| Back to Top                            |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_ReferAFriend18136
@@ -302,3 +355,13 @@ Scenario: Get all active experiments in a given session
 	When I store the active experiment IDs
 	Given I am accessing http://holmes.prod.sykes.cloud/experiments
 	When I search for the experiment details
+
+@HolmesExperiments
+Scenario: Check specific experiments are applied
+	Given I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Then the following experiements are enabled
+		| Example |
+		| 4419    |
+		| 4396    |
+	And I wait 300 seconds

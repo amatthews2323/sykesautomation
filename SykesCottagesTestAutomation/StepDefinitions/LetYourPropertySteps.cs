@@ -79,10 +79,29 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the enquiry form is displayed with the tint applied")]
         public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
         {
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto' and @style='z-index: 100000;']")).Count == 1, "Enquiry form displayed");
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']")).Count == 1, "Tint displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto' and @style='z-index: 100000;']")).Count == 1, "Enquiry form not displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']")).Count == 1, "Tint not displayed");
         }
 
+        [Then(@"the Testimonials carousel is displayed on the page")]
+        public void ThenTheTestimonialsCarouselIsDisplayedOnThePage()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[text()='What do our owners say?']/parent::div/div[contains(@class,'carousel-slider')]")).Count == 1, "Testimonials carousel not displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-prev.svg')]")).Count == 1, "Testimonials previous arrow not displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-next.svg')]")).Count == 1, "Testimonials next arrow not displayed");
+        }
+
+        [Then(@"the enquiry form submit button is disabled")]
+        public void ThenTheEnquiryFormSubmitButtonIsDisabled()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//form[@*='heroform']/button[@type='submit' and @disabled='']")).Count == 1, "Disabled submit button not found");
+        }
+
+        [Then(@"the enquiry form submit button is not disabled")]
+        public void ThenTheEnquiryFormSubmitButtonIsNotDisabled()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//form[@*='heroform']/button[@type='submit' and @disabled='']")).Count == 0, "Submit button disabled in error");
+        }
 
         [When(@"I select the close icon on the form")]
         public void WhenISelectTheCloseIconOnTheForm()
@@ -141,10 +160,40 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [When(@"I enter the following details in the enquiry form")]
+        public void WhenIEnterTheFollowingDetailsInTheEnquiryForm(Table table)
+        {
+            LaunchWebsite("", "letyourcottage");
+            CloseAllPopups();
+            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+
+            var dictionary = ToDictionary(table);
+            Type("heroform_first_name", dictionary["Full name"]);
+
+            if (dictionary["Email address"] == "Random")
+            {
+                Random r = new Random();
+                emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
+                Type("heroform_email", emailAddress);
+            }
+            else
+            {
+                Type("heroform_email", dictionary["Email address"]);
+            }
+            Type("heroform_phone", dictionary["Phone number"]);
+        }
+
         [When(@"I submit the enquiry form")]
         public void WhenISubmitTheEnquiryForm()
         {
-            shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+            if (Hooks.Environemt != "Live")
+            {
+                shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+            }
+            else
+            {
+                Console.WriteLine("Step skipped on Live environment");
+            }
         }
 
         [Then(@"I am directed to the Property Letting Dashboard page")]
@@ -212,6 +261,18 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
         {
             AssertElementNotPresent(value);
+        }
+
+        [Then(@"the How Much Could I Earn CTA is not displayed")]
+        public void ThenTheHowMuchCouldIEarnCTAIsNotDisplayed()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//div[@*='how-much-could-i-earn']/a[@*='homepage_calculator_cta_blue']")).Count == 0, "How Much Could I Earn CTA displayed in error");
+        }
+
+        [Then(@"the Holiday Letting Made Easy CTA is not displayed")]
+        public void ThenTheHolidayLettingMadeEasyCTAIsNotDisplayed()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[text()='Holiday letting made easy']/parent::div//a[@*='homepage_letting_made_easy_cta_blue']")).Count == 0, "Holiday Letting Made Easy CTA displayed in error");
         }
 
         [When(@"I click the (.*) button")]
@@ -434,6 +495,16 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIApplyTheFollowingExperiment(string experimentId)
         {
             ApplyExperiment(experimentId);
+        }
+
+        [Then(@"the following experiements are enabled")]
+        public void ThenTheFollowingExperiementsAreEnabled(Table table)
+        {
+            var experiments = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var experiment in experiments)
+            {
+                Assert.IsTrue(activeExperiments.Contains(experiment), "Experiment " + experiment + " not found");
+            }
         }
 
         [When(@"I set the window size to (.*)")]

@@ -44,9 +44,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 
 @ManagedServices @ProductionRegressionSuite
 Scenario: The relevent elements are present on the Managed Services page
-	Given I have navigated to the following page: letyourcottage
-	When I scroll to the following element: Holiday home management with Sykes
-	When I click /letyourcottage/managed-services
+	Given I have navigated to the following page: letyourcottage/managed-services
     Then the following elements are dislpayed on the page
          | Element                   |
          | Holiday home management   |
