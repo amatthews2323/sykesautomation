@@ -1,24 +1,38 @@
-﻿Feature: LandingPages
-	Landing pages content and functionality
+﻿Feature: SisterSites
+	Sister sites content and functionality
 
-@LandingPages @ProductionRegressionSuite
-Scenario: The Landing pages are displayed correctly
-	Given I have navigated to the following page: <Path>
+@SisterSites @ProductionRegressionSuite
+Scenario: The Sykes sister sites are displayed correctly
+	Given I am accessing <URL>
 	Then the following elements are dislpayed on the page
-	| Element                                   |
-	| <Title>                                   |
-	| form-heading-container                    |
-	| Reading time                              |
-	| Download your free owner information pack |
+	| Element                   |
+	| <Title>                   |
+	| form-heading-container    |
+	| partner                   |
+	| Holiday letting made easy |
+	| Request a free owner pack |
 	Examples:
-	| Path                                                                | Title                                                                     |
-	| letyourcottage/information/run-holiday-let-as-business              | How to Run a Holiday Let as a Business                                    |
-	| letyourcottage/information/leading-holiday-let-agency               | Why You Should Let Your Property With The Leading Holiday Lettings Agency |
-	| letyourcottage/information/holiday-management-services              | How Sykes Can Manage Your Holiday Home                                    |
+	| URL                                                         | Title                      |
+	| https://www.character-cottages.co.uk/letyourcottage/        | Character Cottages         |
+	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay                 |
+	| https://www.coastandcountry.co.uk/letyourcottage/           | Coast & Country Cottages   |
+	| https://www.cornishcottageholidays.co.uk/letyourcottage/    | Cornish Cottage Holidays   |
+	| https://www.dream-cottages.co.uk/letyourcottage/            | Dream Cottages             |
+	| https://www.heartofthelakes.co.uk/letyourcottage/           | Heart of the Lakes         |
+	| https://www.helpfulholidays.co.uk/letyourcottage/           | Helpful Holidays           |
+	| https://www.hogansirishcottages.com/letyourcottage/         | Hogans Irish Cottages      |
+	| https://www.johnbraycornishholidays.co.uk/letyourcottage/   | John Bray Cornish Holidays |
+	| https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/ | Lake District              |
+	| https://www.lakescottageholiday.co.uk/letyourcottage/       | Lakes Cottage Holidays     |
+	| https://www.lakelovers.co.uk/letyourcottage/                | Lakelovers                 |
+	| https://www.manorcottages.co.uk/letyourcottage/             | Manor Cottages             |
+	| https://www.menaiholidays.co.uk/letyourcottage/             | Menai Holiday Cottages     |
+	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
+	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |
 
-@LandingPages @ProductionRegressionSuite
-Scenario: The enquiry form is displayed on the Landing pages
-	Given I have navigated to the following page: <Path>
+@SisterSites @ProductionRegressionSuite
+Scenario: The enquiry form is displayed on the sister sites
+	Given I am accessing <URL>
 	Then the following elements are dislpayed on the page
 	| Element                                                                                                                                                        |
 	| form-heading-container                                                                                                                                         |
@@ -63,7 +77,20 @@ Scenario: The enquiry form is displayed on the Landing pages
 	And I click form-heading-container
 	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Examples:
-	| Path                                                   |
-	| letyourcottage/information/run-holiday-let-as-business |
-	| letyourcottage/information/leading-holiday-let-agency  |
-	| letyourcottage/information/holiday-management-services |
+	| URL                                                         |
+	| https://www.character-cottages.co.uk/letyourcottage/        |
+	| https://www.carbisbayholidays.co.uk/letyourcottage/         |
+	| https://www.coastandcountry.co.uk/letyourcottage/           |
+	| https://www.cornishcottageholidays.co.uk/letyourcottage/    |
+	| https://www.dream-cottages.co.uk/letyourcottage/            |
+	| https://www.heartofthelakes.co.uk/letyourcottage/           |
+	| https://www.helpfulholidays.co.uk/letyourcottage/           |
+	| https://www.hogansirishcottages.com/letyourcottage/         |
+	| https://www.johnbraycornishholidays.co.uk/letyourcottage/   |
+	| https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/ |
+	| https://www.lakescottageholiday.co.uk/letyourcottage/       |
+	| https://www.lakelovers.co.uk/letyourcottage/                |
+	| https://www.manorcottages.co.uk/letyourcottage/             |
+	| https://www.menaiholidays.co.uk/letyourcottage/             |
+	| https://www.welsh-cottages.co.uk/letyourcottage/            |
+	| https://www.yorkshirecoastalcottages.com/cottage-owners/    |

@@ -10,29 +10,6 @@
               <Property Name="Namespace" Value="SykesCottagesTestAutomation.Features" />
               <Rule Match="Any">
                 <Rule Match="All">
-                  <Property Name="Class" Value="CMSPagesFeature" />
-                  <Rule Match="Any">
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-hol...&quot;,&quot;Tax information on holiday lets&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holida...&quot;,&quot;How to run your holiday let&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,&quot;Holiday let mortgages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/legal-regulations-for-...&quot;,&quot;Legal regulations for holiday lets&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/investment-advice-for-...&quot;,&quot;Investment advice for holiday lets&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday...&quot;,&quot;Advertising and marketing your holida...&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,&quot;Buying, owning and selling a holiday let&quot;,null)" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.CMSPagesFeature.TheReleventElementsArePresentOnTheManagedServicesPage" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheManagedServicesPage" />
-                      </Rule>
-                    </Rule>
-                  </Rule>
-                </Rule>
-                <Rule Match="All">
                   <Property Name="Class" Value="ExperimentsFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
@@ -90,6 +67,12 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_OwnerIncentivePromotion18529" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_OwnerIncentivePromotion18529" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ProgressBar18576" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_ProgressBar18576" />
@@ -140,12 +123,30 @@
                   </Rule>
                 </Rule>
                 <Rule Match="All">
-                  <Property Name="Class" Value="HHFSFeature" />
+                  <Property Name="Class" Value="InformationCentrePagesFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.HHFSFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.InformationCentrePagesFeature.TheEnquiryFormIsDisplayedOnTheInformationCentrePages" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/investment-advice-for-...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/legal-regulations-for-...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holida...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-hol...&quot;,null)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.InformationCentrePagesFeature.TheReleventElementsArePresentOnTheInformationCentrePages" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/marketing-your-holiday...&quot;,&quot;Advertising and marketing your holida...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/buy-own-sell-holiday-lets&quot;,&quot;Buying, owning and selling a holiday let&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/investment-advice-for-...&quot;,&quot;Investment advice for holiday lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/legal-regulations-for-...&quot;,&quot;Legal regulations for holiday lets&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/holiday-let-mortgages&quot;,&quot;Holiday let mortgages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/how-to-run-your-holida...&quot;,&quot;How to run your holiday let&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheInformationCentrePages(&quot;letyourcottage/Tax-information-on-hol...&quot;,&quot;Tax information on holiday lets&quot;,null)" />
                       </Rule>
                     </Rule>
                   </Rule>
@@ -153,6 +154,14 @@
                 <Rule Match="All">
                   <Property Name="Class" Value="LandingPagesFeature" />
                   <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LandingPagesFeature.TheEnquiryFormIsDisplayedOnTheLandingPages" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheLandingPages(&quot;letyourcottage/information/run-holida...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheLandingPages(&quot;letyourcottage/information/leading-ho...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheLandingPages(&quot;letyourcottage/information/holiday-ma...&quot;,null)" />
+                      </Rule>
+                    </Rule>
                     <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.LandingPagesFeature.TheLandingPagesAreDisplayedCorrectly" />
                       <Rule Match="Any">
@@ -217,6 +226,23 @@
                   </Rule>
                 </Rule>
                 <Rule Match="All">
+                  <Property Name="Class" Value="OtherPagesFeature" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.OtherPagesFeature.TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheHolidayHomesForSalePage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.OtherPagesFeature.TheReleventElementsArePresentOnTheManagedServicesPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheReleventElementsArePresentOnTheManagedServicesPage" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
                   <Property Name="Class" Value="RegionPagesFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
@@ -238,27 +264,48 @@
                   </Rule>
                 </Rule>
                 <Rule Match="All">
-                  <Property Name="Class" Value="SubdomainsFeature" />
+                  <Property Name="Class" Value="SisterSitesFeature" />
                   <Rule Match="Any">
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.SubdomainsFeature.TheSykesSisterSitesAreDisplayedCorrectly" />
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.SisterSitesFeature.TheEnquiryFormIsDisplayedOnTheSisterSites" />
                       <Rule Match="Any">
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.dream-cottages.co.uk/lety...&quot;,&quot;Dream Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.johnbraycornishholidays.c...&quot;,&quot;John Bray Cornish Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.helpfulholidays.co.uk/let...&quot;,&quot;Helpful Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.welsh-cottages.co.uk/lety...&quot;,&quot;Welsh Cottage&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakescottageholiday.co.uk...&quot;,&quot;Lakes Cottage Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.character-cottages.co.uk/...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.carbisbayholidays.co.uk/l...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.coastandcountry.co.uk/let...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.cornishcottageholidays.co...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.dream-cottages.co.uk/lety...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.heartofthelakes.co.uk/let...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.helpfulholidays.co.uk/let...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.hogansirishcottages.com/l...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.johnbraycornishholidays.c...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.lakedistrictlodgeholidays...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.lakescottageholiday.co.uk...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.lakelovers.co.uk/letyourc...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.manorcottages.co.uk/letyo...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.menaiholidays.co.uk/letyo...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.welsh-cottages.co.uk/lety...&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheEnquiryFormIsDisplayedOnTheSisterSites(&quot;https://www.yorkshirecoastalcottages....&quot;,null)" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.SisterSitesFeature.TheSykesSisterSitesAreDisplayedCorrectly" />
+                      <Rule Match="Any">
                         <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.character-cottages.co.uk/...&quot;,&quot;Character Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.coastandcountry.co.uk/let...&quot;,&quot;Coast &amp; Country Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.manorcottages.co.uk/letyo...&quot;,&quot;Manor Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.yorkshirecoastalcottages....&quot;,&quot;Yorkshire Coastal&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.menaiholidays.co.uk/letyo...&quot;,&quot;Menai Holiday Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.cornishcottageholidays.co...&quot;,&quot;Cornish Cottage Holidays&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.hogansirishcottages.com/l...&quot;,&quot;Hogans Irish Cottages&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakedistrictlodgeholidays...&quot;,&quot;Lake District&quot;,null)" />
-                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.heartofthelakes.co.uk/let...&quot;,&quot;Heart of the Lakes&quot;,null)" />
                         <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.carbisbayholidays.co.uk/l...&quot;,&quot;Carbis Bay&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.coastandcountry.co.uk/let...&quot;,&quot;Coast &amp; Country Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.cornishcottageholidays.co...&quot;,&quot;Cornish Cottage Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.dream-cottages.co.uk/lety...&quot;,&quot;Dream Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.heartofthelakes.co.uk/let...&quot;,&quot;Heart of the Lakes&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.helpfulholidays.co.uk/let...&quot;,&quot;Helpful Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.hogansirishcottages.com/l...&quot;,&quot;Hogans Irish Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.johnbraycornishholidays.c...&quot;,&quot;John Bray Cornish Holidays&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakedistrictlodgeholidays...&quot;,&quot;Lake District&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakescottageholiday.co.uk...&quot;,&quot;Lakes Cottage Holidays&quot;,null)" />
                         <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.lakelovers.co.uk/letyourc...&quot;,&quot;Lakelovers&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.manorcottages.co.uk/letyo...&quot;,&quot;Manor Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.menaiholidays.co.uk/letyo...&quot;,&quot;Menai Holiday Cottages&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.welsh-cottages.co.uk/lety...&quot;,&quot;Welsh Cottage&quot;,null)" />
+                        <Property Name="DisplayName" Value="TheSykesSisterSitesAreDisplayedCorrectly(&quot;https://www.yorkshirecoastalcottages....&quot;,&quot;Yorkshire Coastal&quot;,null)" />
                       </Rule>
                     </Rule>
                   </Rule>

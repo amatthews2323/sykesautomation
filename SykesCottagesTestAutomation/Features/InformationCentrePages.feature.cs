@@ -20,22 +20,22 @@ namespace SykesCottagesTestAutomation.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("CMSPages")]
-    public partial class CMSPagesFeature
+    [NUnit.Framework.DescriptionAttribute("InformationCentrePages")]
+    public partial class InformationCentrePagesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "CMSPages.feature"
+#line 1 "InformationCentrePages.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CMSPages", "\tContent Managed page content and functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "InformationCentrePages", "\tInformation Centre pages content and functionality", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -222,34 +222,47 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table1.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "form-heading-container"});
-                table1.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table1.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "Are you thinking of buying?"});
-                table1.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
 #line 29
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table1, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table27, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
-        [NUnit.Framework.CategoryAttribute("ManagedServices")]
+        [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Information Centre pages")]
+        [NUnit.Framework.CategoryAttribute("InformationCentre")]
         [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
-        public virtual void TheReleventElementsArePresentOnTheManagedServicesPage()
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/marketing-your-holiday-let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/buy-own-sell-holiday-lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/investment-advice-for-holiday-lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/legal-regulations-for-holiday-lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/holiday-let-mortgages", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/how-to-run-your-holiday-let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/Tax-information-on-holiday-lets", null)]
+        public virtual void TheEnquiryFormIsDisplayedOnTheInformationCentrePages(string path, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
-                    "ManagedServices",
+            string[] @__tags = new string[] {
+                    "InformationCentre",
                     "ProductionRegressionSuite"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            argumentsOfScenario.Add("Path", path);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The enquiry form is displayed on the Information Centre pages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -271,30 +284,125 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 47
- testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table2.AddRow(new string[] {
-                            "Holiday home management"});
-                table2.AddRow(new string[] {
-                            "hero-slideshow"});
-                table2.AddRow(new string[] {
+                table28.AddRow(new string[] {
                             "form-heading-container"});
-                table2.AddRow(new string[] {
-                            "Managed services at Sykes"});
-                table2.AddRow(new string[] {
-                            "What are the benefits"});
-                table2.AddRow(new string[] {
-                            "Partially managed"});
-                table2.AddRow(new string[] {
-                            "Fully managed"});
-                table2.AddRow(new string[] {
-                            "Resource centre"});
-                table2.AddRow(new string[] {
-                            "Share page"});
+                table28.AddRow(new string[] {
+                            "Complete the form to receive your information pack"});
+                table28.AddRow(new string[] {
+                            "heroform_first_name"});
+                table28.AddRow(new string[] {
+                            "heroform_first_name_validation_error"});
+                table28.AddRow(new string[] {
+                            "heroform_email"});
+                table28.AddRow(new string[] {
+                            "heroform_email_validation_error"});
+                table28.AddRow(new string[] {
+                            "heroform_phone"});
+                table28.AddRow(new string[] {
+                            "heroform_phone_validation_error"});
+                table28.AddRow(new string[] {
+                            "marketing_email"});
+                table28.AddRow(new string[] {
+                            "marketing_phone"});
+                table28.AddRow(new string[] {
+                            "marketing_sms"});
+                table28.AddRow(new string[] {
+                            "marketing_post"});
+                table28.AddRow(new string[] {
+                            "Your details will be stored and used to send you information about our property l" +
+                                "etting services. You can opt out or unsubscribe at any time by contacting us."});
+                table28.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table28.AddRow(new string[] {
+                            "submit"});
 #line 48
-    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table2, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table28, "Then ");
+#line hidden
+#line 65
+ testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 66
+ testRunner.And("I click heroform_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 67
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table29.AddRow(new string[] {
+                            "Please enter a full name."});
+                table29.AddRow(new string[] {
+                            "Please enter an email address."});
+                table29.AddRow(new string[] {
+                            "Please enter a contact number."});
+#line 68
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table29, "Then ");
+#line hidden
+#line 73
+ testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 74
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 75
+ testRunner.Then("the following text is displayed on the page: \'test.com\' is missing an \'@\'. Please" +
+                        " include an \'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 76
+ testRunner.When("I enter an email address without a valid domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 77
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 78
+ testRunner.Then("the following text is displayed on the page: \'test@test\' is an incomplete email a" +
+                        "ddress. Please include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 79
+ testRunner.When("I enter a phone number with a non-numerical character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 80
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 81
+ testRunner.Then("the following text is displayed on the page: Please enter a valid contact number " +
+                        "that does not include letters, spaces, special characters and contains no less t" +
+                        "han 10 digits.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 82
+ testRunner.When("I enter a phone number with less than 10 digits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 83
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 84
+ testRunner.Then("the following text is displayed on the page: Please provide a contact number that" +
+                        " is no less than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 85
+ testRunner.When("I enter a phone number with more than 15 digits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 86
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 87
+ testRunner.Then("the following text is displayed on the page: Please provide a contact number that" +
+                        " is no more than 15 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 88
+ testRunner.When("I enter a phone number with spaces and +44", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 89
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 90
+ testRunner.Then("the following element is not displayed on the page: Please enter a valid contact " +
+                        "number that does not include letters, spaces, special characters and contains no" +
+                        " less than 10 digits.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

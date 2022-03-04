@@ -1,23 +1,49 @@
-﻿Feature: LandingPages
-	Landing pages content and functionality
+﻿Feature: InformationCentrePages
+	Information Centre pages content and functionality
 
-@LandingPages @ProductionRegressionSuite
-Scenario: The Landing pages are displayed correctly
+@Navigation
+Scenario: The user can navigate to the Holiday Homes for Sale page
+	Given I am on the Sykes Homepage
+	When I select the Holiday homes for sale navigation link under Let Your Property
+	Then the following page title is displayed: Holiday Homes for Sale UK
+
+@Navigation
+Scenario: The user can navigate to the Information Centre pages
+	Given I am on the Sykes Homepage
+	When I select the Holiday homes for sale navigation link under Let Your Property
+	And I select the <Link> navigation link under Information Centre
+	Then the following page title is displayed: <PageTitle>
+	Examples:
+	| Link                                       | PageTitle                                                     |
+	| Advertising and marketing your holiday let | Advertising and Marketing Your Holiday Let \| Sykes Cottages  |
+	| Buying, owning and selling a holiday let   | Buying, Owning & Selling a Holiday Let \| Sykes Cottages      |
+	| Investment advice for holiday lets         | Investment in Holiday Homes \| Holiday Let Business \| Sykes  |
+	| Legal regulations for holiday lets         | Legal Regulations for Holiday Lets \| Sykes Cottages          |
+	| Holiday let mortgages                      | Mortgages for Holiday Lets \| Second Homes \| Sykes Cottages  |
+	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning \| Sykes Cottages |
+	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief \| Sykes  |
+
+@InformationCentre @ProductionRegressionSuite
+Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
-	| Element                                   |
-	| <Title>                                   |
-	| form-heading-container                    |
-	| Reading time                              |
-	| Download your free owner information pack |
+    | Element                           |
+    | form-heading-container            |
+    | <Header>                          |
+    | Are you thinking of buying?       |
+    | How much could I earn with Sykes? |
 	Examples:
-	| Path                                                                | Title                                                                     |
-	| letyourcottage/information/run-holiday-let-as-business              | How to Run a Holiday Let as a Business                                    |
-	| letyourcottage/information/leading-holiday-let-agency               | Why You Should Let Your Property With The Leading Holiday Lettings Agency |
-	| letyourcottage/information/holiday-management-services              | How Sykes Can Manage Your Holiday Home                                    |
+	| Path                                              | Header                                     |
+	| letyourcottage/marketing-your-holiday-let         | Advertising and marketing your holiday let |
+	| letyourcottage/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
+	| letyourcottage/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
+	| letyourcottage/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
+	| letyourcottage/holiday-let-mortgages              | Holiday let mortgages                      |
+	| letyourcottage/how-to-run-your-holiday-let        | How to run your holiday let                |
+	| letyourcottage/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
 
-@LandingPages @ProductionRegressionSuite
-Scenario: The enquiry form is displayed on the Landing pages
+@InformationCentre @ProductionRegressionSuite
+Scenario: The enquiry form is displayed on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
 	| Element                                                                                                                                                        |
@@ -63,7 +89,11 @@ Scenario: The enquiry form is displayed on the Landing pages
 	And I click form-heading-container
 	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Examples:
-	| Path                                                   |
-	| letyourcottage/information/run-holiday-let-as-business |
-	| letyourcottage/information/leading-holiday-let-agency  |
-	| letyourcottage/information/holiday-management-services |
+	| Path                                              |
+	| letyourcottage/marketing-your-holiday-let         |
+	| letyourcottage/buy-own-sell-holiday-lets          |
+	| letyourcottage/investment-advice-for-holiday-lets |
+	| letyourcottage/legal-regulations-for-holiday-lets |
+	| letyourcottage/holiday-let-mortgages              |
+	| letyourcottage/how-to-run-your-holiday-let        |
+	| letyourcottage/Tax-information-on-holiday-lets    | 

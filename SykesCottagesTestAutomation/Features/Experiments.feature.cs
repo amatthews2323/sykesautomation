@@ -110,17 +110,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.When("I apply the following experiment: 18529", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table10.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "List your property for a welcome gift of your choice"});
-                table10.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "Sign your contract by 1st April 2022 and get your property taking bookings by 1st" +
                                 " June 2022 to earn a welcome gift of your choice..."});
-                table10.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "/letyourcottage/information/welcome-gift/"});
 #line 8
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table10, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table8, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -166,20 +166,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.Then("the enquiry form submit button is disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table11.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Full name",
                             "Test Owner"});
-                table11.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Email address",
                             "sykescottagestest@example.org"});
-                table11.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
 #line 19
- testRunner.When("I enter the following details in the enquiry form", ((string)(null)), table11, "When ");
+ testRunner.When("I enter the following details in the enquiry form", ((string)(null)), table9, "When ");
 #line hidden
 #line 24
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -323,36 +323,36 @@ this.ScenarioInitialize(scenarioInfo);
 #line 45
  testRunner.Then("I wait 305 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table12.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "idleform"});
-                table12.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "We\'re ready when you are"});
-                table12.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Open form"});
 #line 46
- testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table12, "And ");
+ testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table10, "And ");
 #line hidden
 #line 51
  testRunner.When("I click Open form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_first_name"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_first_name_validation_error"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_email"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_email_validation_error"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_phone"});
-                table13.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "inactive-form_phone_validation_error"});
 #line 52
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table13, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table11, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -439,16 +439,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 70
  testRunner.When("I apply the following experiment: 18552", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table14.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "hero-banner managed-services"});
-                table14.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "We tailor our managed service package to suit your specific needs."});
-                table14.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "/letyourcottage/managed-services/"});
 #line 71
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table14, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table12, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -491,22 +491,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 80
  testRunner.When("I apply the following experiment: 18585", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/market-leading.png"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/payment_in_advance.png"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/dedicated-account-manager.png"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/helpline-24h.png"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/full-property-management.png"});
-                table15.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/photography.png"});
 #line 81
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table15, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table13, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -655,16 +655,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 111
  testRunner.When("I scroll to the following element: Partially managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table16.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "What is the difference between partially managed service and fully"});
-                table16.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Partially managed"});
-                table16.AddRow(new string[] {
+                table14.AddRow(new string[] {
                             "Fully managed"});
 #line 112
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table16, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table14, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -754,16 +754,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 128
  testRunner.When("I apply the following experiment: 18460", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table17.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "Please enter your full name"});
-                table17.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "Please enter your email address"});
-                table17.AddRow(new string[] {
+                table15.AddRow(new string[] {
                             "Please enter your contact number"});
 #line 129
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table17, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table15, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -806,18 +806,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 138
  testRunner.When("I apply the following experiment: 18494", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Elements"});
-                table18.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "Let your property with Sykes and earn up to £125,000 per year*"});
-                table18.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "As the UK’s leading independent holiday letting agency, we’re committed to gettin" +
                                 "g you the best possible return from your property."});
-                table18.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "*Based on a 7 bedroom property in the Lake District with bookings between October" +
                                 " 2017 to September 2018."});
 #line 139
- testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table18, "Then ");
+ testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table16, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -864,14 +864,14 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("the following element is displayed on the page: c-alert c-alert--standard js-aler" +
                         "t is-visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "Elements"});
-                table19.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "o-icon c-alert__icon o-icon--size-large"});
-                table19.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "c-alert__cta cta_tint js-alert-close"});
 #line 150
- testRunner.And("the following elements are not dislpayed on the page", ((string)(null)), table19, "And ");
+ testRunner.And("the following elements are not dislpayed on the page", ((string)(null)), table17, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -965,14 +965,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 166
  testRunner.When("I apply the following experiment: 18458", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table20.AddRow(new string[] {
+                table18.AddRow(new string[] {
                             "An owner has just completed the form"});
-                table20.AddRow(new string[] {
+                table18.AddRow(new string[] {
                             "A new property has just gone live"});
 #line 167
- testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table20, "Then ");
+ testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table18, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1163,16 +1163,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 199
  testRunner.When("I apply the following experiment: 18292", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table21.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table21.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table21.AddRow(new string[] {
+                table19.AddRow(new string[] {
                             "Back to Top"});
 #line 200
- testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table21, "Then ");
+ testRunner.Then("the following elements are not dislpayed on the page", ((string)(null)), table19, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1433,19 +1433,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 241
  testRunner.When("I apply the following experiment: 18099", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table22.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "testimonial-slider"});
-                table22.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Sykes instilled a lot of confidence in us and now I wouldn’t use anybody else"});
-                table22.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "Sykes have taken the stress out of us taking bookings, they are so professional"});
-                table22.AddRow(new string[] {
+                table20.AddRow(new string[] {
                             "It is great working with Sykes - they are always available and they pay you quick" +
                                 "ly"});
 #line 242
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table22, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table20, "Then ");
 #line hidden
 #line 248
     testRunner.And("the following element is not displayed on the page: What do our owners say?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -1489,18 +1489,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 253
  testRunner.When("I apply the following experiment: 18065", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table23.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "We\'re here to help"});
-                table23.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Get in touch"});
-                table23.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Give us a call"});
-                table23.AddRow(new string[] {
+                table21.AddRow(new string[] {
                             "Enquire about letting with Sykes"});
 #line 254
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table23, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table21, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1541,24 +1541,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 264
  testRunner.When("I apply the following experiment: 17791", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "Expand your reach with our"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "700+ partner channels"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "airbnb logo"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "icelolly logo"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "vrbo logo"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "expedia logo"});
-                table24.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "tripadvisor logo"});
 #line 265
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table24, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table22, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1641,22 +1641,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 284
  testRunner.When("I apply the following experiment: 17805", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Let the holiday experts answer your questions"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "webinar-video"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Listing with Sykes"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Watch more"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "Thinking of buying a property"});
-                table25.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "New to letting"});
 #line 285
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table25, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table23, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1700,14 +1700,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 298
     testRunner.Then("the following element is not displayed on the page: form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table26.AddRow(new string[] {
+                table24.AddRow(new string[] {
                             "Let your property with Sykes and earn up to £125,000 per year*"});
-                table26.AddRow(new string[] {
+                table24.AddRow(new string[] {
                             "Get started today"});
 #line 299
-    testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table26, "And ");
+    testRunner.And("the following elements are dislpayed on the page", ((string)(null)), table24, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1748,18 +1748,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 307
  testRunner.When("I apply the following experiment: 17640", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table27.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "How to list with Sykes"});
-                table27.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Request for contact"});
-                table27.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Self-service"});
-                table27.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Start taking bookings"});
 #line 308
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table27, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table25, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -2102,14 +2102,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 362
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table28.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "4419"});
-                table28.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "4396"});
 #line 363
- testRunner.Then("the following experiements are enabled", ((string)(null)), table28, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table26, "Then ");
 #line hidden
 #line 367
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
