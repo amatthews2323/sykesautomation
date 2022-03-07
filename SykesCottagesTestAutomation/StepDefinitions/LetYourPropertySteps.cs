@@ -287,6 +287,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             SelectFromDropdown(option, dropdown);
         }
 
+        [Given(@"I view the Thinking of Buying section")]
+        public void GivenIViewTheThinkingOfBuyingSection()
+        {
+            ClickIfDisplayed("/images/sykes/letyourcottage/collapseicons/money.svg");
+        }
+
+
         [Then(@"the following slick dot is highlighted (.*)")]
         public void ThenTheFollowingSlickDotIsHighlighted(int value)
         {

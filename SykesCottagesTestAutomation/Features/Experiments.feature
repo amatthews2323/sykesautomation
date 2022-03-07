@@ -2,6 +2,29 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18587
+	Then the following elements are dislpayed on the page
+		 | Element                                     |
+		 | colapsible-containers                       |
+		 | Owner testimonials                          |
+		 | Taking a modern approach                    |
+		 | Income calculator                           |
+		 | Holiday home management                     |
+		 | Award winning marketing                     |
+		 | Why list with Sykes?                        |
+		 | Free information pack                       |
+		 | Looking to get started with holiday letting |
+	When I click arrow-down
+	Then the following elements are dislpayed on the page
+		 | Element                                                  |
+		 | /images/icons-svg/navigation/chevron/icon-chevron-up.svg |
+		 | testimonial_image                                        |
+		 | testimonial_quote                                        |
+		 | testimonial_owner                                        |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18529

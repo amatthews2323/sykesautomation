@@ -109,6 +109,7 @@ Scenario: The page sections are displayed is the correct order
 @ThinkingOfBuying @ProductionRegressionSuite
 Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
+	And I view the Thinking of Buying section
 	Then the following elements are dislpayed on the page
          | Element                                      |
          | Looking to get started with holiday letting? |
