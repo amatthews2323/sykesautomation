@@ -37,12 +37,6 @@
                       </Rule>
                     </Rule>
                     <Rule Match="All">
-                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_DisableEnquiryUntilValidInput18581" />
-                      <Rule Match="Any">
-                        <Property Name="DisplayName" Value="ExperimentLetYourCottages_DisableEnquiryUntilValidInput18581" />
-                      </Rule>
-                    </Rule>
-                    <Rule Match="All">
                       <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ExperimentsFeature.ExperimentLetYourCottages_ExtendManagedServicesSection18466" />
                       <Rule Match="Any">
                         <Property Name="DisplayName" Value="ExperimentLetYourCottages_ExtendManagedServicesSection18466" />

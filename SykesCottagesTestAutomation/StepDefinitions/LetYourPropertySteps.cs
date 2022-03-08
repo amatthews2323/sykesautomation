@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using OpenQA.Selenium.Support.UI;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -58,7 +59,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select the alert Get Started button")]
         public void WhenISelectTheAlertGetStartedButton()
         {
-            shared.driver.FindElement(By.XPath("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]")).Click();
+            shared.driver.FindElement(By.XPath("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]")).Click();
             WaitASecond();
         }
 
@@ -321,6 +322,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             ScrollTo(element);
         }
 
+        [When(@"I enter (.*) in the following form field: (.*)")]
+        public void WhenIEnterInTheFollowingFormField(string text, string field)
+        {
+            Type(field, text);
+        }
+
         [Then(@"the (.*) section is displayed at position (.*)")]
         public void ThenTheSectionIsDisplayedAtPosition(string section, int position)
         {
@@ -512,6 +519,27 @@ namespace SykesCottagesTestAutomation.BaseClass
             {
                 Assert.IsTrue(activeExperiments.Contains(experiment), "Experiment " + experiment + " not found");
             }
+        }
+
+        [Then(@"I navigate to the Holmes statistics page and store the conversion percentage")]
+        public void ThenINavigateToTheHolmesStatisticsPageAndStoreTheConversionPercentage(Table table)
+        {
+            string experimentConversion = "";
+            string conversion = "";
+
+            var experiments = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var experiment in experiments)
+            {
+                shared.driver.Navigate().GoToUrl("https://holmes.prod.sykes.cloud/experiments/google-analytics/" + experiment + "?conversiontype=owner_enquiry");
+
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 60));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")));
+
+                experimentConversion += "\n" + experiment + ": " + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
+                conversion += "\n" + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
+            }
+            //Console.WriteLine("Experiment conversion: " + experimentConversion);
+            Console.WriteLine("Conversion values: " + conversion);
         }
 
         [When(@"I set the window size to (.*)")]

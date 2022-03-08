@@ -35,19 +35,6 @@ Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
 		 | /letyourcottage/information/welcome-gift/                                                                                            |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18581
-	Then the enquiry form submit button is disabled
-	When I enter the following details in the enquiry form
-		| Key           | Value                         |
-		| Full name     | Test Owner                    |
-		| Email address | sykescottagestest@example.org |
-		| Phone number  | 07000000000                   |
-	And I click form-heading-container
-	Then the enquiry form submit button is not disabled
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_TestimonialsCarousel18584
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18584
@@ -211,6 +198,19 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	Then the following slick dot is highlighted 4
 
 @StoppedExperiments
+Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18581
+	Then the enquiry form submit button is disabled
+	When I enter the following details in the enquiry form
+		| Key           | Value                         |
+		| Full name     | Test Owner                    |
+		| Email address | sykescottagestest@example.org |
+		| Phone number  | 07000000000                   |
+	And I click form-heading-container
+	Then the enquiry form submit button is not disabled
+
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18474
@@ -366,25 +366,3 @@ Scenario: Experiment LetYourCottages_AverageMonthlyIncomeProjection17432
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17432
 	Then the following text is displayed on the page: Average monthly income
-
-@HolmesExperiments
-Scenario: Get all active experiments from Holmes
-	Given I am accessing http://holmes.staging.sykes.cloud/experiments
-	Then I store the experiment IDs
-
-@HolmesExperiments
-Scenario: Get all active experiments in a given session
-	Given I have navigated to the following page: letyourcottage
-	When I store the active experiment IDs
-	Given I am accessing http://holmes.prod.sykes.cloud/experiments
-	When I search for the experiment details
-
-@HolmesExperiments
-Scenario: Check specific experiments are applied
-	Given I have navigated to the following page: letyourcottage
-	When I store the active experiment IDs
-	Then the following experiements are enabled
-		| Example |
-		| 4419    |
-		| 4396    |
-	And I wait 300 seconds
