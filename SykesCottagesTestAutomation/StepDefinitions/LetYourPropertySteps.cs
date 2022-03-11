@@ -50,6 +50,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             shared.driver.Navigate().GoToUrl(url);
         }
 
+        [When(@"I close the pop-ups")]
+        public void WhenICloseThePop_Ups()
+        {
+            CloseAllPopups();
+        }
+
         [When(@"I click (.*)")]
         public void IClick(string value)
         {

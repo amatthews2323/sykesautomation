@@ -94,28 +94,31 @@ namespace SykesCottagesTestAutomation
 
         public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
         {
-            Console.WriteLine("Set browser size to " + viewpoint);
             if (viewpoint.Contains("Max") | viewpoint.Contains(""))
             {
+                Console.WriteLine("Set browser size to maximum");
                 shared.driver.Manage().Window.Maximize(); //Maximise
             }
             if (viewpoint == "Desktop")
             {
+                Console.WriteLine("Set browser size to desktop");
                 shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop dimentions
             }
             if (viewpoint == "Tablet")
             {
-                shared.driver.Manage().Window.Size = new Size(768, 1024); //iPad dimensions
+                Console.WriteLine("Set browser size to tablet");
+                shared.driver.Manage().Window.Size = new Size(820, 1180); //iPad Air dimensions
             }
             if (viewpoint == "Mobile")
             {
+                Console.WriteLine("Set browser size to mobile");
                 shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
             }
             if (viewpoint == "Custom")
             {
+                Console.WriteLine("Set browser size to " + width + " by " + height);
                 shared.driver.Manage().Window.Size = new Size(width, height);
             }
-            //shared.driver.Manage().Window.Maximize(); //Maximise by default
         }
 
         public void LaunchWebsite(string domain = "", string path = "")
@@ -153,7 +156,7 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
             }
             shared.driver.Navigate().Refresh();
-            WaitASecond();
+            WaitASecond();    
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
@@ -188,24 +191,27 @@ namespace SykesCottagesTestAutomation
 
         public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
         {
-            WaitASecond(1);
+            WaitASecond(2);
+
             //If the pop-up is displayed, accept cookies
             if (acceptCookies == "Yes")
             {
                 ClickIfDisplayed("Accept All Cookies");
             }
+
             //Dismiss the tint overlay 
             ClickIfDisplayed("nonenquiry6941");
+
             //If any alerts are displayed, close them
             if (dismissAlerts == "Yes")
             {
                 try
                 {
-                    if (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
+                    if (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Displayed)
                     {
-                        while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Displayed)
+                        while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Displayed)
                         {
-                            shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close\"]")).Click();
+                            shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Click();
                             WaitASecond();
                         }
                     }

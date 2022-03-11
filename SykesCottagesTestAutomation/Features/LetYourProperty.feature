@@ -85,7 +85,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Request your free owner information pack     |
     | Looking to get started with holiday letting? |
 
-@LetYourProperty @ProductionRegressionSuite
+#@LetYourProperty @ProductionRegressionSuite
 Scenario: The How much could I earn is displayed in the correct place
 	Given I have navigated to the following page: letyourcottage
 	Then the How much could I earn section is displayed at position 4
