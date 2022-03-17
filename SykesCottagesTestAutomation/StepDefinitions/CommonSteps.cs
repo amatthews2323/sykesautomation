@@ -248,10 +248,16 @@ namespace SykesCottagesTestAutomation
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value1, value2))).Count != 0, "Element not found");
         }
 
-        public void AssertElementNotPresent(string value1, string value2 = "Alternative value")
+        public void AssertElementNotDisplayed(string value1, string value2 = "Alternative value")
         {
-            Console.WriteLine("Assert the following element is present on the page: " + value1);
+            Console.WriteLine("Assert the following element is not displayed on the page: " + value1);
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*=\""+ value1 +"\"]|//*[contains(text(),\"" + value1 + "\")]|//*[@*=\"" + value2 + "\"]|//*[contains(text(),\"" + value2 + "\")]")).Count == 0, "Element displayed in error");
+        }
+
+        public void AssertElementNotVisible(string value1, string value2 = "Alternative value")
+        {
+            Console.WriteLine("Assert the following element is not visible on the page: " + value1);
+            Assert.IsTrue(shared.driver.FindElement(By.XPath("//*[@*=\"" + value1 + "\"]|//*[contains(text(),\"" + value1 + "\")]|//*[@*=\"" + value2 + "\"]|//*[contains(text(),\"" + value2 + "\")]")).Displayed, "Element displayed in error");
         }
 
         public void Click(string value1, string value2 = "Alternative value")

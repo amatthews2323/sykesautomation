@@ -24,7 +24,7 @@ Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	When I apply the following experiment: 18791
 	Then the following element is displayed on the page: c-alert c-alert--standard js-alert  is-visible
 	And I wait 10 seconds
-	Then the following element is not displayed on the page: c-alert c-alert--standard js-alert  is-visible
+	Then the alerts are not displayed on the page
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_TriggerVisitRequest18459

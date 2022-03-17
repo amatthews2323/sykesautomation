@@ -247,11 +247,11 @@ this.ScenarioInitialize(scenarioInfo);
                 table37.AddRow(new string[] {
                             "4368"});
                 table37.AddRow(new string[] {
+                            "4374"});
+                table37.AddRow(new string[] {
                             "4352"});
                 table37.AddRow(new string[] {
                             "4373"});
-                table37.AddRow(new string[] {
-                            "4374"});
                 table37.AddRow(new string[] {
                             "4378"});
                 table37.AddRow(new string[] {
@@ -281,11 +281,15 @@ this.ScenarioInitialize(scenarioInfo);
                 table37.AddRow(new string[] {
                             "4437"});
                 table37.AddRow(new string[] {
-                            "4443"});
-                table37.AddRow(new string[] {
                             "4444"});
                 table37.AddRow(new string[] {
+                            "4443"});
+                table37.AddRow(new string[] {
                             "4446"});
+                table37.AddRow(new string[] {
+                            "4454"});
+                table37.AddRow(new string[] {
+                            "4453"});
 #line 29
  testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table37, "Then ");
 #line hidden

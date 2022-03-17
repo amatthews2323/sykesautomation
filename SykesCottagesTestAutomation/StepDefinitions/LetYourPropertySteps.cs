@@ -248,7 +248,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
-                AssertElementNotPresent(element.ToString());
+                AssertElementNotDisplayed(element.ToString());
             }
         }
 
@@ -267,7 +267,13 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following element is not displayed on the page: (.*)")]
         public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
         {
-            AssertElementNotPresent(value);
+            AssertElementNotDisplayed(value);
+        }
+
+        [Then(@"the following element is not visible: (.*)")]
+        public void ThenTheFollowingElementIsNotVisible(string value)
+        {
+            AssertElementNotVisible(value);
         }
 
         [Then(@"the How Much Could I Earn CTA is not displayed")]
@@ -327,6 +333,13 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             ScrollTo(element);
         }
+
+        [Then(@"the alerts are not displayed on the page")]
+        public void ThenTheAlertsAreNotDisplayedOnThePage()
+        {
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-alert c-alert--standard js-alert  is-visible' and @style='display: none;']")).Count != 0, "Alert displayed on the page");
+        }
+
 
         [When(@"I enter (.*) in the following form field: (.*)")]
         public void WhenIEnterInTheFollowingFormField(string text, string field)
@@ -537,14 +550,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             foreach (var experiment in experiments)
             {
                 shared.driver.Navigate().GoToUrl("https://holmes.prod.sykes.cloud/experiments/google-analytics/" + experiment + "?conversiontype=owner_enquiry");
-
                 var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 60));
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")));
-
-                experimentConversion += "\n" + experiment + ": " + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
                 conversion += "\n" + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
             }
-            //Console.WriteLine("Experiment conversion: " + experimentConversion);
             Console.WriteLine("Conversion values: " + conversion);
         }
 

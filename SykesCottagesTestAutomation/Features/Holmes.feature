@@ -30,9 +30,9 @@ Scenario: Get conversion precentage for all started experiments
 		| Example |
 		| 4355    |
 		| 4368    |
+		| 4374    |
 		| 4352    |
 		| 4373    |
-		| 4374    |
 		| 4378    |
 		| 4379    |
 		| 4374    |
@@ -47,6 +47,8 @@ Scenario: Get conversion precentage for all started experiments
 		| 4420    |
 		| 4438    |
 		| 4437    |
-		| 4443    |
 		| 4444    |
+		| 4443    |
 		| 4446    |
+		| 4454    |
+		| 4453    |
