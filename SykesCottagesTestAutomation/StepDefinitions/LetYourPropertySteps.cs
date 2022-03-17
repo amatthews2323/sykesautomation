@@ -23,8 +23,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
-            CloseAllPopups();
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            CloseAllPopups();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
@@ -32,8 +32,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite("", path);
-            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "Yes");
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "Yes");
         }
 
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]

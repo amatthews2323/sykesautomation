@@ -40,6 +40,24 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	Then the following element is displayed on the page: Back To Top Button
 
 @LetYourProperty @ProductionRegressionSuite
+Scenario: The Income Projection is displayed upon interactions
+	Given I have navigated to the following page: letyourcottage
+	Then the following element is displayed on the page: Please select your region
+	When I select option South West from the region dropdown
+	Then the following element is displayed on the page: homepage_calculator_cta_blue
+
+@LetYourProperty @ProductionRegressionSuite
+Scenario: The Managed Services links direct to the LYP form
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18466
+	And I close the pop-ups
+	And I scroll to the following element: Partially managed
+	And I select the Partially Managed Enquire Now button
+	Then the enquiry form is displayed with the tint applied
+	When I select the Fully Managed Enquire Now button
+	Then the enquiry form is displayed with the tint applied
+
+@LetYourProperty @ProductionRegressionSuite
 Scenario: The relevant validation is in place on the enquiry form
 	Given I have navigated to the following page: letyourcottage
 	When I click form-heading-container

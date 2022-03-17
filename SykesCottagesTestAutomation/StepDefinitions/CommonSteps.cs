@@ -66,17 +66,14 @@ namespace SykesCottagesTestAutomation
 
         public void SelectBrowser(string browser)
         {
-            
             switch (browser)
             {
                 case "Chrome":
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", new ChromeOptions { Proxy = null });
-
-                    //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
-
-                    //ChromeOptions options = new ChromeOptions();
-                    //options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0");
-                    //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options);
+                    var options = new ChromeOptions();
+                    options.AddArgument("no-sandbox");
+                    //options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0"); //Option for adding extesions to Chrome
+                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options, TimeSpan.FromMinutes(3));
+                    //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig()); //For launching Chrome via a build pipeline
                     break;
                 case "Firefox":
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers", "geckodriver.exe");
@@ -102,7 +99,7 @@ namespace SykesCottagesTestAutomation
             if (viewpoint == "Desktop")
             {
                 Console.WriteLine("Set browser size to desktop");
-                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop dimentions
+                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop screen dimentions
             }
             if (viewpoint == "Tablet")
             {
@@ -156,7 +153,8 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
             }
             shared.driver.Navigate().Refresh();
-            WaitASecond();    
+            WaitASecond();
+            Click("movePanel");
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
@@ -192,30 +190,29 @@ namespace SykesCottagesTestAutomation
         public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
         {
             WaitASecond(2);
-
-            //If the pop-up is displayed, accept cookies
             if (acceptCookies == "Yes")
             {
                 ClickIfDisplayed("Accept All Cookies");
             }
 
-            //Dismiss the tint overlay 
+            ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
             ClickIfDisplayed("nonenquiry6941");
 
-            //If any alerts are displayed, close them
             if (dismissAlerts == "Yes")
             {
                 try
                 {
-                    if (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Displayed)
+                    if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Displayed)
                     {
-                        while (shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Displayed)
-                        {
-                            shared.driver.FindElement(By.XPath("//*[@*=\"close c-alert__close js-alert-close \"]")).Click();
-                            WaitASecond();
-                        }
+                        shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Click();
+                    }
+                    WaitASecond(2);
+                    if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Displayed)
+                    {
+                        shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Click();
                     }
                 }
+
                 catch (Exception)
                 {
                     Console.WriteLine("No alerts found");

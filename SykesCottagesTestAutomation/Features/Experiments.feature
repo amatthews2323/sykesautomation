@@ -2,6 +2,41 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_InformationCentreLyc18455
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18455
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                     |
+		 | Information centre          |
+		 | Enquire now                 |
+		 | Buying, owning and selling  |
+		 | How to run your holiday let |
+		 | Tax information and advice  |
+		 | Advertising and marketing   |
+		 | Investment advice           |
+		 | Holiday let mortgages       |
+		 | Legal regulations           |
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18791
+	Then the following element is displayed on the page: c-alert c-alert--standard js-alert  is-visible
+	And I wait 10 seconds
+	Then the following element is not displayed on the page: c-alert c-alert--standard js-alert  is-visible
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18459
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                                  |
+		 | Book a visit with one of our expert property consultants |
+		 | Book property visit                                      |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_PartnersIntoHero18491
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18491
@@ -84,7 +119,7 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 		 | We can tailor our services to fit your needs. Find out how by using the button below.                           |
 		 | Access our expert knowledge on listing and managing holiday lets.                                               |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_LYPPhoneNumberSection18569
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18569
@@ -110,7 +145,7 @@ Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
 		 | Why list with Sykes?                        |
 		 | Free information pack                       |
 		 | Looking to get started with holiday letting |
-	When I click arrow-down
+	When I click Owner testimonials
 	Then the following elements are dislpayed on the page
 		 | Element                                                  |
 		 | /images/icons-svg/navigation/chevron/icon-chevron-up.svg |
@@ -140,7 +175,7 @@ Scenario: Experiment LetYourCottages_TestimonialsCarousel18584
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18486
+	When I apply the following experiment: LetYourCottages_RemoveRequestYourOwnerPackCta18486
 	And I close the pop-ups
 	Then the How Much Could I Earn CTA is not displayed
 	And the Holiday Letting Made Easy CTA is not displayed
@@ -206,18 +241,6 @@ Scenario: Experiment LetYourCottages_RemoveAlreadyStartedLogin18580
 	Then the following element is not displayed on the page: Already started?
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_ExtendedManagedServicesSectionLinkToTop18639
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18466
-	And I apply the following experiment: 18639
-	And I close the pop-ups
-	When I scroll to the following element: Partially managed
-	And I select the Partially Managed Enquire Now button
-	Then the enquiry form is displayed with the tint applied
-	When I select the Fully Managed Enquire Now button
-	Then the enquiry form is displayed with the tint applied
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ExtendManagedServicesSection18466
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18466
@@ -268,15 +291,6 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 		| Elements                                |
 		| o-icon c-alert__icon o-icon--size-large |
 		| c-alert__cta cta_tint js-alert-close    |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_CalculatorInteraction18462
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18462
-	And I close the pop-ups
-	Then the following element is displayed on the page: Please select your region
-	When I select option South West from the region dropdown
-	Then the following element is displayed on the page: homepage_calculator_cta_blue
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458

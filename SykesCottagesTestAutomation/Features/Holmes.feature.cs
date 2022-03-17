@@ -192,14 +192,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table34.AddRow(new string[] {
+                table36.AddRow(new string[] {
                             "4419"});
-                table34.AddRow(new string[] {
+                table36.AddRow(new string[] {
                             "4396"});
 #line 20
- testRunner.Then("the following experiements are enabled", ((string)(null)), table34, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table36, "Then ");
 #line hidden
 #line 24
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -240,54 +240,54 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I am accessing http://holmes.staging.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table35.AddRow(new string[] {
-                            "4332"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4355"});
-                table35.AddRow(new string[] {
-                            "4362"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4368"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4352"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4373"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4374"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4378"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4379"});
-                table35.AddRow(new string[] {
-                            "4383"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
+                            "4374"});
+                table37.AddRow(new string[] {
                             "4387"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4391"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4396"});
-                table35.AddRow(new string[] {
-                            "4398"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4404"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4407"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4406"});
-                table35.AddRow(new string[] {
-                            "4412"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4411"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4419"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4420"});
-                table35.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "4438"});
+                table37.AddRow(new string[] {
+                            "4437"});
+                table37.AddRow(new string[] {
+                            "4443"});
+                table37.AddRow(new string[] {
+                            "4444"});
+                table37.AddRow(new string[] {
+                            "4446"});
 #line 29
- testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table35, "Then ");
+ testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table37, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

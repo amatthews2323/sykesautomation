@@ -28,25 +28,25 @@ Scenario: Get conversion precentage for all started experiments
 	Given I am accessing http://holmes.staging.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
-		| 4332    |
 		| 4355    |
-		| 4362    |
 		| 4368    |
 		| 4352    |
 		| 4373    |
 		| 4374    |
 		| 4378    |
 		| 4379    |
-		| 4383    |
+		| 4374    |
 		| 4387    |
 		| 4391    |
 		| 4396    |
-		| 4398    |
 		| 4404    |
 		| 4407    |
 		| 4406    |
-		| 4412    |
 		| 4411    |
 		| 4419    |
 		| 4420    |
 		| 4438    |
+		| 4437    |
+		| 4443    |
+		| 4444    |
+		| 4446    |
