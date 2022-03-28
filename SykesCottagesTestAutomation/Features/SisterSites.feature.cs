@@ -77,6 +77,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.DescriptionAttribute("The Sykes sister sites are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("SisterSites")]
         [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", "Character Cottages", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", "Coast & Country Cottages", null)]
@@ -97,7 +98,8 @@ namespace SykesCottagesTestAutomation.Features
         {
             string[] @__tags = new string[] {
                     "SisterSites",
-                    "ProductionRegressionSuite"};
+                    "ProductionRegressionSuite",
+                    "RegressionSmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -130,20 +132,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am accessing {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table52 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table52.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table52.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "form-heading-container"});
-                table52.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "partner"});
-                table52.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table52.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Request a free owner pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table52, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table55, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -205,40 +207,40 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
  testRunner.Given(string.Format("I am accessing {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table53 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "form-heading-container"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_first_name"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_email"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_phone"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "marketing_email"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "marketing_phone"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "marketing_sms"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "marketing_post"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "To stop this, just ask or click the opt out link when we are next in touch."});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table53.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "submit"});
 #line 36
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table53, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table56, "Then ");
 #line hidden
 #line 59
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

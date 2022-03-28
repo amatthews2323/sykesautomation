@@ -86,7 +86,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the enquiry form is displayed with the tint applied")]
         public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
         {
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto' and @style='z-index: 100000;']")).Count == 1, "Enquiry form not displayed");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto c-lyc-form-18588' and @style='z-index: 100000;']")).Count == 1, "Enquiry form not displayed");
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']")).Count == 1, "Tint not displayed");
         }
 
@@ -394,7 +394,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenICanCompleteThePropertyCreationProcess(string postcode = "")
         {
             //Step 1
-            Click("I have a property I’d like to list", "Yes");
+            Click("I have a property I’d like to list");
             Click("Next");
 
             //Step 2
@@ -528,6 +528,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIApplyTheFollowingExperiment(string experimentId)
         {
             ApplyExperiment(experimentId);
+            Click("movePanel");
         }
 
         [Then(@"the following experiements are enabled")]
@@ -543,24 +544,48 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I navigate to the Holmes statistics page and store the conversion percentage")]
         public void ThenINavigateToTheHolmesStatisticsPageAndStoreTheConversionPercentage(Table table)
         {
-            string experimentConversion = "";
             string conversion = "";
 
             var experiments = table.Rows.Select(r => r[0]).ToArray();
             foreach (var experiment in experiments)
             {
-                shared.driver.Navigate().GoToUrl("https://holmes.prod.sykes.cloud/experiments/google-analytics/" + experiment + "?conversiontype=owner_enquiry");
-                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 60));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")));
-                conversion += "\n" + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
+                try
+                {
+                    shared.driver.Navigate().GoToUrl("https://holmes.prod.sykes.cloud/experiments/google-analytics/" + experiment + "?conversiontype=owner_enquiry");
+                    var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")));
+                    conversion += "\n" + shared.driver.FindElement(By.XPath("//tr[contains(@ng-show,'keyFigures.conversion')]//strong")).Text;
+                }
+                catch (Exception)
+                {
+                    conversion += "\n Holmes error";
+                }
             }
             Console.WriteLine("Conversion values: " + conversion);
+        }
+
+        [Then(@"I search for the experient and store the status")]
+        public void ThenISearchForTheExperientAndStoreTheStatus(Table table)
+        {
+            string status = "";
+
+            var experiments = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var experiment in experiments)
+            {
+                Type("text_search", experiment);
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tbody[@*='experiment in filteredExperiments']/tr/td[4]")));
+                string _status = shared.driver.FindElement(By.XPath("//tbody[@*='experiment in filteredExperiments']/tr/td[4]")).Text.Trim();
+                status += "\n" + _status.Replace("Active", "Started").Replace("Off", "Stopped");
+            }
+            Console.WriteLine("Experiment statuses: " + status);
         }
 
         [When(@"I set the window size to (.*)")]
         public void GivenISetTheWindowSizeTo(string windowSize)
         {
             SetBrowserSize(windowSize);
+            shared.driver.Navigate().Refresh();
         }
     }
 }

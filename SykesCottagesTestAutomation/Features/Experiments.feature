@@ -2,6 +2,25 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_IntroducingSisterBrands18705
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18705
+	Then the following elements are dislpayed on the page
+		 | Element                                                                            |
+		 | Introducing our brand network                                                      |
+		 | c-sisterbrands-logos u-mb-1 slick-initialized slick-slider c-sisterbrands-fade-box |
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_HeroOnMobile18815
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18815
+	And I set the window size to mobile
+	Then the following elements are dislpayed on the page
+		 | Element                                                                     |
+		 | Start your letting journey with Sykes                                       |
+		 | c-lyc-form u-p-2 u-bg-white u-radius-large js-enquiry-form c-lyc-form-18588 |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_InformationCentreLyc18455
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18455
@@ -119,16 +138,6 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 		 | We can tailor our services to fit your needs. Find out how by using the button below.                           |
 		 | Access our expert knowledge on listing and managing holiday lets.                                               |
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_LYPPhoneNumberSection18569
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18569
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                                     |
-		 | Can't find the service you are looking for? |
-		 | 01244 356 666                               |
-
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
@@ -200,13 +209,6 @@ Scenario: Experiment LetYourCottages_InactivityExitModal18457
 	     | inactive-form_email_validation_error      |
 	     | inactive-form_phone                       |
 	     | inactive-form_phone_validation_error      |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_ProgressBar18576
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18576
-	And I close the pop-ups
-	Then the following element is displayed on the page: progressbar
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
@@ -293,15 +295,6 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 		| c-alert__cta cta_tint js-alert-close    |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
-	Given I have navigated to the following page without dismissing alerts: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18458
-	Then the following elements are not dislpayed on the page
-		| Element                              |
-		| An owner has just completed the form |
-		| A new property has just gone live    |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
 	Given I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?dev_tools=product
 	When I apply the following experiment: 18277
@@ -320,6 +313,32 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	And the following slick dot is highlighted 3
 	When I click holiday properties already working with Sykes
 	Then the following slick dot is highlighted 4
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_LYPPhoneNumberSection18569
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18569
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                     |
+		 | Can't find the service you are looking for? |
+		 | 01244 356 666                               |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ProgressBarUpdatetoWhite18869
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18869
+	And I close the pop-ups
+	Then the following element is displayed on the page: progressbar
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
+	Given I have navigated to the following page without dismissing alerts: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18458
+	Then the following elements are not dislpayed on the page
+		| Element                              |
+		| An owner has just completed the form |
+		| A new property has just gone live    |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581

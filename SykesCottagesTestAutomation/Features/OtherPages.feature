@@ -1,7 +1,7 @@
 ﻿Feature: OtherPages
 	Holiday Homes for Sale and Manged Services page content and functionality
 
-@HolidayHomesForSale @ProductionRegressionSuite
+@HolidayHomesForSale @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevent elements are present on the Holiday Homes for Sale page
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
 	Then the following elements are dislpayed on the page
@@ -14,7 +14,7 @@ Scenario: The relevent elements are present on the Holiday Homes for Sale page
          | Enquire with Sykes today          |
          | Get started                       |
 
-@ManagedServices @ProductionRegressionSuite
+@ManagedServices @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevent elements are present on the Managed Services page
 	Given I have navigated to the following page: letyourcottage/managed-services
     Then the following elements are dislpayed on the page

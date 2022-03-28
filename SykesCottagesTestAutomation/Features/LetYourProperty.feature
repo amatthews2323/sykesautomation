@@ -87,7 +87,7 @@ Scenario: The relevant validation is in place on the enquiry form
 	And I click form-heading-container
 	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed on the page
@@ -96,11 +96,11 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Gain exposure through our partners           |
     | What do our owners say                       |
     | How much could I earn                        |
-    | We are still open as usual                   |
-    | Holiday home management with Sykes           |
+    | Taking a modern approach                     |
+    | Holiday home management                      |
     | Putting your property in the spotlight       |
-    | Holiday letting made easy                    |
-    | Request your free owner information pack     |
+    | Why list with Sykes?                         |
+    | Free information pack                        |
     | Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
@@ -133,23 +133,24 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
 	When I click /letyourcottage/advice
-	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
+	Then I wait 5 seconds
+	And the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
 
-@MobileApp @ProductionRegressionSuite
+@MobileApp @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile
 	Then the following sections are dislpayed
-	| Section                                      |
-	| Gain exposure through our partners           |
-	| What do our owners say                       |
-	| How much could I earn                        |
-	| We are still open as usual                   |
-	| Holiday home management with Sykes           |
-	| Putting your property in the spotlight       |
-	| Holiday letting made easy                    |
-	| Request your free owner information pack	   |
-	| Looking to get started with holiday letting? |
+	| Section                                     |
+	| Gain exposure through our partners          |
+	| What do our owners say                      |
+	| How much could I earn                       |
+	| Taking a modern approach                    |
+	| Holiday home management                     |
+	| Putting your property in the spotlight      |
+	| Holiday letting made easy                   |
+	| Free information pack                       |
+	| Looking to get started with holiday letting |
 	And the following elements are not dislpayed on the page
 	| Element                          |
 	| contact-to-book mobile           |

@@ -1,7 +1,7 @@
 ﻿Feature: RegionPages
 	Region pages content and functionality
 
-@RegionPages @ProductionRegressionSuite
+@RegionPages @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed on the page: <Region>
