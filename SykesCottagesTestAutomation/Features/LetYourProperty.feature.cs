@@ -701,7 +701,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click /letyourcottage/advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 136
- testRunner.Then("I wait 5 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I wait 8 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 137
  testRunner.And("the following page title is displayed: Buying a Holiday Let Information Centre | " +
@@ -765,7 +765,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table51.AddRow(new string[] {
                             "Putting your property in the spotlight"});
                 table51.AddRow(new string[] {
-                            "Holiday letting made easy"});
+                            "Why list with Sykes?"});
                 table51.AddRow(new string[] {
                             "Free information pack"});
                 table51.AddRow(new string[] {

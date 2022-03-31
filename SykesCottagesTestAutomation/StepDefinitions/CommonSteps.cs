@@ -91,27 +91,27 @@ namespace SykesCottagesTestAutomation
 
         public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
         {
-            if (viewpoint.Contains("Max") | viewpoint.Contains(""))
+            if (viewpoint.Contains("Max") | viewpoint.Contains("max") | viewpoint.Contains(""))
             {
                 Console.WriteLine("Set browser size to maximum");
                 shared.driver.Manage().Window.Maximize(); //Maximise
             }
-            if (viewpoint == "Desktop")
+            if (viewpoint == "Desktop" | viewpoint == "desktop")
             {
                 Console.WriteLine("Set browser size to desktop");
                 shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop screen dimentions
             }
-            if (viewpoint == "Tablet")
+            if (viewpoint == "Tablet" | viewpoint == "tablet")
             {
                 Console.WriteLine("Set browser size to tablet");
                 shared.driver.Manage().Window.Size = new Size(820, 1180); //iPad Air dimensions
             }
-            if (viewpoint == "Mobile")
+            if (viewpoint == "Mobile" | viewpoint == "mobile")
             {
                 Console.WriteLine("Set browser size to mobile");
                 shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
             }
-            if (viewpoint == "Custom")
+            if (viewpoint == "Custom" | viewpoint == "custom")
             {
                 Console.WriteLine("Set browser size to " + width + " by " + height);
                 shared.driver.Manage().Window.Size = new Size(width, height);
@@ -167,7 +167,7 @@ namespace SykesCottagesTestAutomation
 
         public string XPath(string value1, string element = "*")
         {
-            return "//"+ element +"[@*=\""+ value1 +"\"]|//"+ element +"[contains(text(),\"" + value1 + "\")]|//" + element + "[contains(@class,\"" + value1 + "\")]";
+            return "//"+ element +"[@*=\""+ value1 +"\"]|//"+ element +"[contains(text(),\"" + value1 + "\")]|//" + element + "[contains(@class,\"" + value1 + "\")]|//" + element + "[contains(@id,\"" + value1 + "\")]";
         }
 
         public void WaitASecond(int seconds = 1)

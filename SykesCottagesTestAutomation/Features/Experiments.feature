@@ -2,23 +2,22 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
+	Then the following elements are dislpayed on the page
+		 | Element                           |
+		 | Sykes Product Showcase 2022       |
+		 | Sykes Cottages Showcase promotion |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_IntroducingSisterBrands18705
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18705
 	Then the following elements are dislpayed on the page
-		 | Element                                                                            |
-		 | Introducing our brand network                                                      |
-		 | c-sisterbrands-logos u-mb-1 slick-initialized slick-slider c-sisterbrands-fade-box |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_HeroOnMobile18815
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18815
-	And I set the window size to mobile
-	Then the following elements are dislpayed on the page
-		 | Element                                                                     |
-		 | Start your letting journey with Sykes                                       |
-		 | c-lyc-form u-p-2 u-bg-white u-radius-large js-enquiry-form c-lyc-form-18588 |
+		 | Element                       |
+		 | Introducing our brand network |
+		 | c-sisterbrands-logos          |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_InformationCentreLyc18455

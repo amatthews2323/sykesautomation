@@ -133,7 +133,7 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
 	When I click /letyourcottage/advice
-	Then I wait 5 seconds
+	Then I wait 8 seconds
 	And the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
 
 @MobileApp @ProductionRegressionSuite @RegressionSmokeTest
@@ -148,7 +148,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Taking a modern approach                    |
 	| Holiday home management                     |
 	| Putting your property in the spotlight      |
-	| Holiday letting made easy                   |
+	| Why list with Sykes?                        |
 	| Free information pack                       |
 	| Looking to get started with holiday letting |
 	And the following elements are not dislpayed on the page
