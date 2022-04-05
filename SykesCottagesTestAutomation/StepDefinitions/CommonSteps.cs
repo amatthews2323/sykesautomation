@@ -202,7 +202,11 @@ namespace SykesCottagesTestAutomation
                 ClickIfDisplayed("Accept All Cookies");
             }
 
-            ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
+            if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
+            {
+                ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
+            }
+            
             ClickIfDisplayed("nonenquiry6941");
 
             if (dismissAlerts == "Yes")
@@ -213,7 +217,7 @@ namespace SykesCottagesTestAutomation
                     {
                         shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Click();
                     }
-                    WaitASecond(2);
+                    WaitASecond();
                     if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Displayed)
                     {
                         shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Click();
@@ -276,10 +280,10 @@ namespace SykesCottagesTestAutomation
             WaitASecond();
         }
 
-        public void ClickButton(string value1)
+        public void ClickButton(string value1, string attribute = "button")
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, "button"))));
+            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, attribute))));
             Console.WriteLine("Click the \"" + value1 + "\" button");
             element.Click();
             WaitASecond();

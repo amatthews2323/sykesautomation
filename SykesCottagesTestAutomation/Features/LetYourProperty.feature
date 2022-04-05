@@ -96,7 +96,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Gain exposure through our partners           |
     | What do our owners say                       |
     | How much could I earn                        |
-    | Taking a modern approach                     |
+ #  | Taking a modern approach                     |
     | Holiday home management                      |
     | Putting your property in the spotlight       |
     | Why list with Sykes?                         |
@@ -128,13 +128,13 @@ Scenario: The page sections are displayed is the correct order
 Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	And I view the Thinking of Buying section
-	Then the following elements are dislpayed on the page
+	Then I wait 2 seconds
+	And the following elements are dislpayed on the page
          | Element                                      |
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
-	When I click /letyourcottage/advice
-	Then I wait 8 seconds
-	And the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
+	When I click Explore guides & resources
+	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
 
 @MobileApp @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
@@ -145,11 +145,11 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Gain exposure through our partners          |
 	| What do our owners say                      |
 	| How much could I earn                       |
-	| Taking a modern approach                    |
+#   | Taking a modern approach                    |
 	| Holiday home management                     |
 	| Putting your property in the spotlight      |
-	| Why list with Sykes?                        |
-	| Free information pack                       |
+#	| Why list with Sykes?                        |
+#	| Free information pack                       |
 	| Looking to get started with holiday letting |
 	And the following elements are not dislpayed on the page
 	| Element                          |

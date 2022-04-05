@@ -119,9 +119,12 @@ this.ScenarioInitialize(scenarioInfo);
                             "Phone number",
                             "07000000000"});
 #line 8
- testRunner.When("I submit an enquiry with the following details", ((string)(null)), table1, "When ");
+ testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table1, "When ");
 #line hidden
 #line 13
+ testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 14
  testRunner.Then("I am directed to the Property Letting Dashboard page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -137,7 +140,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Property Letting Dashboard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -157,6 +160,9 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 18
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
@@ -169,8 +175,11 @@ this.ScenarioInitialize(scenarioInfo);
                 table2.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
-#line 17
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table2, "Given ");
+#line 19
+ testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table2, "When ");
+#line hidden
+#line 24
+ testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
@@ -182,7 +191,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pack Download"});
                 table3.AddRow(new string[] {
                             "Holiday Homes for Sale"});
-#line 22
+#line 25
  testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table3, "Then ");
 #line hidden
             }
@@ -198,7 +207,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property via the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 30
+#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -218,6 +227,9 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 34
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
@@ -230,16 +242,19 @@ this.ScenarioInitialize(scenarioInfo);
                 table4.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
-#line 31
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table4, "Given ");
+#line 35
+ testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table4, "When ");
 #line hidden
-#line 36
- testRunner.When("I click Continue Online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 40
+ testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 37
+#line 41
+ testRunner.When("I click Get started online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 42
  testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 38
+#line 43
  testRunner.And("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
                         "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -248,17 +263,15 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The user can add a property all the way to signing the contract via the digital o" +
-            "nboarding process")]
+        [NUnit.Framework.DescriptionAttribute("The user can add a property and complete the digital onboarding process")]
         [NUnit.Framework.CategoryAttribute("DigitalOnboarding")]
-        public virtual void TheUserCanAddAPropertyAllTheWayToSigningTheContractViaTheDigitalOnboardingProcess()
+        public virtual void TheUserCanAddAPropertyAndCompleteTheDigitalOnboardingProcess()
         {
             string[] tagsOfScenario = new string[] {
                     "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property all the way to signing the contract via the digital o" +
-                    "nboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 41
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property and complete the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -278,6 +291,9 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 47
+ testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
@@ -290,19 +306,22 @@ this.ScenarioInitialize(scenarioInfo);
                 table5.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
-#line 42
- testRunner.Given("I have submitted an enquiry with the following details", ((string)(null)), table5, "Given ");
-#line hidden
-#line 47
- testRunner.When("I click Continue Online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 48
+ testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table5, "When ");
+#line hidden
+#line 53
+ testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 54
+ testRunner.When("I select Get Started Online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 55
  testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 49
+#line 56
  testRunner.And("I can create an account using password: Testing123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 50
+#line 57
  testRunner.And("I can register my account via the email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -314,7 +333,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table6.AddRow(new string[] {
                             "Password",
                             "Testing123"});
-#line 51
+#line 58
  testRunner.And("I can sign in to my account using the following details", ((string)(null)), table6, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -326,8 +345,107 @@ this.ScenarioInitialize(scenarioInfo);
                 table7.AddRow(new string[] {
                             "Number of guests",
                             "4"});
-#line 55
+#line 62
  testRunner.And("I can complete the digital onboarding process using the following deatils", ((string)(null)), table7, "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("I can click a link within mailcatcher")]
+        [NUnit.Framework.CategoryAttribute("MailCatcher")]
+        public virtual void ICanClickALinkWithinMailcatcher()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "MailCatcher"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("I can click a link within mailcatcher", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 68
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 69
+ testRunner.Given("I am accessing https://mailcatcher.staging.sykes.cloud/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 70
+ testRunner.Then("I verify my account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The user completes digital onboarding")]
+        [NUnit.Framework.CategoryAttribute("DigitalOnboarding")]
+        public virtual void TheUserCompletesDigitalOnboarding()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "DigitalOnboarding"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user completes digital onboarding", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 73
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 74
+ testRunner.Given("I am accessing https://tech.staging.sykescottages.co.uk/account/login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table8.AddRow(new string[] {
+                            "Username",
+                            "sykestest169488@example.org"});
+                table8.AddRow(new string[] {
+                            "Password",
+                            "Testing123"});
+#line 75
+ testRunner.Then("I can sign in to my account using the following details", ((string)(null)), table8, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table9.AddRow(new string[] {
+                            "Number of bedrooms",
+                            "2"});
+                table9.AddRow(new string[] {
+                            "Number of guests",
+                            "4"});
+#line 79
+ testRunner.And("I can complete the digital onboarding process using the following deatils", ((string)(null)), table9, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

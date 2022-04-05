@@ -41,7 +41,6 @@ Scenario: Get experiments conversion precentage
 		| 4430    |
 		| 4437    |
 		| 4441    |
-		| 4438    |
 		| 4442    |
 		| 4446    |
 		| 4450    |
@@ -52,14 +51,13 @@ Scenario: Get experiments conversion precentage
 		| 4466    |
 		| 4431    |
 		| 4470    |
-		| 4474    |
 		| 4477    |
 		| 4476    |
 		| 4475    |
 		| 4479    |
 		| 4480    |
-		| 4483    |
-		| 4482    |
+		| 4488    |
+		| 4491    |
 
 @HolmesExperiments
 Scenario: Get experiments status
@@ -96,6 +94,6 @@ Scenario: Get experiments status
 		| LetYourCottages_MobileFriendlyHolidayLetting18846                |
 		| LetYourCottages_StickyFooter18680                                |
 		| LetYourCottages_MobileAppFooter18700                             |
-		| LetYourCottages_ProductShowCasePromotion18893                    |
-		| LetYourCottages_ProductShowCasePromotionLinkFooter18893          |
 		| LetYourCottages_Sharepage18683                                   |
+		| LetYourCottages_ReplaceFormWithCTA18812                          |
+		| LetYourCottages_PromoteHhfsOnHomepage18825                       |

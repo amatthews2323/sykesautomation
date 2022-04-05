@@ -30,17 +30,15 @@ Scenario: The relevent elements are present on the Information Centre pages
     | Element                           |
     | form-heading-container            |
     | <Header>                          |
-    | Are you thinking of buying?       |
-    | How much could I earn with Sykes? |
 	Examples:
-	| Path                                              | Header                                     |
-	| letyourcottage/marketing-your-holiday-let         | Advertising and marketing your holiday let |
-	| letyourcottage/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
-	| letyourcottage/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
-	| letyourcottage/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
-	| letyourcottage/holiday-let-mortgages              | Holiday let mortgages                      |
-	| letyourcottage/how-to-run-your-holiday-let        | How to run your holiday let                |
-	| letyourcottage/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
+	| Path														    | Header                                     |
+	| letyourcottage/information/marketing-your-holiday-let         | Advertising and marketing your holiday let |
+	| letyourcottage/information/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
+	| letyourcottage/information/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
+	| letyourcottage/information/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
+	| letyourcottage/information/holiday-let-mortgages              | Holiday let mortgages                      |
+	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let                |
+	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
 
 @InformationCentre @ProductionRegressionSuite
 Scenario: The enquiry form is displayed on the Information Centre pages

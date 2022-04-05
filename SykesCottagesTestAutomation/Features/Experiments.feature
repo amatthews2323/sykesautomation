@@ -11,15 +11,6 @@ Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 		 | Sykes Cottages Showcase promotion |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_IntroducingSisterBrands18705
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18705
-	Then the following elements are dislpayed on the page
-		 | Element                       |
-		 | Introducing our brand network |
-		 | c-sisterbrands-logos          |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_InformationCentreLyc18455
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18455
@@ -53,21 +44,6 @@ Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
 		 | Element                                                  |
 		 | Book a visit with one of our expert property consultants |
 		 | Book property visit                                      |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_PartnersIntoHero18491
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18491
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element          |
-		 | arrow-hero       |
-		 | booking logo     |
-		 | airbnb logo      |
-		 | telegraph logo   |
-		 | homelet logo     |
-		 | tripadvisor logo |
-		 | icelolly logo    |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
@@ -216,7 +192,6 @@ Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
 	And I close the pop-ups
 	Then the following elements are dislpayed on the page
 	     | Element                                                            |
-	     | hero-banner managed-services                                       |
 	     | We tailor our managed service package to suit your specific needs. |
 	     | /letyourcottage/managed-services/                                  |
 
@@ -312,6 +287,30 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	And the following slick dot is highlighted 3
 	When I click holiday properties already working with Sykes
 	Then the following slick dot is highlighted 4
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_PartnersIntoHero18491
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18491
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element          |
+		 | arrow-hero       |
+		 | booking logo     |
+		 | airbnb logo      |
+		 | telegraph logo   |
+		 | homelet logo     |
+		 | tripadvisor logo |
+		 | icelolly logo    |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_IntroducingSisterBrands18705
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18705
+	Then the following elements are dislpayed on the page
+		 | Element                       |
+		 | Introducing our brand network |
+		 | c-sisterbrands-logos          |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_LYPPhoneNumberSection18569

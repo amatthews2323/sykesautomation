@@ -192,14 +192,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table38.AddRow(new string[] {
+                table40.AddRow(new string[] {
                             "4419"});
-                table38.AddRow(new string[] {
+                table40.AddRow(new string[] {
                             "4396"});
 #line 20
- testRunner.Then("the following experiements are enabled", ((string)(null)), table38, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table40, "Then ");
 #line hidden
 #line 24
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -240,74 +240,70 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I am accessing http://holmes.staging.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table41 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4368"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4373"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4379"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4387"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4396"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4406"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4407"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4411"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4419"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4420"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4430"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4437"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4441"});
-                table39.AddRow(new string[] {
-                            "4438"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4442"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4446"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4450"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4454"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4453"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4458"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4463"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4466"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4431"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4470"});
-                table39.AddRow(new string[] {
-                            "4474"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4477"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4476"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4475"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4479"});
-                table39.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "4480"});
-                table39.AddRow(new string[] {
-                            "4483"});
-                table39.AddRow(new string[] {
-                            "4482"});
+                table41.AddRow(new string[] {
+                            "4488"});
+                table41.AddRow(new string[] {
+                            "4491"});
 #line 29
- testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table39, "Then ");
+ testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table41, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -322,7 +318,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments status", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 65
+#line 63
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -342,79 +338,79 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 66
+#line 64
  testRunner.Given("I am accessing http://holmes.staging.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ContrastAlertsOnLYP18473"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_RemoveSecondHeroCopy18494"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ManagedServicesBannerOnLYP18552"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_RemoveAlreadyStartedLogin18580"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ReplaceIconsWithimages18585"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_TestimonialsCarousel18584"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_InactivityExitModal18457"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_SectionImageNavigation18583"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_MakeIconsInteractive18586"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_CollapseSectionsOnLypPage18587"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ChangeLegacyFavicon18431"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_QAOwnerCaseStudies18625"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_AddDownArrowInHero18579"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_BurguerMenuTablet18658"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_DashboardButtonInteraction18675"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_VisualTimeronAlerts18791"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_HeroImagesBasedOnHeadingForLoop18704"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_TriggerVisitRequest18459"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_InformationCentreLyc18455"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_AddTrustpilotontotheInformationPages18486"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_EnquiryFormAtFooter18813"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ToolTipsonLYPHeaders18582"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_ClearOptionOnDashboard18697"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_IntroducingSisterBrands18705"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_DashboardInfoCarousel18696"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_HeroOnMobile18815"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_MobileFriendlyHolidayLetting18846"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_StickyFooter18680"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_MobileAppFooter18700"});
-                table40.AddRow(new string[] {
-                            "LetYourCottages_ProductShowCasePromotion18893"});
-                table40.AddRow(new string[] {
-                            "LetYourCottages_ProductShowCasePromotionLinkFooter18893"});
-                table40.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "LetYourCottages_Sharepage18683"});
-#line 67
- testRunner.Then("I search for the experient and store the status", ((string)(null)), table40, "Then ");
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ReplaceFormWithCTA18812"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_PromoteHhfsOnHomepage18825"});
+#line 65
+ testRunner.Then("I search for the experient and store the status", ((string)(null)), table42, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

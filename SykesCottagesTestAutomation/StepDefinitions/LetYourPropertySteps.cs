@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Interactions;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -86,7 +87,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the enquiry form is displayed with the tint applied")]
         public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
         {
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-lyc-form js-enquiry-form u-mx-auto c-lyc-form-18588' and @style='z-index: 100000;']")).Count == 1, "Enquiry form not displayed");
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']")).Count == 1, "Tint not displayed");
         }
 
@@ -135,36 +135,25 @@ namespace SykesCottagesTestAutomation.BaseClass
             shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
         }
 
-        [Given(@"I have submitted an enquiry with the following details")]
-        public void GivenIHaveSubmittedAnEnquiryWithTheFollowingDetails(Table table)
+        [When(@"I enter the following details on the enquiry form")]
+        public void WhenIEnterTheFollowingDetailsOnTheEnquiryForm(Table table)
         {
-            if (Hooks.Environemt != "Live")
+            var dictionary = ToDictionary(table);
+            Type("heroform_first_name", dictionary["Full name"]);
+
+            if (dictionary["Email address"] == "Random")
             {
-                LaunchWebsite("", "letyourcottage");
-                CloseAllPopups();
-                SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-
-                var dictionary = ToDictionary(table);
-                Type("heroform_first_name", dictionary["Full name"]);
-
-                if (dictionary["Email address"] == "Random")
-                {
-                    Random r = new Random();
-                    emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
-                    Type("heroform_email", emailAddress);
-                }
-                else
-                {
-                    Type("heroform_email", dictionary["Email address"]);
-                }
-                Type("heroform_phone", dictionary["Phone number"]);
-
-                shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+                Random r = new Random();
+                emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
+                Type("heroform_email", emailAddress);
             }
             else
             {
-                Console.WriteLine("Step skipped on Live environment");
+                Type("heroform_email", dictionary["Email address"]);
             }
+
+            Type("heroform_phone", dictionary["Phone number"]);
+            Click("form-heading-container");
         }
 
         [When(@"I enter the following details in the enquiry form")]
@@ -196,6 +185,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             if (Hooks.Environemt != "Live")
             {
                 shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+                WaitASecond(4);
             }
             else
             {
@@ -408,47 +398,41 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click("Select Address");
             WaitASecond();
             Click("Finish");
+            WaitASecond();
+        }
 
-            /*            //Step 3
-                        int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
-                        for (int i = 1; i < bedrooms; i++)
-                        {
-                            ClickButton("+");
-                        }
-                        WaitASecond();
-                        Click("Next");
-
-                        //Step 4
-                        int guests = int.Parse(dictionary["Number of guests"]);
-                        for (int i = 1; i < guests; i++)
-                        {
-                            shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")).Click();
-                        }
-                        WaitASecond();
-                        Click("Finish");*/
+        [When(@"I select Get Started Online")]
+        public void WhenISelectGetStartedOnline()
+        {
+            ClickIfDisplayed("Get started online");
+            ClickIfDisplayed("thankyoulycgetstartedonline");
         }
 
         [Then(@"I can create an account using password: (.*)")]
         public void ThenICanCreateAnAccountUsingPassword(string password)
         {
-            Click("Start taking bookings");
-            Type("password", password);
+            shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Start taking bookings')]")).Click();
+            WaitASecond(2);
+            Type("digital-onboarding-password", password);
             Click("Create my account");
         }
 
         [Then(@"I can register my account via the email")]
         public void ThenICanRegisterMyAccountViaTheEmail()
         {
+            shared.driver.Quit();
             LaunchWebsite("https://mailcatcher.staging.sykes.cloud/");
             Click(emailAddress);
-
+            string emailPath = shared.driver.FindElement(By.XPath("//dd[text()='<" + emailAddress + ">']/ancestor::article/iframe")).GetAttribute("src");
+            shared.driver.Quit();
+            LaunchWebsite(emailPath);
+            SetBrowserSize("Max");
+            Click("Verify your account");
         }
 
         [Then(@"I can sign in to my account using the following details")]
         public void ThenICanSignInToMyAccountUsingTheFollowingDetails(Table table)
         {
-            LaunchWebsite("", "account/login");
-
             var dictionary = ToDictionary(table);
             if (dictionary["Username"] == "Random")
             {
@@ -460,13 +444,56 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
             Type("password", dictionary["Password"]);
 
-            Click("submit");
+            ClickButton("submit", "input");
+        }
+
+        [Then(@"I verify my account")]
+        public void ThenIVerifyMyAccount()
+        {
+            Click(emailAddress);
+            string emailPath = shared.driver.FindElement(By.XPath("//dd[text()='" + emailAddress + "']/ancestor::article/iframe")).GetAttribute("src");
+            Console.WriteLine("Email path: " + emailPath);
+            LaunchWebsite(emailPath);
+            Click("Verify your account");
         }
 
         [Then(@"I can complete the digital onboarding process using the following deatils")]
         public void ThenICanCompleteTheDigitalOnboardingProcessUsingTheFollowingDeatils(Table table)
         {
-            
+            ScrollTo("Directions to your property");
+            Console.WriteLine("Type 'Automated test' in the 'Directions to property' field.");
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)shared.driver;
+            executor.ExecuteScript("document.getElementById('digital-onboarding-directions-to-property').value='Automated test'");
+
+            executor.ExecuteScript("arguments[0].click();", shared.driver.FindElement(By.XPath("//h2[contains(text(),'Directions to your property')]")));
+
+
+            //executor.ExecuteScript("arguments[0].click();", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
+            IWebElement element = shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]"));
+            string javascript = "arguments[0].click()";
+            executor.ExecuteScript(javascript, element);
+            WaitASecond(8);
+
+            AssertText("How many guests can your property sleep?");
+
+            //executor.ExecuteScript("document.getElementByXpath('//button/span[contains(text(),'Next')]').click()");
+
+            /*            WaitASecond();
+
+                        var dictionary = ToDictionary(table);
+                        int guests = int.Parse(dictionary["Number of guests"]);
+                        for (int i = 1; i < guests; i++)
+                        {
+                            shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")).Click();
+                        }
+
+                        int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
+                        for (int i = 1; i < bedrooms; i++)
+                        {
+                            shared.driver.FindElement(By.XPath("//input[@*='ds_bedroom_count']/following-sibling::*")).Click();
+                        }
+
+                        shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")).Click();*/
         }
 
         [Then(@"I store the experiment IDs")]
@@ -586,6 +613,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             SetBrowserSize(windowSize);
             shared.driver.Navigate().Refresh();
+            CloseAllPopups();
         }
     }
 }
