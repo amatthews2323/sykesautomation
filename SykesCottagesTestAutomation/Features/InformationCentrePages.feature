@@ -40,7 +40,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let                |
 	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
 
-@InformationCentre @ProductionRegressionSuite
+@InformationCentre @ProductionRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page

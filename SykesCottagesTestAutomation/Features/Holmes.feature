@@ -31,7 +31,6 @@ Scenario: Get experiments conversion precentage
 		| 4368    |
 		| 4373    |
 		| 4379    |
-		| 4387    |
 		| 4396    |
 		| 4406    |
 		| 4407    |
@@ -67,7 +66,6 @@ Scenario: Get experiments status
 		| LetYourCottages_ContrastAlertsOnLYP18473                         |
 		| LetYourCottages_RemoveSecondHeroCopy18494                        |
 		| LetYourCottages_ManagedServicesBannerOnLYP18552                  |
-		| LetYourCottages_RemoveAlreadyStartedLogin18580                   |
 		| LetYourCottages_ReplaceIconsWithimages18585                      |
 		| LetYourCottages_TestimonialsCarousel18584                        |
 		| LetYourCottages_InactivityExitModal18457                         |
@@ -77,7 +75,6 @@ Scenario: Get experiments status
 		| LetYourCottages_ChangeLegacyFavicon18431                         |
 		| LetYourCottages_QAOwnerCaseStudies18625                          |
 		| LetYourCottages_AddDownArrowInHero18579                          |
-		| LetYourCottages_BurguerMenuTablet18658                           |
 		| LetYourCottages_DashboardButtonInteraction18675                  |
 		| LetYourCottages_VisualTimeronAlerts18791                         |
 		| LetYourCottages_HeroImagesBasedOnHeadingForLoop18704             |
@@ -88,12 +85,10 @@ Scenario: Get experiments status
 		| LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671 |
 		| LetYourCottages_ToolTipsonLYPHeaders18582                        |
 		| LetYourCottages_ClearOptionOnDashboard18697                      |
-		| LetYourCottages_IntroducingSisterBrands18705                     |
 		| LetYourCottages_DashboardInfoCarousel18696                       |
 		| LetYourCottages_HeroOnMobile18815                                |
 		| LetYourCottages_MobileFriendlyHolidayLetting18846                |
 		| LetYourCottages_StickyFooter18680                                |
 		| LetYourCottages_MobileAppFooter18700                             |
 		| LetYourCottages_Sharepage18683                                   |
-		| LetYourCottages_ReplaceFormWithCTA18812                          |
 		| LetYourCottages_PromoteHhfsOnHomepage18825                       |

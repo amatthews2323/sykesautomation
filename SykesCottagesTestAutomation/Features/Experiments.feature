@@ -31,7 +31,7 @@ Scenario: Experiment LetYourCottages_InformationCentreLyc18455
 Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18791
-	Then the following element is displayed on the page: c-alert c-alert--standard js-alert  is-visible
+	Then the alerts are displayed on the page
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
 
@@ -262,7 +262,7 @@ Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18473
-	Then the following element is displayed on the page: c-alert c-alert--standard js-alert  is-visible
+	Then the alerts are displayed on the page
 	And the following elements are not dislpayed on the page
 		| Elements                                |
 		| o-icon c-alert__icon o-icon--size-large |

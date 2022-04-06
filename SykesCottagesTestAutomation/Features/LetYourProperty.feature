@@ -7,7 +7,7 @@ Scenario: The user can navigate to the Let Your Property page
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @ProductionRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed on the page
@@ -27,6 +27,32 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	| Your details will be stored and used to send you information about our property letting services. You can opt out or unsubscribe at any time by contacting us. |
 	| /terms/privacypolicy                                                                                                                                           |
 	| submit                                                                                                                                                         |
+	When I click form-heading-container
+	And I click heroform_first_name
+	And I click form-heading-container
+	Then the following elements are dislpayed on the page
+	| Element                        |
+	| Please enter a full name.      |
+	| Please enter an email address. |
+	| Please enter a contact number. |
+	When I enter an email address without an @ symbol
+	And I click form-heading-container
+	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
+	When I enter an email address without a valid domain
+	And I click form-heading-container
+	Then the following text is displayed on the page: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
+	When I enter a phone number with a non-numerical character
+	And I click form-heading-container
+	Then the following text is displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	When I enter a phone number with less than 10 digits
+	And I click form-heading-container
+	Then the following text is displayed on the page: Please provide a contact number that is no less than 10 digits long.
+	When I enter a phone number with more than 15 digits
+	And I click form-heading-container
+	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
+	When I enter a phone number with spaces and +44
+	And I click form-heading-container
+	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -56,36 +82,6 @@ Scenario: The Managed Services links direct to the LYP form
 	Then the enquiry form is displayed with the tint applied
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
-
-@LetYourProperty @ProductionRegressionSuite
-Scenario: The relevant validation is in place on the enquiry form
-	Given I have navigated to the following page: letyourcottage
-	When I click form-heading-container
-	And I click heroform_first_name
-	And I click form-heading-container
-	Then the following elements are dislpayed on the page
-	| Element                        |
-	| Please enter a full name.      |
-	| Please enter an email address. |
-	| Please enter a contact number. |
-	When I enter an email address without an @ symbol
-	And I click form-heading-container
-	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter an email address without a valid domain
-	And I click form-heading-container
-	Then the following text is displayed on the page: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter a phone number with a non-numerical character
-	And I click form-heading-container
-	Then the following text is displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter a phone number with less than 10 digits
-	And I click form-heading-container
-	Then the following text is displayed on the page: Please provide a contact number that is no less than 10 digits long.
-	When I enter a phone number with more than 15 digits
-	And I click form-heading-container
-	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
-	When I enter a phone number with spaces and +44
-	And I click form-heading-container
-	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
 @LetYourProperty @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Let Your Property page

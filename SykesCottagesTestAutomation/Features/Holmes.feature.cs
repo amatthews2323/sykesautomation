@@ -249,8 +249,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table41.AddRow(new string[] {
                             "4379"});
                 table41.AddRow(new string[] {
-                            "4387"});
-                table41.AddRow(new string[] {
                             "4396"});
                 table41.AddRow(new string[] {
                             "4406"});
@@ -318,7 +316,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments status", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 63
+#line 62
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -338,7 +336,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 64
+#line 63
  testRunner.Given("I am accessing http://holmes.staging.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
@@ -349,8 +347,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "LetYourCottages_RemoveSecondHeroCopy18494"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_ManagedServicesBannerOnLYP18552"});
-                table42.AddRow(new string[] {
-                            "LetYourCottages_RemoveAlreadyStartedLogin18580"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_ReplaceIconsWithimages18585"});
                 table42.AddRow(new string[] {
@@ -369,8 +365,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "LetYourCottages_QAOwnerCaseStudies18625"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_AddDownArrowInHero18579"});
-                table42.AddRow(new string[] {
-                            "LetYourCottages_BurguerMenuTablet18658"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_DashboardButtonInteraction18675"});
                 table42.AddRow(new string[] {
@@ -392,8 +386,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "LetYourCottages_ClearOptionOnDashboard18697"});
                 table42.AddRow(new string[] {
-                            "LetYourCottages_IntroducingSisterBrands18705"});
-                table42.AddRow(new string[] {
                             "LetYourCottages_DashboardInfoCarousel18696"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_HeroOnMobile18815"});
@@ -406,10 +398,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "LetYourCottages_Sharepage18683"});
                 table42.AddRow(new string[] {
-                            "LetYourCottages_ReplaceFormWithCTA18812"});
-                table42.AddRow(new string[] {
                             "LetYourCottages_PromoteHhfsOnHomepage18825"});
-#line 65
+#line 64
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table42, "Then ");
 #line hidden
             }

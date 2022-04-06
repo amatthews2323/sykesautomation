@@ -241,6 +241,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
         [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/marketing-your-holiday-let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/buy-own-sell-holiday-lets", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/investment-advice-for-holiday-lets", null)]
@@ -252,7 +253,8 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "InformationCentre",
-                    "ProductionRegressionSuite"};
+                    "ProductionRegressionSuite",
+                    "EnquiryForm"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

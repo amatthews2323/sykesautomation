@@ -14,7 +14,7 @@ Scenario: The relevent elements are present on the Holiday Homes for Sale page
          | Enquire with Sykes today          |
          | Get started                       |
 
-@HolidayHomesForSale @ProductionRegressionSuite
+@HolidayHomesForSale @ProductionRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
     When I click View property
@@ -39,7 +39,15 @@ Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
          | marketing_post                                                                                                                    |
          | By giving us your details you agree that the Sykes Group can contact you with more relevant information by email, text and phone. |
          | /terms/privacypolicy                                                                                                              |
-         | submit                                                                                                                            |  
+         | submit                                                                                                                            |
+    When I click hhfs_overlay
+	And I click hhfs_overlay_first_name
+	And I click hhfs_overlay
+	Then the following elements are dislpayed on the page
+	| Element                        |
+	| Please enter a full name.      |
+	| Please enter an email address. |
+	| Please enter a contact number. |
 
 @ManagedServices @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevent elements are present on the Managed Services page

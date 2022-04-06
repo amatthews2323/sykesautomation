@@ -59,15 +59,23 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	| Key      | Value      |
 	| Username | Random     |
 	| Password | Testing123 |
-	And I can complete the digital onboarding process using the following deatils
+	And I can complete step 1 of adding Additional Property Details
+	And I can complete step 2 of adding Additional Property Details
 	| Key                | Value  |
 	| Number of bedrooms | 2      |
 	| Number of guests   | 4      |
-
-@MailCatcher
-Scenario: I can click a link within mailcatcher
-	Given I am accessing https://mailcatcher.staging.sykes.cloud/
-	Then I verify my account
+	And I can complete step 3 of adding Additional Property Details
+	And I can complete step 4 of adding Additional Property Details
+	And I can complete step 5 of adding Additional Property Details
+	And I can complete step 6 of adding Additional Property Details
+	And I can complete step 7 of adding Additional Property Details
+	And I can complete step 1 of adding Personal Details
+	And I can complete step 2 of adding Personal Details
+	And I can complete step 3 of adding Personal Details
+	And I can complete step 4 of adding Personal Details
+	And I can complete step 5 of adding Personal Details
+	And I can sign the contract and complete digital onboarding
+	And the following text is displayed on the page: Welcome to the Sykes Family!
 
 @DigitalOnboarding
 Scenario: The user completes digital onboarding
@@ -76,7 +84,11 @@ Scenario: The user completes digital onboarding
 	| Key      | Value                       |
 	| Username | sykestest169488@example.org |
 	| Password | Testing123                  |
-	And I can complete the digital onboarding process using the following deatils
+	And I can complete step 1 of adding Additional Property Details
+	And I can complete step 2 of adding Additional Property Details
 	| Key                | Value  |
 	| Number of bedrooms | 2      |
 	| Number of guests   | 4      |
+	And I can complete step 3 of adding Additional Property Details
+	And I can complete step 4 of adding Additional Property Details
+	And I can complete step 5 of adding Additional Property Details
