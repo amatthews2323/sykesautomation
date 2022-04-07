@@ -11,23 +11,6 @@ Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 		 | Sykes Cottages Showcase promotion |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_InformationCentreLyc18455
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18455
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                     |
-		 | Information centre          |
-		 | Enquire now                 |
-		 | Buying, owning and selling  |
-		 | How to run your holiday let |
-		 | Tax information and advice  |
-		 | Advertising and marketing   |
-		 | Investment advice           |
-		 | Holiday let mortgages       |
-		 | Legal regulations           |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18791
@@ -44,36 +27,6 @@ Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
 		 | Element                                                  |
 		 | Book a visit with one of our expert property consultants |
 		 | Book property visit                                      |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18625
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                                                           |
-		 | Owner FAQs                                                        |
-		 | Frequently asked questions, answered by our owners                |
-		 | Why did you choose Sykes?                                         |
-		 | What advice would you give to other holiday let owners?           |
-		 | How long did it take to convert your property into a holiday let? |
-		 | Is holiday letting what you expected?                             |
-		 | Have your holiday lets been a good investment for you?            |
-		 | How did you first get into holiday letting?                       |
-	When I click Why did you choose Sykes?
-	Then the following elements are dislpayed on the page
-		 | Element                                                               |
-		 | We chose to holiday let with an agency as my wife and I are very busy |
-		 | Answered by                                                           |
-		 | David Howle                                                           |
-		 | Joined Sykes in: 2009                                                 |
-		 | 7307                                                                  |
-		 | 954987                                                                |
-	When I click What advice would you give to other holiday let owners?
-	And I click How long did it take to convert your property into a holiday let?
-	And I click Is holiday letting what you expected?
-	And I click Have your holiday lets been a good investment for you?
-	And I click How did you first get into holiday letting?
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_AddDownArrowInHero18579
@@ -112,30 +65,6 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 		 | Average potential earnings are based on the average annual earnings a property within that region might expect. |
 		 | We can tailor our services to fit your needs. Find out how by using the button below.                           |
 		 | Access our expert knowledge on listing and managing holiday lets.                                               |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18587
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                                     |
-		 | colapsible-containers                       |
-		 | Owner testimonials                          |
-		 | Taking a modern approach                    |
-		 | Income calculator                           |
-		 | Holiday home management                     |
-		 | Award winning marketing                     |
-		 | Why list with Sykes?                        |
-		 | Free information pack                       |
-		 | Looking to get started with holiday letting |
-	When I click Owner testimonials
-	Then the following elements are dislpayed on the page
-		 | Element                                                  |
-		 | /images/icons-svg/navigation/chevron/icon-chevron-up.svg |
-		 | testimonial_image                                        |
-		 | testimonial_quote                                        |
-		 | testimonial_owner                                        |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
@@ -275,7 +204,7 @@ Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
 	And I close the pop-ups
 	Then the testimonials_region_pc section is displayed at position 2
 
-@ActiveExperiments @ProductionRegressionSuite
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18347
@@ -287,6 +216,60 @@ Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
 	And the following slick dot is highlighted 3
 	When I click holiday properties already working with Sykes
 	Then the following slick dot is highlighted 4
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18625
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                                           |
+		 | Owner FAQs                                                        |
+		 | Frequently asked questions, answered by our owners                |
+		 | Why did you choose Sykes?                                         |
+		 | What advice would you give to other holiday let owners?           |
+		 | How long did it take to convert your property into a holiday let? |
+		 | Is holiday letting what you expected?                             |
+		 | Have your holiday lets been a good investment for you?            |
+		 | How did you first get into holiday letting?                       |
+	When I click Why did you choose Sykes?
+	Then the following elements are dislpayed on the page
+		 | Element                                                               |
+		 | We chose to holiday let with an agency as my wife and I are very busy |
+		 | Answered by                                                           |
+		 | David Howle                                                           |
+		 | Joined Sykes in: 2009                                                 |
+		 | 7307                                                                  |
+		 | 954987                                                                |
+	When I click What advice would you give to other holiday let owners?
+	And I click How long did it take to convert your property into a holiday let?
+	And I click Is holiday letting what you expected?
+	And I click Have your holiday lets been a good investment for you?
+	And I click How did you first get into holiday letting?
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18587
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                     |
+		 | colapsible-containers                       |
+		 | Owner testimonials                          |
+		 | Taking a modern approach                    |
+		 | Income calculator                           |
+		 | Holiday home management                     |
+		 | Award winning marketing                     |
+		 | Why list with Sykes?                        |
+		 | Free information pack                       |
+		 | Looking to get started with holiday letting |
+	When I click Owner testimonials
+	Then the following elements are dislpayed on the page
+		 | Element                                                  |
+		 | /images/icons-svg/navigation/chevron/icon-chevron-up.svg |
+		 | testimonial_image                                        |
+		 | testimonial_quote                                        |
+		 | testimonial_owner                                        |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_PartnersIntoHero18491

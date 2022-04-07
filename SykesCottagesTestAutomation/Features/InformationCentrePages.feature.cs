@@ -224,14 +224,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table43.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "form-heading-container"});
-                table43.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             string.Format("{0}", header)});
 #line 29
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table43, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table42, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -286,41 +286,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 45
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "form-heading-container"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_first_name"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_email"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_phone"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "marketing_email"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "marketing_phone"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "marketing_sms"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "marketing_post"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "Your details will be stored and used to send you information about our property l" +
                                 "etting services. You can opt out or unsubscribe at any time by contacting us."});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table44.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "submit"});
 #line 46
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table44, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table43, "Then ");
 #line hidden
 #line 63
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -331,75 +331,57 @@ this.ScenarioInitialize(scenarioInfo);
 #line 65
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table45 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table45.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "Please enter a full name."});
-                table45.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "Please enter an email address."});
-                table45.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "Please enter a contact number."});
 #line 66
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table45, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table44, "Then ");
 #line hidden
 #line 71
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 72
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 73
  testRunner.Then("the following text is displayed on the page: \'test.com\' is missing an \'@\'. Please" +
                         " include an \'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 74
+#line 73
  testRunner.When("I enter an email address without a valid domain", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 75
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 76
+#line 74
  testRunner.Then("the following text is displayed on the page: \'test@test\' is an incomplete email a" +
                         "ddress. Please include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 77
+#line 75
  testRunner.When("I enter a phone number with a non-numerical character", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 78
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 79
+#line 76
  testRunner.Then("the following text is displayed on the page: Please enter a valid contact number " +
                         "that does not include letters, spaces, special characters and contains no less t" +
                         "han 10 digits.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 80
+#line 77
  testRunner.When("I enter a phone number with less than 10 digits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 81
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 82
+#line 78
  testRunner.Then("the following text is displayed on the page: Please provide a contact number that" +
                         " is no less than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 83
+#line 79
  testRunner.When("I enter a phone number with more than 15 digits", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 84
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 85
+#line 80
  testRunner.Then("the following text is displayed on the page: Please provide a contact number that" +
                         " is no more than 15 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 86
+#line 81
  testRunner.When("I enter a phone number with spaces and +44", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 87
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 88
+#line 82
  testRunner.Then("the following element is not displayed on the page: Please enter a valid contact " +
                         "number that does not include letters, spaces, special characters and contains no" +
                         " less than 10 digits.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

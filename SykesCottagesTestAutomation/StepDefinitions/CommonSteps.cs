@@ -69,10 +69,11 @@ namespace SykesCottagesTestAutomation
             switch (browser)
             {
                 case "Chrome":
-                    var options = new ChromeOptions();
-                    options.AddArgument("no-sandbox");
+                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers");
+                    //var options = new ChromeOptions();
+                    //options.AddArgument("no-sandbox");
+                    //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options, TimeSpan.FromMinutes(1));
                     //options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0"); //Option for adding extesions to Chrome
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options, TimeSpan.FromMinutes(3));
                     //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig()); //For launching Chrome via a build pipeline
                     break;
                 case "Firefox":
@@ -84,14 +85,50 @@ namespace SykesCottagesTestAutomation
                     shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers");
                     break;
                 default:
-                    shared.driver = new ChromeDriver(new ChromeOptions { Proxy = null });
+                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers");
                     break;
             }
         }
 
-        public void SetBrowserSize(string viewpoint = "Max", int width = 768, int height = 1024)
+        public void LaunchWebsite(string domain = "", string path = "")
         {
-            if (viewpoint.Contains("Max") | viewpoint.Contains("max") | viewpoint.Contains(""))
+            //Check for domain override
+            if (domain == "")
+            {
+                domain = SetBaseUrl(Hooks.Environemt);
+            }
+
+            SelectBrowser(Hooks.Browser); //Set the driver and browser
+            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.TimeOut); //Set the timeout duration
+
+            try
+            {
+                Console.WriteLine("Launch website: " + domain + path);
+                shared.driver.Navigate().GoToUrl(domain + path); //Launch website
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Website did not launch on first attempt. Trying again...");
+                shared.driver.Navigate().GoToUrl(domain + path); //Launch website
+            }
+
+            //Check for experiments
+            if (Hooks.Experiments != "")
+            {
+                WaitASecond(2);
+                //If Dev Tools not found, launch website with Dev Tools activated
+                if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
+                {
+                    //Console.WriteLine("Dev Tools not found");
+                    shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); 
+                }
+                ApplyExperiment(Hooks.Experiments);
+            }
+        }
+
+        public void SetBrowserSize(string viewpoint = "", int width = 768, int height = 1024)
+        {
+            if (viewpoint.Contains("Max") | viewpoint.Contains("max"))
             {
                 Console.WriteLine("Set browser size to maximum");
                 shared.driver.Manage().Window.Maximize(); //Maximise
@@ -118,37 +155,6 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        public void LaunchWebsite(string domain = "", string path = "")
-        {
-            //Check for domain override
-            if (domain == "")
-            {
-                domain = SetBaseUrl(Hooks.Environemt);
-            }
-
-            SelectBrowser(Hooks.Browser); //Set the driver and browser
-            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.TimeOut); //Set the timeout to 30 seconds
-
-            shared.driver.Navigate().GoToUrl(domain + path); //Launch website
-
-            //Check for experiments
-            if (Hooks.Experiments != "")
-            {
-                WaitASecond(3);
-                //If Dev Tools not found, launch website with Dev Tools activated
-                if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
-                {
-                    //Console.WriteLine("Dev Tools not found");
-                    shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); 
-                }
-                ApplyExperiment(Hooks.Experiments);
-            }
-/*            else
-            {
-                shared.driver.Navigate().GoToUrl(domain + path); //Launch website
-            }*/
-        }
-
         public void ApplyExperiment(string experimentIds)
         {
             Click("Dev Tools");
@@ -165,9 +171,62 @@ namespace SykesCottagesTestAutomation
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
+        public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
+        {
+            if (Hooks.DismissAllPopups == "Yes")
+            {
+                WaitASecond();
+                //Accept cookies
+                if (acceptCookies == "Yes")
+                {
+                    ClickIfDisplayed("Accept All Cookies");
+                }
+
+                //Collapse survey
+                if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
+                {
+                    ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
+                }
+
+                //Dismiss form tint
+                ClickIfDisplayed("nonenquiry6941");
+
+                //Dismiss alerts (unless overridden to test an experiment)
+                if (dismissAlerts == "Yes")
+                {
+                    try
+                    {
+                        if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Displayed)
+                        {
+                            shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Click();
+                        }
+                        WaitASecond();
+                        if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Displayed)
+                        {
+                            shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Click();
+                        }
+                    }
+
+                    catch (Exception)
+                    {
+                        Console.WriteLine("No alerts found");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Popups not dismissed. Set DismissAllPopups to 'Yes' in Hooks class to dismiss popups.");
+            }
+        }
+
         public string XPath(string value1, string element = "*")
         {
             return "//"+ element +"[@*=\""+ value1 +"\"]|//"+ element +"[contains(text(),\"" + value1 + "\")]|//" + element + "[contains(@class,\"" + value1 + "\")]|//" + element + "[contains(@id,\"" + value1 + "\")]";
+        }
+
+        public void SwitchFocus()
+        {
+            shared.driver.SwitchTo().Window(shared.driver.WindowHandles[1]);
         }
 
         public void WaitASecond(int seconds = 1)
@@ -192,43 +251,6 @@ namespace SykesCottagesTestAutomation
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1))));
-        }
-
-        public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
-        {
-            WaitASecond(2);
-            if (acceptCookies == "Yes")
-            {
-                ClickIfDisplayed("Accept All Cookies");
-            }
-
-            if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
-            {
-                ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
-            }
-            
-            ClickIfDisplayed("nonenquiry6941");
-
-            if (dismissAlerts == "Yes")
-            {
-                try
-                {
-                    if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Displayed)
-                    {
-                        shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Click();
-                    }
-                    WaitASecond();
-                    if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Displayed)
-                    {
-                        shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Click();
-                    }
-                }
-
-                catch (Exception)
-                {
-                    Console.WriteLine("No alerts found");
-                }
-            }
         }
 
         public void ScrollTo(string value1)
@@ -277,7 +299,7 @@ namespace SykesCottagesTestAutomation
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1))));
             Console.WriteLine("Click \"" + value1 + "\"");
             element.Click();
-            WaitASecond();
+            //WaitASecond();
         }
 
         public void ClickButton(string value1, string attribute = "button")
@@ -297,12 +319,16 @@ namespace SykesCottagesTestAutomation
                 {
                     Console.WriteLine("Click \"" + value1 + "\"");
                     shared.driver.FindElement(By.XPath(XPath(value1))).Click();
-                    WaitASecond(1);
+                    //WaitASecond();
+                }
+                else
+                {
+                    Console.WriteLine(value1 + " not found");
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine(value1 + " not found");
+                Console.WriteLine(value1 + " click failed");
             }
         }
 

@@ -17,8 +17,9 @@ namespace SykesCottagesTestAutomation
         public static string BrowserSize = ""; //Set the browser window size: Max | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width
         public static int PageHeight = 1024; //Set the browser window height
-        public static int TimeOut = 120; //Set timeout period
+        public static int TimeOut = 10; //Set timeout period
         public static string ExtentReportName = "LYP Automated Test Report"; //Set the Extort Report name
+        public static string DismissAllPopups = ""; //Dismiss popups, alerts and surveys
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;

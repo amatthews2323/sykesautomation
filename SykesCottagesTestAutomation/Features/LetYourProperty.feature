@@ -36,22 +36,16 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	| Please enter an email address. |
 	| Please enter a contact number. |
 	When I enter an email address without an @ symbol
-	And I click form-heading-container
 	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
 	When I enter an email address without a valid domain
-	And I click form-heading-container
 	Then the following text is displayed on the page: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter a phone number with a non-numerical character
-	And I click form-heading-container
 	Then the following text is displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	When I enter a phone number with less than 10 digits
-	And I click form-heading-container
 	Then the following text is displayed on the page: Please provide a contact number that is no less than 10 digits long.
 	When I enter a phone number with more than 15 digits
-	And I click form-heading-container
 	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
 	When I enter a phone number with spaces and +44
-	And I click form-heading-container
 	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 
 @LetYourProperty @ProductionRegressionSuite
@@ -59,7 +53,7 @@ Scenario: The transparent header is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed on the page: nav_top u-clearfix nav_top_17485
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty
 Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer container_sykes_grid
@@ -130,6 +124,7 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
 	When I click Explore guides & resources
+	And I switch focus to the new tab
 	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
 
 @MobileApp @ProductionRegressionSuite @RegressionSmokeTest
@@ -151,3 +146,18 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Element                          |
 	| contact-to-book mobile           |
 	| navbar-toggle collapsed          |
+
+@LetYourProperty @ProductionRegressionSuite
+Scenario: The Information Carousel is displayed on the page
+	Given I have navigated to the following page: letyourcottage
+	Then the following elements are dislpayed on the page
+		 | Element                     |
+		 | Information centre          |
+		 | Enquire now                 |
+		 | Buying, owning and selling  |
+		 | How to run your holiday let |
+		 | Tax information and advice  |
+		 | Advertising and marketing   |
+		 | Investment advice           |
+		 | Holiday let mortgages       |
+		 | Legal regulations           |

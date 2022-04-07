@@ -324,6 +324,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             ScrollTo(element);
         }
 
+        [When(@"I switch focus to the new tab")]
+        public void WhenISwitchFocusToTheNewTab()
+        {
+            SwitchFocus();
+        }
+
         [Then(@"the alerts are displayed on the page")]
         public void ThenTheAlertsAreDisplayedOnThePage()
         {
@@ -373,36 +379,42 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterAnEmailAddressWithoutAnSymbol()
         {
             Type("heroform_email", "test.com");
+            Click("form-heading-container");
         }
 
         [When(@"I enter an email address without a valid domain")]
         public void WhenIEnterAnEmailAddressWithoutAValidDomain()
         {
             Type("heroform_email", "test@test");
+            Click("form-heading-container");
         }
 
         [When(@"I enter a phone number with a non-numerical character")]
         public void WhenIEnterAPhoneNumberWithANon_NumericalCharacter()
         {
             Type("heroform_phone", "test");
+            Click("form-heading-container");
         }
 
         [When(@"I enter a phone number with less than 10 digits")]
         public void WhenIEnterAPhoneNumberWithLessThanDigits()
         {
             Type("heroform_phone", "070000000");
+            Click("form-heading-container");
         }
 
         [When(@"I enter a phone number with more than 15 digits")]
         public void WhenIEnterAPhoneNumberWithMoreThanDigits()
         {
             Type("heroform_phone", "0700000000000000");
+            Click("form-heading-container");
         }
 
         [When(@"I enter a phone number with spaces and \+(.*)")]
         public void WhenIEnterAPhoneNumberWithSpacesAnd(int p0)
         {
             Type("heroform_phone", "+44 7000 000 000");
+            Click("form-heading-container");
         }
 
         [Then(@"I can add a property with the following postcode: (.*)")]
