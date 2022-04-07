@@ -92,11 +92,11 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Gain exposure through our partners           |
     | What do our owners say                       |
     | How much could I earn                        |
- #  | Taking a modern approach                     |
-    | Holiday home management                      |
+    | We are still open as usual                   |
+    | Holiday home management with Sykes           |
     | Putting your property in the spotlight       |
-    | Why list with Sykes?                         |
-    | Free information pack                        |
+    | Holiday letting made easy                    |
+    | Free Owner Information Pack                  |
     | Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
@@ -137,16 +137,16 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile
 	Then the following sections are dislpayed
-	| Section                                     |
-	| Gain exposure through our partners          |
-	| What do our owners say                      |
-	| How much could I earn                       |
-#   | Taking a modern approach                    |
-	| Holiday home management                     |
-	| Putting your property in the spotlight      |
-#	| Why list with Sykes?                        |
-#	| Free information pack                       |
-	| Looking to get started with holiday letting |
+	| Section                                      |
+    | Gain exposure through our partners           |
+    | What do our owners say                       |
+    | How much could I earn                        |
+    | We are still open as usual                   |
+    | Holiday home management with Sykes           |
+    | Putting your property in the spotlight       |
+    | Holiday letting made easy                    |
+    | Free Owner Information Pack                  |
+    | Looking to get started with holiday letting? |
 	And the following elements are not dislpayed on the page
 	| Element                          |
 	| contact-to-book mobile           |

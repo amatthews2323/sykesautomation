@@ -277,8 +277,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table41.AddRow(new string[] {
                             "4453"});
                 table41.AddRow(new string[] {
-                            "4458"});
-                table41.AddRow(new string[] {
                             "4463"});
                 table41.AddRow(new string[] {
                             "4466"});
@@ -298,8 +296,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "4480"});
                 table41.AddRow(new string[] {
                             "4488"});
-                table41.AddRow(new string[] {
-                            "4491"});
 #line 29
  testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table41, "Then ");
 #line hidden
@@ -316,7 +312,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments status", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 62
+#line 60
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -336,25 +332,59 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 63
- testRunner.Given("I am accessing http://holmes.staging.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 61
+ testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_ContrastAlertsOnLYP18473"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_InformationPageAlerts18281"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_IncludeMultipleImages18474"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_MoveAlertMessages18472"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_TrustpilotFunctionUpdate18527"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_RemoveSecondHeroCopy18494"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_CreateTextSupportEnquiry18460"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ExpandTestimonials18470"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_ManagedServicesBannerOnLYP18552"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_LoopingImageOnHero18461"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ExtendManagedServicesSection18466"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_FadingSections18463"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_Marketingprefs18165"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_RemoveAlreadyStartedLogin18580"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_RemoveRequestYourOwnerPackCta18486"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_ReplaceIconsWithimages18585"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_DefaultMarketingAsCollapsed18630"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ExtendedManagedServicesSectionLinkToTop18639"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ProgressBar18576"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_TestimonialsCarousel18584"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_InactivityExitModal18457"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_DisableEnquiryUntilValidInput18581"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_SectionImageNavigation18583"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_OwnerIncentivePromotion18529"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_MakeIconsInteractive18586"});
                 table42.AddRow(new string[] {
@@ -366,11 +396,23 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "LetYourCottages_AddDownArrowInHero18579"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_BurguerMenuTablet18658"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_DashboardButtonInteraction18675"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_EnquiryfromCalculatorLYC18486"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_VisualTimeronAlerts18791"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_RepositionManagedServices18735"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_MoveManagedServiceCardUp18672"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_PartnersIntoHero18491"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_HeroImagesBasedOnHeadingForLoop18704"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_LoopingHeroOnDashboard18671"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_TriggerVisitRequest18459"});
                 table42.AddRow(new string[] {
@@ -378,13 +420,23 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "LetYourCottages_AddTrustpilotontotheInformationPages18486"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_LYPUIConsistency18588"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_EnquiryFormAtFooter18813"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_LYPPhoneNumberSection18569"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_ToolTipsonLYPHeaders18582"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_ProgressBarUpdatetoWhite18869"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_ClearOptionOnDashboard18697"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_UpdatepartnersSectionforMobile18816"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_IntroducingSisterBrands18705"});
                 table42.AddRow(new string[] {
                             "LetYourCottages_DashboardInfoCarousel18696"});
                 table42.AddRow(new string[] {
@@ -396,10 +448,16 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "LetYourCottages_MobileAppFooter18700"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_ProductShowCasePromotion18893"});
+                table42.AddRow(new string[] {
+                            "LetYourCottages_ProductShowCasePromotionLinkFooter18893"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_Sharepage18683"});
                 table42.AddRow(new string[] {
+                            "LetYourCottages_ReplaceFormWithCTA18812"});
+                table42.AddRow(new string[] {
                             "LetYourCottages_PromoteHhfsOnHomepage18825"});
-#line 64
+#line 62
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table42, "Then ");
 #line hidden
             }

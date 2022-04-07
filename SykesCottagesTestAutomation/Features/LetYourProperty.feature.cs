@@ -512,13 +512,15 @@ this.ScenarioInitialize(scenarioInfo);
                 table51.AddRow(new string[] {
                             "How much could I earn"});
                 table51.AddRow(new string[] {
-                            "Holiday home management"});
+                            "We are still open as usual"});
+                table51.AddRow(new string[] {
+                            "Holiday home management with Sykes"});
                 table51.AddRow(new string[] {
                             "Putting your property in the spotlight"});
                 table51.AddRow(new string[] {
-                            "Why list with Sykes?"});
+                            "Holiday letting made easy"});
                 table51.AddRow(new string[] {
-                            "Free information pack"});
+                            "Free Owner Information Pack"});
                 table51.AddRow(new string[] {
                             "Looking to get started with holiday letting?"});
 #line 89
@@ -721,11 +723,17 @@ this.ScenarioInitialize(scenarioInfo);
                 table53.AddRow(new string[] {
                             "How much could I earn"});
                 table53.AddRow(new string[] {
-                            "Holiday home management"});
+                            "We are still open as usual"});
+                table53.AddRow(new string[] {
+                            "Holiday home management with Sykes"});
                 table53.AddRow(new string[] {
                             "Putting your property in the spotlight"});
                 table53.AddRow(new string[] {
-                            "Looking to get started with holiday letting"});
+                            "Holiday letting made easy"});
+                table53.AddRow(new string[] {
+                            "Free Owner Information Pack"});
+                table53.AddRow(new string[] {
+                            "Looking to get started with holiday letting?"});
 #line 139
  testRunner.Then("the following sections are dislpayed", ((string)(null)), table53, "Then ");
 #line hidden
