@@ -337,7 +337,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I can sign in to my account using the following details", ((string)(null)), table6, "And ");
 #line hidden
 #line 62
- testRunner.And("I can complete step 1 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 1 - Property Location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
@@ -349,37 +349,37 @@ this.ScenarioInitialize(scenarioInfo);
                             "Number of guests",
                             "4"});
 #line 63
- testRunner.And("I can complete step 2 of adding Additional Property Details", ((string)(null)), table7, "And ");
+ testRunner.And("I can complete Additional Property Details Step 2 - Guests and bedrooms", ((string)(null)), table7, "And ");
 #line hidden
 #line 67
- testRunner.And("I can complete step 3 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 3 - Photos of your property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 68
- testRunner.And("I can complete step 4 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 4 - About your property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 69
- testRunner.And("I can complete step 5 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 5 - Key Collection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 70
- testRunner.And("I can complete step 6 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 6 - Booking details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 71
- testRunner.And("I can complete step 7 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Additional Property Details Step 7 - Upcoming bookings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 72
- testRunner.And("I can complete step 1 of adding Personal Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 1 - Personal details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 73
- testRunner.And("I can complete step 2 of adding Personal Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 2 - Your bank details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 74
- testRunner.And("I can complete step 3 of adding Personal Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 3 - File uploads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 75
- testRunner.And("I can complete step 4 of adding Personal Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 4 - Select commission tier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 76
- testRunner.And("I can complete step 5 of adding Personal Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details - Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 77
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -428,7 +428,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Value"});
                 table8.AddRow(new string[] {
                             "Username",
-                            "sykestest169488@example.org"});
+                            "sykestest855343@example.org"});
                 table8.AddRow(new string[] {
                             "Password",
                             "Testing123"});
@@ -436,28 +436,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I can sign in to my account using the following details", ((string)(null)), table8, "Then ");
 #line hidden
 #line 87
- testRunner.And("I can complete step 1 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table9.AddRow(new string[] {
-                            "Number of bedrooms",
-                            "2"});
-                table9.AddRow(new string[] {
-                            "Number of guests",
-                            "4"});
 #line 88
- testRunner.And("I can complete step 2 of adding Additional Property Details", ((string)(null)), table9, "And ");
-#line hidden
-#line 92
- testRunner.And("I can complete step 3 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 93
- testRunner.And("I can complete step 4 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 94
- testRunner.And("I can complete step 5 of adding Additional Property Details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the following text is displayed on the page: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

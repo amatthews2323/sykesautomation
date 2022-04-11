@@ -59,21 +59,21 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	| Key      | Value      |
 	| Username | Random     |
 	| Password | Testing123 |
-	And I can complete step 1 of adding Additional Property Details
-	And I can complete step 2 of adding Additional Property Details
+	And I can complete Additional Property Details Step 1 - Property Location
+	And I can complete Additional Property Details Step 2 - Guests and bedrooms
 	| Key                | Value  |
 	| Number of bedrooms | 2      |
 	| Number of guests   | 4      |
-	And I can complete step 3 of adding Additional Property Details
-	And I can complete step 4 of adding Additional Property Details
-	And I can complete step 5 of adding Additional Property Details
-	And I can complete step 6 of adding Additional Property Details
-	And I can complete step 7 of adding Additional Property Details
-	And I can complete step 1 of adding Personal Details
-	And I can complete step 2 of adding Personal Details
-	And I can complete step 3 of adding Personal Details
-	And I can complete step 4 of adding Personal Details
-	And I can complete step 5 of adding Personal Details
+	And I can complete Additional Property Details Step 3 - Photos of your property
+	And I can complete Additional Property Details Step 4 - About your property
+	And I can complete Additional Property Details Step 5 - Key Collection
+	And I can complete Additional Property Details Step 6 - Booking details
+	And I can complete Additional Property Details Step 7 - Upcoming bookings
+	And I can complete Personal Details Step 1 - Personal details
+	And I can complete Personal Details Step 2 - Your bank details
+	And I can complete Personal Details Step 3 - File uploads
+	And I can complete Personal Details Step 4 - Select commission tier
+	And I can complete Personal Details - Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
 	And the following text is displayed on the page: Welcome to the Sykes Family!
 
@@ -82,13 +82,7 @@ Scenario: The user completes digital onboarding
 	Given I am accessing https://tech.staging.sykescottages.co.uk/account/login
 	Then I can sign in to my account using the following details
 	| Key      | Value                       |
-	| Username | sykestest169488@example.org |
+	| Username | sykestest855343@example.org |
 	| Password | Testing123                  |
-	And I can complete step 1 of adding Additional Property Details
-	And I can complete step 2 of adding Additional Property Details
-	| Key                | Value  |
-	| Number of bedrooms | 2      |
-	| Number of guests   | 4      |
-	And I can complete step 3 of adding Additional Property Details
-	And I can complete step 4 of adding Additional Property Details
-	And I can complete step 5 of adding Additional Property Details
+	And I can sign the contract and complete digital onboarding
+	And the following text is displayed on the page: Welcome to the Sykes Family!

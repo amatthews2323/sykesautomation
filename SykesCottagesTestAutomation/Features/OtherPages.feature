@@ -40,9 +40,7 @@ Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
          | By giving us your details you agree that the Sykes Group can contact you with more relevant information by email, text and phone. |
          | /terms/privacypolicy                                                                                                              |
          | submit                                                                                                                            |
-    When I click hhfs_overlay
-	And I click hhfs_overlay_first_name
-	And I click hhfs_overlay
+    When I click lyc-cta lyc-cta--green u-full-width js-enquiry-form-button
 	Then the following elements are dislpayed on the page
 	| Element                        |
 	| Please enter a full name.      |

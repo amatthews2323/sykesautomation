@@ -109,24 +109,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "container_sykes_grid"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table55.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table55, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table54, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -171,14 +171,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 20
     testRunner.When("I click View property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table56.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Find your perfect holiday home"});
-                table56.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Select a region"});
 #line 21
-    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table56, "Then ");
+    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table55, "Then ");
 #line hidden
 #line 25
     testRunner.When("I select option All regions from the region dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -186,59 +186,53 @@ this.ScenarioInitialize(scenarioInfo);
 #line 26
     testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_first_name"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_first_name_validation_error"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_email"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_email_validation_error"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_phone"});
+                table56.AddRow(new string[] {
+                            "hhfs_overlay_phone_validation_error"});
+                table56.AddRow(new string[] {
+                            "marketing_email"});
+                table56.AddRow(new string[] {
+                            "marketing_phone"});
+                table56.AddRow(new string[] {
+                            "marketing_sms"});
+                table56.AddRow(new string[] {
+                            "marketing_post"});
+                table56.AddRow(new string[] {
+                            "By giving us your details you agree that the Sykes Group can contact you with mor" +
+                                "e relevant information by email, text and phone."});
+                table56.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table56.AddRow(new string[] {
+                            "submit"});
+#line 27
+    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table56, "Then ");
+#line hidden
+#line 43
+    testRunner.When("I click lyc-cta lyc-cta--green u-full-width js-enquiry-form-button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
                 TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
                 table57.AddRow(new string[] {
-                            "hhfs_overlay"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_first_name"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_first_name_validation_error"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_email"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_email_validation_error"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_phone"});
-                table57.AddRow(new string[] {
-                            "hhfs_overlay_phone_validation_error"});
-                table57.AddRow(new string[] {
-                            "marketing_email"});
-                table57.AddRow(new string[] {
-                            "marketing_phone"});
-                table57.AddRow(new string[] {
-                            "marketing_sms"});
-                table57.AddRow(new string[] {
-                            "marketing_post"});
-                table57.AddRow(new string[] {
-                            "By giving us your details you agree that the Sykes Group can contact you with mor" +
-                                "e relevant information by email, text and phone."});
-                table57.AddRow(new string[] {
-                            "/terms/privacypolicy"});
-                table57.AddRow(new string[] {
-                            "submit"});
-#line 27
-    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table57, "Then ");
-#line hidden
-#line 43
-    testRunner.When("I click hhfs_overlay", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 44
- testRunner.And("I click hhfs_overlay_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 45
- testRunner.And("I click hhfs_overlay", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table58.AddRow(new string[] {
                             "Please enter a full name."});
-                table58.AddRow(new string[] {
+                table57.AddRow(new string[] {
                             "Please enter an email address."});
-                table58.AddRow(new string[] {
+                table57.AddRow(new string[] {
                             "Please enter a contact number."});
-#line 46
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table58, "Then ");
+#line 44
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table57, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -257,7 +251,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "RegressionSmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 53
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -277,31 +271,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 54
+#line 52
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Holiday home management"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "hero-slideshow"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "form-heading-container"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "What are the benefits"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Partially managed"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Fully managed"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Resource centre"});
-                table59.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Share page"});
-#line 55
-    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table59, "Then ");
+#line 53
+    testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table58, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

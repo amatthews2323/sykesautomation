@@ -108,8 +108,11 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Website did not launch on first attempt. Trying again...");
-                shared.driver.Navigate().GoToUrl(domain + path); //Launch website
+                Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Carrying on regardless...");
+                shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
+
+                //Console.WriteLine("Website did not launch on first attempt. Trying again...");
+                //shared.driver.Navigate().GoToUrl(domain + path); //Launch website
             }
 
             //Check for experiments
@@ -219,9 +222,9 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        public string XPath(string value1, string element = "*")
+        public string XPath(string value, string element = "*")
         {
-            return "//"+ element +"[@*=\""+ value1 +"\"]|//"+ element +"[contains(text(),\"" + value1 + "\")]|//" + element + "[contains(@class,\"" + value1 + "\")]|//" + element + "[contains(@id,\"" + value1 + "\")]";
+            return "//"+ element +"[@*=\""+ value +"\"]|//"+ element +"[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]|//" + element + "[contains(@id,\"" + value + "\")]";
         }
 
         public void SwitchFocus()
@@ -235,30 +238,30 @@ namespace SykesCottagesTestAutomation
             System.Threading.Thread.Sleep(value);
         }
 
-        public void WaitUntilExists(string value1)
+        public void WaitUntilExists(string value)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value1))));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
         }
 
-        public void WaitUntilVisible(string value1)
+        public void WaitUntilVisible(string value)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value1))));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
         }
 
-        public void WaitUntilClickable(string value1)
+        public void WaitUntilClickable(string value)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1))));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
         }
 
-        public void ScrollTo(string value1)
+        public void ScrollTo(string value)
         {
             string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
                                            + "var elementTop = arguments[0].getBoundingClientRect().top;"
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
-            ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath(XPath(value1))));
+            ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath(XPath(value))));
             WaitASecond(2);
         }
 
@@ -269,66 +272,82 @@ namespace SykesCottagesTestAutomation
             Assert.IsTrue(pageTitle.Contains(title), "Page title \"" + pageTitle + "\" does not match \"" + title + "\"");
         }
 
-        public void AssertText(string value1)
+        public void AssertText(string value)
         {
-            Console.WriteLine("Assert the following text is present on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value1 + "\")]|//*[contains(., \"" + value1 + "\")]")).Count != 0, "Text not found");
+            Console.WriteLine("Assert the following text is present on the page: " + value);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text not found");
         }
 
-        public void AssertElement(string value1)
+        public void AssertElement(string value)
         {
-            Console.WriteLine("Assert the following element is present on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value1))).Count != 0, "Element not found");
+            Console.WriteLine("Assert the following element is present on the page: " + value);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value))).Count != 0, "Element not found");
         }
 
-        public void AssertElementNotDisplayed(string value1)
+        public void AssertElementNotDisplayed(string value)
         {
-            Console.WriteLine("Assert the following element is not displayed on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*=\""+ value1 +"\"]|//*[contains(text(),\"" + value1 + "\")]|//*[contains(@class,\"" + value1 + "\")]")).Count == 0, "Element displayed in error");
+            Console.WriteLine("Assert the following element is not displayed on the page: " + value);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//*[contains(@class,\"" + value + "\")]")).Count == 0, "Element displayed in error");
         }
 
-        public void AssertElementNotVisible(string value1)
+        public void AssertElementNotVisible(string value)
         {
-            Console.WriteLine("Assert the following element is not visible on the page: " + value1);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath("//*[@*=\"" + value1 + "\"]|//*[contains(text(),\"" + value1 + "\")]|//*[contains(@class,\"" + value1 + "\")]")).Displayed, "Element displayed in error");
+            Console.WriteLine("Assert the following element is not visible on the page: " + value);
+            Assert.IsTrue(shared.driver.FindElement(By.XPath("//*[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//*[contains(@class,\"" + value + "\")]")).Displayed, "Element displayed in error");
         }
 
-        public void Click(string value1)
+        public void Click(string value)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1))));
-            Console.WriteLine("Click \"" + value1 + "\"");
+            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
+            Console.WriteLine("Click \"" + value + "\"");
             element.Click();
             //WaitASecond();
         }
 
-        public void ClickButton(string value1, string attribute = "button")
+        public void JSClick(string value)
+        {
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
+            IWebElement element;
+            if (value.Contains("//"))
+            {
+                //element = shared.driver.FindElement(By.XPath("\"" + value + "\""));
+                element = shared.driver.FindElement(By.XPath(value));
+            }
+            else
+            {
+                element = shared.driver.FindElement(By.XPath(XPath(value)));
+            }
+            jsExecutor.ExecuteScript("arguments[0].click()", element);
+        }
+
+        public void ClickAttribute(string value, string attribute = "button")
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value1, attribute))));
-            Console.WriteLine("Click the \"" + value1 + "\" button");
+            var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value, attribute))));
+            Console.WriteLine("Click the \"" + value + "\" button");
             element.Click();
             WaitASecond();
         }
 
-        public void ClickIfDisplayed(string value1)
+        public void ClickIfDisplayed(string value)
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath(XPath(value1))).Displayed)
+                if (shared.driver.FindElement(By.XPath(XPath(value))).Displayed)
                 {
-                    Console.WriteLine("Click \"" + value1 + "\"");
-                    shared.driver.FindElement(By.XPath(XPath(value1))).Click();
+                    Console.WriteLine("Click \"" + value + "\"");
+                    shared.driver.FindElement(By.XPath(XPath(value))).Click();
                     //WaitASecond();
                 }
                 else
                 {
-                    Console.WriteLine(value1 + " not found");
+                    Console.WriteLine(value + " not found");
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine(value1 + " click failed");
+                Console.WriteLine(value + " click failed");
             }
         }
 
@@ -339,9 +358,9 @@ namespace SykesCottagesTestAutomation
             WaitASecond();
         }
 
-        public void MouseOver(string value1)
+        public void MouseOver(string value)
         {
-            IWebElement element = shared.driver.FindElement(By.XPath(XPath(value1)));
+            IWebElement element = shared.driver.FindElement(By.XPath(XPath(value)));
             Actions action = new Actions(shared.driver);
             action.MoveToElement(element).Perform();
             WaitASecond();
@@ -353,6 +372,12 @@ namespace SykesCottagesTestAutomation
             IWebElement element = shared.driver.FindElement(By.XPath(XPath(formField, "input")));
             element.Clear();
             element.SendKeys(text);
+        }
+
+        public void JSType(string formField, string text)
+        {
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
+            jsExecutor.ExecuteScript("document.getElementById('" + formField + "').value='" + text + "'");
         }
 
         public void TypeIfDisplayed(string formField, string text)

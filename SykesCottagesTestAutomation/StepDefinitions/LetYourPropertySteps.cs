@@ -19,6 +19,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
         private string activeExperiments;
         public string emailAddress;
+        public string postcode;
 
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
@@ -154,6 +155,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             Type("heroform_phone", dictionary["Phone number"]);
             Click("form-heading-container");
+            WaitASecond(2);
         }
 
         [When(@"I enter the following details in the enquiry form")]
@@ -184,7 +186,10 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             if (Hooks.Environemt != "Live")
             {
-                shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+                var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//form[@*='heroform']/button[@*='submit']")));
+                Console.WriteLine("Click the Get Started button");
+                element.Click();
                 WaitASecond(4);
             }
             else
@@ -418,17 +423,19 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can add a property with the following postcode: (.*)")]
-        public void ThenICanCompleteThePropertyCreationProcess(string postcode = "")
+        public void ThenICanCompleteThePropertyCreationProcess(string _postcode = "Random")
         {
             //Step 1
             Click("I have a property I’d like to list");
             Click("Next");
+            WaitASecond();
 
             //Step 2
-            if (postcode == "Random" | postcode == "")
+            if (_postcode == "Random")
             {
-                postcode = GetPostcode();
+                _postcode = GetPostcode();
             }
+            postcode = _postcode;
             Type("location", postcode);
             Click("Search");
             ClickIfDisplayed("Expand area");
@@ -448,6 +455,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I can create an account using password: (.*)")]
         public void ThenICanCreateAnAccountUsingPassword(string password)
         {
+            WaitASecond(2);
             shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Start taking bookings')]")).Click();
             WaitASecond(2);
             Type("digital-onboarding-password", password);
@@ -457,12 +465,11 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I can register my account via the email")]
         public void ThenICanRegisterMyAccountViaTheEmail()
         {
-            shared.driver.Quit();
-            LaunchWebsite("https://mailcatcher.staging.sykes.cloud/");
+            shared.driver.Navigate().GoToUrl("https://mailcatcher.staging.sykes.cloud/");
             Click(emailAddress);
+            WaitASecond();
             string emailPath = shared.driver.FindElement(By.XPath("//dd[text()='<" + emailAddress + ">']/ancestor::article/iframe")).GetAttribute("src");
-            shared.driver.Quit();
-            LaunchWebsite(emailPath);
+            shared.driver.Navigate().GoToUrl(emailPath); 
             SetBrowserSize("Max");
             Click("Verify your account");
         }
@@ -481,178 +488,172 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
             Type("password", dictionary["Password"]);
 
-            ClickButton("submit", "input");
+            ClickAttribute("submit", "input");
         }
 
-        [Then(@"I can complete step 1 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 1 - Property Location")]
         public void ThenICanCompleteStep1OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 1 - Property Location");
             AssertText("Property Location");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-directions-to-property').value='Automated test'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//h2[contains(text(),'Directions to your property')]")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSType("digital-onboarding-directions-to-property", "Automated test");
+            JSClick("Directions to your property");
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 2 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 2 - Guests and bedrooms")]
         public void ThenICanCompleteStep2OfAddingAdditionalPropertyDetails(Table table)
         {
-            Screenshot("DO - Additional Property Details - Step 2 - How many guests can your property sleep");
+            Screenshot("DO - Additional Property Details - Step 2 - Guests and bedrooms");
             AssertText("How many guests can your property sleep?");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
             var dictionary = ToDictionary(table);
             int guests = int.Parse(dictionary["Number of guests"]);
             for (int i = 1; i < guests; i++)
             {
-                jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//input[@name='ds_guests']/following-sibling::*")));
+                JSClick("//input[@name='ds_guests']/following-sibling::*");
             }
             int bedrooms = int.Parse(dictionary["Number of bedrooms"]);
             for (int i = 1; i < bedrooms; i++)
             {
-                jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//input[@name='ds_bedroom_count']/following-sibling::*")));
+                JSClick("//input[@name='ds_bedroom_count']/following-sibling::*");
             }
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 3 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 3 - Photos of your property")]
         public void ThenICanCompleteStep3OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 3 - Photos of your property");
             AssertText("Photos of your property");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='upload-images-reason']")));
-            jsExecutor.ExecuteScript("document.getElementById('upload-images-reason').value='Automated test'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Continue')]")));
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(2);
+            shared.driver.FindElement(By.XPath("//textarea[@id='upload-images-reason']")).SendKeys("Automated test");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Continue')]");
             WaitASecond(5);
         }
 
-        [Then(@"I can complete step 4 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 4 - About your property")]
         public void ThenICanCompleteStep4OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 4 - About your property");
             AssertText("About your property");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='digital-onboarding-property-address']")));
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-property-address').value='Test'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Continue')]")));
+            Type("digital-onboarding-property-address", "Test");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(5);
         }
 
-        [Then(@"I can complete step 5 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 5 - Key Collection")]
         public void ThenICanCompleteStep5OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 5 - Key Collection");
             AssertText("Key Collection");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//span[text()='Other']")));
-            WaitASecond();
-            jsExecutor.ExecuteScript("document.getElementById('key-collection-alt-instructions').value='Test'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//span[text()='Other']");
+            WaitASecond(1);
+            shared.driver.FindElement(By.XPath("//textarea[@id='key-collection-alt-instructions']")).SendKeys("Test");
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 6 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 6 - Booking details")]
         public void ThenICanCompleteStep6OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 6 - Booking details");
             AssertText("Booking details");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("document.getElementById('digital-signup-booking-start-date').value='2024-04-30'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//span[text()='Friday']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//span[text()='Yes']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSType("digital-signup-booking-start-date-hidden-input", DateTime.Now.AddDays(7).ToString("yyyy-MM-dd"));
+            WaitASecond();
+            JSClick("//span[text()='Friday']");
+            JSClick("//span[@class='c-selection-button__label' and text()='Yes']");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 7 of adding Additional Property Details")]
+        [Then(@"I can complete Additional Property Details Step 7 - Upcoming bookings")]
         public void ThenICanCompleteStep7OfAddingAdditionalPropertyDetails()
         {
             Screenshot("DO - Additional Property Details - Step 7 - Upcoming bookings");
             AssertText("Upcoming bookings");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 1 of adding Personal Details")]
+        [Then(@"I can complete Personal Details Step 1 - Personal details")]
         public void ThenICanCompleteStep1OfAddingPersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 1 - Personal details");
             AssertText("Personal details");
 
-            string postcode = GetPostcode();
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-owner-postcode').value='" + postcode + "'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Search')]")));
+            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-owner-postcode']")).SendKeys(postcode);
+            WaitASecond(2);
+            JSClick("//div[@aria-expanded='true']//button/span[contains(text(),'Search')]");
             WaitASecond();
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button[@*='Select Address']")));
-            WaitASecond();
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//button[@aria-label='Select Address']");
+            WaitASecond(2);
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 2 of adding Personal Details")]
+        [Then(@"I can complete Personal Details Step 2 - Your bank details")]
         public void ThenICanCompleteStep2OfAddingPersonalDetails()
         {
-            Screenshot("DO - Personal Details - Step 1 - Your bank details");
+            Screenshot("DO - Personal Details - Step 2 - Your bank details");
             AssertText("Your bank details");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-account-name').value='Test'");
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-account-number').value='01010101'");
-            jsExecutor.ExecuteScript("document.getElementById('digital-onboarding-account-name').value='010101'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-account-name']")).SendKeys("Test");
+            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-account-number']")).SendKeys("01010101");
+            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-sort-code']")).SendKeys("010101");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 3 of adding Personal Details")]
+        [Then(@"I can complete Personal Details Step 3 - File uploads")]
         public void ThenICanCompleteStep3OfAddingPersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 3 - File uploads");
             AssertText("File uploads");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='digital-onboarding-gas-certificate-no']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='digital-onboarding-liability-certificate-no']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='digital-onboarding-fire-certificate-no']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='digital-onboarding-waterSupply-certificate-no']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//*[@*='digital-onboarding-gas-certificate-no']");
+            JSClick("//*[@*='digital-onboarding-liability-certificate-no']");
+            JSClick("//*[@*='digital-onboarding-fire-certificate-no']");
+            JSClick("//*[@*='digital-onboarding-waterSupply-certificate-no']");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 4 of adding Personal Details")]
+        [Then(@"I can complete Personal Details Step 4 - Select commission tier")]
         public void ThenICanCompleteStep4OfAddingPersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 4 - Select commission tier");
             AssertText("Select commission tier");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='commission-full']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            JSClick("//*[@*='commission-full']");
+            WaitASecond();
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
-        [Then(@"I can complete step 5 of adding Personal Details")]
+        [Then(@"I can complete Personal Details - Step 5 - Property Pricing")]
         public void ThenICanCompleteStep5OfAddingPersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 5 - Property Pricing");
             AssertText("Property Pricing");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            WaitASecond(25);
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Next')]")));
-            WaitASecond(5);
+            WaitASecond(59);
+            JSClick("//button/span[contains(text(),'Next')]");
+            WaitASecond(3);
         }
 
         [Then(@"I can sign the contract and complete digital onboarding")]
@@ -661,11 +662,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             Screenshot("DO - Contract Signing");
             AssertText("Your online agreement");
 
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//*[@*='do_contract_sole_owner']")));
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//input[@*='do_contract_terms']/span")));
-            jsExecutor.ExecuteScript("document.getElementById('do_contract_signature').value='Automated Test'");
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Submit Contract')]")));
+            JSClick("//*[@*='do_contract_sole_owner']");
+            JSClick("//span[text()='I accept the terms and conditions']");
+            WaitASecond(2);
+            shared.driver.FindElement(By.XPath("//input[@id='do_contract_signature']")).SendKeys("Automated Test");
+            WaitASecond(2);
+            JSClick("//button/span[contains(text(),'Submit Contract')]");
             WaitASecond(5);
         }
 
