@@ -47,6 +47,7 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
 	When I enter a phone number with spaces and +44
 	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	Then the following element is not displayed on the page: Already started?
 
 @LetYourProperty @ProductionRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -125,7 +126,7 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
          | Explore guides & resources                   |
 	When I click Explore guides & resources
 	And I switch focus to the new tab
-	Then the following page title is displayed: Buying a Holiday Let Information Centre | Sykes Holiday Cottages
+	Then the following page title is displayed: Holiday Let Information Centre | Sykes Holiday Cottages
 
 @MobileApp @ProductionRegressionSuite @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage

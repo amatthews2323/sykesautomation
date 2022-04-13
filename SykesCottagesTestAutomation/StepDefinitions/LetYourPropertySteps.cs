@@ -67,21 +67,24 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select the alert Get Started button")]
         public void WhenISelectTheAlertGetStartedButton()
         {
-            shared.driver.FindElement(By.XPath("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]")).Click();
+            Click("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]");
+            //shared.driver.FindElement(By.XPath("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]")).Click();
             WaitASecond();
         }
 
         [When(@"I select the Partially Managed Enquire Now button")]
         public void WhenISelectThePartiallyManagedEnquireNowButton()
         {
-            shared.driver.FindElement(By.XPath("//*[text()='Partially managed']//parent::div//following-sibling::div//a")).Click();
+            Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a");
+            //shared.driver.FindElement(By.XPath("//*[text()='Partially managed']//parent::div//following-sibling::div//a")).Click();
             WaitASecond(5);
         }
 
         [When(@"I select the Fully Managed Enquire Now button")]
         public void WhenISelectTheFullyManagedEnquireNowButton()
         {
-            shared.driver.FindElement(By.XPath("//*[text()='Fully managed']//parent::div//following-sibling::div//a")).Click();
+            Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a");
+            //shared.driver.FindElement(By.XPath("//*[text()='Fully managed']//parent::div//following-sibling::div//a")).Click();
             WaitASecond(5);
         }
 
@@ -114,7 +117,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select the close icon on the form")]
         public void WhenISelectTheCloseIconOnTheForm()
         {
-            shared.driver.FindElement(By.XPath("//div[@class='o-overlay__content']/button[@title='Close form']")).Click();
+            Click("//div[@class='o-overlay__content']/button[@title='Close form']");
+            //shared.driver.FindElement(By.XPath("//div[@class='o-overlay__content']/button[@title='Close form']")).Click();
             WaitASecond();
         }
 
@@ -126,16 +130,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(headedLink);
         }
 
-        [When(@"I submit an enquiry with the following details")]
-        public void WhenISubmitAnEnquiryWithTheFollowingDetails(Table table)
-        {
-            var dictionary = ToDictionary(table);
-            Type("heroform_first_name", dictionary["Full name"]);
-            Type("heroform_email", dictionary["Email address"]);
-            Type("heroform_phone", dictionary["Phone number"]);
-            shared.driver.FindElement(By.XPath("//form[@*='heroform']/button[@*='submit']")).Click();
-        }
-
         [When(@"I enter the following details on the enquiry form")]
         public void WhenIEnterTheFollowingDetailsOnTheEnquiryForm(Table table)
         {
@@ -145,7 +139,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             if (dictionary["Email address"] == "Random")
             {
                 Random r = new Random();
-                emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
+                emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@test.com";
                 Type("heroform_email", emailAddress);
             }
             else
@@ -156,29 +150,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             Type("heroform_phone", dictionary["Phone number"]);
             Click("form-heading-container");
             WaitASecond(2);
-        }
-
-        [When(@"I enter the following details in the enquiry form")]
-        public void WhenIEnterTheFollowingDetailsInTheEnquiryForm(Table table)
-        {
-            LaunchWebsite("", "letyourcottage");
-            CloseAllPopups();
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-
-            var dictionary = ToDictionary(table);
-            Type("heroform_first_name", dictionary["Full name"]);
-
-            if (dictionary["Email address"] == "Random")
-            {
-                Random r = new Random();
-                emailAddress = "sykestest" + r.Next(100000, 999999).ToString() + "@example.org";
-                Type("heroform_email", emailAddress);
-            }
-            else
-            {
-                Type("heroform_email", dictionary["Email address"]);
-            }
-            Type("heroform_phone", dictionary["Phone number"]);
         }
 
         [When(@"I submit the enquiry form")]
@@ -194,7 +165,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
             else
             {
-                Console.WriteLine("Step skipped on Live environment");
+                Console.WriteLine("DON'T SUBMIT ENQUIRIES ON LIVE!!");
             }
         }
 
@@ -438,6 +409,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             postcode = _postcode;
             Type("location", postcode);
             Click("Search");
+            WaitASecond();
             ClickIfDisplayed("Expand area");
             Click("Select Address");
             WaitASecond();
@@ -456,7 +428,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenICanCreateAnAccountUsingPassword(string password)
         {
             WaitASecond(2);
-            shared.driver.FindElement(By.XPath("//button/span[contains(text(),'Start taking bookings')]")).Click();
+            Click("//button/span[contains(text(),'Start taking bookings')]");
             WaitASecond(2);
             Type("digital-onboarding-password", password);
             Click("Create my account");
@@ -489,6 +461,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             Type("password", dictionary["Password"]);
 
             ClickAttribute("submit", "input");
+            WaitASecond(3);
         }
 
         [Then(@"I can complete Additional Property Details Step 1 - Property Location")]
@@ -532,7 +505,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(2);
-            shared.driver.FindElement(By.XPath("//textarea[@id='upload-images-reason']")).SendKeys("Automated test");
+            Type("//textarea[@id='upload-images-reason']", "Automated test");
             WaitASecond();
             JSClick("//button/span[contains(text(),'Continue')]");
             WaitASecond(5);
@@ -558,7 +531,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             JSClick("//span[text()='Other']");
             WaitASecond(1);
-            shared.driver.FindElement(By.XPath("//textarea[@id='key-collection-alt-instructions']")).SendKeys("Test");
+            Type("//textarea[@id='key-collection-alt-instructions']", "Test");
             JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(3);
         }
@@ -594,7 +567,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             Screenshot("DO - Personal Details - Step 1 - Personal details");
             AssertText("Personal details");
 
-            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-owner-postcode']")).SendKeys(postcode);
+            Type("//input[@id='digital-onboarding-owner-postcode']", postcode);
             WaitASecond(2);
             JSClick("//div[@aria-expanded='true']//button/span[contains(text(),'Search')]");
             WaitASecond();
@@ -610,9 +583,9 @@ namespace SykesCottagesTestAutomation.BaseClass
             Screenshot("DO - Personal Details - Step 2 - Your bank details");
             AssertText("Your bank details");
 
-            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-account-name']")).SendKeys("Test");
-            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-account-number']")).SendKeys("01010101");
-            shared.driver.FindElement(By.XPath("//input[@id='digital-onboarding-sort-code']")).SendKeys("010101");
+            Type("//input[@id='digital-onboarding-account-name']", "Test");
+            Type("//input[@id='digital-onboarding-account-number']", "01010101");
+            Type("//input[@id='digital-onboarding-sort-code']", "010101");
             WaitASecond();
             JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(3);
@@ -631,6 +604,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitASecond();
             JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(3);
+            shared.driver.Navigate().Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 4 - Select commission tier")]
@@ -645,13 +619,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitASecond(3);
         }
 
-        [Then(@"I can complete Personal Details - Step 5 - Property Pricing")]
+        [Then(@"I can complete Personal Details Step 5 - Property Pricing")]
         public void ThenICanCompleteStep5OfAddingPersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 5 - Property Pricing");
             AssertText("Property Pricing");
 
-            WaitASecond(59);
+            WaitUntilVisible("52 week breakdown");
             JSClick("//button/span[contains(text(),'Next')]");
             WaitASecond(3);
         }
@@ -665,7 +639,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             JSClick("//*[@*='do_contract_sole_owner']");
             JSClick("//span[text()='I accept the terms and conditions']");
             WaitASecond(2);
-            shared.driver.FindElement(By.XPath("//input[@id='do_contract_signature']")).SendKeys("Automated Test");
+            Type("//input[@id='do_contract_signature']", "Automated Test");
             WaitASecond(2);
             JSClick("//button/span[contains(text(),'Submit Contract')]");
             WaitASecond(5);

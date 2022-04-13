@@ -2,6 +2,28 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
+	Then the following element is displayed on the page: hero-slideshow
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnLYP18552
+	Then the following element is displayed on the page: We tailor our managed service package to suit your specific needs.
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_SectionImageNavigation18583
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_SectionImageNavigation18583
+		Then the following elements are dislpayed on the page
+		 | Element        |
+		 | arrow-prev.svg |
+		 | arrow-next.svg |
+		 | slick-dots     |
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
@@ -19,41 +41,6 @@ Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	Then the alerts are not displayed on the page
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18459
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                                                  |
-		 | Book a visit with one of our expert property consultants |
-		 | Book property visit                                      |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_AddDownArrowInHero18579
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18579
-	And I close the pop-ups
-	Then the following element is displayed on the page: scrolldownarrow
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_BurguerMenuTablet18658
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18658
-	And I close the pop-ups
-	And I set the window size to Tablet
-	Then the following element is displayed on the page: burguer-menu collapsed
-	When I click burguer-menu collapsed
-	Then the following elements are dislpayed on the page
-		 | Element                |
-		 | Sub Navigation         |
-		 | Home                   |
-		 | Your account           |
-		 | Information Centre     |
-		 | Your Location          |
-		 | How much could I earn? |
-		 | Book a holiday         |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18582
@@ -67,31 +54,12 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 		 | Access our expert knowledge on listing and managing holiday lets.                                               |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18529
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-		 | Element                                                                                                                              |
-		 | List your property for a welcome gift of your choice                                                                                 |
-		 | Sign your contract by 1st April 2022 and get your property taking bookings by 1st June 2022 to earn a welcome gift of your choice... |
-		 | /letyourcottage/information/welcome-gift/                                                                                            |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_TestimonialsCarousel18584
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18584
 	And I close the pop-ups
 	Then the Testimonials carousel is displayed on the page
 	When I click /images/sykes/letyourcottage/icons/arrow-prev.svg
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_RemoveRequestYourOwnerPackCta18486
-	And I close the pop-ups
-	Then the How Much Could I Earn CTA is not displayed
-	And the Holiday Letting Made Easy CTA is not displayed
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_InactivityExitModal18457
@@ -115,16 +83,6 @@ Scenario: Experiment LetYourCottages_InactivityExitModal18457
 	     | inactive-form_phone_validation_error      |
 
 @ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18552
-	And I close the pop-ups
-	Then the following elements are dislpayed on the page
-	     | Element                                                            |
-	     | We tailor our managed service package to suit your specific needs. |
-	     | /letyourcottage/managed-services/                                  |
-
-@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18585
@@ -137,33 +95,6 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
          | /images/let_your_cottage/letting_easy/helpline-24h.png              |
          | /images/let_your_cottage/letting_easy/full-property-management.png  |
          | /images/let_your_cottage/letting_easy/photography.png               |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_RemoveAlreadyStartedLogin18580
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18580
-	And I close the pop-ups
-	Then the following element is not displayed on the page: Already started?
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_ExtendManagedServicesSection18466
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18466
-	And I close the pop-ups
-	When I scroll to the following element: Partially managed
-	Then the following elements are dislpayed on the page
-         | Element                                                            |
-         | What is the difference between partially managed service and fully |
-         | Partially managed                                                  |
-         | Fully managed                                                      |
-
-@ActiveExperiments @ProductionRegressionSuite
-Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18461
-	And I close the pop-ups
-	And I navigate to https://www.sykescottages.co.uk/letyourcottage/
-	Then the following element is displayed on the page: hero-slideshow
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_CreateTextSupportEnquiry18460
@@ -197,12 +128,74 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 		| o-icon c-alert__icon o-icon--size-large |
 		| c-alert__cta cta_tint js-alert-close    |
 
-@ActiveExperiments @ProductionRegressionSuite
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18459
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                                  |
+		 | Book a visit with one of our expert property consultants |
+		 | Book property visit                                      |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_RemoveRequestYourOwnerPackCta18486
+	And I close the pop-ups
+	Then the How Much Could I Earn CTA is not displayed
+	And the Holiday Letting Made Easy CTA is not displayed
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18529
+	And I close the pop-ups
+	Then the following elements are dislpayed on the page
+		 | Element                                                                                                                              |
+		 | List your property for a welcome gift of your choice                                                                                 |
+		 | Sign your contract by 1st April 2022 and get your property taking bookings by 1st June 2022 to earn a welcome gift of your choice... |
+		 | /letyourcottage/information/welcome-gift/                                                                                            |
+
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
 	Given I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?dev_tools=product
 	When I apply the following experiment: 18277
 	And I close the pop-ups
 	Then the testimonials_region_pc section is displayed at position 2
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_BurguerMenuTablet18658
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18658
+	And I close the pop-ups
+	And I set the window size to Tablet
+	Then the following element is displayed on the page: burguer-menu collapsed
+	When I click burguer-menu collapsed
+	Then the following elements are dislpayed on the page
+		 | Element                |
+		 | Sub Navigation         |
+		 | Home                   |
+		 | Your account           |
+		 | Information Centre     |
+		 | Your Location          |
+		 | How much could I earn? |
+		 | Book a holiday         |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_AddDownArrowInHero18579
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18579
+	And I close the pop-ups
+	Then the following element is displayed on the page: scrolldownarrow
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 18461
+	And I close the pop-ups
+	And I navigate to https://www.sykescottages.co.uk/letyourcottage/
+	Then the following element is displayed on the page: hero-slideshow
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347

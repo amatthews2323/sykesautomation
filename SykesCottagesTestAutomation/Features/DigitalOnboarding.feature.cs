@@ -171,7 +171,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Test Owner"});
                 table2.AddRow(new string[] {
                             "Email address",
-                            "sykescottagestest@example.org"});
+                            "sykestest@example.org"});
                 table2.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
@@ -316,7 +316,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I select Get Started Online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 55
- testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can add a property with the following postcode: CH1 2NW", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 56
  testRunner.And("I can create an account using password: Testing123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -379,7 +379,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I can complete Personal Details Step 4 - Select commission tier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 76
- testRunner.And("I can complete Personal Details - Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 77
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -436,9 +436,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I can sign in to my account using the following details", ((string)(null)), table8, "Then ");
 #line hidden
 #line 87
- testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details - Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 88
+ testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 89
  testRunner.And("the following text is displayed on the page: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

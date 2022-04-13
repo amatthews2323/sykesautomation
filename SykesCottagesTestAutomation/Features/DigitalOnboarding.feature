@@ -19,7 +19,7 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	When I enter the following details on the enquiry form
 	| Key           | Value                         |
 	| Full name     | Test Owner                    |
-	| Email address | sykescottagestest@example.org |
+	| Email address | sykestest@example.org |
 	| Phone number  | 07000000000                   |
 	And I submit the enquiry form
 	Then the following elements are dislpayed on the page
@@ -52,7 +52,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	| Phone number  | 07000000000 |
 	And I submit the enquiry form
 	When I select Get Started Online
-	Then I can add a property with the following postcode: Random
+	Then I can add a property with the following postcode: CH1 2NW
 	And I can create an account using password: Testing123
 	And I can register my account via the email
 	And I can sign in to my account using the following details
@@ -73,7 +73,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	And I can complete Personal Details Step 2 - Your bank details
 	And I can complete Personal Details Step 3 - File uploads
 	And I can complete Personal Details Step 4 - Select commission tier
-	And I can complete Personal Details - Step 5 - Property Pricing
+	And I can complete Personal Details Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
 	And the following text is displayed on the page: Welcome to the Sykes Family!
 
@@ -84,5 +84,6 @@ Scenario: The user completes digital onboarding
 	| Key      | Value                       |
 	| Username | sykestest855343@example.org |
 	| Password | Testing123                  |
+	And I can complete Personal Details - Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
 	And the following text is displayed on the page: Welcome to the Sykes Family!

@@ -110,9 +110,6 @@ namespace SykesCottagesTestAutomation
             {
                 Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Carrying on regardless...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
-
-                //Console.WriteLine("Website did not launch on first attempt. Trying again...");
-                //shared.driver.Navigate().GoToUrl(domain + path); //Launch website
             }
 
             //Check for experiments
@@ -167,9 +164,18 @@ namespace SykesCottagesTestAutomation
                 string Experiment = array[i].ToString().Trim();
                 Type("experiment-search", Experiment);
                 WaitASecond();
-                shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
+                Click("//li[contains(@data-name,\"" + Experiment + "\")]");
+                //shared.driver.FindElement(By.XPath("//li[contains(@data-name,\"" + Experiment + "\")]")).Click();
             }
-            shared.driver.Navigate().Refresh();
+            try
+            {
+                Console.WriteLine("Reload the page");
+                shared.driver.Navigate().Refresh();
+            }
+            catch (Exception)
+            {
+                shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
+            }
             WaitASecond();
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
@@ -224,7 +230,14 @@ namespace SykesCottagesTestAutomation
 
         public string XPath(string value, string element = "*")
         {
-            return "//"+ element +"[@*=\""+ value +"\"]|//"+ element +"[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]|//" + element + "[contains(@id,\"" + value + "\")]";
+            if (value.Contains("//"))
+            {
+                return value;
+            }
+            else
+            {
+                return "//" + element + "[@*=\"" + value + "\"]|//" + element + "[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]|//" + element + "[contains(@id,\"" + value + "\")]";
+            }
         }
 
         public void SwitchFocus()
@@ -246,7 +259,7 @@ namespace SykesCottagesTestAutomation
 
         public void WaitUntilVisible(string value)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 120));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
         }
 
@@ -302,23 +315,12 @@ namespace SykesCottagesTestAutomation
             var element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
             Console.WriteLine("Click \"" + value + "\"");
             element.Click();
-            //WaitASecond();
         }
 
         public void JSClick(string value)
         {
             IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            IWebElement element;
-            if (value.Contains("//"))
-            {
-                //element = shared.driver.FindElement(By.XPath("\"" + value + "\""));
-                element = shared.driver.FindElement(By.XPath(value));
-            }
-            else
-            {
-                element = shared.driver.FindElement(By.XPath(XPath(value)));
-            }
-            jsExecutor.ExecuteScript("arguments[0].click()", element);
+            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath(XPath(value))));
         }
 
         public void ClickAttribute(string value, string attribute = "button")
@@ -338,7 +340,6 @@ namespace SykesCottagesTestAutomation
                 {
                     Console.WriteLine("Click \"" + value + "\"");
                     shared.driver.FindElement(By.XPath(XPath(value))).Click();
-                    //WaitASecond();
                 }
                 else
                 {

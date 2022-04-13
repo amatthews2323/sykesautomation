@@ -43,7 +43,6 @@ Scenario: Get experiments conversion precentage
 		| 4431    |
 		| 4470    |
 		| 4477    |
-		| 4476    |
 		| 4475    |
 		| 4493    |
 

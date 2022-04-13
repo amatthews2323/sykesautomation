@@ -10,11 +10,11 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
         public static string SaveScreenshots = ""; //Take a screenshot at the end of each scenario
-        public static string DismissAllPopups = ""; //Dismiss popups, alerts and surveys
+        public static string DismissAllPopups = "Yes"; //Dismiss popups, alerts and surveys
         public static string BrowserSize = ""; //Set the browser window size: Max | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width
         public static int PageHeight = 1024; //Set the browser window height
