@@ -320,7 +320,7 @@ Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581
 	When I apply the following experiment: 18581
 	And I close the pop-ups
 	Then the enquiry form submit button is disabled
-	When I enter the following details in the enquiry form
+	When I enter the following details on the enquiry form
 		| Key           | Value                         |
 		| Full name     | Test Owner                    |
 		| Email address | sykescottagestest@example.org |

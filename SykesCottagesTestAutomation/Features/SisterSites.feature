@@ -1,7 +1,7 @@
 ﻿Feature: SisterSites
 	Sister sites content and functionality
 
-@SisterSites @ProductionRegressionSuite @RegressionSmokeTest
+@SisterSites @RegressionSmokeTest
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <URL>
 	Then the following elements are dislpayed on the page

@@ -1,7 +1,7 @@
 ﻿Feature: LandingPages
 	Landing pages content and functionality
 
-@LandingPages @ProductionRegressionSuite @RegressionSmokeTest
+@LandingPages @RegressionSmokeTest
 Scenario: The Landing pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page

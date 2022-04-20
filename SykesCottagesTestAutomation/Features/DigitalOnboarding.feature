@@ -47,7 +47,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	Given I have navigated to the following page: letyourcottage
 	When I enter the following details on the enquiry form
 	| Key           | Value       |
-	| Full name     | Test Owner  |
+	| Full name     | Dave Jones  |
 	| Email address | Random      |
 	| Phone number  | 07000000000 |
 	And I submit the enquiry form
@@ -84,6 +84,6 @@ Scenario: The user completes digital onboarding
 	| Key      | Value                       |
 	| Username | sykestest855343@example.org |
 	| Password | Testing123                  |
-	And I can complete Personal Details - Step 5 - Property Pricing
+	And I can complete Personal Details Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
 	And the following text is displayed on the page: Welcome to the Sykes Family!

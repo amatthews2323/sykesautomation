@@ -177,7 +177,6 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/marketing-your-holiday-let", "Advertising and marketing your holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/buy-own-sell-holiday-lets", "Buying, owning and selling a holiday let", null)]
@@ -190,7 +189,6 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "InformationCentre",
-                    "ProductionRegressionSuite",
                     "RegressionSmokeTest"};
             if ((exampleTags != null))
             {

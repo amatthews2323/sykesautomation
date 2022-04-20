@@ -276,6 +276,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "4475"});
                 table38.AddRow(new string[] {
                             "4493"});
+                table38.AddRow(new string[] {
+                            "4503"});
 #line 29
  testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table38, "Then ");
 #line hidden
@@ -292,7 +294,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments status", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 50
+#line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -312,7 +314,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 51
+#line 52
  testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
@@ -348,12 +350,12 @@ this.ScenarioInitialize(scenarioInfo);
                 table39.AddRow(new string[] {
                             "LetYourCottages_DashboardInfoCarousel18696"});
                 table39.AddRow(new string[] {
-                            "LetYourCottages_HeroOnMobile18815"});
-                table39.AddRow(new string[] {
                             "LetYourCottages_MobileFriendlyHolidayLetting18846"});
                 table39.AddRow(new string[] {
                             "LetYourCottages_RevisitManagedServicesBanner18906"});
-#line 52
+                table39.AddRow(new string[] {
+                            "LetYourCottages_EnquiryFormPhoneSubCopy18889"});
+#line 53
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table39, "Then ");
 #line hidden
             }

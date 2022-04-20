@@ -45,6 +45,7 @@ Scenario: Get experiments conversion precentage
 		| 4477    |
 		| 4475    |
 		| 4493    |
+		| 4503    |
 
 @HolmesExperiments
 Scenario: Get experiments status
@@ -66,6 +67,6 @@ Scenario: Get experiments status
 		| LetYourCottages_ToolTipsonLYPHeaders18582                        |
 		| LetYourCottages_ClearOptionOnDashboard18697                      |
 		| LetYourCottages_DashboardInfoCarousel18696                       |
-		| LetYourCottages_HeroOnMobile18815                                |
 		| LetYourCottages_MobileFriendlyHolidayLetting18846                |
 		| LetYourCottages_RevisitManagedServicesBanner18906                |
+		| LetYourCottages_EnquiryFormPhoneSubCopy18889                     |

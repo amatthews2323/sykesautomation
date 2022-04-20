@@ -13,7 +13,7 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following elements are dislpayed on the page
 	| Element                                                                                                                                                        |
 	| form-heading-container                                                                                                                                         |
-	| Complete the form to receive your information pack                                                                                                             |
+#	| Complete the form to receive your information pack                                                                                                             |
 	| heroform_first_name                                                                                                                                            |
 	| heroform_first_name_validation_error                                                                                                                           |
 	| heroform_email                                                                                                                                                 |
@@ -78,7 +78,7 @@ Scenario: The Managed Services links direct to the LYP form
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty @ProductionRegressionSuite @RegressionSmokeTest
+@LetYourProperty @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed on the page
@@ -128,7 +128,7 @@ Scenario: The Thinking of Buying Guide section is displayed on the Let Your Prop
 	And I switch focus to the new tab
 	Then the following page title is displayed: Holiday Let Information Centre | Sykes Holiday Cottages
 
-@MobileApp @ProductionRegressionSuite @RegressionSmokeTest
+@MobileApp @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile

@@ -23,7 +23,7 @@ Scenario: The user can navigate to the Information Centre pages
 	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning \| Sykes Cottages |
 	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief \| Sykes  |
 
-@InformationCentre @ProductionRegressionSuite @RegressionSmokeTest
+@InformationCentre @RegressionSmokeTest
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page

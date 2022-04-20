@@ -157,8 +157,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table46.AddRow(new string[] {
                             "form-heading-container"});
                 table46.AddRow(new string[] {
-                            "Complete the form to receive your information pack"});
-                table46.AddRow(new string[] {
                             "heroform_first_name"});
                 table46.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
@@ -451,13 +449,11 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Let Your Property page")]
         [NUnit.Framework.CategoryAttribute("LetYourProperty")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
         public virtual void TheRelevantSectionsAreDisplayedOnTheLetYourPropertyPage()
         {
             string[] tagsOfScenario = new string[] {
                     "LetYourProperty",
-                    "ProductionRegressionSuite",
                     "RegressionSmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
@@ -664,13 +660,11 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Mobile App homepage")]
         [NUnit.Framework.CategoryAttribute("MobileApp")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
         [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
         public virtual void TheRelevantSectionsAreDisplayedOnTheMobileAppHomepage()
         {
             string[] tagsOfScenario = new string[] {
                     "MobileApp",
-                    "ProductionRegressionSuite",
                     "RegressionSmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Mobile App homepage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);

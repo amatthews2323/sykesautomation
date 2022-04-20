@@ -10,17 +10,17 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
         public static string SaveScreenshots = ""; //Take a screenshot at the end of each scenario
-        public static string DismissAllPopups = "Yes"; //Dismiss popups, alerts and surveys
+        public static string AcceptCookies = "Yes"; //Dismiss the cookie popup
+        public static string DismissPopups = ""; //Dismiss popups, alerts and surveys
         public static string BrowserSize = ""; //Set the browser window size: Max | Desktop | Tablet | Mobile | Custom
-        public static int PageWidth = 768; //Set the browser window width
-        public static int PageHeight = 1024; //Set the browser window height
-        public static int TimeOut = 10; //Set pageload timeout
+        public static int PageWidth = 768; //Set the browser window width: 768 (iPhone)
+        public static int PageHeight = 1024; //Set the browser window height: 1024 (iPhone)
+        public static int TimeOut = 15; //Set pageload timeout
         public static string ExtentReportName = "LYP Automated Test Report"; //Set the Extort Report name
-
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;
@@ -80,7 +80,6 @@ namespace SykesCottagesTestAutomation
             else if (_scenarioContext.TestError != null)
             {
                 var mediaEntity = TakeScreenshot(_scenarioContext.ScenarioInfo.Title.Trim());
-
                 if (stepType == "Given")
                     scenario.CreateNode<Given>(_scenarioContext.StepContext.StepInfo.Text).Fail(_scenarioContext.TestError.Message, mediaEntity);
                 else if(stepType == "When")
@@ -112,7 +111,6 @@ namespace SykesCottagesTestAutomation
         public MediaEntityModelProvider TakeScreenshot(string Name)
         {
             var screenshot = ((ITakesScreenshot)shared.driver).GetScreenshot().AsBase64EncodedString;
-
             return MediaEntityBuilder.CreateScreenCaptureFromBase64String(screenshot, Name).Build();
         }
     }

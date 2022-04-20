@@ -299,7 +299,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Value"});
                 table5.AddRow(new string[] {
                             "Full name",
-                            "Test Owner"});
+                            "Dave Jones"});
                 table5.AddRow(new string[] {
                             "Email address",
                             "Random"});
@@ -436,7 +436,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("I can sign in to my account using the following details", ((string)(null)), table8, "Then ");
 #line hidden
 #line 87
- testRunner.And("I can complete Personal Details - Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I can complete Personal Details Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 88
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
