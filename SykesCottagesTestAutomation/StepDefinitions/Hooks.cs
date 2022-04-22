@@ -11,7 +11,7 @@ namespace SykesCottagesTestAutomation
     public class Hooks : CommonSteps
     {
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
         public static string Experiments = ""; //Set experiment(s) - comma separated list
         public static string SaveScreenshots = ""; //Take a screenshot at the end of each scenario
         public static string AcceptCookies = "Yes"; //Dismiss the cookie popup

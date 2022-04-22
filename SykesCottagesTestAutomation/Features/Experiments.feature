@@ -2,6 +2,21 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_EnquiryFormPhoneSubCopy18889
+	Then the following text is displayed on the page: Get started to access free holiday letting advice
+	When I enter the following details on the enquiry form
+	| Key           | Value                         |
+	| Full name     | Test Owner                    |
+	| Email address | sykescottagestest@example.org |
+	| Phone number  | 07000000000                   |
+	And I click form-heading-container
+	And I click o-checkbox__input js-marketing-preferences-phone
+	Then I wait 2 seconds
+	Then the following text is displayed on the page: If you would like a call from our property experts regarding this enquiry, please leave the phone option selected below.
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704

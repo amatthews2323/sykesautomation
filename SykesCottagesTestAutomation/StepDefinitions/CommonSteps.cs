@@ -8,9 +8,11 @@ using NUnit.Framework;
 using TechTalk.SpecFlow;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using WebDriverManager.DriverConfigs.Impl;
 using System.IO;
+using CsvHelper;
 using WDSE.ScreenshotMaker;
 using WDSE.Decorators;
 using WDSE;
@@ -119,7 +121,7 @@ namespace SykesCottagesTestAutomation
                 if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
                 {
                     //Console.WriteLine("Dev Tools not found");
-                    shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product"); 
+                    shared.driver.Navigate().GoToUrl(domain + path + "/?dev_tools=product");
                 }
                 ApplyExperiment(Hooks.Experiments);
             }
@@ -180,7 +182,7 @@ namespace SykesCottagesTestAutomation
 
         public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
         {
-            
+
             if (Hooks.AcceptCookies == "Yes")
             {
                 if (acceptCookies == "Yes")
@@ -231,6 +233,27 @@ namespace SykesCottagesTestAutomation
             {
                 Console.WriteLine("Popups not dismissed. Set DismissAllPopups to 'Yes' in Hooks class to dismiss popups.");
             }
+        }
+
+        public string ReadFromCSV(string fileName, string columnName, string rowName, string searchTerm)
+        {
+            string csvValue = "";
+            DataTable dataTable = null;
+            using var reader = new StreamReader(@fileName + ".csv");
+            using var csv = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture);
+            using (var dr = new CsvDataReader(csv))
+            {
+                dataTable = new DataTable();
+                dataTable.Load(dr);
+            }
+            DataRow[] rows = dataTable.Select(rowName + " = '" + searchTerm + "'");
+            foreach (DataRow row in rows)
+            {
+                Console.WriteLine("CSV value is: " + row[columnName]);
+                csvValue = row[columnName].ToString();
+                //return row[columnName].ToString();
+            }
+            return csvValue;
         }
 
         public string XPath(string value, string element = "*")

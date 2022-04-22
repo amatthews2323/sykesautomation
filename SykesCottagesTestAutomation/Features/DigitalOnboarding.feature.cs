@@ -299,7 +299,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Value"});
                 table5.AddRow(new string[] {
                             "Full name",
-                            "Dave Jones"});
+                            "Auto Bot"});
                 table5.AddRow(new string[] {
                             "Email address",
                             "Random"});

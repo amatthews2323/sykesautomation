@@ -1,6 +1,11 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
+@LetYourProperty
+Scenario: Read from CSV
+	Given I have navigated to the following page: letyourcottage
+	Then I read the csv file EnvironmentURLs, colunm URL, row Name, search term Product
+
 @Navigation
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage

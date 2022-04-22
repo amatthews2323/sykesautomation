@@ -34,22 +34,22 @@ Scenario: The Sykes sister sites are displayed correctly
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am accessing <URL>
 	Then the following elements are dislpayed on the page
-	| Element                                                                     |
-	| form-heading-container                                                      |
-	| Complete the form to receive your information pack                          |
-	| heroform_first_name                                                         |
-	| heroform_first_name_validation_error                                        |
-	| heroform_email                                                              |
-	| heroform_email_validation_error                                             |
-	| heroform_phone                                                              |
-	| heroform_phone_validation_error                                             |
-	| marketing_email                                                             |
-	| marketing_phone                                                             |
-	| marketing_sms                                                               |
-	| marketing_post                                                              |
-	| To stop this, just ask or click the opt out link when we are next in touch. |
-	| /terms/privacypolicy                                                        |
-	| submit                                                                      |
+	| Element                                                                                           |
+	| form-heading-container                                                                            |
+	| Complete the form to receive your information pack                                                |
+	| heroform_first_name                                                                               |
+	| heroform_first_name_validation_error                                                              |
+	| heroform_email                                                                                    |
+	| heroform_email_validation_error                                                                   |
+	| heroform_phone                                                                                    |
+	| heroform_phone_validation_error                                                                   |
+	| marketing_email                                                                                   |
+	| marketing_phone                                                                                   |
+	| marketing_sms                                                                                     |
+	| marketing_post                                                                                    |
+	| Your details will be stored and used to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                              |
+	| submit                                                                                            |
 #	When I select the alert Get Started button
 #	Then the following elements are dislpayed on the page
 #	| Element                        |

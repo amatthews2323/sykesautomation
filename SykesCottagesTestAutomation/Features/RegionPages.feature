@@ -24,22 +24,22 @@ Scenario: The Regional pages are displayed correctly
 Scenario: The enquiry form is displayed on the Regional pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed on the page
-	| Element                                                                                                                                                        |
-	| form-heading-container                                                                                                                                         |
-	| Complete the form to receive your information pack                                                                                                             |
-	| heroform_first_name                                                                                                                                            |
-	| heroform_first_name_validation_error                                                                                                                           |
-	| heroform_email                                                                                                                                                 |
-	| heroform_email_validation_error                                                                                                                                |
-	| heroform_phone                                                                                                                                                 |
-	| heroform_phone_validation_error                                                                                                                                |
-	| marketing_email                                                                                                                                                |
-	| marketing_phone                                                                                                                                                |
-	| marketing_sms                                                                                                                                                  |
-	| marketing_post                                                                                                                                                 |
-	| Your details will be stored and used to send you information about our property letting services. You can opt out or unsubscribe at any time by contacting us. |
-	| /terms/privacypolicy                                                                                                                                           |
-	| submit                                                                                                                                                         |
+	| Element                                                                                           |
+	| form-heading-container                                                                            |
+	| Complete the form to receive your information pack                                                |
+	| heroform_first_name                                                                               |
+	| heroform_first_name_validation_error                                                              |
+	| heroform_email                                                                                    |
+	| heroform_email_validation_error                                                                   |
+	| heroform_phone                                                                                    |
+	| heroform_phone_validation_error                                                                   |
+	| marketing_email                                                                                   |
+	| marketing_phone                                                                                   |
+	| marketing_sms                                                                                     |
+	| marketing_post                                                                                    |
+	| Your details will be stored and used to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                              |
+	| submit                                                                                            |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container

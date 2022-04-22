@@ -47,7 +47,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	Given I have navigated to the following page: letyourcottage
 	When I enter the following details on the enquiry form
 	| Key           | Value       |
-	| Full name     | Dave Jones  |
+	| Full name     | Auto Bot    |
 	| Email address | Random      |
 	| Phone number  | 07000000000 |
 	And I submit the enquiry form

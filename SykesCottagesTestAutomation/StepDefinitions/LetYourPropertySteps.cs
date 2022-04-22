@@ -50,6 +50,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             CloseAllPopups();
         }
 
+        [Then(@"I read the csv file (.*), colunm (.*), row (.*), search term (.*)")]
+        public void ThenIReadTheCsvFileColunmRowSearchTerm(string fileName, string columnName, string rowName, string searchTerm)
+        {
+            string csvValue = ReadFromCSV(fileName, columnName, rowName, searchTerm);
+        }
+
         [When(@"I click (.*)")]
         public void IClick(string value)
         {
@@ -60,21 +66,18 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenISelectTheAlertGetStartedButton()
         {
             Click("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]", waitTime: 1);
-            //WaitASecond();
         }
 
         [When(@"I select the Partially Managed Enquire Now button")]
         public void WhenISelectThePartiallyManagedEnquireNowButton()
         {
             Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a", waitTime: 5);
-            //WaitASecond(5);
         }
 
         [When(@"I select the Fully Managed Enquire Now button")]
         public void WhenISelectTheFullyManagedEnquireNowButton()
         {
             Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a", waitTime: 5);
-            //WaitASecond(5);
         }
 
         [Then(@"the enquiry form is displayed with the tint applied")]
@@ -107,7 +110,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenISelectTheCloseIconOnTheForm()
         {
             Click("//div[@class='o-overlay__content']/button[@title='Close form']", waitTime: 1);
-            //WaitASecond();
         }
 
         [When(@"I select the (.*) navigation link under (.*)")]
