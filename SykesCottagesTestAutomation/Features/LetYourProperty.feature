@@ -1,11 +1,6 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@LetYourProperty
-Scenario: Read from CSV
-	Given I have navigated to the following page: letyourcottage
-	Then I read the csv file EnvironmentURLs, colunm URL, row Name, search term Product
-
 @Navigation
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
@@ -16,22 +11,22 @@ Scenario: The user can navigate to the Let Your Property page
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed on the page
-	| Element                                                                                                                                                        |
-	| form-heading-container                                                                                                                                         |
-#	| Complete the form to receive your information pack                                                                                                             |
-	| heroform_first_name                                                                                                                                            |
-	| heroform_first_name_validation_error                                                                                                                           |
-	| heroform_email                                                                                                                                                 |
-	| heroform_email_validation_error                                                                                                                                |
-	| heroform_phone                                                                                                                                                 |
-	| heroform_phone_validation_error                                                                                                                                |
-	| marketing_email                                                                                                                                                |
-	| marketing_phone                                                                                                                                                |
-	| marketing_sms                                                                                                                                                  |
-	| marketing_post                                                                                                                                                 |
-	| Your details will be stored and used to send you information about our property letting services. You can opt out or unsubscribe at any time by contacting us. |
-	| /terms/privacypolicy                                                                                                                                           |
-	| submit                                                                                                                                                         |
+	| Element                                                                                           |
+	| form-heading-container                                                                            |
+#   | Complete the form to receive your information pack												|
+	| heroform_first_name                                                                               |
+	| heroform_first_name_validation_error                                                              |
+	| heroform_email                                                                                    |
+	| heroform_email_validation_error                                                                   |
+	| heroform_phone                                                                                    |
+	| heroform_phone_validation_error                                                                   |
+	| marketing_email                                                                                   |
+	| marketing_phone                                                                                   |
+	| marketing_sms                                                                                     |
+	| marketing_post                                                                                    |
+	| Your details will be stored and used to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                              |
+	| submit                                                                                            |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
@@ -66,7 +61,29 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	Then the following element is displayed on the page: Back To Top Button
 
 @LetYourProperty @ProductionRegressionSuite
-Scenario: The Income Projection is displayed upon interactions
+Scenario: The relevant elements are displayed within the footer
+	Given I have navigated to the following page: letyourcottage
+	When I scroll to the following element: page-footer
+	Then the following elements are dislpayed on the page
+    | Element                                                    |
+    | /images/sykes/sykes-primary-logo-white.svg                 |
+    | © 2022 All rights reserved                                 |
+    | One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom |
+    | Registration No: 4469189                                   |
+    | VAT Registration No: 204 9794 88                           |
+    | Email us at letwithsykes@sykescottages.co.uk               |
+    | Sykes Product Showcase 2022                                |
+    | /blog/category/cottage-owners/                             |
+    | /terms/privacypolicy                                       |
+    | /press-and-media.html                                      |
+    | /letyourcottage/holiday-homes-for-sale/                    |
+    | https://www.facebook.com/sykescottages.co.uk               |
+    | https://twitter.com/sykescottages                          |
+    | https://pinterest.com/sykescottages/                       |
+    | https://instagram.com/sykescottages/                       |
+
+@LetYourProperty @ProductionRegressionSuite
+Scenario: The Income Projection is displayed upon interaction
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed on the page: Please select your region
 	When I select option South West from the region dropdown
@@ -100,11 +117,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
-Scenario: The How much could I earn is displayed in the correct place
-	Given I have navigated to the following page: letyourcottage
-	Then the How much could I earn section is displayed at position 4
-
-#@LetYourProperty @ProductionRegressionSuite
 Scenario: The page sections are displayed is the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the <Section> section is displayed at position <Position>
@@ -120,7 +132,7 @@ Scenario: The page sections are displayed is the correct order
 	| Are you thinking of buying                             | 10       |
 	| Request your free owner information pack               | 11       |
 
-@ThinkingOfBuying @ProductionRegressionSuite
+@LetYourProperty @ThinkingOfBuying @ProductionRegressionSuite
 Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	And I view the Thinking of Buying section

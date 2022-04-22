@@ -2,6 +2,15 @@
 	Test specific experiments
 
 @ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
+	Then the following elements are dislpayed on the page
+		 | Element                           |
+		 | Sykes Product Showcase 2022       |
+		 | Sykes Cottages Showcase promotion |
+
+@ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_EnquiryFormPhoneSubCopy18889
@@ -37,15 +46,6 @@ Scenario: Experiment LetYourCottages_SectionImageNavigation18583
 		 | arrow-prev.svg |
 		 | arrow-next.svg |
 		 | slick-dots     |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
-	Then the following elements are dislpayed on the page
-		 | Element                           |
-		 | Sykes Product Showcase 2022       |
-		 | Sykes Cottages Showcase promotion |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791

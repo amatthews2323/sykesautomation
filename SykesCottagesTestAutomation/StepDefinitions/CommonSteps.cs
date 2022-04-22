@@ -1,21 +1,21 @@
-﻿using OpenQA.Selenium;
+﻿using CsvHelper;
+using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using NUnit.Framework;
-using TechTalk.SpecFlow;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using WebDriverManager.DriverConfigs.Impl;
 using System.IO;
-using CsvHelper;
+using TechTalk.SpecFlow;
 using WDSE.ScreenshotMaker;
 using WDSE.Decorators;
 using WDSE;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace SykesCottagesTestAutomation
 {
@@ -34,38 +34,6 @@ namespace SykesCottagesTestAutomation
             shared = context;
         }
 
-        public static string SetBaseUrl(string envType)
-        {
-            string url;
-            if (envType == "Tech")
-            {
-                url = "https://tech.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Product")
-            {
-                url = "https://product.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Cro")
-            {
-                url = "https://cro.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Project")
-            {
-                url = "https://project.staging.sykescottages.co.uk/";
-                return url;
-            }
-            if (envType == "Live")
-            {
-                url = "https://www.sykescottages.co.uk/";
-                return url;
-            }
-            url = "https://tech.staging.sykescottages.co.uk/";
-            return url;
-        }
-
         public void SelectBrowser(string browser)
         {
             switch (browser)
@@ -73,8 +41,6 @@ namespace SykesCottagesTestAutomation
                 case "Chrome":
                     shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers");
                     //var options = new ChromeOptions();
-                    //options.AddArgument("no-sandbox");
-                    //shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", options, TimeSpan.FromMinutes(1));
                     //options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0"); //Option for adding extesions to Chrome
                     //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig()); //For launching Chrome via a build pipeline
                     break;
@@ -94,10 +60,10 @@ namespace SykesCottagesTestAutomation
 
         public void LaunchWebsite(string domain = "", string path = "")
         {
-            //Check for domain override
+            //Check for domain override, if none found, use the one specified in the Hooks class
             if (domain == "")
             {
-                domain = SetBaseUrl(Hooks.Environemt);
+                domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.Environemt); //Get the URL based on the Hooks.Environemt value
             }
 
             SelectBrowser(Hooks.Browser); //Set the driver and browser
@@ -251,14 +217,13 @@ namespace SykesCottagesTestAutomation
             {
                 Console.WriteLine("CSV value is: " + row[columnName]);
                 csvValue = row[columnName].ToString();
-                //return row[columnName].ToString();
             }
             return csvValue;
         }
 
         public string XPath(string value, string element = "*")
         {
-            if (value.Contains("//"))
+            if (value.Contains("//") & !value.Contains("http"))
             {
                 return value;
             }
@@ -298,7 +263,7 @@ namespace SykesCottagesTestAutomation
 
         public void WaitUntilVisible(string value)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 120));
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
         }
 

@@ -13,6 +13,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
         }
 
+        public string CSVValue;
+
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
@@ -53,7 +55,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I read the csv file (.*), colunm (.*), row (.*), search term (.*)")]
         public void ThenIReadTheCsvFileColunmRowSearchTerm(string fileName, string columnName, string rowName, string searchTerm)
         {
-            string csvValue = ReadFromCSV(fileName, columnName, rowName, searchTerm);
+            CSVValue = ReadFromCSV(fileName, columnName, rowName, searchTerm);
         }
 
         [When(@"I click (.*)")]

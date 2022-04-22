@@ -130,20 +130,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am accessing {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table61.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table61.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "form-heading-container"});
-                table61.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "partner"});
-                table61.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table61.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "Request a free owner pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table61, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table62, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -207,41 +207,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
  testRunner.Given(string.Format("I am accessing {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "form-heading-container"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_first_name"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_email"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_phone"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "marketing_email"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "marketing_phone"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "marketing_sms"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "marketing_post"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "Your details will be stored and used to send you information about our property l" +
                                 "etting services."});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table62.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "submit"});
 #line 36
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table62, "Then ");
+ testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table63, "Then ");
 #line hidden
 #line 59
  testRunner.When("I enter an email address without an @ symbol", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
