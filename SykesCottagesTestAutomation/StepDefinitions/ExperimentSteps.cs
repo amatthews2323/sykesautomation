@@ -1,11 +1,11 @@
-﻿using OpenQA.Selenium;
-using TechTalk.SpecFlow;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using OpenQA.Selenium.Support.UI;
+using TechTalk.SpecFlow;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -38,9 +38,7 @@ namespace SykesCottagesTestAutomation.BaseClass
                 {
                     if (shared.driver.FindElement(By.XPath("//li[@class='ng-scope']/a[text()='Next']")).Displayed)
                     {
-                        Click("//li[@class='ng-scope']/a[text()='Next']");
-                        //shared.driver.FindElement(By.XPath("//li[@class='ng-scope']/a[text()='Next']")).Click();
-                        WaitASecond(1);
+                        Click("//li[@class='ng-scope']/a[text()='Next']", waitTime: 1);
                     }
                 }
                 catch (Exception)

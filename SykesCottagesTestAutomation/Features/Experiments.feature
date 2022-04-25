@@ -1,6 +1,19 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
+@ActiveExperiments @ThinkingOfBuying @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
+	And I scroll to the following element: Looking to get started with holiday letting?
+	Then the following elements are dislpayed on the page
+         | Element                                      |
+         | Looking to get started with holiday letting? |
+         | Explore guides & resources                   |
+	When I click Explore guides & resources
+	And I switch focus to the new tab
+	Then the following page title is displayed: Holiday Let Information Centre | Sykes Holiday Cottages
+
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product

@@ -47,6 +47,7 @@ Scenario: Get experiments conversion precentage
 		| 4503    |
 		| 4509    |
 		| 4511    |
+		| 4516    |
 
 @HolmesExperiments
 Scenario: Get experiments status
@@ -72,3 +73,4 @@ Scenario: Get experiments status
 		| LetYourCottages_EnquiryFormPhoneSubCopy18889                     |
 		| LetYourCottages_SpeakToSomeoneSectionMobile18682                 |
 		| LetYourCottages_ResourceCenter18681                              |
+		| LetYourCottages_ReTestBedrockPromo19009                          |

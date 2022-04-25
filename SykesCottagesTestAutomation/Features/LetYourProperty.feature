@@ -132,19 +132,6 @@ Scenario: The page sections are displayed is the correct order
 	| Are you thinking of buying                             | 10       |
 	| Request your free owner information pack               | 11       |
 
-@LetYourProperty @ThinkingOfBuying @ProductionRegressionSuite
-Scenario: The Thinking of Buying Guide section is displayed on the Let Your Property page
-	Given I have navigated to the following page: letyourcottage
-	And I view the Thinking of Buying section
-	Then I wait 2 seconds
-	And the following elements are dislpayed on the page
-         | Element                                      |
-         | Looking to get started with holiday letting? |
-         | Explore guides & resources                   |
-	When I click Explore guides & resources
-	And I switch focus to the new tab
-	Then the following page title is displayed: Holiday Let Information Centre | Sykes Holiday Cottages
-
 @MobileApp @RegressionSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true

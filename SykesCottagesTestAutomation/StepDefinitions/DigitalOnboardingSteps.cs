@@ -1,6 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using System;
 using TechTalk.SpecFlow;
-using System;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {

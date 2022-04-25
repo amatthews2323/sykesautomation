@@ -1,8 +1,6 @@
-﻿using OpenQA.Selenium;
-using TechTalk.SpecFlow;
-using NUnit.Framework;
-using System;
+﻿using System;
 using System.Linq;
+using TechTalk.SpecFlow;
 
 namespace SykesCottagesTestAutomation.BaseClass
 {
@@ -206,12 +204,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             SelectFromDropdown(option, dropdown);
         }
 
-        [Given(@"I view the Thinking of Buying section")]
-        public void GivenIViewTheThinkingOfBuyingSection()
-        {
-            ClickIfDisplayed("/images/sykes/letyourcottage/collapseicons/money.svg");
-        }
-
         [Then(@"the following slick dot is highlighted (.*)")]
         public void ThenTheFollowingSlickDotIsHighlighted(int value)
         {
@@ -249,9 +241,9 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath("//*[@class='c-alert c-alert--standard js-alert  is-visible']")).Displayed)
+                if (ElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible']"))
                 {
-                    Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[@class='c-alert c-alert--standard js-alert  is-visible']")).Count != 0, "Alert displayed on the page");
+                    AssertElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible']");
                 }
             }
             catch (Exception)
@@ -265,7 +257,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath("//*[@class='c-alert c-alert--standard js-alert  is-visible']")).Displayed)
+                if (ElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible' and @style='display: none;']"))
                 {
                     AssertElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible' and @style='display: none;']");
                 }

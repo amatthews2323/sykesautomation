@@ -75,7 +75,7 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Carrying on regardless...");
+                Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Cancel page load and continue...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
@@ -149,9 +149,9 @@ namespace SykesCottagesTestAutomation
         public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
         {
 
-            if (Hooks.AcceptCookies == "Yes")
+            if (Hooks.AcceptCookies.Contains("Y"))
             {
-                if (acceptCookies == "Yes")
+                if (acceptCookies.Contains("Y"))
                 {
                     WaitASecond(2);
                     ClickIfDisplayed("Accept All Cookies", waitTime: 1);
@@ -162,7 +162,7 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("Cookies popup dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
             }
 
-            if (Hooks.DismissPopups == "Yes")
+            if (Hooks.DismissPopups.Contains("Y"))
             {
                 //Collapse survey
                 if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
@@ -242,6 +242,7 @@ namespace SykesCottagesTestAutomation
         public void SwitchFocus()
         {
             shared.driver.SwitchTo().Window(shared.driver.WindowHandles[1]);
+            WaitASecond(2);
         }
 
         public void Refresh()
@@ -293,6 +294,11 @@ namespace SykesCottagesTestAutomation
         {
             Console.WriteLine("Assert the following text is present on the page: " + value);
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text not found");
+        }
+
+        public bool ElementDisplayed(string value)
+        {
+            return shared.driver.FindElement(By.XPath(XPath(value))).Displayed;
         }
 
         public void AssertElementDisplayed(string value)
@@ -449,7 +455,7 @@ namespace SykesCottagesTestAutomation
         public void Screenshot(string fileName = "screenshot")
         {
             //Name of directory
-            string dir = @"C://Logs//Screenshots//" + DateTime.Now.ToString("yyyy-MM-dd");
+            string dir = @"C://Logs//" + DateTime.Now.ToString("yyyy-MM-dd") + "//Screenshots";
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
             {
