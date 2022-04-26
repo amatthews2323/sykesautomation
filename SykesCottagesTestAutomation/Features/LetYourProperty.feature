@@ -114,7 +114,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Putting your property in the spotlight       |
     | Holiday letting made easy                    |
     | Free Owner Information Pack                  |
-    | Looking to get started with holiday letting? |
+  # | Looking to get started with holiday letting? |
 
 #@LetYourProperty @ProductionRegressionSuite
 Scenario: The page sections are displayed is the correct order
@@ -146,7 +146,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
     | Putting your property in the spotlight       |
     | Holiday letting made easy                    |
     | Free Owner Information Pack                  |
-    | Looking to get started with holiday letting? |
+  # | Looking to get started with holiday letting? |
 	And the following elements are not dislpayed on the page
 	| Element                          |
 	| contact-to-book mobile           |

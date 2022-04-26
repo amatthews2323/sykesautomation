@@ -146,7 +146,7 @@ namespace SykesCottagesTestAutomation
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
-        public void CloseAllPopups(string acceptCookies = "Yes", string dismissAlerts = "Yes")
+        public void ClosePopups(string acceptCookies = "Y", string dismissAlerts = "Y")
         {
 
             if (Hooks.AcceptCookies.Contains("Y"))
@@ -174,25 +174,10 @@ namespace SykesCottagesTestAutomation
                 ClickIfDisplayed("nonenquiry6941");
 
                 //Dismiss alerts (unless overridden to test an experiment)
-                if (dismissAlerts == "Yes")
+                if (dismissAlerts.Contains("Y"))
                 {
-                    try
-                    {
-                        if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Displayed)
-                        {
-                            Click("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]");
-                        }
-                        WaitASecond();
-                        if (shared.driver.FindElement(By.XPath("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]")).Displayed)
-                        {
-                            Click("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
-                        }
-                    }
-
-                    catch (Exception)
-                    {
-                        Console.WriteLine("No alerts found");
-                    }
+                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
+                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
                 }
             }
             else
@@ -296,9 +281,9 @@ namespace SykesCottagesTestAutomation
             Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text not found");
         }
 
-        public bool ElementDisplayed(string value)
+        public bool ElementDisplayed(string value, string attribute = "*")
         {
-            return shared.driver.FindElement(By.XPath(XPath(value))).Displayed;
+            return shared.driver.FindElements(By.XPath(XPath(value, attribute))).Count != 0;
         }
 
         public void AssertElementDisplayed(string value)
@@ -345,7 +330,7 @@ namespace SykesCottagesTestAutomation
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath(XPath(value, attribute))).Displayed)
+                if (ElementDisplayed(value))
                 {
                     Console.WriteLine("Click \"" + value + "\"");
                     shared.driver.FindElement(By.XPath(XPath(value, attribute))).Click();
@@ -455,7 +440,13 @@ namespace SykesCottagesTestAutomation
         public void Screenshot(string fileName = "screenshot")
         {
             //Name of directory
-            string dir = @"C://Logs//" + DateTime.Now.ToString("yyyy-MM-dd") + "//Screenshots";
+            string dir = @"C://AutomatedTestResults//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.ReportName + "_" + Hooks.Environemt + "_" + Hooks.Browser;
+            if (Hooks.BrowserSize != "")
+            {
+                dir = dir + "_" + Hooks.BrowserSize;
+            }
+            dir = dir + "//" + "//Screenshots";
+
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
             {

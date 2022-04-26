@@ -576,8 +576,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "Holiday letting made easy"});
                 table51.AddRow(new string[] {
                             "Free Owner Information Pack"});
-                table51.AddRow(new string[] {
-                            "Looking to get started with holiday letting?"});
 #line 106
  testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table51, "Then ");
 #line hidden
@@ -688,8 +686,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "Holiday letting made easy"});
                 table52.AddRow(new string[] {
                             "Free Owner Information Pack"});
-                table52.AddRow(new string[] {
-                            "Looking to get started with holiday letting?"});
 #line 139
  testRunner.Then("the following sections are dislpayed", ((string)(null)), table52, "Then ");
 #line hidden

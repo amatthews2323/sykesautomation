@@ -18,7 +18,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite();
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-            CloseAllPopups();
+            ClosePopups();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
@@ -27,14 +27,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite("", path);
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "Yes");
+            ClosePopups(acceptCookies: "Yes", dismissAlerts: "Yes");
         }
 
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
             LaunchWebsite("", path);
-            CloseAllPopups(acceptCookies: "Yes", dismissAlerts: "No");
+            ClosePopups(acceptCookies: "Yes", dismissAlerts: "No");
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
@@ -47,7 +47,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I close the pop-ups")]
         public void WhenICloseThePop_Ups()
         {
-            CloseAllPopups();
+            ClosePopups();
         }
 
         [Then(@"I read the csv file (.*), colunm (.*), row (.*), search term (.*)")]
@@ -220,7 +220,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmAccessing(string domain = "")
         {
             LaunchWebsite(domain);
-            CloseAllPopups();
+            ClosePopups();
             SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
         }
 
@@ -327,7 +327,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             SetBrowserSize(windowSize);
             Refresh();
-            CloseAllPopups();
+            ClosePopups();
         }
     }
 }

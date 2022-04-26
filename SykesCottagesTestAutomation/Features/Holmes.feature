@@ -24,7 +24,7 @@ Scenario: Check specific experiments are applied
 	And I wait 300 seconds
 
 @HolmesExperiments
-Scenario: Get experiments conversion precentage 
+Scenario: Get experiment conversion precentage 
 	Given I am accessing http://holmes.staging.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
@@ -50,7 +50,7 @@ Scenario: Get experiments conversion precentage
 		| 4516    |
 
 @HolmesExperiments
-Scenario: Get experiments status
+Scenario: Get experiment status
 	Given I am accessing https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                          |
