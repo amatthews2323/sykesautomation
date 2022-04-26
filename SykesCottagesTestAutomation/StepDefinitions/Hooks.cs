@@ -49,7 +49,7 @@ namespace SykesCottagesTestAutomation
                 string reportDir = @"C://AutomatedTestResults//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + ReportName + "_" + Environemt + "_" + Browser;
                 if (BrowserSize != "")
                 {
-                    reportDir = reportDir + "_" + BrowserSize;
+                    reportDir += "_" + BrowserSize;
                 }
                 // If directory does not exist, create it
                 if (!Directory.Exists(reportDir))
@@ -68,7 +68,7 @@ namespace SykesCottagesTestAutomation
                 }
                 if (BrowserSize != "")
                 {
-                    ExtentReportName = ExtentReportName + " | Browser type: " + BrowserSize;
+                    ExtentReportName = ExtentReportName + " | Size: " + BrowserSize;
                 }
                 htmlReporter.Config.ReportName = ExtentReportName;
                 //Initialise report

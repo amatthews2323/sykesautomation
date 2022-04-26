@@ -330,7 +330,7 @@ namespace SykesCottagesTestAutomation
         {
             try
             {
-                if (ElementDisplayed(value))
+                if (ElementDisplayed(value, attribute))
                 {
                     Console.WriteLine("Click \"" + value + "\"");
                     shared.driver.FindElement(By.XPath(XPath(value, attribute))).Click();
@@ -437,15 +437,15 @@ namespace SykesCottagesTestAutomation
             return dictionary;
         }
 
-        public void Screenshot(string fileName = "screenshot")
+        public void Screenshot(string fileName = "screenshot", string type = "full webpage")
         {
             //Name of directory
             string dir = @"C://AutomatedTestResults//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.ReportName + "_" + Hooks.Environemt + "_" + Hooks.Browser;
             if (Hooks.BrowserSize != "")
             {
-                dir = dir + "_" + Hooks.BrowserSize;
+                dir += "_" + Hooks.BrowserSize;
             }
-            dir = dir + "//" + "//Screenshots";
+            dir += "//Screenshots";
 
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
@@ -453,13 +453,18 @@ namespace SykesCottagesTestAutomation
                 Directory.CreateDirectory(dir);
             }
 
-            //Take full webpage screenshot
-            VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
-            shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + fileName + ".png", ImageMagick.MagickFormat.Png);
-
-            //Take current viewable area screenshot
-            //Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
-            //image.SaveAsFile(dir + "//" + title + ".png", ScreenshotImageFormat.Png);
+            if (type == "full webpage")
+            {
+                //Take screenshot of entire webpage
+                VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
+                shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + fileName + ".png", ImageMagick.MagickFormat.Png);
+            }
+            else
+            {
+                //Take screenshot of viewable area
+                Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
+                image.SaveAsFile(dir + "//" + fileName + ".png", ScreenshotImageFormat.Png);
+            }
         }
     }
 }
