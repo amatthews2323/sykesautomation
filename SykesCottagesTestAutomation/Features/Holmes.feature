@@ -28,7 +28,6 @@ Scenario: Get experiment conversion precentage
 	Given I am accessing http://holmes.staging.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
-		| 4368    |
 		| 4373    |
 		| 4379    |
 		| 4396    |
@@ -42,19 +41,18 @@ Scenario: Get experiment conversion precentage
 		| 4466    |
 		| 4431    |
 		| 4470    |
-		| 4475    |
 		| 4498    |
 		| 4503    |
 		| 4509    |
 		| 4511    |
 		| 4516    |
+		| 4528    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am accessing https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                          |
-		| LetYourCottages_ContrastAlertsOnLYP18473                         |
 		| LetYourCottages_RemoveSecondHeroCopy18494                        |
 		| LetYourCottages_ManagedServicesBannerOnLYP18552                  |
 		| LetYourCottages_ReplaceIconsWithimages18585                      |
@@ -68,9 +66,9 @@ Scenario: Get experiment status
 		| LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671 |
 		| LetYourCottages_ToolTipsonLYPHeaders18582                        |
 		| LetYourCottages_ClearOptionOnDashboard18697                      |
-		| LetYourCottages_MobileFriendlyHolidayLetting18846                |
 		| LetYourCottages_BuySellRedesign18920                             |
 		| LetYourCottages_EnquiryFormPhoneSubCopy18889                     |
 		| LetYourCottages_SpeakToSomeoneSectionMobile18682                 |
 		| LetYourCottages_ResourceCenter18681                              |
 		| LetYourCottages_ReTestBedrockPromo19009                          |
+		| LetYourCottages_ChangingPhoneNumberFormat18993                   |

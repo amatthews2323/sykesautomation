@@ -1,24 +1,64 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036
+	Then the following elements are dislpayed
+		 | Element                      |
+		 | Information centre           |
+		 | A bespoke letting experience |
+		 | Holiday homes for sale       |
+		 | Enquire now                  |
+		 | Buying, owning and selling   |
+		 | How to run your holiday let  |
+		 | Tax information and advice   |
+		 | Advertising and marketing    |
+		 | Investment advice            |
+		 | Holiday let mortgages        |
+		 | Legal regulations            |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_AddTOBAlerts18280
+	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddTOBAlerts18280
+	Then the alerts are displayed on the page
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_ChangingPhoneNumberFormat18993
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ChangingPhoneNumberFormat18993
+	Then the following text is displayed: 01244 356 666
+
+@ActiveExperiments @ProductionRegressionSuite
+Scenario: Experiment LetYourCottages_FormErrorWarnings18947
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_FormErrorWarnings18947
+	And I click heroform_first_name
+	And I click form-heading-container
+	Then the following element is displayed: Please enter a full name.
+	And the following elements are not dislpayed
+	    | Element                        |
+		| Please enter an email address. |
+		| Please enter a contact number. |
+
 @ActiveExperiments @ThinkingOfBuying @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
 	And I scroll to the following element: Looking to get started with holiday letting?
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                                      |
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
-	When I click Explore guides & resources
-	And I switch focus to the new tab
-	Then the following page title is displayed: Holiday Let Information Centre | Sykes Holiday Cottages
+         | Sykes Cottages Free Owner Pack               |
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                           |
 		 | Sykes Product Showcase 2022       |
 		 | Sykes Cottages Showcase promotion |
@@ -27,7 +67,7 @@ Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_EnquiryFormPhoneSubCopy18889
-	Then the following text is displayed on the page: Get started to access free holiday letting advice
+	Then the following text is displayed: Get started to access free holiday letting advice
 	When I enter the following details on the enquiry form
 	| Key           | Value                         |
 	| Full name     | Test Owner                    |
@@ -36,25 +76,25 @@ Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
 	And I click form-heading-container
 	And I click o-checkbox__input js-marketing-preferences-phone
 	Then I wait 2 seconds
-	Then the following text is displayed on the page: If you would like a call from our property experts regarding this enquiry, please leave the phone option selected below.
+	Then the following text is displayed: If you would like a call from our property experts regarding this enquiry, please leave the phone option selected below.
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
-	Then the following element is displayed on the page: hero-slideshow
+	Then the following element is displayed: hero-slideshow
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnLYP18552
-	Then the following element is displayed on the page: We tailor our managed service package to suit your specific needs.
+	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
 
 @ActiveExperiments @ProductionRegressionSuite
 Scenario: Experiment LetYourCottages_SectionImageNavigation18583
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_SectionImageNavigation18583
-		Then the following elements are dislpayed on the page
+		Then the following elements are dislpayed
 		 | Element        |
 		 | arrow-prev.svg |
 		 | arrow-next.svg |
@@ -73,7 +113,7 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18582
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                                                                         |
 		 | LYPtooltip                                                                                                      |
 		 | We have over 9000 owners  listing with Sykes, and 17,902 properties.                                            |
@@ -95,13 +135,13 @@ Scenario: Experiment LetYourCottages_InactivityExitModal18457
 	When I apply the following experiment: 18457
 	And I close the pop-ups
 	Then I wait 305 seconds
-	And the following elements are dislpayed on the page
+	And the following elements are dislpayed
 	     | Element                  |
 	     | idleform                 |
 	     | We're ready when you are |
 	     | Open form                |
 	When I click Open form
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	     | Element                                   |
 	     | inactive-form_first_name                  |
 	     | inactive-form_first_name_validation_error |
@@ -115,7 +155,7 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18585
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                                                             |
          | /images/let_your_cottage/letting_easy/market-leading.png            |
          | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
@@ -129,7 +169,7 @@ Scenario: Experiment LetYourCottages_CreateTextSupportEnquiry18460
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18460
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                          |
          | Please enter your full name      |
          | Please enter your email address  |
@@ -140,7 +180,7 @@ Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18494
 	And I close the pop-ups
-	Then the following elements are not dislpayed on the page
+	Then the following elements are not dislpayed
 		| Elements                                                                                                                            |
 		| Let your property with Sykes and earn up to £125,000 per year*                                                                      |
 		| As the UK’s leading independent holiday letting agency, we’re committed to getting you the best possible return from your property. |
@@ -151,7 +191,7 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18473
 	Then the alerts are displayed on the page
-	And the following elements are not dislpayed on the page
+	And the following elements are not dislpayed
 		| Elements                                |
 		| o-icon c-alert__icon o-icon--size-large |
 		| c-alert__cta cta_tint js-alert-close    |
@@ -161,7 +201,7 @@ Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18459
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                  |
 		 | Book a visit with one of our expert property consultants |
 		 | Book property visit                                      |
@@ -179,7 +219,7 @@ Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18529
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                                                                                              |
 		 | List your property for a welcome gift of your choice                                                                                 |
 		 | Sign your contract by 1st April 2022 and get your property taking bookings by 1st June 2022 to earn a welcome gift of your choice... |
@@ -198,9 +238,9 @@ Scenario: Experiment LetYourCottages_BurguerMenuTablet18658
 	When I apply the following experiment: 18658
 	And I close the pop-ups
 	And I set the window size to Tablet
-	Then the following element is displayed on the page: burguer-menu collapsed
+	Then the following element is displayed: burguer-menu collapsed
 	When I click burguer-menu collapsed
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                |
 		 | Sub Navigation         |
 		 | Home                   |
@@ -215,7 +255,7 @@ Scenario: Experiment LetYourCottages_AddDownArrowInHero18579
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18579
 	And I close the pop-ups
-	Then the following element is displayed on the page: scrolldownarrow
+	Then the following element is displayed: scrolldownarrow
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
@@ -223,7 +263,7 @@ Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
 	When I apply the following experiment: 18461
 	And I close the pop-ups
 	And I navigate to https://www.sykescottages.co.uk/letyourcottage/
-	Then the following element is displayed on the page: hero-slideshow
+	Then the following element is displayed: hero-slideshow
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
@@ -243,7 +283,7 @@ Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18625
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                           |
 		 | Owner FAQs                                                        |
 		 | Frequently asked questions, answered by our owners                |
@@ -254,7 +294,7 @@ Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
 		 | Have your holiday lets been a good investment for you?            |
 		 | How did you first get into holiday letting?                       |
 	When I click Why did you choose Sykes?
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                               |
 		 | We chose to holiday let with an agency as my wife and I are very busy |
 		 | Answered by                                                           |
@@ -273,7 +313,7 @@ Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18587
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                     |
 		 | colapsible-containers                       |
 		 | Owner testimonials                          |
@@ -285,7 +325,7 @@ Scenario: Experiment LetYourCottages_CollapseSectionsOnLypPage18587
 		 | Free information pack                       |
 		 | Looking to get started with holiday letting |
 	When I click Owner testimonials
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                                  |
 		 | /images/icons-svg/navigation/chevron/icon-chevron-up.svg |
 		 | testimonial_image                                        |
@@ -297,7 +337,7 @@ Scenario: Experiment LetYourCottages_PartnersIntoHero18491
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18491
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element          |
 		 | arrow-hero       |
 		 | booking logo     |
@@ -311,7 +351,7 @@ Scenario: Experiment LetYourCottages_PartnersIntoHero18491
 Scenario: Experiment LetYourCottages_IntroducingSisterBrands18705
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18705
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                       |
 		 | Introducing our brand network |
 		 | c-sisterbrands-logos          |
@@ -321,7 +361,7 @@ Scenario: Experiment LetYourCottages_LYPPhoneNumberSection18569
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18569
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 		 | Element                                     |
 		 | Can't find the service you are looking for? |
 		 | 01244 356 666                               |
@@ -331,13 +371,13 @@ Scenario: Experiment LetYourCottages_ProgressBarUpdatetoWhite18869
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18869
 	And I close the pop-ups
-	Then the following element is displayed on the page: progressbar
+	Then the following element is displayed: progressbar
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
 	Given I have navigated to the following page without dismissing alerts: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18458
-	Then the following elements are not dislpayed on the page
+	Then the following elements are not dislpayed
 		| Element                              |
 		| An owner has just completed the form |
 		| A new property has just gone live    |
@@ -361,14 +401,14 @@ Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18474
 	And I close the pop-ups
-	Then the following element is displayed on the page: platform-slider slick-initialized slick-slider
+	Then the following element is displayed: platform-slider slick-initialized slick-slider
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18292
 	And I close the pop-ups
-	Then the following elements are not dislpayed on the page
+	Then the following elements are not dislpayed
 		| Element                                |
 		| Putting your property in the spotlight |
 		| Are you thinking of buying             |
@@ -379,13 +419,13 @@ Scenario: Experiment LetYourCottages_ReferAFriend18136
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18136
 	And I close the pop-ups
-	Then the following element is displayed on the page: Refer a friend
+	Then the following element is displayed: Refer a friend
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_InformationPageAlerts18281
 	Given I have navigated to the following page without dismissing alerts: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: 18281
-	Then the following element is displayed on the page: c-alert c-alert--standard js-alert is-visible
+	Then the following element is displayed: c-alert c-alert--standard js-alert is-visible
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_TOBAlertModal18279
@@ -393,41 +433,41 @@ Scenario: Experiment LetYourCottages_TOBAlertModal18279
 	When I apply the following experiment: 18279
 	And I select the alert Get Started button
 	And I select the close icon on the form
-	Then the following element is displayed on the page: Enquire with Sykes today
+	Then the following element is displayed: Enquire with Sykes today
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18283
 	And I close the pop-ups
-	Then the following text is displayed on the page: Complete the form to receive your free information pack
+	Then the following text is displayed: Complete the form to receive your free information pack
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_StaycationGuideDownload18066
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18066
 	And I close the pop-ups
-	Then the following text is displayed on the page: Download the Sykes staycation index
+	Then the following text is displayed: Download the Sykes staycation index
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_TestimonialRefocus18099
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18099
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                                                                             |
          | testimonial-slider                                                                  |
          | Sykes instilled a lot of confidence in us and now I wouldn’t use anybody else       |
          | Sykes have taken the stress out of us taking bookings, they are so professional     |
          | It is great working with Sykes - they are always available and they pay you quickly |
-    And the following element is not displayed on the page: What do our owners say?
+    And the following element is not displayed: What do our owners say?
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_AlternativeMethodsOfContact18065
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18065
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                          |
          | We're here to help               |
          | Get in touch                     |
@@ -439,7 +479,7 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17791
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                    |
          | Expand your reach with our |
          | 700+ partner channels      |
@@ -454,14 +494,14 @@ Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17921
 	And I close the pop-ups
-    Then the following element is not displayed on the page: We are still open as usual
+    Then the following element is not displayed: We are still open as usual
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_AddingWebinars17805
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17805
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                                       |
          | Let the holiday experts answer your questions |
          | webinar-video                                 |
@@ -475,8 +515,8 @@ Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17973
 	And I close the pop-ups
-    Then the following element is not displayed on the page: form-heading-container
-    And the following elements are dislpayed on the page
+    Then the following element is not displayed: form-heading-container
+    And the following elements are dislpayed
          | Element                                                        |
          | Let your property with Sykes and earn up to £125,000 per year* |
          | Get started today                                              |
@@ -486,7 +526,7 @@ Scenario: Experiment LetYourCottages_PnoProcess17640
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17640
 	And I close the pop-ups
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
          | Element                |
          | How to list with Sykes |
          | Request for contact    |
@@ -498,7 +538,7 @@ Scenario: Experiment LetYourCottages_FullHeightHero17731
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17731
 	And I close the pop-ups
-    Then the following element is displayed on the page: o-icon o-icon-down-full-hero
+    Then the following element is displayed: o-icon o-icon-down-full-hero
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_RelaxedValidationEnquiry17573
@@ -506,14 +546,14 @@ Scenario: Experiment LetYourCottages_RelaxedValidationEnquiry17573
 	When I apply the following experiment: 17573
 	And I close the pop-ups
     And I click submit
-    Then the following element is not displayed on the page: Please enter a contact number.
+    Then the following element is not displayed: Please enter a contact number.
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_ChangeTextForm17977
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17977
 	And I close the pop-ups
-	Then the following text is displayed on the page: Complete the form to begin your holiday letting journey
+	Then the following text is displayed: Complete the form to begin your holiday letting journey
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
@@ -521,11 +561,11 @@ Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
 	When I apply the following experiment: 17853
 	And I close the pop-ups
     And I set the window size to Tablet
-	Then the following element is displayed on the page: Floating action button mobile
+	Then the following element is displayed: Floating action button mobile
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_AverageMonthlyIncomeProjection17432
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17432
 	And I close the pop-ups
-	Then the following text is displayed on the page: Average monthly income
+	Then the following text is displayed: Average monthly income

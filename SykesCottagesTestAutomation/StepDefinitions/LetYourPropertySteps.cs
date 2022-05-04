@@ -71,12 +71,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select the Partially Managed Enquire Now button")]
         public void WhenISelectThePartiallyManagedEnquireNowButton()
         {
+            Click("Partially managed");
             Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a", waitTime: 5);
         }
 
         [When(@"I select the Fully Managed Enquire Now button")]
         public void WhenISelectTheFullyManagedEnquireNowButton()
         {
+            Click("Fully managed");
             Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a", waitTime: 5);
         }
 
@@ -136,7 +138,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following elements are dislpayed on the page")]
+        [Then(@"the following elements are dislpayed")]
         public void ThenTheFollowingElementsAreDislpayedOnThePage(Table table)
         {
             var elements = table.Rows.Select(r => r[0]).ToArray();
@@ -146,7 +148,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following elements are not dislpayed on the page")]
+        [Then(@"the following elements are not dislpayed")]
         public void ThenTheFollowingElementsAreNotDislpayedOnThePage(Table table)
         {
             var elements = table.Rows.Select(r => r[0]).ToArray();
@@ -156,19 +158,19 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following text is displayed on the page: (.*)")]
+        [Then(@"the following text is displayed: (.*)")]
         public void ThenTheFollowingTextIsDisplayedOnThePage(string text)
         {
             AssertTextDisplayed(text);
         }
 
-        [Then(@"the following element is displayed on the page: (.*)")]
+        [Then(@"the following element is displayed: (.*)")]
         public void ThenTheFollowingElementIsDisplayedOnThePage(string value)
         {
             AssertElementDisplayed(value);
         }
 
-        [Then(@"the following element is not displayed on the page: (.*)")]
+        [Then(@"the following element is not displayed: (.*)")]
         public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
         {
             AssertElementNotDisplayed(value);
@@ -280,46 +282,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertTextDisplayed("//section[" + position + " and contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(text(),'" + section + "')]");
         }
 
-        [When(@"I enter an email address without an @ symbol")]
-        public void WhenIEnterAnEmailAddressWithoutAnSymbol()
+        [When(@"I select the form overlay submit button")]
+        public void WhenISelectTheFormOverlaySubmitButton()
         {
-            Type("heroform_email", "test.com");
-            Click("form-heading-container");
-        }
-
-        [When(@"I enter an email address without a valid domain")]
-        public void WhenIEnterAnEmailAddressWithoutAValidDomain()
-        {
-            Type("heroform_email", "test@test");
-            Click("form-heading-container");
-        }
-
-        [When(@"I enter a phone number with a non-numerical character")]
-        public void WhenIEnterAPhoneNumberWithANon_NumericalCharacter()
-        {
-            Type("heroform_phone", "test");
-            Click("form-heading-container");
-        }
-
-        [When(@"I enter a phone number with less than 10 digits")]
-        public void WhenIEnterAPhoneNumberWithLessThanDigits()
-        {
-            Type("heroform_phone", "070000000");
-            Click("form-heading-container");
-        }
-
-        [When(@"I enter a phone number with more than 15 digits")]
-        public void WhenIEnterAPhoneNumberWithMoreThanDigits()
-        {
-            Type("heroform_phone", "0700000000000000");
-            Click("form-heading-container");
-        }
-
-        [When(@"I enter a phone number with spaces and \+(.*)")]
-        public void WhenIEnterAPhoneNumberWithSpacesAnd(int p0)
-        {
-            Type("heroform_phone", "+44 7000 000 000");
-            Click("form-heading-container");
+            Click("//div[@id='js-overlay-list-property']//form[@*='list_property']/button[@type='submit']", waitTime: 2);
         }
 
         [When(@"I set the window size to (.*)")]

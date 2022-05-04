@@ -4,7 +4,7 @@
 @ThinkingOfBuying
 Scenario: The relevant sections are displayed on the Thinking of Buying page
 	Given I have navigated to the following page: letyourcottage/advice
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                                  |
 	| Holiday Let Information Centre           |
 	| Browse categories                        |

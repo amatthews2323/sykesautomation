@@ -4,7 +4,7 @@
 @LandingPages @RegressionSmokeTest
 Scenario: The Landing pages are displayed correctly
 	Given I have navigated to the following page: <Path>
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                                   |
 	| <Title>                                   |
 	| form-heading-container                    |
@@ -19,7 +19,7 @@ Scenario: The Landing pages are displayed correctly
 @LandingPages @ProductionRegressionSuite
 Scenario: The enquiry form is displayed on the Landing pages
 	Given I have navigated to the following page: <Path>
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                                                                                                                                                        |
 	| form-heading-container                                                                                                                                         |
 	| Complete the form to receive your information pack                                                                                                             |
@@ -39,29 +39,29 @@ Scenario: The enquiry form is displayed on the Landing pages
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                        |
 	| Please enter a full name.      |
 	| Please enter an email address. |
 	| Please enter a contact number. |
 	When I enter an email address without an @ symbol
 	And I click form-heading-container
-	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
+	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
 	When I enter an email address without a valid domain
 	And I click form-heading-container
-	Then the following text is displayed on the page: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
+	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter a phone number with a non-numerical character
 	And I click form-heading-container
-	Then the following text is displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	When I enter a phone number with less than 10 digits
 	And I click form-heading-container
-	Then the following text is displayed on the page: Please provide a contact number that is no less than 10 digits long.
+	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
 	When I enter a phone number with more than 15 digits
 	And I click form-heading-container
-	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
+	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter a phone number with spaces and +44
 	And I click form-heading-container
-	Then the following element is not displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Examples:
 	| Path                                                   |
 	| letyourcottage/information/run-holiday-let-as-business |

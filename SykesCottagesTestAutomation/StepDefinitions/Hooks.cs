@@ -11,23 +11,23 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live";   //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Edge";      //Set browser: Chrome | Firefox | Edge
-        public static string Experiments = "";      //Set experiment(s) - comma separated list
+        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
+        public static string Experiments = ""; //Set experiment(s) - comma separated list
 
-        public static string EnableReporting = "Y"; //Turn on Extent Reports
-        public static string ReportName = "Random Test";    //Name of the report folder: RegressionSuite | SmokeTest
+        public static bool EnableReporting = false; //Turn on Extent Reports
+        public static string ReportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest
 
-        public static string AcceptCookies = "Y";   //Dismiss the cookie popup
-        public static string DismissPopups = "";    //Dismiss popups, alerts and surveys
+        public static bool AcceptCookies = true; //Dismiss the cookie popup
+        public static bool DismissPopups = false; //Dismiss popups, alerts and surveys
 
-        public static string Screenshots = "Y";     //Take a screenshot at the end of each scenario
+        public static bool Screenshots = false; //Take a screenshot at the end of each scenario
 
-        public static string BrowserSize = "Tablet";      //Set the browser window size: Max | Desktop | Tablet | Mobile | Custom
-        public static int PageWidth = 768;          //Set the browser window width: 768 (iPhone)
-        public static int PageHeight = 1024;        //Set the browser window height: 1024 (iPhone)
+        public static string BrowserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static int PageWidth = 768; //Set the browser window width: 768 (iPhone)
+        public static int PageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
-        public static int TimeOut = 10; //Set pageload timeout
+        public static int TimeOut = 20; //Set pageload timeout
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;
@@ -43,7 +43,8 @@ namespace SykesCottagesTestAutomation
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            if (EnableReporting.Contains("Y"))
+            //if (EnableReporting.Contains("Y"))
+            if (EnableReporting == true)
             {
                 //Name of directory
                 string reportDir = @"C://AutomatedTestResults//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + ReportName + "_" + Environemt + "_" + Browser;
@@ -84,7 +85,7 @@ namespace SykesCottagesTestAutomation
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            if (EnableReporting.Contains("Y"))
+            if (EnableReporting == true)
             {
                 featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title); //Create dynamic feature name
             }
@@ -93,7 +94,7 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            if (EnableReporting.Contains("Y"))
+            if (EnableReporting == true)
             {
                 scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
             }
@@ -102,7 +103,7 @@ namespace SykesCottagesTestAutomation
         [AfterStep]
         public void InsertReportingSteps()
         {
-            if (EnableReporting.Contains("Y"))
+            if (EnableReporting == true)
             {
                 var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
 
@@ -135,7 +136,7 @@ namespace SykesCottagesTestAutomation
         [AfterScenario]
         public void EndTest()
         {
-            if (EnableReporting.Contains("Y") & Screenshots.Contains("Y"))
+            if (Screenshots == true)
             {
                 Screenshot(_scenarioContext.ScenarioInfo.Title.Trim() + " " + DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss"));
             }

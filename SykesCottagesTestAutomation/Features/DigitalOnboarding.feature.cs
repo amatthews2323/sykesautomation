@@ -192,7 +192,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "Holiday Homes for Sale"});
 #line 25
- testRunner.Then("the following elements are dislpayed on the page", ((string)(null)), table3, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -385,7 +385,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 78
- testRunner.And("the following text is displayed on the page: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the following text is displayed: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -442,7 +442,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 89
- testRunner.And("the following text is displayed on the page: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the following text is displayed: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

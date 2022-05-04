@@ -4,7 +4,7 @@
 @SisterSites @RegressionSmokeTest
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <URL>
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                   |
 	| <Title>                   |
 	| form-heading-container    |
@@ -33,7 +33,7 @@ Scenario: The Sykes sister sites are displayed correctly
 @SisterSites @ProductionRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am accessing <URL>
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                                                                                           |
 	| form-heading-container                                                                            |
 	| Complete the form to receive your information pack                                                |
@@ -50,22 +50,31 @@ Scenario: The enquiry form is displayed on the sister sites
 	| Your details will be stored and used to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                              |
 	| submit                                                                                            |
-#	When I select the alert Get Started button
-#	Then the following elements are dislpayed on the page
-#	| Element                        |
-#	| Please enter a full name.      |
-#	| Please enter an email address. |
-#	| Please enter a contact number. |
-	When I enter an email address without an @ symbol
-	Then the following text is displayed on the page: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter an email address without a valid domain
-	Then the following text is displayed on the page: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter a phone number with a non-numerical character
-	Then the following text is displayed on the page: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter a phone number with less than 10 digits
-	Then the following text is displayed on the page: Please provide a contact number that is no less than 10 digits long.
-	When I enter a phone number with more than 15 digits
-	Then the following text is displayed on the page: Please provide a contact number that is no more than 15 digits long.
+	When I click form-heading-container
+	And I click heroform_first_name
+	And I click form-heading-container
+	Then the following text is displayed: Please enter a full name.
+	When I click heroform_email
+	And I click form-heading-container
+	Then the following text is displayed: Please enter an email address.
+	When I click heroform_phone
+	And I click form-heading-container
+	Then the following text is displayed: Please enter a contact number.
+	When I enter test.com in the following form field: heroform_email
+	And I click form-heading-container
+	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
+	When I enter test@test in the following form field: heroform_email
+	And I click form-heading-container
+	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
+	When I enter test in the following form field: heroform_phone
+	And I click form-heading-container
+	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	When I enter 070000000 in the following form field: heroform_phone
+	And I click form-heading-container
+	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
+	When I enter 0700000000000000 in the following form field: heroform_phone
+	And I click form-heading-container
+	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	Examples:
 	| URL                                                         |
 	| https://www.character-cottages.co.uk/letyourcottage/        |

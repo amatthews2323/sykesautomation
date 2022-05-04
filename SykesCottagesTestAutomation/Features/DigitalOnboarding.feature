@@ -22,7 +22,7 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	| Email address | sykestest@example.org |
 	| Phone number  | 07000000000                   |
 	And I submit the enquiry form
-	Then the following elements are dislpayed on the page
+	Then the following elements are dislpayed
 	| Element                |
 	| Phone Call             |
 	| Continue Online        |
@@ -75,7 +75,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	And I can complete Personal Details Step 4 - Select commission tier
 	And I can complete Personal Details Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
-	And the following text is displayed on the page: Welcome to the Sykes Family!
+	And the following text is displayed: Welcome to the Sykes Family!
 
 @DigitalOnboarding
 Scenario: The user completes digital onboarding
@@ -86,4 +86,4 @@ Scenario: The user completes digital onboarding
 	| Password | Testing123                  |
 	And I can complete Personal Details Step 5 - Property Pricing
 	And I can sign the contract and complete digital onboarding
-	And the following text is displayed on the page: Welcome to the Sykes Family!
+	And the following text is displayed: Welcome to the Sykes Family!
