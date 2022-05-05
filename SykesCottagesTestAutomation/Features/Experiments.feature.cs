@@ -76,10 +76,12 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_InformationCentreCarousel19036")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_InformationCentreCarousel19036()
         {
             string[] tagsOfScenario = new string[] {
-                    "ActiveExperiments"};
+                    "ActiveExperiments",
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_InformationCentreCarousel19036", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
@@ -142,10 +144,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_AddTOBAlerts18280")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_AddTOBAlerts18280()
         {
             string[] tagsOfScenario = new string[] {
-                    "ActiveExperiments"};
+                    "ActiveExperiments",
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_AddTOBAlerts18280", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 23
@@ -185,12 +189,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ChangingPhoneNumberFormat18993")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ChangingPhoneNumberFormat18993()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ChangingPhoneNumberFormat18993", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 29
@@ -229,12 +233,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_FormErrorWarnings18947")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_FormErrorWarnings18947()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_FormErrorWarnings18947", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 35
@@ -289,13 +293,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ReTestBedrockPromo19009")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
         [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ReTestBedrockPromo19009()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
                     "ThinkingOfBuying",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ReTestBedrockPromo19009", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 47
@@ -345,12 +349,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ProductShowCasePromotion18893")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ProductShowCasePromotion18893()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ProductShowCasePromotion18893", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 58
@@ -395,12 +399,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_EnquiryFormPhoneSubCopy18889()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 67
@@ -468,12 +472,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_HeroImagesBasedOnHeadingForLoop18704()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 82
@@ -513,12 +517,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ManagedServicesBannerOnLYP18552")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ManagedServicesBannerOnLYP18552()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ManagedServicesBannerOnLYP18552", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 88
@@ -559,12 +563,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_SectionImageNavigation18583")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_SectionImageNavigation18583()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_SectionImageNavigation18583", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 94
@@ -611,12 +615,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_VisualTimeronAlerts18791")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_VisualTimeronAlerts18791()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_VisualTimeronAlerts18791", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 104
@@ -661,12 +665,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ToolTipsonLYPHeaders18582")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ToolTipsonLYPHeaders18582()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ToolTipsonLYPHeaders18582", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 112
@@ -722,12 +726,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_TestimonialsCarousel18584")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_TestimonialsCarousel18584()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_TestimonialsCarousel18584", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 125
@@ -848,12 +852,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ReplaceIconsWithimages18585")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ReplaceIconsWithimages18585()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ReplaceIconsWithimages18585", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 154
@@ -909,12 +913,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_CreateTextSupportEnquiry18460")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_CreateTextSupportEnquiry18460()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_CreateTextSupportEnquiry18460", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 168
@@ -964,12 +968,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_RemoveSecondHeroCopy18494")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_RemoveSecondHeroCopy18494()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_RemoveSecondHeroCopy18494", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 179
@@ -1021,12 +1025,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_ContrastAlertsOnLYP18473")]
         [NUnit.Framework.CategoryAttribute("ActiveExperiments")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         public virtual void ExperimentLetYourCottages_ContrastAlertsOnLYP18473()
         {
             string[] tagsOfScenario = new string[] {
                     "ActiveExperiments",
-                    "ProductionRegressionSuite"};
+                    "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ContrastAlertsOnLYP18473", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 190

@@ -23,7 +23,7 @@ Scenario: The user can navigate to the Information Centre pages
 	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning \| Sykes Cottages |
 	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief \| Sykes  |
 
-@InformationCentre @RegressionSmokeTest
+@InformationCentre @SmokeTest
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed
@@ -40,7 +40,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let                |
 	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
 
-@InformationCentre @ProductionRegressionSuite @EnquiryForm
+@InformationCentre @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed

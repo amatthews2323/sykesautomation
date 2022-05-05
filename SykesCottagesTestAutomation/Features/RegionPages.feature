@@ -1,7 +1,7 @@
 ﻿Feature: RegionPages
 	Region pages content and functionality
 
-@RegionPages @RegressionSmokeTest
+@RegionPages @SmokeTest
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed: <Region>
@@ -20,7 +20,7 @@ Scenario: The Regional pages are displayed correctly
 	| letyourcottage/In-Your-Area/Ireland                       | Ireland                    |
 	| letyourcottage/In-Your-Area/Scotland                      | Scotland                   |
 
-@RegionPages @ProductionRegressionSuite @EnquiryForm
+@RegionPages @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Regional pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed

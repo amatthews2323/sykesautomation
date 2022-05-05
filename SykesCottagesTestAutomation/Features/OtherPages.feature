@@ -1,7 +1,7 @@
 ﻿Feature: OtherPages
 	Holiday Homes for Sale and Manged Services page content and functionality
 
-@HolidayHomesForSale @RegressionSmokeTest
+@HolidayHomesForSale @SmokeTest
 Scenario: The relevent elements are present on the Holiday Homes for Sale page
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
 	Then the following elements are dislpayed
@@ -14,7 +14,7 @@ Scenario: The relevent elements are present on the Holiday Homes for Sale page
          | Enquire with Sykes today          |
          | Get started                       |
 
-@HolidayHomesForSale @ProductionRegressionSuite @EnquiryForm
+@HolidayHomesForSale @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
     When I click View property
@@ -41,7 +41,7 @@ Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
          | /terms/privacypolicy                                                                              |
          | submit                                                                                            |
 
-@ManagedServices @RegressionSmokeTest
+@ManagedServices @SmokeTest
 Scenario: The relevent elements are present on the Managed Services page
 	Given I have navigated to the following page: letyourcottage/managed-services
     Then the following elements are dislpayed

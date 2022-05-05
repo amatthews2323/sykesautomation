@@ -17,10 +17,10 @@ Scenario: The user can submit the enquiry form
 Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	Given I have navigated to the following page: letyourcottage
 	When I enter the following details on the enquiry form
-	| Key           | Value                         |
-	| Full name     | Test Owner                    |
+	| Key           | Value                 |
+	| Full name     | Test Owner            |
 	| Email address | sykestest@example.org |
-	| Phone number  | 07000000000                   |
+	| Phone number  | 07000000000           |
 	And I submit the enquiry form
 	Then the following elements are dislpayed
 	| Element                |

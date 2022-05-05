@@ -276,10 +276,17 @@ namespace SykesCottagesTestAutomation.BaseClass
             Type(field, text);
         }
 
-        [Then(@"the (.*) section is displayed at position (.*)")]
-        public void ThenTheSectionIsDisplayedAtPosition(string section, int position)
+        [Then(@"the page sections are displayed in the relevant positions")]
+        public void ThenThePageSectionsAreDisplayedInTheRelevantPositions(Table table)
         {
-            AssertTextDisplayed("//section[" + position + " and contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(@id,'" + section + "')]|//section[" + position + "]//*[contains(text(),'" + section + "')]");
+            var dictionary = ToDictionary(table);
+            var sections = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var section in sections)
+            {
+                Console.WriteLine("Section: " + section);
+                Console.WriteLine("Position: " + dictionary[section]);
+                AssertElementDisplayed("//section[" + dictionary[section] + " and contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(text(),'" + section + "')]");
+            }
         }
 
         [When(@"I select the form overlay submit button")]

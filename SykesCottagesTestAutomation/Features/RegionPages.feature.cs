@@ -76,7 +76,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Regional pages are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("RegionPages")]
-        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-West", "South West", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-of-England", "South of England", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/Heart-of-England", "Heart of England", null)]
@@ -92,7 +92,7 @@ namespace SykesCottagesTestAutomation.Features
         {
             string[] @__tags = new string[] {
                     "RegionPages",
-                    "RegressionSmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -138,7 +138,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Regional pages")]
         [NUnit.Framework.CategoryAttribute("RegionPages")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-West", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-of-England", null)]
@@ -155,7 +155,7 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "RegionPages",
-                    "ProductionRegressionSuite",
+                    "RegressionSuite",
                     "EnquiryForm"};
             if ((exampleTags != null))
             {

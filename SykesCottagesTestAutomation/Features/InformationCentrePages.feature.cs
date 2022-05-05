@@ -177,7 +177,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
-        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/marketing-your-holiday-let", "Advertising and marketing your holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/buy-own-sell-holiday-lets", "Buying, owning and selling a holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/investment-advice-for-holiday-lets", "Investment advice for holiday lets", null)]
@@ -189,7 +189,7 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "InformationCentre",
-                    "RegressionSmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -238,7 +238,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/marketing-your-holiday-let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/buy-own-sell-holiday-lets", null)]
@@ -251,7 +251,7 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "InformationCentre",
-                    "ProductionRegressionSuite",
+                    "RegressionSuite",
                     "EnquiryForm"};
             if ((exampleTags != null))
             {

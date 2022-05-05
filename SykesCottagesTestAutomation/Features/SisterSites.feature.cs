@@ -76,7 +76,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Sykes sister sites are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("SisterSites")]
-        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", "Character Cottages", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", "Coast & Country Cottages", null)]
@@ -97,7 +97,7 @@ namespace SykesCottagesTestAutomation.Features
         {
             string[] @__tags = new string[] {
                     "SisterSites",
-                    "RegressionSmokeTest"};
+                    "SmokeTest"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -152,7 +152,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the sister sites")]
         [NUnit.Framework.CategoryAttribute("SisterSites")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", null)]
@@ -174,7 +174,7 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "SisterSites",
-                    "ProductionRegressionSuite",
+                    "RegressionSuite",
                     "EnquiryForm"};
             if ((exampleTags != null))
             {

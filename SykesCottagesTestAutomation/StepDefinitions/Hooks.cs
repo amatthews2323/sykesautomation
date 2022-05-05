@@ -12,20 +12,20 @@ namespace SykesCottagesTestAutomation
     public class Hooks : CommonSteps
     {
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
-        public static string Experiments = ""; //Set experiment(s) - comma separated list
+        public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
 
+        public static bool Screenshots = false; //Take a screenshot at the end of each scenario
         public static bool EnableReporting = false; //Turn on Extent Reports
         public static string ReportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest
 
         public static bool AcceptCookies = true; //Dismiss the cookie popup
-        public static bool DismissPopups = false; //Dismiss popups, alerts and surveys
-
-        public static bool Screenshots = false; //Take a screenshot at the end of each scenario
+        public static bool DismissPopups = true; //Dismiss popups, alerts and surveys
 
         public static string BrowserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int PageHeight = 1024; //Set the browser window height: 1024 (iPhone)
+
+        public static string Experiments = ""; //Set experiment(s) - comma separated list
 
         public static int TimeOut = 20; //Set pageload timeout
 

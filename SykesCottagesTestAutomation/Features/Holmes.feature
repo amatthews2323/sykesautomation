@@ -45,8 +45,12 @@ Scenario: Get experiment conversion precentage
 		| 4503    |
 		| 4509    |
 		| 4511    |
+		| 4514    |
 		| 4516    |
 		| 4528    |
+		| 4534    |
+		| 4535    |
+		| 4536    |
 
 @HolmesExperiments
 Scenario: Get experiment status
@@ -70,5 +74,9 @@ Scenario: Get experiment status
 		| LetYourCottages_EnquiryFormPhoneSubCopy18889                     |
 		| LetYourCottages_SpeakToSomeoneSectionMobile18682                 |
 		| LetYourCottages_ResourceCenter18681                              |
+		| LetYourCottages_HHFSDesktopHeader18987                           |
 		| LetYourCottages_ReTestBedrockPromo19009                          |
 		| LetYourCottages_ChangingPhoneNumberFormat18993                   |
+		| LetYourCottages_FormErrorWarnings18947                           |
+		| LetYourCottages_AddTOBAlerts18280                                |
+		| LetYourCottages_InformationCentreCarousel19036                   |

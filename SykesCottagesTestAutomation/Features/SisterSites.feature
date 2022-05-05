@@ -1,7 +1,7 @@
 ﻿Feature: SisterSites
 	Sister sites content and functionality
 
-@SisterSites @RegressionSmokeTest
+@SisterSites @SmokeTest
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <URL>
 	Then the following elements are dislpayed
@@ -30,7 +30,7 @@ Scenario: The Sykes sister sites are displayed correctly
 	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |
 
-@SisterSites @ProductionRegressionSuite @EnquiryForm
+@SisterSites @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am accessing <URL>
 	Then the following elements are dislpayed

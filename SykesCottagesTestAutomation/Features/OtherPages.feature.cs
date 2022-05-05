@@ -76,12 +76,12 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
         [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         public virtual void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
         {
             string[] tagsOfScenario = new string[] {
                     "HolidayHomesForSale",
-                    "RegressionSmokeTest"};
+                    "SmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
@@ -133,13 +133,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Holiday Homes for Sale page")]
         [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        [NUnit.Framework.CategoryAttribute("ProductionRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
         [NUnit.Framework.CategoryAttribute("EnquiryForm")]
         public virtual void TheEnquiryFormIsDisplayedOnTheHolidayHomesForSalePage()
         {
             string[] tagsOfScenario = new string[] {
                     "HolidayHomesForSale",
-                    "ProductionRegressionSuite",
+                    "RegressionSuite",
                     "EnquiryForm"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The enquiry form is displayed on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
@@ -225,12 +225,12 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
         [NUnit.Framework.CategoryAttribute("ManagedServices")]
-        [NUnit.Framework.CategoryAttribute("RegressionSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         public virtual void TheReleventElementsArePresentOnTheManagedServicesPage()
         {
             string[] tagsOfScenario = new string[] {
                     "ManagedServices",
-                    "RegressionSmokeTest"};
+                    "SmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 45

@@ -1,7 +1,7 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-@ActiveExperiments
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036
@@ -19,19 +19,19 @@ Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
 		 | Holiday let mortgages        |
 		 | Legal regulations            |
 
-@ActiveExperiments
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_AddTOBAlerts18280
 	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_AddTOBAlerts18280
 	Then the alerts are displayed on the page
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ChangingPhoneNumberFormat18993
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ChangingPhoneNumberFormat18993
 	Then the following text is displayed: 01244 356 666
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_FormErrorWarnings18947
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_FormErrorWarnings18947
@@ -43,7 +43,7 @@ Scenario: Experiment LetYourCottages_FormErrorWarnings18947
 		| Please enter an email address. |
 		| Please enter a contact number. |
 
-@ActiveExperiments @ThinkingOfBuying @ProductionRegressionSuite
+@ActiveExperiments @ThinkingOfBuying @RegressionSuite
 Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
@@ -54,7 +54,7 @@ Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
          | Explore guides & resources                   |
          | Sykes Cottages Free Owner Pack               |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ProductShowCasePromotion18893
@@ -63,7 +63,7 @@ Scenario: Experiment LetYourCottages_ProductShowCasePromotion18893
 		 | Sykes Product Showcase 2022       |
 		 | Sykes Cottages Showcase promotion |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_EnquiryFormPhoneSubCopy18889
@@ -78,19 +78,19 @@ Scenario: Experiment LetYourCottages_EnquiryFormPhoneSubCopy18889
 	Then I wait 2 seconds
 	Then the following text is displayed: If you would like a call from our property experts regarding this enquiry, please leave the phone option selected below.
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
 	Then the following element is displayed: hero-slideshow
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnLYP18552
 	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_SectionImageNavigation18583
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_SectionImageNavigation18583
@@ -100,7 +100,7 @@ Scenario: Experiment LetYourCottages_SectionImageNavigation18583
 		 | arrow-next.svg |
 		 | slick-dots     |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18791
@@ -108,7 +108,7 @@ Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18582
@@ -121,7 +121,7 @@ Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
 		 | We can tailor our services to fit your needs. Find out how by using the button below.                           |
 		 | Access our expert knowledge on listing and managing holiday lets.                                               |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_TestimonialsCarousel18584
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18584
@@ -150,7 +150,7 @@ Scenario: Experiment LetYourCottages_InactivityExitModal18457
 	     | inactive-form_phone                       |
 	     | inactive-form_phone_validation_error      |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18585
@@ -164,7 +164,7 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
          | /images/let_your_cottage/letting_easy/full-property-management.png  |
          | /images/let_your_cottage/letting_easy/photography.png               |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_CreateTextSupportEnquiry18460
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18460
@@ -175,7 +175,7 @@ Scenario: Experiment LetYourCottages_CreateTextSupportEnquiry18460
          | Please enter your email address  |
          | Please enter your contact number |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18494
@@ -186,7 +186,7 @@ Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 		| As the UK’s leading independent holiday letting agency, we’re committed to getting you the best possible return from your property. |
 		| *Based on a 7 bedroom property in the Lake District with bookings between October 2017 to September 2018.                           |
 
-@ActiveExperiments @ProductionRegressionSuite
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18473

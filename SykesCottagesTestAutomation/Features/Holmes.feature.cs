@@ -277,9 +277,17 @@ this.ScenarioInitialize(scenarioInfo);
                 table42.AddRow(new string[] {
                             "4511"});
                 table42.AddRow(new string[] {
+                            "4514"});
+                table42.AddRow(new string[] {
                             "4516"});
                 table42.AddRow(new string[] {
                             "4528"});
+                table42.AddRow(new string[] {
+                            "4534"});
+                table42.AddRow(new string[] {
+                            "4535"});
+                table42.AddRow(new string[] {
+                            "4536"});
 #line 29
  testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table42, "Then ");
 #line hidden
@@ -296,7 +304,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiment status", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 52
+#line 56
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -316,7 +324,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 53
+#line 57
  testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
@@ -356,10 +364,18 @@ this.ScenarioInitialize(scenarioInfo);
                 table43.AddRow(new string[] {
                             "LetYourCottages_ResourceCenter18681"});
                 table43.AddRow(new string[] {
+                            "LetYourCottages_HHFSDesktopHeader18987"});
+                table43.AddRow(new string[] {
                             "LetYourCottages_ReTestBedrockPromo19009"});
                 table43.AddRow(new string[] {
                             "LetYourCottages_ChangingPhoneNumberFormat18993"});
-#line 54
+                table43.AddRow(new string[] {
+                            "LetYourCottages_FormErrorWarnings18947"});
+                table43.AddRow(new string[] {
+                            "LetYourCottages_AddTOBAlerts18280"});
+                table43.AddRow(new string[] {
+                            "LetYourCottages_InformationCentreCarousel19036"});
+#line 58
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table43, "Then ");
 #line hidden
             }

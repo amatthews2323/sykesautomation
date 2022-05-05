@@ -7,13 +7,12 @@ Scenario: The user can navigate to the Let Your Property page
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
-@LetYourProperty @ProductionRegressionSuite @EnquiryForm
+@LetYourProperty @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
 	| Element                                                                                           |
 	| form-heading-container                                                                            |
-#   | Complete the form to receive your information pack												|
 	| heroform_first_name                                                                               |
 	| heroform_first_name_validation_error                                                              |
 	| heroform_email                                                                                    |
@@ -57,7 +56,7 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
 
-@LetYourProperty @ProductionRegressionSuite @EnquiryForm
+@LetYourProperty @RegressionSuite @EnquiryForm
 Scenario: The modal enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: Start your listing today
@@ -98,7 +97,7 @@ Scenario: The modal enquiry form is displayed correctly
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
 
-@LetYourProperty @ProductionRegressionSuite @EnquiryForm
+@LetYourProperty @RegressionSuite @EnquiryForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I click Click enquire now and complete the form to receive your free information pack.
@@ -138,7 +137,7 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 #	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 #	Then the following element is not displayed: Already started?
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @RegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed: nav_top u-clearfix nav_top_17485
@@ -149,7 +148,7 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	When I scroll to the following element: page-footer container_sykes_grid
 	Then the following element is displayed: Back To Top Button
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @RegressionSuite
 Scenario: The relevant elements are displayed within the footer
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer
@@ -171,14 +170,14 @@ Scenario: The relevant elements are displayed within the footer
     | https://pinterest.com/sykescottages/                       |
     | https://instagram.com/sykescottages/                       |
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @RegressionSuite
 Scenario: The Income Projection is displayed upon interaction
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed: Please select your region
 	When I select option South West from the region dropdown
 	Then the following element is displayed: homepage_calculator_cta_blue
 
-@LetYourProperty @ProductionRegressionSuite
+@LetYourProperty @RegressionSuite
 Scenario: The Managed Services links direct to the LYP form
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18466
@@ -189,69 +188,68 @@ Scenario: The Managed Services links direct to the LYP form
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty @RegressionSmokeTest
+@LetYourProperty @SmokeTest
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
-    | Element                                      |
-    | Customer reviews powered by Trustpilot       |
-    | Gain exposure through our partners           |
-    | What do our owners say                       |
-    | How much could I earn                        |
-    | We are still open as usual                   |
-    | Holiday home management with Sykes           |
-    | Putting your property in the spotlight       |
-    | Holiday letting made easy                    |
-    | Free Owner Information Pack                  |
-  # | Looking to get started with holiday letting? |
+    | Element                                |
+    | Customer reviews powered by Trustpilot |
+    | Gain exposure through our partners     |
+    | What do our owners say                 |
+    | How much could I earn                  |
+    | We are still open as usual             |
+    | Holiday home management with Sykes     |
+    | Putting your property in the spotlight |
+    | Holiday letting made easy              |
+    | Information centre                     |
+    | Free Owner Information Pack            |
 
-#@LetYourProperty @ProductionRegressionSuite
-Scenario: The page sections are displayed is the correct order
+@LetYourProperty @RegressionSuite
+Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
-	Then the <Section> section is displayed at position <Position>
-	Examples:
-	| Section                                                | Position |
-	| Gain exposure through our partners                     | 3        |
-	| What do our owners say?                                | 4        |
-	| How can Sykes elevate your holiday letting experience? | 5        |
-	| How much could I earn                                  | 6        |
-	| Holiday home management with Sykes                     | 7        |
-	| Putting your property in the spotlight                 | 8        |
-	| Holiday letting made easy                              | 9        |
-	| Are you thinking of buying                             | 10       |
-	| Request your free owner information pack               | 11       |
+	Then the page sections are displayed in the relevant positions
+	| Key                                    | Position |
+	| Gain exposure through our partners     | 2        |
+	| What do our owners say                 | 3        |
+	| How much could I earn                  | 4        |
+	| We are still open as usual             | 5        |
+	| Holiday home management with Sykes     | 6        |
+	| Putting your property in the spotlight | 7        |
+	| Holiday letting made easy              | 8        |
+	| Information centre                     | 9        |
+	| Free Owner Information Pack			 | 10       |
 
-@MobileApp @RegressionSmokeTest
+@MobileApp @SmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile
 	Then the following sections are dislpayed
-	| Section                                      |
-    | Gain exposure through our partners           |
-    | What do our owners say                       |
-    | How much could I earn                        |
-    | We are still open as usual                   |
-    | Holiday home management with Sykes           |
-    | Putting your property in the spotlight       |
-    | Holiday letting made easy                    |
-    | Free Owner Information Pack                  |
-  # | Looking to get started with holiday letting? |
+	| Section                                |
+	| Gain exposure through our partners     |
+	| What do our owners say                 |
+	| How much could I earn                  |
+	| We are still open as usual             |
+	| Holiday home management with Sykes     |
+	| Putting your property in the spotlight |
+	| Holiday letting made easy              |
+	| Information centre                     |
+	| Free Owner Information Pack            |
 	And the following elements are not dislpayed
-	| Element                          |
-	| contact-to-book mobile           |
-	| navbar-toggle collapsed          |
+	| Element                 |
+	| contact-to-book mobile  |
+	| navbar-toggle collapsed |
 
 @LetYourProperty
 Scenario: The Information Carousel is displayed on the page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
-		 | Element                     |
-		 | Information centre          |
-		 | Enquire now                 |
-		 | Buying, owning and selling  |
-		 | How to run your holiday let |
-		 | Tax information and advice  |
-		 | Advertising and marketing   |
-		 | Investment advice           |
-		 | Holiday let mortgages       |
-		 | Legal regulations           |
+	| Element                     |
+	| Information centre          |
+	| Enquire now                 |
+	| Buying, owning and selling  |
+	| How to run your holiday let |
+	| Tax information and advice  |
+	| Advertising and marketing   |
+	| Investment advice           |
+	| Holiday let mortgages       |
+	| Legal regulations           |
