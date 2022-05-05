@@ -5,16 +5,20 @@
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <URL>
 	Then the following elements are dislpayed
-	| Element                   |
-	| <Title>                   |
-	| form-heading-container    |
-	| partner                   |
-	| Holiday letting made easy |
-	| Request a free owner pack |
+	| Element                                |
+	| <Title>                                |
+	| nav_logo                               |
+	| hero__image                            |
+	| form-heading-container                 |
+	| Putting your property in the spotlight |
+	| Holiday letting made easy              |
+	| Request a free owner pack              |
+	| Claim My Free Pack                     |
+
 	Examples:
 	| URL                                                         | Title                      |
-	| https://www.character-cottages.co.uk/letyourcottage/        | Character Cottages         |
 	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay                 |
+	| https://www.character-cottages.co.uk/letyourcottage/        | Character Cottages         |
 	| https://www.coastandcountry.co.uk/letyourcottage/           | Coast & Country Cottages   |
 	| https://www.cornishcottageholidays.co.uk/letyourcottage/    | Cornish Cottage Holidays   |
 	| https://www.dream-cottages.co.uk/letyourcottage/            | Dream Cottages             |

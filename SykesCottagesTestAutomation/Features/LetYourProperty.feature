@@ -111,31 +111,6 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	| list_property_first_name_validation_error                              |
 	| list_property_email_validation_error                                   |
 	| list_property_phone_validation_error                                   |
-#	When I select the form overlay submit button
-#	Then the following elements are dislpayed
-#	| Element                        |
-#	| Please enter a full name.      |
-#	| Please enter an email address. |
-#	| Please enter a contact number. |
-#	When I enter test.com in the following form field: list_property_email
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-#	When I enter test@test in the following form field: list_property_email
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-#	When I enter test in the following form field: list_property_phone
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-#	When I enter 070000000 in the following form field: list_property_phone
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-#	When I enter 0700000000000000 in the following form field: list_property_phone
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-#	When I enter +44 7000 000 000 in the following form field: list_property_phone
-#	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-#	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-#	Then the following element is not displayed: Already started?
 
 @LetYourProperty @RegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -147,28 +122,9 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer container_sykes_grid
 	Then the following element is displayed: Back To Top Button
-
-@LetYourProperty @RegressionSuite
-Scenario: The relevant elements are displayed within the footer
-	Given I have navigated to the following page: letyourcottage
-	When I scroll to the following element: page-footer
-	Then the following elements are dislpayed
-    | Element                                                    |
-    | /images/sykes/sykes-primary-logo-white.svg                 |
-    | © 2022 All rights reserved                                 |
-    | One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom |
-    | Registration No: 4469189                                   |
-    | VAT Registration No: 204 9794 88                           |
-    | Email us at letwithsykes@sykescottages.co.uk               |
-    | Sykes Product Showcase 2022                                |
-    | /blog/category/cottage-owners/                             |
-    | /terms/privacypolicy                                       |
-    | /press-and-media.html                                      |
-    | /letyourcottage/holiday-homes-for-sale/                    |
-    | https://www.facebook.com/sykescottages.co.uk               |
-    | https://twitter.com/sykescottages                          |
-    | https://pinterest.com/sykescottages/                       |
-    | https://instagram.com/sykescottages/                       |
+	When I click Back To Top Button
+	And I wait 5 seconds
+	Then the enquiry form is displayed with the tint applied
 
 @LetYourProperty @RegressionSuite
 Scenario: The Income Projection is displayed upon interaction
@@ -180,9 +136,7 @@ Scenario: The Income Projection is displayed upon interaction
 @LetYourProperty @RegressionSuite
 Scenario: The Managed Services links direct to the LYP form
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18466
-	And I close the pop-ups
-	And I scroll to the following element: Partially managed
+	When I scroll to the following element: Partially managed
 	And I select the Partially Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 	When I select the Fully Managed Enquire Now button
@@ -209,6 +163,7 @@ Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the page sections are displayed in the relevant positions
 	| Key                                    | Position |
+	| navigation                             | 1        |
 	| Gain exposure through our partners     | 2        |
 	| What do our owners say                 | 3        |
 	| How much could I earn                  | 4        |
@@ -217,7 +172,7 @@ Scenario: The page sections are displayed in the correct order
 	| Putting your property in the spotlight | 7        |
 	| Holiday letting made easy              | 8        |
 	| Information centre                     | 9        |
-	| Free Owner Information Pack			 | 10       |
+	| Free Owner Information Pack            | 10       |
 
 @MobileApp @SmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
@@ -253,3 +208,25 @@ Scenario: The Information Carousel is displayed on the page
 	| Investment advice           |
 	| Holiday let mortgages       |
 	| Legal regulations           |
+
+@LetYourProperty @RegressionSuite
+Scenario: The footer content is displayed correctly
+	Given I have navigated to the following page: letyourcottage
+	When I scroll to the following element: page-footer
+	Then the following elements are dislpayed within the footer section
+	| Element                                                    |
+	| Sykes Cottages                                             |
+	| © 2022 All rights reserved                                 |
+	| One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom |
+	| Registration No: 4469189                                   |
+	| VAT Registration No: 204 9794 88                           |
+	| Email us at letwithsykes@sykescottages.co.uk               |
+	| Sykes Product Showcase 2022                                |
+	| Read our blog                                              |
+	| Privacy Policy                                             |
+	| Press and media                                            |
+	| Holiday homes for sale                                     |
+	| Facebook                                                   |
+	| Twitter                                                    |
+	| Pinterest                                                  |
+	| Instagram                                                  |

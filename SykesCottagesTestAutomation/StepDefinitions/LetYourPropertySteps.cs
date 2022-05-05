@@ -148,6 +148,17 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [Then(@"the following elements are dislpayed within the (.*) section")]
+        public void ThenTheFollowingElementsAreDislpayedWithinTheSection(string section, Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                AssertElementDisplayed(element.ToString(), section);
+            }
+        }
+
+
         [Then(@"the following elements are not dislpayed")]
         public void ThenTheFollowingElementsAreNotDislpayedOnThePage(Table table)
         {
@@ -214,6 +225,12 @@ namespace SykesCottagesTestAutomation.BaseClass
 
         [Then(@"I wait (.*) seconds")]
         public void ThenIWaitSeconds(int value)
+        {
+            WaitASecond(value);
+        }
+
+        [When(@"I wait (.*) seconds")]
+        public void WhenIWaitSeconds(int value)
         {
             WaitASecond(value);
         }
@@ -285,7 +302,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             {
                 Console.WriteLine("Section: " + section);
                 Console.WriteLine("Position: " + dictionary[section]);
-                AssertElementDisplayed("//section[" + dictionary[section] + " and contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(text(),'" + section + "')]");
+                AssertElementDisplayed("//section[" + dictionary[section] + " and contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(text(),'" + section + "')]|//section[" + dictionary[section] + " and contains(@class,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@class,'" + section + "')]");
             }
         }
 

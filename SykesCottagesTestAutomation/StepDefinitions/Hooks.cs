@@ -15,8 +15,9 @@ namespace SykesCottagesTestAutomation
         public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
 
         public static bool Screenshots = false; //Take a screenshot at the end of each scenario
-        public static bool EnableReporting = false; //Turn on Extent Reports
-        public static string ReportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest
+        public static bool Reporting = false; //Turn on Extent Reports
+        public static string ReportName = "SmokeTest"; //Name of the report: RegressionSuite | SmokeTest
+        public static string ReportDirectory = "C://AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool AcceptCookies = true; //Dismiss the cookie popup
         public static bool DismissPopups = true; //Dismiss popups, alerts and surveys
@@ -44,10 +45,10 @@ namespace SykesCottagesTestAutomation
         public static void BeforeTestRun()
         {
             //if (EnableReporting.Contains("Y"))
-            if (EnableReporting == true)
+            if (Reporting == true)
             {
                 //Name of directory
-                string reportDir = @"C://AutomatedTestResults//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + ReportName + "_" + Environemt + "_" + Browser;
+                string reportDir = @ReportDirectory + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + ReportName + "_" + Environemt + "_" + Browser;
                 if (BrowserSize != "")
                 {
                     reportDir += "_" + BrowserSize;
@@ -85,7 +86,7 @@ namespace SykesCottagesTestAutomation
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            if (EnableReporting == true)
+            if (Reporting == true)
             {
                 featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title); //Create dynamic feature name
             }
@@ -94,7 +95,7 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            if (EnableReporting == true)
+            if (Reporting == true)
             {
                 scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
             }
@@ -103,7 +104,7 @@ namespace SykesCottagesTestAutomation
         [AfterStep]
         public void InsertReportingSteps()
         {
-            if (EnableReporting == true)
+            if (Reporting == true)
             {
                 var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
 
