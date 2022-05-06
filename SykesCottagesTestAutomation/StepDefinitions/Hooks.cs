@@ -11,30 +11,30 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : CommonSteps
     {
-        public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
+        public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
+        public static string browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
 
-        public static bool Screenshots = true; //Take a screenshot at the end of each scenario
-        public static bool Reporting = true; //Turn on Extent Reports
-        public static string ReportName = "SingleTest2"; //Name of the report: RegressionSuite | SmokeTest
-        public static string ReportDirectory = "C://Users//gary.smith//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
-        //public static string ReportDirectory = @UserDirectory + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
+        public static bool screenshots = true; //Take a screenshot at the end of each scenario
+        public static bool reporting = true; //Turn on Extent Reports
+        public static string reportName = "SingleTest2"; //Name of the report: RegressionSuite | SmokeTest
+        public static string reportDir = userDir + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
-        public static bool AcceptCookies = true; //Dismiss the cookie popup
-        public static bool DismissPopups = true; //Dismiss popups, alerts and surveys
+        public static bool acceptCookies = true; //Dismiss the cookie popup
+        public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string BrowserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
-        public static int PageWidth = 768; //Set the browser window width: 768 (iPhone)
-        public static int PageHeight = 1024; //Set the browser window height: 1024 (iPhone)
+        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
+        public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
-        public static string Experiments = ""; //Set experiment(s) - comma separated list
+        public static string experiments = ""; //Set experiment(s) - comma separated list
 
-        public static int TimeOut = 20; //Set pageload timeout
+        public static int timeOut = 20; //Set pageload timeout
 
+        public static string userDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         private static ExtentTest featureName;
         private static ExtentTest scenario;
         private static ExtentReports extent;
-        public static string ReportPath;
+        public static string reportPath;
         private readonly ScenarioContext _scenarioContext;
 
         public Hooks(SharedDriver context, ScenarioContext scenarioContext) : base(context)
@@ -46,32 +46,33 @@ namespace SykesCottagesTestAutomation
         public static void BeforeTestRun()
         {
             //if (EnableReporting.Contains("Y"))
-            if (Reporting == true)
+            if (reporting == true)
             {
                 //Name of directory
-                string reportDir = @ReportDirectory + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + ReportName + "_" + Environemt + "_" + Browser;
-                if (BrowserSize != "")
+                string reportDir = Hooks.reportDir + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + reportName + "_" + environemt + "_" + browser;
+                if (browserSize != "")
                 {
-                    reportDir += "_" + BrowserSize;
+                    reportDir += "_" + browserSize;
                 }
+                Console.WriteLine("Report location: " + Hooks.reportDir);
                 // If directory does not exist, create it
                 if (!Directory.Exists(reportDir))
                 {
                     Directory.CreateDirectory(reportDir);
                 }
                 //Set report directory
-                var htmlReporter = new ExtentHtmlReporter(@reportDir + "//" + ReportName + ".html");
+                var htmlReporter = new ExtentHtmlReporter(@reportDir + "//" + reportName + ".html");
                 //Set report theme
                 htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
                 //Set report name
-                string ExtentReportName = ReportName + " | Environment: " + Environemt + " | Browser: " + Browser;
-                if (Experiments != "")
+                string ExtentReportName = reportName + " | Environment: " + environemt + " | Browser: " + browser;
+                if (experiments != "")
                 {
-                    ExtentReportName = ExtentReportName + " | Experiments: " + Experiments;
+                    ExtentReportName = ExtentReportName + " | Experiments: " + experiments;
                 }
-                if (BrowserSize != "")
+                if (browserSize != "")
                 {
-                    ExtentReportName = ExtentReportName + " | Size: " + BrowserSize;
+                    ExtentReportName = ExtentReportName + " | Size: " + browserSize;
                 }
                 htmlReporter.Config.ReportName = ExtentReportName;
                 //Initialise report
@@ -87,7 +88,7 @@ namespace SykesCottagesTestAutomation
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            if (Reporting == true)
+            if (reporting == true)
             {
                 featureName = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title); //Create dynamic feature name
             }
@@ -96,7 +97,7 @@ namespace SykesCottagesTestAutomation
         [BeforeScenario]
         public void StartTest()
         {
-            if (Reporting == true)
+            if (reporting == true)
             {
                 scenario = featureName.CreateNode<Scenario>(_scenarioContext.ScenarioInfo.Title); //Get scenario name
             }
@@ -105,7 +106,7 @@ namespace SykesCottagesTestAutomation
         [AfterStep]
         public void InsertReportingSteps()
         {
-            if (Reporting == true)
+            if (reporting == true)
             {
                 var stepType = _scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
 
@@ -138,7 +139,7 @@ namespace SykesCottagesTestAutomation
         [AfterScenario]
         public void EndTest()
         {
-            if (Screenshots == true)
+            if (screenshots == true)
             {
                 Screenshot(_scenarioContext.ScenarioInfo.Title.Trim() + " " + DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss"));
             }

@@ -37,7 +37,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I submit the enquiry form")]
         public void WhenISubmitTheEnquiryForm()
         {
-            if (Hooks.Environemt != "Live")
+            if (Hooks.environemt != "Live")
             {
                 Click("//form[@*='heroform']/button[@*='submit']", waitTime: 4);
             }
@@ -50,7 +50,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I am directed to the Property Letting Dashboard page")]
         public void ThenIAmDirectedToThePropertyLettingDashboardPage()
         {
-            if (Hooks.Environemt != "Live")
+            if (Hooks.environemt != "Live")
             {
                 AssertPageTitle("Thank you for your enquiry | Sykes Cottages");
             }

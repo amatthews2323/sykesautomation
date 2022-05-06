@@ -32,18 +32,18 @@ Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036
 	Then the following elements are dislpayed
-		 | Element                      |
-		 | Information centre           |
-		 | A bespoke letting experience |
-		 | Holiday homes for sale       |
-		 | Enquire now                  |
-		 | Buying, owning and selling   |
-		 | How to run your holiday let  |
-		 | Tax information and advice   |
-		 | Advertising and marketing    |
-		 | Investment advice            |
-		 | Holiday let mortgages        |
-		 | Legal regulations            |
+	| Element                      |
+	| Information centre           |
+	| A bespoke letting experience |
+	| Holiday homes for sale       |
+	| Enquire now                  |
+	| Buying, owning and selling   |
+	| How to run your holiday let  |
+	| Tax information and advice   |
+	| Advertising and marketing    |
+	| Investment advice            |
+	| Holiday let mortgages        |
+	| Legal regulations            |
 
 @ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_AddTOBAlerts18280

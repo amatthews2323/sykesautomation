@@ -61,14 +61,12 @@ namespace SykesCottagesTestAutomation
             //Check for domain override, if none found, use the one specified in the Hooks class
             if (domain == "")
             {
-                domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.Environemt); //Get the URL based on the Hooks.Environemt value
+                domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt); //Get the URL based on the Hooks.Environemt value
             }
             url = domain + path;
 
-            SelectBrowser(Hooks.Browser); //Set the driver and browser
-            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.TimeOut); //Set the timeout duration
-
-            Console.WriteLine("User directory: " + Environment.GetEnvironmentVariable("USERPROFILE"));
+            SelectBrowser(Hooks.browser); //Set the driver and browser
+            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.timeOut); //Set the timeout duration
 
             try
             {
@@ -76,11 +74,11 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Cancel page load and continue...");
+                Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
-            if (Hooks.AcceptCookies == true)
+            if (Hooks.acceptCookies == true)
             {
                 ClickIfDisplayed("Accept All Cookies", waitTime: 2);
             }
@@ -90,14 +88,14 @@ namespace SykesCottagesTestAutomation
             }
 
             //Check for experiments
-            if (Hooks.Experiments != "")
+            if (Hooks.experiments != "")
             {
                 //If Dev Tools not found, launch website with Dev Tools activated
                 if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
                 {
                     GoTo(url + "/?dev_tools=product");
                 }
-                ApplyExperiment(Hooks.Experiments);
+                ApplyExperiment(Hooks.experiments);
             }
         }
 
@@ -148,11 +146,11 @@ namespace SykesCottagesTestAutomation
             Refresh();
         }
 
-        public void ClosePopups(string acceptCookies = "Y", string dismissAlerts = "Y")
+        public void ClosePopups(bool _acceptCookies = true, bool _dismissAlerts = true)
         {
-            if (Hooks.AcceptCookies == true)
+            if (Hooks.acceptCookies == true)
             {
-                if (acceptCookies.Contains("Y"))
+                if (_acceptCookies == true)
                 {
                     ClickIfDisplayed("Accept All Cookies");
                 }
@@ -162,7 +160,7 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
             }
 
-            if (Hooks.DismissPopups == true)
+            if (Hooks.dismissPopups == true)
             {
                 //Collapse survey
                 if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
@@ -174,7 +172,7 @@ namespace SykesCottagesTestAutomation
                 ClickIfDisplayed("nonenquiry6941");
 
                 //Dismiss alerts (unless overridden to test an experiment)
-                if (dismissAlerts.Contains("Y"))
+                if (_dismissAlerts == true)
                 {
                     //WaitASecond();
                     ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
@@ -242,10 +240,10 @@ namespace SykesCottagesTestAutomation
             }
             catch (Exception)
             {
-                Console.WriteLine("Website did not finish loading after " + Hooks.TimeOut + " seconds. Cancel page load and continue...");
+                Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         public void WaitASecond(int seconds = 1)
@@ -460,10 +458,10 @@ namespace SykesCottagesTestAutomation
         public void Screenshot(string fileName = "screenshot", string type = "full webpage")
         {
             //Name of directory
-            string dir = @Hooks.ReportDirectory + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.ReportName + "_" + Hooks.Environemt + "_" + Hooks.Browser;
-            if (Hooks.BrowserSize != "")
+            string dir = @Hooks.reportDir + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.reportName + "_" + Hooks.environemt + "_" + Hooks.browser;
+            if (Hooks.browserSize != "")
             {
-                dir += "_" + Hooks.BrowserSize;
+                dir += "_" + Hooks.browserSize;
             }
             dir += "//Screenshots";
 

@@ -17,7 +17,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
             ClosePopups();
             AssertPageTitle("Holiday Cottages To Rent");
         }
@@ -26,16 +26,16 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite("", path);
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
-            ClosePopups(acceptCookies: "Yes", dismissAlerts: "Yes");
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            ClosePopups(_acceptCookies: true, _dismissAlerts: true);
         }
 
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
             LaunchWebsite("", path);
-            ClosePopups(acceptCookies: "Yes", dismissAlerts: "No");
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            ClosePopups(_acceptCookies: true, _dismissAlerts: false);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [When(@"I navigate to (.*)")]
@@ -246,7 +246,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             LaunchWebsite(domain);
             ClosePopups();
-            SetBrowserSize(Hooks.BrowserSize, Hooks.PageWidth, Hooks.PageHeight);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [When(@"I scroll to the following element: (.*)")]
