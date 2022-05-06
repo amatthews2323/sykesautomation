@@ -16,9 +16,9 @@ namespace SykesCottagesTestAutomation
 
         public static bool Screenshots = true; //Take a screenshot at the end of each scenario
         public static bool Reporting = true; //Turn on Extent Reports
-        public static string ReportName = "SingleTest"; //Name of the report: RegressionSuite | SmokeTest
+        public static string ReportName = "SingleTest2"; //Name of the report: RegressionSuite | SmokeTest
         public static string ReportDirectory = "C://Users//gary.smith//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
-        
+        //public static string ReportDirectory = @UserDirectory + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool AcceptCookies = true; //Dismiss the cookie popup
         public static bool DismissPopups = true; //Dismiss popups, alerts and surveys

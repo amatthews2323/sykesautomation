@@ -68,6 +68,8 @@ namespace SykesCottagesTestAutomation
             SelectBrowser(Hooks.Browser); //Set the driver and browser
             shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.TimeOut); //Set the timeout duration
 
+            Console.WriteLine("User directory: " + Environment.GetEnvironmentVariable("USERPROFILE"));
+
             try
             {
                 GoTo(url); //Launch website
