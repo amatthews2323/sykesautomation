@@ -12,7 +12,7 @@ namespace SykesCottagesTestAutomation
     public class Hooks : CommonSteps
     {
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string browser = "Firefox"; //Set browser: Chrome | Firefox | Edge
 
         public static bool screenshots = true; //Take a screenshot at the end of each scenario
         public static bool reporting = true; //Turn on Extent Reports
