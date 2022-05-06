@@ -12,12 +12,13 @@ namespace SykesCottagesTestAutomation
     public class Hooks : CommonSteps
     {
         public static string Environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string Browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string Browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
 
-        public static bool Screenshots = false; //Take a screenshot at the end of each scenario
-        public static bool Reporting = false; //Turn on Extent Reports
-        public static string ReportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest
-        public static string ReportDirectory = "C://AutomatedTestResults"; //Location for reports and screenshots
+        public static bool Screenshots = true; //Take a screenshot at the end of each scenario
+        public static bool Reporting = true; //Turn on Extent Reports
+        public static string ReportName = "SingleTest"; //Name of the report: RegressionSuite | SmokeTest
+        public static string ReportDirectory = "C://Users//gary.smith//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
+        
 
         public static bool AcceptCookies = true; //Dismiss the cookie popup
         public static bool DismissPopups = true; //Dismiss popups, alerts and surveys
