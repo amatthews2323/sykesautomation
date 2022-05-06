@@ -214,7 +214,6 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                //return "//" + element + "[@*=\"" + value + "\"]|//" + element + "[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]|//" + element + "[contains(@id,\"" + value + "\")]|//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
                 return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
             }
         }

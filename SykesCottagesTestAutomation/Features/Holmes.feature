@@ -34,7 +34,6 @@ Scenario: Get experiment conversion precentage
 		| 4406    |
 		| 4407    |
 		| 4411    |
-		| 4430    |
 		| 4442    |
 		| 4446    |
 		| 4450    |
@@ -47,10 +46,10 @@ Scenario: Get experiment conversion precentage
 		| 4511    |
 		| 4514    |
 		| 4516    |
-		| 4528    |
 		| 4534    |
 		| 4535    |
 		| 4536    |
+		| 4537    |
 
 @HolmesExperiments
 Scenario: Get experiment status

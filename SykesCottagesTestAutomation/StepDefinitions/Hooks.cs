@@ -16,13 +16,13 @@ namespace SykesCottagesTestAutomation
 
         public static bool Screenshots = false; //Take a screenshot at the end of each scenario
         public static bool Reporting = false; //Turn on Extent Reports
-        public static string ReportName = "SmokeTest"; //Name of the report: RegressionSuite | SmokeTest
+        public static string ReportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest
         public static string ReportDirectory = "C://AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool AcceptCookies = true; //Dismiss the cookie popup
         public static bool DismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string BrowserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string BrowserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int PageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int PageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 

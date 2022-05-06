@@ -27,9 +27,11 @@ Scenario: The user can navigate to the Information Centre pages
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed
-    | Element                |
-    | form-heading-container |
-    | <Header>               |
+    | Element                                           |
+    | form-heading-container                            |
+    | <Header>                                          |
+    | hero__image                                       |
+    | Customer reviews powered by Trustpilot            |
 	Examples:
 	| Path														    | Header                                     |
 	| letyourcottage/information/marketing-your-holiday-let         | Advertising and marketing your holiday let |

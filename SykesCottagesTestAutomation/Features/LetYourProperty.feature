@@ -1,11 +1,27 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@Navigation
+@Navigation @SmokeTest
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
+
+@LetYourProperty @SmokeTest
+Scenario: The relevant sections are displayed on the Let Your Property page
+	Given I have navigated to the following page: letyourcottage
+	Then the following elements are dislpayed
+    | Element                                |
+    | Customer reviews powered by Trustpilot |
+    | Gain exposure through our partners     |
+    | What do our owners say                 |
+    | How much could I earn                  |
+    | We are still open as usual             |
+    | Holiday home management with Sykes     |
+    | Putting your property in the spotlight |
+    | Holiday letting made easy              |
+    | Information centre                     |
+    | Free Owner Information Pack            |
 
 @LetYourProperty @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page
@@ -141,22 +157,6 @@ Scenario: The Managed Services links direct to the LYP form
 	Then the enquiry form is displayed with the tint applied
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
-
-@LetYourProperty @SmokeTest
-Scenario: The relevant sections are displayed on the Let Your Property page
-	Given I have navigated to the following page: letyourcottage
-	Then the following elements are dislpayed
-    | Element                                |
-    | Customer reviews powered by Trustpilot |
-    | Gain exposure through our partners     |
-    | What do our owners say                 |
-    | How much could I earn                  |
-    | We are still open as usual             |
-    | Holiday home management with Sykes     |
-    | Putting your property in the spotlight |
-    | Holiday letting made easy              |
-    | Information centre                     |
-    | Free Owner Information Pack            |
 
 @LetYourProperty @RegressionSuite
 Scenario: The page sections are displayed in the correct order

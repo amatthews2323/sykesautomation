@@ -57,7 +57,13 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [When(@"I click (.*)")]
-        public void IClick(string value)
+        public void WhenIClick(string value)
+        {
+            Click(value);
+        }
+
+        [Then(@"I click (.*)")]
+        public void ThenIClick(string value)
         {
             Click(value);
         }

@@ -2,6 +2,32 @@
 	Test specific experiments
 
 @ActiveExperiments @RegressionSuite
+Scenario: Experiment LetYourCottages_ApplyNewDesignToInfoPages19055
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: LetYourCottages_ApplyNewDesignToInfoPages19055
+	Then the following elements are dislpayed
+    | Element                                |
+    | form-heading-container                 |
+    | <Header>                               |
+    | hero__image                            |
+    | Customer reviews powered by Trustpilot |
+    | Information centre                     |
+    | Share article                          |
+    | Twitter                                |
+    | Facebook                               |
+    | Instagram                              |
+    | Linkedin                               |
+	Examples:
+	| Path														    | Header                                     |
+	| letyourcottage/information/marketing-your-holiday-let         | Advertising and marketing your holiday let |
+	| letyourcottage/information/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
+	| letyourcottage/information/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
+	| letyourcottage/information/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
+	| letyourcottage/information/holiday-let-mortgages              | Holiday let mortgages                      |
+	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let                |
+	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
+
+@ActiveExperiments @RegressionSuite
 Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036

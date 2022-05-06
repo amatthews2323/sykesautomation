@@ -61,7 +61,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can add a property with the following postcode: (.*)")]
-        public void ThenICanCompleteThePropertyCreationProcess(string _postcode = "Random")
+        public void ThenICanAddAPropertyWithTheFollowingPostcode(string _postcode = "Random")
         {
             Click("I have a property I’d like to list");
             Click("Next", waitTime: 1);
@@ -121,7 +121,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 1 - Property Location")]
-        public void ThenICanCompleteStep1OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep1PropertyLocation()
         {
             Screenshot("DO - Additional Property Details - Step 1 - Property Location");
             AssertTextDisplayed("Property Location");
@@ -133,7 +133,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 2 - Guests and bedrooms")]
-        public void ThenICanCompleteStep2OfAddingAdditionalPropertyDetails(Table table)
+        public void ThenICanCompleteAdditionalPropertyDetailsStep2GuestsAndBedrooms(Table table)
         {
             Screenshot("DO - Additional Property Details - Step 2 - Guests and bedrooms");
             AssertTextDisplayed("How many guests can your property sleep?");
@@ -154,7 +154,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 3 - Photos of your property")]
-        public void ThenICanCompleteStep3OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep3PhotosOfYourProperty()
         {
             Screenshot("DO - Additional Property Details - Step 3 - Photos of your property");
             AssertTextDisplayed("Photos of your property");
@@ -166,7 +166,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 4 - About your property")]
-        public void ThenICanCompleteStep4OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep4AboutYourProperty()
         {
             Screenshot("DO - Additional Property Details - Step 4 - About your property");
             AssertTextDisplayed("About your property");
@@ -177,7 +177,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 5 - Key Collection")]
-        public void ThenICanCompleteStep5OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep5KeyCollection()
         {
             Screenshot("DO - Additional Property Details - Step 5 - Key Collection");
             AssertTextDisplayed("Key Collection");
@@ -189,7 +189,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 6 - Booking details")]
-        public void ThenICanCompleteStep6OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep6BookingDetails()
         {
             Screenshot("DO - Additional Property Details - Step 6 - Booking details");
             AssertTextDisplayed("Booking details");
@@ -203,7 +203,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Additional Property Details Step 7 - Upcoming bookings")]
-        public void ThenICanCompleteStep7OfAddingAdditionalPropertyDetails()
+        public void ThenICanCompleteAdditionalPropertyDetailsStep7UpcomingBookings()
         {
             Screenshot("DO - Additional Property Details - Step 7 - Upcoming bookings");
             AssertTextDisplayed("Upcoming bookings");
@@ -213,7 +213,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Personal Details Step 1 - Personal details")]
-        public void ThenICanCompleteStep1OfAddingPersonalDetails()
+        public void ThenICanCompletePersonalDetailsStep1PersonalDetails()
         {
             Screenshot("DO - Personal Details - Step 1 - Personal details");
             AssertTextDisplayed("Personal details");
@@ -226,7 +226,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Personal Details Step 2 - Your bank details")]
-        public void ThenICanCompleteStep2OfAddingPersonalDetails()
+        public void ThenICanCompletePersonalDetailsStep2YourBankDetails()
         {
             Screenshot("DO - Personal Details - Step 2 - Your bank details");
             AssertTextDisplayed("Your bank details");
@@ -239,7 +239,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Personal Details Step 3 - File uploads")]
-        public void ThenICanCompleteStep3OfAddingPersonalDetails()
+        public void ThenICanCompletePersonalDetailsStep3FileUploads()
         {
             Screenshot("DO - Personal Details - Step 3 - File uploads");
             AssertTextDisplayed("File uploads");
@@ -253,7 +253,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Personal Details Step 4 - Select commission tier")]
-        public void ThenICanCompleteStep4OfAddingPersonalDetails()
+        public void ThenICanCompletePersonalDetailsStep4SelectCommissionTier()
         {
             Screenshot("DO - Personal Details - Step 4 - Select commission tier");
             AssertTextDisplayed("Select commission tier");
@@ -264,7 +264,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Then(@"I can complete Personal Details Step 5 - Property Pricing")]
-        public void ThenICanCompleteStep5OfAddingPersonalDetails()
+        public void ThenICanCompletePersonalDetailsStep5PropertyPricing()
         {
             Screenshot("DO - Personal Details - Step 5 - Property Pricing");
             AssertTextDisplayed("Property Pricing");
