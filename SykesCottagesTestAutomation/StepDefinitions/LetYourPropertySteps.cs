@@ -11,8 +11,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
         }
 
-        public string CSVValue;
-
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {

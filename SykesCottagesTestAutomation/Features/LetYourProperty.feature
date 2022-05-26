@@ -236,7 +236,14 @@ Scenario: The footer content is displayed correctly
 	| Instagram                                                  |
 
 @LetYourProperty @RegressionSuite
-Scenario: The 
+Scenario: The testimonials carousel is present on the page
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then the Testimonials carousel is displayed on the page
 	And I click /images/sykes/letyourcottage/icons/arrow-prev.svg
+
+@LetYourProperty @RegressionSuite
+Scenario: The alerts disapear after an amount of time
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Then the alerts are displayed on the page
+	And I wait 10 seconds
+	Then the alerts are not displayed on the page

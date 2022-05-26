@@ -223,19 +223,13 @@ this.ScenarioInitialize(scenarioInfo);
                 table46.AddRow(new string[] {
                             "4536"});
                 table46.AddRow(new string[] {
-                            "4537"});
-                table46.AddRow(new string[] {
                             "4544"});
-                table46.AddRow(new string[] {
-                            "4547"});
                 table46.AddRow(new string[] {
                             "4560"});
                 table46.AddRow(new string[] {
                             "4561"});
                 table46.AddRow(new string[] {
                             "4567"});
-                table46.AddRow(new string[] {
-                            "4569"});
                 table46.AddRow(new string[] {
                             "4572"});
 #line 29
@@ -254,7 +248,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiment status", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 51
+#line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -264,7 +258,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 52
+#line 49
  testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table47 = new TechTalk.SpecFlow.Table(new string[] {
@@ -290,11 +284,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table47.AddRow(new string[] {
                             "LetYourCottages_InformationCentreCarousel19036"});
                 table47.AddRow(new string[] {
-                            "LetYourCottages_ApplyNewDesignToInfoPages19055"});
-                table47.AddRow(new string[] {
                             "LetYourCottages_PartnersInteractiveCarrousel18699"});
-                table47.AddRow(new string[] {
-                            "LetYourCottages_RedirectTobToDigitalOnboarding19109"});
                 table47.AddRow(new string[] {
                             "LetYourCottages_AddImageToInfoPages19099"});
                 table47.AddRow(new string[] {
@@ -302,10 +292,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table47.AddRow(new string[] {
                             "LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102"});
                 table47.AddRow(new string[] {
-                            "LetYourCottages_InformationPageSidebarTruncation19171"});
-                table47.AddRow(new string[] {
                             "LetYourCottages_HeroFormTitleChanges19172"});
-#line 53
+#line 50
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table47, "Then ");
 #line hidden
             }

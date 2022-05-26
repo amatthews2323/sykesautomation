@@ -2,6 +2,13 @@
 	Test specific experiments
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
+	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
+	And I scroll to the following element: page-footer
+	Then the following element is displayed: floatingactionbutton
+
+@ActiveExperiments
 Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
 	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_UpdateInfoPageHeaders19095
@@ -14,12 +21,6 @@ Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
     | Element           |
     | nav_btm           |
     | Get Started Today |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ManagedServicesBannerOnInfoPages19101
-	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnInfoPages19101
-	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_AcceptBedroomsinCalculator18983
@@ -47,24 +48,6 @@ Scenario: Experiment LetYourCottages_PartnersInteractiveCarrousel18699
 	| expedia logo     |
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036
-	Then the following elements are dislpayed
-	| Element                      |
-	| Information centre           |
-	| A bespoke letting experience |
-	| Holiday homes for sale       |
-	| Enquire now                  |
-	| Buying, owning and selling   |
-	| How to run your holiday let  |
-	| Tax information and advice   |
-	| Advertising and marketing    |
-	| Investment advice            |
-	| Holiday let mortgages        |
-	| Legal regulations            |
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
@@ -74,26 +57,6 @@ Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
          | Looking to get started with holiday letting? |
          | Explore guides & resources                   |
          | Sykes Cottages Free Owner Pack               |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
-	Then the following element is displayed: hero-slideshow
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnLYP18552
-	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_VisualTimeronAlerts18791
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_VisualTimeronAlerts18791
-	Then the alerts are displayed on the page
-	And I wait 10 seconds
-	Then the alerts are not displayed on the page
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
@@ -141,6 +104,42 @@ Scenario: Experiment LetYourCottages_InactivityExitModal18457
 	     | inactive-form_email_validation_error      |
 	     | inactive-form_phone                       |
 	     | inactive-form_phone_validation_error      |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnLYP18552
+	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_InformationCentreCarousel19036
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_InformationCentreCarousel19036
+	Then the following elements are dislpayed
+	| Element                      |
+	| Information centre           |
+	| A bespoke letting experience |
+	| Holiday homes for sale       |
+	| Enquire now                  |
+	| Buying, owning and selling   |
+	| How to run your holiday let  |
+	| Tax information and advice   |
+	| Advertising and marketing    |
+	| Investment advice            |
+	| Holiday let mortgages        |
+	| Legal regulations            |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HeroImagesBasedOnHeadingForLoop18704
+	Then the following element is displayed: hero-slideshow
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ManagedServicesBannerOnInfoPages19101
+	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ManagedServicesBannerOnInfoPages19101
+	Then the following element is displayed: We tailor our managed service package to suit your specific needs.
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_ApplyNewDesignToInfoPages19055

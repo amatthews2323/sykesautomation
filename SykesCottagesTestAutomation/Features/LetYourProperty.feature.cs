@@ -934,16 +934,16 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The")]
+        [NUnit.Framework.DescriptionAttribute("The testimonials carousel is present on the page")]
         [NUnit.Framework.CategoryAttribute("LetYourProperty")]
         [NUnit.Framework.CategoryAttribute("RegressionSuite")]
-        public void The()
+        public void TheTestimonialsCarouselIsPresentOnThePage()
         {
             string[] tagsOfScenario = new string[] {
                     "LetYourProperty",
                     "RegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The testimonials carousel is present on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 239
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -962,6 +962,43 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 242
  testRunner.And("I click /images/sykes/letyourcottage/icons/arrow-prev.svg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The alerts disapear after an amount of time")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
+        [NUnit.Framework.CategoryAttribute("RegressionSuite")]
+        public void TheAlertsDisapearAfterAnAmountOfTime()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty",
+                    "RegressionSuite"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The alerts disapear after an amount of time", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 245
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 246
+ testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 247
+ testRunner.Then("the alerts are displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 248
+ testRunner.And("I wait 10 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 249
+ testRunner.Then("the alerts are not displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

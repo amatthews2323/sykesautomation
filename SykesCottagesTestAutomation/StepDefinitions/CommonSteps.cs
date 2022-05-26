@@ -35,6 +35,7 @@ namespace SykesCottagesTestAutomation
 
         public static string url;
         public static string enabledExperiments;
+        public static string CSVValue;
 
         public void SelectBrowser(string browser)
         {
@@ -79,8 +80,15 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
-            enabledExperiments = GetJavaScriptText("experimental_experiments");
-            Console.WriteLine("Enabled experiments: " + enabledExperiments);
+            try
+            {
+                enabledExperiments = GetJavaScriptText("experimental_experiments");
+                Console.WriteLine("Enabled experiments: " + enabledExperiments);
+            }
+            catch
+            {
+                Console.WriteLine("No enabled experiments found");
+            }
 
             if (Hooks.acceptCookies == true)
             {
