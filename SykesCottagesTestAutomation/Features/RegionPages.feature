@@ -33,10 +33,6 @@ Scenario: The enquiry form is displayed on the Regional pages
 	| heroform_email_validation_error                                                                   |
 	| heroform_phone                                                                                    |
 	| heroform_phone_validation_error                                                                   |
-	| marketing_email                                                                                   |
-	| marketing_phone                                                                                   |
-	| marketing_sms                                                                                     |
-	| marketing_post                                                                                    |
 	| Your details will be stored and used to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                              |
 	| submit                                                                                            |

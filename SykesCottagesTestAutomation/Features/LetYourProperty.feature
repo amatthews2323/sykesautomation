@@ -35,10 +35,6 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	| heroform_email_validation_error                                                                   |
 	| heroform_phone                                                                                    |
 	| heroform_phone_validation_error                                                                   |
-	| marketing_email                                                                                   |
-	| marketing_phone                                                                                   |
-	| marketing_sms                                                                                     |
-	| marketing_post                                                                                    |
 	| Your details will be stored and used to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                              |
 	| submit                                                                                            |
@@ -142,11 +138,10 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	And I wait 5 seconds
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty
 Scenario: The Income Projection is displayed upon interaction
 	Given I have navigated to the following page: letyourcottage
-	Then the following element is displayed: Please select your region
-	When I select option South West from the region dropdown
+	When I select option Northumberland from the region dropdown
 	Then the following element is displayed: homepage_calculator_cta_blue
 
 @LetYourProperty @RegressionSuite
@@ -210,6 +205,15 @@ Scenario: The Information Carousel is displayed on the page
 	| Legal regulations           |
 
 @LetYourProperty @RegressionSuite
+Scenario: The image navigation buttons are displayed on the page
+	Given I have navigated to the following page: letyourcottage
+	Then the following elements are dislpayed
+	| Element        |
+	| arrow-prev.svg |
+	| arrow-next.svg |
+	| slick-dots     |
+
+@LetYourProperty @RegressionSuite
 Scenario: The footer content is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer
@@ -230,3 +234,9 @@ Scenario: The footer content is displayed correctly
 	| Twitter                                                    |
 	| Pinterest                                                  |
 	| Instagram                                                  |
+
+@LetYourProperty @RegressionSuite
+Scenario: The 
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Then the Testimonials carousel is displayed on the page
+	And I click /images/sykes/letyourcottage/icons/arrow-prev.svg

@@ -34,6 +34,7 @@ namespace SykesCottagesTestAutomation
         }
 
         public static string url;
+        public static string enabledExperiments;
 
         public void SelectBrowser(string browser)
         {
@@ -77,6 +78,9 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
+
+            enabledExperiments = GetJavaScriptText("experimental_experiments");
+            Console.WriteLine("Enabled experiments: " + enabledExperiments);
 
             if (Hooks.acceptCookies == true)
             {
@@ -134,7 +138,8 @@ namespace SykesCottagesTestAutomation
             {
                 GoTo(url + "/?dev_tools=product");
             }
-            Click("Dev Tools");
+            //Click("Dev Tools");
+            JSClick("Dev Tools");
             var array = experimentIds.Split(",");
             for (int i = 0; i < array.Length; i++)
             {
@@ -142,7 +147,8 @@ namespace SykesCottagesTestAutomation
                 Type("experiment-search", Experiment);
                 Click("//li[contains(@data-name,\"" + Experiment + "\")]");
             }
-            Click("//a[@class='dev-panel-toggle' and text()='Close']");
+            //Click("//a[@class='dev-panel-toggle' and text()='Close']");
+            JSClick("//a[@class='dev-panel-toggle' and text()='Close']");
             Refresh();
         }
 
@@ -152,7 +158,7 @@ namespace SykesCottagesTestAutomation
             {
                 if (_acceptCookies == true)
                 {
-                    ClickIfDisplayed("Accept All Cookies");
+                    ClickIfDisplayed("Accept all cookies");
                 }
             }
             else
@@ -318,7 +324,7 @@ namespace SykesCottagesTestAutomation
         public void AssertElementNotVisible(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is not visible: " + value);
-            Assert.IsFalse(shared.driver.FindElement(By.XPath("//" + element + "[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Displayed, "Element displayed in error");
+            Assert.IsTrue(shared.driver.FindElement(By.XPath("//" + element + "[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Displayed, "Element displayed in error");
         }
 
         public void Click(string value, string element = "*", int waitTime = 0)
@@ -431,7 +437,6 @@ namespace SykesCottagesTestAutomation
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)shared.driver;
             string jsText = (string)js.ExecuteScript("return " + jsObject);
-            Console.WriteLine("JS text: " + jsText);
             return jsText;
         }
 

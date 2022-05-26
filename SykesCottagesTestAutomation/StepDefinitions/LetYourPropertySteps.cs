@@ -166,7 +166,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
 
         [Then(@"the following elements are not dislpayed")]
-        public void ThenTheFollowingElementsAreNotDislpayedOnThePage(Table table)
+        public void ThenTheFollowingElementsAreNotDislpayed(Table table)
         {
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
@@ -175,20 +175,30 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [Then(@"the following elements are not visible")]
+        public void ThenTheFollowingElementsAreNotVisible(Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                AssertElementNotVisible(element.ToString());
+            }
+        }
+
         [Then(@"the following text is displayed: (.*)")]
-        public void ThenTheFollowingTextIsDisplayedOnThePage(string text)
+        public void ThenTheFollowingTextIsDisplayed(string text)
         {
             AssertTextDisplayed(text);
         }
 
         [Then(@"the following element is displayed: (.*)")]
-        public void ThenTheFollowingElementIsDisplayedOnThePage(string value)
+        public void ThenTheFollowingElementIsDisplayed(string value)
         {
             AssertElementDisplayed(value);
         }
 
         [Then(@"the following element is not displayed: (.*)")]
-        public void ThenTheFollowingElementIsNotDisplayedOnThePage(string value)
+        public void ThenTheFollowingElementIsNotDisplayed(string value)
         {
             AssertElementNotDisplayed(value);
         }

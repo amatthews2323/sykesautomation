@@ -33,10 +33,6 @@ Scenario: The enquiry form is displayed on the Holiday Homes for Sale page
          | hhfs_overlay_email_validation_error                                                               |
          | hhfs_overlay_phone                                                                                |
          | hhfs_overlay_phone_validation_error                                                               |
-         | marketing_email                                                                                   |
-         | marketing_phone                                                                                   |
-         | marketing_sms                                                                                     |
-         | marketing_post                                                                                    |
          | Your details will be stored and used to send you information about our property letting services. |
          | /terms/privacypolicy                                                                              |
          | submit                                                                                            |

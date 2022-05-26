@@ -12,11 +12,11 @@ namespace SykesCottagesTestAutomation
     public class Hooks : CommonSteps
     {
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string browser = "Firefox"; //Set browser: Chrome | Firefox | Edge
+        public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
 
         public static bool screenshots = true; //Take a screenshot at the end of each scenario
         public static bool reporting = true; //Turn on Extent Reports
-        public static string reportName = "SingleTest"; //Name of the report: RegressionSuite | SmokeTest
+        public static string reportName = "RegressionSuite"; //Name of the report: RegressionSuite | SmokeTest | ActiveExperiments
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool acceptCookies = true; //Dismiss the cookie popup
@@ -28,7 +28,7 @@ namespace SykesCottagesTestAutomation
 
         public static string experiments = ""; //Set experiment(s) - comma separated list
 
-        public static int timeOut = 20; //Set pageload timeout
+        public static int timeOut = 30; //Set pageload timeout
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;

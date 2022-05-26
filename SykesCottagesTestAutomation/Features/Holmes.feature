@@ -25,57 +25,48 @@ Scenario: Check specific experiments are applied
 
 @HolmesExperiments
 Scenario: Get experiment conversion precentage 
-	Given I am accessing http://holmes.staging.sykes.cloud/experiments
+	Given I am accessing https://holmes.prod.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
-		| 4373    |
-		| 4379    |
 		| 4396    |
-		| 4406    |
 		| 4407    |
-		| 4411    |
 		| 4442    |
-		| 4446    |
-		| 4450    |
 		| 4466    |
 		| 4431    |
 		| 4470    |
 		| 4498    |
-		| 4503    |
 		| 4509    |
-		| 4511    |
-		| 4514    |
 		| 4516    |
-		| 4534    |
-		| 4535    |
 		| 4536    |
 		| 4537    |
+		| 4544    |
+		| 4547    |
+		| 4560    |
+		| 4561    |
+		| 4567    |
+		| 4569    |
+		| 4572    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am accessing https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-		| Example                                                          |
-		| LetYourCottages_RemoveSecondHeroCopy18494                        |
-		| LetYourCottages_ManagedServicesBannerOnLYP18552                  |
-		| LetYourCottages_ReplaceIconsWithimages18585                      |
-		| LetYourCottages_TestimonialsCarousel18584                        |
-		| LetYourCottages_InactivityExitModal18457                         |
-		| LetYourCottages_SectionImageNavigation18583                      |
-		| LetYourCottages_ChangeLegacyFavicon18431                         |
-		| LetYourCottages_DashboardButtonInteraction18675                  |
-		| LetYourCottages_VisualTimeronAlerts18791                         |
-		| LetYourCottages_HeroImagesBasedOnHeadingForLoop18704             |
-		| LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671 |
-		| LetYourCottages_ToolTipsonLYPHeaders18582                        |
-		| LetYourCottages_ClearOptionOnDashboard18697                      |
-		| LetYourCottages_BuySellRedesign18920                             |
-		| LetYourCottages_EnquiryFormPhoneSubCopy18889                     |
-		| LetYourCottages_SpeakToSomeoneSectionMobile18682                 |
-		| LetYourCottages_ResourceCenter18681                              |
-		| LetYourCottages_HHFSDesktopHeader18987                           |
-		| LetYourCottages_ReTestBedrockPromo19009                          |
-		| LetYourCottages_ChangingPhoneNumberFormat18993                   |
-		| LetYourCottages_FormErrorWarnings18947                           |
-		| LetYourCottages_AddTOBAlerts18280                                |
-		| LetYourCottages_InformationCentreCarousel19036                   |
+		| Example                                                              |
+		| LetYourCottages_ReplaceIconsWithimages18585                          |
+		| LetYourCottages_InactivityExitModal18457                             |
+		| LetYourCottages_DashboardButtonInteraction18675                      |
+		| LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671     |
+		| LetYourCottages_ToolTipsonLYPHeaders18582                            |
+		| LetYourCottages_ClearOptionOnDashboard18697                          |
+		| LetYourCottages_BuySellRedesign18920                                 |
+		| LetYourCottages_SpeakToSomeoneSectionMobile18682                     |
+		| LetYourCottages_ReTestBedrockPromo19009                              |
+		| LetYourCottages_InformationCentreCarousel19036                       |
+		| LetYourCottages_ApplyNewDesignToInfoPages19055                       |
+		| LetYourCottages_PartnersInteractiveCarrousel18699                    |
+		| LetYourCottages_RedirectTobToDigitalOnboarding19109                  |
+		| LetYourCottages_AddImageToInfoPages19099                             |
+		| LetYourCottages_UpdateInfoPageHeaders19095                           |
+		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
+		| LetYourCottages_InformationPageSidebarTruncation19171                |
+		| LetYourCottages_HeroFormTitleChanges19172                            |
