@@ -13,13 +13,13 @@ Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
 	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_UpdateInfoPageHeaders19095
 	Then the following elements are dislpayed
-	| Element        |
-	| Book a holiday |
-	| 01244356666    |
-	| Your account   |
+	| Element                              |
+	| Book a holiday                       |
+	| nav_top_link nav_telephone_container |
+	| Your account                         |
 	And the following elements are not dislpayed
     | Element           |
-    | nav_btm           |
+    | Your Location     |
     | Get Started Today |
 
 @ActiveExperiments
@@ -33,19 +33,6 @@ Scenario: Experiment LetYourCottages_AcceptBedroomsinCalculator18983
 	| Property information              |
 	| Average potential earnings        |
 	| Enquire today to get started      |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_PartnersInteractiveCarrousel18699
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_PartnersInteractiveCarrousel18699
-	Then the following elements are dislpayed
-	| Element          |
-	| airbnb logo      |
-	| holidu logo      |
-	| tripadvisor logo |
-	| vrbo logo        |
-	| booking logo     |
-	| expedia logo     |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
@@ -85,25 +72,18 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
          | /images/let_your_cottage/letting_easy/full-property-management.png  |
          | /images/let_your_cottage/letting_easy/photography.png               |
 
-Scenario: Experiment LetYourCottages_InactivityExitModal18457
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_PartnersInteractiveCarrousel18699
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_InactivityExitModal18457
-	And I close the pop-ups
-	Then I wait 305 seconds
-	And the following elements are dislpayed
-	     | Element                  |
-	     | idleform                 |
-	     | We're ready when you are |
-	     | Open form                |
-	When I click Open form
+	When I apply the following experiment: LetYourCottages_PartnersInteractiveCarrousel18699
 	Then the following elements are dislpayed
-	     | Element                                   |
-	     | inactive-form_first_name                  |
-	     | inactive-form_first_name_validation_error |
-	     | inactive-form_email                       |
-	     | inactive-form_email_validation_error      |
-	     | inactive-form_phone                       |
-	     | inactive-form_phone_validation_error      |
+	| Element          |
+	| airbnb logo      |
+	| holidu logo      |
+	| tripadvisor logo |
+	| vrbo logo        |
+	| booking logo     |
+	| expedia logo     |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_ManagedServicesBannerOnLYP18552

@@ -132,30 +132,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table52 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table50 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Customer reviews powered by Trustpilot"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "What do our owners say"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "How much could I earn"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "We are still open as usual"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Holiday home management with Sykes"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Information centre"});
-                table52.AddRow(new string[] {
+                table50.AddRow(new string[] {
                             "Free Owner Information Pack"});
 #line 13
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table52, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table50, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -187,31 +187,31 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table53 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table51 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "form-heading-container"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_first_name"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_email"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_phone"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "Your details will be stored and used to send you information about our property l" +
                                 "etting services."});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table53.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "submit"});
 #line 29
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table53, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table51, "Then ");
 #line hidden
 #line 41
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -347,38 +347,38 @@ this.ScenarioInitialize(scenarioInfo);
 #line 76
  testRunner.Then("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table52 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "o-overlay__content o-overlay__content--reset js-overlay-content"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_first_name"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_email"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_phone"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_first_name_validation_error"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_email_validation_error"});
-                table54.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "list_property_phone_validation_error"});
 #line 77
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table54, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table52, "Then ");
 #line hidden
 #line 86
  testRunner.When("I select the form overlay submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table53 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table55.AddRow(new string[] {
+                table53.AddRow(new string[] {
                             "Please enter a full name."});
-                table55.AddRow(new string[] {
+                table53.AddRow(new string[] {
                             "Please enter an email address."});
-                table55.AddRow(new string[] {
+                table53.AddRow(new string[] {
                             "Please enter a contact number."});
 #line 87
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table55, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table53, "Then ");
 #line hidden
 #line 92
  testRunner.When("I enter test.com in the following form field: list_property_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -482,24 +482,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 116
  testRunner.Then("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "o-overlay__content o-overlay__content--reset js-overlay-content"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_first_name"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_email"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_phone"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_first_name_validation_error"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_email_validation_error"});
-                table56.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "list_property_phone_validation_error"});
 #line 117
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table56, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table54, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -676,41 +676,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 158
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Position"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "navigation",
                             "1"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Gain exposure through our partners",
                             "2"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "What do our owners say",
                             "3"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "How much could I earn",
                             "4"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "We are still open as usual",
                             "5"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Holiday home management with Sykes",
                             "6"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Putting your property in the spotlight",
                             "7"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Holiday letting made easy",
                             "8"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Information centre",
                             "9"});
-                table57.AddRow(new string[] {
+                table55.AddRow(new string[] {
                             "Free Owner Information Pack",
                             "10"});
 #line 159
- testRunner.Then("the page sections are displayed in the relevant positions", ((string)(null)), table57, "Then ");
+ testRunner.Then("the page sections are displayed in the relevant positions", ((string)(null)), table55, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -743,37 +743,37 @@ this.ScenarioInitialize(scenarioInfo);
 #line 175
  testRunner.When("I set the window size to Mobile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "What do our owners say"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "How much could I earn"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "We are still open as usual"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Holiday home management with Sykes"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Information centre"});
-                table58.AddRow(new string[] {
+                table56.AddRow(new string[] {
                             "Free Owner Information Pack"});
 #line 176
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table58, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table56, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table59.AddRow(new string[] {
+                table57.AddRow(new string[] {
                             "contact-to-book mobile"});
-                table59.AddRow(new string[] {
+                table57.AddRow(new string[] {
                             "navbar-toggle collapsed"});
 #line 187
- testRunner.And("the following elements are not dislpayed", ((string)(null)), table59, "And ");
+ testRunner.And("the following elements are not dislpayed", ((string)(null)), table57, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -801,28 +801,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 194
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Information centre"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Enquire now"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Buying, owning and selling"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "How to run your holiday let"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Tax information and advice"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Advertising and marketing"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Investment advice"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Holiday let mortgages"});
-                table60.AddRow(new string[] {
+                table58.AddRow(new string[] {
                             "Legal regulations"});
 #line 195
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table60, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table58, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -852,16 +852,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 209
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table61.AddRow(new string[] {
+                table59.AddRow(new string[] {
                             "arrow-prev.svg"});
-                table61.AddRow(new string[] {
+                table59.AddRow(new string[] {
                             "arrow-next.svg"});
-                table61.AddRow(new string[] {
+                table59.AddRow(new string[] {
                             "slick-dots"});
 #line 210
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table61, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table59, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -894,40 +894,40 @@ this.ScenarioInitialize(scenarioInfo);
 #line 219
  testRunner.When("I scroll to the following element: page-footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Sykes Cottages"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "© 2022 All rights reserved"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Registration No: 4469189"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "VAT Registration No: 204 9794 88"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Email us at letwithsykes@sykescottages.co.uk"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Sykes Product Showcase 2022"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Read our blog"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Privacy Policy"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Press and media"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Holiday homes for sale"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Facebook"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Twitter"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Pinterest"});
-                table62.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Instagram"});
 #line 220
- testRunner.Then("the following elements are dislpayed within the footer section", ((string)(null)), table62, "Then ");
+ testRunner.Then("the following elements are dislpayed within the footer section", ((string)(null)), table60, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -999,6 +999,66 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 249
  testRunner.Then("the alerts are not displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_InactivityExitModal18457")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
+        public void ExperimentLetYourCottages_InactivityExitModal18457()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_InactivityExitModal18457", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 252
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 253
+ testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 254
+ testRunner.Then("I wait 305 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table61.AddRow(new string[] {
+                            "idleform"});
+                table61.AddRow(new string[] {
+                            "We\'re ready when you are"});
+                table61.AddRow(new string[] {
+                            "Open form"});
+#line 255
+ testRunner.And("the following elements are dislpayed", ((string)(null)), table61, "And ");
+#line hidden
+#line 260
+ testRunner.When("I click Open form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table62.AddRow(new string[] {
+                            "inactive-form_first_name"});
+                table62.AddRow(new string[] {
+                            "inactive-form_first_name_validation_error"});
+                table62.AddRow(new string[] {
+                            "inactive-form_email"});
+                table62.AddRow(new string[] {
+                            "inactive-form_email_validation_error"});
+                table62.AddRow(new string[] {
+                            "inactive-form_phone"});
+                table62.AddRow(new string[] {
+                            "inactive-form_phone_validation_error"});
+#line 261
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table62, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

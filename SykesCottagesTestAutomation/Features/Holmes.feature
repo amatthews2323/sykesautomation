@@ -30,19 +30,14 @@ Scenario: Get experiment conversion precentage
 		| Example |
 		| 4396    |
 		| 4407    |
-		| 4442    |
-		| 4466    |
 		| 4431    |
-		| 4470    |
-		| 4498    |
 		| 4509    |
 		| 4516    |
-		| 4536    |
 		| 4544    |
 		| 4560    |
 		| 4561    |
 		| 4567    |
-		| 4572    |
+		| 4551    |
 
 @HolmesExperiments
 Scenario: Get experiment status
@@ -51,16 +46,11 @@ Scenario: Get experiment status
 		| Example                                                              |
 		| LetYourCottages_ReplaceIconsWithimages18585                          |
 		| LetYourCottages_InactivityExitModal18457                             |
-		| LetYourCottages_DashboardButtonInteraction18675                      |
-		| LetYourCottages_LoopingHeroOnDashboardWithMeaningFullImages18671     |
 		| LetYourCottages_ToolTipsonLYPHeaders18582                            |
-		| LetYourCottages_ClearOptionOnDashboard18697                          |
-		| LetYourCottages_BuySellRedesign18920                                 |
 		| LetYourCottages_SpeakToSomeoneSectionMobile18682                     |
 		| LetYourCottages_ReTestBedrockPromo19009                              |
-		| LetYourCottages_InformationCentreCarousel19036                       |
 		| LetYourCottages_PartnersInteractiveCarrousel18699                    |
 		| LetYourCottages_AddImageToInfoPages19099                             |
 		| LetYourCottages_UpdateInfoPageHeaders19095                           |
 		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
-		| LetYourCottages_HeroFormTitleChanges19172                            |
+		| LetYourCottages_AcceptBedroomsinCalculator18983                      |

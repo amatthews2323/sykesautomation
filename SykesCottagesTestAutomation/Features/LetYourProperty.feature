@@ -247,3 +247,22 @@ Scenario: The alerts disapear after an amount of time
 	Then the alerts are displayed on the page
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
+
+@LetYourProperty
+Scenario: Experiment LetYourCottages_InactivityExitModal18457
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Then I wait 305 seconds
+	And the following elements are dislpayed
+	     | Element                  |
+	     | idleform                 |
+	     | We're ready when you are |
+	     | Open form                |
+	When I click Open form
+	Then the following elements are dislpayed
+	     | Element                                   |
+	     | inactive-form_first_name                  |
+	     | inactive-form_first_name_validation_error |
+	     | inactive-form_email                       |
+	     | inactive-form_email_validation_error      |
+	     | inactive-form_phone                       |
+	     | inactive-form_phone_validation_error      |

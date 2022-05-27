@@ -22,7 +22,7 @@ namespace SykesCottagesTestAutomation
         public static bool acceptCookies = true; //Dismiss the cookie popup
         public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
