@@ -162,14 +162,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table43.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "4419"});
-                table43.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "4396"});
 #line 20
- testRunner.Then("the following experiements are enabled", ((string)(null)), table43, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table44, "Then ");
 #line hidden
 #line 24
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -200,30 +200,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table45 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4396"});
-                table44.AddRow(new string[] {
-                            "4407"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4431"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4509"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4516"});
-                table44.AddRow(new string[] {
-                            "4544"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4560"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4561"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4567"});
-                table44.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "4551"});
 #line 29
- testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table44, "Then ");
+ testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table45, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -238,7 +234,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiment status", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 43
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -248,33 +244,29 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 44
+#line 42
  testRunner.Given("I am accessing https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table45 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table46 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_ReplaceIconsWithimages18585"});
-                table45.AddRow(new string[] {
-                            "LetYourCottages_InactivityExitModal18457"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_ToolTipsonLYPHeaders18582"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_SpeakToSomeoneSectionMobile18682"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_ReTestBedrockPromo19009"});
-                table45.AddRow(new string[] {
-                            "LetYourCottages_PartnersInteractiveCarrousel18699"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_AddImageToInfoPages19099"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_UpdateInfoPageHeaders19095"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102"});
-                table45.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "LetYourCottages_AcceptBedroomsinCalculator18983"});
-#line 45
- testRunner.Then("I search for the experient and store the status", ((string)(null)), table45, "Then ");
+#line 43
+ testRunner.Then("I search for the experient and store the status", ((string)(null)), table46, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

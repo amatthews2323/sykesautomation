@@ -95,24 +95,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Holiday Let Information Centre"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Browse categories"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Beginner Guides to Buying a Holiday Home"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Latest Guides and Articles"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Services and Tools"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Making a Fresh Start"});
-                table71.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Contact us"});
 #line 7
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table71, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table72, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

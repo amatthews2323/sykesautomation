@@ -26,6 +26,7 @@ Scenario: The user can navigate to the Information Centre pages
 @InformationCentre @SmokeTest
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
+	When I wait 3 seconds
 	Then the following elements are dislpayed
     | Element                                           |
     | form-heading-container                            |
@@ -33,14 +34,14 @@ Scenario: The relevent elements are present on the Information Centre pages
     | hero__image                                       |
     | Customer reviews powered by Trustpilot            |
 	Examples:
-	| Path														    | Header                                     |
-	| letyourcottage/information/marketing-your-holiday-let         | Advertising and marketing your holiday let |
-	| letyourcottage/information/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let   |
-	| letyourcottage/information/investment-advice-for-holiday-lets | Investment advice for holiday lets         |
-	| letyourcottage/information/legal-regulations-for-holiday-lets | Legal regulations for holiday lets         |
-	| letyourcottage/information/holiday-let-mortgages              | Holiday let mortgages                      |
-	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let                |
-	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets            |
+	| Path                                                          | Header                                   |
+	| letyourcottage/information/marketing-your-holiday-let         | Advertising and Marketing                |
+	| letyourcottage/information/buy-own-sell-holiday-lets          | Buying, owning and selling a holiday let |
+	| letyourcottage/information/investment-advice-for-holiday-lets | Investment advice for holiday lets       |
+	| letyourcottage/information/legal-regulations-for-holiday-lets | Legal regulations for holiday lets	   |
+	| letyourcottage/information/holiday-let-mortgages              | Holiday let mortgages                    |
+	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let              |
+	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets          |
 
 @InformationCentre @RegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Information Centre pages

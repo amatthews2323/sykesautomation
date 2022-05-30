@@ -50,7 +50,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I store the active experiment IDs")]
         public void WhenIStoreTheActiveExperimentIDs()
         {
-            enabledExperiments = GetJavaScriptText("experimental_experiments");
+            experimentalExperiments = GetJavaScriptText("experimental_experiments");
         }
 
         [When(@"I search for the experiment details")]
@@ -58,7 +58,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             WaitASecond(2);
             Console.WriteLine("Experiment details:");
-            var array = enabledExperiments.Split(",");
+            var array = experimentalExperiments.Split(",");
             for (int i = 0; i < array.Length; i++)
             {
                 string id = array[i].ToString().Trim();
@@ -83,7 +83,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             var experiments = table.Rows.Select(r => r[0]).ToArray();
             foreach (var experiment in experiments)
             {
-                Assert.IsTrue(enabledExperiments.Contains(experiment), "Experiment " + experiment + " not found");
+                Assert.IsTrue(experimentalExperiments.Contains(experiment), "Experiment " + experiment + " not found");
             }
         }
 

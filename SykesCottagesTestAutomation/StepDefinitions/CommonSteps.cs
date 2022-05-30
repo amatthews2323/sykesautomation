@@ -34,7 +34,8 @@ namespace SykesCottagesTestAutomation
         }
 
         public static string url;
-        public static string enabledExperiments;
+        public static string controlExperiments;
+        public static string experimentalExperiments;
         public static string CSVValue;
 
         public void SelectBrowser(string browser)
@@ -82,8 +83,9 @@ namespace SykesCottagesTestAutomation
 
             try
             {
-                enabledExperiments = GetJavaScriptText("experimental_experiments");
-                Console.WriteLine("Enabled experiments: " + enabledExperiments);
+                controlExperiments = GetJavaScriptText("control_experiments");
+                experimentalExperiments = GetJavaScriptText("experimental_experiments");
+                Console.WriteLine("Control experiments: " + controlExperiments + "\nExperimental experiments: " + experimentalExperiments);
             }
             catch
             {
@@ -146,7 +148,6 @@ namespace SykesCottagesTestAutomation
             {
                 GoTo(url + "/?dev_tools=product");
             }
-            //Click("Dev Tools");
             JSClick("Dev Tools");
             var array = experimentIds.Split(",");
             for (int i = 0; i < array.Length; i++)
@@ -155,7 +156,6 @@ namespace SykesCottagesTestAutomation
                 Type("experiment-search", Experiment);
                 Click("//li[contains(@data-name,\"" + Experiment + "\")]");
             }
-            //Click("//a[@class='dev-panel-toggle' and text()='Close']");
             JSClick("//a[@class='dev-panel-toggle' and text()='Close']");
             Refresh();
         }
@@ -222,12 +222,14 @@ namespace SykesCottagesTestAutomation
 
         public string XPath(string value, string element = "*")
         {
+            //If "value" parameter is already an XPath, return the origninal string; else return an XPath containing the "value" parameter
             if (value.Contains("//") & !value.Contains("http"))
             {
                 return value;
             }
             else
             {
+                //Construct an XPath using the "value" and "element" parameters - works for attribute or text, partial or exact match 
                 return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
             }
         }
@@ -308,31 +310,31 @@ namespace SykesCottagesTestAutomation
         public void AssertTextDisplayed(string value)
         {
             Console.WriteLine("Assert the following text is displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text not found");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text \"" + value + "\" not found");
         }
 
         public void AssertElementDisplayed(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0, value + " not found");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0, "\"" + value + "\" not found");
         }
 
         public void AssertElementNotDisplayed(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is not displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//" + element + "[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Count == 0, "Element displayed in error");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//" + element + "[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Count == 0, "\"" + value + "\" displayed in error");
         }
 
         public void AssertElementVisible(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is visible: " + value);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath(XPath(value, element))).Displayed, value + " not visible");
+            Assert.IsTrue(shared.driver.FindElement(By.XPath(XPath(value, element))).Displayed, "\"" + value + "\" not visible");
         }
 
         public void AssertElementNotVisible(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is not visible: " + value);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath("//" + element + "[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Displayed, "Element displayed in error");
+            Assert.IsTrue(shared.driver.FindElement(By.XPath("//" + element + "[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Displayed, "\"" + value + "\" displayed in error");
         }
 
         public void Click(string value, string element = "*", int waitTime = 0)

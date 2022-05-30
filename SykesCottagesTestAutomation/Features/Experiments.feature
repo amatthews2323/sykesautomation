@@ -1,6 +1,15 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
+LetYourCottages_OwnerIncentivePromotion4
+Scenario: Experiment LetYourCottages_OwnerIncentivePromotion4
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_OwnerIncentivePromotion4
+	Then the following elements are dislpayed
+	| Element |
+
+
+
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
 	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
