@@ -155,13 +155,15 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following elements are dislpayed within the (.*) section")]
         public void ThenTheFollowingElementsAreDislpayedWithinTheSection(string section, Table table)
         {
+            //string SectionXPath = XPath(section); 
+
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
-                AssertElementDisplayed(element.ToString(), section);
+                //string FullXpath = SectionXPath + XPath(element.ToString());
+                AssertElementDisplayed(XPath(section) + XPath(element.ToString()));
             }
         }
-
 
         [Then(@"the following elements are not dislpayed")]
         public void ThenTheFollowingElementsAreNotDislpayed(Table table)

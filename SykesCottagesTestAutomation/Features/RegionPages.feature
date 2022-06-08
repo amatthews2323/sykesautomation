@@ -1,7 +1,7 @@
 ﻿Feature: RegionPages
 	Region pages content and functionality
 
-@RegionPages @SmokeTest
+@RegionPages @LYPSmokeTest
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed: <Region>
@@ -20,22 +20,21 @@ Scenario: The Regional pages are displayed correctly
 	| letyourcottage/In-Your-Area/Ireland                       | Ireland                    |
 	| letyourcottage/In-Your-Area/Scotland                      | Scotland                   |
 
-@RegionPages @RegressionSuite @EnquiryForm
+@RegionPages @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Regional pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed
-	| Element                                                                                           |
-	| form-heading-container                                                                            |
-	| Complete the form to receive your information pack                                                |
-	| heroform_first_name                                                                               |
-	| heroform_first_name_validation_error                                                              |
-	| heroform_email                                                                                    |
-	| heroform_email_validation_error                                                                   |
-	| heroform_phone                                                                                    |
-	| heroform_phone_validation_error                                                                   |
-	| Your details will be stored and used to send you information about our property letting services. |
-	| /terms/privacypolicy                                                                              |
-	| submit                                                                                            |
+	| Element                                                                                                   |
+	| form-heading-container                                                                                    |
+	| Complete the form to receive your information pack                                                        |
+	| heroform_first_name                                                                                       |
+	| heroform_first_name_validation_error                                                                      |
+	| heroform_email                                                                                            |
+	| heroform_email_validation_error                                                                           |
+	| heroform_phone                                                                                            |
+	| heroform_phone_validation_error                                                                           |
+	| /terms/privacypolicy                                                                                      |
+	| submit                                                                                                    |
 	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue
 	Then the following elements are dislpayed
 	| Element                        |

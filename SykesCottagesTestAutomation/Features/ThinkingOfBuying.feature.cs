@@ -35,7 +35,7 @@ namespace SykesCottagesTestAutomation.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ThinkingOfBuying", "\tThinking of Buying page content and functionality", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ThinkingOfBuying", "\tThinking of Buying content and functionality", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,10 +76,12 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Thinking of Buying page")]
         [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
         public void TheRelevantSectionsAreDisplayedOnTheThinkingOfBuyingPage()
         {
             string[] tagsOfScenario = new string[] {
-                    "ThinkingOfBuying"};
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Thinking of Buying page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
@@ -95,24 +97,432 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Holiday Let Information Centre"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Browse categories"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Beginner Guides to Buying a Holiday Home"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Latest Guides and Articles"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Services and Tools"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Making a Fresh Start"});
-                table72.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Contact us"});
 #line 7
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table72, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table76, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Buying a Holiday Home page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Buying a Holiday Home page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 18
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 19
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/buying-a-holiday-ho" +
+                        "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table77.AddRow(new string[] {
+                            "Buying a Holiday Home"});
+                table77.AddRow(new string[] {
+                            "Where to Buy"});
+                table77.AddRow(new string[] {
+                            "General"});
+                table77.AddRow(new string[] {
+                            "Beginner Guides to Buying a Holiday Home"});
+                table77.AddRow(new string[] {
+                            "Intermediate Guides to Buying a Holiday Home"});
+                table77.AddRow(new string[] {
+                            "Services and Tools"});
+                table77.AddRow(new string[] {
+                            "Converting a Listed Chapel Into a Holiday Let"});
+                table77.AddRow(new string[] {
+                            "Contact us"});
+#line 20
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table77, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Financial Guides page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheFinancialGuidesPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Financial Guides page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 32
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 33
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/financial-guides", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table78.AddRow(new string[] {
+                            "Financial Guides"});
+                table78.AddRow(new string[] {
+                            "Regulations"});
+                table78.AddRow(new string[] {
+                            "Mortgages"});
+                table78.AddRow(new string[] {
+                            "Insurance"});
+                table78.AddRow(new string[] {
+                            "Taxes"});
+                table78.AddRow(new string[] {
+                            "Beginner Guides to Financials"});
+                table78.AddRow(new string[] {
+                            "Intermediate Guides to Financials"});
+                table78.AddRow(new string[] {
+                            "Advanced Guides to Financials"});
+                table78.AddRow(new string[] {
+                            "Services and Tools"});
+                table78.AddRow(new string[] {
+                            "Making an Income"});
+                table78.AddRow(new string[] {
+                            "Contact us"});
+#line 34
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table78, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Letting a Holiday Home page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheLettingAHolidayHomePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Letting a Holiday Home page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 49
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 50
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/holiday-letting-gui" +
+                        "des", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table79.AddRow(new string[] {
+                            "Letting a Holiday Home"});
+                table79.AddRow(new string[] {
+                            "Holiday Letting"});
+                table79.AddRow(new string[] {
+                            "Maximising Earnings"});
+                table79.AddRow(new string[] {
+                            "Running Your Holiday Let"});
+                table79.AddRow(new string[] {
+                            "Tips and Advice"});
+                table79.AddRow(new string[] {
+                            "Listing a Holiday Let"});
+                table79.AddRow(new string[] {
+                            "Beginner Guides to Letting a Holiday Home"});
+                table79.AddRow(new string[] {
+                            "Intermediate Guides to Letting a Holiday Home"});
+                table79.AddRow(new string[] {
+                            "Advanced Guides to Letting a Holiday Home"});
+                table79.AddRow(new string[] {
+                            "Services and Tools"});
+                table79.AddRow(new string[] {
+                            "Setting up a Holiday Let"});
+                table79.AddRow(new string[] {
+                            "Contact us"});
+#line 51
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table79, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Managing a Holiday Let page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheManagingAHolidayLetPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Managing a Holiday Let page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 67
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 68
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/managing-your-holid" +
+                        "ay-let", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table80.AddRow(new string[] {
+                            "Managing a Holiday Let"});
+                table80.AddRow(new string[] {
+                            "Why Sykes?"});
+                table80.AddRow(new string[] {
+                            "Services and Tools"});
+                table80.AddRow(new string[] {
+                            "Running Two Holiday Lets"});
+                table80.AddRow(new string[] {
+                            "Contact us"});
+#line 69
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table80, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Case Studies page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheCaseStudiesPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Case Studies page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 78
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 79
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/case-studies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table81.AddRow(new string[] {
+                            "Owner Case Studies"});
+                table81.AddRow(new string[] {
+                            "Services and Tools"});
+                table81.AddRow(new string[] {
+                            "Contact us"});
+#line 80
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table81, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the A Guide to Buying a Holiday Let page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheAGuideToBuyingAHolidayLetPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the A Guide to Buying a Holiday Let page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 87
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 88
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/a-guide-to-" +
+                        "buying-a-holiday-let", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table82.AddRow(new string[] {
+                            "A Guide to Buying a Holiday Let"});
+                table82.AddRow(new string[] {
+                            "Let\'s Work Together"});
+                table82.AddRow(new string[] {
+                            "The key benefits of buying a holiday let"});
+                table82.AddRow(new string[] {
+                            "How to buy your holiday home"});
+                table82.AddRow(new string[] {
+                            "Where to buy your holiday home"});
+                table82.AddRow(new string[] {
+                            "Legalities"});
+                table82.AddRow(new string[] {
+                            "Taxes"});
+                table82.AddRow(new string[] {
+                            "What are the extra costs when you buy a holiday let?"});
+                table82.AddRow(new string[] {
+                            "Buying a Holiday Home General Guides"});
+                table82.AddRow(new string[] {
+                            "Contact us"});
+#line 89
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table82, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Are Holiday Lets a Good Investment pag" +
+            "e")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheAreHolidayLetsAGoodInvestmentPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Are Holiday Lets a Good Investment pag" +
+                    "e", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 103
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 104
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/why-are-hol" +
+                        "iday-lets-a-good-investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table83.AddRow(new string[] {
+                            "Are Holiday Lets a Good Investment?"});
+                table83.AddRow(new string[] {
+                            "Let\'s Work Together"});
+                table83.AddRow(new string[] {
+                            "Are holiday lets a good investment?"});
+                table83.AddRow(new string[] {
+                            "What types of holiday let mortgages are there?"});
+                table83.AddRow(new string[] {
+                            "What Return on Investment (ROI) could you expect from a holiday let?"});
+                table83.AddRow(new string[] {
+                            "Best locations for a holiday let business"});
+                table83.AddRow(new string[] {
+                            "How to maximise your income"});
+                table83.AddRow(new string[] {
+                            "Ready to get started?"});
+                table83.AddRow(new string[] {
+                            "Buying a Holiday Home General Guides"});
+                table83.AddRow(new string[] {
+                            "Contact us"});
+#line 105
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table83, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant sections are displayed on the Buying a Holiday Home Abroad vs. in th" +
+            "e UK page")]
+        [NUnit.Framework.CategoryAttribute("ThinkingOfBuying")]
+        [NUnit.Framework.CategoryAttribute("TOBSmokeTest")]
+        public void TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomeAbroadVs_InTheUKPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "ThinkingOfBuying",
+                    "TOBSmokeTest"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Buying a Holiday Home Abroad vs. in th" +
+                    "e UK page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 119
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 120
+ testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/buying-a-ho" +
+                        "liday-home-abroad-vs-uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table84.AddRow(new string[] {
+                            "Buying a Holiday Home Abroad vs. in the UK"});
+                table84.AddRow(new string[] {
+                            "Let\'s Work Together"});
+                table84.AddRow(new string[] {
+                            "Benefits of Holiday Letting in the UK"});
+                table84.AddRow(new string[] {
+                            "Disadvantages of Holiday Letting in the UK"});
+                table84.AddRow(new string[] {
+                            "Benefits of Holiday Letting Abroad"});
+                table84.AddRow(new string[] {
+                            "Disadvantages of Holiday Letting Abroad"});
+                table84.AddRow(new string[] {
+                            "Where to Buy Guides"});
+                table84.AddRow(new string[] {
+                            "Contact us"});
+#line 121
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table84, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -230,7 +230,8 @@ namespace SykesCottagesTestAutomation
             else
             {
                 //Construct an XPath using the "value" and "element" parameters - works for attribute or text, partial or exact match 
-                return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
+                //return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
+                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(text(),\"" + value + "\")]";
             }
         }
 
@@ -238,6 +239,7 @@ namespace SykesCottagesTestAutomation
         {
             Console.WriteLine("Launch website: " + webpage);
             shared.driver.Navigate().GoToUrl(webpage);
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//body")).Count != 0, "Webpage did not load");
         }
 
         public void SwitchFocus()

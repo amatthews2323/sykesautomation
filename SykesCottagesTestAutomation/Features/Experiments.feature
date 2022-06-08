@@ -1,14 +1,24 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-LetYourCottages_OwnerIncentivePromotion4
-Scenario: Experiment LetYourCottages_OwnerIncentivePromotion4
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_OwnerIncentivePromotion4
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_EarningCalculatoronInformationPages19170
+	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_EarningCalculatoronInformationPages19170
 	Then the following elements are dislpayed
-	| Element |
+	| Element                           |
+	| How much could I earn with Sykes? |
+	| Estimated earnings                |
 
-
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_FormSmallPrintChange27
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_FormSmallPrintChange27
+	Then the following elements are dislpayed
+	| Element                                                                                                   |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+	| /terms/privacypolicy                                                                                      |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
@@ -80,6 +90,39 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
          | /images/let_your_cottage/letting_easy/helpline-24h.png              |
          | /images/let_your_cottage/letting_easy/full-property-management.png  |
          | /images/let_your_cottage/letting_easy/photography.png               |
+
+@StoppedExperimnets
+Scenario: Experiment LetYourCottages_OwnerIncentivePromotion4
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_OwnerIncentivePromotion4
+	Then the following elements are dislpayed
+	| Element                                        |
+	| overlay-owner-incentive-promotion              |
+	| Ready to get started                           |
+	When I click Ready to get started
+	Then the following elements are dislpayed
+	| Element                                                     |
+	| owner-incentive-promotion is-open                           |
+	| List your property before October and recieve £500 cashback |
+	| 01244 746 279                                               |
+	| propertyexperts@sykescottages.co.uk                         |
+	| owner-incentive-get-started                                 |
+	| owner-incentive-dismiss                                     |
+	| View terms and conditions                                   |
+	When I click owner-incentive-get-started
+	Then the following elements are dislpayed
+	| Element                                                                                           |
+	| owner-promotion-form_first_name                                                                   |
+	| owner-promotion-form_first_name_validation_error                                                  |
+	| owner-promotion-form_email                                                                        |
+	| owner-promotion-form_email_validation_error                                                       |
+	| owner-promotion-form_phone                                                                        |
+	| owner-promotion-form_phone_validation_error                                                       |
+	| Your details will be stored and used to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                              |
+	| Submit enquiry                                                                                    |
+	| Back                                                                                              |
+	| /blog/welcome-cashback-offer-terms-and-conditions/                                                |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_PartnersInteractiveCarrousel18699

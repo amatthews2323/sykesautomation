@@ -1,7 +1,7 @@
 ﻿Feature: SisterSites
 	Sister sites content and functionality
 
-@SisterSites @SmokeTest
+@SisterSites @LYPSmokeTest
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am accessing <URL>
 	Then the following elements are dislpayed
@@ -34,22 +34,21 @@ Scenario: The Sykes sister sites are displayed correctly
 	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |
 
-@SisterSites @RegressionSuite @EnquiryForm
+@SisterSites @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am accessing <URL>
 	Then the following elements are dislpayed
-	| Element                                                                                           |
-	| form-heading-container                                                                            |
-	| Complete the form to receive your information pack                                                |
-	| heroform_first_name                                                                               |
-	| heroform_first_name_validation_error                                                              |
-	| heroform_email                                                                                    |
-	| heroform_email_validation_error                                                                   |
-	| heroform_phone                                                                                    |
-	| heroform_phone_validation_error                                                                   |
-	| Your details will be stored and used to send you information about our property letting services. |
-	| /terms/privacypolicy                                                                              |
-	| submit                                                                                            |
+	| Element                                                                                                   |
+	| form-heading-container                                                                                    |
+	| Complete the form to receive your information pack                                                        |
+	| heroform_first_name                                                                                       |
+	| heroform_first_name_validation_error                                                                      |
+	| heroform_email                                                                                            |
+	| heroform_email_validation_error                                                                           |
+	| heroform_phone                                                                                            |
+	| heroform_phone_validation_error                                                                           |
+	| /terms/privacypolicy                                                                                      |
+	| submit                                                                                                    |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container

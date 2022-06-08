@@ -32,10 +32,10 @@ Scenario: Get experiment conversion precentage
 		| 4431    |
 		| 4509    |
 		| 4516    |
-		| 4560    |
-		| 4561    |
 		| 4567    |
 		| 4551    |
+		| 4585    |
+		| 4586    |
 
 @HolmesExperiments
 Scenario: Get experiment status
@@ -46,7 +46,7 @@ Scenario: Get experiment status
 		| LetYourCottages_ToolTipsonLYPHeaders18582                            |
 		| LetYourCottages_SpeakToSomeoneSectionMobile18682                     |
 		| LetYourCottages_ReTestBedrockPromo19009                              |
-		| LetYourCottages_AddImageToInfoPages19099                             |
-		| LetYourCottages_UpdateInfoPageHeaders19095                           |
 		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
 		| LetYourCottages_AcceptBedroomsinCalculator18983                      |
+		| LetYourCottages_RemoveDirectMailSmsFromForm19051                     |
+		| LetYourCottages_Livechatfalsedoorlyp11                               |

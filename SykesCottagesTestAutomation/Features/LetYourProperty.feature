@@ -1,13 +1,13 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@Navigation @SmokeTest
+@Navigation @LYPSmokeTest
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
-@LetYourProperty @SmokeTest
+@LetYourProperty @LYPSmokeTest
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
@@ -23,21 +23,20 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Information centre                     |
     | Free Owner Information Pack            |
 
-@LetYourProperty @RegressionSuite @EnquiryForm
+@LetYourProperty @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
-	| Element                                                                                           |
-	| form-heading-container                                                                            |
-	| heroform_first_name                                                                               |
-	| heroform_first_name_validation_error                                                              |
-	| heroform_email                                                                                    |
-	| heroform_email_validation_error                                                                   |
-	| heroform_phone                                                                                    |
-	| heroform_phone_validation_error                                                                   |
-	| Your details will be stored and used to send you information about our property letting services. |
-	| /terms/privacypolicy                                                                              |
-	| submit                                                                                            |
+	| Element                                                                                                   |
+	| form-heading-container                                                                                    |
+	| heroform_first_name                                                                                       |
+	| heroform_first_name_validation_error                                                                      |
+	| heroform_email                                                                                            |
+	| heroform_email_validation_error                                                                           |
+	| heroform_phone                                                                                            |
+	| heroform_phone_validation_error                                                                           |
+	| /terms/privacypolicy                                                                                      |
+	| submit                                                                                                    |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
@@ -68,21 +67,23 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
 
-@LetYourProperty @RegressionSuite @EnquiryForm
+@LetYourProperty @LYPRegressionSuite @EnquiryForm
 Scenario: The modal enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: Start your listing today
 	And I click Start your listing today
 	Then I wait 2 seconds
 	Then the following elements are dislpayed
-	| Element                                                                |
-	| o-overlay__content o-overlay__content--reset js-overlay-content        |
-	| list_property_first_name                                               |
-	| list_property_email                                                    |
-	| list_property_phone                                                    |
-	| list_property_first_name_validation_error                              |
-	| list_property_email_validation_error                                   |
-	| list_property_phone_validation_error                                   |
+	| Element                                                                                                   |
+	| o-overlay__content o-overlay__content--reset js-overlay-content                                           |
+	| list_property_first_name                                                                                  |
+	| list_property_email                                                                                       |
+	| list_property_phone                                                                                       |
+	| list_property_first_name_validation_error                                                                 |
+	| list_property_email_validation_error                                                                      |
+	| list_property_phone_validation_error                                                                      |
+	| /terms/privacypolicy                                                                                      |
+	| submit                                                                                                    |
 	When I select the form overlay submit button
 	Then the following elements are dislpayed
 	| Element                        |
@@ -109,7 +110,7 @@ Scenario: The modal enquiry form is displayed correctly
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
 
-@LetYourProperty @RegressionSuite @EnquiryForm
+@LetYourProperty @LYPRegressionSuite @EnquiryForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I click Click enquire now and complete the form to receive your free information pack.
@@ -124,7 +125,7 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	| list_property_email_validation_error                                   |
 	| list_property_phone_validation_error                                   |
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed: nav_top u-clearfix nav_top_17485
@@ -144,7 +145,7 @@ Scenario: The Income Projection is displayed upon interaction
 	When I select option Northumberland from the region dropdown
 	Then the following element is displayed: homepage_calculator_cta_blue
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The Managed Services links direct to the LYP form
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I scroll to the following element: Partially managed
@@ -153,7 +154,7 @@ Scenario: The Managed Services links direct to the LYP form
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the page sections are displayed in the relevant positions
@@ -169,7 +170,7 @@ Scenario: The page sections are displayed in the correct order
 	| Information centre                     | 9        |
 	| Free Owner Information Pack            | 10       |
 
-@MobileApp @SmokeTest
+@MobileApp @LYPSmokeTest
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile
@@ -204,7 +205,7 @@ Scenario: The Information Carousel is displayed on the page
 	| Holiday let mortgages       |
 	| Legal regulations           |
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The image navigation buttons are displayed on the page
 	Given I have navigated to the following page: letyourcottage
 	Then the following elements are dislpayed
@@ -213,11 +214,11 @@ Scenario: The image navigation buttons are displayed on the page
 	| arrow-next.svg |
 	| slick-dots     |
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The footer content is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer
-	Then the following elements are dislpayed within the footer section
+	Then the following elements are dislpayed within the page-footer section
 	| Element                                                    |
 	| Sykes Cottages                                             |
 	| © 2022 All rights reserved                                 |
@@ -235,21 +236,21 @@ Scenario: The footer content is displayed correctly
 	| Pinterest                                                  |
 	| Instagram                                                  |
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The testimonials carousel is present on the page
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then the Testimonials carousel is displayed on the page
 	And I click /images/sykes/letyourcottage/icons/arrow-prev.svg
 
-@LetYourProperty @RegressionSuite
+@LetYourProperty @LYPRegressionSuite
 Scenario: The alerts disapear after an amount of time
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then the alerts are displayed on the page
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
 
-@LetYourProperty
-Scenario: Experiment LetYourCottages_InactivityExitModal18457
+@LetYourProperty @EnquiryForm
+Scenario: The Inactivity Modal is displayed correctly
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then I wait 305 seconds
 	And the following elements are dislpayed
