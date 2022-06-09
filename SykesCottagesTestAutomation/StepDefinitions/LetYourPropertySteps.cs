@@ -251,8 +251,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitASecond(value);
         }
 
-        [Given(@"I am accessing (.*)")]
-        public void GivenIAmAccessing(string domain = "")
+        [Given(@"I am on the following webpage: (.*)")]
+        public void GivenIAmOnTheFollowingWebpage(string domain = "")
         {
             LaunchWebsite(domain);
             ClosePopups();

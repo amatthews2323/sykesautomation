@@ -3,14 +3,14 @@
 
 @HolmesExperiments
 Scenario: Get all active experiments from Holmes
-	Given I am accessing http://holmes.staging.sykes.cloud/experiments
+	Given I am on the following webpage: http://holmes.staging.sykes.cloud/experiments
 	Then I store the experiment IDs
 
 @HolmesExperiments
 Scenario: Get all active experiments in a given session
 	Given I have navigated to the following page: letyourcottage
 	When I store the active experiment IDs
-	Given I am accessing http://holmes.prod.sykes.cloud/experiments
+	Given I am on the following webpage: http://holmes.prod.sykes.cloud/experiments
 	When I search for the experiment details
 
 @HolmesExperiments
@@ -25,7 +25,7 @@ Scenario: Check specific experiments are applied
 
 @HolmesExperiments
 Scenario: Get experiment conversion precentage 
-	Given I am accessing https://holmes.prod.sykes.cloud/experiments
+	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
 		| 4396    |
@@ -36,10 +36,12 @@ Scenario: Get experiment conversion precentage
 		| 4551    |
 		| 4585    |
 		| 4586    |
+		| 4598    |
+		| 4595    |
 
 @HolmesExperiments
 Scenario: Get experiment status
-	Given I am accessing https://holmes.prod.sykes.cloud/experiments
+	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                              |
 		| LetYourCottages_ReplaceIconsWithimages18585                          |
@@ -50,3 +52,5 @@ Scenario: Get experiment status
 		| LetYourCottages_AcceptBedroomsinCalculator18983                      |
 		| LetYourCottages_RemoveDirectMailSmsFromForm19051                     |
 		| LetYourCottages_Livechatfalsedoorlyp11                               |
+		| LetYourCottages_EarningCalculatoronInformationPages19170             |
+		| LetYourCottages_FormSmallPrintChange27                               |

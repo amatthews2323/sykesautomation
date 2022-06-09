@@ -61,6 +61,7 @@ Scenario: The enquiry form is displayed on the Information Centre pages
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
+	And I wait 2 seconds
 	Then the following text is displayed: Please enter a full name.
 	When I click heroform_email
 	And I click form-heading-container

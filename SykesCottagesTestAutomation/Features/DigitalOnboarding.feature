@@ -79,7 +79,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 
 @DigitalOnboarding
 Scenario: The user completes digital onboarding
-	Given I am accessing https://tech.staging.sykescottages.co.uk/account/login
+	Given I am on the following webpage: https://tech.staging.sykescottages.co.uk/account/login
 	Then I can sign in to my account using the following details
 	| Key      | Value                       |
 	| Username | sykestest855343@example.org |

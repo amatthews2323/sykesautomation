@@ -91,7 +91,7 @@ Scenario: The relevant sections are displayed on the A Guide to Buying a Holiday
 	| A Guide to Buying a Holiday Let                      |
 	| Let's Work Together                                  |
 	| The key benefits of buying a holiday let             |
-	| How to buy your holiday home                         |
+	| A guide to buying your holiday home                  |
 	| Where to buy your holiday home                       |
 	| Legalities                                           |
 	| Taxes                                                |
@@ -103,17 +103,17 @@ Scenario: The relevant sections are displayed on the A Guide to Buying a Holiday
 Scenario: The relevant sections are displayed on the Are Holiday Lets a Good Investment page
 	Given I have navigated to the following page: letyourcottage/advice/article/why-are-holiday-lets-a-good-investment
 	Then the following elements are dislpayed
-	| Element                                                              |
-	| Are Holiday Lets a Good Investment?                                  |
-	| Let's Work Together                                                  |
-	| Are holiday lets a good investment?                                  |
-	| What types of holiday let mortgages are there?                       |
-	| What Return on Investment (ROI) could you expect from a holiday let? |
-	| Best locations for a holiday let business                            |
-	| How to maximise your income                                          |
-	| Ready to get started?                                                |
-	| Buying a Holiday Home General Guides                                 |
-	| Contact us                                                           |
+	| Element                                                   |
+	| Are Holiday Lets a Good Investment?                       |
+	| Let's Work Together                                       |
+	| Are holiday lets a good investment?                       |
+	| What types of holiday let mortgages are there?            |
+	| What Return on Investment can you get from a holiday let? |
+	| Best places to buy a holiday home                         |
+	| How to maximise your income                               |
+	| Ready to get started?                                     |
+	| Buying a Holiday Home General Guides                      |
+	| Contact us                                                |
 
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Buying a Holiday Home Abroad vs. in the UK page

@@ -400,7 +400,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table82.AddRow(new string[] {
                             "The key benefits of buying a holiday let"});
                 table82.AddRow(new string[] {
-                            "How to buy your holiday home"});
+                            "A guide to buying your holiday home"});
                 table82.AddRow(new string[] {
                             "Where to buy your holiday home"});
                 table82.AddRow(new string[] {
@@ -458,9 +458,9 @@ this.ScenarioInitialize(scenarioInfo);
                 table83.AddRow(new string[] {
                             "What types of holiday let mortgages are there?"});
                 table83.AddRow(new string[] {
-                            "What Return on Investment (ROI) could you expect from a holiday let?"});
+                            "What Return on Investment can you get from a holiday let?"});
                 table83.AddRow(new string[] {
-                            "Best locations for a holiday let business"});
+                            "Best places to buy a holiday home"});
                 table83.AddRow(new string[] {
                             "How to maximise your income"});
                 table83.AddRow(new string[] {

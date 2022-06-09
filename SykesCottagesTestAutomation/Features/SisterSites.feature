@@ -3,7 +3,7 @@
 
 @SisterSites @LYPSmokeTest
 Scenario: The Sykes sister sites are displayed correctly
-	Given I am accessing <URL>
+	Given I am on the following webpage: <URL>
 	Then the following elements are dislpayed
 	| Element                                |
 	| <Title>                                |
@@ -14,7 +14,6 @@ Scenario: The Sykes sister sites are displayed correctly
 	| Holiday letting made easy              |
 	| Request a free owner pack              |
 	| Claim My Free Pack                     |
-
 	Examples:
 	| URL                                                         | Title                      |
 	| https://www.carbisbayholidays.co.uk/letyourcottage/         | Carbis Bay                 |
@@ -36,7 +35,7 @@ Scenario: The Sykes sister sites are displayed correctly
 
 @SisterSites @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the sister sites
-	Given I am accessing <URL>
+	Given I am on the following webpage: <URL>
 	Then the following elements are dislpayed
 	| Element                                                                                                   |
 	| form-heading-container                                                                                    |

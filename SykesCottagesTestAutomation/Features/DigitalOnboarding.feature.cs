@@ -371,7 +371,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 82
- testRunner.Given("I am accessing https://tech.staging.sykescottages.co.uk/account/login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the following webpage: https://tech.staging.sykescottages.co.uk/account/l" +
+                        "ogin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",

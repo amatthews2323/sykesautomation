@@ -14,9 +14,9 @@ namespace SykesCottagesTestAutomation
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
         public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
 
-        public static bool screenshots = false; //Take a screenshot at the end of each scenario
-        public static bool reporting = false; //Turn on Extent Reports
-        public static string reportName = "LYPSmokeTest"; //Name of the report: LYPRegressionSuite | LYPSmokeTest | TOBSmokeTest | ActiveExperiments
+        public static bool screenshots = true; //Take a screenshot at the end of each scenario
+        public static bool reporting = true; //Turn on Extent Reports
+        public static string reportName = "TOBSmokeTest"; //Name of the report: LYPRegressionSuite | LYPSmokeTest | TOBSmokeTest | ActiveExperiments
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool acceptCookies = true; //Dismiss the cookie popup
