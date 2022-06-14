@@ -37,6 +37,7 @@ namespace SykesCottagesTestAutomation
         public static string controlExperiments;
         public static string experimentalExperiments;
         public static string CSVValue;
+        public static string Headers;
 
         public void SelectBrowser(string browser)
         {
@@ -262,6 +263,12 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
             SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+        }
+
+        public void GetPageHeaders()
+        {
+            Headers = shared.driver.FindElement(By.XPath("/html/body//*[self::h1 or self::h2 or self::h3]/text()")).Text;
+            Console.WriteLine("Page headers: " + Headers);
         }
 
         public void WaitASecond(int seconds = 1)

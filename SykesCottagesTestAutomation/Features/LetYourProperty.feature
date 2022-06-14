@@ -249,6 +249,17 @@ Scenario: The alerts disapear after an amount of time
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
 
+@LetYourProperty @LYPRegressionSuite
+Scenario: The number of bedrooms is included in the earnings calculator
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Then the following elements are dislpayed
+	| Element                           |
+	| How much could I earn with Sykes? |
+	| Property location                 |
+	| Property information              |
+	| Average potential earnings        |
+	| Enquire today to get started      |
+
 @LetYourProperty @EnquiryForm
 Scenario: The Inactivity Modal is displayed correctly
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product

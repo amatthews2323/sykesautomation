@@ -24,17 +24,16 @@ Scenario: The Regional pages are displayed correctly
 Scenario: The enquiry form is displayed on the Regional pages
 	Given I have navigated to the following page: <Path>
 	Then the following elements are dislpayed
-	| Element                                                                                                   |
-	| form-heading-container                                                                                    |
-	| Complete the form to receive your information pack                                                        |
-	| heroform_first_name                                                                                       |
-	| heroform_first_name_validation_error                                                                      |
-	| heroform_email                                                                                            |
-	| heroform_email_validation_error                                                                           |
-	| heroform_phone                                                                                            |
-	| heroform_phone_validation_error                                                                           |
-	| /terms/privacypolicy                                                                                      |
-	| submit                                                                                                    |
+	| Element                              |
+	| form-heading-container               |
+	| heroform_first_name                  |
+	| heroform_first_name_validation_error |
+	| heroform_email                       |
+	| heroform_email_validation_error      |
+	| heroform_phone                       |
+	| heroform_phone_validation_error      |
+	| /terms/privacypolicy                 |
+	| submit                               |
 	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue
 	Then the following elements are dislpayed
 	| Element                        |

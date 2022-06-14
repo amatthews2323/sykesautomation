@@ -335,5 +335,11 @@ namespace SykesCottagesTestAutomation.BaseClass
             Refresh();
             ClosePopups();
         }
+
+        [Then(@"I store the headers on the page")]
+        public void ThenIStoreTheHeadersOnThePage()
+        {
+            GetPageHeaders();
+        }
     }
 }

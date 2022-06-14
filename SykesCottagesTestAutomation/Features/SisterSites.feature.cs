@@ -120,26 +120,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table74 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "nav_logo"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "hero__image"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "form-heading-container"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Request a free owner pack"});
-                table74.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Claim My Free Pack"});
 #line 7
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table74, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table79, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -193,30 +193,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 38
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table75 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "form-heading-container"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_first_name"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_email"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_phone"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table75.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "submit"});
 #line 39
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table75, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table80, "Then ");
 #line hidden
 #line 51
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

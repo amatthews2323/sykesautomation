@@ -128,3 +128,8 @@ Scenario: The relevant sections are displayed on the Buying a Holiday Home Abroa
 	| Disadvantages of Holiday Letting Abroad    |
 	| Where to Buy Guides                        |
 	| Contact us                                 |
+
+@Headers
+Scenario: Store the page headers
+	Given I have navigated to the following page: letyourcottage/advice/article/buying-a-holiday-home-abroad-vs-uk
+	Then I store the headers on the page

@@ -1,6 +1,49 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
+LetYourCottages_ImagesbeforecontentLYP32
+
+LetYourCottages_InformationPageSearchMvpLyp12
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_HeroFormTitleChange24
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HeroFormTitleChange24
+	Then the following text is displayed: Start your letting journey with Sykes
+	And the following elements are not dislpayed
+	| Element                                                  |
+	| Complete the form to receive your information pack       |
+	| //div[@class='form-heading-container']//*[text()='Free'] |
+
+@ActiveExperiments
+Scenario: Experiment CookiePrivacyPolicyLinksinFooterLYP34
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: CookiePrivacyPolicyLinksinFooterLYP34
+	Then the following elements are dislpayed within the page-footer section
+	| Element                |
+	| /terms/privacypolicy   |
+	| /terms/cookiepolicy    |
+	| cookie-manager-trigger |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RemoveDirectMailSmsFromForm19051
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_RemoveDirectMailSmsFromForm19051
+	And I enter the following details on the enquiry form
+	| Key           | Value                 |
+	| Full name     | Test Owner            |
+	| Email address | sykestest@example.org |
+	| Phone number  | 07000000000           |
+	And I click o-heading-title__heading
+	Then the following elements are dislpayed
+	| Element         |
+	| marketing_email |
+	| marketing_phone |
+	And the following elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |
+
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_EarningCalculatoronInformationPages19170
 	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
@@ -28,6 +71,44 @@ Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationp
 	Then the following element is displayed: floatingactionbutton
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
+	And I scroll to the following element: Looking to get started with holiday letting?
+	Then the following elements are dislpayed
+    | Element                                      |
+    | Looking to get started with holiday letting? |
+    | Explore guides & resources                   |
+    | Sykes Cottages Free Owner Pack               |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ReplaceIconsWithimages18585
+	And I close the pop-ups
+	Then the following elements are dislpayed
+    | Element                                                             |
+    | /images/let_your_cottage/letting_easy/market-leading.png            |
+    | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
+    | /images/let_your_cottage/letting_easy/dedicated-account-manager.png |
+    | /images/let_your_cottage/letting_easy/helpline-24h.png              |
+    | /images/let_your_cottage/letting_easy/full-property-management.png  |
+    | /images/let_your_cottage/letting_easy/photography.png               |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ToolTipsonLYPHeaders18582
+	And I close the pop-ups
+	Then the following elements are dislpayed
+	| Element                                                                                                         |
+	| LYPtooltip                                                                                                      |
+	| We have over 9000 owners  listing with Sykes, and 17,902 properties.                                            |
+	| Average potential earnings are based on the average annual earnings a property within that region might expect. |
+	| We can tailor our services to fit your needs. Find out how by using the button below.                           |
+	| Access our expert knowledge on listing and managing holiday lets.                                               |
+
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
 	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_UpdateInfoPageHeaders19095
@@ -40,56 +121,6 @@ Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
     | Element           |
     | Your Location     |
     | Get Started Today |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_AcceptBedroomsinCalculator18983
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_AcceptBedroomsinCalculator18983
-	Then the following elements are dislpayed
-	| Element                           |
-	| How much could I earn with Sykes? |
-	| Property location                 |
-	| Property information              |
-	| Average potential earnings        |
-	| Enquire today to get started      |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
-	And I scroll to the following element: Looking to get started with holiday letting?
-	Then the following elements are dislpayed
-         | Element                                      |
-         | Looking to get started with holiday letting? |
-         | Explore guides & resources                   |
-         | Sykes Cottages Free Owner Pack               |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ToolTipsonLYPHeaders18582
-	And I close the pop-ups
-	Then the following elements are dislpayed
-		 | Element                                                                                                         |
-		 | LYPtooltip                                                                                                      |
-		 | We have over 9000 owners  listing with Sykes, and 17,902 properties.                                            |
-		 | Average potential earnings are based on the average annual earnings a property within that region might expect. |
-		 | We can tailor our services to fit your needs. Find out how by using the button below.                           |
-		 | Access our expert knowledge on listing and managing holiday lets.                                               |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ReplaceIconsWithimages18585
-	And I close the pop-ups
-	Then the following elements are dislpayed
-         | Element                                                             |
-         | /images/let_your_cottage/letting_easy/market-leading.png            |
-         | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
-         | /images/let_your_cottage/letting_easy/dedicated-account-manager.png |
-         | /images/let_your_cottage/letting_easy/helpline-24h.png              |
-         | /images/let_your_cottage/letting_easy/full-property-management.png  |
-         | /images/let_your_cottage/letting_easy/photography.png               |
 
 @StoppedExperimnets
 Scenario: Experiment LetYourCottages_OwnerIncentivePromotion4
