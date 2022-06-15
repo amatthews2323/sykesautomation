@@ -220,6 +220,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "4602"});
                 table53.AddRow(new string[] {
                             "4605"});
+                table53.AddRow(new string[] {
+                            "4615"});
 #line 29
  testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table53, "Then ");
 #line hidden
@@ -236,7 +238,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiment status", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 42
+#line 43
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -246,7 +248,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 43
+#line 44
  testRunner.Given("I am on the following webpage: https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
@@ -269,7 +271,9 @@ this.ScenarioInitialize(scenarioInfo);
                             "LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34"});
                 table54.AddRow(new string[] {
                             "LetYourCottages_InactivityModalInfoPages23"});
-#line 44
+                table54.AddRow(new string[] {
+                            "LetYourCottages_HeroFormTitleChange24"});
+#line 45
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table54, "Then ");
 #line hidden
             }

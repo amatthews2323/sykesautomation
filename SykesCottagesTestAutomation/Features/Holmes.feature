@@ -37,6 +37,7 @@ Scenario: Get experiment conversion precentage
 		| 4598    |
 		| 4602    |
 		| 4605    |
+		| 4615    |
 
 @HolmesExperiments
 Scenario: Get experiment status
@@ -52,3 +53,4 @@ Scenario: Get experiment status
 		| LetYourCottages_EarningCalculatoronInformationPages19170             |
 		| LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34                |
 		| LetYourCottages_InactivityModalInfoPages23                           |
+		| LetYourCottages_HeroFormTitleChange24                                |

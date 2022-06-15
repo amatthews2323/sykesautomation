@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace SykesCottagesTestAutomation.BaseClass
 {
     [Binding]
-    public sealed class DigitalOnboadingSteps : CommonSteps
+    public sealed class DigitalOnboadingSteps : MethodLibrary
     {
         public DigitalOnboadingSteps(SharedDriver context) : base(context)
         {

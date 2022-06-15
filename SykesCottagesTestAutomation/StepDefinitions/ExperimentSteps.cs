@@ -10,7 +10,7 @@ using TechTalk.SpecFlow;
 namespace SykesCottagesTestAutomation.BaseClass
 {
     [Binding]
-    public sealed class ExperimentSteps : CommonSteps
+    public sealed class ExperimentSteps : MethodLibrary
     {
         public ExperimentSteps(SharedDriver context) : base(context)
         {

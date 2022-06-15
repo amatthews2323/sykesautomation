@@ -1,517 +1,356 @@
-﻿using CsvHelper;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.IO;
+﻿using System;
+using System.Linq;
 using TechTalk.SpecFlow;
-using WDSE.ScreenshotMaker;
-using WDSE.Decorators;
-using WDSE;
 
-namespace SykesCottagesTestAutomation
+namespace SykesCottagesTestAutomation.BaseClass
 {
     [Binding]
-    public class CommonSteps
+    public sealed class CommonSteps : MethodLibrary
     {
-        public class SharedDriver
+        public CommonSteps(SharedDriver context) : base(context)
         {
-            public IWebDriver driver;
         }
 
-        protected SharedDriver shared;
-
-        public CommonSteps(SharedDriver context)
+        [Given(@"I am on the Sykes Homepage")]
+        public void GivenIAmOnTheSykesHomepage()
         {
-            shared = context;
+            LaunchWebsite();
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            ClosePopups();
+            AssertPageTitle("Holiday Cottages To Rent");
         }
 
-        public static string url;
-        public static string controlExperiments;
-        public static string experimentalExperiments;
-        public static string CSVValue;
-        public static string Headers;
-
-        public void SelectBrowser(string browser)
+        [Given(@"I have navigated to the following page: (.*)")]
+        public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
-            switch (browser)
-            {
-                case "Chrome":
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers", new ChromeOptions { Proxy = null });
-                    break;
-                case "Firefox":
-                    FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"Drivers", "geckodriver.exe");
-                    service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-                    shared.driver = new FirefoxDriver(service);
-                    break;
-                case "Edge":
-                    shared.driver = new EdgeDriver(edgeDriverDirectory: @"Drivers");
-                    break;
-                default:
-                    shared.driver = new ChromeDriver(chromeDriverDirectory: @"Drivers");
-                    break;
-            }
+            LaunchWebsite("", path);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            ClosePopups(_acceptCookies: true, _dismissAlerts: true);
         }
 
-        public void LaunchWebsite(string domain = "", string path = "")
+        [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
+        public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
-            //Check for domain override, if none found, use the one specified in the Hooks class
-            if (domain == "")
-            {
-                domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt); //Get the URL based on the Hooks.Environemt value
-            }
-            url = domain + path;
-
-            SelectBrowser(Hooks.browser); //Set the driver and browser
-            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.timeOut); //Set the timeout duration
-
-            try
-            {
-                GoTo(url); //Launch website
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
-                shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
-            }
-
-            try
-            {
-                controlExperiments = GetJavaScriptText("control_experiments");
-                experimentalExperiments = GetJavaScriptText("experimental_experiments");
-                Console.WriteLine("Control experiments: " + controlExperiments + "\nExperimental experiments: " + experimentalExperiments);
-            }
-            catch
-            {
-                Console.WriteLine("No enabled experiments found");
-            }
-
-            if (Hooks.acceptCookies == true)
-            {
-                ClickIfDisplayed("Accept All Cookies", waitTime: 2);
-            }
-            else
-            {
-                Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
-            }
-
-            //Check for experiments
-            if (Hooks.experiments != "")
-            {
-                //If Dev Tools not found, launch website with Dev Tools activated
-                if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
-                {
-                    GoTo(url + "/?dev_tools=product");
-                }
-                ApplyExperiment(Hooks.experiments);
-            }
-        }
-
-        public void SetBrowserSize(string viewpoint = "", int width = 768, int height = 1024)
-        {
-            if (viewpoint.Contains("Max") | viewpoint.Contains("max") | viewpoint.Contains("Full") | viewpoint.Contains("full"))
-            {
-                Console.WriteLine("Set browser size to maximum");
-                shared.driver.Manage().Window.Maximize(); //Maximise
-            }
-            if (viewpoint == "Desktop" | viewpoint == "desktop")
-            {
-                Console.WriteLine("Set browser size to desktop");
-                shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop screen dimentions
-            }
-            if (viewpoint == "Tablet" | viewpoint == "tablet")
-            {
-                Console.WriteLine("Set browser size to tablet");
-                shared.driver.Manage().Window.Size = new Size(820, 1180); //iPad Air dimensions
-            }
-            if (viewpoint == "Mobile" | viewpoint == "mobile")
-            {
-                Console.WriteLine("Set browser size to mobile");
-                shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
-            }
-            if (viewpoint == "Custom" | viewpoint == "custom")
-            {
-                Console.WriteLine("Set browser size to " + width + " by " + height);
-                shared.driver.Manage().Window.Size = new Size(width, height);
-            }
-        }
-
-        public void ApplyExperiment(string experimentIds)
-        {
-            if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
-            {
-                GoTo(url + "/?dev_tools=product");
-            }
-            JSClick("Dev Tools");
-            var array = experimentIds.Split(",");
-            for (int i = 0; i < array.Length; i++)
-            {
-                string Experiment = array[i].ToString().Trim();
-                Type("experiment-search", Experiment);
-                Click("//li[contains(@data-name,\"" + Experiment + "\")]");
-            }
-            JSClick("//a[@class='dev-panel-toggle' and text()='Close']");
-            Refresh();
-        }
-
-        public void ClosePopups(bool _acceptCookies = true, bool _dismissAlerts = true)
-        {
-            if (Hooks.acceptCookies == true)
-            {
-                if (_acceptCookies == true)
-                {
-                    ClickIfDisplayed("Accept all cookies");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
-            }
-
-            if (Hooks.dismissPopups == true)
-            {
-                //Collapse survey
-                if (shared.driver.FindElements(By.XPath("//*[@*='_hj-1tTKm__styles__surveyContainer _hj-2UlJh__styles__positionRight _hj-3BmV5__styles__openingAnimation']")).Count != 0)
-                {
-                    ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
-                }
-
-                //Dismiss form tint
-                ClickIfDisplayed("nonenquiry6941");
-
-                //Dismiss alerts (unless overridden to test an experiment)
-                if (_dismissAlerts == true)
-                {
-                    //WaitASecond();
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
-                    ClickIfDisplayed("close c-alert__close js-alert-close");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Popups not dismissed. Set DismissAllPopups to 'Yes' in Hooks class to dismiss popups.");
-            }
-        }
-
-        public string ReadFromCSV(string fileName, string columnName, string rowName, string searchTerm)
-        {
-            string csvValue = "";
-            DataTable dataTable = null;
-            using var reader = new StreamReader(@fileName + ".csv");
-            using var csv = new CsvReader(reader, System.Globalization.CultureInfo.InvariantCulture);
-            using (var dr = new CsvDataReader(csv))
-            {
-                dataTable = new DataTable();
-                dataTable.Load(dr);
-            }
-            DataRow[] rows = dataTable.Select(rowName + " = '" + searchTerm + "'");
-            foreach (DataRow row in rows)
-            {
-                Console.WriteLine("CSV value is: " + row[columnName]);
-                csvValue = row[columnName].ToString();
-            }
-            return csvValue;
-        }
-
-        public string XPath(string value, string element = "*")
-        {
-            //If "value" parameter is already an XPath, return the origninal string; else return an XPath containing the "value" parameter
-            if (value.Contains("//") & !value.Contains("http"))
-            {
-                return value;
-            }
-            else
-            {
-                //Construct an XPath using the "value" and "element" parameters - works for attribute or text, partial or exact match 
-                //return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
-                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(text(),\"" + value + "\")]";
-            }
-        }
-
-        public void GoTo(string webpage)
-        {
-            Console.WriteLine("Launch website: " + webpage);
-            shared.driver.Navigate().GoToUrl(webpage);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//body")).Count != 0, "Webpage did not load");
-        }
-
-        public void SwitchFocus()
-        {
-            shared.driver.SwitchTo().Window(shared.driver.WindowHandles[1]);
-            WaitASecond(2);
-        }
-
-        public void Refresh()
-        {
-            try
-            {
-                Console.WriteLine("Reload the page");
-                //shared.driver.Navigate().Refresh();
-                GoTo(url);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
-                shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
-            }
+            LaunchWebsite("", path);
+            ClosePopups(_acceptCookies: true, _dismissAlerts: false);
             SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
-        public void GetPageHeaders()
+        [When(@"I navigate to (.*)")]
+        public void WhenINavigateTo(string url = "")
         {
-            Headers = shared.driver.FindElement(By.XPath("/html/body//*[self::h1 or self::h2 or self::h3]/text()")).Text;
-            Console.WriteLine("Page headers: " + Headers);
+            GoTo(url);
         }
 
-        public void WaitASecond(int seconds = 1)
+        [When(@"I close the pop-ups")]
+        public void WhenICloseThePop_Ups()
         {
-            int value = seconds * 1000;
-            System.Threading.Thread.Sleep(value);
+            ClosePopups();
         }
 
-        public void WaitUntilExists(string value)
+        [Then(@"I read the csv file (.*), colunm (.*), row (.*), search term (.*)")]
+        public void ThenIReadTheCsvFileColunmRowSearchTerm(string fileName, string columnName, string rowName, string searchTerm)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
+            CSVValue = ReadFromCSV(fileName, columnName, rowName, searchTerm);
         }
 
-        public void WaitUntilVisible(string value)
+        [When(@"I click (.*)")]
+        public void WhenIClick(string value)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
+            Click(value);
         }
 
-        public void WaitUntilClickable(string value)
+        [Then(@"I click (.*)")]
+        public void ThenIClick(string value)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
+            Click(value);
         }
 
-        public void ScrollTo(string value)
+        [When(@"I select the alert Get Started button")]
+        public void WhenISelectTheAlertGetStartedButton()
         {
-            string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
-                                           + "var elementTop = arguments[0].getBoundingClientRect().top;"
-                                           + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
-            ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath(XPath(value))));
-            WaitASecond(2);
+            Click("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]", waitTime: 1);
         }
 
-        public bool ElementDisplayed(string value, string element = "*")
+        [When(@"I select the Partially Managed Enquire Now button")]
+        public void WhenISelectThePartiallyManagedEnquireNowButton()
         {
-            return shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0;
+            Click("Partially managed");
+            Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a", waitTime: 5);
         }
 
-        public void AssertPageTitle(string title)
+        [When(@"I select the Fully Managed Enquire Now button")]
+        public void WhenISelectTheFullyManagedEnquireNowButton()
         {
-            string pageTitle = shared.driver.Title;
-            Console.WriteLine("Assert the page title \"" + pageTitle + "\" matches \"" + pageTitle + "\"");
-            Assert.IsTrue(pageTitle.Contains(title), "Page title \"" + pageTitle + "\" does not match \"" + title + "\"");
+            Click("Fully managed");
+            Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a", waitTime: 5);
         }
 
-        public void AssertTextDisplayed(string value)
+        [Then(@"the enquiry form is displayed with the tint applied")]
+        public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
         {
-            Console.WriteLine("Assert the following text is displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//*[contains(text(),\"" + value + "\")]|//*[contains(., \"" + value + "\")]")).Count != 0, "Text \"" + value + "\" not found");
+            AssertElementDisplayed("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']");
         }
 
-        public void AssertElementDisplayed(string value, string element = "*")
+        [Then(@"the Testimonials carousel is displayed on the page")]
+        public void ThenTheTestimonialsCarouselIsDisplayedOnThePage()
         {
-            Console.WriteLine("Assert the following element displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0, "\"" + value + "\" not found");
+            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div/div[contains(@class,'carousel-slider')]");
+            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-prev.svg')]");
+            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-next.svg')]");
         }
 
-        public void AssertElementNotDisplayed(string value, string element = "*")
+        [Then(@"the enquiry form submit button is disabled")]
+        public void ThenTheEnquiryFormSubmitButtonIsDisabled()
         {
-            Console.WriteLine("Assert the following element is not displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//" + element + "[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Count == 0, "\"" + value + "\" displayed in error");
+            AssertElementDisplayed("//form[@*='heroform']/button[@type='submit' and @disabled='']");
         }
 
-        public void AssertElementVisible(string value, string element = "*")
+        [Then(@"the enquiry form submit button is not disabled")]
+        public void ThenTheEnquiryFormSubmitButtonIsNotDisabled()
         {
-            Console.WriteLine("Assert the following element is visible: " + value);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath(XPath(value, element))).Displayed, "\"" + value + "\" not visible");
+            AssertElementNotDisplayed("//form[@*='heroform']/button[@type='submit' and @disabled='']");
         }
 
-        public void AssertElementNotVisible(string value, string element = "*")
+        [When(@"I select the close icon on the form")]
+        public void WhenISelectTheCloseIconOnTheForm()
         {
-            Console.WriteLine("Assert the following element is not visible: " + value);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath("//" + element + "[@*=\"" + value + "\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Displayed, "\"" + value + "\" displayed in error");
+            Click("//div[@class='o-overlay__content']/button[@title='Close form']", waitTime: 1);
         }
 
-        public void Click(string value, string element = "*", int waitTime = 0)
+        [When(@"I select the (.*) navigation link under (.*)")]
+        public void WhenISelectTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            var _element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value, element))));
-            Console.WriteLine("Click: \"" + value + "\"");
-            _element.Click();
-            if (waitTime != 0)
+            MouseOver(headerMenu);
+            MouseOver(headedLink);
+            Click(headedLink);
+        }
+
+        [Then(@"the following page title is displayed: (.*)")]
+        public void ThenTheFollowingPageTitleIsDisplayed(string value)
+        {
+            AssertPageTitle(value);
+        }
+
+        [Then(@"the following sections are dislpayed")]
+        public void ThenTheFollowingSectionsAreDislpayed(Table table)
+        {
+            var sections = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var section in sections)
             {
-                WaitASecond(waitTime);
+                AssertTextDisplayed(section.ToString());
             }
         }
 
-        public void JSClick(string value, string element = "*", int waitTime = 0)
+        [Then(@"the following elements are dislpayed")]
+        public void ThenTheFollowingElementsAreDislpayedOnThePage(Table table)
         {
-            Console.WriteLine("Click: \"" + value + "\"");
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath(XPath(value, element))));
-            if (waitTime != 0)
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
             {
-                WaitASecond(waitTime);
+                AssertElementDisplayed(element.ToString());
             }
         }
 
-        public void ClickIfDisplayed(string value, string element = "*", int waitTime = 0)
+        [Then(@"the following elements are dislpayed within the (.*) section")]
+        public void ThenTheFollowingElementsAreDislpayedWithinTheSection(string section, Table table)
+        {
+            //string SectionXPath = XPath(section); 
+
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                //string FullXpath = SectionXPath + XPath(element.ToString());
+                AssertElementDisplayed(XPath(section) + XPath(element.ToString()));
+            }
+        }
+
+        [Then(@"the following elements are not dislpayed")]
+        public void ThenTheFollowingElementsAreNotDislpayed(Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                AssertElementNotDisplayed(element.ToString());
+            }
+        }
+
+        [Then(@"the following elements are not visible")]
+        public void ThenTheFollowingElementsAreNotVisible(Table table)
+        {
+            var elements = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var element in elements)
+            {
+                AssertElementNotVisible(element.ToString());
+            }
+        }
+
+        [Then(@"the following text is displayed: (.*)")]
+        public void ThenTheFollowingTextIsDisplayed(string text)
+        {
+            AssertTextDisplayed(text);
+        }
+
+        [Then(@"the following element is displayed: (.*)")]
+        public void ThenTheFollowingElementIsDisplayed(string value)
+        {
+            AssertElementDisplayed(value);
+        }
+
+        [Then(@"the following element is not displayed: (.*)")]
+        public void ThenTheFollowingElementIsNotDisplayed(string value)
+        {
+            AssertElementNotDisplayed(value);
+        }
+
+        [Then(@"the following element is not visible: (.*)")]
+        public void ThenTheFollowingElementIsNotVisible(string value)
+        {
+            AssertElementNotVisible(value);
+        }
+
+        [Then(@"the How Much Could I Earn CTA is not displayed")]
+        public void ThenTheHowMuchCouldIEarnCTAIsNotDisplayed()
+        {
+            AssertElementDisplayed("//div[@*='how-much-could-i-earn']/a[@*='homepage_calculator_cta_blue']");
+        }
+
+        [Then(@"the Holiday Letting Made Easy CTA is not displayed")]
+        public void ThenTheHolidayLettingMadeEasyCTAIsNotDisplayed()
+        {
+            AssertElementNotDisplayed("//*[text()='Holiday letting made easy']/parent::div//a[@*='homepage_letting_made_easy_cta_blue']");
+        }
+
+        [When(@"I click the (.*) button")]
+        public void ThenIClickTheButton(string element)
+        {
+            Click(element);
+        }
+
+        [When(@"I select option (.*) from the (.*) dropdown")]
+        public void WhenISelectOptionFromTheDropdown(string option, string dropdown)
+        {
+            SelectFromDropdown(option, dropdown);
+        }
+
+        [Then(@"the following slick dot is highlighted (.*)")]
+        public void ThenTheFollowingSlickDotIsHighlighted(int value)
+        {
+            AssertElementDisplayed("//ul[@class='slick-dots']/li[" + value + "]//self::*[@class='slick-active']");
+        }
+
+        [Then(@"I wait (.*) seconds")]
+        public void ThenIWaitSeconds(int value)
+        {
+            WaitASecond(value);
+        }
+
+        [When(@"I wait (.*) seconds")]
+        public void WhenIWaitSeconds(int value)
+        {
+            WaitASecond(value);
+        }
+
+        [Given(@"I am on the following webpage: (.*)")]
+        public void GivenIAmOnTheFollowingWebpage(string domain = "")
+        {
+            LaunchWebsite(domain);
+            ClosePopups();
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+        }
+
+        [When(@"I scroll to the following element: (.*)")]
+        public void WhenIScrollToTheFollowingElement(string element)
+        {
+            ScrollTo(element);
+        }
+
+        [When(@"I switch focus to the new tab")]
+        public void WhenISwitchFocusToTheNewTab()
+        {
+            SwitchFocus();
+        }
+
+        [Then(@"the alerts are displayed on the page")]
+        public void ThenTheAlertsAreDisplayedOnThePage()
         {
             try
             {
-                if (ElementDisplayed(value, element))
+                if (ElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible']"))
                 {
-                    Console.WriteLine("Click \"" + value + "\"");
-                    shared.driver.FindElement(By.XPath(XPath(value, element))).Click();
-                    if (waitTime != 0)
-                    {
-                        WaitASecond(waitTime);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine(value + " not found");
+                    AssertElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible']");
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine(value + " click failed");
+                Console.WriteLine("No alerts displayed");
             }
         }
 
-        public void SelectFromDropdown(string option, string dropdown)
-        {
-            Console.WriteLine("Select option \"" + option + "\" from the \"" + dropdown + "\" dropdown");
-            shared.driver.FindElement(By.XPath("//select[@*=\"" + dropdown + "\"]/option[@*=\"" + option + "\"]|//select[@*=\"" + dropdown + "\"]/option[contains(text(),\"" + option + "\")]")).Click();
-            WaitASecond();
-        }
-
-        public void MouseOver(string value, string element = "*")
-        {
-            IWebElement _element = shared.driver.FindElement(By.XPath(XPath(value, element)));
-            Actions action = new Actions(shared.driver);
-            action.MoveToElement(_element).Perform();
-            WaitASecond();
-        }
-
-        public void Type(string formField, string text, string element = "input", int waitTime = 0)
-        {
-            Console.WriteLine("Type \"" + text + "\" into the \"" + formField + "\" field");
-            IWebElement _element = shared.driver.FindElement(By.XPath(XPath(formField, element)));
-            _element.Clear();
-            _element.SendKeys(text);
-            if (waitTime != 0)
-            {
-                WaitASecond(waitTime);
-            }
-        }
-
-        public void JSType(string formField, string text, int waitTime = 0)
-        {
-            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("document.getElementById('" + formField + "').value='" + text + "'");
-            if (waitTime != 0)
-            {
-                WaitASecond(waitTime);
-            }
-        }
-
-        public void TypeIfDisplayed(string formField, string text, string element = "*", int waitTime = 0)
+        [Then(@"the alerts are not displayed on the page")]
+        public void ThenTheAlertsAreNotDisplayedOnThePage()
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath(XPath(formField, "input"))).Displayed)
+                if (ElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible' and @style='display: none;']"))
                 {
-                    Console.WriteLine("Type " + text + " into the " + formField + " field");
-                    IWebElement _element = shared.driver.FindElement(By.XPath(XPath(formField, element)));
-                    _element.Clear();
-                    _element.SendKeys(text);
-                    if (waitTime != 0)
-                    {
-                        WaitASecond(waitTime);
-                    }
+                    AssertElementDisplayed("//*[@class='c-alert c-alert--standard js-alert  is-visible' and @style='display: none;']");
                 }
             }
             catch (Exception)
             {
-                Console.WriteLine(formField + " not found");
+                Console.WriteLine("No alerts displayed");
             }
         }
 
-        public string GetJavaScriptText(string jsObject)
+        [When(@"I enter (.*) in the following form field: (.*)")]
+        public void WhenIEnterInTheFollowingFormField(string text, string field)
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)shared.driver;
-            string jsText = (string)js.ExecuteScript("return " + jsObject);
-            return jsText;
+            Type(field, text);
         }
 
-        public string GetAttribrute(string value, string element = "class")
+        [Then(@"the page sections are displayed in the relevant positions")]
+        public void ThenThePageSectionsAreDisplayedInTheRelevantPositions(Table table)
         {
-            return shared.driver.FindElement(By.XPath(value)).GetAttribute(element);
+            var dictionary = ToDictionary(table);
+            var sections = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var section in sections)
+            {
+                Console.WriteLine("Section: " + section);
+                Console.WriteLine("Position: " + dictionary[section]);
+                AssertElementDisplayed("//section[" + dictionary[section] + " and contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(text(),'" + section + "')]|//section[" + dictionary[section] + " and contains(@class,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@class,'" + section + "')]");
+            }
         }
 
-        public string GetPostcode()
+        [When(@"I select the form overlay submit button")]
+        public void WhenISelectTheFormOverlaySubmitButton()
         {
-            return Faker.Address.UkPostCode().ToUpper();
+            Click("//div[@id='js-overlay-list-property']//form[@*='list_property']/button[@type='submit']", waitTime: 2);
         }
 
-        public static Dictionary<string, string> ToDictionary(Table table)
+        [When(@"I set the window size to (.*)")]
+        public void GivenISetTheWindowSizeTo(string windowSize)
         {
-            var dictionary = new Dictionary<string, string>();
-            foreach (var row in table.Rows)
-            {
-                dictionary.Add(row[0], row[1]);
-            }
-            return dictionary;
+            SetBrowserSize(windowSize);
+            Refresh();
+            ClosePopups();
         }
 
-        public void Screenshot(string fileName = "screenshot", string type = "full webpage")
+        [Then(@"I store the headers on the page")]
+        public void ThenIStoreTheHeadersOnThePage()
         {
-            //Name of directory
-            string dir = @Hooks.reportDir + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.reportName + "_" + Hooks.environemt + "_" + Hooks.browser;
-            if (Hooks.browserSize != "")
-            {
-                dir += "_" + Hooks.browserSize;
-            }
-            dir += "//Screenshots";
+            GetPageHeaders();
+        }
 
-            // If directory does not exist, create it
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
+        [When(@"I log in with the following credentials")]
+        public void WhenILogInWithTheFollowingCredentials(Table table)
+        {
+            var dictionary = ToDictionary(table);
 
-            if (type == "full webpage")
-            {
-                //Take screenshot of entire webpage
-                VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
-                shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + fileName + ".png", ImageMagick.MagickFormat.Png);
-            }
-            else
-            {
-                //Take screenshot of viewable area
-                Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
-                image.SaveAsFile(dir + "//" + fileName + ".png", ScreenshotImageFormat.Png);
-            }
+            Type("email", dictionary["Username"]);
+            Click("submit", "input");
+            Type("password", dictionary["Password"]);
+            Click("submit", "input", waitTime: 3);
         }
     }
 }
-
-//using WebDriverManager.DriverConfigs.Impl;
-//var options = new ChromeOptions();
-//options.AddArguments("load-extension=/Users/gary.smith/AppData/Local/Google/Chrome/User Data/Default/Extensions/bmhfelbhbkeoldaiphchjibggnoodpcj/0.1.6_0"); //Option for adding extesions to Chrome
-//new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig()); //For launching Chrome via a build pipeline

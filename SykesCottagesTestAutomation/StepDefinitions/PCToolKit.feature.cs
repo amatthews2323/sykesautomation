@@ -95,6 +95,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 testRunner.Given("I am on the following webpage: https://pctoolkit.staging.sykes.network/login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 7
+testRunner.When("I click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Key",
+                            "Value"});
+                table90.AddRow(new string[] {
+                            "Username",
+                            "gary.smith@sykescottages.co.uk"});
+                table90.AddRow(new string[] {
+                            "Password",
+                            "DesertSea40"});
+#line 8
+testRunner.And("I log in with the following credentials", ((string)(null)), table90, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table91.AddRow(new string[] {
+                            "Diary"});
+#line 12
+testRunner.Then("the following elements are dislpayed", ((string)(null)), table91, "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

@@ -9,20 +9,20 @@ using TechTalk.SpecFlow;
 namespace SykesCottagesTestAutomation
 {
     [Binding]
-    public class Hooks : CommonSteps
+    public class Hooks : MethodLibrary
     {
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Live
-        public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
 
         public static bool screenshots = false; //Take a screenshot at the end of each scenario
         public static bool reporting = false; //Turn on Extent Reports
-        public static string reportName = "LYPSmokeTest"; //Name of the report: LYPRegressionSuite | LYPSmokeTest | TOBSmokeTest | ActiveExperiments
+        public static string reportName = "ActiveExperiments"; //Name of the report: LYPRegressionSuite | LYPSmokeTest | TOBSmokeTest | ActiveExperiments
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static bool acceptCookies = true; //Dismiss the cookie popup
         public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
