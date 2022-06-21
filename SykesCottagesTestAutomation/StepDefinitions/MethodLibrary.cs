@@ -15,6 +15,8 @@ using TechTalk.SpecFlow;
 using WDSE.ScreenshotMaker;
 using WDSE.Decorators;
 using WDSE;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace SykesCottagesTestAutomation
 {
@@ -230,9 +232,8 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                //Construct an XPath using the "value" and "element" parameters - works for attribute or text, partial or exact match 
-                //return "//" + element + "/descendant-or-self::*[@*=\"" + value + "\"]|//" + element + "/descendant-or-self::*[contains(text(),\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@class,\"" + value + "\")]|//" + element + "/descendant-or-self::*[contains(@id,\"" + value + "\")]";
-                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(text(),\"" + value + "\")]";
+                //Console.WriteLine("Lookup xPath: " + "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(text(),\"" + value + "\")]");
+                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(text(),\"" + value + "\")]";
             }
         }
 
@@ -267,7 +268,27 @@ namespace SykesCottagesTestAutomation
 
         public void GetPageHeaders()
         {
-            Headers = shared.driver.FindElement(By.XPath("/html/body//*[self::h1 or self::h2 or self::h3]/text()")).Text;
+            //Headers = shared.driver.FindElement(By.XPath("/html/body//*[self::h1 or self::h2 or self::h3]/text()")).Text;
+
+            string input = @"<div class='main - body'>
+                     <h2> 1.1 Heading </h2>     
+                     <h3> 1.1.1 Subheading </h3>        
+                     <p> Lorem ipsum </ p >           
+                     <h3> 1.1.2 Another Subheading</h3>              
+                     <p> Lorem ipsum </p>     
+                     <h2> 2.1 Heading </h2>
+                     <h3> 2.1.1 Subheading </h3>
+                     <p> Lorem ipsum </p>
+                     <h4> 2.1.1.1 SubSubHeading </h4>
+                 </div> ";
+
+            string pattern = @"<h[1-6][^>]*?>(?<TagText>.*?)</h[1-6]>";
+
+            MatchCollection matches = Regex.Matches(input, pattern);
+
+            var heading_matches = matches.Cast<Match>().Select(x => x.Groups["TagText"].Value);
+
+
             Console.WriteLine("Page headers: " + Headers);
         }
 

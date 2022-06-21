@@ -114,6 +114,12 @@ testRunner.And("I log in with the following credentials", ((string)(null)), tabl
                             "Element"});
                 table91.AddRow(new string[] {
                             "Diary"});
+                table91.AddRow(new string[] {
+                            "Previous visits"});
+                table91.AddRow(new string[] {
+                            "Upcoming visits"});
+                table91.AddRow(new string[] {
+                            "task-card-header"});
 #line 12
 testRunner.Then("the following elements are dislpayed", ((string)(null)), table91, "Then ");
 #line hidden

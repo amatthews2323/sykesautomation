@@ -1,9 +1,30 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-LetYourCottages_ImagesbeforecontentLYP32
-
 LetYourCottages_InformationPageSearchMvpLyp12
+
+LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_BespokeheroimagesoninformationpagesLYP29
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: <Experiment>
+	Then the following element is displayed: <Element>
+	Examples:
+	| Path                                                          | Experiment                                                                | Element                                     |
+	| letyourcottage/information/marketing-your-holiday-let         | LetYourCottages_BespokeheroimagesoninformationpagesmarketingLYP29         | advertising-and-marketing.png               |
+	| letyourcottage/information/buy-own-sell-holiday-lets          | LetYourCottages_BespokeheroimagesoninformationpagesbuysellLYP29           | buying-owning-and-selling-a-holiday-let.png |
+	| letyourcottage/information/investment-advice-for-holiday-lets | LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29        | investment-advice-for-holiday-lets.png      |
+	| letyourcottage/information/regulations-for-holiday-lets       | LetYourCottages_BespokeheroimagesoninformationpagesregulationsLYP29       | legal-regulations-for-holiday-lets.png      |
+	| letyourcottage/information/holiday-let-mortgages              | LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29         | holiday-let-mortgages.png                   |
+	| letyourcottage/information/how-to-run-your-holiday-let        | LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29 | how-to-run-your-holiday-let.png             |
+	| letyourcottage/information/tax-information-on-holiday-lets    | LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29               | tax-information-on-holiday-lets.png         |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ImagesbeforecontentLYP32
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ImagesbeforecontentLYP32
+	Then the following element is displayed: /images/let_your_cottage/lyp32-desktop-tablet.png
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_HeroFormTitleChange24
