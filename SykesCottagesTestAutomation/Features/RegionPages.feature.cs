@@ -168,42 +168,42 @@ this.ScenarioInitialize(scenarioInfo);
 #line 25
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "form-heading-container"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_first_name"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_email"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_phone"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table77.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "submit"});
 #line 26
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table77, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table80, "Then ");
 #line hidden
 #line 37
  testRunner.When("I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table78.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Please enter a full name."});
-                table78.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Please enter an email address."});
-                table78.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Please enter a contact number."});
 #line 38
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table78, "Then ");
+ testRunner.Then("the following elements are dislpayed", ((string)(null)), table81, "Then ");
 #line hidden
 #line 43
  testRunner.When("I enter test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

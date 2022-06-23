@@ -31,11 +31,9 @@ Scenario: Get experiment conversion precentage
 		| 4396    |
 		| 4516    |
 		| 4567    |
-		| 4586    |
 		| 4595    |
 		| 4598    |
 		| 4602    |
-		| 4605    |
 		| 4615    |
 		| 4623    |
 		| 4645    |
@@ -46,20 +44,22 @@ Scenario: Get experiment conversion precentage
 		| 4641    |
 		| 4643    |
 		| 4644    |
+		| 4648    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                                   |
+		| LetYourCottages_ReplaceIconsWithimages18585                               |
+		| LetYourCottages_ReTestBedrockPromo19009                                   |
+		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102      |
 		| LetYourCottages_Livechatfalsedoorlyp11                                    |
-		| LetYourCottages_OwnerIncentivePromotion4                                  |
 		| LetYourCottages_FormSmallPrintChange27                                    |
 		| LetYourCottages_EarningCalculatoronInformationPages19170                  |
 		| LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34                     |
 		| LetYourCottages_InactivityModalInfoPages23                                |
 		| LetYourCottages_HeroFormTitleChange24                                     |
-		| LetYourCottages_OwnerIncentiveRetest33                                    |
 		| LetYourCottages_ImagesbeforecontentLYP32                                  |
 		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31           |
 		| LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29        |
@@ -69,3 +69,4 @@ Scenario: Get experiment status
 		| LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29         |
 		| LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29 |
 		| LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29               |
+		| LetYourCottages_InformationPageSearchMvpLyp12                             |

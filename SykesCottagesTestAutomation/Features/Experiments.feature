@@ -1,9 +1,46 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-LetYourCottages_InformationPageSearchMvpLyp12
+LetYourCottages_SearcherOnInfoPagesLYP46
 
-LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InfopagecontentcollapsedsectionsLYP30
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_InfopagecontentcollapsedsectionsLYP30
+	Then the following elements are dislpayed
+	| Element            |
+	| collapsible_header |
+	| header_chevron     |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
+	Then the following element is displayed: Enquire today to get started with Sykes
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_InformationPageSearchMvpLyp12
+	Then the following elements are dislpayed within the searcher-section section
+	| Element                                |
+	| Search for holiday letting information |
+	| searchTerm                             |
+	| Search                                 |
+	| Managed services                       |
+	| Investment advice                      |
+	| How to run a holiday let               |
+	When I enter Mortgage in the following form field: searchTerm
+	And I click searcher-bar__action
+	Then the following elements are dislpayed
+	| Element                                           |
+	| 12 results for 'Mortgage'                         |
+	| back-container                                    |
+	| A complete guide to holiday let mortgages         |
+	| Holiday let mortgages                             |
+	| Running your holiday let                          |
+	| Why now is a good time to invest in a holiday let |
+
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_BespokeheroimagesoninformationpagesLYP29
@@ -37,9 +74,9 @@ Scenario: Experiment LetYourCottages_HeroFormTitleChange24
 	| //div[@class='form-heading-container']//*[text()='Free'] |
 
 @ActiveExperiments
-Scenario: Experiment CookiePrivacyPolicyLinksinFooterLYP34
+Scenario: Experiment LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: CookiePrivacyPolicyLinksinFooterLYP34
+	When I apply the following experiment: LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34
 	Then the following elements are dislpayed within the page-footer section
 	| Element                |
 	| /terms/privacypolicy   |

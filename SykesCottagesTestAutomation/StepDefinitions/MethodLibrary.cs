@@ -169,6 +169,7 @@ namespace SykesCottagesTestAutomation
             {
                 if (_acceptCookies == true)
                 {
+                    WaitASecond();
                     ClickIfDisplayed("Accept all cookies");
                 }
             }
