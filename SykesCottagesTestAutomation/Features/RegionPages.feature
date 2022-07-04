@@ -1,7 +1,7 @@
 ﻿Feature: RegionPages
 	Region pages content and functionality
 
-@RegionPages @LYPSmokeTest
+@RegionPages @LYPSmokeTest @LYPRegressionSuite
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed: <Region>
@@ -23,7 +23,7 @@ Scenario: The Regional pages are displayed correctly
 @RegionPages @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Regional pages
 	Given I have navigated to the following page: <Path>
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                              |
 	| form-heading-container               |
 	| heroform_first_name                  |
@@ -35,7 +35,7 @@ Scenario: The enquiry form is displayed on the Regional pages
 	| /terms/privacypolicy                 |
 	| submit                               |
 	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                        |
 	| Please enter a full name.      |
 	| Please enter an email address. |

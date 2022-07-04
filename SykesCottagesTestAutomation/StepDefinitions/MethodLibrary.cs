@@ -501,6 +501,117 @@ namespace SykesCottagesTestAutomation
             return dictionary;
         }
 
+        public void GetAllHeaders()
+        {
+            WaitASecond(5);
+            for (int h = 1; h < 5; h++)
+            {
+                Console.WriteLine("\nH"+ h +" tags:");
+                int numberOfH1Tags = shared.driver.FindElements(By.XPath("//h" + h)).Count;
+                for (int i = 1; i < numberOfH1Tags; i++)
+                {
+                    string header = shared.driver.FindElement(By.XPath("(//h" + h + ")[" + i + "]")).Text;
+                    if (header != "")
+                    {
+                        Console.WriteLine("| " + header + " |");
+                    }
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void GetAllLinks()
+        {
+            WaitASecond(3);
+            Console.WriteLine("\nLinks:");
+            int numberOfLinks = shared.driver.FindElements(By.XPath("//*[@href]")).Count;
+            for (int i = 1; i < numberOfLinks; i++)
+            {
+                string link = shared.driver.FindElement(By.XPath("(//*[@href])[" + i + "]")).GetAttribute("href");
+                if (link != "")
+                {
+                    Console.WriteLine("| " + link + " |");
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void GetAllImages()
+        {
+            WaitASecond(3);
+            Console.WriteLine("\nImages:");
+            int numberOfLinks = shared.driver.FindElements(By.XPath("//img[@src]")).Count;
+            for (int i = 1; i < numberOfLinks; i++)
+            {
+                string image = shared.driver.FindElement(By.XPath("(//img[@src])[" + i + "]")).GetAttribute("src");
+                if (image != "")
+                {
+                    Console.WriteLine("| " + image + " |");
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void BuildHeaderTest()
+        {
+            Console.WriteLine("Copy the following into a feature file:\n");
+            Console.WriteLine("Given I am on the following webpage: " + url);
+            Console.WriteLine("Then the relevant elements are dislpayed");
+            Console.WriteLine("| Element |");
+            WaitASecond(5);
+            for (int h = 1; h < 5; h++)
+            {
+                int numberOfH1Tags = shared.driver.FindElements(By.XPath("//h" + h)).Count;
+                for (int i = 1; i < numberOfH1Tags; i++)
+                {
+                    string header = shared.driver.FindElement(By.XPath("(//h" + h + ")[" + i + "]")).Text;
+                    if (header != "")
+                    {
+                        Console.WriteLine("| " + header + " |");
+                    }
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void BuildLinkTest()
+        {
+            Console.WriteLine("Copy the following into a feature file:\n");
+            Console.WriteLine("Given I am on the following webpage: " + url);
+            Console.WriteLine("Then the relevant elements are dislpayed");
+            Console.WriteLine("| Element |");
+            WaitASecond(3);
+            int numberOfLinks = shared.driver.FindElements(By.XPath("//*[@href]")).Count;
+            for (int i = 1; i < numberOfLinks; i++)
+            {
+                string link = shared.driver.FindElement(By.XPath("(//*[@href])[" + i + "]")).GetAttribute("href");
+                if (link != "")
+                {
+                    Console.WriteLine("| " + link + " |");
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void BuildImageTest()
+        {
+            Console.WriteLine("Copy the following into a feature file:\n");
+            Console.WriteLine("Given I am on the following webpage: " + url);
+            Console.WriteLine("Then the relevant elements are dislpayed");
+            Console.WriteLine("| Element |");
+            WaitASecond(3);
+            int numberOfLinks = shared.driver.FindElements(By.XPath("//img[@src]")).Count;
+            for (int i = 1; i < numberOfLinks; i++)
+            {
+                string image = shared.driver.FindElement(By.XPath("(//img[@src])[" + i + "]")).GetAttribute("src");
+                if (image != "")
+                {
+                    Console.WriteLine("| " + image + " |");
+                }
+            }
+            Console.WriteLine("\n");
+        }
+
         public void Screenshot(string fileName = "screenshot", string type = "full webpage")
         {
             //Name of directory

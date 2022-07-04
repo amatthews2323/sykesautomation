@@ -31,42 +31,40 @@ Scenario: Get experiment conversion precentage
 		| 4396    |
 		| 4516    |
 		| 4567    |
-		| 4595    |
+		| 4579    |
 		| 4598    |
-		| 4602    |
+		| 4597    |
 		| 4615    |
 		| 4623    |
 		| 4645    |
-		| 4639    |
-		| 4638    |
-		| 4640    |
-		| 4642    |
-		| 4641    |
-		| 4643    |
-		| 4644    |
 		| 4648    |
+		| 4658    |
+		| 4663    |
+		| 4664    |
+		| 4676    |
+		| 4686    |
+		| 4683    |
+		| 4688    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-		| Example                                                                   |
-		| LetYourCottages_ReplaceIconsWithimages18585                               |
-		| LetYourCottages_ReTestBedrockPromo19009                                   |
-		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102      |
-		| LetYourCottages_Livechatfalsedoorlyp11                                    |
-		| LetYourCottages_FormSmallPrintChange27                                    |
-		| LetYourCottages_EarningCalculatoronInformationPages19170                  |
-		| LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34                     |
-		| LetYourCottages_InactivityModalInfoPages23                                |
-		| LetYourCottages_HeroFormTitleChange24                                     |
-		| LetYourCottages_ImagesbeforecontentLYP32                                  |
-		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31           |
-		| LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29        |
-		| LetYourCottages_BespokeheroimagesoninformationpagesbuysellLYP29           |
-		| LetYourCottages_BespokeheroimagesoninformationpagesmarketingLYP29         |
-		| LetYourCottages_BespokeheroimagesoninformationpagesregulationsLYP29       |
-		| LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29         |
-		| LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29 |
-		| LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29               |
-		| LetYourCottages_InformationPageSearchMvpLyp12                             |
+		| Example                                                              |
+		| LetYourCottages_ReplaceIconsWithimages18585                          |
+		| LetYourCottages_ReTestBedrockPromo19009                              |
+		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
+		| LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169 |
+		| LetYourCottages_EarningCalculatoronInformationPages19170             |
+		| LetYourCottages_RemovebottomownerpackbannerLYP16                     |
+		| LetYourCottages_HeroFormTitleChange24                                |
+		| LetYourCottages_ImagesbeforecontentLYP32                             |
+		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31      |
+		| LetYourCottages_InformationPageSearchMvpLyp12                        |
+		| LetYourCottages_InfopagecontentcollapsedsectionsLYP30                |
+		| LetYourCottages_MortgageLetterSectionLYP22                           |
+		| LetYourCottages_SearcherOnInfoPagesLYP46                             |
+		| LetYourCottages_LYPConversionFormFieldOrderLYP53                     |
+		| LetYourCottages_HeaderLinkLanguageChangeLYP60                        |
+		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
+		| LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65        |

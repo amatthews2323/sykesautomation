@@ -162,14 +162,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "4419"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "4396"});
 #line 20
- testRunner.Then("the following experiements are enabled", ((string)(null)), table55, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table60, "Then ");
 #line hidden
 #line 24
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -200,44 +200,44 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I am on the following webpage: https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4396"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4516"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4567"});
-                table56.AddRow(new string[] {
-                            "4595"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
+                            "4579"});
+                table61.AddRow(new string[] {
                             "4598"});
-                table56.AddRow(new string[] {
-                            "4602"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
+                            "4597"});
+                table61.AddRow(new string[] {
                             "4615"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4623"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4645"});
-                table56.AddRow(new string[] {
-                            "4639"});
-                table56.AddRow(new string[] {
-                            "4638"});
-                table56.AddRow(new string[] {
-                            "4640"});
-                table56.AddRow(new string[] {
-                            "4642"});
-                table56.AddRow(new string[] {
-                            "4641"});
-                table56.AddRow(new string[] {
-                            "4643"});
-                table56.AddRow(new string[] {
-                            "4644"});
-                table56.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "4648"});
+                table61.AddRow(new string[] {
+                            "4658"});
+                table61.AddRow(new string[] {
+                            "4663"});
+                table61.AddRow(new string[] {
+                            "4664"});
+                table61.AddRow(new string[] {
+                            "4676"});
+                table61.AddRow(new string[] {
+                            "4686"});
+                table61.AddRow(new string[] {
+                            "4683"});
+                table61.AddRow(new string[] {
+                            "4688"});
 #line 29
- testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table56, "Then ");
+ testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table61, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -265,48 +265,44 @@ this.ScenarioInitialize(scenarioInfo);
 #line 51
  testRunner.Given("I am on the following webpage: https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_ReplaceIconsWithimages18585"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_ReTestBedrockPromo19009"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_Livechatfalsedoorlyp11"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_FormSmallPrintChange27"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
+                            "LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169"});
+                table62.AddRow(new string[] {
                             "LetYourCottages_EarningCalculatoronInformationPages19170"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_CookiePrivacyPolicyLinksinFooterLYP34"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_InactivityModalInfoPages23"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
+                            "LetYourCottages_RemovebottomownerpackbannerLYP16"});
+                table62.AddRow(new string[] {
                             "LetYourCottages_HeroFormTitleChange24"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_ImagesbeforecontentLYP32"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesbuysellLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesmarketingLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesregulationsLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29"});
-                table57.AddRow(new string[] {
-                            "LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "LetYourCottages_InformationPageSearchMvpLyp12"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_InfopagecontentcollapsedsectionsLYP30"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_MortgageLetterSectionLYP22"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_SearcherOnInfoPagesLYP46"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_LYPConversionFormFieldOrderLYP53"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_HeaderLinkLanguageChangeLYP60"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_OptInRequestaCalltoPhoneLYP15"});
+                table62.AddRow(new string[] {
+                            "LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65"});
 #line 52
- testRunner.Then("I search for the experient and store the status", ((string)(null)), table57, "Then ");
+ testRunner.Then("I search for the experient and store the status", ((string)(null)), table62, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -142,8 +142,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following elements are dislpayed")]
-        public void ThenTheFollowingElementsAreDislpayedOnThePage(Table table)
+        [Then(@"the relevant elements are dislpayed")]
+        public void ThenTheRelevantElementsAreDislpayedOnThePage(Table table)
         {
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
@@ -152,8 +152,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following elements are dislpayed within the (.*) section")]
-        public void ThenTheFollowingElementsAreDislpayedWithinTheSection(string section, Table table)
+        [Then(@"the relevant elements are dislpayed within the (.*) section")]
+        public void ThenTheRelevantElementsAreDislpayedWithinTheSection(string section, Table table)
         {
             //string SectionXPath = XPath(section); 
 
@@ -351,6 +351,42 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click("submit", "input");
             Type("password", dictionary["Password"]);
             Click("submit", "input", waitTime: 3);
+        }
+
+        [Then(@"I store all headers on the page")]
+        public void ThenIStoreAllHeadersOnThePage()
+        {
+            GetAllHeaders();
+        }
+
+        [Then(@"I store all links on the page")]
+        public void ThenIStoreAllLinksOnThePage()
+        {
+            GetAllLinks();
+        }
+
+        [Then(@"I store all images on the page")]
+        public void ThenIStoreAllImagesOnThePage()
+        {
+            GetAllImages();
+        }
+
+        [Then(@"I store the headers and output a test script")]
+        public void ThenIStoreTheHeadersAndOutputATestScript()
+        {
+            BuildHeaderTest();
+        }
+
+        [Then(@"I store the links and output a test script")]
+        public void ThenIStoreTheLinksAndOutputATestScript()
+        {
+            BuildLinkTest();
+        }
+
+        [Then(@"I store the images and output a test script")]
+        public void ThenIStoreTheImagesAndOutputATestScript()
+        {
+            BuildImageTest();
         }
     }
 }

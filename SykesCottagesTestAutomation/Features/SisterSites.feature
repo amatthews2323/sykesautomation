@@ -1,10 +1,10 @@
 ﻿Feature: SisterSites
 	Sister sites content and functionality
 
-@SisterSites @LYPSmokeTest
+@SisterSites @LYPSmokeTest @LYPRegressionSuite
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am on the following webpage: <URL>
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                |
 	| <Title>                                |
 	| nav_logo                               |
@@ -36,7 +36,7 @@ Scenario: The Sykes sister sites are displayed correctly
 @SisterSites @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am on the following webpage: <URL>
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| form-heading-container                                                                                    |
 	| Complete the form to receive your information pack                                                        |

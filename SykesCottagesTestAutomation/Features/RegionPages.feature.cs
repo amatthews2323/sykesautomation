@@ -77,6 +77,7 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.DescriptionAttribute("The Regional pages are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("RegionPages")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-West", "South West", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/South-of-England", "South of England", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/In-Your-Area/Heart-of-England", "Heart of England", null)]
@@ -92,7 +93,8 @@ namespace SykesCottagesTestAutomation.Features
         {
             string[] @__tags = new string[] {
                     "RegionPages",
-                    "LYPSmokeTest"};
+                    "LYPSmokeTest",
+                    "LYPRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -168,42 +170,42 @@ this.ScenarioInitialize(scenarioInfo);
 #line 25
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "form-heading-container"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_first_name"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_email"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_phone"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table80.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "submit"});
 #line 26
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table80, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table87, "Then ");
 #line hidden
 #line 37
  testRunner.When("I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table81.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "Please enter a full name."});
-                table81.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "Please enter an email address."});
-                table81.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "Please enter a contact number."});
 #line 38
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table81, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table88, "Then ");
 #line hidden
 #line 43
  testRunner.When("I enter test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

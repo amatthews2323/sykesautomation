@@ -77,11 +77,13 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
         [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         public void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
         {
             string[] tagsOfScenario = new string[] {
                     "HolidayHomesForSale",
-                    "LYPSmokeTest"};
+                    "LYPSmokeTest",
+                    "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
@@ -97,24 +99,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "container_sykes_grid"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table76.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table76, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table81, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -149,14 +151,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 20
     testRunner.When("I click View property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table77.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Find your perfect holiday home"});
-                table77.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Select a region"});
 #line 21
-    testRunner.Then("the following elements are dislpayed", ((string)(null)), table77, "Then ");
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table82, "Then ");
 #line hidden
 #line 25
     testRunner.When("I select option All regions from the region dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -164,28 +166,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 26
     testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_first_name"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_first_name_validation_error"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_email"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_email_validation_error"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_phone"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "hhfs_overlay_phone_validation_error"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table78.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "submit"});
 #line 27
-    testRunner.Then("the following elements are dislpayed", ((string)(null)), table78, "Then ");
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table83, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -195,11 +197,13 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
         [NUnit.Framework.CategoryAttribute("ManagedServices")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         public void TheReleventElementsArePresentOnTheManagedServicesPage()
         {
             string[] tagsOfScenario = new string[] {
                     "ManagedServices",
-                    "LYPSmokeTest"};
+                    "LYPSmokeTest",
+                    "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 40
@@ -215,28 +219,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 41
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Holiday home management"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "hero-slideshow"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "form-heading-container"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "What are the benefits"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Partially managed"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Fully managed"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Resource centre"});
-                table79.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Share page"});
 #line 42
-    testRunner.Then("the following elements are dislpayed", ((string)(null)), table79, "Then ");
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table84, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

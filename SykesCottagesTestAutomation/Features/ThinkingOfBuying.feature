@@ -4,7 +4,7 @@
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Thinking of Buying page
 	Given I have navigated to the following page: letyourcottage/advice
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                  |
 	| Holiday Let Information Centre           |
 	| Browse categories                        |
@@ -17,7 +17,7 @@ Scenario: The relevant sections are displayed on the Thinking of Buying page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Buying a Holiday Home page
 	Given I have navigated to the following page: letyourcottage/advice/buying-a-holiday-home
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                       |
 	| Buying a Holiday Home                         |
 	| Where to Buy                                  |
@@ -31,7 +31,7 @@ Scenario: The relevant sections are displayed on the Buying a Holiday Home page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Financial Guides page
 	Given I have navigated to the following page: letyourcottage/advice/financial-guides
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                           |
 	| Financial Guides                  |
 	| Regulations                       |
@@ -48,7 +48,7 @@ Scenario: The relevant sections are displayed on the Financial Guides page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Letting a Holiday Home page
 	Given I have navigated to the following page: letyourcottage/advice/holiday-letting-guides
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                       |
 	| Letting a Holiday Home                        |
 	| Holiday Letting                               |
@@ -66,7 +66,7 @@ Scenario: The relevant sections are displayed on the Letting a Holiday Home page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Managing a Holiday Let page
 	Given I have navigated to the following page: letyourcottage/advice/managing-your-holiday-let
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                  |
 	| Managing a Holiday Let   |
 	| Why Sykes?               |
@@ -77,7 +77,7 @@ Scenario: The relevant sections are displayed on the Managing a Holiday Let page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Case Studies page
 	Given I have navigated to the following page: letyourcottage/advice/case-studies
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element            |
 	| Owner Case Studies |
 	| Services and Tools |
@@ -86,7 +86,7 @@ Scenario: The relevant sections are displayed on the Case Studies page
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the A Guide to Buying a Holiday Let page
 	Given I have navigated to the following page: letyourcottage/advice/article/a-guide-to-buying-a-holiday-let
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                              |
 	| A Guide to Buying a Holiday Let                      |
 	| Let's Work Together                                  |
@@ -102,7 +102,7 @@ Scenario: The relevant sections are displayed on the A Guide to Buying a Holiday
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Are Holiday Lets a Good Investment page
 	Given I have navigated to the following page: letyourcottage/advice/article/why-are-holiday-lets-a-good-investment
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                                   |
 	| Are Holiday Lets a Good Investment?                       |
 	| Let's Work Together                                       |
@@ -118,7 +118,7 @@ Scenario: The relevant sections are displayed on the Are Holiday Lets a Good Inv
 @ThinkingOfBuying @TOBSmokeTest
 Scenario: The relevant sections are displayed on the Buying a Holiday Home Abroad vs. in the UK page
 	Given I have navigated to the following page: letyourcottage/advice/article/buying-a-holiday-home-abroad-vs-uk
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                    |
 	| Buying a Holiday Home Abroad vs. in the UK |
 	| Let's Work Together                        |
@@ -128,8 +128,3 @@ Scenario: The relevant sections are displayed on the Buying a Holiday Home Abroa
 	| Disadvantages of Holiday Letting Abroad    |
 	| Where to Buy Guides                        |
 	| Contact us                                 |
-
-@Headers
-Scenario: Store the page headers
-	Given I have navigated to the following page: letyourcottage/advice/article/buying-a-holiday-home-abroad-vs-uk
-	Then I store the headers on the page

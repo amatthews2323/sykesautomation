@@ -23,11 +23,11 @@ Scenario: The user can navigate to the Information Centre pages
 	| How to run your holiday let                | Running Your Holiday Let \| Cost & Cleaning \| Sykes Cottages |
 	| Tax information on holiday lets            | Tax Information for Holiday Homes \| Rules & Relief \| Sykes  |
 
-@InformationCentre @LYPSmokeTest
+@InformationCentre @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	When I wait 3 seconds
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
     | Element                                           |
     | form-heading-container                            |
     | <Header>                                          |
@@ -46,7 +46,7 @@ Scenario: The relevent elements are present on the Information Centre pages
 @InformationCentre @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Information Centre pages
 	Given I have navigated to the following page: <Path>
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                              |
 	| form-heading-container               |
 	| heroform_first_name                  |

@@ -22,7 +22,7 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 	| Email address | sykestest@example.org |
 	| Phone number  | 07000000000           |
 	And I submit the enquiry form
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                |
 	| Phone Call             |
 	| Continue Online        |

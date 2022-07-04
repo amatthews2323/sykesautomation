@@ -172,7 +172,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table3.AddRow(new string[] {
                             "Holiday Homes for Sale"});
 #line 25
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table3, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

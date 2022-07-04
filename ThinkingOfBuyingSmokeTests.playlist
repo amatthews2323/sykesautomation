@@ -1,0 +1,78 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="SykesCottagesTestAutomation" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="SykesCottagesTestAutomation.Features" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="ThinkingOfBuyingFeature" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheAGuideToBuyingAHolidayLetPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheAGuideToBuyingAHolidayLetPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheAreHolidayLetsAGoodInvestmentPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheAreHolidayLetsAGoodInvestmentPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomeAbroadVs_InTheUKPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomeAbroadVs_InTheUKPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomePage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheBuyingAHolidayHomePage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheCaseStudiesPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheCaseStudiesPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheFinancialGuidesPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheFinancialGuidesPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheLettingAHolidayHomePage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheLettingAHolidayHomePage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheManagingAHolidayLetPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheManagingAHolidayLetPage" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="SykesCottagesTestAutomation.Features.ThinkingOfBuyingFeature.TheRelevantSectionsAreDisplayedOnTheThinkingOfBuyingPage" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="TheRelevantSectionsAreDisplayedOnTheThinkingOfBuyingPage" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>

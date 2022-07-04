@@ -1,16 +1,16 @@
 ﻿Feature: LetYourProperty
 	Let Your Property page content and functionality
 
-@Navigation @LYPSmokeTest
+@Navigation @LYPSmokeTest @LYPRegressionSuite
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
 	When I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
-@LetYourProperty @LYPSmokeTest
+@LetYourProperty @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
     | Element                                |
     | Customer reviews powered by Trustpilot |
     | Gain exposure through our partners     |
@@ -26,7 +26,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 @LetYourProperty @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| form-heading-container                                                                                    |
 	| heroform_first_name                                                                                       |
@@ -73,7 +73,7 @@ Scenario: The modal enquiry form is displayed correctly
 	When I scroll to the following element: Start your listing today
 	And I click Start your listing today
 	Then I wait 2 seconds
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| o-overlay__content o-overlay__content--reset js-overlay-content                                           |
 	| list_property_first_name                                                                                  |
@@ -85,7 +85,7 @@ Scenario: The modal enquiry form is displayed correctly
 	| /terms/privacypolicy                                                                                      |
 	| submit                                                                                                    |
 	When I select the form overlay submit button
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                        |
 	| Please enter a full name.      |
 	| Please enter an email address. |
@@ -115,7 +115,7 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I click Click enquire now and complete the form to receive your free information pack.
 	Then I wait 2 seconds
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                                                                |
 	| o-overlay__content o-overlay__content--reset js-overlay-content        |
 	| list_property_first_name                                               |
@@ -170,7 +170,7 @@ Scenario: The page sections are displayed in the correct order
 	| Information centre                     | 9        |
 	| Free Owner Information Pack            | 10       |
 
-@MobileApp @LYPSmokeTest
+@MobileApp @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
 	When I set the window size to Mobile
@@ -193,7 +193,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 @LetYourProperty
 Scenario: The Information Carousel is displayed on the page
 	Given I have navigated to the following page: letyourcottage
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                     |
 	| Information centre          |
 	| Enquire now                 |
@@ -208,7 +208,7 @@ Scenario: The Information Carousel is displayed on the page
 @LetYourProperty @LYPRegressionSuite
 Scenario: The image navigation buttons are displayed on the page
 	Given I have navigated to the following page: letyourcottage
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element        |
 	| arrow-prev.svg |
 	| arrow-next.svg |
@@ -218,7 +218,7 @@ Scenario: The image navigation buttons are displayed on the page
 Scenario: The footer content is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer
-	Then the following elements are dislpayed within the page-footer section
+	Then the relevant elements are dislpayed within the page-footer section
 	| Element                                                    |
 	| Sykes Cottages                                             |
 	| © 2022 All rights reserved                                 |
@@ -228,7 +228,11 @@ Scenario: The footer content is displayed correctly
 	| Email us at letwithsykes@sykescottages.co.uk               |
 	| Sykes Product Showcase 2022                                |
 	| Read our blog                                              |
+	| /terms/privacypolicy                                       |
 	| Privacy Policy                                             |
+	| /terms/cookiepolicy                                        |
+	| Cookie Policy                                              |
+	| Manage cookie preferences									 |
 	| Press and media                                            |
 	| Holiday homes for sale                                     |
 	| Facebook                                                   |
@@ -252,7 +256,7 @@ Scenario: The alerts disapear after an amount of time
 @LetYourProperty @LYPRegressionSuite
 Scenario: The number of bedrooms is included in the earnings calculator
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	| Element                           |
 	| How much could I earn with Sykes? |
 	| Property location                 |
@@ -270,7 +274,7 @@ Scenario: The Inactivity Modal is displayed correctly
 	     | We're ready when you are |
 	     | Open form                |
 	When I click Open form
-	Then the following elements are dislpayed
+	Then the relevant elements are dislpayed
 	     | Element                                   |
 	     | inactive-form_first_name                  |
 	     | inactive-form_first_name_validation_error |

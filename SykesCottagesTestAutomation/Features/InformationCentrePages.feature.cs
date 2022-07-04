@@ -158,6 +158,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Information Centre pages")]
         [NUnit.Framework.CategoryAttribute("InformationCentre")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/marketing-your-holiday-let", "Advertising and Marketing", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/buy-own-sell-holiday-lets", "Buying, owning and selling a holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/investment-advice-for-holiday-lets", "Investment advice for holiday lets", null)]
@@ -169,7 +170,8 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "InformationCentre",
-                    "LYPSmokeTest"};
+                    "LYPSmokeTest",
+                    "LYPRegressionSuite"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -195,18 +197,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 29
  testRunner.When("I wait 3 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "form-heading-container"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "hero__image"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "Customer reviews powered by Trustpilot"});
 #line 30
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table58, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table63, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -251,28 +253,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 48
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "form-heading-container"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_first_name"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_email"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_phone"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "submit"});
 #line 49
- testRunner.Then("the following elements are dislpayed", ((string)(null)), table59, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table64, "Then ");
 #line hidden
 #line 60
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
