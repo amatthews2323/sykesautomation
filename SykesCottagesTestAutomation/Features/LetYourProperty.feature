@@ -4,24 +4,26 @@
 @Navigation @LYPSmokeTest @LYPRegressionSuite
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
-	When I click Let Your Property
+	When I hover over Let Your Property
+	And I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
 
 @LetYourProperty @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevant sections are displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
-    | Element                                |
-    | Customer reviews powered by Trustpilot |
-    | Gain exposure through our partners     |
-    | What do our owners say                 |
-    | How much could I earn                  |
-    | We are still open as usual             |
-    | Holiday home management with Sykes     |
-    | Putting your property in the spotlight |
-    | Holiday letting made easy              |
-    | Information centre                     |
-    | Free Owner Information Pack            |
+    | Element                                      |
+    | Customer reviews powered by Trustpilot       |
+    | Gain exposure through our partners           |
+    | What do our owners say                       |
+    | How much could I earn                        |
+    | We are still open as usual                   |
+    | Holiday home management with Sykes           |
+    | Putting your property in the spotlight       |
+    | Holiday letting made easy                    |
+    | Information centre                           |
+    | Free Owner Information Pack                  |
+    | Looking to get started with holiday letting? |
 
 @LetYourProperty @LYPRegressionSuite @EnquiryForm
 Scenario: The enquiry form is displayed on the Let Your Property page

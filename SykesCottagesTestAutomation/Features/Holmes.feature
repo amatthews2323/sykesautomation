@@ -29,7 +29,6 @@ Scenario: Get experiment conversion precentage
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
 		| 4396    |
-		| 4516    |
 		| 4567    |
 		| 4579    |
 		| 4598    |
@@ -52,7 +51,6 @@ Scenario: Get experiment status
 	Then I search for the experient and store the status
 		| Example                                                              |
 		| LetYourCottages_ReplaceIconsWithimages18585                          |
-		| LetYourCottages_ReTestBedrockPromo19009                              |
 		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
 		| LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169 |
 		| LetYourCottages_EarningCalculatoronInformationPages19170             |

@@ -1,6 +1,10 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
+LetYourCottages_VersionCOfMarketingPrefs25
+LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
+LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
 	Given I have navigated to the following page: <Path>
@@ -107,21 +111,6 @@ Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
 	| Running your holiday let                          |
 	| Why now is a good time to invest in a holiday let |
 
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_BespokeheroimagesoninformationpagesLYP29
-	Given I have navigated to the following page: <Path>
-	When I apply the following experiment: <Experiment>
-	Then the following element is displayed: <Element>
-	Examples:
-	| Path                                                          | Experiment                                                                | Element                                     |
-	| letyourcottage/information/marketing-your-holiday-let         | LetYourCottages_BespokeheroimagesoninformationpagesmarketingLYP29         | advertising-and-marketing.png               |
-	| letyourcottage/information/buy-own-sell-holiday-lets          | LetYourCottages_BespokeheroimagesoninformationpagesbuysellLYP29           | buying-owning-and-selling-a-holiday-let.png |
-	| letyourcottage/information/investment-advice-for-holiday-lets | LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29        | investment-advice-for-holiday-lets.png      |
-	| letyourcottage/information/regulations-for-holiday-lets       | LetYourCottages_BespokeheroimagesoninformationpagesregulationsLYP29       | legal-regulations-for-holiday-lets.png      |
-	| letyourcottage/information/holiday-let-mortgages              | LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29         | holiday-let-mortgages.png                   |
-	| letyourcottage/information/how-to-run-your-holiday-let        | LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29 | how-to-run-your-holiday-let.png             |
-	| letyourcottage/information/tax-information-on-holiday-lets    | LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29               | tax-information-on-holiday-lets.png         |
-
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ImagesbeforecontentLYP32
 	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
@@ -212,17 +201,6 @@ Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationp
 	Then the following element is displayed: floatingactionbutton
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_ReTestBedrockPromo19009
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ReTestBedrockPromo19009
-	And I scroll to the following element: Looking to get started with holiday letting?
-	Then the relevant elements are dislpayed
-    | Element                                      |
-    | Looking to get started with holiday letting? |
-    | Explore guides & resources                   |
-    | Sykes Cottages Free Owner Pack               |
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ReplaceIconsWithimages18585
@@ -235,6 +213,21 @@ Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
     | /images/let_your_cottage/letting_easy/helpline-24h.png              |
     | /images/let_your_cottage/letting_easy/full-property-management.png  |
     | /images/let_your_cottage/letting_easy/photography.png               |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_BespokeheroimagesoninformationpagesLYP29
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: <Experiment>
+	Then the following element is displayed: <Element>
+	Examples:
+	| Path                                                          | Experiment                                                                | Element                                     |
+	| letyourcottage/information/marketing-your-holiday-let         | LetYourCottages_BespokeheroimagesoninformationpagesmarketingLYP29         | advertising-and-marketing.png               |
+	| letyourcottage/information/buy-own-sell-holiday-lets          | LetYourCottages_BespokeheroimagesoninformationpagesbuysellLYP29           | buying-owning-and-selling-a-holiday-let.png |
+	| letyourcottage/information/investment-advice-for-holiday-lets | LetYourCottages_BespokeheroimagesoninformationpagesinvestmentLYP29        | investment-advice-for-holiday-lets.png      |
+	| letyourcottage/information/regulations-for-holiday-lets       | LetYourCottages_BespokeheroimagesoninformationpagesregulationsLYP29       | legal-regulations-for-holiday-lets.png      |
+	| letyourcottage/information/holiday-let-mortgages              | LetYourCottages_BespokeheroimagesoninformationpagesmortgagesLYP29         | holiday-let-mortgages.png                   |
+	| letyourcottage/information/how-to-run-your-holiday-let        | LetYourCottages_BespokeheroimagesoninformationpagesrunyourholidayletLYP29 | how-to-run-your-holiday-let.png             |
+	| letyourcottage/information/tax-information-on-holiday-lets    | LetYourCottages_BespokeheroimagesoninformationpagestaxLYP29               | tax-information-on-holiday-lets.png         |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_ToolTipsonLYPHeaders18582

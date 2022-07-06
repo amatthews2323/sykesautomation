@@ -126,6 +126,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(headedLink);
         }
 
+        [When(@"I hover over (.*)")]
+        public void WhenIHoverOver(string element)
+        {
+            MouseOver(element);
+        }
+
+
         [Then(@"the following page title is displayed: (.*)")]
         public void ThenTheFollowingPageTitleIsDisplayed(string value)
         {
@@ -155,12 +162,9 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the relevant elements are dislpayed within the (.*) section")]
         public void ThenTheRelevantElementsAreDislpayedWithinTheSection(string section, Table table)
         {
-            //string SectionXPath = XPath(section); 
-
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
-                //string FullXpath = SectionXPath + XPath(element.ToString());
                 AssertElementDisplayed(XPath(section) + XPath(element.ToString()));
             }
         }

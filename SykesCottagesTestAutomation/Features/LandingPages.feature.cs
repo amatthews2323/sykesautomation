@@ -109,18 +109,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table65.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table65.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "form-heading-container"});
-                table65.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "Reading time"});
-                table65.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "Download your free owner information pack"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table65, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table64, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -161,28 +161,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "form-heading-container"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_first_name"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_email"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_phone"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table66.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "submit"});
 #line 22
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table66, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table65, "Then ");
 #line hidden
 #line 33
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
