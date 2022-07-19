@@ -1,9 +1,42 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-LetYourCottages_VersionCOfMarketingPrefs25
 LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
 LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17921
+	And I close the pop-ups
+    Then the following element is not displayed: We are still open as usual
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_VersionCOfMarketingPrefs25
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25
+	Then the relevant elements are dislpayed
+	| Element                              |
+	| form-heading-container               |
+	| heroform_first_name                  |
+	| heroform_first_name_validation_error |
+	| heroform_email                       |
+	| heroform_email_validation_error      |
+	| heroform_phone                       |
+	| heroform_phone_validation_error      |
+	| Get started                          |
+	When I enter Test Owner in the following form field: heroform_first_name
+	When I enter test@test.com in the following form field: heroform_email
+	When I enter 07000000000 in the following form field: heroform_phone
+	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--blue u-cursor-pointer
+	Then the relevant elements are dislpayed
+	| Element                                              |
+	| Your enquiry                                         |
+	| Please ensure the following details are correct      |
+	| How would you like the Sykes Group to keep in touch? |
+	| marketing_phone                                      |
+	| marketing_email                                      |
+	| Complete enquiry                                     |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
@@ -733,13 +766,6 @@ Scenario: Experiment LetYourCottages_PartnersInfoGraphic17791
          | vrbo logo                  |
          | expedia logo               |
          | tripadvisor logo           |
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17921
-	And I close the pop-ups
-    Then the following element is not displayed: We are still open as usual
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_AddingWebinars17805

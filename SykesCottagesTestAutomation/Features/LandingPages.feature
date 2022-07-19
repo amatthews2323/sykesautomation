@@ -28,8 +28,7 @@ Scenario: The enquiry form is displayed on the Landing pages
 	| heroform_email_validation_error      |
 	| heroform_phone                       |
 	| heroform_phone_validation_error      |
-	| /terms/privacypolicy                 |
-	| submit                               |
+	| Get started                          |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container

@@ -32,9 +32,8 @@ Scenario: The enquiry form is displayed on the Regional pages
 	| heroform_email_validation_error      |
 	| heroform_phone                       |
 	| heroform_phone_validation_error      |
-	| /terms/privacypolicy                 |
-	| submit                               |
-	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button lyc-cta--blue
+	| Get started                          |
+	When I click //*[contains(@class,'c-lyc-form js-enquiry-form')]//*[text()='Get started']
 	Then the relevant elements are dislpayed
 	| Element                        |
 	| Please enter a full name.      |

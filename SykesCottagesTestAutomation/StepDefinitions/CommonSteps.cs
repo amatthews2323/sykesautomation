@@ -60,6 +60,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(value);
         }
 
+        [When(@"I select (.*) within the (.*) section")]
+        public void WhenISelectWithinTheSection(string element, string section)
+        {
+            Click(XPath(section) + XPath(element));
+        }
+
         [Then(@"I click (.*)")]
         public void ThenIClick(string value)
         {

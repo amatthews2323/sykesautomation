@@ -17,7 +17,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Gain exposure through our partners           |
     | What do our owners say                       |
     | How much could I earn                        |
-    | We are still open as usual                   |
     | Holiday home management with Sykes           |
     | Putting your property in the spotlight       |
     | Holiday letting made easy                    |
@@ -29,16 +28,15 @@ Scenario: The relevant sections are displayed on the Let Your Property page
 Scenario: The enquiry form is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| form-heading-container                                                                                    |
-	| heroform_first_name                                                                                       |
-	| heroform_first_name_validation_error                                                                      |
-	| heroform_email                                                                                            |
-	| heroform_email_validation_error                                                                           |
-	| heroform_phone                                                                                            |
-	| heroform_phone_validation_error                                                                           |
-	| /terms/privacypolicy                                                                                      |
-	| submit                                                                                                    |
+	| Element                              |
+	| form-heading-container               |
+	| heroform_first_name                  |
+	| heroform_first_name_validation_error |
+	| heroform_email                       |
+	| heroform_email_validation_error      |
+	| heroform_phone                       |
+	| heroform_phone_validation_error      |
+	| Get started                          |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
@@ -69,23 +67,23 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
 
-@LetYourProperty @LYPRegressionSuite @EnquiryForm
+@LetYourProperty @EnquiryForm
 Scenario: The modal enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: Start your listing today
 	And I click Start your listing today
 	Then I wait 2 seconds
 	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| o-overlay__content o-overlay__content--reset js-overlay-content                                           |
-	| list_property_first_name                                                                                  |
-	| list_property_email                                                                                       |
-	| list_property_phone                                                                                       |
-	| list_property_first_name_validation_error                                                                 |
-	| list_property_email_validation_error                                                                      |
-	| list_property_phone_validation_error                                                                      |
-	| /terms/privacypolicy                                                                                      |
-	| submit                                                                                                    |
+	| Element                                                         |
+	| o-overlay__content o-overlay__content--reset js-overlay-content |
+	| list_property_first_name                                        |
+	| list_property_email                                             |
+	| list_property_phone                                             |
+	| list_property_first_name_validation_error                       |
+	| list_property_email_validation_error                            |
+	| list_property_phone_validation_error                            |
+	| /terms/privacypolicy                                            |
+	| submit                                                          |
 	When I select the form overlay submit button
 	Then the relevant elements are dislpayed
 	| Element                        |
@@ -156,7 +154,7 @@ Scenario: The Managed Services links direct to the LYP form
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty @LYPRegressionSuite
+@LetYourProperty
 Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the page sections are displayed in the relevant positions
@@ -181,7 +179,6 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Gain exposure through our partners     |
 	| What do our owners say                 |
 	| How much could I earn                  |
-	| We are still open as usual             |
 	| Holiday home management with Sykes     |
 	| Putting your property in the spotlight |
 	| Holiday letting made easy              |
