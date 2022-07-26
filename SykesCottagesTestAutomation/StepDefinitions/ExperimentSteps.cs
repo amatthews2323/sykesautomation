@@ -70,6 +70,23 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [When(@"I return the experiment details (.*)")]
+        public void WhenIReturnTheExperimentDetails(string experiments)
+        {
+            WaitASecond(2);
+            Console.WriteLine("Experiment details:");
+            var array = experiments.Split(",");
+            for (int i = 0; i < array.Length; i++)
+            {
+                string id = array[i].ToString().Trim();
+                Type("text_search", id);
+                WaitASecond();
+                string experimentId = shared.driver.FindElement(By.XPath("//a[@class='ng-binding']")).Text;
+                string experimentName = shared.driver.FindElement(By.XPath("//p[@class='name ng-binding']")).Text;
+                Console.WriteLine(experimentId + " " + experimentName);
+            }
+        }
+
         [When(@"I apply the following experiment: (.*)")]
         public void WhenIApplyTheFollowingExperiment(string experimentId)
         {

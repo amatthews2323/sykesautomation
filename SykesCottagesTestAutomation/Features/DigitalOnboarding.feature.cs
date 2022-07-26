@@ -265,7 +265,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Random"});
                 table5.AddRow(new string[] {
                             "Phone number",
-                            "07000000000"});
+                            "07000054210"});
 #line 48
  testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table5, "When ");
 #line hidden

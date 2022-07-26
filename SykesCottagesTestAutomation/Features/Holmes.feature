@@ -28,7 +28,6 @@ Scenario: Get experiment conversion precentage
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
-		| 4567    |
 		| 4579    |
 		| 4598    |
 		| 4615    |
@@ -36,19 +35,18 @@ Scenario: Get experiment conversion precentage
 		| 4645    |
 		| 4648    |
 		| 4658    |
-		| 4663    |
-		| 4664    |
 		| 4676    |
 		| 4683    |
-		| 4688    |
+		| 4257    |
 		| 4695    |
+		| 4560    |
+		| 4702    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                              |
-		| LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102 |
 		| LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169 |
 		| LetYourCottages_EarningCalculatoronInformationPages19170             |
 		| LetYourCottages_HeroFormTitleChange24                                |
@@ -56,9 +54,14 @@ Scenario: Get experiment status
 		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31      |
 		| LetYourCottages_InformationPageSearchMvpLyp12                        |
 		| LetYourCottages_InfopagecontentcollapsedsectionsLYP30                |
-		| LetYourCottages_MortgageLetterSectionLYP22                           |
-		| LetYourCottages_SearcherOnInfoPagesLYP46                             |
 		| LetYourCottages_LYPConversionFormFieldOrderLYP53                     |
 		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
-		| LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65        |
+		| LetYourCottages_RemoveWeAreStillOpen17921                            |
 		| LetYourCottages_VersionCOfMarketingPrefs25                           |
+		| LetYourCottages_AddImageToInfoPages19099                             |
+		| LetYourCottages_AddLabeltoStickyEnquireButtonLYP44                   |
+
+@HolmesExperiments
+Scenario: Get experiments infomation from Holmes
+	Given I am on the following webpage: http://holmes.prod.sykes.cloud/experiments
+	When I return the experiment details 4612,4674,4693,4554,4619,4457,4257

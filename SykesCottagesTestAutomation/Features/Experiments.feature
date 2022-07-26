@@ -1,14 +1,28 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
-LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+In development:
+LetYourCottages_RequestACallForm55
+LetYourCottages_MultiStepFormLYP67
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+	Given I have navigated to the following page: letyourcottage/information/buy-own-sell-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+	And I scroll to the following element: page-footer
+	Then the following element is displayed: //*[contains(@class,'fixed-bottom__fab-button')]//*[text()='Enquire today']
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
+	And I scroll to the following element: page-footer
+	Then the following element is displayed: //a[@id='backtotop']//*[text()='Back to top']
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17921
-	And I close the pop-ups
     Then the following element is not displayed: We are still open as usual
 
 @ActiveExperiments
@@ -39,19 +53,13 @@ Scenario: Experiment LetYourCottages_VersionCOfMarketingPrefs25
 	| Complete enquiry                                     |
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
-	Given I have navigated to the following page: <Path>
-	When I apply the following experiment: LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
-	Then the following element is displayed: <Element>
-	Examples:
-	| Path                                                          | Element                                     |
-	| letyourcottage/information/marketing-your-holiday-let         | advertising-and-marketing.png               |
-	| letyourcottage/information/buy-own-sell-holiday-lets          | buying-owning-and-selling-a-holiday-let.png |
-	| letyourcottage/information/investment-advice-for-holiday-lets | investment-advice-for-holiday-lets.png      |
-	| letyourcottage/information/regulations-for-holiday-lets       | legal-regulations-for-holiday-lets.png      |
-	| letyourcottage/information/holiday-let-mortgages              | holiday-let-mortgages.png                   |
-	| letyourcottage/information/how-to-run-your-holiday-let        | how-to-run-your-holiday-let.png             |
-	| letyourcottage/information/tax-information-on-holiday-lets    | tax-information-on-holiday-lets.png         |
+Scenario: Experiment LetYourCottages_EarningCalculatoronInformationPages19170
+	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_EarningCalculatoronInformationPages19170
+	Then the relevant elements are dislpayed
+	| Element                           |
+	| How much could I earn with Sykes? |
+	| Estimated earnings                |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_LYPConversionFormFieldOrderLYP53
@@ -74,16 +82,6 @@ Scenario: Experiment LetYourCottages_ContentImprovementsonHowtorunholidayletinfo
 	| question_logo |
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_MortgageLetterSectionLYP22
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_MortgageLetterSectionLYP22
-	Then the relevant elements are dislpayed
-	| Element                                                    |
-	| Need a Holiday Let Mortgage Letter?                        |
-	| Start application                                          |
-	| /images/let_your_cottage/landing_pages/mortgage_letter.jpg |
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_InfopagecontentcollapsedsectionsLYP30
 	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_InfopagecontentcollapsedsectionsLYP30
@@ -97,29 +95,6 @@ Scenario: Experiment LetYourCottages_GetstartedsectioninsteadofbrochuredownloadL
 	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
 	Then the following element is displayed: Enquire today to get started with Sykes
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_SearcherOnInfoPagesLYP46
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_SearcherOnInfoPagesLYP46
-	Then the relevant elements are dislpayed within the searcher-section section
-	| Element                                |
-	| Search for holiday letting information |
-	| searchTerm                             |
-	| Search                                 |
-	| Managed services                       |
-	| Investment advice                      |
-	| How to run a holiday let               |
-	When I enter Mortgage in the following form field: searchTerm
-	And I click searcher-bar__action
-	Then the relevant elements are dislpayed
-	| Element                                           |
-	| 12 results for 'Mortgage'                         |
-	| back-container                                    |
-	| A complete guide to holiday let mortgages         |
-	| Holiday let mortgages                             |
-	| Running your holiday let                          |
-	| Why now is a good time to invest in a holiday let |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
@@ -160,7 +135,20 @@ Scenario: Experiment LetYourCottages_HeroFormTitleChange24
 	| Complete the form to receive your information pack       |
 	| //div[@class='form-heading-container']//*[text()='Free'] |
 
-@ActiveExperiments
+Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
+	Then the following element is displayed: <Element>
+	Examples:
+	| Path																		       | Element                                     |
+	| letyourcottage/information/marketing-your-holiday-let/?dev_tools=product         | advertising-and-marketing.png               |
+	| letyourcottage/information/buy-own-sell-holiday-lets/?dev_tools=product          | buying-owning-and-selling-a-holiday-let.png |
+	| letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product | investment-advice-for-holiday-lets.png      |
+	| letyourcottage/information/regulations-for-holiday-lets/?dev_tools=product       | legal-regulations-for-holiday-lets.png      |
+	| letyourcottage/information/holiday-let-mortgages/?dev_tools=product              | holiday-let-mortgages.png                   |
+	| letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product        | how-to-run-your-holiday-let.png             |
+	| letyourcottage/information/tax-information-on-holiday-lets/?dev_tools=product    | tax-information-on-holiday-lets.png         |
+
 Scenario: Experiment LetYourCottages_RemoveDirectMailSmsFromForm19051
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_RemoveDirectMailSmsFromForm19051
@@ -179,16 +167,6 @@ Scenario: Experiment LetYourCottages_RemoveDirectMailSmsFromForm19051
 	| marketing_sms  |
 	| marketing_post |
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_EarningCalculatoronInformationPages19170
-	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_EarningCalculatoronInformationPages19170
-	Then the relevant elements are dislpayed
-	| Element                           |
-	| How much could I earn with Sykes? |
-	| Estimated earnings                |
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_FormSmallPrintChange27
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_FormSmallPrintChange27
@@ -198,7 +176,6 @@ Scenario: Experiment LetYourCottages_FormSmallPrintChange27
 	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
 	| /terms/privacypolicy                                                                                      |
 
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_FormSmallPrintChange27 Sister Brands
 	Given I am on the following webpage: <URL>
 	When I apply the following experiment: LetYourCottages_FormSmallPrintChange27
@@ -226,26 +203,15 @@ Scenario: Experiment LetYourCottages_FormSmallPrintChange27 Sister Brands
 	| https://www.welsh-cottages.co.uk/letyourcottage/            |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    |
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
-	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_AddLYPfloatingactionbuttontoallinformationpages19102
-	And I scroll to the following element: page-footer
-	Then the following element is displayed: floatingactionbutton
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ReplaceIconsWithimages18585
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ReplaceIconsWithimages18585
-	And I close the pop-ups
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_MortgageLetterSectionLYP22
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_MortgageLetterSectionLYP22
 	Then the relevant elements are dislpayed
-    | Element                                                             |
-    | /images/let_your_cottage/letting_easy/market-leading.png            |
-    | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
-    | /images/let_your_cottage/letting_easy/dedicated-account-manager.png |
-    | /images/let_your_cottage/letting_easy/helpline-24h.png              |
-    | /images/let_your_cottage/letting_easy/full-property-management.png  |
-    | /images/let_your_cottage/letting_easy/photography.png               |
+	| Element                                                    |
+	| Need a Holiday Let Mortgage Letter?                        |
+	| Start application                                          |
+	| /images/let_your_cottage/landing_pages/mortgage_letter.jpg |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_BespokeheroimagesoninformationpagesLYP29

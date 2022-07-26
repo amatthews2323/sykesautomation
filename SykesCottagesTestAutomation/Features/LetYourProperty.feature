@@ -154,6 +154,18 @@ Scenario: The Managed Services links direct to the LYP form
 	When I select the Fully Managed Enquire Now button
 	Then the enquiry form is displayed with the tint applied
 
+@LetYourProperty @LYPRegressionSuite
+Scenario: The Holiday Letting Made Easy images are displayed
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Then the relevant elements are dislpayed
+    | Element                                                             |
+    | /images/let_your_cottage/letting_easy/market-leading.png            |
+    | /images/let_your_cottage/letting_easy/payment_in_advance.png        |
+    | /images/let_your_cottage/letting_easy/dedicated-account-manager.png |
+    | /images/let_your_cottage/letting_easy/helpline-24h.png              |
+    | /images/let_your_cottage/letting_easy/full-property-management.png  |
+    | /images/let_your_cottage/letting_easy/photography.png               |
+
 @LetYourProperty
 Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage

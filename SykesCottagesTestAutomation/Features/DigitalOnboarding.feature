@@ -49,7 +49,7 @@ Scenario: The user can add a property and complete the digital onboarding proces
 	| Key           | Value       |
 	| Full name     | Auto Bot    |
 	| Email address | Random      |
-	| Phone number  | 07000000000 |
+	| Phone number  | 07000054210 |
 	And I submit the enquiry form
 	When I select Get Started Online
 	Then I can add a property with the following postcode: CH1 2NW

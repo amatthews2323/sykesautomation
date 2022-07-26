@@ -33,6 +33,8 @@ Scenario: The relevent elements are present on the Information Centre pages
     | <Header>                                          |
     | hero__image                                       |
     | Customer reviews powered by Trustpilot            |
+	When I scroll to the following element: page-footer
+	Then the following element is displayed: floatingactionbutton
 	Examples:
 	| Path                                                          | Header                                   |
 	| letyourcottage/information/marketing-your-holiday-let         | Advertising and Marketing                |
@@ -94,4 +96,26 @@ Scenario: The enquiry form is displayed on the Information Centre pages
 	| letyourcottage/legal-regulations-for-holiday-lets |
 	| letyourcottage/holiday-let-mortgages              |
 	| letyourcottage/how-to-run-your-holiday-let        |
-	| letyourcottage/Tax-information-on-holiday-lets    | 
+	| letyourcottage/Tax-information-on-holiday-lets    |
+
+@InformationCentre @LYPRegressionSuite @Search
+Scenario: The search feature is displayed on the Information Centre pages
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets
+	Then the relevant elements are dislpayed within the searcher-section section
+	| Element                                |
+	| Search for holiday letting information |
+	| searchTerm                             |
+	| Search                                 |
+	| Managed services                       |
+	| Investment advice                      |
+	| How to run a holiday let               |
+	When I enter Mortgage in the following form field: searchTerm
+	And I click searcher-bar__action
+	Then the relevant elements are dislpayed
+	| Element                                           |
+	| 12 results for 'Mortgage'                         |
+	| back-container                                    |
+	| A complete guide to holiday let mortgages         |
+	| Holiday let mortgages                             |
+	| Running your holiday let                          |
+	| Why now is a good time to invest in a holiday let |
