@@ -31,28 +31,32 @@ Scenario: The relevant sections are displayed on the Property Letting Dashboard
 
 @DigitalOnboarding
 Scenario: The user can add a property via the digital onboarding process
-	Given I have navigated to the following page: letyourcottage
-	When I enter the following details on the enquiry form
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25
+	And I enter the following details on the enquiry form
 	| Key           | Value       |
 	| Full name     | Test Owner  |
 	| Email address | Random      |
 	| Phone number  | 07000000000 |
-	And I submit the enquiry form
-	When I click Get started online
+	And I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--blue u-cursor-pointer
+	And I click Complete enquiry
+	And I click thankyoulycgetstartedonline
 	Then I can add a property with the following postcode: Random
 	And the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 
 @DigitalOnboarding
 Scenario: The user can add a property and complete the digital onboarding process
 	Given I have navigated to the following page: letyourcottage
-	When I enter the following details on the enquiry form
+	When I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25
+	And I enter the following details on the enquiry form
 	| Key           | Value       |
-	| Full name     | Auto Bot    |
+	| Full name     | Test Owner  |
 	| Email address | Random      |
-	| Phone number  | 07000054210 |
-	And I submit the enquiry form
-	When I select Get Started Online
-	Then I can add a property with the following postcode: CH1 2NW
+	| Phone number  | 07000000000 |
+	And I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--blue u-cursor-pointer
+	And I click Complete enquiry
+	And I click thankyoulycgetstartedonline
+	Then I can add a property with the following postcode: Random
 	And I can create an account using password: Testing123
 	And I can register my account via the email
 	And I can sign in to my account using the following details

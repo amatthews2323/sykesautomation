@@ -28,11 +28,13 @@ Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
 	When I wait 3 seconds
 	Then the relevant elements are dislpayed
-    | Element                                           |
-    | form-heading-container                            |
-    | <Header>                                          |
-    | hero__image                                       |
-    | Customer reviews powered by Trustpilot            |
+    | Element                                |
+    | form-heading-container                 |
+    | <Header>                               |
+    | hero__image                            |
+    | Customer reviews powered by Trustpilot |
+    | How much could I earn with Sykes?      |
+    | Estimated earnings                     |
 	When I scroll to the following element: page-footer
 	Then the following element is displayed: floatingactionbutton
 	Examples:
@@ -44,78 +46,3 @@ Scenario: The relevent elements are present on the Information Centre pages
 	| letyourcottage/information/holiday-let-mortgages              | Holiday let mortgages                    |
 	| letyourcottage/information/how-to-run-your-holiday-let        | How to run your holiday let              |
 	| letyourcottage/information/Tax-information-on-holiday-lets    | Tax information on holiday lets          |
-
-@InformationCentre @LYPRegressionSuite @EnquiryForm
-Scenario: The enquiry form is displayed on the Information Centre pages
-	Given I have navigated to the following page: <Path>
-	Then the relevant elements are dislpayed
-	| Element                              |
-	| form-heading-container               |
-	| heroform_first_name                  |
-	| heroform_first_name_validation_error |
-	| heroform_email                       |
-	| heroform_email_validation_error      |
-	| heroform_phone                       |
-	| heroform_phone_validation_error      |
-	| Get started                          |
-	When I click form-heading-container
-	And I click heroform_first_name
-	And I click form-heading-container
-	And I wait 2 seconds
-	Then the following text is displayed: Please enter a full name.
-	When I click heroform_email
-	And I click form-heading-container
-	Then the following text is displayed: Please enter an email address.
-	When I click heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please enter a contact number.
-	When I enter test.com in the following form field: heroform_email
-	And I click form-heading-container
-	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter test@test in the following form field: heroform_email
-	And I click form-heading-container
-	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter test in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter 070000000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-	When I enter 0700000000000000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-	When I enter +44 7000 000 000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	Then the following element is not displayed: Already started?
-	Examples:
-	| Path                                              |
-	| letyourcottage/marketing-your-holiday-let         |
-	| letyourcottage/buy-own-sell-holiday-lets          |
-	| letyourcottage/investment-advice-for-holiday-lets |
-	| letyourcottage/legal-regulations-for-holiday-lets |
-	| letyourcottage/holiday-let-mortgages              |
-	| letyourcottage/how-to-run-your-holiday-let        |
-	| letyourcottage/Tax-information-on-holiday-lets    |
-
-@InformationCentre @LYPRegressionSuite @Search
-Scenario: The search feature is displayed on the Information Centre pages
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets
-	Then the relevant elements are dislpayed within the searcher-section section
-	| Element                                |
-	| Search for holiday letting information |
-	| searchTerm                             |
-	| Search                                 |
-	| Managed services                       |
-	| Investment advice                      |
-	| How to run a holiday let               |
-	When I enter Mortgage in the following form field: searchTerm
-	And I click searcher-bar__action
-	Then the relevant elements are dislpayed
-	| Element                                           |
-	| 12 results for 'Mortgage'                         |
-	| back-container                                    |
-	| A complete guide to holiday let mortgages         |
-	| Holiday let mortgages                             |
-	| Running your holiday let                          |
-	| Why now is a good time to invest in a holiday let |

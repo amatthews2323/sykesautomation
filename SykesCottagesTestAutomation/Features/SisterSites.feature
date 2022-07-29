@@ -1,7 +1,7 @@
 ﻿Feature: SisterSites
 	Sister sites content and functionality
 
-@SisterSites @LYPSmokeTest @LYPRegressionSuite
+@SisterBrands @LYPSmokeTest @LYPRegressionSuite
 Scenario: The Sykes sister sites are displayed correctly
 	Given I am on the following webpage: <URL>
 	Then the relevant elements are dislpayed
@@ -33,7 +33,7 @@ Scenario: The Sykes sister sites are displayed correctly
 	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |
 
-@SisterSites @LYPRegressionSuite @EnquiryForm
+@SisterSites @LYPRegressionSuite @SisterBrandForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am on the following webpage: <URL>
 	Then the relevant elements are dislpayed
@@ -46,7 +46,10 @@ Scenario: The enquiry form is displayed on the sister sites
 	| heroform_email_validation_error                                                                           |
 	| heroform_phone                                                                                            |
 	| heroform_phone_validation_error                                                                           |
-	| Get started                          |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+	| /terms/privacypolicy                                                                                      |
+	| Get started                                                                                               |
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container

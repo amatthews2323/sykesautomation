@@ -6,70 +6,10 @@ LetYourCottages_RequestACallForm55
 LetYourCottages_MultiStepFormLYP67
 
 @ActiveExperiments
-Scenario: Experiment LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
-	Given I have navigated to the following page: letyourcottage/information/buy-own-sell-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
-	And I scroll to the following element: page-footer
-	Then the following element is displayed: //*[contains(@class,'fixed-bottom__fab-button')]//*[text()='Enquire today']
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
-	And I scroll to the following element: page-footer
-	Then the following element is displayed: //a[@id='backtotop']//*[text()='Back to top']
-
-@ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 17921
     Then the following element is not displayed: We are still open as usual
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_VersionCOfMarketingPrefs25
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25
-	Then the relevant elements are dislpayed
-	| Element                              |
-	| form-heading-container               |
-	| heroform_first_name                  |
-	| heroform_first_name_validation_error |
-	| heroform_email                       |
-	| heroform_email_validation_error      |
-	| heroform_phone                       |
-	| heroform_phone_validation_error      |
-	| Get started                          |
-	When I enter Test Owner in the following form field: heroform_first_name
-	When I enter test@test.com in the following form field: heroform_email
-	When I enter 07000000000 in the following form field: heroform_phone
-	When I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--blue u-cursor-pointer
-	Then the relevant elements are dislpayed
-	| Element                                              |
-	| Your enquiry                                         |
-	| Please ensure the following details are correct      |
-	| How would you like the Sykes Group to keep in touch? |
-	| marketing_phone                                      |
-	| marketing_email                                      |
-	| Complete enquiry                                     |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_EarningCalculatoronInformationPages19170
-	Given I have navigated to the following page: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_EarningCalculatoronInformationPages19170
-	Then the relevant elements are dislpayed
-	| Element                           |
-	| How much could I earn with Sykes? |
-	| Estimated earnings                |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_LYPConversionFormFieldOrderLYP53
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_LYPConversionFormFieldOrderLYP53
-	Then the relevant elements are dislpayed
-	| Element                                                      |
-	| //form[@*='heroform']/div[1]/label[@*='heroform_first_name'] |
-	| //form[@*='heroform']/div[2]/label[@*='heroform_phone']      |
-	| //form[@*='heroform']/div[3]/label[@*='heroform_email']      |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169
@@ -119,22 +59,7 @@ Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
 	| Running your holiday let                          |
 	| Why now is a good time to invest in a holiday let |
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ImagesbeforecontentLYP32
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ImagesbeforecontentLYP32
-	Then the following element is displayed: /images/let_your_cottage/lyp32-desktop-tablet.png
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_HeroFormTitleChange24
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_HeroFormTitleChange24
-	Then the following text is displayed: Start your letting journey with Sykes
-	And the following elements are not dislpayed
-	| Element                                                  |
-	| Complete the form to receive your information pack       |
-	| //div[@class='form-heading-container']//*[text()='Free'] |
-
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
 	Given I have navigated to the following page: <Path>
 	When I apply the following experiment: LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
@@ -149,59 +74,68 @@ Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP
 	| letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product        | how-to-run-your-holiday-let.png             |
 	| letyourcottage/information/tax-information-on-holiday-lets/?dev_tools=product    | tax-information-on-holiday-lets.png         |
 
-Scenario: Experiment LetYourCottages_RemoveDirectMailSmsFromForm19051
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_LYPConversionFormFieldOrderLYP53
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_RemoveDirectMailSmsFromForm19051
-	And I enter the following details on the enquiry form
-	| Key           | Value                 |
-	| Full name     | Test Owner            |
-	| Email address | sykestest@example.org |
-	| Phone number  | 07000000000           |
-	And I click o-heading-title__heading
+	When I apply the following experiment: LetYourCottages_LYPConversionFormFieldOrderLYP53
 	Then the relevant elements are dislpayed
-	| Element         |
-	| marketing_email |
-	| marketing_phone |
+	| Element                                                      |
+	| //form[@*='heroform']/div[1]/label[@*='heroform_first_name'] |
+	| //form[@*='heroform']/div[2]/label[@*='heroform_phone']      |
+	| //form[@*='heroform']/div[3]/label[@*='heroform_email']      |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_HeroFormTitleChange24
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HeroFormTitleChange24
+	Then the following text is displayed: Start your letting journey with Sykes
 	And the following elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
+	| Element                                                  |
+	| Complete the form to receive your information pack       |
+	| //div[@class='form-heading-container']//*[text()='Free'] |
 
-Scenario: Experiment LetYourCottages_FormSmallPrintChange27
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ImagesbeforecontentLYP32
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ImagesbeforecontentLYP32
+	Then the following element is displayed: /images/let_your_cottage/lyp32-desktop-tablet.png
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+	Given I have navigated to the following page: letyourcottage/information/buy-own-sell-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddLabeltoStickyEnquireButtonLYP44
+	And I scroll to the following element: page-footer
+	Then the following element is displayed: //*[contains(@class,'fixed-bottom__fab-button')]//*[text()='Enquire today']
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_FormSmallPrintChange27
-	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
-	| /terms/privacypolicy                                                                                      |
+	When I apply the following experiment: LetYourCottages_AddLabeltoStickyBacktoTopIconLYP43
+	And I scroll to the following element: page-footer
+	Then the following element is displayed: //a[@id='backtotop']//*[text()='Back to top']
 
-Scenario: Experiment LetYourCottages_FormSmallPrintChange27 Sister Brands
-	Given I am on the following webpage: <URL>
-	When I apply the following experiment: LetYourCottages_FormSmallPrintChange27
-	Then the relevant elements are dislpayed within the heroform section
-	| Element                                                                                                   |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
-	| /terms/privacypolicy                                                                                      |
-	Examples:
-	| URL                                                         |
-	| https://www.character-cottages.co.uk/letyourcottage/        |
-	| https://www.carbisbayholidays.co.uk/letyourcottage/         |
-	| https://www.coastandcountry.co.uk/letyourcottage/           |
-	| https://www.cornishcottageholidays.co.uk/letyourcottage/    |
-	| https://www.dream-cottages.co.uk/letyourcottage/            |
-	| https://www.heartofthelakes.co.uk/letyourcottage/           |
-	| https://www.helpfulholidays.co.uk/letyourcottage/           |
-	| https://www.hogansirishcottages.com/letyourcottage/         |
-	| https://www.johnbraycornishholidays.co.uk/letyourcottage/   |
-	| https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/ |
-	| https://www.lakescottageholiday.co.uk/letyourcottage/       |
-	| https://www.lakelovers.co.uk/letyourcottage/                |
-	| https://www.manorcottages.co.uk/letyourcottage/             |
-	| https://www.menaiholidays.co.uk/letyourcottage/             |
-	| https://www.welsh-cottages.co.uk/letyourcottage/            |
-	| https://www.yorkshirecoastalcottages.com/cottage-owners/    |
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_SearcherOnInfoPagesLYP46
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_SearcherOnInfoPagesLYP46
+	Then the relevant elements are dislpayed within the searcher-section section
+	| Element                                |
+	| Search for holiday letting information |
+	| searchTerm                             |
+	| Search                                 |
+	| Managed services                       |
+	| Investment advice                      |
+	| How to run a holiday let               |
+	When I enter Mortgage in the following form field: searchTerm
+	And I click searcher-bar__action
+	Then the relevant elements are dislpayed
+	| Element                                           |
+	| 12 results for 'Mortgage'                         |
+	| back-container                                    |
+	| A complete guide to holiday let mortgages         |
+	| Holiday let mortgages                             |
+	| Running your holiday let                          |
+	| Why now is a good time to invest in a holiday let |
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_MortgageLetterSectionLYP22

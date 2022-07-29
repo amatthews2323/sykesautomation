@@ -38,9 +38,7 @@ Scenario: Get experiment conversion precentage
 		| 4676    |
 		| 4683    |
 		| 4257    |
-		| 4695    |
 		| 4560    |
-		| 4702    |
 
 @HolmesExperiments
 Scenario: Get experiment status
@@ -57,9 +55,7 @@ Scenario: Get experiment status
 		| LetYourCottages_LYPConversionFormFieldOrderLYP53                     |
 		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
 		| LetYourCottages_RemoveWeAreStillOpen17921                            |
-		| LetYourCottages_VersionCOfMarketingPrefs25                           |
 		| LetYourCottages_AddImageToInfoPages19099                             |
-		| LetYourCottages_AddLabeltoStickyEnquireButtonLYP44                   |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

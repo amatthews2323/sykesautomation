@@ -99,95 +99,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "container_sykes_grid"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table82.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table82, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the Holiday Homes for Sale page")]
-        [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        [NUnit.Framework.CategoryAttribute("EnquiryForm")]
-        public void TheEnquiryFormIsDisplayedOnTheHolidayHomesForSalePage()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "HolidayHomesForSale",
-                    "LYPRegressionSuite",
-                    "EnquiryForm"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The enquiry form is displayed on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 19
- testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 20
-    testRunner.When("I click View property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table83.AddRow(new string[] {
-                            "Find your perfect holiday home"});
-                table83.AddRow(new string[] {
-                            "Select a region"});
-#line 21
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table83, "Then ");
-#line hidden
-#line 25
-    testRunner.When("I select option All regions from the region dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 26
-    testRunner.And("I click Next", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_first_name"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_first_name_validation_error"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_email"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_email_validation_error"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_phone"});
-                table84.AddRow(new string[] {
-                            "hhfs_overlay_phone_validation_error"});
-                table84.AddRow(new string[] {
-                            "/terms/privacypolicy"});
-                table84.AddRow(new string[] {
-                            "submit"});
-#line 27
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table84, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table77, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -206,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 40
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -216,31 +145,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 41
+#line 19
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table85 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Holiday home management"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "hero-slideshow"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "form-heading-container"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "What are the benefits"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Partially managed"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Fully managed"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Resource centre"});
-                table85.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Share page"});
-#line 42
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table85, "Then ");
+#line 20
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table78, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

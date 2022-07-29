@@ -24,9 +24,9 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Free Owner Information Pack                  |
     | Looking to get started with holiday letting? |
 
-@LetYourProperty @LYPRegressionSuite @EnquiryForm
-Scenario: The enquiry form is displayed on the Let Your Property page
-	Given I have navigated to the following page: letyourcottage
+@LetYourProperty @LYPRegressionSuite @HeroForm
+Scenario: The hero form is displayed correctly
+	Given I have navigated to the following page: <Path>
 	Then the relevant elements are dislpayed
 	| Element                              |
 	| form-heading-container               |
@@ -66,24 +66,70 @@ Scenario: The enquiry form is displayed on the Let Your Property page
 	And I click form-heading-container
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
+	When I enter Test Owner in the following form field: heroform_first_name
+	And I enter test@test.com in the following form field: heroform_email
+	And I enter 07000000000 in the following form field: heroform_phone
+	And I select Get Started
+	Then the relevant elements are dislpayed
+	| Element                                                                                                   |
+	| Your enquiry                                                                                              |
+	| Please ensure the following details are correct                                                           |
+	| How would you like the Sykes Group to keep in touch?                                                      |
+	| marketing_phone                                                                                           |
+	| marketing_email                                                                                           |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+	| /terms/privacypolicy                                                                                      |
+	| Complete enquiry                                                                                          |
+	And the following elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |
+	Examples:
+	| Path                                                          |
+	| letyourcottage                                                |
+	| letyourcottage/managed-services/                              |
+	| letyourcottage/In-Your-Area/South-West                        |
+	| letyourcottage/In-Your-Area/South-of-England                  |
+	| letyourcottage/In-Your-Area/Heart-of-England                  |
+	| letyourcottage/In-Your-Area/East-Anglia                       |
+	| letyourcottage/In-Your-Area/Peak-District                     |
+	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast        |
+	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria     |
+	| letyourcottage/In-Your-Area/Northumberland                    |
+	| letyourcottage/In-Your-Area/Wales                             |
+	| letyourcottage/In-Your-Area/Ireland                           |
+	| letyourcottage/In-Your-Area/Scotland                          |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/legal-regulations-for-holiday-lets |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/Tax-information-on-holiday-lets    |
+	| letyourcottage/information/run-holiday-let-as-business        |
+	| letyourcottage/information/leading-holiday-let-agency         |
+	| letyourcottage/information/holiday-management-services        |
 
-@LetYourProperty @EnquiryForm
-Scenario: The modal enquiry form is displayed correctly
+@LetYourProperty @ModalForm
+Scenario: The modal form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: Start your listing today
 	And I click Start your listing today
 	Then I wait 2 seconds
 	Then the relevant elements are dislpayed
-	| Element                                                         |
-	| o-overlay__content o-overlay__content--reset js-overlay-content |
-	| list_property_first_name                                        |
-	| list_property_email                                             |
-	| list_property_phone                                             |
-	| list_property_first_name_validation_error                       |
-	| list_property_email_validation_error                            |
-	| list_property_phone_validation_error                            |
-	| /terms/privacypolicy                                            |
-	| submit                                                          |
+	| Element                                                                                                   |
+	| o-overlay__content o-overlay__content--reset js-overlay-content                                           |
+	| list_property_first_name                                                                                  |
+	| list_property_email                                                                                       |
+	| list_property_phone                                                                                       |
+	| list_property_first_name_validation_error                                                                 |
+	| list_property_email_validation_error                                                                      |
+	| list_property_phone_validation_error                                                                      |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+	| /terms/privacypolicy                                                                                      |
+	| submit                                                                                                    |
 	When I select the form overlay submit button
 	Then the relevant elements are dislpayed
 	| Element                        |
@@ -109,8 +155,12 @@ Scenario: The modal enquiry form is displayed correctly
 	And I click o-overlay__content o-overlay__content--reset js-overlay-content
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
+	And the following elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |
 
-@LetYourProperty @LYPRegressionSuite @EnquiryForm
+@LetYourProperty @LYPRegressionSuite @ModalForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I click Click enquire now and complete the form to receive your free information pack.
@@ -124,6 +174,10 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	| list_property_first_name_validation_error                              |
 	| list_property_email_validation_error                                   |
 	| list_property_phone_validation_error                                   |
+	And the following elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -275,21 +329,28 @@ Scenario: The number of bedrooms is included in the earnings calculator
 	| Average potential earnings        |
 	| Enquire today to get started      |
 
-@LetYourProperty @EnquiryForm
+@LetYourProperty @ModalForm
 Scenario: The Inactivity Modal is displayed correctly
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then I wait 305 seconds
-	And the following elements are dislpayed
+	And the relevant elements are dislpayed
 	     | Element                  |
 	     | idleform                 |
 	     | We're ready when you are |
 	     | Open form                |
 	When I click Open form
 	Then the relevant elements are dislpayed
-	     | Element                                   |
-	     | inactive-form_first_name                  |
-	     | inactive-form_first_name_validation_error |
-	     | inactive-form_email                       |
-	     | inactive-form_email_validation_error      |
-	     | inactive-form_phone                       |
-	     | inactive-form_phone_validation_error      |
+	     | Element                                                                                                   |
+	     | inactive-form_first_name                                                                                  |
+	     | inactive-form_first_name_validation_error                                                                 |
+	     | inactive-form_email                                                                                       |
+	     | inactive-form_email_validation_error                                                                      |
+	     | inactive-form_phone                                                                                       |
+	     | inactive-form_phone_validation_error                                                                      |
+	     | Your details will be used by the Sykes group to send you information about our property letting services. |
+	     | You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+	     | /terms/privacypolicy                                                                                      |
+	And the following elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |

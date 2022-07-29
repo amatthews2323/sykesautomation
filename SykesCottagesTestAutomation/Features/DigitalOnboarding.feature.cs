@@ -198,7 +198,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 34
- testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 35
+ testRunner.When("I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
@@ -212,19 +215,23 @@ this.ScenarioInitialize(scenarioInfo);
                 table4.AddRow(new string[] {
                             "Phone number",
                             "07000000000"});
-#line 35
- testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table4, "When ");
-#line hidden
-#line 40
- testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.And("I enter the following details on the enquiry form", ((string)(null)), table4, "And ");
 #line hidden
 #line 41
- testRunner.When("I click Get started online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--bl" +
+                        "ue u-cursor-pointer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 42
- testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I click Complete enquiry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 43
+ testRunner.And("I click thankyoulycgetstartedonline", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 44
+ testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 45
  testRunner.And("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
                         "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -241,7 +248,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can add a property and complete the digital onboarding process", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 46
+#line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -251,37 +258,44 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 47
+#line 49
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 50
+ testRunner.When("I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
                 table5.AddRow(new string[] {
                             "Full name",
-                            "Auto Bot"});
+                            "Test Owner"});
                 table5.AddRow(new string[] {
                             "Email address",
                             "Random"});
                 table5.AddRow(new string[] {
                             "Phone number",
-                            "07000054210"});
-#line 48
- testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table5, "When ");
-#line hidden
-#line 53
- testRunner.And("I submit the enquiry form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 54
- testRunner.When("I select Get Started Online", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 55
- testRunner.Then("I can add a property with the following postcode: CH1 2NW", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                            "07000000000"});
+#line 51
+ testRunner.And("I enter the following details on the enquiry form", ((string)(null)), table5, "And ");
 #line hidden
 #line 56
- testRunner.And("I can create an account using password: Testing123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--bl" +
+                        "ue u-cursor-pointer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 57
+ testRunner.And("I click Complete enquiry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 58
+ testRunner.And("I click thankyoulycgetstartedonline", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 59
+ testRunner.Then("I can add a property with the following postcode: Random", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 60
+ testRunner.And("I can create an account using password: Testing123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 61
  testRunner.And("I can register my account via the email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -293,10 +307,10 @@ this.ScenarioInitialize(scenarioInfo);
                 table6.AddRow(new string[] {
                             "Password",
                             "Testing123"});
-#line 58
+#line 62
  testRunner.And("I can sign in to my account using the following details", ((string)(null)), table6, "And ");
 #line hidden
-#line 62
+#line 66
  testRunner.And("I can complete Additional Property Details Step 1 - Property Location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
@@ -308,43 +322,43 @@ this.ScenarioInitialize(scenarioInfo);
                 table7.AddRow(new string[] {
                             "Number of guests",
                             "4"});
-#line 63
+#line 67
  testRunner.And("I can complete Additional Property Details Step 2 - Guests and bedrooms", ((string)(null)), table7, "And ");
 #line hidden
-#line 67
+#line 71
  testRunner.And("I can complete Additional Property Details Step 3 - Photos of your property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 68
+#line 72
  testRunner.And("I can complete Additional Property Details Step 4 - About your property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 73
  testRunner.And("I can complete Additional Property Details Step 5 - Key Collection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 70
+#line 74
  testRunner.And("I can complete Additional Property Details Step 6 - Booking details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 75
  testRunner.And("I can complete Additional Property Details Step 7 - Upcoming bookings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 76
  testRunner.And("I can complete Personal Details Step 1 - Personal details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 73
+#line 77
  testRunner.And("I can complete Personal Details Step 2 - Your bank details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 74
+#line 78
  testRunner.And("I can complete Personal Details Step 3 - File uploads", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 75
+#line 79
  testRunner.And("I can complete Personal Details Step 4 - Select commission tier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 76
+#line 80
  testRunner.And("I can complete Personal Details Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 77
+#line 81
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 78
+#line 82
  testRunner.And("the following text is displayed: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -360,7 +374,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "DigitalOnboarding"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user completes digital onboarding", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 81
+#line 85
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -370,7 +384,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 82
+#line 86
  testRunner.Given("I am on the following webpage: https://tech.staging.sykescottages.co.uk/account/l" +
                         "ogin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
@@ -383,16 +397,16 @@ this.ScenarioInitialize(scenarioInfo);
                 table8.AddRow(new string[] {
                             "Password",
                             "Testing123"});
-#line 83
+#line 87
  testRunner.Then("I can sign in to my account using the following details", ((string)(null)), table8, "Then ");
 #line hidden
-#line 87
+#line 91
  testRunner.And("I can complete Personal Details Step 5 - Property Pricing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 88
+#line 92
  testRunner.And("I can sign the contract and complete digital onboarding", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 89
+#line 93
  testRunner.And("the following text is displayed: Welcome to the Sykes Family!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

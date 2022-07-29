@@ -75,7 +75,7 @@ namespace SykesCottagesTestAutomation.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Sykes sister sites are displayed correctly")]
-        [NUnit.Framework.CategoryAttribute("SisterSites")]
+        [NUnit.Framework.CategoryAttribute("SisterBrands")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
         [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
@@ -97,7 +97,7 @@ namespace SykesCottagesTestAutomation.Features
         public void TheSykesSisterSitesAreDisplayedCorrectly(string uRL, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SisterSites",
+                    "SisterBrands",
                     "LYPSmokeTest",
                     "LYPRegressionSuite"};
             if ((exampleTags != null))
@@ -122,26 +122,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "nav_logo"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "hero__image"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "form-heading-container"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Request a free owner pack"});
-                table90.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Claim My Free Pack"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table90, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table81, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -151,7 +151,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the sister sites")]
         [NUnit.Framework.CategoryAttribute("SisterSites")]
         [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        [NUnit.Framework.CategoryAttribute("EnquiryForm")]
+        [NUnit.Framework.CategoryAttribute("SisterBrandForm")]
         [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", null)]
         [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", null)]
@@ -173,7 +173,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] @__tags = new string[] {
                     "SisterSites",
                     "LYPRegressionSuite",
-                    "EnquiryForm"};
+                    "SisterBrandForm"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -195,107 +195,115 @@ this.ScenarioInitialize(scenarioInfo);
 #line 38
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "form-heading-container"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_first_name"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_email"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_phone"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table91.AddRow(new string[] {
+                table82.AddRow(new string[] {
+                            "Your details will be used by the Sykes group to send you information about our pr" +
+                                "operty letting services."});
+                table82.AddRow(new string[] {
+                            "You can opt out or unsubscribe at any time by contacting us or using an unsubscri" +
+                                "be link."});
+                table82.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table82.AddRow(new string[] {
                             "Get started"});
 #line 39
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table91, "Then ");
-#line hidden
-#line 50
- testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 51
- testRunner.And("I click heroform_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 52
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table82, "Then ");
 #line hidden
 #line 53
- testRunner.Then("the following text is displayed: Please enter a full name.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 54
- testRunner.When("I click heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I click heroform_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 55
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 56
- testRunner.Then("the following text is displayed: Please enter an email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: Please enter a full name.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 57
- testRunner.When("I click heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 58
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 59
- testRunner.Then("the following text is displayed: Please enter a contact number.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: Please enter an email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 60
- testRunner.When("I enter test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 61
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 62
- testRunner.Then("the following text is displayed: \'test.com\' is missing an \'@\'. Please include an " +
-                        "\'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: Please enter a contact number.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 63
- testRunner.When("I enter test@test in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 64
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 65
- testRunner.Then("the following text is displayed: \'test@test\' is an incomplete email address. Plea" +
-                        "se include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: \'test.com\' is missing an \'@\'. Please include an " +
+                        "\'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 66
- testRunner.When("I enter test in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter test@test in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 67
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 68
- testRunner.Then("the following text is displayed: Please enter a valid contact number that does no" +
-                        "t include letters, spaces, special characters and contains no less than 10 digit" +
-                        "s.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: \'test@test\' is an incomplete email address. Plea" +
+                        "se include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 69
- testRunner.When("I enter 070000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter test in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 70
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 71
- testRunner.Then("the following text is displayed: Please provide a contact number that is no less " +
-                        "than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following text is displayed: Please enter a valid contact number that does no" +
+                        "t include letters, spaces, special characters and contains no less than 10 digit" +
+                        "s.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 72
- testRunner.When("I enter 0700000000000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter 070000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 73
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 74
+ testRunner.Then("the following text is displayed: Please provide a contact number that is no less " +
+                        "than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 75
+ testRunner.When("I enter 0700000000000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 76
+ testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 77
  testRunner.Then("the following text is displayed: Please provide a contact number that is no more " +
                         "than 15 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

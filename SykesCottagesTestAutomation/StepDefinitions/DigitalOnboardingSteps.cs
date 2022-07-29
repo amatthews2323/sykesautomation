@@ -34,6 +34,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click("form-heading-container", waitTime: 2);
         }
 
+        [When(@"I select Get Started")]
+        public void WhenISelectGetStarted()
+        {
+            Click("//form[@*='heroform']//a[contains(@class,'enquiry-button')]", waitTime: 1);
+        }
+
+
         [When(@"I submit the enquiry form")]
         public void WhenISubmitTheEnquiryForm()
         {
@@ -64,14 +71,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenICanAddAPropertyWithTheFollowingPostcode(string _postcode = "Random")
         {
             Click("I have a property I’d like to list");
-            Click("Next", waitTime: 1);
+            Click("Next", waitTime: 2);
             if (_postcode == "Random")
             {
                 _postcode = GetPostcode();
             }
             postcode = _postcode;
             Type("location", postcode);
-            Click("Search", waitTime: 1);
+            Click("Search", waitTime: 2);
             ClickIfDisplayed("Expand area", waitTime: 1);
             Click("Select Address", waitTime: 3);
             Click("Finish", waitTime: 2);
@@ -129,7 +136,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             JSType("digital-onboarding-directions-to-property", "Automated test");
             JSClick("Directions to your property");
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 2 - Guests and bedrooms")]
@@ -150,7 +157,7 @@ namespace SykesCottagesTestAutomation.BaseClass
                 JSClick("//input[@name='ds_bedroom_count']/following-sibling::*");
             }
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 3 - Photos of your property")]
@@ -162,7 +169,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 2);
             Type("//textarea[@id='upload-images-reason']", "Automated test", waitTime: 1);
             JSClick("//button/span[contains(text(),'Continue')]", waitTime: 5);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 4 - About your property")]
@@ -173,7 +180,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             Type("digital-onboarding-property-address", text: "Test", waitTime: 1);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 5);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 5 - Key Collection")]
@@ -185,7 +192,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             JSClick("//span[text()='Other']", waitTime: 1);
             Type("//textarea[@id='key-collection-alt-instructions']", "Test");
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 6 - Booking details")]
@@ -199,7 +206,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             JSClick("//span[text()='Friday']");
             JSClick("//span[@class='c-selection-button__label' and text()='Yes']", waitTime: 1);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Additional Property Details Step 7 - Upcoming bookings")]
@@ -209,7 +216,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertTextDisplayed("Upcoming bookings");
 
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 1 - Personal details")]
@@ -218,11 +225,11 @@ namespace SykesCottagesTestAutomation.BaseClass
             Screenshot("DO - Personal Details - Step 1 - Personal details");
             AssertTextDisplayed("Personal details");
 
-            Type("//input[@id='digital-onboarding-owner-postcode']", text: postcode, waitTime: 3);
+            Type("//input[@id='digital-onboarding-owner-postcode']", text: "SK101NH", waitTime: 3);
             JSClick("//div[@aria-expanded='true']//button/span[contains(text(),'Search')]", waitTime: 2);
             JSClick("//button[@aria-label='Select Address']", waitTime: 2);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 2 - Your bank details")]
@@ -235,7 +242,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             Type("//input[@id='digital-onboarding-account-number']", "01010101");
             Type("//input[@id='digital-onboarding-sort-code']", "010101", waitTime: 1);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 3 - File uploads")]
@@ -244,12 +251,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             Screenshot("DO - Personal Details - Step 3 - File uploads");
             AssertTextDisplayed("File uploads");
 
-            JSClick("//*[@*='digital-onboarding-gas-certificate-no']");
-            JSClick("//*[@*='digital-onboarding-liability-certificate-no']");
-            JSClick("//*[@*='digital-onboarding-fire-certificate-no']");
+            JSClick("//*[@*='digital-onboarding-gas-certificate-no']", waitTime: 1);
+            JSClick("//*[@*='digital-onboarding-liability-certificate-no']", waitTime: 1);
+            JSClick("//*[@*='digital-onboarding-fire-certificate-no']", waitTime: 1);
             JSClick("//*[@*='digital-onboarding-waterSupply-certificate-no']", waitTime: 1);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 4 - Select commission tier")]
@@ -260,7 +267,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             JSClick("//*[@*='commission-full']", waitTime: 1);
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 3);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can complete Personal Details Step 5 - Property Pricing")]
@@ -271,7 +278,7 @@ namespace SykesCottagesTestAutomation.BaseClass
 
             WaitUntilVisible("52 week breakdown");
             JSClick("//button/span[contains(text(),'Next')]", waitTime: 5);
-            Refresh();
+            //Refresh();
         }
 
         [Then(@"I can sign the contract and complete digital onboarding")]

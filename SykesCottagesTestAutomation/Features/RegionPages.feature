@@ -20,58 +20,6 @@ Scenario: The Regional pages are displayed correctly
 	| letyourcottage/In-Your-Area/Ireland                       | Ireland                    |
 	| letyourcottage/In-Your-Area/Scotland                      | Scotland                   |
 
-@RegionPages @LYPRegressionSuite @EnquiryForm
-Scenario: The enquiry form is displayed on the Regional pages
-	Given I have navigated to the following page: <Path>
-	Then the relevant elements are dislpayed
-	| Element                              |
-	| form-heading-container               |
-	| heroform_first_name                  |
-	| heroform_first_name_validation_error |
-	| heroform_email                       |
-	| heroform_email_validation_error      |
-	| heroform_phone                       |
-	| heroform_phone_validation_error      |
-	| Get started                          |
-	When I click //*[contains(@class,'c-lyc-form js-enquiry-form')]//*[text()='Get started']
-	Then the relevant elements are dislpayed
-	| Element                        |
-	| Please enter a full name.      |
-	| Please enter an email address. |
-	| Please enter a contact number. |
-	When I enter test.com in the following form field: heroform_email
-	And I click form-heading-container
-	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter test@test in the following form field: heroform_email
-	And I click form-heading-container
-	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter test in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter 070000000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-	When I enter 0700000000000000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-	When I enter +44 7000 000 000 in the following form field: heroform_phone
-	And I click form-heading-container
-	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	Then the following element is not displayed: Already started?
-	Examples:
-	| Path                                                      |
-	| letyourcottage/In-Your-Area/South-West                    |
-	| letyourcottage/In-Your-Area/South-of-England              |
-	| letyourcottage/In-Your-Area/Heart-of-England              |
-	| letyourcottage/In-Your-Area/East-Anglia                   |
-	| letyourcottage/In-Your-Area/Peak-District                 |
-	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast    |
-	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria |
-	| letyourcottage/In-Your-Area/Northumberland                |
-	| letyourcottage/In-Your-Area/Wales                         |
-	| letyourcottage/In-Your-Area/Ireland                       |
-	| letyourcottage/In-Your-Area/Scotland                      |
-
 @Navigation
 Scenario: The user can navigate to the Region pages
 	Given I am on the Sykes Homepage

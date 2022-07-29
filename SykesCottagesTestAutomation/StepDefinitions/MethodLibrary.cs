@@ -77,6 +77,7 @@ namespace SykesCottagesTestAutomation
             try
             {
                 GoTo(url); //Launch website
+                WaitASecond();
             }
             catch (Exception)
             {
