@@ -2,8 +2,51 @@
 	Test specific experiments
 
 In development:
+LetYourCottages_MultiStepFormLYP67the relevant elements are not dislpayed
+
+Live:
 LetYourCottages_RequestACallForm55
-LetYourCottages_MultiStepFormLYP67
+LetYourCottages_HomepageRevenueManagementSectionLYP124
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125
+	Given I have navigated to the following page: letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125
+	Then the relevant elements are dislpayed
+	| Element                           |
+	| How much could I earn with Sykes? |
+	| Property location                 |
+	| Property information              |
+	| Enquire today to get started      |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_PossibleInsurancePolicyimplementationLYP82
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_PossibleInsurancePolicyimplementationLYP82
+	Then the relevant elements are dislpayed
+	| Element                         |
+	| We’ve got your property covered |
+	| leading UK holiday home insurer |
+	| 40% of our customers            |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_HomepageOwnerStoriesSectionLYP123
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HomepageOwnerStoriesSectionLYP123
+	Then the relevant elements are dislpayed
+	| Element                                |
+	| youtube-banner__content                |
+	| Sykes Owner Stories: Anna and Alistair |
+	| Watch Owner Story                      |
+	When I click Watch Owner Story
+	Then the relevant elements are dislpayed
+	| Element                                   |
+	| youtube-banner                            |
+	| youtube-story-frame                       |
+	| https://www.youtube.com/embed/Ub391Pv_DA0 |
+	And the relevant elements are not dislpayed
+	| Element                 |
+	| What do our owners say? |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
@@ -89,7 +132,7 @@ Scenario: Experiment LetYourCottages_HeroFormTitleChange24
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_HeroFormTitleChange24
 	Then the following text is displayed: Start your letting journey with Sykes
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element                                                  |
 	| Complete the form to receive your information pack       |
 	| //div[@class='form-heading-container']//*[text()='Free'] |
@@ -184,7 +227,7 @@ Scenario: Experiment LetYourCottages_UpdateInfoPageHeaders19095
 	| Book a holiday                       |
 	| nav_top_link nav_telephone_container |
 	| Your account                         |
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
     | Element           |
     | Your Location     |
     | Get Started Today |
@@ -302,7 +345,7 @@ Scenario: Experiment LetYourCottages_RemoveSecondHeroCopy18494
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_RemoveSecondHeroCopy18494
 	And I close the pop-ups
-	Then the following elements are not dislpayed
+	Then the relevant elements are not dislpayed
 		| Elements                                                                                                                            |
 		| Let your property with Sykes and earn up to £125,000 per year*                                                                      |
 		| As the UK’s leading independent holiday letting agency, we’re committed to getting you the best possible return from your property. |
@@ -328,7 +371,7 @@ Scenario: Experiment LetYourCottages_ContrastAlertsOnLYP18473
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_ContrastAlertsOnLYP18473
 	Then the alerts are displayed on the page
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 		| Elements                                |
 		| o-icon c-alert__icon o-icon--size-large |
 		| c-alert__cta cta_tint js-alert-close    |
@@ -555,7 +598,7 @@ Scenario: Experiment LetYourCottages_ProgressBarUpdatetoWhite18869
 Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
 	Given I have navigated to the following page without dismissing alerts: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18458
-	Then the following elements are not dislpayed
+	Then the relevant elements are not dislpayed
 		| Element                              |
 		| An owner has just completed the form |
 		| A new property has just gone live    |
@@ -586,7 +629,7 @@ Scenario: Experiment LetYourCottages_RemoveSectionsFromLYP18292
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18292
 	And I close the pop-ups
-	Then the following elements are not dislpayed
+	Then the relevant elements are not dislpayed
 		| Element                                |
 		| Putting your property in the spotlight |
 		| Are you thinking of buying             |

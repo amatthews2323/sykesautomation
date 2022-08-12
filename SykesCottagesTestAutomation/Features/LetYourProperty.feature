@@ -15,7 +15,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Element                                      |
     | Customer reviews powered by Trustpilot       |
     | Gain exposure through our partners           |
-    | What do our owners say                       |
     | How much could I earn                        |
     | Holiday home management with Sykes           |
     | Putting your property in the spotlight       |
@@ -81,7 +80,7 @@ Scenario: The hero form is displayed correctly
 	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
 	| /terms/privacypolicy                                                                                      |
 	| Complete enquiry                                                                                          |
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |
@@ -155,7 +154,7 @@ Scenario: The modal form is displayed correctly
 	And I click o-overlay__content o-overlay__content--reset js-overlay-content
 	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
 	Then the following element is not displayed: Already started?
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |
@@ -174,7 +173,7 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	| list_property_first_name_validation_error                              |
 	| list_property_email_validation_error                                   |
 	| list_property_phone_validation_error                                   |
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |
@@ -250,7 +249,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Holiday letting made easy              |
 	| Information centre                     |
 	| Free Owner Information Pack            |
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element                 |
 	| contact-to-book mobile  |
 	| navbar-toggle collapsed |
@@ -305,7 +304,7 @@ Scenario: The footer content is displayed correctly
 	| Pinterest                                                  |
 	| Instagram                                                  |
 
-@LetYourProperty @LYPRegressionSuite
+@LetYourProperty
 Scenario: The testimonials carousel is present on the page
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then the Testimonials carousel is displayed on the page
@@ -350,7 +349,7 @@ Scenario: The Inactivity Modal is displayed correctly
 	     | Your details will be used by the Sykes group to send you information about our property letting services. |
 	     | You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
 	     | /terms/privacypolicy                                                                                      |
-	And the following elements are not dislpayed
+	And the relevant elements are not dislpayed
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |

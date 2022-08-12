@@ -175,7 +175,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [Then(@"the following elements are not dislpayed")]
+        [Then(@"the relevant elements are not dislpayed")]
         public void ThenTheFollowingElementsAreNotDislpayed(Table table)
         {
             var elements = table.Rows.Select(r => r[0]).ToArray();

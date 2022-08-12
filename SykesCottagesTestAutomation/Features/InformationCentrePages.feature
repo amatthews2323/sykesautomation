@@ -34,7 +34,6 @@ Scenario: The relevent elements are present on the Information Centre pages
     | hero__image                            |
     | Customer reviews powered by Trustpilot |
     | How much could I earn with Sykes?      |
-    | Estimated earnings                     |
 	When I scroll to the following element: page-footer
 	Then the following element is displayed: floatingactionbutton
 	Examples:

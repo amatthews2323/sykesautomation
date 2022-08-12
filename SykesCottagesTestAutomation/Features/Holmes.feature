@@ -28,34 +28,30 @@ Scenario: Get experiment conversion precentage
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I navigate to the Holmes statistics page and store the conversion percentage
 		| Example |
-		| 4579    |
-		| 4598    |
-		| 4615    |
-		| 4623    |
 		| 4645    |
 		| 4648    |
 		| 4658    |
-		| 4676    |
 		| 4683    |
 		| 4257    |
 		| 4560    |
+		| 4736    |
+		| 4739    |
+		| 4744    |
 
 @HolmesExperiments
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 		| Example                                                              |
-		| LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169 |
-		| LetYourCottages_EarningCalculatoronInformationPages19170             |
-		| LetYourCottages_HeroFormTitleChange24                                |
-		| LetYourCottages_ImagesbeforecontentLYP32                             |
 		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31      |
 		| LetYourCottages_InformationPageSearchMvpLyp12                        |
 		| LetYourCottages_InfopagecontentcollapsedsectionsLYP30                |
-		| LetYourCottages_LYPConversionFormFieldOrderLYP53                     |
 		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
 		| LetYourCottages_RemoveWeAreStillOpen17921                            |
 		| LetYourCottages_AddImageToInfoPages19099                             |
+		| LetYourCottages_PossibleInsurancePolicyimplementationLYP82           |
+		| LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125 |
+		| LetYourCottages_HeroFormTitleChange107                               |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

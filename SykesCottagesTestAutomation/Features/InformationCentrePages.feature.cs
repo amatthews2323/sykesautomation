@@ -197,27 +197,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 29
  testRunner.When("I wait 3 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "form-heading-container"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "hero__image"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "Customer reviews powered by Trustpilot"});
-                table55.AddRow(new string[] {
+                table60.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table55.AddRow(new string[] {
-                            "Estimated earnings"});
 #line 30
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table55, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table60, "Then ");
 #line hidden
-#line 38
+#line 37
  testRunner.When("I scroll to the following element: page-footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 39
+#line 38
  testRunner.Then("the following element is displayed: floatingactionbutton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
