@@ -109,18 +109,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table61.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table61.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "form-heading-container"});
-                table61.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Reading time"});
-                table61.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Download your free owner information pack"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table61, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table66, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

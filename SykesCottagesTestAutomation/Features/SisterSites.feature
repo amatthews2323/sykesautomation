@@ -33,7 +33,7 @@ Scenario: The Sykes sister sites are displayed correctly
 	| https://www.welsh-cottages.co.uk/letyourcottage/            | Welsh Cottage              |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    | Yorkshire Coastal          |
 
-@SisterSites @LYPRegressionSuite @SisterBrandForm
+@SisterBrands @LYPRegressionSuite @SisterBrandsForm
 Scenario: The enquiry form is displayed on the sister sites
 	Given I am on the following webpage: <URL>
 	Then the relevant elements are dislpayed
@@ -93,3 +93,22 @@ Scenario: The enquiry form is displayed on the sister sites
 	| https://www.menaiholidays.co.uk/letyourcottage/             |
 	| https://www.welsh-cottages.co.uk/letyourcottage/            |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    |
+
+@SisterBrands @FormSubmission
+Scenario: The Sister Brand hero form can be submitted
+	Given I am on the following webpage: <URL>
+	When I enter Test Owner in the following form field: heroform_first_name
+	And I enter test@test.com in the following form field: heroform_email
+	And I enter 07000000000 in the following form field: heroform_phone
+	And I click form-heading-container
+	And I select Get Started
+	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+	Examples:
+	| URL                                                                                        |
+	| https://wch.product.staging.cottage-search.com/letyourcottage/                             |
+	| https://cornish.product.staging.cottage-search.com/letyourcottage/                         |
+	| https://dreamcottages.product.staging.cottage-search.com/letyourcottage/?dev_tools=product |
+	| https://heartofthelakes.product.staging.cottage-search.com/letyourcottage/                 |
+	| https://helpful.product.staging.cottage-search.com/letyourcottage/                         |
+	| https://product.staging.hogansirishcottages.com/letyourcottage/                            |
+	| https://lakes.product.staging.cottage-search.com/letyourcottage/                           |

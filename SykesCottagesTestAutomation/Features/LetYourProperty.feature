@@ -23,7 +23,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Free Owner Information Pack                  |
     | Looking to get started with holiday letting? |
 
-@LetYourProperty @LYPRegressionSuite @HeroForm
+@LYPRegressionSuite @HeroForm
 Scenario: The hero form is displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the relevant elements are dislpayed
@@ -86,7 +86,6 @@ Scenario: The hero form is displayed correctly
 	| marketing_post |
 	Examples:
 	| Path                                                          |
-	| letyourcottage                                                |
 	| letyourcottage/managed-services/                              |
 	| letyourcottage/In-Your-Area/South-West                        |
 	| letyourcottage/In-Your-Area/South-of-England                  |
@@ -110,54 +109,47 @@ Scenario: The hero form is displayed correctly
 	| letyourcottage/information/leading-holiday-let-agency         |
 	| letyourcottage/information/holiday-management-services        |
 
-@LetYourProperty @ModalForm
-Scenario: The modal form is displayed correctly
-	Given I have navigated to the following page: letyourcottage
-	When I scroll to the following element: Start your listing today
-	And I click Start your listing today
-	Then I wait 2 seconds
-	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| o-overlay__content o-overlay__content--reset js-overlay-content                                           |
-	| list_property_first_name                                                                                  |
-	| list_property_email                                                                                       |
-	| list_property_phone                                                                                       |
-	| list_property_first_name_validation_error                                                                 |
-	| list_property_email_validation_error                                                                      |
-	| list_property_phone_validation_error                                                                      |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
-	| /terms/privacypolicy                                                                                      |
-	| submit                                                                                                    |
-	When I select the form overlay submit button
-	Then the relevant elements are dislpayed
-	| Element                        |
-	| Please enter a full name.      |
-	| Please enter an email address. |
-	| Please enter a contact number. |
-	When I enter test.com in the following form field: list_property_email
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter test@test in the following form field: list_property_email
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter test in the following form field: list_property_phone
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter 070000000 in the following form field: list_property_phone
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-	When I enter 0700000000000000 in the following form field: list_property_phone
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-	When I enter +44 7000 000 000 in the following form field: list_property_phone
-	And I click o-overlay__content o-overlay__content--reset js-overlay-content
-	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	Then the following element is not displayed: Already started?
-	And the relevant elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
+@FormSubmission
+Scenario: The hero form can be submitted
+	Given I have navigated to the following page: <Path>
+	When I enter Test Owner in the following form field: heroform_first_name
+	And I enter test@test.com in the following form field: heroform_email
+	And I enter 07000000000 in the following form field: heroform_phone
+	And I select Get Started
+	And I click Complete enquiry
+	And I wait 5 seconds
+	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+	And the relevant elements are dislpayed
+	| Element                                        |
+	| Hi, we’re ready when you are                   |
+	| Ask one of our property experts to call you    |
+	| Ask us to call you                             |
+	| Start your Sykes letting journey online        |
+	| Continue Online                                |
+	Examples:
+	| Path                                                          |
+	| letyourcottage/managed-services/                              |
+	| letyourcottage/In-Your-Area/South-West                        |
+	| letyourcottage/In-Your-Area/South-of-England                  |
+	| letyourcottage/In-Your-Area/Heart-of-England                  |
+	| letyourcottage/In-Your-Area/East-Anglia                       |
+	| letyourcottage/In-Your-Area/Peak-District                     |
+	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast        |
+	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria     |
+	| letyourcottage/In-Your-Area/Northumberland                    |
+	| letyourcottage/In-Your-Area/Wales                             |
+	| letyourcottage/In-Your-Area/Ireland                           |
+	| letyourcottage/In-Your-Area/Scotland                          |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/legal-regulations-for-holiday-lets |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/Tax-information-on-holiday-lets    |
+	| letyourcottage/information/run-holiday-let-as-business        |
+	| letyourcottage/information/leading-holiday-let-agency         |
+	| letyourcottage/information/holiday-management-services        |
 
 @LetYourProperty @LYPRegressionSuite @ModalForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
@@ -177,6 +169,26 @@ Scenario: The Information Centre carousel enquiry form is displayed correctly
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |
+
+@FormSubmission
+Scenario: The Information Centre carousel modal form can be submitted
+	Given I have navigated to the following page: letyourcottage
+	When I click Click enquire now and complete the form to receive your free information pack.
+	And I wait 2 seconds
+	And I enter Test Owner in the following form field: list_property_first_name
+	And I enter test@test.com in the following form field: list_property_email
+	And I enter 07000000000 in the following form field: list_property_phone
+	And I click list_property_first_name
+	And I click //*[contains(@class,'overlay is-open')]//button[@*='submit']
+	And I wait 5 seconds
+	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+	And the relevant elements are dislpayed
+	| Element                                        |
+	| Hi, we’re ready when you are                   |
+	| Ask one of our property experts to call you    |
+	| Ask us to call you                             |
+	| Start your Sykes letting journey online        |
+	| Continue Online                                |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -353,3 +365,21 @@ Scenario: The Inactivity Modal is displayed correctly
 	| Element        |
 	| marketing_sms  |
 	| marketing_post |
+
+Scenario: The Inactivity Modal form can be submitted
+	Given I have navigated to the following page: letyourcottage
+	When I wait 305 seconds
+	And I enter Test Owner in the following form field: inactive-form_first_name
+	And I enter test@test.com in the following form field: inactive-form_email
+	And I enter 07000000000 in the following form field: inactive-form_phone
+	And I click We're ready when you are
+	And I click //*[@*='idle-enquiry-form']//button[@*='submit']
+	And I wait 5 seconds
+	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+	And the relevant elements are dislpayed
+	| Element                                     |
+	| Hi, we’re ready when you are                |
+	| Ask one of our property experts to call you |
+	| Ask us to call you                          |
+	| Start your Sykes letting journey online     |
+	| Continue Online                             |

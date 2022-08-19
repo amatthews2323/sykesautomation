@@ -2,11 +2,70 @@
 	Test specific experiments
 
 In development:
-LetYourCottages_MultiStepFormLYP67the relevant elements are not dislpayed
+LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
+LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694
 
 Live:
-LetYourCottages_RequestACallForm55
 LetYourCottages_HomepageRevenueManagementSectionLYP124
+LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700
+LetYourCottages_BespokePPCherooninformationpagesLYP128
+LetYourCottages_RequestACallForm55
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
+	Then the following element is not displayed: We are still open as usual
+	Then the page sections are displayed in the relevant positions
+	| Key                       | Position |
+	| Holiday letting made easy | 5        |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
+	Then the relevant elements are dislpayed
+	| Element                             |
+	| Need a Holiday Let Mortgage letter? |
+	| Sykes Cottages Mortgage letter      |
+	| Start application                   |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_AddPhoneNumberToForm19768
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddPhoneNumberToForm19768
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                     |
+	| Or, call us to chat directly with an expert |
+	| 01244 617832                                |
+	| lyp_number_press                            |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_MultiStepFormLYP67
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_MultiStepFormLYP67
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                                   |
+	| first_name                                                                                                |
+	| last_name                                                                                                 |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	When I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the following element is displayed: Please provide your first and last name
+	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the relevant elements are dislpayed within the enquiry-form-step2 section
+	| Element                                                                                                   |
+	| phone                                                                                                     |
+	| email                                                                                                     |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	When I click //*[@*='enquiry-form-step2']//button[@*='submit']
+	Then the following element is displayed: Please provide at least one contact method
+	When I enter 07000000000 in the following form field: //*[@*='enquiry-form-step2']//input[@*='phone']
+	And I enter test@test.com in the following form field: //*[@*='enquiry-form-step2']//input[@*='email']
+	And I click //*[@*='enquiry-form-step2']//button[@*='submit']
+	Then the following element is displayed: Please ensure the following details are correct
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125

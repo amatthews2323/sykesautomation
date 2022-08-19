@@ -162,14 +162,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I store the active experiment IDs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "4419"});
-                table57.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "4396"});
 #line 20
- testRunner.Then("the following experiements are enabled", ((string)(null)), table57, "Then ");
+ testRunner.Then("the following experiements are enabled", ((string)(null)), table62, "Then ");
 #line hidden
 #line 24
  testRunner.And("I wait 300 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -200,28 +200,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I am on the following webpage: https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4645"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4648"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4658"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4683"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4257"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4560"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4736"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4739"});
-                table58.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "4744"});
 #line 29
- testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table58, "Then ");
+ testRunner.Then("I navigate to the Holmes statistics page and store the conversion percentage", ((string)(null)), table63, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -249,28 +249,34 @@ this.ScenarioInitialize(scenarioInfo);
 #line 43
  testRunner.Given("I am on the following webpage: https://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_InformationPageSearchMvpLyp12"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_InfopagecontentcollapsedsectionsLYP30"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_OptInRequestaCalltoPhoneLYP15"});
-                table59.AddRow(new string[] {
-                            "LetYourCottages_RemoveWeAreStillOpen17921"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_AddImageToInfoPages19099"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_PossibleInsurancePolicyimplementationLYP82"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125"});
-                table59.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "LetYourCottages_HeroFormTitleChange107"});
+                table64.AddRow(new string[] {
+                            "LetYourCottages_RequestACallForm55"});
+                table64.AddRow(new string[] {
+                            "LetYourCottages_AddPhoneNumberToForm19768"});
+                table64.AddRow(new string[] {
+                            "LetYourCottages_MultiStepFormLYP67"});
+                table64.AddRow(new string[] {
+                            "LetYourCottages_HomepageRevenueManagementSectionLYP124"});
 #line 44
- testRunner.Then("I search for the experient and store the status", ((string)(null)), table59, "Then ");
+ testRunner.Then("I search for the experient and store the status", ((string)(null)), table64, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -285,7 +291,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments infomation from Holmes", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 57
+#line 60
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -295,10 +301,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 58
+#line 61
  testRunner.Given("I am on the following webpage: http://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 59
+#line 62
  testRunner.When("I return the experiment details 4612,4674,4693,4554,4619,4457,4257", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }

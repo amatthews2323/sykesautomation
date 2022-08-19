@@ -37,7 +37,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select Get Started")]
         public void WhenISelectGetStarted()
         {
-            Click("//form[@*='heroform']//a[contains(@class,'enquiry-button')]", waitTime: 1);
+            Click("//form[@*='heroform']//*[contains(@class,'enquiry-button')]", waitTime: 1);
         }
 
 

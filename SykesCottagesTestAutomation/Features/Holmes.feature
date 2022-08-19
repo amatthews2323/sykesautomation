@@ -47,11 +47,14 @@ Scenario: Get experiment status
 		| LetYourCottages_InformationPageSearchMvpLyp12                        |
 		| LetYourCottages_InfopagecontentcollapsedsectionsLYP30                |
 		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
-		| LetYourCottages_RemoveWeAreStillOpen17921                            |
 		| LetYourCottages_AddImageToInfoPages19099                             |
 		| LetYourCottages_PossibleInsurancePolicyimplementationLYP82           |
 		| LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125 |
 		| LetYourCottages_HeroFormTitleChange107                               |
+		| LetYourCottages_RequestACallForm55                                   |
+		| LetYourCottages_AddPhoneNumberToForm19768                            |
+		| LetYourCottages_MultiStepFormLYP67                                   |
+		| LetYourCottages_HomepageRevenueManagementSectionLYP124               |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes
