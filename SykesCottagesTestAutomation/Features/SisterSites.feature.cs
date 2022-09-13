@@ -122,26 +122,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             string.Format("{0}", title)});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "nav_logo"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "hero__image"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "form-heading-container"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Request a free owner pack"});
-                table91.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Claim My Free Pack"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table91, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table100, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -195,36 +195,36 @@ this.ScenarioInitialize(scenarioInfo);
 #line 38
  testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "form-heading-container"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_first_name"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_email"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_phone"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "You can opt out or unsubscribe at any time by contacting us or using an unsubscri" +
                                 "be link."});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table92.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Get started"});
 #line 39
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table92, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table101, "Then ");
 #line hidden
 #line 53
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -314,7 +314,7 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Sister Brand hero form can be submitted")]
         [NUnit.Framework.CategoryAttribute("SisterBrands")]
-        [NUnit.Framework.CategoryAttribute("FormSubmission")]
+        [NUnit.Framework.CategoryAttribute("SisterBrandsFormSubmission")]
         [NUnit.Framework.TestCaseAttribute("https://wch.product.staging.cottage-search.com/letyourcottage/", null)]
         [NUnit.Framework.TestCaseAttribute("https://cornish.product.staging.cottage-search.com/letyourcottage/", null)]
         [NUnit.Framework.TestCaseAttribute("https://dreamcottages.product.staging.cottage-search.com/letyourcottage/?dev_tool" +
@@ -327,7 +327,7 @@ this.ScenarioInitialize(scenarioInfo);
         {
             string[] @__tags = new string[] {
                     "SisterBrands",
-                    "FormSubmission"};
+                    "SisterBrandsFormSubmission"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

@@ -97,24 +97,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/advice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table93 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table102 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Holiday Let Information Centre"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Browse categories"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Beginner Guides to Buying a Holiday Home"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Latest Guides and Articles"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Services and Tools"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Making a Fresh Start"});
-                table93.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Contact us"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table93, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table102, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -145,26 +145,26 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/buying-a-holiday-ho" +
                         "me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Buying a Holiday Home"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Where to Buy"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "General"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Beginner Guides to Buying a Holiday Home"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Intermediate Guides to Buying a Holiday Home"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Services and Tools"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Converting a Listed Chapel Into a Holiday Let"});
-                table94.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Contact us"});
 #line 20
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table94, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table103, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -194,32 +194,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 33
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/financial-guides", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Financial Guides"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Regulations"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Mortgages"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Insurance"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Taxes"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Beginner Guides to Financials"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Intermediate Guides to Financials"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Advanced Guides to Financials"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Services and Tools"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Making an Income"});
-                table95.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Contact us"});
 #line 34
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table95, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table104, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -250,34 +250,34 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/holiday-letting-gui" +
                         "des", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Letting a Holiday Home"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Holiday Letting"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Maximising Earnings"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Running Your Holiday Let"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Tips and Advice"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Listing a Holiday Let"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Beginner Guides to Letting a Holiday Home"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Intermediate Guides to Letting a Holiday Home"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Advanced Guides to Letting a Holiday Home"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Services and Tools"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Setting up a Holiday Let"});
-                table96.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Contact us"});
 #line 51
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table105, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -308,20 +308,20 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/managing-your-holid" +
                         "ay-let", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table97.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Managing a Holiday Let"});
-                table97.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Why Sykes?"});
-                table97.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Services and Tools"});
-                table97.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Running Two Holiday Lets"});
-                table97.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Contact us"});
 #line 69
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table97, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table106, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -351,16 +351,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 79
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/case-studies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table107 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table98.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "Owner Case Studies"});
-                table98.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "Services and Tools"});
-                table98.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "Contact us"});
 #line 80
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table98, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table107, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -391,30 +391,30 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/a-guide-to-" +
                         "buying-a-holiday-let", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "A Guide to Buying a Holiday Let"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Let\'s Work Together"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "The key benefits of buying a holiday let"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "A guide to buying your holiday home"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Where to buy your holiday home"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Legalities"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Taxes"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "What are the extra costs when you buy a holiday let?"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Buying a Holiday Home General Guides"});
-                table99.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Contact us"});
 #line 89
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table99, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table108, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -447,30 +447,30 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/why-are-hol" +
                         "iday-lets-a-good-investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table109 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Are Holiday Lets a Good Investment?"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Let\'s Work Together"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Are holiday lets a good investment?"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "What types of holiday let mortgages are there?"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "What Return on Investment can you get from a holiday let?"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Best places to buy a holiday home"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "How to maximise your income"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Ready to get started?"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Buying a Holiday Home General Guides"});
-                table100.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Contact us"});
 #line 105
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table100, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table109, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -503,26 +503,26 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/buying-a-ho" +
                         "liday-home-abroad-vs-uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table110 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Buying a Holiday Home Abroad vs. in the UK"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Let\'s Work Together"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Benefits of Holiday Letting in the UK"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Disadvantages of Holiday Letting in the UK"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Benefits of Holiday Letting Abroad"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Disadvantages of Holiday Letting Abroad"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Where to Buy Guides"});
-                table101.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Contact us"});
 #line 121
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table101, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table110, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

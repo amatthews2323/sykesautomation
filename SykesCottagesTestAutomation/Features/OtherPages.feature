@@ -21,7 +21,7 @@ Scenario: The relevent elements are present on the Managed Services page
          | Element                   |
          | Holiday home management   |
          | hero-slideshow            |
-         | form-heading-container    |
+         | c-lyc-form                |
          | Managed services at Sykes |
          | What are the benefits     |
          | Partially managed         |

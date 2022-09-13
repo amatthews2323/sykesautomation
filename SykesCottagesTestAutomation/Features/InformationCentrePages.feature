@@ -29,7 +29,6 @@ Scenario: The relevent elements are present on the Information Centre pages
 	When I wait 3 seconds
 	Then the relevant elements are dislpayed
     | Element                                |
-    | form-heading-container                 |
     | <Header>                               |
     | hero__image                            |
     | Customer reviews powered by Trustpilot |

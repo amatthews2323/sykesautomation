@@ -94,7 +94,7 @@ Scenario: The enquiry form is displayed on the sister sites
 	| https://www.welsh-cottages.co.uk/letyourcottage/            |
 	| https://www.yorkshirecoastalcottages.com/cottage-owners/    |
 
-@SisterBrands @FormSubmission
+@SisterBrands @SisterBrandsFormSubmission
 Scenario: The Sister Brand hero form can be submitted
 	Given I am on the following webpage: <URL>
 	When I enter Test Owner in the following form field: heroform_first_name

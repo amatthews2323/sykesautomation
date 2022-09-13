@@ -7,9 +7,10 @@ Scenario: The Landing pages are displayed correctly
 	Then the relevant elements are dislpayed
 	| Element                                   |
 	| <Title>                                   |
-	| form-heading-container                    |
+	| c-lyc-form                                |
 	| Reading time                              |
 	| Download your free owner information pack |
+	| Back To Top                               |
 	Examples:
 	| Path                                                                | Title                                                                     |
 	| letyourcottage/information/run-holiday-let-as-business              | How to Run a Holiday Let as a Business                                    |

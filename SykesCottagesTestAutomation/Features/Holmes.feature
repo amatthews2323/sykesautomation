@@ -42,21 +42,23 @@ Scenario: Get experiment conversion precentage
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-		| Example                                                              |
-		| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31      |
-		| LetYourCottages_InformationPageSearchMvpLyp12                        |
-		| LetYourCottages_InfopagecontentcollapsedsectionsLYP30                |
-		| LetYourCottages_OptInRequestaCalltoPhoneLYP15                        |
-		| LetYourCottages_AddImageToInfoPages19099                             |
-		| LetYourCottages_PossibleInsurancePolicyimplementationLYP82           |
-		| LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125 |
-		| LetYourCottages_HeroFormTitleChange107                               |
-		| LetYourCottages_RequestACallForm55                                   |
-		| LetYourCottages_AddPhoneNumberToForm19768                            |
-		| LetYourCottages_MultiStepFormLYP67                                   |
-		| LetYourCottages_HomepageRevenueManagementSectionLYP124               |
+	| Example                                                           |
+	| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31   |
+	| LetYourCottages_InformationPageSearchMvpLyp12                     |
+	| LetYourCottages_InfopagecontentcollapsedsectionsLYP30             |
+	| LetYourCottages_PossibleInsurancePolicyimplementationLYP82        |
+	| LetYourCottages_HeroFormTitleChange107                            |
+	| LetYourCottages_HomepageOwnerStoriesSectionLYP123                 |
+	| LetYourCottages_HomepageRevenueManagementSectionLYP124            |
+	| LetYourCottages_RequestACallForm55                                |
+	| LetYourCottages_AddPhoneNumberToForm19768                         |
+	| LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700 |
+	| LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694          |
+	| LetYourCottages_CaptureIfPnoHasAProperty19842                     |
+	| LetYourCottages_TestRequestaCallForminHeroLYP166                  |
+	| LetYourCottages_DownloadPackSection144                            |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes
 	Given I am on the following webpage: http://holmes.prod.sykes.cloud/experiments
-	When I return the experiment details 4612,4674,4693,4554,4619,4457,4257
+	When I return the experiment details 4557,3960,4045,4717,4765,4774,4758,4708,4730,4790,4733,4762,4457,4648

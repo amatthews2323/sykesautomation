@@ -5,7 +5,17 @@
 Scenario: The Regional pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the following text is displayed: <Region>
-	And the following element is displayed: form-heading-container
+	And the relevant elements are dislpayed
+	| Element                                     |
+	| c-lyc-form                                  |
+	| trustpilot-widget                           |
+	| We are still open as usual                  |
+	| How much could I earn with Sykes?           |
+	| Local Holiday Letting Expertise             |
+	| Holiday letting made easy                   |
+	| Here's why our local experts love their job |
+	| Request your free owner information pack    |
+	| Back To Top                                 |
 	Examples:
 	| Path                                                      | Region                     |
 	| letyourcottage/In-Your-Area/South-West                    | South West                 |

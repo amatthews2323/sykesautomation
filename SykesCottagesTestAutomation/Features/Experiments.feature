@@ -2,14 +2,79 @@
 	Test specific experiments
 
 In development:
-LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
-LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694
+LetYourCottages_DuplicateOwnerLeadsViaLYPFormLYP49
+LetYourCottages_FormswithoutatleastonemarketingpreferenceLYP131
 
 Live:
 LetYourCottages_HomepageRevenueManagementSectionLYP124
 LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700
 LetYourCottages_BespokePPCherooninformationpagesLYP128
-LetYourCottages_RequestACallForm55
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
+	And I select option Bath from the region dropdown
+	Then the following element is not displayed: Your property details are unique, please contact our team at 01244 356 666 for a more accurate estimate.
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_DownloadPackSection144
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_DownloadPackSection144
+	Then the relevant elements are dislpayed
+	| Element                                   |
+	| Download your Free Owner Information Pack |
+	| Download owner pack                       |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_TestRequestaCallForminHeroLYP166
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
+	Then the following text is displayed: Get information and advice from our team of holiday letting experts
+	Then the relevant elements are dislpayed within the request-a-call-hero section
+	| Element                                                                            |
+	| request-a-call-hero_first_name                                                     |
+	| request-a-call-hero_last_name                                                      |
+	| request-a-call-hero_phone                                                          |
+	| Sykes' Group will use your number to call you about our property letting services. |
+	| /terms/privacypolicy                                                               |
+	When I select Get started within the request-a-call-hero section
+	Then the relevant elements are dislpayed within the request-a-call-hero section
+	| Element                                         |
+	| request-a-call-hero_first_name_validation_error |
+	| Please enter your first name.                   |
+	| request-a-call-hero_last_name_validation_error  |
+	| Please enter your surname.                      |
+	| request-a-call-hero_phone_validation_error      |
+	| Please enter a contact number.                  |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_CaptureIfPnoHasAProperty19842
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_CaptureIfPnoHasAProperty19842
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                 |
+	| Do you own or manage a property to let? |
+	| lyc-dropdown-heroform_has_a_property    |
+	When I select Get Started
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                  |
+	| heroform_has_a_property_validation_error |
+	| Please select an option.                 |
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RequestACallForm55
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_RequestACallForm55
+	And I click #js-request-a-call
+	Then the relevant elements are dislpayed within the request-a-call section
+	| Element                                                                                                   |
+	| request-a-call_first_name                                                                                 |
+	| request-a-call_last_name                                                                                  |
+	| request-a-call_phone                                                                                      |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	| Have us call you                                                                                          |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
@@ -39,44 +104,6 @@ Scenario: Experiment LetYourCottages_AddPhoneNumberToForm19768
 	| Or, call us to chat directly with an expert |
 	| 01244 617832                                |
 	| lyp_number_press                            |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_MultiStepFormLYP67
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_MultiStepFormLYP67
-	Then the relevant elements are dislpayed within the enquiry-multi-step section
-	| Element                                                                                                   |
-	| first_name                                                                                                |
-	| last_name                                                                                                 |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| /terms/privacypolicy                                                                                      |
-	When I click //*[@*='enquiry-multi-step']/button[@*='submit']
-	Then the following element is displayed: Please provide your first and last name
-	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
-	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
-	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
-	Then the relevant elements are dislpayed within the enquiry-form-step2 section
-	| Element                                                                                                   |
-	| phone                                                                                                     |
-	| email                                                                                                     |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	When I click //*[@*='enquiry-form-step2']//button[@*='submit']
-	Then the following element is displayed: Please provide at least one contact method
-	When I enter 07000000000 in the following form field: //*[@*='enquiry-form-step2']//input[@*='phone']
-	And I enter test@test.com in the following form field: //*[@*='enquiry-form-step2']//input[@*='email']
-	And I click //*[@*='enquiry-form-step2']//button[@*='submit']
-	Then the following element is displayed: Please ensure the following details are correct
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125
-	Given I have navigated to the following page: letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_BedroomsinCalculatorvsEarningsCardsonInfoPagesLYP125
-	Then the relevant elements are dislpayed
-	| Element                           |
-	| How much could I earn with Sykes? |
-	| Property location                 |
-	| Property information              |
-	| Enquire today to get started      |
 
 @ActiveExperiments
 Scenario: Experiment LetYourCottages_PossibleInsurancePolicyimplementationLYP82
@@ -160,6 +187,38 @@ Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
 	| Holiday let mortgages                             |
 	| Running your holiday let                          |
 	| Why now is a good time to invest in a holiday let |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_MultiStepFormLYP67
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_MultiStepFormLYP67
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                                   |
+	| first_name                                                                                                |
+	| last_name                                                                                                 |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	When I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the following element is displayed: Please provide your first and last name
+	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the relevant elements are dislpayed within the enquiry-form-step2 section
+	| Element                                                                                                   |
+	| phone                                                                                                     |
+	| email                                                                                                     |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	When I click //*[@*='enquiry-form-step2']//button[@*='submit']
+	Then the following element is displayed: Please provide at least one contact method
+	When I enter 07000000000 in the following form field: //*[@*='enquiry-form-step2']//input[@*='phone']
+	And I enter test@test.com in the following form field: //*[@*='enquiry-form-step2']//input[@*='email']
+	And I click //*[@*='enquiry-form-step2']//button[@*='submit']
+	Then the following element is displayed: Please ensure the following details are correct
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_MultiStepFormFormFieldOrderLYP150
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_MultiStepFormFormFieldOrderLYP150
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_InformationPagesHeroImageExperimentAmendLYP65
