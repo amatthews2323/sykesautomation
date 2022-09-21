@@ -260,25 +260,29 @@ this.ScenarioInitialize(scenarioInfo);
                 table69.AddRow(new string[] {
                             "LetYourCottages_PossibleInsurancePolicyimplementationLYP82"});
                 table69.AddRow(new string[] {
-                            "LetYourCottages_HeroFormTitleChange107"});
+                            "LetYourCottages_MakeLYPNumberClickableOnMobileHomepage19693"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_HomepageOwnerStoriesSectionLYP123"});
                 table69.AddRow(new string[] {
-                            "LetYourCottages_HomepageRevenueManagementSectionLYP124"});
-                table69.AddRow(new string[] {
                             "LetYourCottages_RequestACallForm55"});
-                table69.AddRow(new string[] {
-                            "LetYourCottages_AddPhoneNumberToForm19768"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694"});
+                table69.AddRow(new string[] {
+                            "LetYourCottages_SpeakToSomeoneSectionAllPlatforms19766"});
+                table69.AddRow(new string[] {
+                            "LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_CaptureIfPnoHasAProperty19842"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_TestRequestaCallForminHeroLYP166"});
                 table69.AddRow(new string[] {
                             "LetYourCottages_DownloadPackSection144"});
+                table69.AddRow(new string[] {
+                            "LetYourCottages_AddRemoteValidationToTheEnquiryForm19834"});
+                table69.AddRow(new string[] {
+                            "LetYourCottages_ImprovehomepagesectionsfortabletLYP81"});
 #line 44
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table69, "Then ");
 #line hidden
@@ -295,7 +299,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments infomation from Holmes", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 62
+#line 64
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -305,10 +309,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 63
+#line 65
  testRunner.Given("I am on the following webpage: http://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 64
+#line 66
  testRunner.When("I return the experiment details 4557,3960,4045,4717,4765,4774,4758,4708,4730,4790" +
                         ",4733,4762,4457,4648", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

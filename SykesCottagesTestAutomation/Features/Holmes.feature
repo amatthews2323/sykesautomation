@@ -47,16 +47,18 @@ Scenario: Get experiment status
 	| LetYourCottages_InformationPageSearchMvpLyp12                     |
 	| LetYourCottages_InfopagecontentcollapsedsectionsLYP30             |
 	| LetYourCottages_PossibleInsurancePolicyimplementationLYP82        |
-	| LetYourCottages_HeroFormTitleChange107                            |
+	| LetYourCottages_MakeLYPNumberClickableOnMobileHomepage19693       |
 	| LetYourCottages_HomepageOwnerStoriesSectionLYP123                 |
-	| LetYourCottages_HomepageRevenueManagementSectionLYP124            |
 	| LetYourCottages_RequestACallForm55                                |
-	| LetYourCottages_AddPhoneNumberToForm19768                         |
 	| LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700 |
 	| LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694          |
+	| LetYourCottages_SpeakToSomeoneSectionAllPlatforms19766            |
+	| LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37       |
 	| LetYourCottages_CaptureIfPnoHasAProperty19842                     |
 	| LetYourCottages_TestRequestaCallForminHeroLYP166                  |
 	| LetYourCottages_DownloadPackSection144                            |
+	| LetYourCottages_AddRemoteValidationToTheEnquiryForm19834          |
+	| LetYourCottages_ImprovehomepagesectionsfortabletLYP81             |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes
