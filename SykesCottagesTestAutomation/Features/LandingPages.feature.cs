@@ -118,8 +118,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table71.AddRow(new string[] {
                             "Reading time"});
                 table71.AddRow(new string[] {
-                            "Download your free owner information pack"});
-                table71.AddRow(new string[] {
                             "Back To Top"});
 #line 7
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table71, "Then ");

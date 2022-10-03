@@ -120,28 +120,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Then(string.Format("the following text is displayed: {0}", region), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "c-lyc-form"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "trustpilot-widget"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "We are still open as usual"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Local Holiday Letting Expertise"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Here\'s why our local experts love their job"});
-                table99.AddRow(new string[] {
-                            "Request your free owner information pack"});
-                table99.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Back To Top"});
 #line 8
- testRunner.And("the relevant elements are dislpayed", ((string)(null)), table99, "And ");
+ testRunner.And("the relevant elements are dislpayed", ((string)(null)), table103, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -174,7 +172,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Link", link);
             argumentsOfScenario.Add("PageTitle", pageTitle);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The user can navigate to the Region pages", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 34
+#line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -184,16 +182,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 35
+#line 34
  testRunner.Given("I am on the Sykes Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 36
+#line 35
  testRunner.When("I select the Holiday homes for sale navigation link under Let Your Property", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 37
+#line 36
  testRunner.And(string.Format("I select the {0} navigation link under Your Location", link), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 38
+#line 37
  testRunner.Then(string.Format("the following page title is displayed: {0}", pageTitle), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

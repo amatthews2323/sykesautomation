@@ -14,7 +14,6 @@ Scenario: The Regional pages are displayed correctly
 	| Local Holiday Letting Expertise             |
 	| Holiday letting made easy                   |
 	| Here's why our local experts love their job |
-	| Request your free owner information pack    |
 	| Back To Top                                 |
 	Examples:
 	| Path                                                      | Region                     |

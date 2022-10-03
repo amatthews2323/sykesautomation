@@ -9,7 +9,6 @@ Scenario: The Landing pages are displayed correctly
 	| <Title>                                   |
 	| c-lyc-form                                |
 	| Reading time                              |
-	| Download your free owner information pack |
 	| Back To Top                               |
 	Examples:
 	| Path                                                                | Title                                                                     |

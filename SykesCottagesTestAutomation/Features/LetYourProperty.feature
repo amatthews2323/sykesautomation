@@ -24,6 +24,66 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Looking to get started with holiday letting? |
 
 @LYPRegressionSuite @HeroForm
+Scenario: The MultiStep form is displayed correctly
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: LetYourCottages_RemovalOfNonHeroForms171
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                                   |
+	| first_name                                                                                                |
+	| last_name                                                                                                 |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	When I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the following element is displayed: Please provide your first and last name
+	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                           |
+	| In order to receive email communciations from our expert team, please provide your email address. |
+	| Email address                                                                                     |
+	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 3 seconds
+	Then the relevant elements are dislpayed
+	| Element                                                                                                                                     |
+	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
+	| Phone number                                                                                                                                |
+	When I enter 07000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I wait 3 seconds
+	Then the relevant elements are dislpayed
+	| Element                                                                                                   |
+	| Please ensure the following details are correct                                                           |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| Submit enquiry                                                                                            |
+	Examples:
+	| Path                                                          |
+	| letyourcottage/                                               |
+	| letyourcottage/managed-services/                              |
+	| letyourcottage/In-Your-Area/South-West                        |
+	| letyourcottage/In-Your-Area/South-of-England                  |
+	| letyourcottage/In-Your-Area/Heart-of-England                  |
+	| letyourcottage/In-Your-Area/East-Anglia                       |
+	| letyourcottage/In-Your-Area/Peak-District                     |
+	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast        |
+	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria     |
+	| letyourcottage/In-Your-Area/Northumberland                    |
+	| letyourcottage/In-Your-Area/Wales                             |
+	| letyourcottage/In-Your-Area/Ireland                           |
+	| letyourcottage/In-Your-Area/Scotland                          |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/legal-regulations-for-holiday-lets |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/Tax-information-on-holiday-lets    |
+	| letyourcottage/information/run-holiday-let-as-business        |
+	| letyourcottage/information/leading-holiday-let-agency         |
+	| letyourcottage/information/holiday-management-services        |
+
+@HeroForm
 Scenario: The Request a Call hero form is displayed correctly
 	Given I have navigated to the following page: <Path>
 	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
@@ -214,7 +274,7 @@ Scenario: The hero form can be submitted
 	| letyourcottage/information/leading-holiday-let-agency         |
 	| letyourcottage/information/holiday-management-services        |
 
-@LetYourProperty @LYPRegressionSuite @ModalForm
+@LetYourProperty @ModalForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
 	When I click Click enquire now and complete the form to receive your free information pack.
