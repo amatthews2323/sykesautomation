@@ -23,7 +23,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Given(@"I have navigated to the following page: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
-            LaunchWebsite("", path);
+            LaunchWebsite(Hooks.domainOverride, path);
             SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
             ClosePopups(_acceptCookies: true, _dismissAlerts: true);
         }

@@ -23,7 +23,7 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Free Owner Information Pack                  |
     | Looking to get started with holiday letting? |
 
-@LYPRegressionSuite @HeroForm
+@HeroForm
 Scenario: The MultiStep form is displayed correctly
 	Given I have navigated to the following page: <Path>
 	When I apply the following experiment: LetYourCottages_RemovalOfNonHeroForms171
@@ -42,16 +42,32 @@ Scenario: The MultiStep form is displayed correctly
 	| Element                                                                                           |
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
+	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	Then the following text is displayed: Please enter a valid email address.
+	When I enter test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
+	When I enter test@test in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I wait 3 seconds
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
-	When I enter 07000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I wait 3 seconds
+	Then the following text is displayed: Please enter a valid contact number.
+	When I enter 070000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
+	When I enter 0700000000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
+	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
@@ -274,6 +290,55 @@ Scenario: The hero form can be submitted
 	| letyourcottage/information/leading-holiday-let-agency         |
 	| letyourcottage/information/holiday-management-services        |
 
+@FormSubmission
+	Scenario: The MultiStep hero form can be submitted
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
+	Then the following text is displayed: Get information and advice from our team of holiday letting experts
+	Then the relevant elements are dislpayed within the request-a-call-hero section
+	| Element                                                                            |
+	| request-a-call-hero_first_name                                                     |
+	| request-a-call-hero_last_name                                                      |
+	| request-a-call-hero_phone                                                          |
+	| Sykes' Group will use your number to call you about our property letting services. |
+	| /terms/privacypolicy                                                               |
+	When I select Get started within the request-a-call-hero section
+	Then the relevant elements are dislpayed within the request-a-call-hero section
+	| Element                                         |
+	| request-a-call-hero_first_name_validation_error |
+	| Please enter your first name.                   |
+	| request-a-call-hero_last_name_validation_error  |
+	| Please enter your surname.                      |
+	| request-a-call-hero_phone_validation_error      |
+	| Please enter a contact number.                  |
+	When I enter test in the following form field: request-a-call-hero_phone
+	When I select Get started within the request-a-call-hero section
+	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	When I enter 070000000 in the following form field: request-a-call-hero_phone
+	When I select Get started within the request-a-call-hero section
+	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
+	When I enter 0700000000000000 in the following form field: request-a-call-hero_phone
+	When I select Get started within the request-a-call-hero section
+	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
+	When I enter +44 7000 000 000 in the following form field: request-a-call-hero_phone
+	When I select Get started within the request-a-call-hero section
+	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
+	Then the following element is not displayed: Already started?
+	And the relevant elements are not dislpayed
+	| Element        |
+	| marketing_sms  |
+	| marketing_post |
+	And I click Submit enquiry
+	And I wait 5 seconds
+	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
+	And the relevant elements are dislpayed
+	| Element                                                                                                       |
+	| Thank you for your enquiry                                                                                    |
+	| Sit tight, a Sykes property expert will be in touch to discuss the next steps of your holiday letting journey |
+	Examples:
+	| Path            |
+	| letyourcottage/ |
+
 @LetYourProperty @ModalForm
 Scenario: The Information Centre carousel enquiry form is displayed correctly
 	Given I have navigated to the following page: letyourcottage
@@ -396,7 +461,6 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Putting your property in the spotlight |
 	| Holiday letting made easy              |
 	| Information centre                     |
-	| Free Owner Information Pack            |
 	And the relevant elements are not dislpayed
 	| Element                 |
 	| contact-to-book mobile  |
