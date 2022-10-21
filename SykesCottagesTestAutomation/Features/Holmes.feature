@@ -42,23 +42,22 @@ Scenario: Get experiment conversion precentage
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-	| Example                                                           |
-	| LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31   |
-	| LetYourCottages_InformationPageSearchMvpLyp12                     |
-	| LetYourCottages_InfopagecontentcollapsedsectionsLYP30             |
-	| LetYourCottages_PossibleInsurancePolicyimplementationLYP82        |
-	| LetYourCottages_MakeLYPNumberClickableOnMobileHomepage19693       |
-	| LetYourCottages_HomepageOwnerStoriesSectionLYP123                 |
-	| LetYourCottages_RequestACallForm55                                |
-	| LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700 |
-	| LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694          |
-	| LetYourCottages_SpeakToSomeoneSectionAllPlatforms19766            |
-	| LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37       |
-	| LetYourCottages_CaptureIfPnoHasAProperty19842                     |
-	| LetYourCottages_TestRequestaCallForminHeroLYP166                  |
-	| LetYourCottages_DownloadPackSection144                            |
-	| LetYourCottages_AddRemoteValidationToTheEnquiryForm19834          |
-	| LetYourCottages_ImprovehomepagesectionsfortabletLYP81             |
+	| Example                                                     |
+	| LetYourCottages_PossibleInsurancePolicyimplementationLYP82  |
+	| LetYourCottages_MakeLYPNumberClickableOnMobileHomepage19693 |
+	| LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694    |
+	| LetYourCottages_SpeakToSomeoneSectionAllPlatforms19766      |
+	| LetYourCottages_DownloadPackSection144                      |
+	| LetYourCottages_AddRemoteValidationToTheEnquiryForm19834    |
+	| LetYourCottages_ImprovehomepagesectionsfortabletLYP81       |
+	| LetYourCottages_RemoveOwnerPack19968                        |
+	| LetYourCottages_RedirectSykesLogoToHomePage19977            |
+	| LetYourCottages_RemovalOfNonHeroForms171                    |
+	| LetYourCottages_HeroContentandFormTitleChangeLYP178         |
+	| LetYourCottages_CreateExperimenttoHideFreebadgeLYP177       |
+	| LetYourCottages_LYPTestPositionofCalculatorLYP182           |
+	| LetYourCottages_PartnersMarketingSection152                 |
+	| LetYourCottages_LYPHeroImageChangetoConveyOwnerSpaceLYP185  |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

@@ -98,7 +98,7 @@ namespace SykesCottagesTestAutomation
 
             if (Hooks.acceptCookies == true)
             {
-                ClickIfDisplayed("Accept All Cookies", waitTime: 2);
+                ClickIfDisplayed("Accept all", waitTime: 2);
             }
             else
             {

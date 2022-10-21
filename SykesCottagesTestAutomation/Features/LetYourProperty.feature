@@ -20,7 +20,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Putting your property in the spotlight       |
     | Holiday letting made easy                    |
     | Information centre                           |
-    | Free Owner Information Pack                  |
     | Looking to get started with holiday letting? |
 
 @HeroForm

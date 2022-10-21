@@ -10,8 +10,6 @@ Scenario: The Sykes sister sites are displayed correctly
 	| nav_logo                               |
 	| hero__image                            |
 	| form-heading-container                 |
-	| Putting your property in the spotlight |
-	| Holiday letting made easy              |
 	| Request a free owner pack              |
 	| Claim My Free Pack                     |
 	Examples:
@@ -53,13 +51,13 @@ Scenario: The enquiry form is displayed on the sister sites
 	When I click form-heading-container
 	And I click heroform_first_name
 	And I click form-heading-container
-	Then the following text is displayed: Please enter a full name.
+	Then the following text is displayed: Please enter a full name
 	When I click heroform_email
 	And I click form-heading-container
-	Then the following text is displayed: Please enter an email address.
+	Then the following text is displayed: Please enter an email address
 	When I click heroform_phone
 	And I click form-heading-container
-	Then the following text is displayed: Please enter a contact number.
+	Then the following text is displayed: Please enter a contact number
 	When I enter test.com in the following form field: heroform_email
 	And I click form-heading-container
 	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
@@ -104,11 +102,20 @@ Scenario: The Sister Brand hero form can be submitted
 	And I select Get Started
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:
-	| URL                                                                                        |
-	| https://wch.product.staging.cottage-search.com/letyourcottage/                             |
-	| https://cornish.product.staging.cottage-search.com/letyourcottage/                         |
-	| https://dreamcottages.product.staging.cottage-search.com/letyourcottage/?dev_tools=product |
-	| https://heartofthelakes.product.staging.cottage-search.com/letyourcottage/                 |
-	| https://helpful.product.staging.cottage-search.com/letyourcottage/                         |
-	| https://product.staging.hogansirishcottages.com/letyourcottage/                            |
-	| https://lakes.product.staging.cottage-search.com/letyourcottage/                           |
+	| URL                                                                                    |
+	| https://sykes:1.sykes@bos.tech.staging.cottage-search.com/letyourcottage/              |
+	| https://sykes:1.sykes@cbh.tech.staging.cottage-search.com/letyourcottage/              |
+	| https://sykes:1.sykes@cha.tech.staging.cottage-search.com/letyourcottage/              |
+	| https://sykes:1.sykes@coastandcountry.tech.staging.cottage-search.com/letyourcottage/  |
+	| https://sykes:1.sykes@wch.tech.staging.cottage-search.com/letyourcottage/              |
+	| https://sykes:1.sykes@cornish.tech.staging.cottage-search.com/letyourcottage/          |
+	| https://sykes:1.sykes@dreamcottages.tech.staging.cottage-search.com/letyourcottage/    |
+	| https://sykes:1.sykes@heartofthelakes.tech.staging.cottage-search.com/letyourcottage/  |
+	| https://sykes:1.sykes@helpful.tech.staging.cottage-search.com/letyourcottage/          |
+	| https://sykes:1.sykes@tech.staging.hogansirishcottages.com/letyourcottage/             |
+	| https://sykes:1.sykes@jbch.tech.staging.cottage-search.com/letyourcottage/             |
+	| https://sykes:1.sykes@lakes.tech.staging.cottage-search.com/letyourcottage/            |
+	| https://sykes:1.sykes@lbh.tech.staging.cottage-search.com/letyourcottage/              |
+	| https://sykes:1.sykes@manor.tech.staging.cottage-search.com/letyourcottage/            |
+	| https://sykes:1.sykes@menai.tech.staging.cottage-search.com/letyourcottage/            |
+	| https://sykes:1.sykes@ycc.tech.staging.cottage-search.com/cottage-owners/              |
