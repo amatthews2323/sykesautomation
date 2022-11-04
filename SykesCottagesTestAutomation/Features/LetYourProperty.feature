@@ -22,10 +22,9 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Information centre                           |
     | Looking to get started with holiday letting? |
 
-@HeroForm
+@HeroForm @LYPRegressionSuite
 Scenario: The MultiStep form is displayed correctly
 	Given I have navigated to the following page: <Path>
-	When I apply the following experiment: LetYourCottages_RemovalOfNonHeroForms171
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                                   |
 	| first_name                                                                                                |
@@ -33,7 +32,10 @@ Scenario: The MultiStep form is displayed correctly
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                                      |
 	When I click //*[@*='enquiry-multi-step']/button[@*='submit']
-	Then the following element is displayed: Please provide your first and last name
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                      |
+	| Please enter your first name |
+	| Please enter your surname    |	
 	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
 	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
@@ -42,7 +44,7 @@ Scenario: The MultiStep form is displayed correctly
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	Then the following text is displayed: Please enter a valid email address.
+	Then the following text is displayed: Please enter an email address
 	When I enter test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
@@ -51,13 +53,12 @@ Scenario: The MultiStep form is displayed correctly
 	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	Then the following text is displayed: Please enter a valid contact number.
+	Then the following text is displayed: Please enter a contact number
 	When I enter 070000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
@@ -66,76 +67,11 @@ Scenario: The MultiStep form is displayed correctly
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
-	Examples:
-	| Path                                                          |
-	| letyourcottage/                                               |
-	| letyourcottage/managed-services/                              |
-	| letyourcottage/In-Your-Area/South-West                        |
-	| letyourcottage/In-Your-Area/South-of-England                  |
-	| letyourcottage/In-Your-Area/Heart-of-England                  |
-	| letyourcottage/In-Your-Area/East-Anglia                       |
-	| letyourcottage/In-Your-Area/Peak-District                     |
-	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast        |
-	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria     |
-	| letyourcottage/In-Your-Area/Northumberland                    |
-	| letyourcottage/In-Your-Area/Wales                             |
-	| letyourcottage/In-Your-Area/Ireland                           |
-	| letyourcottage/In-Your-Area/Scotland                          |
-	| letyourcottage/information/marketing-your-holiday-let         |
-	| letyourcottage/information/buy-own-sell-holiday-lets          |
-	| letyourcottage/information/investment-advice-for-holiday-lets |
-	| letyourcottage/information/legal-regulations-for-holiday-lets |
-	| letyourcottage/information/holiday-let-mortgages              |
-	| letyourcottage/information/how-to-run-your-holiday-let        |
-	| letyourcottage/information/Tax-information-on-holiday-lets    |
-	| letyourcottage/information/run-holiday-let-as-business        |
-	| letyourcottage/information/leading-holiday-let-agency         |
-	| letyourcottage/information/holiday-management-services        |
-
-@HeroForm
-Scenario: The Request a Call hero form is displayed correctly
-	Given I have navigated to the following page: <Path>
-	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
-	Then the following text is displayed: Get information and advice from our team of holiday letting experts
-	Then the relevant elements are dislpayed within the request-a-call-hero section
-	| Element                                                                            |
-	| request-a-call-hero_first_name                                                     |
-	| request-a-call-hero_last_name                                                      |
-	| request-a-call-hero_phone                                                          |
-	| Sykes' Group will use your number to call you about our property letting services. |
-	| /terms/privacypolicy                                                               |
-	When I select Get started within the request-a-call-hero section
-	Then the relevant elements are dislpayed within the request-a-call-hero section
-	| Element                                         |
-	| request-a-call-hero_first_name_validation_error |
-	| Please enter your first name.                   |
-	| request-a-call-hero_last_name_validation_error  |
-	| Please enter your surname.                      |
-	| request-a-call-hero_phone_validation_error      |
-	| Please enter a contact number.                  |
-	When I enter test in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter 070000000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-	When I enter 0700000000000000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-	When I enter +44 7000 000 000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	Then the following element is not displayed: Already started?
-	And the relevant elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
 	Examples:
 	| Path                                                          |
 	| letyourcottage/                                               |
@@ -247,7 +183,6 @@ Scenario: The hero form is displayed correctly
 	| letyourcottage/information/leading-holiday-let-agency         |
 	| letyourcottage/information/holiday-management-services        |
 
-@FormSubmission
 Scenario: The hero form can be submitted
 	Given I have navigated to the following page: <Path>
 	When I enter Test Owner in the following form field: heroform_first_name
@@ -289,106 +224,66 @@ Scenario: The hero form can be submitted
 	| letyourcottage/information/leading-holiday-let-agency         |
 	| letyourcottage/information/holiday-management-services        |
 
-@FormSubmission
+@HeroForm @FormSubmission
 	Scenario: The MultiStep hero form can be submitted
 	Given I have navigated to the following page: <Path>
-	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
-	Then the following text is displayed: Get information and advice from our team of holiday letting experts
-	Then the relevant elements are dislpayed within the request-a-call-hero section
-	| Element                                                                            |
-	| request-a-call-hero_first_name                                                     |
-	| request-a-call-hero_last_name                                                      |
-	| request-a-call-hero_phone                                                          |
-	| Sykes' Group will use your number to call you about our property letting services. |
-	| /terms/privacypolicy                                                               |
-	When I select Get started within the request-a-call-hero section
-	Then the relevant elements are dislpayed within the request-a-call-hero section
-	| Element                                         |
-	| request-a-call-hero_first_name_validation_error |
-	| Please enter your first name.                   |
-	| request-a-call-hero_last_name_validation_error  |
-	| Please enter your surname.                      |
-	| request-a-call-hero_phone_validation_error      |
-	| Please enter a contact number.                  |
-	When I enter test in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	When I enter 070000000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please provide a contact number that is no less than 10 digits long.
-	When I enter 0700000000000000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
-	When I enter +44 7000 000 000 in the following form field: request-a-call-hero_phone
-	When I select Get started within the request-a-call-hero section
-	Then the following element is not displayed: Please enter a valid contact number that does not include letters, spaces, special characters and contains no less than 10 digits.
-	Then the following element is not displayed: Already started?
-	And the relevant elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
-	And I click Submit enquiry
-	And I wait 5 seconds
-	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
-	And the relevant elements are dislpayed
-	| Element                                                                                                       |
-	| Thank you for your enquiry                                                                                    |
-	| Sit tight, a Sykes property expert will be in touch to discuss the next steps of your holiday letting journey |
-	Examples:
-	| Path            |
-	| letyourcottage/ |
-
-@LetYourProperty @ModalForm
-Scenario: The Information Centre carousel enquiry form is displayed correctly
-	Given I have navigated to the following page: letyourcottage
-	When I click Click enquire now and complete the form to receive your free information pack.
-	Then I wait 2 seconds
+	Then the following text is displayed: Start your Sykes holiday letting journey today
+	And the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                                   |
+	| first_name                                                                                                |
+	| last_name                                                                                                 |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
+	| Element                                                                                           |
+	| In order to receive email communciations from our expert team, please provide your email address. |
+	| Email address                                                                                     |
+	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 1 seconds
 	Then the relevant elements are dislpayed
-	| Element                                                                |
-	| o-overlay__content o-overlay__content--reset js-overlay-content        |
-	| list_property_first_name                                               |
-	| list_property_email                                                    |
-	| list_property_phone                                                    |
-	| list_property_first_name_validation_error                              |
-	| list_property_email_validation_error                                   |
-	| list_property_phone_validation_error                                   |
-	And the relevant elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
-
-@FormSubmission
-Scenario: The Information Centre carousel modal form can be submitted
-	Given I have navigated to the following page: letyourcottage
-	When I click Click enquire now and complete the form to receive your free information pack.
+	| Element                                                                                                                                     |
+	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
+	| Phone number                                                                                                                                |
+	When I enter 070000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I wait 1 seconds
+	Then the relevant elements are dislpayed
+	| Element                                                                                                   |
+	| Please ensure the following details are correct                                                           |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| Submit enquiry                                                                                            |
+	When I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
 	And I wait 2 seconds
-	And I enter Test Owner in the following form field: list_property_first_name
-	And I enter test@test.com in the following form field: list_property_email
-	And I enter 07000000000 in the following form field: list_property_phone
-	And I click list_property_first_name
-	And I click //*[contains(@class,'overlay is-open')]//button[@*='submit']
-	And I wait 5 seconds
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
-	And the relevant elements are dislpayed
-	| Element                                        |
-	| Hi, we’re ready when you are                   |
-	| Ask one of our property experts to call you    |
-	| Ask us to call you                             |
-	| Start your Sykes letting journey online        |
-	| Continue Online                                |
-
-@FormSubmission
-Scenario: The Request a Call form can be submitted
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_RequestACallForm55
-	And I click #js-request-a-call
-	And I enter Test in the following form field: request-a-call_first_name
-	And I enter Owner in the following form field: request-a-call_last_name
-	And I enter 07000000000 in the following form field: request-a-call_phone
-	And I click Have us call you
-	And I wait 5 seconds
-	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
-	And the following text is displayed: You have requested a call from our team
+	Examples:
+	| Path                                                          |
+	| letyourcottage/                                               |
+	| letyourcottage/managed-services/                              |
+	| letyourcottage/In-Your-Area/South-West                        |
+	| letyourcottage/In-Your-Area/South-of-England                  |
+	| letyourcottage/In-Your-Area/Heart-of-England                  |
+	| letyourcottage/In-Your-Area/East-Anglia                       |
+	| letyourcottage/In-Your-Area/Peak-District                     |
+	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast        |
+	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria     |
+	| letyourcottage/In-Your-Area/Northumberland                    |
+	| letyourcottage/In-Your-Area/Wales                             |
+	| letyourcottage/In-Your-Area/Ireland                           |
+	| letyourcottage/In-Your-Area/Scotland                          |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/legal-regulations-for-holiday-lets |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/Tax-information-on-holiday-lets    |
+	| letyourcottage/information/run-holiday-let-as-business        |
+	| letyourcottage/information/leading-holiday-let-agency         |
+	| letyourcottage/information/holiday-management-services        |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -399,12 +294,13 @@ Scenario: The transparent header is displayed on the Let Your Property page
 Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer container_sykes_grid
+	And I wait 2 seconds
 	Then the following element is displayed: Back To Top Button
 	When I click Back To Top Button
-	And I wait 5 seconds
+	And I wait 3 seconds
 	Then the enquiry form is displayed with the tint applied
 
-@LetYourProperty
+
 Scenario: The Income Projection is displayed upon interaction
 	Given I have navigated to the following page: letyourcottage
 	When I select option Northumberland from the region dropdown
@@ -431,7 +327,6 @@ Scenario: The Holiday Letting Made Easy images are displayed
     | /images/let_your_cottage/letting_easy/full-property-management.png  |
     | /images/let_your_cottage/letting_easy/photography.png               |
 
-@LetYourProperty
 Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the page sections are displayed in the relevant positions
@@ -465,7 +360,7 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| contact-to-book mobile  |
 	| navbar-toggle collapsed |
 
-@LetYourProperty
+@LetYourProperty @LYPRegressionSuite
 Scenario: The Information Carousel is displayed on the page
 	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
@@ -515,12 +410,6 @@ Scenario: The footer content is displayed correctly
 	| Pinterest                                                  |
 	| Instagram                                                  |
 
-@LetYourProperty
-Scenario: The testimonials carousel is present on the page
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	Then the Testimonials carousel is displayed on the page
-	And I click /images/sykes/letyourcottage/icons/arrow-prev.svg
-
 @LetYourProperty @LYPRegressionSuite
 Scenario: The alerts disapear after an amount of time
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
@@ -544,22 +433,22 @@ Scenario: The Inactivity Modal is displayed correctly
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	Then I wait 305 seconds
 	And the relevant elements are dislpayed
-	     | Element                  |
-	     | idleform                 |
-	     | We're ready when you are |
-	     | Open form                |
+    | Element                  |
+    | idleform                 |
+    | We're ready when you are |
+    | Open form                |
 	When I click Open form
 	Then the relevant elements are dislpayed
-	     | Element                                                                                                   |
-	     | inactive-form_first_name                                                                                  |
-	     | inactive-form_first_name_validation_error                                                                 |
-	     | inactive-form_email                                                                                       |
-	     | inactive-form_email_validation_error                                                                      |
-	     | inactive-form_phone                                                                                       |
-	     | inactive-form_phone_validation_error                                                                      |
-	     | Your details will be used by the Sykes group to send you information about our property letting services. |
-	     | You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
-	     | /terms/privacypolicy                                                                                      |
+    | Element                                                                                                   |
+    | inactive-form_first_name                                                                                  |
+    | inactive-form_first_name_validation_error                                                                 |
+    | inactive-form_email                                                                                       |
+    | inactive-form_email_validation_error                                                                      |
+    | inactive-form_phone                                                                                       |
+    | inactive-form_phone_validation_error                                                                      |
+    | Your details will be used by the Sykes group to send you information about our property letting services. |
+    | You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
+    | /terms/privacypolicy                                                                                      |
 	And the relevant elements are not dislpayed
 	| Element        |
 	| marketing_sms  |

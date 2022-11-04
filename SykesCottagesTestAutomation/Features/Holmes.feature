@@ -45,19 +45,20 @@ Scenario: Get experiment status
 	| Example                                                     |
 	| LetYourCottages_PossibleInsurancePolicyimplementationLYP82  |
 	| LetYourCottages_MakeLYPNumberClickableOnMobileHomepage19693 |
-	| LetYourCottages_AddIconAndChangeColourOfPhoneNumber19694    |
 	| LetYourCottages_SpeakToSomeoneSectionAllPlatforms19766      |
 	| LetYourCottages_DownloadPackSection144                      |
-	| LetYourCottages_AddRemoteValidationToTheEnquiryForm19834    |
 	| LetYourCottages_ImprovehomepagesectionsfortabletLYP81       |
 	| LetYourCottages_RemoveOwnerPack19968                        |
-	| LetYourCottages_RedirectSykesLogoToHomePage19977            |
 	| LetYourCottages_RemovalOfNonHeroForms171                    |
 	| LetYourCottages_HeroContentandFormTitleChangeLYP178         |
 	| LetYourCottages_CreateExperimenttoHideFreebadgeLYP177       |
 	| LetYourCottages_LYPTestPositionofCalculatorLYP182           |
 	| LetYourCottages_PartnersMarketingSection152                 |
 	| LetYourCottages_LYPHeroImageChangetoConveyOwnerSpaceLYP185  |
+	| LetYourCottages_SykesLYPLogo186                             |
+	| LetYourCottages_LinkbackforconsumertrafficLYP192            |
+	| LetYourCottages_LYPTestPositionofCalculatorLYP182           |
+	| LetYourCottages_LYPDirectBookHolidayTraffictoConsumerLYP203 |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

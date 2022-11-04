@@ -74,31 +74,31 @@ namespace SykesCottagesTestAutomation.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The Sykes sister sites are displayed correctly")]
+        [NUnit.Framework.DescriptionAttribute("The Sykes sister brands are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("SisterBrands")]
-        [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
         [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", "Carbis Bay", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", "Character Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", "Coast & Country Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.cornishcottageholidays.co.uk/letyourcottage/", "Cornish Cottage Holidays", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.dream-cottages.co.uk/letyourcottage/", "Dream Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.heartofthelakes.co.uk/letyourcottage/", "Heart of the Lakes", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.helpfulholidays.co.uk/letyourcottage/", "Helpful Holidays", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.hogansirishcottages.com/letyourcottage/", "Hogans Irish Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.johnbraycornishholidays.co.uk/letyourcottage/", "John Bray Cornish Holidays", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/", "Lake District", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakescottageholiday.co.uk/letyourcottage/", "Lakes Cottage Holidays", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakelovers.co.uk/letyourcottage/", "Lakelovers", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.manorcottages.co.uk/letyourcottage/", "Manor Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.menaiholidays.co.uk/letyourcottage/", "Menai Holiday Cottages", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.welsh-cottages.co.uk/letyourcottage/", "Welsh Cottage", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.yorkshirecoastalcottages.com/cottage-owners/", "Yorkshire Coastal", null)]
-        public void TheSykesSisterSitesAreDisplayedCorrectly(string uRL, string title, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Carbis Bay", null)]
+        [NUnit.Framework.TestCaseAttribute("Character Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Coast & Country Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Cornish Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Dream Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Heart of the Lakes", null)]
+        [NUnit.Framework.TestCaseAttribute("Helpful Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Hogans Irish Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("John Bray Cornish Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Lake District", null)]
+        [NUnit.Framework.TestCaseAttribute("Lakes Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Lakelovers", null)]
+        [NUnit.Framework.TestCaseAttribute("Large Holiday Houses", null)]
+        [NUnit.Framework.TestCaseAttribute("Lyme Bay Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Manor Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Menai Holiday Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Welsh Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Yorkshire Coastal", null)]
+        public void TheSykesSisterBrandsAreDisplayedCorrectly(string brand, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SisterBrands",
-                    "LYPSmokeTest",
                     "LYPRegressionSuite"};
             if ((exampleTags != null))
             {
@@ -106,9 +106,8 @@ namespace SykesCottagesTestAutomation.Features
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("URL", uRL);
-            argumentsOfScenario.Add("Title", title);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sykes sister sites are displayed correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("Brand", brand);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sykes sister brands are displayed correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -120,186 +119,119 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have navigated to the following brand: {0}", brand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table108.AddRow(new string[] {
-                            string.Format("{0}", title)});
-                table108.AddRow(new string[] {
-                            "nav_logo"});
-                table108.AddRow(new string[] {
-                            "hero__image"});
-                table108.AddRow(new string[] {
+                table106.AddRow(new string[] {
+                            string.Format("{0}", brand)});
+                table106.AddRow(new string[] {
                             "form-heading-container"});
-                table108.AddRow(new string[] {
-                            "Request a free owner pack"});
-                table108.AddRow(new string[] {
-                            "Claim My Free Pack"});
-#line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table108, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The enquiry form is displayed on the sister sites")]
-        [NUnit.Framework.CategoryAttribute("SisterBrands")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        [NUnit.Framework.CategoryAttribute("SisterBrandsForm")]
-        [NUnit.Framework.TestCaseAttribute("https://www.character-cottages.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.carbisbayholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.coastandcountry.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.cornishcottageholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.dream-cottages.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.heartofthelakes.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.helpfulholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.hogansirishcottages.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.johnbraycornishholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakedistrictlodgeholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakescottageholiday.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.lakelovers.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.manorcottages.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.menaiholidays.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.welsh-cottages.co.uk/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://www.yorkshirecoastalcottages.com/cottage-owners/", null)]
-        public void TheEnquiryFormIsDisplayedOnTheSisterSites(string uRL, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "SisterBrands",
-                    "LYPRegressionSuite",
-                    "SisterBrandsForm"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("URL", uRL);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The enquiry form is displayed on the sister sites", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 36
- testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table109 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table109.AddRow(new string[] {
-                            "form-heading-container"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Complete the form to receive your information pack"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_first_name"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_first_name_validation_error"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_email"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_email_validation_error"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_phone"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "heroform_phone_validation_error"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "You can opt out or unsubscribe at any time by contacting us or using an unsubscri" +
                                 "be link."});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table109.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Get started"});
-#line 37
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table109, "Then ");
+#line 7
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table106, "Then ");
 #line hidden
-#line 51
+#line 22
  testRunner.When("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 52
+#line 23
  testRunner.And("I click heroform_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 24
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 25
  testRunner.Then("the following text is displayed: Please enter a full name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 55
+#line 26
  testRunner.When("I click heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 56
+#line 27
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 28
  testRunner.Then("the following text is displayed: Please enter an email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 58
+#line 29
  testRunner.When("I click heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 59
+#line 30
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 60
+#line 31
  testRunner.Then("the following text is displayed: Please enter a contact number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 61
+#line 32
  testRunner.When("I enter test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 33
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 34
  testRunner.Then("the following text is displayed: \'test.com\' is missing an \'@\'. Please include an " +
                         "\'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 64
+#line 35
  testRunner.When("I enter test@test in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 65
+#line 36
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 37
  testRunner.Then("the following text is displayed: \'test@test\' is an incomplete email address. Plea" +
                         "se include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 67
+#line 38
  testRunner.When("I enter test in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 68
+#line 39
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 40
  testRunner.Then("the following text is displayed: Please enter a valid contact number that does no" +
                         "t include letters, spaces, special characters and contains no less than 10 digit" +
                         "s.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 70
+#line 41
  testRunner.When("I enter 070000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
+#line 42
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 43
  testRunner.Then("the following text is displayed: Please provide a contact number that is no less " +
                         "than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 73
+#line 44
  testRunner.When("I enter 0700000000000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 74
+#line 45
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 75
+#line 46
  testRunner.Then("the following text is displayed: Please provide a contact number that is no more " +
                         "than 15 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -310,40 +242,39 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Sister Brand hero form can be submitted")]
         [NUnit.Framework.CategoryAttribute("SisterBrands")]
-        [NUnit.Framework.CategoryAttribute("SisterBrandsFormSubmission")]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@bos.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@cbh.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@cha.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@coastandcountry.tech.staging.cottage-search.com/letyourcott" +
-            "age/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@wch.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@cornish.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@dreamcottages.tech.staging.cottage-search.com/letyourcottag" +
-            "e/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@heartofthelakes.tech.staging.cottage-search.com/letyourcott" +
-            "age/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@helpful.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@tech.staging.hogansirishcottages.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@jbch.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@lakes.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@lbh.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@manor.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@menai.tech.staging.cottage-search.com/letyourcottage/", null)]
-        [NUnit.Framework.TestCaseAttribute("https://sykes:1.sykes@ycc.tech.staging.cottage-search.com/cottage-owners/", null)]
-        public void TheSisterBrandHeroFormCanBeSubmitted(string uRL, string[] exampleTags)
+        [NUnit.Framework.CategoryAttribute("FormSubmission")]
+        [NUnit.Framework.TestCaseAttribute("Carbis Bay", null)]
+        [NUnit.Framework.TestCaseAttribute("Character Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Coast & Country Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Cornish Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Dream Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Heart of the Lakes", null)]
+        [NUnit.Framework.TestCaseAttribute("Helpful Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Hogans Irish Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("John Bray Cornish Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Lake District", null)]
+        [NUnit.Framework.TestCaseAttribute("Lakes Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Lakelovers", null)]
+        [NUnit.Framework.TestCaseAttribute("Large Holiday Houses", null)]
+        [NUnit.Framework.TestCaseAttribute("Lyme Bay Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Manor Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Menai Holiday Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("Welsh Cottage Holidays", null)]
+        [NUnit.Framework.TestCaseAttribute("Yorkshire Coastal", null)]
+        public void TheSisterBrandHeroFormCanBeSubmitted(string brand, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SisterBrands",
-                    "SisterBrandsFormSubmission"};
+                    "FormSubmission"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("URL", uRL);
+            argumentsOfScenario.Add("Brand", brand);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sister Brand hero form can be submitted", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 96
+#line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -353,25 +284,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 97
- testRunner.Given(string.Format("I am on the following webpage: {0}", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 70
+ testRunner.Given(string.Format("I have navigated to the following brand: {0}", brand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 98
+#line 71
  testRunner.When("I enter Test Owner in the following form field: heroform_first_name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 99
+#line 72
  testRunner.And("I enter test@test.com in the following form field: heroform_email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 100
+#line 73
  testRunner.And("I enter 07000000000 in the following form field: heroform_phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 101
+#line 74
  testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 102
+#line 75
  testRunner.And("I select Get Started", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 103
+#line 76
  testRunner.Then("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
                         "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

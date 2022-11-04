@@ -105,6 +105,9 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
             }
 
+            //Dismiss Book a Holiday pop-up if displayed
+            ClickIfDisplayed("dismiss-direct-book-holiday-overlay");
+
             //Check for experiments
             if (Hooks.experiments != "")
             {

@@ -28,6 +28,15 @@ namespace SykesCottagesTestAutomation.BaseClass
             ClosePopups(_acceptCookies: true, _dismissAlerts: true);
         }
 
+        [Given(@"I have navigated to the following brand: (.*)")]
+        public void GivenINavigateToTheFollowingBrand(string brand)
+        {
+            string domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt + " " + brand);
+            LaunchWebsite(domain);
+            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            ClosePopups(_acceptCookies: true, _dismissAlerts: true);
+        }
+
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
