@@ -66,7 +66,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I click (.*)")]
         public void WhenIClick(string value)
         {
-            Click(value);
+            try
+            {
+                Click(value);
+            }
+            catch
+            {
+                JSClick(value);
+            }
         }
 
         [When(@"I select (.*) within the (.*) section")]

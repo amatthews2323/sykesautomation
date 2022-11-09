@@ -8,7 +8,6 @@ Scenario: The Landing pages are displayed correctly
 	| Element                                   |
 	| <Title>                                   |
 	| c-lyc-form                                |
-	| Reading time                              |
 	| Back To Top                               |
 	Examples:
 	| Path                                                                | Title                                                                     |

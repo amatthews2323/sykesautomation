@@ -257,7 +257,7 @@ Scenario: The hero form can be submitted
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
 	When I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
-	And I wait 2 seconds
+	And I wait 4 seconds
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:
 	| Path                                                          |
@@ -427,47 +427,3 @@ Scenario: The number of bedrooms is included in the earnings calculator
 	| Property information              |
 	| Average potential earnings        |
 	| Enquire today to get started      |
-
-@LetYourProperty @ModalForm
-Scenario: The Inactivity Modal is displayed correctly
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	Then I wait 305 seconds
-	And the relevant elements are dislpayed
-    | Element                  |
-    | idleform                 |
-    | We're ready when you are |
-    | Open form                |
-	When I click Open form
-	Then the relevant elements are dislpayed
-    | Element                                                                                                   |
-    | inactive-form_first_name                                                                                  |
-    | inactive-form_first_name_validation_error                                                                 |
-    | inactive-form_email                                                                                       |
-    | inactive-form_email_validation_error                                                                      |
-    | inactive-form_phone                                                                                       |
-    | inactive-form_phone_validation_error                                                                      |
-    | Your details will be used by the Sykes group to send you information about our property letting services. |
-    | You can opt out or unsubscribe at any time by contacting us or using an unsubscribe link.                 |
-    | /terms/privacypolicy                                                                                      |
-	And the relevant elements are not dislpayed
-	| Element        |
-	| marketing_sms  |
-	| marketing_post |
-
-Scenario: The Inactivity Modal form can be submitted
-	Given I have navigated to the following page: letyourcottage
-	When I wait 305 seconds
-	And I enter Test Owner in the following form field: inactive-form_first_name
-	And I enter test@test.com in the following form field: inactive-form_email
-	And I enter 07000000000 in the following form field: inactive-form_phone
-	And I click We're ready when you are
-	And I click //*[@*='idle-enquiry-form']//button[@*='submit']
-	And I wait 5 seconds
-	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
-	And the relevant elements are dislpayed
-	| Element                                     |
-	| Hi, we’re ready when you are                |
-	| Ask one of our property experts to call you |
-	| Ask us to call you                          |
-	| Start your Sykes letting journey online     |
-	| Continue Online                             |

@@ -85,6 +85,11 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
+            AssertElementNotDisplayed("503 Service Temporarily Unavailable");
+            AssertElementNotDisplayed("An error has occurred");
+            AssertElementNotDisplayed("Service Unavailable");
+            AssertElementNotDisplayed("504 Gateway Time-out");
+
             try
             {
                 controlExperiments = GetJavaScriptText("control_experiments");
@@ -102,7 +107,7 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
+                ClickIfDisplayed("Reject all", waitTime: 2);
             }
 
             //Dismiss Book a Holiday pop-up if displayed
@@ -350,7 +355,7 @@ namespace SykesCottagesTestAutomation
 
         public void AssertElementDisplayed(string value, string element = "*")
         {
-            Console.WriteLine("Assert the following element displayed: " + value);
+            Console.WriteLine("Assert the following element is displayed: " + value);
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0, "\"" + value + "\" not found");
         }
 

@@ -7,8 +7,8 @@ Given I am on the following webpage: https://pctoolkit.staging.sykes.network/log
 When I click Log in
 And I log in with the following credentials
 	| Key      | Value                          |
-	| Username | gary.smith@sykescottages.co.uk |
-	| Password | DesertSea40                    |
+	| Username |  |
+	| Password |                     |
 Then the relevant elements are dislpayed
 	| Element          |
 	| Diary            |
