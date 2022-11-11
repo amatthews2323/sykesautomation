@@ -17,6 +17,7 @@ using WDSE.Decorators;
 using WDSE;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.Diagnostics;
 
 namespace SykesCottagesTestAutomation
 {
@@ -43,6 +44,25 @@ namespace SykesCottagesTestAutomation
 
         public void SelectBrowser(string browser)
         {
+            //Kill any existing WebDriver processes
+            Process[] chromeDriverProcesses = Process.GetProcessesByName("chromedriver");
+            foreach (var chromeDriverProcess in chromeDriverProcesses)
+            {
+                chromeDriverProcess.Kill();
+            }
+
+            Process[] edgeDriverProcesses = Process.GetProcessesByName("msedgedriver");
+            foreach (var edgeDriverProcess in edgeDriverProcesses)
+            {
+                edgeDriverProcess.Kill();
+            }
+
+            Process[] firefoxDriverProcesses = Process.GetProcessesByName("geckodriver");
+            foreach (var firefoxDriverProcess in firefoxDriverProcesses)
+            {
+                firefoxDriverProcess.Kill();
+            }
+
             switch (browser)
             {
                 case "Chrome":

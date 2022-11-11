@@ -103,10 +103,10 @@ testRunner.When("I click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(n
                             "Value"});
                 table103.AddRow(new string[] {
                             "Username",
-                            "gary.smith@sykescottages.co.uk"});
+                            "name.name@test.com"});
                 table103.AddRow(new string[] {
                             "Password",
-                            "DesertSea40"});
+                            "testing123"});
 #line 8
 testRunner.And("I log in with the following credentials", ((string)(null)), table103, "And ");
 #line hidden

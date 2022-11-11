@@ -268,8 +268,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table76.AddRow(new string[] {
                             "LetYourCottages_HeroContentandFormTitleChangeLYP178"});
                 table76.AddRow(new string[] {
-                            "LetYourCottages_CreateExperimenttoHideFreebadgeLYP177"});
-                table76.AddRow(new string[] {
                             "LetYourCottages_LYPTestPositionofCalculatorLYP182"});
                 table76.AddRow(new string[] {
                             "LetYourCottages_PartnersMarketingSection152"});
@@ -280,9 +278,11 @@ this.ScenarioInitialize(scenarioInfo);
                 table76.AddRow(new string[] {
                             "LetYourCottages_LinkbackforconsumertrafficLYP192"});
                 table76.AddRow(new string[] {
-                            "LetYourCottages_LYPTestPositionofCalculatorLYP182"});
+                            "LetYourCottages_LYPStickyHeader202"});
                 table76.AddRow(new string[] {
-                            "LetYourCottages_LYPDirectBookHolidayTraffictoConsumerLYP203"});
+                            "LetYourCottages_RemovereadingtimefrominformationpageheroLYP216"});
+                table76.AddRow(new string[] {
+                            "LetYourCottages_LYPCondenseHomepageContentLYP201"});
 #line 44
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table76, "Then ");
 #line hidden

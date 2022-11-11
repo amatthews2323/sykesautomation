@@ -16,9 +16,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Customer reviews powered by Trustpilot       |
     | Gain exposure through our partners           |
     | How much could I earn                        |
-    | Holiday home management with Sykes           |
-    | Putting your property in the spotlight       |
-    | Holiday letting made easy                    |
     | Information centre                           |
     | Looking to get started with holiday letting? |
 
@@ -349,7 +346,6 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	Then the following sections are dislpayed
 	| Section                                |
 	| Gain exposure through our partners     |
-	| What do our owners say                 |
 	| How much could I earn                  |
 	| Holiday home management with Sykes     |
 	| Putting your property in the spotlight |
