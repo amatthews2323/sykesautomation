@@ -121,9 +121,9 @@ Scenario: The Sister Brands are displayed correctly part two
 @SisterBrands @FormSubmission
 Scenario: The Sister Brand hero form can be submitted
 	Given I have navigated to the following brand: <Brand>
-	When I enter RFXCode Test09 in the following form field: heroform_first_name
-	And I enter rfxcodetest09@example.org in the following form field: heroform_email
-	And I enter 04646464646469 in the following form field: heroform_phone
+	When I enter Test Owner in the following form field: heroform_first_name
+	And I enter test@test.com in the following form field: heroform_email
+	And I enter 07000000000 in the following form field: heroform_phone
 	And I click form-heading-container
 	And I select Get Started
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
@@ -148,20 +148,23 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
 	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I wait 1 seconds
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
-	When I enter 070000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	When I enter 07000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I wait 1 seconds
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |

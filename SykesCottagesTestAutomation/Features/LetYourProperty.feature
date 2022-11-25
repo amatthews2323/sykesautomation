@@ -234,20 +234,23 @@ Scenario: The hero form can be submitted
 	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
 	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I wait 1 seconds
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
 	When I enter 070000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I wait 1 seconds
+	And I wait 2 seconds
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
@@ -258,8 +261,8 @@ Scenario: The hero form can be submitted
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:
 	| Path                                                          |
-	| letyourcottage/                                               |
-	| letyourcottage/managed-services/                              |
+	| letyourcottage                                                |
+	| letyourcottage/managed-services                               |
 	| letyourcottage/In-Your-Area/South-West                        |
 	| letyourcottage/In-Your-Area/South-of-England                  |
 	| letyourcottage/In-Your-Area/Heart-of-England                  |
@@ -347,8 +350,6 @@ Scenario: The relevant sections are displayed on the Mobile App homepage
 	| Section                                |
 	| Gain exposure through our partners     |
 	| How much could I earn                  |
-	| Holiday home management with Sykes     |
-	| Putting your property in the spotlight |
 	| Holiday letting made easy              |
 	| Information centre                     |
 	And the relevant elements are not dislpayed

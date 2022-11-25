@@ -89,6 +89,12 @@ namespace SykesCottagesTestAutomation
             {
                 domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt); //Get the URL based on the Hooks.Environemt value
             }
+
+            if (domain.Contains("ephemeral"))
+            {
+                domain = Regex.Replace(domain, "ephemeralName", Hooks.ephemeralEnvironmentName);
+            }
+
             url = domain + path;
 
             SelectBrowser(Hooks.browser); //Set the driver and browser
@@ -411,7 +417,7 @@ namespace SykesCottagesTestAutomation
 
         public void JSClick(string value, string element = "*", int waitTime = 0)
         {
-            Console.WriteLine("Click: \"" + value + "\"");
+            Console.WriteLine(" JS click: \"" + value + "\"");
             IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
             jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath(XPath(value, element))));
             if (waitTime != 0)

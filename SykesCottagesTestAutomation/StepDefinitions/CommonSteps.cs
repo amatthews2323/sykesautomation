@@ -72,6 +72,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
             catch
             {
+                Console.WriteLine("Click failed; try with JavaScript...");
                 JSClick(value);
             }
         }
