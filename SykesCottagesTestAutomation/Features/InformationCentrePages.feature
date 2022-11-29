@@ -26,7 +26,7 @@ Scenario: The user can navigate to the Information Centre pages
 @InformationCentre @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevent elements are present on the Information Centre pages
 	Given I have navigated to the following page: <Path>
-	When I wait 3 seconds
+	When I wait up to 10 seconds for the following to be displayed: Customer reviews powered by Trustpilot
 	Then the relevant elements are dislpayed
     | Element                                |
     | <Header>                               |

@@ -116,6 +116,8 @@ namespace SykesCottagesTestAutomation
             AssertElementNotDisplayed("Service Unavailable");
             AssertElementNotDisplayed("504 Gateway Time-out");
 
+            //shared.driver.Manage().Cookies.AddCookie(new Cookie("internally_authenticated", "F1s4LtCgeouXQD0h1dlAEnmm9jcSS56nSIADaR0h%2FVDY2kmLMgiN4ZsaYldMyXBuGAFUHjaWS87NYZ43vaoDDzy7Di6UA%2FvTSo0Ejv%2FTMAHDf6MUzk7KKbg2zlXHmMqWAPWCxRDawTlXo%2B0qXvewU3%2BGATSa8sZmuJNo5YX9X9EElSHuWCc%3D"));
+
             try
             {
                 controlExperiments = GetJavaScriptText("control_experiments");
@@ -334,21 +336,21 @@ namespace SykesCottagesTestAutomation
             System.Threading.Thread.Sleep(value);
         }
 
-        public void WaitUntilExists(string value)
+        public void WaitUntilExists(string value, int seconds = 30)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
         }
 
-        public void WaitUntilVisible(string value)
+        public void WaitUntilVisible(string value, int seconds = 30)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
         }
 
-        public void WaitUntilClickable(string value)
+        public void WaitUntilClickable(string value, int seconds = 30)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
+            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
         }
 

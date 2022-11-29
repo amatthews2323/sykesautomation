@@ -11,7 +11,7 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : MethodLibrary
     {
-        public static string environemt = "Tech"; //Set base URL: Tech | Product | Cro | Project | Ephemeral | Live
+        public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Ephemeral | Live
         public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
         public static string domainOverride = ""; //Overrides the test URL
         public static string ephemeralEnvironmentName = "";

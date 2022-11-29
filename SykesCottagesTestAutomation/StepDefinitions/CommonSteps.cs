@@ -68,6 +68,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             try
             {
+                WaitUntilClickable(value, 5);
                 Click(value);
             }
             catch
@@ -112,6 +113,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the enquiry form is displayed with the tint applied")]
         public void ThenTheEnquiryFormIsDisplayedWithTheTintApplied()
         {
+            WaitUntilExists("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']", 5);
             AssertElementDisplayed("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']");
         }
 
@@ -221,6 +223,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following element is displayed: (.*)")]
         public void ThenTheFollowingElementIsDisplayed(string value)
         {
+            WaitUntilExists(value, 5);
             AssertElementDisplayed(value);
         }
 
@@ -278,6 +281,30 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitASecond(value);
         }
 
+        [When(@"I wait up to (.*) seconds for the following to be displayed: (.*)")]
+        public void WhenIWaitUpToSecondsForTheFollowingToBeDisplayed(int seconds, string element)
+        {
+            WaitUntilExists(element, seconds);
+        }
+
+        [Then(@"I wait up to (.*) seconds for the following to be displayed: (.*)")]
+        public void ThenIWaitUpToSecondsForTheFollowingToBeDisplayed(int seconds, string element)
+        {
+            WaitUntilVisible(element, seconds);
+        }
+
+        [When(@"I wait up to (.*) seconds for the following to be clickable: (.*)")]
+        public void WhenIWaitUpToSecondsForTheFollowingToBeClickable(int seconds, string element)
+        {
+            WaitUntilClickable(element, seconds);
+        }
+
+        [Then(@"I wait up to (.*) seconds for the following to be clickable: (.*)")]
+        public void ThenIWaitUpToSecondsForTheFollowingToBeClickable(int seconds, string element)
+        {
+            WaitUntilClickable(element, seconds);
+        }
+
         [Given(@"I am on the following webpage: (.*)")]
         public void GivenIAmOnTheFollowingWebpage(string domain = "")
         {
@@ -333,6 +360,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I enter (.*) in the following form field: (.*)")]
         public void WhenIEnterInTheFollowingFormField(string text, string field)
         {
+            WaitUntilClickable(field, 10);
             Type(field, text);
         }
 
