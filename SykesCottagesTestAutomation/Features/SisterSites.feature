@@ -48,8 +48,6 @@ Scenario: The Sister Brands are displayed correctly
 	| Brand                  |
 	| Hogans Irish Cottages  |
 	| Lakes Cottage Holidays |
-	| Large Holiday Houses   |
-	| Lyme Bay Holidays      |
 
 @SisterBrands @LYPRegressionSuite
 Scenario: The Sister Brands are displayed correctly part two
@@ -82,6 +80,7 @@ Scenario: The Sister Brands are displayed correctly part two
 	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
@@ -104,7 +103,7 @@ Scenario: The Sister Brands are displayed correctly part two
 	Examples:
 	| Brand                      |
 	| Carbis Bay                 |
-	| Character Cottages		 |
+	| Character Cottages         |
 	| Coast & Country Cottages   |
 	| Coast & Country Holidays   |
 	| Cornish Cottage Holidays   |
@@ -114,6 +113,8 @@ Scenario: The Sister Brands are displayed correctly part two
 	| John Bray Cornish Holidays |
 	| Lake District              |
 	| Lakelovers                 |
+	| Large Holiday Houses       |
+	| Lyme Bay Holidays          |
 	| Manor Cottages             |
 	| Menai Holiday Cottages     |
 	| Yorkshire Coastal          |

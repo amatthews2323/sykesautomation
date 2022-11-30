@@ -50,6 +50,7 @@ Scenario: The MultiStep form is displayed correctly
 	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |

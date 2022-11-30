@@ -161,6 +161,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following page title is displayed: (.*)")]
         public void ThenTheFollowingPageTitleIsDisplayed(string value)
         {
+            WaitUntilExists(value, 5);
             AssertPageTitle(value);
         }
 
@@ -190,6 +191,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
+                WaitUntilExists(XPath(section) + XPath(element.ToString()), 5);
                 AssertElementDisplayed(XPath(section) + XPath(element.ToString()));
             }
         }
@@ -217,6 +219,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following text is displayed: (.*)")]
         public void ThenTheFollowingTextIsDisplayed(string text)
         {
+            WaitUntilExists(text, 5);
             AssertTextDisplayed(text);
         }
 

@@ -98,30 +98,30 @@ testRunner.Given("I am on the following webpage: https://pctoolkit.staging.sykes
 #line 7
 testRunner.When("I click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Value"});
-                table103.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Username",
                             "name.name@test.com"});
-                table103.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Password",
                             "testing123"});
 #line 8
-testRunner.And("I log in with the following credentials", ((string)(null)), table103, "And ");
+testRunner.And("I log in with the following credentials", ((string)(null)), table99, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table104.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Diary"});
-                table104.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Previous visits"});
-                table104.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Upcoming visits"});
-                table104.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "task-card-header"});
 #line 12
-testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table104, "Then ");
+testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table100, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
