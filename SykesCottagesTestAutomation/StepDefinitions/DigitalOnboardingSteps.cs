@@ -107,7 +107,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click("//td[text()='<" + emailAddress + ">']", waitTime: 1);
             string emailUrl = GetAttribrute("//dd[text()='<" + emailAddress + ">']/ancestor::article/iframe", "src");
             GoTo(emailUrl);
-            SetBrowserSize("Max");
+            SetBrowserSize();
             Click("Verify your account", waitTime: 5);
         }
 

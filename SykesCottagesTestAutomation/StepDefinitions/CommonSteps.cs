@@ -15,8 +15,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
-            ClosePopups();
+            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            //ClosePopups();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
@@ -24,8 +24,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite(Hooks.domainOverride, path);
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
-            ClosePopups(_acceptCookies: true, _dismissAlerts: true);
+            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [Given(@"I have navigated to the following brand: (.*)")]
@@ -33,16 +32,14 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             string domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt + " " + brand);
             LaunchWebsite(domain);
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
-            ClosePopups(_acceptCookies: true, _dismissAlerts: true);
+            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
             LaunchWebsite("", path);
-            ClosePopups(_acceptCookies: true, _dismissAlerts: false);
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [When(@"I navigate to (.*)")]
@@ -312,8 +309,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheFollowingWebpage(string domain = "")
         {
             LaunchWebsite(domain);
-            ClosePopups();
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            //ClosePopups();
+            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [When(@"I scroll to the following element: (.*)")]
@@ -384,14 +381,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenISelectTheFormOverlaySubmitButton()
         {
             Click("//div[@id='js-overlay-list-property']//form[@*='list_property']/button[@type='submit']", waitTime: 2);
-        }
-
-        [When(@"I set the window size to (.*)")]
-        public void GivenISetTheWindowSizeTo(string windowSize)
-        {
-            SetBrowserSize(windowSize);
-            Refresh();
-            ClosePopups();
         }
 
         [Then(@"I store the headers on the page")]

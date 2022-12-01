@@ -772,9 +772,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 215
  testRunner.Given("I have navigated to the following page: letyourcottage/?app_view=true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 216
- testRunner.When("I set the window size to Mobile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
                 TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
                 table91.AddRow(new string[] {
@@ -783,7 +780,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "How much could I earn"});
                 table91.AddRow(new string[] {
                             "Information centre"});
-#line 217
+#line 216
  testRunner.Then("the following sections are dislpayed", ((string)(null)), table91, "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
@@ -792,7 +789,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "contact-to-book mobile"});
                 table92.AddRow(new string[] {
                             "navbar-toggle collapsed"});
-#line 222
+#line 221
  testRunner.And("the relevant elements are not dislpayed", ((string)(null)), table92, "And ");
 #line hidden
             }
@@ -810,7 +807,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Information Carousel is displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 228
+#line 227
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -820,7 +817,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 229
+#line 228
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table93 = new TechTalk.SpecFlow.Table(new string[] {
@@ -843,7 +840,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Holiday let mortgages"});
                 table93.AddRow(new string[] {
                             "Legal regulations"});
-#line 230
+#line 229
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table93, "Then ");
 #line hidden
             }
@@ -861,7 +858,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The image navigation buttons are displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 243
+#line 242
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -871,7 +868,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 244
+#line 243
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
@@ -882,7 +879,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "arrow-next.svg"});
                 table94.AddRow(new string[] {
                             "slick-dots"});
-#line 245
+#line 244
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table94, "Then ");
 #line hidden
             }
@@ -900,7 +897,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The footer content is displayed correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 252
+#line 251
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -910,10 +907,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 253
+#line 252
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 254
+#line 253
  testRunner.When("I scroll to the following element: page-footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
@@ -956,7 +953,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pinterest"});
                 table95.AddRow(new string[] {
                             "Instagram"});
-#line 255
+#line 254
  testRunner.Then("the relevant elements are dislpayed within the page-footer section", ((string)(null)), table95, "Then ");
 #line hidden
             }
@@ -974,7 +971,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The alerts disapear after an amount of time", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 278
+#line 277
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -984,16 +981,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 279
+#line 278
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 280
+#line 279
  testRunner.Then("the alerts are displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 281
+#line 280
  testRunner.And("I wait 10 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 282
+#line 281
  testRunner.Then("the alerts are not displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1011,7 +1008,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The number of bedrooms is included in the earnings calculator", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 285
+#line 284
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1021,7 +1018,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 286
+#line 285
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1036,7 +1033,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Average potential earnings"});
                 table96.AddRow(new string[] {
                             "Enquire today to get started"});
-#line 287
+#line 286
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
 #line hidden
             }

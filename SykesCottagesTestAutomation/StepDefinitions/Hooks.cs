@@ -12,7 +12,7 @@ namespace SykesCottagesTestAutomation
     public class Hooks : MethodLibrary
     {
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Ephemeral | Live
-        public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string browser = "Tech"; //Set browser: Chrome | Firefox | Edge
         public static string domainOverride = ""; //Overrides the test URL
         public static string ephemeralEnvironmentName = "";
 
@@ -21,10 +21,10 @@ namespace SykesCottagesTestAutomation
         public static string reportName = "LYPRegressionSuite"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
-        public static bool acceptCookies = true; //true = accept cookies, false = reject cookies
-        public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
+        public static string cookieBanner = "Ignore"; //Accept | Reject | Ignore
+        public static bool dismissPopups = false; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 

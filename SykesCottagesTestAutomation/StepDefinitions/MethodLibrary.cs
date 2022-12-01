@@ -129,14 +129,7 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("No enabled experiments found");
             }
 
-            if (Hooks.acceptCookies == true)
-            {
-                ClickIfDisplayed("Accept all", waitTime: 2);
-            }
-            else
-            {
-                ClickIfDisplayed("Reject all", waitTime: 2);
-            }
+            ClosePopups();
 
             //Dismiss Book a Holiday pop-up if displayed
             ClickIfDisplayed("dismiss-direct-book-holiday-overlay");
@@ -151,34 +144,36 @@ namespace SykesCottagesTestAutomation
                 }
                 ApplyExperiment(Hooks.experiments);
             }
+
+            SetBrowserSize();
         }
 
-        public void SetBrowserSize(string viewpoint = "", int width = 768, int height = 1024)
+        public void SetBrowserSize()
         {
-            if (viewpoint.Contains("Max") | viewpoint.Contains("max") | viewpoint.Contains("Full") | viewpoint.Contains("full"))
+            if (Hooks.browserSize.Contains("Max") | Hooks.browserSize.Contains("max") | Hooks.browserSize.Contains("Full") | Hooks.browserSize.Contains("full"))
             {
                 Console.WriteLine("Set browser size to maximum");
                 shared.driver.Manage().Window.Maximize(); //Maximise
             }
-            if (viewpoint == "Desktop" | viewpoint == "desktop")
+            if (Hooks.browserSize.Contains("Desktop") | Hooks.browserSize.Contains("desktop"))
             {
                 Console.WriteLine("Set browser size to desktop");
                 shared.driver.Manage().Window.Size = new Size(1460, 640); //Laptop screen dimentions
             }
-            if (viewpoint == "Tablet" | viewpoint == "tablet")
+            if (Hooks.browserSize.Contains("Tablet") | Hooks.browserSize.Contains("tablet"))
             {
                 Console.WriteLine("Set browser size to tablet");
                 shared.driver.Manage().Window.Size = new Size(820, 1180); //iPad Air dimensions
             }
-            if (viewpoint == "Mobile" | viewpoint == "mobile")
+            if (Hooks.browserSize.Contains("Mobile") | Hooks.browserSize.Contains("mobile"))
             {
                 Console.WriteLine("Set browser size to mobile");
                 shared.driver.Manage().Window.Size = new Size(375, 812); //iPhone X dimensions
             }
-            if (viewpoint == "Custom" | viewpoint == "custom")
+            if (Hooks.browserSize.Contains("Custom") | Hooks.browserSize.Contains("custom"))
             {
-                Console.WriteLine("Set browser size to " + width + " by " + height);
-                shared.driver.Manage().Window.Size = new Size(width, height);
+                Console.WriteLine("Set browser size to " + Hooks.pageWidth + " by " + Hooks.pageHeight);
+                shared.driver.Manage().Window.Size = new Size(Hooks.pageWidth, Hooks.pageHeight);
             }
         }
 
@@ -200,20 +195,19 @@ namespace SykesCottagesTestAutomation
             Refresh();
         }
 
-        public void ClosePopups(bool _acceptCookies = true, bool _dismissAlerts = true)
+        public void ClosePopups()
         {
-            if (Hooks.acceptCookies == true)
+            if (Hooks.cookieBanner == "Accept")
             {
-                if (_acceptCookies == true)
-                {
-                    WaitASecond();
-                    ClickIfDisplayed("Accept all cookies");
-                }
+                ClickIfDisplayed("Accept all", waitTime: 2);
             }
-            else
+
+            if (Hooks.cookieBanner == "Reject")
             {
-                Console.WriteLine("Cookies popup not dismissed. Set AcceptCookies to 'Yes' in Hooks class to dismiss popups.");
+                ClickIfDisplayed("Reject all", waitTime: 2);
             }
+
+            ClickIfDisplayed("dismiss-direct-book-holiday-overlay");
 
             if (Hooks.dismissPopups == true)
             {
@@ -226,14 +220,10 @@ namespace SykesCottagesTestAutomation
                 //Dismiss form tint
                 ClickIfDisplayed("nonenquiry6941");
 
-                //Dismiss alerts (unless overridden to test an experiment)
-                if (_dismissAlerts == true)
-                {
-                    //WaitASecond();
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
-                    ClickIfDisplayed("close c-alert__close js-alert-close");
-                }
+                //Dismiss alerts
+                ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
+                ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
+                ClickIfDisplayed("close c-alert__close js-alert-close");
             }
             else
             {
@@ -293,7 +283,6 @@ namespace SykesCottagesTestAutomation
             try
             {
                 Console.WriteLine("Reload the page");
-                //shared.driver.Navigate().Refresh();
                 GoTo(url);
             }
             catch (Exception)
@@ -301,7 +290,7 @@ namespace SykesCottagesTestAutomation
                 Console.WriteLine("Website did not finish loading after " + Hooks.timeOut + " seconds. Cancel page load and continue...");
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
-            SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
+            SetBrowserSize();
         }
 
         public void GetPageHeaders()

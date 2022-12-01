@@ -213,7 +213,6 @@ Scenario: The page sections are displayed in the correct order
 @MobileApp @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevant sections are displayed on the Mobile App homepage
 	Given I have navigated to the following page: letyourcottage/?app_view=true
-	When I set the window size to Mobile
 	Then the following sections are dislpayed
 	| Section                                |
 	| Gain exposure through our partners     |
