@@ -341,6 +341,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 67
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 68
+ testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
                 TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
                 table84.AddRow(new string[] {
@@ -350,7 +353,7 @@ this.ScenarioInitialize(scenarioInfo);
                                 "operty letting services."});
                 table84.AddRow(new string[] {
                             "Submit enquiry"});
-#line 68
+#line 69
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table84, "Then ");
 #line hidden
             }
@@ -397,7 +400,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Path", path);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The MultiStep hero form can be submitted", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 100
+#line 101
  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -407,10 +410,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 101
+#line 102
  testRunner.Given(string.Format("I have navigated to the following page: {0}", path), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 102
+#line 103
  testRunner.Then("the following text is displayed: Start your Sykes holiday letting journey today", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table85 = new TechTalk.SpecFlow.Table(new string[] {
@@ -424,18 +427,18 @@ this.ScenarioInitialize(scenarioInfo);
                                 "operty letting services."});
                 table85.AddRow(new string[] {
                             "/terms/privacypolicy"});
-#line 103
+#line 104
  testRunner.And("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table85, "And ");
 #line hidden
-#line 109
+#line 110
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
                         "\'first_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 110
+#line 111
  testRunner.And("I enter Owner in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*" +
                         "=\'last_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 111
+#line 112
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table86 = new TechTalk.SpecFlow.Table(new string[] {
@@ -445,14 +448,14 @@ this.ScenarioInitialize(scenarioInfo);
                                 "r email address."});
                 table86.AddRow(new string[] {
                             "Email address"});
-#line 112
+#line 113
  testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table86, "Then ");
 #line hidden
-#line 116
+#line 117
  testRunner.When("I enter test@test.com in the following form field: //*[@*=\'enquiry-multi-step\' an" +
                         "d @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 117
+#line 118
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
@@ -462,14 +465,14 @@ this.ScenarioInitialize(scenarioInfo);
                                 "regarding your enquiry), please provide your phone number."});
                 table87.AddRow(new string[] {
                             "Phone number"});
-#line 118
+#line 119
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table87, "Then ");
 #line hidden
-#line 122
+#line 123
  testRunner.When("I enter 070000000000 in the following form field: //*[@*=\'enquiry-multi-step\' and" +
                         " @data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 123
+#line 124
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
@@ -481,17 +484,17 @@ this.ScenarioInitialize(scenarioInfo);
                                 "operty letting services."});
                 table88.AddRow(new string[] {
                             "Submit enquiry"});
-#line 124
+#line 125
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table88, "Then ");
 #line hidden
-#line 129
+#line 130
  testRunner.When("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'4\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 130
+#line 131
  testRunner.And("I wait up to 10 seconds for the following to be displayed: Thank you for your enq" +
                         "uiry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 131
+#line 132
  testRunner.Then("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
                         "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -510,7 +513,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The transparent header is displayed on the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 159
+#line 160
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -520,10 +523,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 160
+#line 161
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 161
+#line 162
  testRunner.Then("the following element is displayed: nav_top u-clearfix nav_top_17485", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -539,7 +542,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LetYourProperty"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The floating action button is displayed on the Let Your Property page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 164
+#line 165
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -549,19 +552,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 165
+#line 166
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 166
+#line 167
  testRunner.When("I scroll to the following element: page-footer container_sykes_grid", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 167
+#line 168
  testRunner.Then("the following element is displayed: Back To Top Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 168
+#line 169
  testRunner.When("I click Back To Top Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 169
+#line 170
  testRunner.Then("the enquiry form is displayed with the tint applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -575,7 +578,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Income Projection is displayed upon interaction", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 172
+#line 173
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -585,13 +588,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 173
+#line 174
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 174
+#line 175
  testRunner.When("I select option Northumberland from the region dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 175
+#line 176
  testRunner.Then("the following element is displayed: homepage_calculator_cta_blue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -609,7 +612,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Managed Services links direct to the LYP form", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 178
+#line 179
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -619,14 +622,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 179
+#line 180
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 180
- testRunner.When("I scroll to the following element: Partially managed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 181
- testRunner.And("I select the Partially Managed Enquire Now button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I select the Partially Managed Enquire Now button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 182
  testRunner.Then("the enquiry form is displayed with the tint applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

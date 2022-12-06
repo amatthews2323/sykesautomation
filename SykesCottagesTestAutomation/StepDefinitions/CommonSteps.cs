@@ -15,8 +15,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
-            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
-            //ClosePopups();
             AssertPageTitle("Holiday Cottages To Rent");
         }
 
@@ -24,7 +22,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite(Hooks.domainOverride, path);
-            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [Given(@"I have navigated to the following brand: (.*)")]
@@ -32,14 +29,12 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             string domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt + " " + brand);
             LaunchWebsite(domain);
-            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
         {
             LaunchWebsite("", path);
-            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
         }
 
         [When(@"I navigate to (.*)")]
@@ -65,7 +60,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             try
             {
-                WaitUntilClickable(value, 5);
+                WaitUntilClickable(value);
                 Click(value);
             }
             catch
@@ -96,15 +91,19 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select the Partially Managed Enquire Now button")]
         public void WhenISelectThePartiallyManagedEnquireNowButton()
         {
+            ScrollTo("Partially managed");
             Click("Partially managed");
-            Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a", waitTime: 5);
+            ScrollTo("//*[text()='Partially managed']//parent::div//following-sibling::div//a");
+            Click("//*[text()='Partially managed']//parent::div//following-sibling::div//a");
         }
 
         [When(@"I select the Fully Managed Enquire Now button")]
         public void WhenISelectTheFullyManagedEnquireNowButton()
         {
+            ScrollTo("Fully managed");
             Click("Fully managed");
-            Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a", waitTime: 5);
+            ScrollTo("//*[text()='Fully managed']//parent::div//following-sibling::div//a");
+            Click("//*[text()='Fully managed']//parent::div//following-sibling::div//a");
         }
 
         [Then(@"the enquiry form is displayed with the tint applied")]
@@ -158,7 +157,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following page title is displayed: (.*)")]
         public void ThenTheFollowingPageTitleIsDisplayed(string value)
         {
-            WaitUntilExists(value, 5);
+            WaitUntilExists(value);
             AssertPageTitle(value);
         }
 
@@ -178,6 +177,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
+                WaitUntilExists(element);
                 AssertElementDisplayed(element.ToString());
             }
         }
@@ -216,7 +216,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"the following text is displayed: (.*)")]
         public void ThenTheFollowingTextIsDisplayed(string text)
         {
-            WaitUntilExists(text, 5);
             AssertTextDisplayed(text);
         }
 

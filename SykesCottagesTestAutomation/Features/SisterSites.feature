@@ -95,6 +95,7 @@ Scenario: The Sister Brands are displayed correctly part two
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
@@ -132,8 +133,6 @@ Scenario: The Sister Brand hero form can be submitted
 	| Brand                  |
 	| Hogans Irish Cottages  |
 	| Lakes Cottage Holidays |
-	| Large Holiday Houses   |
-	| Lyme Bay Holidays      |
 
 @SisterBrands @FormSubmission
 Scenario: The Sister Brand MultiStep form can be submitted
@@ -154,11 +153,13 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| Email address                                                                                     |
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
 	When I enter 07000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
@@ -171,7 +172,7 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	Examples:
 	| Brand                      |
 	| Carbis Bay                 |
-	| Character Cottages		 |
+	| Character Cottages         |
 	| Coast & Country Cottages   |
 	| Coast & Country Holidays   |
 	| Cornish Cottage Holidays   |
@@ -181,6 +182,8 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| John Bray Cornish Holidays |
 	| Lake District              |
 	| Lakelovers                 |
+	| Large Holiday Houses       |
+	| Lyme Bay Holidays          |
 	| Manor Cottages             |
 	| Menai Holiday Cottages     |
 	| Yorkshire Coastal          |

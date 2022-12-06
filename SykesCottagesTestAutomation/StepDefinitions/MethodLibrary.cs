@@ -111,11 +111,13 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
+            //Check for errors
             AssertElementNotDisplayed("503 Service Temporarily Unavailable");
             AssertElementNotDisplayed("An error has occurred");
             AssertElementNotDisplayed("Service Unavailable");
             AssertElementNotDisplayed("504 Gateway Time-out");
 
+            //Add Staging authentication cookie
             //shared.driver.Manage().Cookies.AddCookie(new Cookie("internally_authenticated", "F1s4LtCgeouXQD0h1dlAEnmm9jcSS56nSIADaR0h%2FVDY2kmLMgiN4ZsaYldMyXBuGAFUHjaWS87NYZ43vaoDDzy7Di6UA%2FvTSo0Ejv%2FTMAHDf6MUzk7KKbg2zlXHmMqWAPWCxRDawTlXo%2B0qXvewU3%2BGATSa8sZmuJNo5YX9X9EElSHuWCc%3D"));
 
             try

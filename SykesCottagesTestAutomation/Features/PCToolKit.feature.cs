@@ -93,7 +93,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
-testRunner.Given("I am on the following webpage: https://pctoolkit.staging.sykes.network/login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I am on the following webpage: https://sykes:1.sykes@pctoolkit.staging.sykes.netw" +
+                        "ork/login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
 testRunner.When("I click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -103,12 +104,15 @@ testRunner.When("I click Log in", ((string)(null)), ((TechTalk.SpecFlow.Table)(n
                             "Value"});
                 table99.AddRow(new string[] {
                             "Username",
-                            "name.name@test.com"});
+                            "xxxxx"});
                 table99.AddRow(new string[] {
                             "Password",
-                            "testing123"});
+                            "xxxxx"});
 #line 8
 testRunner.And("I log in with the following credentials", ((string)(null)), table99, "And ");
+#line hidden
+#line 12
+testRunner.And("I wait 10 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
@@ -120,7 +124,7 @@ testRunner.And("I log in with the following credentials", ((string)(null)), tabl
                             "Upcoming visits"});
                 table100.AddRow(new string[] {
                             "task-card-header"});
-#line 12
+#line 13
 testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table100, "Then ");
 #line hidden
             }
