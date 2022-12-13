@@ -11,11 +11,16 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
         }
 
+        [Given(@"I am on the following webpage: (.*)")]
+        public void GivenIAmOnTheFollowingWebpage(string domain = "")
+        {
+            LaunchWebsite(domain);
+        }
+
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
-            AssertPageTitle("Holiday Cottages To Rent");
         }
 
         [Given(@"I have navigated to the following page: (.*)")]
@@ -61,6 +66,35 @@ namespace SykesCottagesTestAutomation.BaseClass
             try
             {
                 WaitUntilClickable(value);
+            }
+            catch
+            {
+                Console.WriteLine("Element " + value + " not clickable");
+            }
+            try
+            {
+                Click(value);
+            }
+            catch
+            {
+                Console.WriteLine("Click failed; try with JavaScript...");
+                JSClick(value);
+            }
+        }
+
+        [Then(@"I click (.*)")]
+        public void ThenIClick(string value)
+        {
+            try
+            {
+                WaitUntilClickable(value);
+            }
+            catch
+            {
+                Console.WriteLine("Element " + value + " not clickable");
+            }
+            try
+            {
                 Click(value);
             }
             catch
@@ -76,16 +110,10 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click(XPath(section) + XPath(element));
         }
 
-        [Then(@"I click (.*)")]
-        public void ThenIClick(string value)
+        [Then(@"I select (.*) within the (.*) section")]
+        public void ThenISelectWithinTheSection(string element, string section)
         {
-            Click(value);
-        }
-
-        [When(@"I select the alert Get Started button")]
-        public void WhenISelectTheAlertGetStartedButton()
-        {
-            Click("//div[contains(@class,'c-alert--blue')]//a[contains(text(),'Get started')]|//button[contains(@class,'enquiry-button')]", waitTime: 1);
+            Click(XPath(section) + XPath(element));
         }
 
         [When(@"I select the Partially Managed Enquire Now button")]
@@ -113,32 +141,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertElementDisplayed("//*[@class='o-overlay-tint o-overlay-tint--default' and @style='display: block;']");
         }
 
-        [Then(@"the Testimonials carousel is displayed on the page")]
-        public void ThenTheTestimonialsCarouselIsDisplayedOnThePage()
-        {
-            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div/div[contains(@class,'carousel-slider')]");
-            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-prev.svg')]");
-            AssertElementDisplayed("//*[text()='What do our owners say?']/parent::div//img[contains(@src,'arrow-next.svg')]");
-        }
-
-        [Then(@"the enquiry form submit button is disabled")]
-        public void ThenTheEnquiryFormSubmitButtonIsDisabled()
-        {
-            AssertElementDisplayed("//form[@*='heroform']/button[@type='submit' and @disabled='']");
-        }
-
-        [Then(@"the enquiry form submit button is not disabled")]
-        public void ThenTheEnquiryFormSubmitButtonIsNotDisabled()
-        {
-            AssertElementNotDisplayed("//form[@*='heroform']/button[@type='submit' and @disabled='']");
-        }
-
-        [When(@"I select the close icon on the form")]
-        public void WhenISelectTheCloseIconOnTheForm()
-        {
-            Click("//div[@class='o-overlay__content']/button[@title='Close form']", waitTime: 1);
-        }
-
         [When(@"I select the (.*) navigation link under (.*)")]
         public void WhenISelectTheNavigationLinkUnder(string headedLink, string headerMenu)
         {
@@ -152,7 +154,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             MouseOver(element);
         }
-
 
         [Then(@"the following page title is displayed: (.*)")]
         public void ThenTheFollowingPageTitleIsDisplayed(string value)
@@ -238,44 +239,20 @@ namespace SykesCottagesTestAutomation.BaseClass
             AssertElementNotVisible(value);
         }
 
-        [Then(@"the How Much Could I Earn CTA is not displayed")]
-        public void ThenTheHowMuchCouldIEarnCTAIsNotDisplayed()
-        {
-            AssertElementDisplayed("//div[@*='how-much-could-i-earn']/a[@*='homepage_calculator_cta_blue']");
-        }
-
-        [Then(@"the Holiday Letting Made Easy CTA is not displayed")]
-        public void ThenTheHolidayLettingMadeEasyCTAIsNotDisplayed()
-        {
-            AssertElementNotDisplayed("//*[text()='Holiday letting made easy']/parent::div//a[@*='homepage_letting_made_easy_cta_blue']");
-        }
-
-        [When(@"I click the (.*) button")]
-        public void ThenIClickTheButton(string element)
-        {
-            Click(element);
-        }
-
         [When(@"I select option (.*) from the (.*) dropdown")]
         public void WhenISelectOptionFromTheDropdown(string option, string dropdown)
         {
             SelectFromDropdown(option, dropdown);
         }
 
-        [Then(@"the following slick dot is highlighted (.*)")]
-        public void ThenTheFollowingSlickDotIsHighlighted(int value)
-        {
-            AssertElementDisplayed("//ul[@class='slick-dots']/li[" + value + "]//self::*[@class='slick-active']");
-        }
-
-        [Then(@"I wait (.*) seconds")]
-        public void ThenIWaitSeconds(int value)
+        [When(@"I wait (.*) seconds")]
+        public void WhenIWaitSeconds(int value)
         {
             WaitASecond(value);
         }
 
-        [When(@"I wait (.*) seconds")]
-        public void WhenIWaitSeconds(int value)
+        [Then(@"I wait (.*) seconds")]
+        public void ThenIWaitSeconds(int value)
         {
             WaitASecond(value);
         }
@@ -304,22 +281,26 @@ namespace SykesCottagesTestAutomation.BaseClass
             WaitUntilClickable(element, seconds);
         }
 
-        [Given(@"I am on the following webpage: (.*)")]
-        public void GivenIAmOnTheFollowingWebpage(string domain = "")
-        {
-            LaunchWebsite(domain);
-            //ClosePopups();
-            //SetBrowserSize(Hooks.browserSize, Hooks.pageWidth, Hooks.pageHeight);
-        }
-
         [When(@"I scroll to the following element: (.*)")]
         public void WhenIScrollToTheFollowingElement(string element)
         {
             ScrollTo(element);
         }
 
+        [Then(@"I scroll to the following element: (.*)")]
+        public void ThenIScrollToTheFollowingElement(string element)
+        {
+            ScrollTo(element);
+        }
+
         [When(@"I switch focus to the new tab")]
         public void WhenISwitchFocusToTheNewTab()
+        {
+            SwitchFocus();
+        }
+
+        [Then(@"I switch focus to the new tab")]
+        public void ThenISwitchFocusToTheNewTab()
         {
             SwitchFocus();
         }
@@ -363,6 +344,13 @@ namespace SykesCottagesTestAutomation.BaseClass
             Type(field, text);
         }
 
+        [Then(@"I enter (.*) in the following form field: (.*)")]
+        public void ThenIEnterInTheFollowingFormField(string text, string field)
+        {
+            WaitUntilClickable(field, 10);
+            Type(field, text);
+        }
+
         [Then(@"the page sections are displayed in the relevant positions")]
         public void ThenThePageSectionsAreDisplayedInTheRelevantPositions(Table table)
         {
@@ -376,26 +364,18 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
-        [When(@"I select the form overlay submit button")]
-        public void WhenISelectTheFormOverlaySubmitButton()
-        {
-            Click("//div[@id='js-overlay-list-property']//form[@*='list_property']/button[@type='submit']", waitTime: 2);
-        }
-
-        [Then(@"I store the headers on the page")]
-        public void ThenIStoreTheHeadersOnThePage()
-        {
-            GetPageHeaders();
-        }
-
         [When(@"I log in with the following credentials")]
         public void WhenILogInWithTheFollowingCredentials(Table table)
         {
             var dictionary = ToDictionary(table);
 
-            Type("email", dictionary["Username"]);
-            Click("submit", "input");
-            Type("password", dictionary["Password"]);
+            if (ElementNotDisplayed(dictionary["Username"]))
+            {
+                Type("email", dictionary["Username"]);
+                Click("submit", "input");
+            }
+            WaitASecond(2);
+            Type("passwd", dictionary["Password"]);
             Click("submit", "input", waitTime: 3);
         }
 

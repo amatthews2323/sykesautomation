@@ -659,14 +659,6 @@ Scenario: Experiment LetYourCottages_TriggerVisitRequest18459
 		 | Book property visit                                      |
 
 @StoppedExperiments
-Scenario: Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_RemoveRequestYourOwnerPackCta18486
-	And I close the pop-ups
-	Then the How Much Could I Earn CTA is not displayed
-	And the Holiday Letting Made Easy CTA is not displayed
-
-@StoppedExperiments
 Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18529
@@ -716,19 +708,6 @@ Scenario: Experiment LetYourCottages_LoopingImageOnHero18461
 	And I close the pop-ups
 	And I navigate to https://www.sykescottages.co.uk/letyourcottage/
 	Then the following element is displayed: hero-slideshow
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18347
-	And I close the pop-ups
-	Then the following slick dot is highlighted 1
-	And I wait 12 seconds
-	And the following slick dot is highlighted 2
-	And I wait 10 seconds
-	And the following slick dot is highlighted 3
-	When I click holiday properties already working with Sykes
-	Then the following slick dot is highlighted 4
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_QAOwnerCaseStudies18625
@@ -835,20 +814,6 @@ Scenario: Experiment LetYourCottages_RemoveAlertMessagesonLYP18458
 		| A new property has just gone live    |
 
 @StoppedExperiments
-Scenario: Experiment LetYourCottages_DisableEnquiryUntilValidInput18581
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18581
-	And I close the pop-ups
-	Then the enquiry form submit button is disabled
-	When I enter the following details on the enquiry form
-		| Key           | Value                         |
-		| Full name     | Test Owner                    |
-		| Email address | sykescottagestest@example.org |
-		| Phone number  | 07000000000                   |
-	And I click form-heading-container
-	Then the enquiry form submit button is not disabled
-
-@StoppedExperiments
 Scenario: Experiment LetYourCottages_IncludeMultipleImages18474
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18474
@@ -878,14 +843,6 @@ Scenario: Experiment LetYourCottages_InformationPageAlerts18281
 	Given I have navigated to the following page without dismissing alerts: letyourcottage/information/marketing-your-holiday-let/?dev_tools=product
 	When I apply the following experiment: 18281
 	Then the following element is displayed: c-alert c-alert--standard js-alert is-visible
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_TOBAlertModal18279
-	Given I have navigated to the following page without dismissing alerts: letyourcottage/holiday-homes-for-sale/?dev_tools=product
-	When I apply the following experiment: 18279
-	And I select the alert Get Started button
-	And I select the close icon on the form
-	Then the following element is displayed: Enquire with Sykes today
 
 @StoppedExperiments
 Scenario: Experiment LetYourCottages_EnquiryFormCopyUpdate18283

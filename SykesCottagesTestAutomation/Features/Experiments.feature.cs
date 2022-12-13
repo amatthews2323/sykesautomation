@@ -2427,14 +2427,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486")]
+        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_OwnerIncentivePromotion18529")]
         [NUnit.Framework.CategoryAttribute("StoppedExperiments")]
-        public void ExperimentLetYourCottages_RemoveRequestYourOwnerPackCta18486()
+        public void ExperimentLetYourCottages_OwnerIncentivePromotion18529()
         {
             string[] tagsOfScenario = new string[] {
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_RemoveRequestYourOwnerPackCta18486", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_OwnerIncentivePromotion18529", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 662
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -2449,48 +2449,9 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 664
- testRunner.When("I apply the following experiment: LetYourCottages_RemoveRequestYourOwnerPackCta18" +
-                        "486", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 665
- testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 666
- testRunner.Then("the How Much Could I Earn CTA is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 667
- testRunner.And("the Holiday Letting Made Easy CTA is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_OwnerIncentivePromotion18529")]
-        [NUnit.Framework.CategoryAttribute("StoppedExperiments")]
-        public void ExperimentLetYourCottages_OwnerIncentivePromotion18529()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "StoppedExperiments"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_OwnerIncentivePromotion18529", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 670
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 671
- testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 672
  testRunner.When("I apply the following experiment: 18529", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 673
+#line 665
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2502,7 +2463,7 @@ this.ScenarioInitialize(scenarioInfo);
                                 " June 2022 to earn a welcome gift of your choice..."});
                 table56.AddRow(new string[] {
                             "/letyourcottage/information/welcome-gift/"});
-#line 674
+#line 666
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table56, "Then ");
 #line hidden
             }
@@ -2518,7 +2479,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_MoveRegionalTestimonials18277", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 681
+#line 673
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2528,17 +2489,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 682
+#line 674
  testRunner.Given("I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?d" +
                         "ev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 683
+#line 675
  testRunner.When("I apply the following experiment: 18277", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 684
+#line 676
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 685
+#line 677
  testRunner.Then("the testimonials_region_pc section is displayed at position 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -2554,7 +2515,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_BurguerMenuTablet18658", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 688
+#line 680
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2564,22 +2525,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 689
+#line 681
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 690
+#line 682
  testRunner.When("I apply the following experiment: 18658", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 691
+#line 683
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 692
+#line 684
  testRunner.And("I set the window size to Tablet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 693
+#line 685
  testRunner.Then("the following element is displayed: burguer-menu collapsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 694
+#line 686
  testRunner.When("I click burguer-menu collapsed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table57 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2598,7 +2559,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "How much could I earn?"});
                 table57.AddRow(new string[] {
                             "Book a holiday"});
-#line 695
+#line 687
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table57, "Then ");
 #line hidden
             }
@@ -2614,7 +2575,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_AddDownArrowInHero18579", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 706
+#line 698
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2624,16 +2585,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 707
+#line 699
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 708
+#line 700
  testRunner.When("I apply the following experiment: 18579", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 709
+#line 701
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 710
+#line 702
  testRunner.Then("the following element is displayed: scrolldownarrow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -2649,7 +2610,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_LoopingImageOnHero18461", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 713
+#line 705
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2659,73 +2620,20 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 714
+#line 706
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 715
+#line 707
  testRunner.When("I apply the following experiment: 18461", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 716
+#line 708
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 717
+#line 709
  testRunner.And("I navigate to https://www.sykescottages.co.uk/letyourcottage/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 718
+#line 710
  testRunner.Then("the following element is displayed: hero-slideshow", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347")]
-        [NUnit.Framework.CategoryAttribute("StoppedExperiments")]
-        public void ExperimentLetYourCottages_SlowHeroTextAndAddInteraction18347()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "StoppedExperiments"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_SlowHeroTextAndAddInteraction18347", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 721
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 722
- testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 723
- testRunner.When("I apply the following experiment: 18347", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 724
- testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 725
- testRunner.Then("the following slick dot is highlighted 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 726
- testRunner.And("I wait 12 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 727
- testRunner.And("the following slick dot is highlighted 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 728
- testRunner.And("I wait 10 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 729
- testRunner.And("the following slick dot is highlighted 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 730
- testRunner.When("I click holiday properties already working with Sykes", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 731
- testRunner.Then("the following slick dot is highlighted 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -2740,7 +2648,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_QAOwnerCaseStudies18625", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 734
+#line 713
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2750,13 +2658,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 735
+#line 714
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 736
+#line 715
  testRunner.When("I apply the following experiment: 18625", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 737
+#line 716
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table58 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2777,10 +2685,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "Have your holiday lets been a good investment for you?"});
                 table58.AddRow(new string[] {
                             "How did you first get into holiday letting?"});
-#line 738
+#line 717
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table58, "Then ");
 #line hidden
-#line 748
+#line 727
  testRunner.When("I click Why did you choose Sykes?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table59 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2797,22 +2705,22 @@ this.ScenarioInitialize(scenarioInfo);
                             "7307"});
                 table59.AddRow(new string[] {
                             "954987"});
-#line 749
+#line 728
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table59, "Then ");
 #line hidden
-#line 757
+#line 736
  testRunner.When("I click What advice would you give to other holiday let owners?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 758
+#line 737
  testRunner.And("I click How long did it take to convert your property into a holiday let?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 759
+#line 738
  testRunner.And("I click Is holiday letting what you expected?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 760
+#line 739
  testRunner.And("I click Have your holiday lets been a good investment for you?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 761
+#line 740
  testRunner.And("I click How did you first get into holiday letting?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -2828,7 +2736,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_CollapseSectionsOnLypPage18587", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 764
+#line 743
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2838,13 +2746,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 765
+#line 744
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 766
+#line 745
  testRunner.When("I apply the following experiment: 18587", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 767
+#line 746
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table60 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2867,10 +2775,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "Free information pack"});
                 table60.AddRow(new string[] {
                             "Looking to get started with holiday letting"});
-#line 768
+#line 747
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table60, "Then ");
 #line hidden
-#line 779
+#line 758
  testRunner.When("I click Owner testimonials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2883,7 +2791,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "testimonial_quote"});
                 table61.AddRow(new string[] {
                             "testimonial_owner"});
-#line 780
+#line 759
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table61, "Then ");
 #line hidden
             }
@@ -2899,7 +2807,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_PartnersIntoHero18491", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 788
+#line 767
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2909,13 +2817,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 789
+#line 768
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 790
+#line 769
  testRunner.When("I apply the following experiment: 18491", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 791
+#line 770
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2934,7 +2842,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "tripadvisor logo"});
                 table62.AddRow(new string[] {
                             "icelolly logo"});
-#line 792
+#line 771
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table62, "Then ");
 #line hidden
             }
@@ -2950,7 +2858,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_IntroducingSisterBrands18705", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 803
+#line 782
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2960,10 +2868,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 804
+#line 783
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 805
+#line 784
  testRunner.When("I apply the following experiment: 18705", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
@@ -2972,7 +2880,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Introducing our brand network"});
                 table63.AddRow(new string[] {
                             "c-sisterbrands-logos"});
-#line 806
+#line 785
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table63, "Then ");
 #line hidden
             }
@@ -2988,7 +2896,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_LYPPhoneNumberSection18569", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 812
+#line 791
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -2998,13 +2906,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 813
+#line 792
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 814
+#line 793
  testRunner.When("I apply the following experiment: 18569", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 815
+#line 794
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
@@ -3013,7 +2921,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Can\'t find the service you are looking for?"});
                 table64.AddRow(new string[] {
                             "01244 356 666"});
-#line 816
+#line 795
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table64, "Then ");
 #line hidden
             }
@@ -3029,7 +2937,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ProgressBarUpdatetoWhite18869", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 822
+#line 801
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3039,16 +2947,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 823
+#line 802
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 824
+#line 803
  testRunner.When("I apply the following experiment: 18869", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 825
+#line 804
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 826
+#line 805
  testRunner.Then("the following element is displayed: progressbar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3064,7 +2972,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_RemoveAlertMessagesonLYP18458", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 829
+#line 808
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3074,11 +2982,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 830
+#line 809
  testRunner.Given("I have navigated to the following page without dismissing alerts: letyourcottage/" +
                         "?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 831
+#line 810
  testRunner.When("I apply the following experiment: 18458", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
@@ -3087,64 +2995,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "An owner has just completed the form"});
                 table65.AddRow(new string[] {
                             "A new property has just gone live"});
-#line 832
+#line 811
  testRunner.Then("the relevant elements are not dislpayed", ((string)(null)), table65, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_DisableEnquiryUntilValidInput18581")]
-        [NUnit.Framework.CategoryAttribute("StoppedExperiments")]
-        public void ExperimentLetYourCottages_DisableEnquiryUntilValidInput18581()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "StoppedExperiments"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_DisableEnquiryUntilValidInput18581", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 838
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 839
- testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 840
- testRunner.When("I apply the following experiment: 18581", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 841
- testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 842
- testRunner.Then("the enquiry form submit button is disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Key",
-                            "Value"});
-                table66.AddRow(new string[] {
-                            "Full name",
-                            "Test Owner"});
-                table66.AddRow(new string[] {
-                            "Email address",
-                            "sykescottagestest@example.org"});
-                table66.AddRow(new string[] {
-                            "Phone number",
-                            "07000000000"});
-#line 843
- testRunner.When("I enter the following details on the enquiry form", ((string)(null)), table66, "When ");
-#line hidden
-#line 848
- testRunner.And("I click form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 849
- testRunner.Then("the enquiry form submit button is not disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3159,7 +3011,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_IncludeMultipleImages18474", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 852
+#line 817
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3169,16 +3021,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 853
+#line 818
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 854
+#line 819
  testRunner.When("I apply the following experiment: 18474", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 855
+#line 820
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 856
+#line 821
  testRunner.Then("the following element is displayed: platform-slider slick-initialized slick-slide" +
                         "r", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -3195,7 +3047,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_RemoveSectionsFromLYP18292", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 859
+#line 824
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3205,25 +3057,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 860
+#line 825
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 861
+#line 826
  testRunner.When("I apply the following experiment: 18292", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 862
+#line 827
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table67 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table67.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table67.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Are you thinking of buying"});
-                table67.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "Back to Top"});
-#line 863
- testRunner.Then("the relevant elements are not dislpayed", ((string)(null)), table67, "Then ");
+#line 828
+ testRunner.Then("the relevant elements are not dislpayed", ((string)(null)), table66, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3238,7 +3090,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ReferAFriend18136", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 870
+#line 835
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3248,16 +3100,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 871
+#line 836
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 872
+#line 837
  testRunner.When("I apply the following experiment: 18136", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 873
+#line 838
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 874
+#line 839
  testRunner.Then("the following element is displayed: Refer a friend", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3273,7 +3125,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_InformationPageAlerts18281", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 877
+#line 842
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3283,55 +3135,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 878
+#line 843
  testRunner.Given("I have navigated to the following page without dismissing alerts: letyourcottage/" +
                         "information/marketing-your-holiday-let/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 879
+#line 844
  testRunner.When("I apply the following experiment: 18281", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 880
+#line 845
  testRunner.Then("the following element is displayed: c-alert c-alert--standard js-alert is-visible" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Experiment LetYourCottages_TOBAlertModal18279")]
-        [NUnit.Framework.CategoryAttribute("StoppedExperiments")]
-        public void ExperimentLetYourCottages_TOBAlertModal18279()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "StoppedExperiments"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_TOBAlertModal18279", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 883
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 884
- testRunner.Given("I have navigated to the following page without dismissing alerts: letyourcottage/" +
-                        "holiday-homes-for-sale/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 885
- testRunner.When("I apply the following experiment: 18279", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 886
- testRunner.And("I select the alert Get Started button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 887
- testRunner.And("I select the close icon on the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 888
- testRunner.Then("the following element is displayed: Enquire with Sykes today", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3346,7 +3159,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_EnquiryFormCopyUpdate18283", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 891
+#line 848
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3356,16 +3169,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 892
+#line 849
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 893
+#line 850
  testRunner.When("I apply the following experiment: 18283", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 894
+#line 851
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 895
+#line 852
  testRunner.Then("the following text is displayed: Complete the form to receive your free informati" +
                         "on pack", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -3382,7 +3195,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_StaycationGuideDownload18066", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 898
+#line 855
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3392,16 +3205,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 899
+#line 856
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 900
+#line 857
  testRunner.When("I apply the following experiment: 18066", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 901
+#line 858
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 902
+#line 859
  testRunner.Then("the following text is displayed: Download the Sykes staycation index", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3417,7 +3230,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_TestimonialRefocus18099", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 905
+#line 862
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3427,30 +3240,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 906
+#line 863
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 907
+#line 864
  testRunner.When("I apply the following experiment: 18099", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 908
+#line 865
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table68 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table67 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table68.AddRow(new string[] {
+                table67.AddRow(new string[] {
                             "testimonial-slider"});
-                table68.AddRow(new string[] {
+                table67.AddRow(new string[] {
                             "Sykes instilled a lot of confidence in us and now I wouldn’t use anybody else"});
-                table68.AddRow(new string[] {
+                table67.AddRow(new string[] {
                             "Sykes have taken the stress out of us taking bookings, they are so professional"});
-                table68.AddRow(new string[] {
+                table67.AddRow(new string[] {
                             "It is great working with Sykes - they are always available and they pay you quick" +
                                 "ly"});
-#line 909
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table68, "Then ");
+#line 866
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table67, "Then ");
 #line hidden
-#line 915
+#line 872
     testRunner.And("the following element is not displayed: What do our owners say?", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -3466,7 +3279,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_AlternativeMethodsOfContact18065", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 918
+#line 875
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3476,27 +3289,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 919
+#line 876
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 920
+#line 877
  testRunner.When("I apply the following experiment: 18065", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 921
+#line 878
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table69 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table68 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table69.AddRow(new string[] {
+                table68.AddRow(new string[] {
                             "We\'re here to help"});
-                table69.AddRow(new string[] {
+                table68.AddRow(new string[] {
                             "Get in touch"});
-                table69.AddRow(new string[] {
+                table68.AddRow(new string[] {
                             "Give us a call"});
-                table69.AddRow(new string[] {
+                table68.AddRow(new string[] {
                             "Enquire about letting with Sykes"});
-#line 922
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table69, "Then ");
+#line 879
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table68, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3511,7 +3324,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_PartnersInfoGraphic17791", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 930
+#line 887
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3521,33 +3334,33 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 931
+#line 888
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 932
+#line 889
  testRunner.When("I apply the following experiment: 17791", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 933
+#line 890
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table70 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table69 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "Expand your reach with our"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "700+ partner channels"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "airbnb logo"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "icelolly logo"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "vrbo logo"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "expedia logo"});
-                table70.AddRow(new string[] {
+                table69.AddRow(new string[] {
                             "tripadvisor logo"});
-#line 934
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table70, "Then ");
+#line 891
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table69, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3562,7 +3375,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_AddingWebinars17805", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 945
+#line 902
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3572,31 +3385,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 946
+#line 903
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 947
+#line 904
  testRunner.When("I apply the following experiment: 17805", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 948
+#line 905
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table70 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "Let the holiday experts answer your questions"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "webinar-video"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "Listing with Sykes"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "Watch more"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "Thinking of buying a property"});
-                table71.AddRow(new string[] {
+                table70.AddRow(new string[] {
                             "New to letting"});
-#line 949
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table71, "Then ");
+#line 906
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table70, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3611,7 +3424,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_SingleCTAWithinTheHero17973", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 959
+#line 916
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3621,26 +3434,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 960
+#line 917
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 961
+#line 918
  testRunner.When("I apply the following experiment: 17973", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 962
+#line 919
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 963
+#line 920
     testRunner.Then("the following element is not displayed: form-heading-container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "Let your property with Sykes and earn up to £125,000 per year*"});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "Get started today"});
-#line 964
-    testRunner.And("the following elements are dislpayed", ((string)(null)), table72, "And ");
+#line 921
+    testRunner.And("the following elements are dislpayed", ((string)(null)), table71, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3655,7 +3468,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_PnoProcess17640", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 970
+#line 927
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3665,27 +3478,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 971
+#line 928
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 972
+#line 929
  testRunner.When("I apply the following experiment: 17640", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 973
+#line 930
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table73 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table73.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "How to list with Sykes"});
-                table73.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Request for contact"});
-                table73.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Self-service"});
-                table73.AddRow(new string[] {
+                table72.AddRow(new string[] {
                             "Start taking bookings"});
-#line 974
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table73, "Then ");
+#line 931
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table72, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -3700,7 +3513,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_FullHeightHero17731", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 982
+#line 939
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3710,16 +3523,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 983
+#line 940
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 984
+#line 941
  testRunner.When("I apply the following experiment: 17731", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 985
+#line 942
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 986
+#line 943
     testRunner.Then("the following element is displayed: o-icon o-icon-down-full-hero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3735,7 +3548,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_RelaxedValidationEnquiry17573", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 989
+#line 946
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3745,19 +3558,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 990
+#line 947
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 991
+#line 948
  testRunner.When("I apply the following experiment: 17573", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 992
+#line 949
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 993
+#line 950
     testRunner.And("I click submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 994
+#line 951
     testRunner.Then("the following element is not displayed: Please enter a contact number.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3773,7 +3586,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_ChangeTextForm17977", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 997
+#line 954
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3783,16 +3596,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 998
+#line 955
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 999
+#line 956
  testRunner.When("I apply the following experiment: 17977", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 1000
+#line 957
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 1001
+#line 958
  testRunner.Then("the following text is displayed: Complete the form to begin your holiday letting " +
                         "journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -3809,7 +3622,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 1004
+#line 961
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3819,19 +3632,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 1005
+#line 962
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 1006
+#line 963
  testRunner.When("I apply the following experiment: 17853", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 1007
+#line 964
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 1008
+#line 965
     testRunner.And("I set the window size to Tablet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 1009
+#line 966
  testRunner.Then("the following element is displayed: Floating action button mobile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -3847,7 +3660,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "StoppedExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Experiment LetYourCottages_AverageMonthlyIncomeProjection17432", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 1012
+#line 969
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -3857,16 +3670,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 1013
+#line 970
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 1014
+#line 971
  testRunner.When("I apply the following experiment: 17432", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 1015
+#line 972
  testRunner.And("I close the pop-ups", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 1016
+#line 973
  testRunner.Then("the following text is displayed: Average monthly income", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

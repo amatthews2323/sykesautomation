@@ -107,20 +107,20 @@ Scenario: The MultiStep form is displayed correctly
 	| last_name                                                                                                 |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                                      |
-	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
-	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	When I enter Dupe in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Test002 in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter dupetest002@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
-	When I enter 070000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	When I enter 06444666555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
@@ -286,7 +286,5 @@ Scenario: The number of bedrooms is included in the earnings calculator
 	Then the relevant elements are dislpayed
 	| Element                           |
 	| How much could I earn with Sykes? |
-	| Property location                 |
 	| Property information              |
 	| Average potential earnings        |
-	| Enquire today to get started      |

@@ -101,6 +101,7 @@ Scenario: The Sister Brands are displayed correctly part two
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
+	And I click //*[@*='enquiry-form-step4']/*[@*='close-modal']
 	Examples:
 	| Brand                      |
 	| Carbis Bay                 |
@@ -123,9 +124,9 @@ Scenario: The Sister Brands are displayed correctly part two
 @SisterBrands @FormSubmission
 Scenario: The Sister Brand hero form can be submitted
 	Given I have navigated to the following brand: <Brand>
-	When I enter Test Owner in the following form field: heroform_first_name
-	And I enter test@test.com in the following form field: heroform_email
-	And I enter 07000000000 in the following form field: heroform_phone
+	When I enter Dupe Test004 in the following form field: heroform_first_name
+	And I enter dupetest004@gmail.com in the following form field: heroform_email
+	And I enter 01999888994 in the following form field: heroform_phone
 	And I click form-heading-container
 	And I select Get Started
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
@@ -144,21 +145,21 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| last_name                                                                                                 |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                                      |
-	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
-	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	When I enter Dupe in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Test001 in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communciations from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter dupetest001@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
-	When I enter 07000000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	When I enter 03555999555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed

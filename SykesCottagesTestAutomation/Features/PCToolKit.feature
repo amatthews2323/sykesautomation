@@ -7,12 +7,12 @@ Given I am on the following webpage: https://sykes:1.sykes@pctoolkit.staging.syk
 When I click Log in
 And I log in with the following credentials
 	| Key      | Value |
-	| Username | xxxxx |
-	| Password | xxxxx |
+	| Username | gary.smith@sykescottages.co.uk |
+	| Password | DesertSea40 |
 And I wait 10 seconds
 Then the relevant elements are dislpayed
-	| Element          |
-	| Diary            |
-	| Previous visits  |
-	| Upcoming visits  |
-	| task-card-header |
+	| Element       |
+	| Diary         |
+	| Past visits   |
+	| Future visits |
+	| sign-out      |

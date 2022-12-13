@@ -90,19 +90,20 @@ namespace SykesCottagesTestAutomation
                 domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt); //Get the URL based on the Hooks.Environemt value
             }
 
+            //If ephemeral environment, add the branch name to the URL
             if (domain.Contains("ephemeral"))
             {
                 domain = Regex.Replace(domain, "ephemeralName", Hooks.ephemeralEnvironmentName);
             }
 
-            url = domain + path;
-
+            url = domain + path; //Build the URL
             SelectBrowser(Hooks.browser); //Set the driver and browser
             shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.timeOut); //Set the timeout duration
 
+            //Launch website - if it takes too long to load, hit Escape and continue
             try
             {
-                GoTo(url); //Launch website
+                GoTo(url);
                 WaitASecond();
             }
             catch (Exception)
@@ -119,24 +120,23 @@ namespace SykesCottagesTestAutomation
 
             //Add Staging authentication cookie
             //shared.driver.Manage().Cookies.AddCookie(new Cookie("internally_authenticated", "F1s4LtCgeouXQD0h1dlAEnmm9jcSS56nSIADaR0h%2FVDY2kmLMgiN4ZsaYldMyXBuGAFUHjaWS87NYZ43vaoDDzy7Di6UA%2FvTSo0Ejv%2FTMAHDf6MUzk7KKbg2zlXHmMqWAPWCxRDawTlXo%2B0qXvewU3%2BGATSa8sZmuJNo5YX9X9EElSHuWCc%3D"));
+            //shared.driver.Manage().Cookies.AddCookie(new Cookie("_hjSessionUser_2309408", "eyJpZCI6IjRjYzE3YTdlLTU4ZTYtNTViZS04ZDFiLWZiZGJlOTI3MzAyMCIsImNyZWF0ZWQiOjE2NzA5NDE0MTEzMTUsImV4aXN0aW5nIjp0cnVlfQ=="));
 
+            //Write active experiments to console
             try
             {
                 controlExperiments = GetJavaScriptText("control_experiments");
                 experimentalExperiments = GetJavaScriptText("experimental_experiments");
-                Console.WriteLine("Control experiments: " + controlExperiments + "\nExperimental experiments: " + experimentalExperiments);
+                Console.WriteLine("On experiments: " + experimentalExperiments + "\nOff experiments: " + controlExperiments);
             }
             catch
             {
                 Console.WriteLine("No enabled experiments found");
             }
 
-            ClosePopups();
+            ClosePopups(); //Dismiss any pop-ups or alerts
 
-            //Dismiss Book a Holiday pop-up if displayed
-            ClickIfDisplayed("dismiss-direct-book-holiday-overlay");
-
-            //Check for experiments
+            //Check for experiments and apply them
             if (Hooks.experiments != "")
             {
                 //If Dev Tools not found, launch website with Dev Tools activated
@@ -147,7 +147,7 @@ namespace SykesCottagesTestAutomation
                 ApplyExperiment(Hooks.experiments);
             }
 
-            SetBrowserSize();
+            SetBrowserSize(); //Set the browser width and height
         }
 
         public void SetBrowserSize()
@@ -199,18 +199,17 @@ namespace SykesCottagesTestAutomation
 
         public void ClosePopups()
         {
+            //Accept, reject or ignore the cookie banner
             if (Hooks.cookieBanner == "Accept")
             {
                 ClickIfDisplayed("Accept all", waitTime: 2);
             }
-
             if (Hooks.cookieBanner == "Reject")
             {
                 ClickIfDisplayed("Reject all", waitTime: 2);
             }
 
-            ClickIfDisplayed("dismiss-direct-book-holiday-overlay");
-
+            //Dismiss alerts and pop-ups
             if (Hooks.dismissPopups == true)
             {
                 //Collapse survey
@@ -262,16 +261,21 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                //Console.WriteLine("Lookup xPath: " + "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(text(),\"" + value + "\")]");
                 return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(text(),\"" + value + "\")]";
             }
         }
 
         public void GoTo(string webpage)
         {
-            Console.WriteLine("Launch website: " + webpage);
-            shared.driver.Navigate().GoToUrl(webpage);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//body")).Count != 0, "Webpage did not load");
+            try
+            {
+                Console.WriteLine("Launch website: " + webpage);
+                shared.driver.Navigate().GoToUrl(webpage);
+            }
+            catch
+            {
+                Console.WriteLine("Webpage failed to load: " + webpage);
+            }
         }
 
         public void SwitchFocus()
@@ -295,10 +299,8 @@ namespace SykesCottagesTestAutomation
             SetBrowserSize();
         }
 
-        public void GetPageHeaders()
+        public static void GetPageHeaders()
         {
-            //Headers = shared.driver.FindElement(By.XPath("/html/body//*[self::h1 or self::h2 or self::h3]/text()")).Text;
-
             string input = @"<div class='main - body'>
                      <h2> 1.1 Heading </h2>     
                      <h3> 1.1.1 Subheading </h3>        
@@ -317,11 +319,10 @@ namespace SykesCottagesTestAutomation
 
             var heading_matches = matches.Cast<Match>().Select(x => x.Groups["TagText"].Value);
 
-
             Console.WriteLine("Page headers: " + Headers);
         }
 
-        public void WaitASecond(int seconds = 1)
+        public static void WaitASecond(int seconds = 1)
         {
             int value = seconds * 1000;
             System.Threading.Thread.Sleep(value);
@@ -359,6 +360,11 @@ namespace SykesCottagesTestAutomation
             return shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0;
         }
 
+        public bool ElementNotDisplayed(string value, string element = "*")
+        {
+            return shared.driver.FindElements(By.XPath(XPath(value, element))).Count == 0;
+        }
+
         public void AssertPageTitle(string title)
         {
             string pageTitle = shared.driver.Title;
@@ -381,7 +387,7 @@ namespace SykesCottagesTestAutomation
         public void AssertElementNotDisplayed(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is not displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath("//" + element + "[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Count == 0, "\"" + value + "\" displayed in error");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath("//" + element + "[@*=\""+ value +"\"]|//*[contains(text(),\"" + value + "\")]|//" + element + "[contains(@class,\"" + value + "\")]")).Count == 0, "\"" + value + "\" displayed");
         }
 
         public void AssertElementVisible(string value, string element = "*")
@@ -514,7 +520,7 @@ namespace SykesCottagesTestAutomation
             return shared.driver.FindElement(By.XPath(value)).GetAttribute(element);
         }
 
-        public string GetPostcode()
+        public static string GetPostcode()
         {
             return Faker.Address.UkPostCode().ToUpper();
         }
