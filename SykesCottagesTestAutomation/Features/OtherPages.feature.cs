@@ -99,24 +99,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Holiday Homes for Sale UK"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "container_sykes_grid"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "View more holiday homes for sale"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "c-alert__icon-wrap"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Enquire with Sykes today"});
-                table96.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Get started"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table99, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -148,28 +148,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Holiday home management"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "hero-slideshow"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "c-lyc-form"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "What are the benefits"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Partially managed"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Fully managed"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Resource centre"});
-                table97.AddRow(new string[] {
+                table100.AddRow(new string[] {
                             "Share page"});
 #line 20
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table97, "Then ");
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table100, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

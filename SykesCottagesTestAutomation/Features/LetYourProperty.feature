@@ -170,10 +170,6 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	Then the enquiry form is displayed with the tint applied
 
 
-Scenario: The Income Projection is displayed upon interaction
-	Given I have navigated to the following page: letyourcottage
-	When I select option Northumberland from the region dropdown
-	Then the following element is displayed: homepage_calculator_cta_blue
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The Managed Services links direct to the LYP form
@@ -195,6 +191,7 @@ Scenario: The Holiday Letting Made Easy images are displayed
     | /images/let_your_cottage/letting_easy/full-property-management.png  |
     | /images/let_your_cottage/letting_easy/photography.png               |
 
+@LetYourProperty
 Scenario: The page sections are displayed in the correct order
 	Given I have navigated to the following page: letyourcottage
 	Then the page sections are displayed in the relevant positions
@@ -288,3 +285,132 @@ Scenario: The number of bedrooms is included in the earnings calculator
 	| How much could I earn with Sykes? |
 	| Property information              |
 	| Average potential earnings        |
+
+@LetYourProperty @LYPRegressionSuite
+Scenario: The relevant headers are displayed on the page
+	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Then the relevant elements are dislpayed
+	| Element                                                        |
+	| Let your property with Sykes and earn up to £125,000 per year* |
+	| Start your Sykes holiday letting journey today                 |
+	| Search for holiday letting information                         |
+	| Holiday letting made easy                                      |
+	| Information centre                                             |
+	| Gain exposure through our partners                             |
+	| What do our owners say?                                        |
+	| How much could I earn with Sykes?                              |
+	| We are still open as usual                                     |
+	| Holiday home management with Sykes                             |
+	| Partially managed                                              |
+	| Fully managed                                                  |
+	| Putting your property in the spotlight                         |
+	| Enquire now                                                    |
+	| Buying, owning and selling                                     |
+	| How to run your holiday let                                    |
+	| Tax information and advice                                     |
+	| We’ve got your property covered                                |
+	| Download your Free Owner Information Pack                      |
+	| Looking to get started with holiday letting?                   |
+	| Video visits                                                   |
+	| Unaccompanied visits                                           |
+	| Contact-free photoshoots                                       |
+	| List your property online                                      |
+	| Dedicated Account Manager                                      |
+	| Large network of cleaning suppliers                            |
+	| Can't find the service you are looking for?                    |
+	| Sykes Cottages                                                 |
+	| Quick Links                                                    |
+	| Social                                                         |
+
+@LetYourProperty @LYPRegressionSuite
+Scenario: The relevant links are displayed on the page
+	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Then the relevant elements are dislpayed
+	| Element                                                                     |
+	| /letyourcottage/                                                            |
+	| /css/fonts/glyphicons-halflings-regular.woff2                               |
+	| /css/sykes/letyourcottage/app.d095d542c83cd993e55b77dc2b84f6d0.css          |
+	| /css/sykes/letyourcottage/app_enhanced.e4469a9a3dcf3c3e998f1c8d4c05586f.css |
+	| /account/login                                                              |
+	| /terms/privacypolicy                                                        |
+	| /letyourcottage/search?searchTerm=Managed+services                          |
+	| /letyourcottage/search?searchTerm=Investment+advice                         |
+	| /letyourcottage/search?searchTerm=How+to+run+a+holiday+let                  |
+	| /letyourcottage/managed-services                                            |
+	| /letyourcottage/information/buy-own-sell-holiday-lets/                      |
+	| /letyourcottage/information/how-to-run-your-holiday-let/                    |
+	| /letyourcottage/information/tax-information-on-holiday-lets/                |
+	| /letyourcottage/information/marketing-your-holiday-let/                     |
+	| /letyourcottage/information/investment-advice-for-holiday-lets/             |
+	| /letyourcottage/information/holiday-let-mortgages/                          |
+	| /letyourcottage/information/regulations-for-holiday-lets/                   |
+	| /letyourcottage/download-owner-pack                                         |
+	| /letyourcottage/advice                                                      |
+	| tel:01244617832                                                             |
+	| mailto:letwithsykes@sykescottages.co.uk                                     |
+	| https://showcase.sykescottages.co.uk/                                       |
+	| /blog/category/cottage-owners/                                              |
+	| /terms/privacypolicy                                                        |
+	| /terms/cookiepolicy                                                         |
+	| /press-and-media.html                                                       |
+	| /letyourcottage/holiday-homes-for-sale/                                     |
+	| https://www.facebook.com/sykescottages.co.uk                                |
+	| https://twitter.com/sykescottages                                           |
+	| https://pinterest.com/sykescottages/                                        |
+	| https://instagram.com/sykescottages/                                        |
+	| https://policies.google.com/privacy                                         |
+	| https://policies.google.com/terms                                           |
+	| /terms/cookiepolicy                                                         |
+
+@LetYourProperty @LYPRegressionSuite
+Scenario: The relevant images are displayed on the page
+	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Then the relevant elements are dislpayed
+	| Element                                                                                                                                    |
+	| /images/icons/icon-user-grey.svg                                                                                                           |
+	| /images/icons/icon-mail-grey.svg                                                                                                           |
+	| /images/icons/icon-phone-grey.svg                                                                                                          |
+	| /images/sykes/sykes-small-logo-white.svg                                                                                                   |
+	| /images/sykes/sykes-primary-logo-white.svg                                                                                                 |
+	| /images/sykes/sykes-primary-logo.svg                                                                                                       |
+	| /images/icons-svg/close_solid.svg                                                                                                          |
+	| /images/icons-svg/envelope-solid.svg                                                                                                       |
+	| /images/icons-svg/close_solid.svg                                                                                                          |
+	| /images/icons-svg/phone-solid.svg                                                                                                          |
+	| /images/icons-svg/close_solid.svg                                                                                                          |
+	| /images/icons-svg/user-solid.svg                                                                                                           |
+	| /images/icons-svg/envelope-solid.svg                                                                                                       |
+	| /images/icons-svg/phone-solid.svg                                                                                                          |
+	| /images/sykes/letyourcottage/icons/arrow-prev.svg                                                                                          |
+	| /images/sykes/letyourcottage/properties/testimonials/Chalmers-Brown.jpg                                                                    |
+	| /images/sykes/letyourcottage/properties/testimonials/Hunt.jpg                                                                              |
+	| /images/sykes/letyourcottage/properties/testimonials/Martin.jpg                                                                            |
+	| /images/sykes/letyourcottage/icons/arrow-next.svg                                                                                          |
+	| /images/sykes/letyourcottage/icons/arrow-prev.svg                                                                                          |
+	| /images/sykes/letyourcottage/managed-services/banner-images/18583/1.png                                                                    |
+	| /images/sykes/letyourcottage/managed-services/banner-images/18583/2.png                                                                    |
+	| /images/sykes/letyourcottage/managed-services/banner-images/18583/3.png                                                                    |
+	| /images/sykes/letyourcottage/managed-services/banner-images/18583/4.png                                                                    |
+	| /images/sykes/letyourcottage/managed-services/banner-images/18583/5.png                                                                    |
+	| /images/sykes/letyourcottage/icons/arrow-next.svg                                                                                          |
+	| /images/icons-svg/navigation/chevron/icon-chevron-down.svg                                                                                 |
+	| /images/sykes/letyourcottage/icons/arrow-prev.svg                                                                                          |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1094201/sc_1641918857_1094201_26.jpeg?access=3214T3370T840    |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090686/sc_1642422693_1090686_38.jpeg?access=3214T3370T840    |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1070174/sc_1619444116_1070174_18.jpeg?access=3214T3370T840    |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090491/sc_1638542947_1090491_50.jpeg?access=3214T3370T840    |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1039764/sc_15917942106716_1039764_67.jpg?access=3214T3370T840 |
+	| https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1040635/sc_1643110076_1040635_45.jpeg?access=3214T3370T840    |
+	| /images/sykes/letyourcottage/icons/arrow-next.svg                                                                                          |
+	| /images/let_your_cottage/letting_easy/market-leading.png                                                                                   |
+	| /images/let_your_cottage/letting_easy/payment_in_advance.png                                                                               |
+	| /images/let_your_cottage/letting_easy/dedicated-account-manager.png                                                                        |
+	| /images/let_your_cottage/letting_easy/helpline-24h.png                                                                                     |
+	| /images/let_your_cottage/letting_easy/full-property-management.png                                                                         |
+	| /images/let_your_cottage/letting_easy/photography.png                                                                                      |
+	| /images/sykes/sykes-primary-logo-white.svg                                                                                                 |
+	| /images/icons-svg/social-media-icons/lyc/facebook.svg                                                                                      |
+	| /images/icons-svg/social-media-icons/lyc/twitter.svg                                                                                       |
+	| /images/icons-svg/social-media-icons/lyc/pinterest.svg                                                                                     |
+	| /images/icons-svg/social-media-icons/lyc/instagram.svg                                                                                     |
+	| https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg                                                                               |

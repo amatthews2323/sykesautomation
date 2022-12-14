@@ -302,6 +302,12 @@ Scenario: The Request a Call hero form is displayed correctly
 	| letyourcottage/information/holiday-management-services        |
 
 @StoppedExperiments
+Scenario: The Income Projection is displayed upon interaction
+	Given I have navigated to the following page: letyourcottage
+	When I select option Northumberland from the region dropdown
+	Then the following element is displayed: homepage_calculator_cta_blue
+
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_MultiStepFormLYP67
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_MultiStepFormLYP67

@@ -218,9 +218,6 @@ namespace SykesCottagesTestAutomation
                     ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
                 }
 
-                //Dismiss form tint
-                ClickIfDisplayed("nonenquiry6941");
-
                 //Dismiss alerts
                 ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
                 ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
@@ -261,7 +258,7 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(text(),\"" + value + "\")]";
+                return "//" + element + "[@*=\"" + value + "\" or contains(@class,\"" + value + "\") or contains(@id,\"" + value + "\") or contains(@style,\"" + value + "\") or contains(@href,\"" + value + "\") or contains(@src,\"" + value + "\") or contains(text(),\"" + value + "\")]";
             }
         }
 
@@ -589,9 +586,10 @@ namespace SykesCottagesTestAutomation
         public void BuildHeaderTest()
         {
             Console.WriteLine("Copy the following into a feature file:\n");
-            Console.WriteLine("Given I am on the following webpage: " + url);
-            Console.WriteLine("Then the relevant elements are dislpayed");
-            Console.WriteLine("| Element |");
+            Console.WriteLine("Scenario: The relevant headers are displayed on the page");
+            Console.WriteLine("\tGiven I am on the following webpage: " + url);
+            Console.WriteLine("\tThen the relevant elements are dislpayed");
+            Console.WriteLine("\t| Element |");
             WaitASecond(5);
             for (int h = 1; h < 5; h++)
             {
@@ -601,7 +599,7 @@ namespace SykesCottagesTestAutomation
                     string header = shared.driver.FindElement(By.XPath("(//h" + h + ")[" + i + "]")).Text;
                     if (header != "")
                     {
-                        Console.WriteLine("| " + header + " |");
+                        Console.WriteLine("\t| " + header + " |");
                     }
                 }
             }
@@ -611,17 +609,19 @@ namespace SykesCottagesTestAutomation
         public void BuildLinkTest()
         {
             Console.WriteLine("Copy the following into a feature file:\n");
-            Console.WriteLine("Given I am on the following webpage: " + url);
-            Console.WriteLine("Then the relevant elements are dislpayed");
-            Console.WriteLine("| Element |");
+            Console.WriteLine("Scenario: The relevant links are displayed on the page");
+            Console.WriteLine("\tGiven I am on the following webpage: " + url);
+            Console.WriteLine("\tThen the relevant elements are dislpayed");
+            Console.WriteLine("\t| Element |");
             WaitASecond(3);
             int numberOfLinks = shared.driver.FindElements(By.XPath("//*[@href]")).Count;
             for (int i = 1; i < numberOfLinks; i++)
             {
                 string link = shared.driver.FindElement(By.XPath("(//*[@href])[" + i + "]")).GetAttribute("href");
-                if (link != "")
+                link = Regex.Replace(link, "https://www.sykescottages.co.uk", "");
+                if (link != "" & link != "/" & !link.Contains('#'))
                 {
-                    Console.WriteLine("| " + link + " |");
+                    Console.WriteLine("\t| " + link + " |");
                 }
             }
             Console.WriteLine("\n");
@@ -630,17 +630,19 @@ namespace SykesCottagesTestAutomation
         public void BuildImageTest()
         {
             Console.WriteLine("Copy the following into a feature file:\n");
-            Console.WriteLine("Given I am on the following webpage: " + url);
-            Console.WriteLine("Then the relevant elements are dislpayed");
-            Console.WriteLine("| Element |");
+            Console.WriteLine("Scenario: The relevant images are displayed on the page");
+            Console.WriteLine("\tGiven I am on the following webpage: " + url);
+            Console.WriteLine("\tThen the relevant elements are dislpayed");
+            Console.WriteLine("\t| Element |");
             WaitASecond(3);
-            int numberOfLinks = shared.driver.FindElements(By.XPath("//img[@src]")).Count;
-            for (int i = 1; i < numberOfLinks; i++)
+            int numberOfImages = shared.driver.FindElements(By.XPath("//img[@src]")).Count;
+            for (int i = 1; i < numberOfImages; i++)
             {
                 string image = shared.driver.FindElement(By.XPath("(//img[@src])[" + i + "]")).GetAttribute("src");
+                image = Regex.Replace(image, "https://www.sykescottages.co.uk", "");
                 if (image != "")
                 {
-                    Console.WriteLine("| " + image + " |");
+                    Console.WriteLine("\t| " + image + " |");
                 }
             }
             Console.WriteLine("\n");

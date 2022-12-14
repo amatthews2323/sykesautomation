@@ -572,36 +572,6 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The Income Projection is displayed upon interaction")]
-        public void TheIncomeProjectionIsDisplayedUponInteraction()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Income Projection is displayed upon interaction", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 173
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 174
- testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 175
- testRunner.When("I select option Northumberland from the region dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 176
- testRunner.Then("the following element is displayed: homepage_calculator_cta_blue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Managed Services links direct to the LYP form")]
         [NUnit.Framework.CategoryAttribute("LetYourProperty")]
         [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
@@ -612,7 +582,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Managed Services links direct to the LYP form", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 179
+#line 175
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -622,19 +592,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 180
+#line 176
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 181
+#line 177
  testRunner.When("I select the Partially Managed Enquire Now button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 182
+#line 178
  testRunner.Then("the enquiry form is displayed with the tint applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 183
+#line 179
  testRunner.When("I select the Fully Managed Enquire Now button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 184
+#line 180
  testRunner.Then("the enquiry form is displayed with the tint applied", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -652,7 +622,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Holiday Letting Made Easy images are displayed", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 187
+#line 183
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -662,7 +632,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 188
+#line 184
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
@@ -679,7 +649,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "/images/let_your_cottage/letting_easy/full-property-management.png"});
                 table88.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/photography.png"});
-#line 189
+#line 185
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table88, "Then ");
 #line hidden
             }
@@ -688,12 +658,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The page sections are displayed in the correct order")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
         public void ThePageSectionsAreDisplayedInTheCorrectOrder()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The page sections are displayed in the correct order", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 198
+#line 195
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -703,7 +675,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 199
+#line 196
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table89 = new TechTalk.SpecFlow.Table(new string[] {
@@ -739,7 +711,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table89.AddRow(new string[] {
                             "Free Owner Information Pack",
                             "10"});
-#line 200
+#line 197
  testRunner.Then("the page sections are displayed in the relevant positions", ((string)(null)), table89, "Then ");
 #line hidden
             }
@@ -759,7 +731,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Mobile App homepage", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 214
+#line 211
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -769,7 +741,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 215
+#line 212
  testRunner.Given("I have navigated to the following page: letyourcottage/?app_view=true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
@@ -780,7 +752,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "How much could I earn"});
                 table90.AddRow(new string[] {
                             "Information centre"});
-#line 216
+#line 213
  testRunner.Then("the following sections are dislpayed", ((string)(null)), table90, "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
@@ -789,7 +761,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "contact-to-book mobile"});
                 table91.AddRow(new string[] {
                             "navbar-toggle collapsed"});
-#line 221
+#line 218
  testRunner.And("the relevant elements are not dislpayed", ((string)(null)), table91, "And ");
 #line hidden
             }
@@ -807,7 +779,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Information Carousel is displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 227
+#line 224
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -817,7 +789,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 228
+#line 225
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
@@ -840,7 +812,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Holiday let mortgages"});
                 table92.AddRow(new string[] {
                             "Legal regulations"});
-#line 229
+#line 226
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table92, "Then ");
 #line hidden
             }
@@ -858,7 +830,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The image navigation buttons are displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 242
+#line 239
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -868,7 +840,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 243
+#line 240
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table93 = new TechTalk.SpecFlow.Table(new string[] {
@@ -879,7 +851,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "arrow-next.svg"});
                 table93.AddRow(new string[] {
                             "slick-dots"});
-#line 244
+#line 241
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table93, "Then ");
 #line hidden
             }
@@ -897,7 +869,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The footer content is displayed correctly", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 251
+#line 248
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -907,10 +879,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 252
+#line 249
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 253
+#line 250
  testRunner.When("I scroll to the following element: page-footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
@@ -953,7 +925,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Pinterest"});
                 table94.AddRow(new string[] {
                             "Instagram"});
-#line 254
+#line 251
  testRunner.Then("the relevant elements are dislpayed within the page-footer section", ((string)(null)), table94, "Then ");
 #line hidden
             }
@@ -971,7 +943,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The alerts disapear after an amount of time", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 277
+#line 274
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -981,16 +953,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 278
+#line 275
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 279
+#line 276
  testRunner.Then("the alerts are displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 280
+#line 277
  testRunner.And("I wait 10 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 281
+#line 278
  testRunner.Then("the alerts are not displayed on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -1008,7 +980,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The number of bedrooms is included in the earnings calculator", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 284
+#line 281
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1018,7 +990,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 285
+#line 282
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1029,8 +1001,331 @@ this.ScenarioInitialize(scenarioInfo);
                             "Property information"});
                 table95.AddRow(new string[] {
                             "Average potential earnings"});
-#line 286
+#line 283
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table95, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant headers are displayed on the page")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
+        public void TheRelevantHeadersAreDisplayedOnThePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant headers are displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 290
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 291
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table96.AddRow(new string[] {
+                            "Let your property with Sykes and earn up to £125,000 per year*"});
+                table96.AddRow(new string[] {
+                            "Start your Sykes holiday letting journey today"});
+                table96.AddRow(new string[] {
+                            "Search for holiday letting information"});
+                table96.AddRow(new string[] {
+                            "Holiday letting made easy"});
+                table96.AddRow(new string[] {
+                            "Information centre"});
+                table96.AddRow(new string[] {
+                            "Gain exposure through our partners"});
+                table96.AddRow(new string[] {
+                            "What do our owners say?"});
+                table96.AddRow(new string[] {
+                            "How much could I earn with Sykes?"});
+                table96.AddRow(new string[] {
+                            "We are still open as usual"});
+                table96.AddRow(new string[] {
+                            "Holiday home management with Sykes"});
+                table96.AddRow(new string[] {
+                            "Partially managed"});
+                table96.AddRow(new string[] {
+                            "Fully managed"});
+                table96.AddRow(new string[] {
+                            "Putting your property in the spotlight"});
+                table96.AddRow(new string[] {
+                            "Enquire now"});
+                table96.AddRow(new string[] {
+                            "Buying, owning and selling"});
+                table96.AddRow(new string[] {
+                            "How to run your holiday let"});
+                table96.AddRow(new string[] {
+                            "Tax information and advice"});
+                table96.AddRow(new string[] {
+                            "We’ve got your property covered"});
+                table96.AddRow(new string[] {
+                            "Download your Free Owner Information Pack"});
+                table96.AddRow(new string[] {
+                            "Looking to get started with holiday letting?"});
+                table96.AddRow(new string[] {
+                            "Video visits"});
+                table96.AddRow(new string[] {
+                            "Unaccompanied visits"});
+                table96.AddRow(new string[] {
+                            "Contact-free photoshoots"});
+                table96.AddRow(new string[] {
+                            "List your property online"});
+                table96.AddRow(new string[] {
+                            "Dedicated Account Manager"});
+                table96.AddRow(new string[] {
+                            "Large network of cleaning suppliers"});
+                table96.AddRow(new string[] {
+                            "Can\'t find the service you are looking for?"});
+                table96.AddRow(new string[] {
+                            "Sykes Cottages"});
+                table96.AddRow(new string[] {
+                            "Quick Links"});
+                table96.AddRow(new string[] {
+                            "Social"});
+#line 292
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant links are displayed on the page")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
+        public void TheRelevantLinksAreDisplayedOnThePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant links are displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 326
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 327
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/"});
+                table97.AddRow(new string[] {
+                            "/css/fonts/glyphicons-halflings-regular.woff2"});
+                table97.AddRow(new string[] {
+                            "/css/sykes/letyourcottage/app.d095d542c83cd993e55b77dc2b84f6d0.css"});
+                table97.AddRow(new string[] {
+                            "/css/sykes/letyourcottage/app_enhanced.e4469a9a3dcf3c3e998f1c8d4c05586f.css"});
+                table97.AddRow(new string[] {
+                            "/account/login"});
+                table97.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/search?searchTerm=Managed+services"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/search?searchTerm=Investment+advice"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/search?searchTerm=How+to+run+a+holiday+let"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/managed-services"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/how-to-run-your-holiday-let/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/tax-information-on-holiday-lets/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/marketing-your-holiday-let/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/investment-advice-for-holiday-lets/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/holiday-let-mortgages/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/information/regulations-for-holiday-lets/"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/download-owner-pack"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/advice"});
+                table97.AddRow(new string[] {
+                            "tel:01244617832"});
+                table97.AddRow(new string[] {
+                            "mailto:letwithsykes@sykescottages.co.uk"});
+                table97.AddRow(new string[] {
+                            "https://showcase.sykescottages.co.uk/"});
+                table97.AddRow(new string[] {
+                            "/blog/category/cottage-owners/"});
+                table97.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table97.AddRow(new string[] {
+                            "/terms/cookiepolicy"});
+                table97.AddRow(new string[] {
+                            "/press-and-media.html"});
+                table97.AddRow(new string[] {
+                            "/letyourcottage/holiday-homes-for-sale/"});
+                table97.AddRow(new string[] {
+                            "https://www.facebook.com/sykescottages.co.uk"});
+                table97.AddRow(new string[] {
+                            "https://twitter.com/sykescottages"});
+                table97.AddRow(new string[] {
+                            "https://pinterest.com/sykescottages/"});
+                table97.AddRow(new string[] {
+                            "https://instagram.com/sykescottages/"});
+                table97.AddRow(new string[] {
+                            "https://policies.google.com/privacy"});
+                table97.AddRow(new string[] {
+                            "https://policies.google.com/terms"});
+                table97.AddRow(new string[] {
+                            "/terms/cookiepolicy"});
+#line 328
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table97, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The relevant images are displayed on the page")]
+        [NUnit.Framework.CategoryAttribute("LetYourProperty")]
+        public void TheRelevantImagesAreDisplayedOnThePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "LetYourProperty"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant images are displayed on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 366
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 367
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table98.AddRow(new string[] {
+                            "/images/icons/icon-user-grey.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons/icon-mail-grey.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons/icon-phone-grey.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/sykes-small-logo-white.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/sykes-primary-logo-white.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/sykes-primary-logo.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/close_solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/envelope-solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/close_solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/phone-solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/close_solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/user-solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/envelope-solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/phone-solid.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/properties/testimonials/Chalmers-Brown.jpg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/properties/testimonials/Hunt.jpg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/properties/testimonials/Martin.jpg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-next.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/managed-services/banner-images/18583/1.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/managed-services/banner-images/18583/2.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/managed-services/banner-images/18583/3.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/managed-services/banner-images/18583/4.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/managed-services/banner-images/18583/5.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-next.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/navigation/chevron/icon-chevron-down.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/navigation/chevron/icon-chevron-down.svg"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1094" +
+                                "201/sc_1641918857_1094201_26.jpeg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090" +
+                                "686/sc_1642422693_1090686_38.jpeg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1070" +
+                                "174/sc_1619444116_1070174_18.jpeg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090" +
+                                "491/sc_1638542947_1090491_50.jpeg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1039" +
+                                "764/sc_15917942106716_1039764_67.jpg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1040" +
+                                "635/sc_1643110076_1040635_45.jpeg?access=3214T3370T840"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/letyourcottage/icons/arrow-next.svg"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/market-leading.png"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/payment_in_advance.png"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/dedicated-account-manager.png"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/helpline-24h.png"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/full-property-management.png"});
+                table98.AddRow(new string[] {
+                            "/images/let_your_cottage/letting_easy/photography.png"});
+                table98.AddRow(new string[] {
+                            "/images/sykes/sykes-primary-logo-white.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/social-media-icons/lyc/facebook.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/social-media-icons/lyc/twitter.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/social-media-icons/lyc/pinterest.svg"});
+                table98.AddRow(new string[] {
+                            "/images/icons-svg/social-media-icons/lyc/instagram.svg"});
+                table98.AddRow(new string[] {
+                            "https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg"});
+#line 368
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table98, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
