@@ -112,15 +112,11 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
-            //Check for errors
-            AssertElementNotDisplayed("503 Service Temporarily Unavailable");
-            AssertElementNotDisplayed("An error has occurred");
-            AssertElementNotDisplayed("Service Unavailable");
-            AssertElementNotDisplayed("504 Gateway Time-out");
-
-            //Add Staging authentication cookie
-            //shared.driver.Manage().Cookies.AddCookie(new Cookie("internally_authenticated", "F1s4LtCgeouXQD0h1dlAEnmm9jcSS56nSIADaR0h%2FVDY2kmLMgiN4ZsaYldMyXBuGAFUHjaWS87NYZ43vaoDDzy7Di6UA%2FvTSo0Ejv%2FTMAHDf6MUzk7KKbg2zlXHmMqWAPWCxRDawTlXo%2B0qXvewU3%2BGATSa8sZmuJNo5YX9X9EElSHuWCc%3D"));
-            //shared.driver.Manage().Cookies.AddCookie(new Cookie("_hjSessionUser_2309408", "eyJpZCI6IjRjYzE3YTdlLTU4ZTYtNTViZS04ZDFiLWZiZGJlOTI3MzAyMCIsImNyZWF0ZWQiOjE2NzA5NDE0MTEzMTUsImV4aXN0aW5nIjp0cnVlfQ=="));
+            //Check for system errors
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("503 Service Temporarily Unavailable"))).Count == 0, "ERROR MESSAGE: 503 Service Temporarily Unavailable");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("An error has occurred"))).Count == 0, "ERROR MESSAGE: An error has occurred");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("Service Unavailable"))).Count == 0, "ERROR MESSAGE: Service Unavailable");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("504 Gateway Time-out"))).Count == 0, "ERROR MESSAGE: 504 Gateway Time-out");
 
             //Write active experiments to console
             try
@@ -129,10 +125,7 @@ namespace SykesCottagesTestAutomation
                 experimentalExperiments = GetJavaScriptText("experimental_experiments");
                 Console.WriteLine("On experiments: " + experimentalExperiments + "\nOff experiments: " + controlExperiments);
             }
-            catch
-            {
-                Console.WriteLine("No enabled experiments found");
-            }
+            catch {}
 
             ClosePopups(); //Dismiss any pop-ups or alerts
 
@@ -148,6 +141,7 @@ namespace SykesCottagesTestAutomation
             }
 
             SetBrowserSize(); //Set the browser width and height
+            Console.WriteLine("");
         }
 
         public void SetBrowserSize()
@@ -209,6 +203,12 @@ namespace SykesCottagesTestAutomation
                 ClickIfDisplayed("Reject all", waitTime: 2);
             }
 
+            //Dismiss overlay tint
+            if (shared.driver.FindElements(By.XPath("overlay-tint")).Count != 0)
+            {
+                ClickIfDisplayed("overlay-tint");
+            }
+
             //Dismiss alerts and pop-ups
             if (Hooks.dismissPopups == true)
             {
@@ -219,9 +219,16 @@ namespace SykesCottagesTestAutomation
                 }
 
                 //Dismiss alerts
-                ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
-                ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
-                ClickIfDisplayed("close c-alert__close js-alert-close");
+                if (shared.driver.FindElements(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Count != 0)
+                {
+                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
+                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
+                    ClickIfDisplayed("close c-alert__close js-alert-close");
+                }
+                else
+                {
+                    Console.WriteLine("No alerts found");
+                }
             }
             else
             {
@@ -229,7 +236,7 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        public string ReadFromCSV(string fileName, string columnName, string rowName, string searchTerm)
+        public static string ReadFromCSV(string fileName, string columnName, string rowName, string searchTerm)
         {
             string csvValue = "";
             DataTable dataTable = null;
@@ -249,7 +256,7 @@ namespace SykesCottagesTestAutomation
             return csvValue;
         }
 
-        public string XPath(string value, string element = "*")
+        public static string XPath(string value, string element = "*")
         {
             //If "value" parameter is already an XPath, return the origninal string; else return an XPath containing the "value" parameter
             if (value.Contains("//") & !value.Contains("http"))
@@ -679,6 +686,12 @@ namespace SykesCottagesTestAutomation
         }
     }
 }
+
+
+//Add Staging authentication cookie
+//shared.driver.Manage().Cookies.AddCookie(new Cookie("internally_authenticated", "F1s4LtCgeouXQD0h1dlAEnmm9jcSS56nSIADaR0h%2FVDY2kmLMgiN4ZsaYldMyXBuGAFUHjaWS87NYZ43vaoDDzy7Di6UA%2FvTSo0Ejv%2FTMAHDf6MUzk7KKbg2zlXHmMqWAPWCxRDawTlXo%2B0qXvewU3%2BGATSa8sZmuJNo5YX9X9EElSHuWCc%3D"));
+//shared.driver.Manage().Cookies.AddCookie(new Cookie("_hjSessionUser_2309408", "eyJpZCI6IjRjYzE3YTdlLTU4ZTYtNTViZS04ZDFiLWZiZGJlOTI3MzAyMCIsImNyZWF0ZWQiOjE2NzA5NDE0MTEzMTUsImV4aXN0aW5nIjp0cnVlfQ=="));
+
 
 //using WebDriverManager.DriverConfigs.Impl;
 //var options = new ChromeOptions();

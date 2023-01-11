@@ -18,6 +18,11 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | How much could I earn                        |
     | Information centre                           |
     | Looking to get started with holiday letting? |
+    | Download your Free Owner Information Pack    |
+    | Download owner pack                          |
+    | We’ve got your property covered              |
+    | leading UK holiday home insurer              |
+    | 40% of our customers                         |
 
 @HeroForm @LYPRegressionSuite
 Scenario: The MultiStep form is displayed correctly
@@ -169,8 +174,6 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	When I click Back To Top Button
 	Then the enquiry form is displayed with the tint applied
 
-
-
 @LetYourProperty @LYPRegressionSuite
 Scenario: The Managed Services links direct to the LYP form
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
@@ -251,12 +254,12 @@ Scenario: The footer content is displayed correctly
 	Then the relevant elements are dislpayed within the page-footer section
 	| Element                                                    |
 	| Sykes Cottages                                             |
-	| © 2022 All rights reserved                                 |
+	| © 2023 All rights reserved                                 |
 	| One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom |
 	| Registration No: 4469189                                   |
 	| VAT Registration No: 204 9794 88                           |
 	| Email us at letwithsykes@sykescottages.co.uk               |
-	| Sykes Product Showcase 2022                                |
+	| Sykes Product Showcase Winter 2022/23                      |
 	| Read our blog                                              |
 	| /terms/privacypolicy                                       |
 	| Privacy Policy                                             |
@@ -272,14 +275,14 @@ Scenario: The footer content is displayed correctly
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The alerts disapear after an amount of time
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Given I have navigated to the following page: letyourcottage
 	Then the alerts are displayed on the page
 	And I wait 10 seconds
 	Then the alerts are not displayed on the page
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The number of bedrooms is included in the earnings calculator
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                           |
 	| How much could I earn with Sykes? |
@@ -287,8 +290,30 @@ Scenario: The number of bedrooms is included in the earnings calculator
 	| Average potential earnings        |
 
 @LetYourProperty @LYPRegressionSuite
+Scenario: Performing a search returns the relevant results
+	Given I have navigated to the following page: letyourcottage
+	Then the relevant elements are dislpayed within the searcher-section section
+	| Element                                |
+	| Search for holiday letting information |
+	| searchTerm                             |
+	| Search                                 |
+	| Managed services                       |
+	| Investment advice                      |
+	| How to run a holiday let               |
+	When I enter Mortgage in the following form field: searchTerm
+	And I click searcher-bar__action
+	Then the relevant elements are dislpayed
+	| Element                                           |
+	| 12 results for 'Mortgage'                         |
+	| back-container                                    |
+	| A complete guide to holiday let mortgages         |
+	| Holiday let mortgages                             |
+	| Running your holiday let                          |
+	| Why now is a good time to invest in a holiday let |
+
+@LetYourProperty @LYPRegressionSuite
 Scenario: The relevant headers are displayed on the page
-	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                                                        |
 	| Let your property with Sykes and earn up to £125,000 per year* |
@@ -324,7 +349,7 @@ Scenario: The relevant headers are displayed on the page
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The relevant links are displayed on the page
-	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                                                                     |
 	| /letyourcottage/                                                            |
@@ -364,7 +389,7 @@ Scenario: The relevant links are displayed on the page
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The relevant images are displayed on the page
-	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                    |
 	| /images/icons/icon-user-grey.svg                                                                                                           |

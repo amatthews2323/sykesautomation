@@ -1,36 +1,143 @@
 ﻿Feature: Experiments
 	Test specific experiments
 
-In development:
-
-
-Live:
-LetYourCottages_LinkbackforconsumertrafficLYP192
-LetYourCottages_LYPDirectBookHolidayTraffictoConsumerLYP203
-LetYourCottages_DuplicateOwnerLeadsViaLYPFormLYP49
-LetYourCottages_FormswithoutatleastonemarketingpreferenceLYP131
-LetYourCottages_ImprovehomepagesectionsfortabletLYP81
-LetYourCottages_HomepageRevenueManagementSectionLYP124
-LetYourCottages_AddContactUsToHomeScreenWhenCallCentreClosed19700
-LetYourCottages_BespokePPCherooninformationpagesLYP128
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_InfoPageInvestmentAdviceLYP223
+	Given the following experiment is active: LetYourCottages_InfoPageInvestmentAdviceLYP223
+	And I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Then experiment LetYourCottages_InfoPageInvestmentAdviceLYP223 is applied
 
 @ActiveExperiments
+Scenario: Experiment LetYourCottages_LinkbackforconsumertrafficLYP192
+	Given the following experiment is active: LetYourCottages_LinkbackforconsumertrafficLYP192
+	And I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Then experiment LetYourCottages_LinkbackforconsumertrafficLYP192 is applied
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_RemovereadingtimefrominformationpageheroLYP216
+	Given the following experiment is active: LetYourCottages_RemovereadingtimefrominformationpageheroLYP216
+	And I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Then experiment LetYourCottages_RemovereadingtimefrominformationpageheroLYP216 is applied
+
+@ActiveExperiments
+Scenario: Experiment LetYourCottages_LYPStickyHeader202
+	Given the following experiment is active: LetYourCottages_LYPStickyHeader202
+	And I have navigated to the following page: letyourcottage
+	When I store the active experiment IDs
+	Then experiment LetYourCottages_LYPStickyHeader202 is applied
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_CaptureIfPnoHasAProperty19842
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_CaptureIfPnoHasAProperty19842
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                 |
+	| Do you own or manage a property to let? |
+	| lyc-dropdown-heroform_has_a_property    |
+	When I select Get Started
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                  |
+	| heroform_has_a_property_validation_error |
+	| Please select an option.                 |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_RequestACallForm55
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_RequestACallForm55
+	And I click #js-request-a-call
+	Then the relevant elements are dislpayed within the request-a-call section
+	| Element                                                                                                   |
+	| request-a-call_first_name                                                                                 |
+	| request-a-call_last_name                                                                                  |
+	| request-a-call_phone                                                                                      |
+	| Your details will be used by the Sykes group to send you information about our property letting services. |
+	| /terms/privacypolicy                                                                                      |
+	| Have us call you                                                                                          |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
+	Then the following element is not displayed: We are still open as usual
+	Then the page sections are displayed in the relevant positions
+	| Key                       | Position |
+	| Holiday letting made easy | 5        |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
+	Then the relevant elements are dislpayed
+	| Element                             |
+	| Need a Holiday Let Mortgage letter? |
+	| Sykes Cottages Mortgage letter      |
+	| Start application                   |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_AddPhoneNumberToForm19768
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_AddPhoneNumberToForm19768
+	Then the relevant elements are dislpayed within the heroform section
+	| Element                                     |
+	| Or, call us to chat directly with an expert |
+	| 01244 617832                                |
+	| lyp_number_press                            |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_HomepageOwnerStoriesSectionLYP123
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_HomepageOwnerStoriesSectionLYP123
+	Then the relevant elements are dislpayed
+	| Element                                |
+	| youtube-banner__content                |
+	| Sykes Owner Stories: Anna and Alistair |
+	| Watch Owner Story                      |
+	When I click Watch Owner Story
+	Then the relevant elements are dislpayed
+	| Element                                   |
+	| youtube-banner                            |
+	| youtube-story-frame                       |
+	| https://www.youtube.com/embed/Ub391Pv_DA0 |
+	And the relevant elements are not dislpayed
+	| Element                 |
+	| What do our owners say? |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
+	Given I have navigated to the following page: letyourcottage/?dev_tools=product
+	When I apply the following experiment: 17921
+    Then the following element is not displayed: We are still open as usual
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169
+	Given I have navigated to the following page: letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169
+	Then the relevant elements are dislpayed
+	| Element       |
+	| Enquire now   |
+	| FAQ           |
+	| question_logo |
+
+@StoppedExperiments
+Scenario: Experiment LetYourCottages_InfopagecontentcollapsedsectionsLYP30
+	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
+	When I apply the following experiment: LetYourCottages_InfopagecontentcollapsedsectionsLYP30
+	Then the relevant elements are dislpayed
+	| Element            |
+	| collapsible_header |
+	| header_chevron     |
+
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_MakeAllEarningCalculatorRegionsHoneypotLYP142
 	And I select option Bath from the region dropdown
 	Then the following element is not displayed: Your property details are unique, please contact our team at 01244 356 666 for a more accurate estimate.
 
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_DownloadPackSection144
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_DownloadPackSection144
-	Then the relevant elements are dislpayed
-	| Element                                   |
-	| Download your Free Owner Information Pack |
-	| Download owner pack                       |
-
-@ActiveExperiments
+@StoppedExperiments
 Scenario: Experiment LetYourCottages_TestRequestaCallForminHeroLYP166
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: LetYourCottages_TestRequestaCallForminHeroLYP166
@@ -51,146 +158,6 @@ Scenario: Experiment LetYourCottages_TestRequestaCallForminHeroLYP166
 	| Please enter your surname.                      |
 	| request-a-call-hero_phone_validation_error      |
 	| Please enter a contact number.                  |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_CaptureIfPnoHasAProperty19842
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_CaptureIfPnoHasAProperty19842
-	Then the relevant elements are dislpayed within the heroform section
-	| Element                                 |
-	| Do you own or manage a property to let? |
-	| lyc-dropdown-heroform_has_a_property    |
-	When I select Get Started
-	Then the relevant elements are dislpayed within the heroform section
-	| Element                                  |
-	| heroform_has_a_property_validation_error |
-	| Please select an option.                 |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_RequestACallForm55
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_RequestACallForm55
-	And I click #js-request-a-call
-	Then the relevant elements are dislpayed within the request-a-call section
-	| Element                                                                                                   |
-	| request-a-call_first_name                                                                                 |
-	| request-a-call_last_name                                                                                  |
-	| request-a-call_phone                                                                                      |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| /terms/privacypolicy                                                                                      |
-	| Have us call you                                                                                          |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ReplaceWeAreStillOpenSectionwithHolidayLettingMadeEasyLYP143
-	Then the following element is not displayed: We are still open as usual
-	Then the page sections are displayed in the relevant positions
-	| Key                       | Position |
-	| Holiday letting made easy | 5        |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_BedrockMortgageLetterSectiononHomepageLYP37
-	Then the relevant elements are dislpayed
-	| Element                             |
-	| Need a Holiday Let Mortgage letter? |
-	| Sykes Cottages Mortgage letter      |
-	| Start application                   |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_AddPhoneNumberToForm19768
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_AddPhoneNumberToForm19768
-	Then the relevant elements are dislpayed within the heroform section
-	| Element                                     |
-	| Or, call us to chat directly with an expert |
-	| 01244 617832                                |
-	| lyp_number_press                            |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_PossibleInsurancePolicyimplementationLYP82
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_PossibleInsurancePolicyimplementationLYP82
-	Then the relevant elements are dislpayed
-	| Element                         |
-	| We’ve got your property covered |
-	| leading UK holiday home insurer |
-	| 40% of our customers            |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_HomepageOwnerStoriesSectionLYP123
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_HomepageOwnerStoriesSectionLYP123
-	Then the relevant elements are dislpayed
-	| Element                                |
-	| youtube-banner__content                |
-	| Sykes Owner Stories: Anna and Alistair |
-	| Watch Owner Story                      |
-	When I click Watch Owner Story
-	Then the relevant elements are dislpayed
-	| Element                                   |
-	| youtube-banner                            |
-	| youtube-story-frame                       |
-	| https://www.youtube.com/embed/Ub391Pv_DA0 |
-	And the relevant elements are not dislpayed
-	| Element                 |
-	| What do our owners say? |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_RemoveWeAreStillOpen17921
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17921
-    Then the following element is not displayed: We are still open as usual
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169
-	Given I have navigated to the following page: letyourcottage/information/how-to-run-your-holiday-let/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_ContentImprovementsonHowtorunholidayletinfopage19169
-	Then the relevant elements are dislpayed
-	| Element       |
-	| Enquire now   |
-	| FAQ           |
-	| question_logo |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_InfopagecontentcollapsedsectionsLYP30
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_InfopagecontentcollapsedsectionsLYP30
-	Then the relevant elements are dislpayed
-	| Element            |
-	| collapsible_header |
-	| header_chevron     |
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
-	Given I have navigated to the following page: letyourcottage/information/investment-advice-for-holiday-lets/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_GetstartedsectioninsteadofbrochuredownloadLYP31
-	Then the following element is displayed: Enquire today to get started with Sykes
-
-@ActiveExperiments
-Scenario: Experiment LetYourCottages_InformationPageSearchMvpLyp12
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: LetYourCottages_InformationPageSearchMvpLyp12
-	Then the relevant elements are dislpayed within the searcher-section section
-	| Element                                |
-	| Search for holiday letting information |
-	| searchTerm                             |
-	| Search                                 |
-	| Managed services                       |
-	| Investment advice                      |
-	| How to run a holiday let               |
-	When I enter Mortgage in the following form field: searchTerm
-	And I click searcher-bar__action
-	Then the relevant elements are dislpayed
-	| Element                                           |
-	| 12 results for 'Mortgage'                         |
-	| back-container                                    |
-	| A complete guide to holiday let mortgages         |
-	| Holiday let mortgages                             |
-	| Running your holiday let                          |
-	| Why now is a good time to invest in a holiday let |
 
 @StoppedExperiments
 Scenario: The Inactivity Modal is displayed correctly
@@ -924,7 +891,7 @@ Scenario: Experiment LetYourCottages_SingleCTAWithinTheHero17973
 	When I apply the following experiment: 17973
 	And I close the pop-ups
     Then the following element is not displayed: form-heading-container
-    And the following elements are dislpayed
+    And the relevant elements are dislpayed
          | Element                                                        |
          | Let your property with Sykes and earn up to £125,000 per year* |
          | Get started today                                              |
@@ -940,40 +907,3 @@ Scenario: Experiment LetYourCottages_PnoProcess17640
          | Request for contact    |
          | Self-service           |
          | Start taking bookings  |
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_FullHeightHero17731
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17731
-	And I close the pop-ups
-    Then the following element is displayed: o-icon o-icon-down-full-hero
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_RelaxedValidationEnquiry17573
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17573
-	And I close the pop-ups
-    And I click submit
-    Then the following element is not displayed: Please enter a contact number.
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_ChangeTextForm17977
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17977
-	And I close the pop-ups
-	Then the following text is displayed: Complete the form to begin your holiday letting journey
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_FloatingActionButtonDesktopTablet17853
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17853
-	And I close the pop-ups
-    And I set the window size to Tablet
-	Then the following element is displayed: Floating action button mobile
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_AverageMonthlyIncomeProjection17432
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 17432
-	And I close the pop-ups
-	Then the following text is displayed: Average monthly income

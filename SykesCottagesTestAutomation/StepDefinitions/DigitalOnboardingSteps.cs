@@ -40,7 +40,6 @@ namespace SykesCottagesTestAutomation.BaseClass
             Click("//form[@*='heroform']//*[contains(@class,'enquiry-button')]", waitTime: 1);
         }
 
-
         [When(@"I submit the enquiry form")]
         public void WhenISubmitTheEnquiryForm()
         {
