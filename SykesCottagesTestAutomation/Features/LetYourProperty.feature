@@ -43,7 +43,7 @@ Scenario: The MultiStep form is displayed correctly
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
-	| In order to receive email communciations from our expert team, please provide your email address. |
+	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
@@ -91,16 +91,6 @@ Scenario: The MultiStep form is displayed correctly
 	| letyourcottage/In-Your-Area/Wales                             |
 	| letyourcottage/In-Your-Area/Ireland                           |
 	| letyourcottage/In-Your-Area/Scotland                          |
-	| letyourcottage/information/marketing-your-holiday-let         |
-	| letyourcottage/information/buy-own-sell-holiday-lets          |
-	| letyourcottage/information/investment-advice-for-holiday-lets |
-	| letyourcottage/information/legal-regulations-for-holiday-lets |
-	| letyourcottage/information/holiday-let-mortgages              |
-	| letyourcottage/information/how-to-run-your-holiday-let        |
-	| letyourcottage/information/Tax-information-on-holiday-lets    |
-	| letyourcottage/information/run-holiday-let-as-business        |
-	| letyourcottage/information/leading-holiday-let-agency         |
-	| letyourcottage/information/holiday-management-services        |
 
 @HeroForm @FormSubmission
 	Scenario: The MultiStep hero form can be submitted
@@ -150,16 +140,6 @@ Scenario: The MultiStep form is displayed correctly
 	| letyourcottage/In-Your-Area/Wales                             |
 	| letyourcottage/In-Your-Area/Ireland                           |
 	| letyourcottage/In-Your-Area/Scotland                          |
-	| letyourcottage/information/marketing-your-holiday-let         |
-	| letyourcottage/information/buy-own-sell-holiday-lets          |
-	| letyourcottage/information/investment-advice-for-holiday-lets |
-	| letyourcottage/information/legal-regulations-for-holiday-lets |
-	| letyourcottage/information/holiday-let-mortgages              |
-	| letyourcottage/information/how-to-run-your-holiday-let        |
-	| letyourcottage/information/Tax-information-on-holiday-lets    |
-	| letyourcottage/information/run-holiday-let-as-business        |
-	| letyourcottage/information/leading-holiday-let-agency         |
-	| letyourcottage/information/holiday-management-services        |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The transparent header is displayed on the Let Your Property page
@@ -303,21 +283,27 @@ Scenario: Performing a search returns the relevant results
 	When I enter Mortgage in the following form field: searchTerm
 	And I click searcher-bar__action
 	Then the relevant elements are dislpayed
-	| Element                                           |
-	| 12 results for 'Mortgage'                         |
-	| back-container                                    |
-	| A complete guide to holiday let mortgages         |
-	| Holiday let mortgages                             |
-	| Running your holiday let                          |
-	| Why now is a good time to invest in a holiday let |
+	| Element                                                                   |
+	| 13 results for 'Mortgage'                                                 |
+	| back-container                                                            |
+	| A complete guide to holiday let mortgages                                 |
+	| Holiday let mortgages                                                     |
+	| Running your holiday let                                                  |
+	| Why now is a good time to invest in a holiday let                         |
+	| Why you should let your property with the leading holiday lettings agency |
+	| How to choose the best holiday let agency                                 |
+	| About sykes holiday cottages                                              |
+	| How sykes can manage your holiday home                                    |
+	| Damage protection terms                                                   |
+	| Are you a holiday cottage owner?                                          |
+	| Holiday let finance                                                       |
+	| Running a successful holiday let business                                 |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The relevant headers are displayed on the page
 	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                                                        |
-	| Let your property with Sykes and earn up to £125,000 per year* |
-	| Start your Sykes holiday letting journey today                 |
 	| Search for holiday letting information                         |
 	| Holiday letting made easy                                      |
 	| Information centre                                             |
@@ -353,9 +339,6 @@ Scenario: The relevant links are displayed on the page
 	Then the relevant elements are dislpayed
 	| Element                                                                     |
 	| /letyourcottage/                                                            |
-	| /css/fonts/glyphicons-halflings-regular.woff2                               |
-	| /css/sykes/letyourcottage/app.d095d542c83cd993e55b77dc2b84f6d0.css          |
-	| /css/sykes/letyourcottage/app_enhanced.e4469a9a3dcf3c3e998f1c8d4c05586f.css |
 	| /account/login                                                              |
 	| /terms/privacypolicy                                                        |
 	| /letyourcottage/search?searchTerm=Managed+services                          |

@@ -311,7 +311,7 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
                 table104.AddRow(new string[] {
-                            "In order to receive email communciations from our expert team, please provide you" +
+                            "In order to receive email communications from our expert team, please provide you" +
                                 "r email address."});
                 table104.AddRow(new string[] {
                             "Email address"});

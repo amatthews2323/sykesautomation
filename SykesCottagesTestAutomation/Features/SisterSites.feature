@@ -68,7 +68,7 @@ Scenario: The Sister Brands are displayed correctly
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
-	| In order to receive email communciations from our expert team, please provide your email address. |
+	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
