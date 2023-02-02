@@ -80,6 +80,13 @@ Scenario: The MultiStep form is displayed correctly
 	| Path                                                          |
 	| letyourcottage/                                               |
 	| letyourcottage/managed-services/                              |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/regulations-for-holiday-lets       |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/tax-information-on-holiday-lets    |
 	| letyourcottage/In-Your-Area/South-West                        |
 	| letyourcottage/In-Your-Area/South-of-England                  |
 	| letyourcottage/In-Your-Area/Heart-of-England                  |
@@ -95,8 +102,7 @@ Scenario: The MultiStep form is displayed correctly
 @HeroForm @FormSubmission
 	Scenario: The MultiStep hero form can be submitted
 	Given I have navigated to the following page: <Path>
-	Then the following text is displayed: Start your Sykes holiday letting journey today
-	And the relevant elements are dislpayed within the enquiry-multi-step section
+	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                                   |
 	| first_name                                                                                                |
 	| last_name                                                                                                 |
@@ -107,7 +113,7 @@ Scenario: The MultiStep form is displayed correctly
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
-	| In order to receive email communciations from our expert team, please provide your email address. |
+	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
 	When I enter dupetest002@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
@@ -129,6 +135,13 @@ Scenario: The MultiStep form is displayed correctly
 	| Path                                                          |
 	| letyourcottage                                                |
 	| letyourcottage/managed-services                               |
+	| letyourcottage/information/marketing-your-holiday-let         |
+	| letyourcottage/information/buy-own-sell-holiday-lets          |
+	| letyourcottage/information/investment-advice-for-holiday-lets |
+	| letyourcottage/information/regulations-for-holiday-lets       |
+	| letyourcottage/information/holiday-let-mortgages              |
+	| letyourcottage/information/how-to-run-your-holiday-let        |
+	| letyourcottage/information/tax-information-on-holiday-lets    |
 	| letyourcottage/In-Your-Area/South-West                        |
 	| letyourcottage/In-Your-Area/South-of-England                  |
 	| letyourcottage/In-Your-Area/Heart-of-England                  |
@@ -280,7 +293,8 @@ Scenario: Performing a search returns the relevant results
 	| Managed services                       |
 	| Investment advice                      |
 	| How to run a holiday let               |
-	When I enter Mortgage in the following form field: searchTerm
+	When I try clicking nav_top_link nav_search_container
+	And I enter Mortgage in the following form field: searchTerm
 	And I click searcher-bar__action
 	Then the relevant elements are dislpayed
 	| Element                                                                   |
@@ -294,7 +308,7 @@ Scenario: Performing a search returns the relevant results
 	| How to choose the best holiday let agency                                 |
 	| About sykes holiday cottages                                              |
 	| How sykes can manage your holiday home                                    |
-	| Damage protection terms                                                   |
+	| Damage protection guarantee terms                                         |
 	| Are you a holiday cottage owner?                                          |
 	| Holiday let finance                                                       |
 	| Running a successful holiday let business                                 |

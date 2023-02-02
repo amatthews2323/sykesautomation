@@ -42,17 +42,22 @@ Scenario: Get experiment conversion precentage
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-	| Example                                                        |
-	| LetYourCottages_PartnersMarketingSection152                    |
-	| LetYourCottages_SykesLYPLogo186                                |
-	| LetYourCottages_LinkbackforconsumertrafficLYP192               |
-	| LetYourCottages_RemovereadingtimefrominformationpageheroLYP216 |
-	| LetYourCottages_LYPStickyHeader202                             |
-	| LetYourCottages_InfoPageInvestmentAdviceLYP223                 |
-	| LetYourCottages_ShowAllPropertiesTOB702                        |
-	| LetYourCottages_DisplayIncomeProjectionHHFSTOB764              |
-	| LetYourCottages_InfoPageBuyOwnSellComponentContentLYP226       |
-	| LetYourCottages_LYPAdvancedEarningCalculatorLYP209             |
+	| Example                                                              |
+	| LetYourCottages_LYPStickyHeader202                                   |
+	| LetYourCottages_LYPCondenseHomepageContentLYP201                     |
+	| LetYourCottages_InfoPageInvestmentAdviceLYP223                       |
+	| LetYourCottages_ShowAllPropertiesTOB702                              |
+	| LetYourCottages_DisplayIncomeProjectionHHFSTOB764                    |
+	| LetYourCottages_MobileHeaderandNavRedesignLYP222                     |
+	| LetYourCottages_InfoPageBuyOwnSellComponentContentLYP226             |
+	| LetYourCottages_LYPAdvancedEarningCalculatorLYP209                   |
+	| LetYourCottages_ExplainForm232                                       |
+	| LetYourCottages_MediaCentreCaseStudiesandInformationalVideosLYP191   |
+	| LetYourCottages_InfoPagesCalcinHeroLYP225                            |
+	| LetYourCottages_InfoPageHowtoRunYourHolidayLetComponentContentLYP228 |
+	| LetYourCottages_HowWePriceYourPropertySectionLYP241                  |
+	| LetYourCottages_HeaderNavRedesignLYP224                              |
+	| LetYourCottages_SearchResultsShowMoreLYP242                          |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

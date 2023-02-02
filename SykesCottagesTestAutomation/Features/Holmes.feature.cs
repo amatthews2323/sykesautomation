@@ -252,15 +252,9 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
                 table71.AddRow(new string[] {
-                            "LetYourCottages_PartnersMarketingSection152"});
-                table71.AddRow(new string[] {
-                            "LetYourCottages_SykesLYPLogo186"});
-                table71.AddRow(new string[] {
-                            "LetYourCottages_LinkbackforconsumertrafficLYP192"});
-                table71.AddRow(new string[] {
-                            "LetYourCottages_RemovereadingtimefrominformationpageheroLYP216"});
-                table71.AddRow(new string[] {
                             "LetYourCottages_LYPStickyHeader202"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_LYPCondenseHomepageContentLYP201"});
                 table71.AddRow(new string[] {
                             "LetYourCottages_InfoPageInvestmentAdviceLYP223"});
                 table71.AddRow(new string[] {
@@ -268,9 +262,25 @@ this.ScenarioInitialize(scenarioInfo);
                 table71.AddRow(new string[] {
                             "LetYourCottages_DisplayIncomeProjectionHHFSTOB764"});
                 table71.AddRow(new string[] {
+                            "LetYourCottages_MobileHeaderandNavRedesignLYP222"});
+                table71.AddRow(new string[] {
                             "LetYourCottages_InfoPageBuyOwnSellComponentContentLYP226"});
                 table71.AddRow(new string[] {
                             "LetYourCottages_LYPAdvancedEarningCalculatorLYP209"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_ExplainForm232"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_MediaCentreCaseStudiesandInformationalVideosLYP191"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_InfoPagesCalcinHeroLYP225"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_InfoPageHowtoRunYourHolidayLetComponentContentLYP228"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_HowWePriceYourPropertySectionLYP241"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_HeaderNavRedesignLYP224"});
+                table71.AddRow(new string[] {
+                            "LetYourCottages_SearchResultsShowMoreLYP242"});
 #line 44
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table71, "Then ");
 #line hidden
@@ -287,7 +297,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments infomation from Holmes", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 58
+#line 63
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -297,10 +307,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 59
+#line 64
  testRunner.Given("I am on the following webpage: http://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 60
+#line 65
  testRunner.When("I return the experiment details 4557,3960,4045,4717,4765,4774,4758,4708,4730,4790" +
                         ",4733,4762,4457,4648", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

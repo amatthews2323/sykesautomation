@@ -104,6 +104,18 @@ namespace SykesCottagesTestAutomation.BaseClass
             }
         }
 
+        [Then(@"I try clicking (.*)")]
+        public void ThenITryClicking(string value)
+        {
+            ClickIfDisplayed(value);
+        }
+
+        [When(@"I try clicking (.*)")]
+        public void WhenITryClicking(string value)
+        {
+            ClickIfDisplayed(value);
+        }
+
         [When(@"I select (.*) within the (.*) section")]
         public void WhenISelectWithinTheSection(string element, string section)
         {
