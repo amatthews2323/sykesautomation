@@ -643,31 +643,6 @@ Scenario: Experiment LetYourCottages_OwnerIncentivePromotion18529
 		 | /letyourcottage/information/welcome-gift/                                                                                            |
 
 @StoppedExperiments
-Scenario: Experiment LetYourCottages_MoveRegionalTestimonials18277
-	Given I have navigated to the following page: letyourcottage/In-Your-Area/South-West/?dev_tools=product
-	When I apply the following experiment: 18277
-	And I close the pop-ups
-	Then the testimonials_region_pc section is displayed at position 2
-
-@StoppedExperiments
-Scenario: Experiment LetYourCottages_BurguerMenuTablet18658
-	Given I have navigated to the following page: letyourcottage/?dev_tools=product
-	When I apply the following experiment: 18658
-	And I close the pop-ups
-	And I set the window size to Tablet
-	Then the following element is displayed: burguer-menu collapsed
-	When I click burguer-menu collapsed
-	Then the relevant elements are dislpayed
-		 | Element                |
-		 | Sub Navigation         |
-		 | Home                   |
-		 | Your account           |
-		 | Information Centre     |
-		 | Your Location          |
-		 | How much could I earn? |
-		 | Book a holiday         |
-
-@StoppedExperiments
 Scenario: Experiment LetYourCottages_AddDownArrowInHero18579
 	Given I have navigated to the following page: letyourcottage/?dev_tools=product
 	When I apply the following experiment: 18579

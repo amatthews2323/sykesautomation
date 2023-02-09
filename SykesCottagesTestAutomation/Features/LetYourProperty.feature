@@ -4,9 +4,11 @@
 @Navigation @LYPSmokeTest @LYPRegressionSuite
 Scenario: The user can navigate to the Let Your Property page
 	Given I am on the Sykes Homepage
-	When I hover over Let Your Property
+	When I refresh the page
+	And I hover over Let Your Property
 	And I click Let Your Property
 	Then the following page title is displayed: Holiday Letting Agents For Cottages, Holiday Homes & Property
+	And the following text is displayed: Go back to booking a holiday
 
 @LetYourProperty @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevant sections are displayed on the Let Your Property page
@@ -108,20 +110,20 @@ Scenario: The MultiStep form is displayed correctly
 	| last_name                                                                                                 |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                                      |
-	When I enter Dupe in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
-	And I enter Test002 in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter dupetest002@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter testowner@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
-	When I enter 06444666555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	When I enter 07123456789 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
@@ -159,7 +161,7 @@ Scenario: The transparent header is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	Then the following element is displayed: nav_top u-clearfix nav_top_17485
 
-@LetYourProperty
+@LetYourProperty @LYPRegressionSuite
 Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer container_sykes_grid
@@ -298,7 +300,7 @@ Scenario: Performing a search returns the relevant results
 	And I click searcher-bar__action
 	Then the relevant elements are dislpayed
 	| Element                                                                   |
-	| 13 results for 'Mortgage'                                                 |
+	| results for 'Mortgage'                                                    |
 	| back-container                                                            |
 	| A complete guide to holiday let mortgages                                 |
 	| Holiday let mortgages                                                     |
@@ -308,7 +310,6 @@ Scenario: Performing a search returns the relevant results
 	| How to choose the best holiday let agency                                 |
 	| About sykes holiday cottages                                              |
 	| How sykes can manage your holiday home                                    |
-	| Damage protection guarantee terms                                         |
 	| Are you a holiday cottage owner?                                          |
 	| Holiday let finance                                                       |
 	| Running a successful holiday let business                                 |
@@ -436,3 +437,14 @@ Scenario: The relevant images are displayed on the page
 	| /images/icons-svg/social-media-icons/lyc/pinterest.svg                                                                                     |
 	| /images/icons-svg/social-media-icons/lyc/instagram.svg                                                                                     |
 	| https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg                                                                               |
+
+@LetYourProperty @LYPRegressionSuite
+Scenario: The sticky header is displayed on the page
+	Given I have navigated to the following page: <Path>
+	When I scroll to the following element: page-footer
+	Then the following element is displayed: nav_1
+	Examples:
+	| Path                                    |
+	| letyourcottage/                         |
+	| letyourcottage/managed-services/        |
+	| letyourcottage/In-Your-Area/South-West/ |

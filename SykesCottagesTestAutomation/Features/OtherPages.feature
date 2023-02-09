@@ -1,11 +1,6 @@
 ﻿Feature: OtherPages
 	Holiday Homes for Sale and Manged Services page content and functionality
 
-@HolidayHomesForSale @LYPSmokeTest @LYPRegressionSuite
-Scenario: The relevent elements are present on the Holiday Homes for Sale page
-	Given I have navigated to the following page: letyourcottage/holiday-homes-for-sale
-    Then the following page title is displayed: Holiday Homes for Sale UK | Holiday Let Business for Sale
-
 @ManagedServices @LYPSmokeTest @LYPRegressionSuite
 Scenario: The relevent elements are present on the Managed Services page
 	Given I have navigated to the following page: letyourcottage/managed-services

@@ -198,18 +198,18 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I wait up to 10 seconds for the following to be displayed: Customer reviews power" +
                         "ed by Trustpilot", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table71 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             string.Format("{0}", header)});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "hero__image"});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "Customer reviews powered by Trustpilot"});
-                table72.AddRow(new string[] {
+                table71.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
 #line 30
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table72, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table71, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

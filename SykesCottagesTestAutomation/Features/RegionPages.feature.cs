@@ -120,26 +120,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Then(string.Format("the following text is displayed: {0}", region), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table99 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "c-lyc-form"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "trustpilot-widget"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "We are still open as usual"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Local Holiday Letting Expertise"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Here\'s why our local experts love their job"});
-                table100.AddRow(new string[] {
+                table99.AddRow(new string[] {
                             "Back To Top"});
 #line 8
- testRunner.And("the relevant elements are dislpayed", ((string)(null)), table100, "And ");
+ testRunner.And("the relevant elements are dislpayed", ((string)(null)), table99, "And ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -74,40 +74,6 @@ namespace SykesCottagesTestAutomation.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Holiday Homes for Sale page")]
-        [NUnit.Framework.CategoryAttribute("HolidayHomesForSale")]
-        [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        public void TheReleventElementsArePresentOnTheHolidayHomesForSalePage()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "HolidayHomesForSale",
-                    "LYPSmokeTest",
-                    "LYPRegressionSuite"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 6
- testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 7
-    testRunner.Then("the following page title is displayed: Holiday Homes for Sale UK | Holiday Let Bu" +
-                        "siness for Sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The relevent elements are present on the Managed Services page")]
         [NUnit.Framework.CategoryAttribute("ManagedServices")]
         [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
@@ -120,7 +86,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Managed Services page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 10
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -130,31 +96,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
+#line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Holiday home management"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "hero-slideshow"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "c-lyc-form"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "What are the benefits"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Partially managed"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Fully managed"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Resource centre"});
-                table97.AddRow(new string[] {
+                table96.AddRow(new string[] {
                             "Share page"});
-#line 12
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table97, "Then ");
+#line 7
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

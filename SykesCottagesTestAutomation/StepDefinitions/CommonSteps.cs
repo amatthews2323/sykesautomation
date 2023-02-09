@@ -48,6 +48,12 @@ namespace SykesCottagesTestAutomation.BaseClass
             GoTo(url);
         }
 
+        [When(@"I refresh the page")]
+        public void WhenIRefreshThePage()
+        {
+            GoTo(url);
+        }
+
         [When(@"I close the pop-ups")]
         public void WhenICloseThePop_Ups()
         {

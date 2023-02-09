@@ -18,13 +18,13 @@ namespace SykesCottagesTestAutomation
 
         public static bool screenshots = false; //Take a screenshot at the end of each scenario
         public static bool reporting = false; //Turn on Extent Reports
-        public static string reportName = "FormSubmission"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
+        public static string reportName = "TOBSmokeTest"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static string cookieBanner = "Accept"; //Accept | Reject | Ignore
         public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
