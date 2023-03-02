@@ -23,7 +23,7 @@ Scenario: Build a test that checks all headers on the page
 
 @TestBuilder
 Scenario: Build a test that checks all links on the page
-	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Given I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.sykescottages.co.uk/letyourcottage/holiday-let-owner-information/
 	Then I store the links and output a test script
 
 @TestBuilder

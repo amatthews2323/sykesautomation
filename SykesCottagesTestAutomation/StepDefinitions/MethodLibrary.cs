@@ -250,7 +250,7 @@ namespace SykesCottagesTestAutomation
             DataRow[] rows = dataTable.Select(rowName + " = '" + searchTerm + "'");
             foreach (DataRow row in rows)
             {
-                Console.WriteLine("CSV value is: " + row[columnName]);
+                //Console.WriteLine("CSV value is: " + row[columnName]);
                 csvValue = row[columnName].ToString();
             }
             return csvValue;
@@ -626,7 +626,11 @@ namespace SykesCottagesTestAutomation
             {
                 string link = shared.driver.FindElement(By.XPath("(//*[@href])[" + i + "]")).GetAttribute("href");
                 link = Regex.Replace(link, "https://www.sykescottages.co.uk", "");
-                if (link != "" & link != "/" & !link.Contains('#'))
+                link = Regex.Replace(link, "https://lyp238dedicatedfaqpa.dev.sykescottages.co.uk", "");
+                link = Regex.Replace(link, "https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.sykescottages.co.uk", "");
+                link = Regex.Replace(link, "%20", " ");
+                
+                if (link != "" & link != "/" & link != "#" & !link.Contains("#body") & !link.Contains("/css"))
                 {
                     Console.WriteLine("\t| " + link + " |");
                 }

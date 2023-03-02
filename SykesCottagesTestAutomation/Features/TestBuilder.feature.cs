@@ -209,7 +209,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 26
- testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.syk" +
+                        "escottages.co.uk/letyourcottage/holiday-let-owner-information/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 27
  testRunner.Then("I store the links and output a test script", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

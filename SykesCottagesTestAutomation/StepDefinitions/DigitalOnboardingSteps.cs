@@ -11,27 +11,48 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         public string emailAddress;
+        public string phoneNumber;
         public string postcode;
 
         [When(@"I enter the following details on the enquiry form")]
         public void WhenIEnterTheFollowingDetailsOnTheEnquiryForm(Table table)
         {
             var dictionary = ToDictionary(table);
-            Type("heroform_first_name", dictionary["Full name"]);
+
+            Type("//*[@*='enquiry-multi-step']//input[@*='first_name']", dictionary["First name"]);
+            Type("//*[@*='enquiry-multi-step']//input[@*='last_name']", dictionary["Last name"]);
+
+            Click("//*[@*='enquiry-multi-step']/button[@*='submit']");
+            WaitUntilClickable("//*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']");
 
             if (dictionary["Email address"] == "Random")
             {
                 Random r = new Random();
                 emailAddress = "automation" + r.Next(100000, 999999).ToString() + "@yahoo.com";
-                Type("heroform_email", emailAddress);
+                Type("//*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']", emailAddress);
             }
             else
             {
-                Type("heroform_email", dictionary["Email address"]);
+                Type("//*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']", dictionary["Email address"]);
             }
 
-            Type("heroform_phone", dictionary["Phone number"]);
-            Click("form-heading-container", waitTime: 2);
+            WaitUntilClickable("//*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']");
+            Click("//*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']");
+            WaitUntilClickable("//*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']");
+
+            if (dictionary["Phone number"] == "Random")
+            {
+                Random r = new Random();
+                phoneNumber = "07" + r.Next(100000000, 999999999).ToString();
+                Type("//*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']", phoneNumber);
+            }
+            else 
+            {
+                Type("//*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']", dictionary["Phone number"]);
+            }
+
+            WaitUntilClickable("//*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']");
+            Click("//*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']");
         }
 
         [When(@"I select Get Started")]

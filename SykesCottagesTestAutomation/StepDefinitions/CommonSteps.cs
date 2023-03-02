@@ -432,5 +432,22 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             BuildImageTest();
         }
+
+        [Then(@"the following links load correctly")]
+        public void ThenTheFollowingLinksLoadCorrectly(Table table)
+        {
+            var links = table.Rows.Select(r => r[0]).ToArray();
+            foreach (var link in links)
+            {
+                if (link.Contains("http"))
+                {
+                    GoTo(link);
+                }
+                else
+                {
+                    GoTo(url + link);
+                }
+            }
+        }
     }
 }

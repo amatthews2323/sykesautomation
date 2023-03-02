@@ -97,6 +97,7 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| Email address                                                                                     |
 	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
@@ -104,13 +105,15 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| Phone number                                                                                                                                |
 	When I enter 03555999555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
-	When I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	When I wait 2 seconds
+	And I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
 	And I wait up to 10 seconds for the following to be displayed: Thank you for your enquiry
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:

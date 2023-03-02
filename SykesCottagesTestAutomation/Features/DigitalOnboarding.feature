@@ -47,14 +47,15 @@ Scenario: The user can add a property via the digital onboarding process
 @DigitalOnboarding
 Scenario: The user can add a property and complete the digital onboarding process
 	Given I have navigated to the following page: letyourcottage
-	When I apply the following experiment: LetYourCottages_VersionCOfMarketingPrefs25
+	When I try clicking open-multistep-modal
 	And I enter the following details on the enquiry form
-	| Key           | Value       |
-	| Full name     | Test Owner  |
-	| Email address | Random      |
-	| Phone number  | 07000000000 |
-	And I click enquiry-button lyc-cta u-full-width js-enquiry-form-button-25 lyc-cta--blue u-cursor-pointer
-	And I click Complete enquiry
+	| Key           | Value  |
+	| First name    | Test   |
+	| Last name     | Owner  |
+	| Email address | Random |
+	| Phone number  | Random |
+	When I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I wait up to 10 seconds for the following to be displayed: Thank you for your enquiry
 	And I click thankyoulycgetstartedonline
 	Then I can add a property with the following postcode: Random
 	And I can create an account using password: Testing123
