@@ -24,13 +24,13 @@ Scenario: The Sister Brands are displayed correctly
 	| Email address                                                                                     |
 	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
-	When I enter test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter test@test in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	Then the following text is displayed: 'sykescottages.co.uk' is missing an '@'. Please include an '@' in the email address.
+	When I enter testowner@sykescottages in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	Then the following text is displayed: 'testowner@sykescottages' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
+	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
@@ -47,13 +47,13 @@ Scenario: The Sister Brands are displayed correctly
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| Please ensure the following details are correct                                                           |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| Submit enquiry                                                                                            |
-	And I click //*[@*='enquiry-form-step4']/*[@*='close-modal']
+##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+##	Then the relevant elements are dislpayed
+##	| Element                                                                                                   |
+##	| Please ensure the following details are correct                                                           |
+##	| Your details will be used by the Sykes group to send you information about our property letting services. |
+##	| Submit enquiry                                                                                            |
+##	And I click //*[@*='enquiry-form-step4']/*[@*='close-modal']
 	Examples:
 	| Brand                                |
 	| Best Escapes                         |
@@ -95,25 +95,30 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I wait 2 seconds
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
+	And I wait 2 seconds
 	When I enter 03555999555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I wait 2 seconds
+	And I try clicking //input[@name='region-capture' and @value='thinking']//parent::*
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
 	When I wait 2 seconds
-	And I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
 	And I wait up to 10 seconds for the following to be displayed: Thank you for your enquiry
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:

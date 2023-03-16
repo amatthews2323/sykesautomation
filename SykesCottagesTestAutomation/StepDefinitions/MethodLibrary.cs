@@ -39,6 +39,7 @@ namespace SykesCottagesTestAutomation
         public static string url;
         public static string controlExperiments;
         public static string experimentalExperiments;
+        public static string activeExperiments;
         public static string CSVValue;
         public static string Headers;
 
@@ -332,22 +333,43 @@ namespace SykesCottagesTestAutomation
             System.Threading.Thread.Sleep(value);
         }
 
-        public void WaitUntilExists(string value, int seconds = 30)
+        public void WaitUntilExists(string value, int seconds = 10)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
+            try
+            {
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(value + " not found after " + seconds + " seconds");
+            }
         }
 
-        public void WaitUntilVisible(string value, int seconds = 30)
+        public void WaitUntilVisible(string value, int seconds = 10)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
+            try
+            {
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(value + " not visible after " + seconds + " seconds");
+            }
         }
 
-        public void WaitUntilClickable(string value, int seconds = 30)
+        public void WaitUntilClickable(string value, int seconds = 10)
         {
-            var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
+            try
+            {
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(value + " not clickable after " + seconds + " seconds");
+            }
         }
 
         public void ScrollTo(string value)

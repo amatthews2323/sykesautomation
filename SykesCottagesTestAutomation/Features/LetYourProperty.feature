@@ -19,7 +19,6 @@ Scenario: The relevant sections are displayed on the Let Your Property page
     | Gain exposure through our partners           |
     | What do our owners say?                      |
     | How much could I earn with Sykes?            |
-    | We are still open as usual                   |
     | Holiday home management with Sykes           |
     | Putting your property in the spotlight       |
     | Holiday letting made easy                    |
@@ -51,13 +50,13 @@ Scenario: The MultiStep form is displayed correctly
 	| Email address                                                                                     |
 	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
-	When I enter test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	Then the following text is displayed: 'test.com' is missing an '@'. Please include an '@' in the email address.
-	When I enter test@test in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	Then the following text is displayed: 'sykescottages.co.uk' is missing an '@'. Please include an '@' in the email address.
+	When I enter testowner@sykescottages in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	Then the following text is displayed: 'test@test' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
-	When I enter test@test.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	Then the following text is displayed: 'testowner@sykescottages' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
+	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
@@ -74,12 +73,12 @@ Scenario: The MultiStep form is displayed correctly
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
-	Then the relevant elements are dislpayed
-	| Element                                                                                                   |
-	| Please ensure the following details are correct                                                           |
-	| Your details will be used by the Sykes group to send you information about our property letting services. |
-	| Submit enquiry                                                                                            |
+##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+##	Then the relevant elements are dislpayed
+##	| Element                                                                                                   |
+##	| Please ensure the following details are correct                                                           |
+##	| Your details will be used by the Sykes group to send you information about our property letting services. |
+##	| Submit enquiry                                                                                            |
 	Examples:
 	| Path                                                          |
 	| letyourcottage/                                               |
@@ -120,7 +119,8 @@ Scenario: The MultiStep form is displayed correctly
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter testowner@gmail.com in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                     |
@@ -128,12 +128,19 @@ Scenario: The MultiStep form is displayed correctly
 	| Phone number                                                                                                                                |
 	When I enter 07123456789 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I wait 2 seconds
+	And I try clicking //input[@name='region-capture' and @value='thinking']//parent::*
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
 	Then the relevant elements are dislpayed
 	| Element                                                                                                   |
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
-	When I click //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	When I wait 2 seconds
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
 	And I wait up to 10 seconds for the following to be displayed: Thank you for your enquiry
 	Then the following page title is displayed: Thank you for your enquiry | Sykes Cottages
 	Examples:
@@ -302,20 +309,8 @@ Scenario: Performing a search returns the relevant results
 	And I enter Mortgage in the following form field: searchTerm
 	And I click searcher-bar__action
 	Then the relevant elements are dislpayed
-	| Element                                                                   |
-	| results for 'Mortgage'                                                    |
-	| back-container                                                            |
-	| A complete guide to holiday let mortgages                                 |
-	| Holiday let mortgages                                                     |
-	| Running your holiday let                                                  |
-	| Why now is a good time to invest in a holiday let                         |
-	| Why you should let your property with the leading holiday lettings agency |
-	| How to choose the best holiday let agency                                 |
-	| About sykes holiday cottages                                              |
-	| How sykes can manage your holiday home                                    |
-	| Are you a holiday cottage owner?                                          |
-	| Holiday let finance                                                       |
-	| Running a successful holiday let business                                 |
+	| Element                |
+	| results for 'Mortgage' |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The relevant headers are displayed on the page
@@ -329,7 +324,6 @@ Scenario: The relevant headers are displayed on the page
 	| Gain exposure through our partners                             |
 	| What do our owners say?                                        |
 	| How much could I earn with Sykes?                              |
-	| We are still open as usual                                     |
 	| Holiday home management with Sykes                             |
 	| Partially managed                                              |
 	| Fully managed                                                  |

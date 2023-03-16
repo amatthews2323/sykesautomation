@@ -99,28 +99,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I have navigated to the following page: letyourcottage/managed-services", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Holiday home management"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "hero-slideshow"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "c-lyc-form"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Managed services at Sykes"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "What are the benefits"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Partially managed"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Fully managed"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Resource centre"});
-                table96.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "Share page"});
 #line 7
-    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
+    testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table95, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -150,6 +150,179 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.syk" +
                         "escottages.co.uk/letyourcottage/holiday-let-owner-information/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-let-owner-information/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/"});
+                table96.AddRow(new string[] {
+                            "/account/login"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-homes-for-sale/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/marketing-your-holiday-let/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/investment-advice-for-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/regulations-for-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/holiday-let-mortgages/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/how-to-run-your-holiday-let/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/tax-information-on-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/South-West/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/South-of-England/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Heart-of-England/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/East-Anglia/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Peak-District/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/North-York-Moors-and-Coast/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Northumberland/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Wales/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Ireland/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/In-Your-Area/Scotland/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/#18983-calculator"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/investment-advice-for-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/advice/holiday-homes-for-sale/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/holiday-let-mortgages/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/tax-information-on-holiday-lets/"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/marketing-your-holiday-let/#promoting-and-advertising-your-proper" +
+                                "ty"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/marketing-your-holiday-let/#marketing-your-property"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/marketing-your-holiday-let/#local-agents"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/#best-areas-to-buy"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/#leading-online-property-sa" +
+                                "les"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/information/buy-own-sell-holiday-lets/#thinking-of-buying"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/investment-advice-for-holiday-lets/#starting-a-holiday-letting-bu" +
+                                "siness"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/investment-advice-for-holiday-lets/#holiday-rentals-business-mode" +
+                                "l"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/investment-advice-for-holiday-lets/#long-term-lets-vs-holiday-let" +
+                                "ting"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets" +
+                                ""});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/regulations-for-holiday-lets/#council-building-regulations"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/regulations-for-holiday-lets/#health-and-safety-guidelines"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/regulations-for-holiday-lets/#free-legal-guidance-for-letting"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-let-mortgages/#mortgage-applications"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-let-mortgages/#advice-on-buying-a-holiday-let"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-let-mortgages/#buy-to-let-vs-holiday-let-mortgage"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-let-mortgages/#offset-the-interest-on-your-mortgage"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/how-to-run-your-holiday-let/#furnishing-my-property"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/how-to-run-your-holiday-let/#booking-dates-for-my-own-use"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/how-to-run-your-holiday-let/#running-my-holiday-let"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/tax-information-on-holiday-lets/#tax-implications"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/tax-information-on-holiday-lets/#Business-rates"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/tax-information-on-holiday-lets/#vat-registration"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/tax-information-on-holiday-lets/#council-tax"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/tax-information-on-holiday-lets/#reducing-tax-amount"});
+                table96.AddRow(new string[] {
+                            "mailto:letwithsykes@sykescottages.co.uk"});
+                table96.AddRow(new string[] {
+                            "https://showcase.sykescottages.co.uk/winter-22-23.html"});
+                table96.AddRow(new string[] {
+                            "/blog/category/cottage-owners/"});
+                table96.AddRow(new string[] {
+                            "/terms/privacypolicy"});
+                table96.AddRow(new string[] {
+                            "/terms/cookiepolicy"});
+                table96.AddRow(new string[] {
+                            "/press-and-media.html"});
+                table96.AddRow(new string[] {
+                            "/letyourcottage/holiday-homes-for-sale/"});
+                table96.AddRow(new string[] {
+                            "https://www.facebook.com/sykescottages.co.uk"});
+                table96.AddRow(new string[] {
+                            "https://twitter.com/sykescottages"});
+                table96.AddRow(new string[] {
+                            "https://pinterest.com/sykescottages/"});
+                table96.AddRow(new string[] {
+                            "https://instagram.com/sykescottages/"});
+                table96.AddRow(new string[] {
+                            "https://policies.google.com/privacy"});
+                table96.AddRow(new string[] {
+                            "https://policies.google.com/terms"});
+#line 22
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The FAQ page links work as intended")]
+        [NUnit.Framework.CategoryAttribute("FAQ")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
+        public void TheFAQPageLinksWorkAsIntended()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "FAQ",
+                    "LYPRegressionSuite"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The FAQ page links work as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 93
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 94
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
@@ -293,181 +466,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "https://policies.google.com/privacy"});
                 table97.AddRow(new string[] {
                             "https://policies.google.com/terms"});
-#line 22
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table97, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("The FAQ page links work as intended")]
-        [NUnit.Framework.CategoryAttribute("FAQ")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
-        public void TheFAQPageLinksWorkAsIntended()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "FAQ",
-                    "LYPRegressionSuite"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The FAQ page links work as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 93
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 94
- testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Element"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-owner-information/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/"});
-                table98.AddRow(new string[] {
-                            "/account/login"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-homes-for-sale/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/marketing-your-holiday-let/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/buy-own-sell-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/investment-advice-for-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/regulations-for-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/holiday-let-mortgages/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/how-to-run-your-holiday-let/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/tax-information-on-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/South-West/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/South-of-England/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Heart-of-England/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/East-Anglia/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Peak-District/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/North-York-Moors-and-Coast/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Northumberland/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Wales/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Ireland/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/In-Your-Area/Scotland/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/#18983-calculator"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/buy-own-sell-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/investment-advice-for-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/advice/holiday-homes-for-sale/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/holiday-let-mortgages/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/tax-information-on-holiday-lets/"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/marketing-your-holiday-let/#promoting-and-advertising-your-proper" +
-                                "ty"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/marketing-your-holiday-let/#marketing-your-property"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/marketing-your-holiday-let/#local-agents"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/buy-own-sell-holiday-lets/#best-areas-to-buy"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/buy-own-sell-holiday-lets/#leading-online-property-sa" +
-                                "les"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/information/buy-own-sell-holiday-lets/#thinking-of-buying"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/investment-advice-for-holiday-lets/#starting-a-holiday-letting-bu" +
-                                "siness"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/investment-advice-for-holiday-lets/#holiday-rentals-business-mode" +
-                                "l"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/investment-advice-for-holiday-lets/#long-term-lets-vs-holiday-let" +
-                                "ting"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets" +
-                                ""});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#council-building-regulations"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#health-and-safety-guidelines"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#free-legal-guidance-for-letting"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-mortgages/#mortgage-applications"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-mortgages/#advice-on-buying-a-holiday-let"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-mortgages/#buy-to-let-vs-holiday-let-mortgage"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-mortgages/#offset-the-interest-on-your-mortgage"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/how-to-run-your-holiday-let/#furnishing-my-property"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/how-to-run-your-holiday-let/#booking-dates-for-my-own-use"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/how-to-run-your-holiday-let/#running-my-holiday-let"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/tax-information-on-holiday-lets/#tax-implications"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/tax-information-on-holiday-lets/#Business-rates"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/tax-information-on-holiday-lets/#vat-registration"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/tax-information-on-holiday-lets/#council-tax"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/tax-information-on-holiday-lets/#reducing-tax-amount"});
-                table98.AddRow(new string[] {
-                            "mailto:letwithsykes@sykescottages.co.uk"});
-                table98.AddRow(new string[] {
-                            "https://showcase.sykescottages.co.uk/winter-22-23.html"});
-                table98.AddRow(new string[] {
-                            "/blog/category/cottage-owners/"});
-                table98.AddRow(new string[] {
-                            "/terms/privacypolicy"});
-                table98.AddRow(new string[] {
-                            "/terms/cookiepolicy"});
-                table98.AddRow(new string[] {
-                            "/press-and-media.html"});
-                table98.AddRow(new string[] {
-                            "/letyourcottage/holiday-homes-for-sale/"});
-                table98.AddRow(new string[] {
-                            "https://www.facebook.com/sykescottages.co.uk"});
-                table98.AddRow(new string[] {
-                            "https://twitter.com/sykescottages"});
-                table98.AddRow(new string[] {
-                            "https://pinterest.com/sykescottages/"});
-                table98.AddRow(new string[] {
-                            "https://instagram.com/sykescottages/"});
-                table98.AddRow(new string[] {
-                            "https://policies.google.com/privacy"});
-                table98.AddRow(new string[] {
-                            "https://policies.google.com/terms"});
 #line 95
- testRunner.Then("the following links load correctly", ((string)(null)), table98, "Then ");
+ testRunner.Then("the following links load correctly", ((string)(null)), table97, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

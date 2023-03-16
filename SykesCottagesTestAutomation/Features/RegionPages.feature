@@ -9,8 +9,6 @@ Scenario: The Regional pages are displayed correctly
 	| Element                                     |
 	| c-lyc-form                                  |
 	| trustpilot-widget                           |
-	| We are still open as usual                  |
-	| How much could I earn with Sykes?           |
 	| Local Holiday Letting Expertise             |
 	| Holiday letting made easy                   |
 	| Here's why our local experts love their job |
@@ -48,3 +46,28 @@ Scenario: The user can navigate to the Region pages
 	| Wales                      | Wales Holiday Letting Agents \| Welsh Holiday Lets \| Sykes       |
 	| Ireland                    | Ireland Holiday Letting Agents \| Irish Holiday Lets \| Sykes     |
 	| Scotland                   | Scotland Holiday Letting Agents \| Scottish Holiday Lets \| Sykes |
+
+@RegionPages
+Scenario: The potential earnings is displayed on the Regional pages
+	Given I have navigated to the following page: <Path>
+	When I apply the following experiment: LetYourCottages_CalcInHeroOnRegionalPages262
+	Then the relevant elements are dislpayed
+	| Element                 |
+	| Your potential earnings |
+	| Find out more           |
+	And the following text is displayed: <Region 1>
+	And the following text is displayed: <Region 2>
+	Then I take a screenshot
+	Examples:
+	| Path                                                      | Region 1                                               | Region 2                                                                             |
+	| letyourcottage/In-Your-Area/South-West                    | Based on 2 beds, sleeps 4, Cornwall                    | Based on 2 beds, sleeps 4, Devon                                                     |
+	| letyourcottage/In-Your-Area/South-of-England              | Based on 2 beds, sleeps 4, Kent Coast                  | Based on 2 beds, sleeps 4, Isle of Wight                                             |
+	| letyourcottage/In-Your-Area/Heart-of-England              | Based on 2 beds, sleeps 4, Shropshire & Herefordshire  | Based on 2 beds, sleeps 4, Worcestershire, Warwickshire, Wiltshire & Gloucestershire |
+	| letyourcottage/In-Your-Area/East-Anglia                   | Based on 2 beds, sleeps 4, Norfolk and Suffolk         | Based on 2 beds, sleeps 4, Lincolnshire and Rutland                                  |
+	| letyourcottage/In-Your-Area/Peak-District                 | Based on 2 beds, sleeps 4, Peak District               | Based on 3 beds, sleeps 6, Peak District                                             |
+	| letyourcottage/In-Your-Area/North-York-Moors-and-Coast    | Based on 2 beds, sleeps 4, North York Moors & Coast    | Based on 3 beds, sleeps 6, North York Moors & Coast                                  |
+	| letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria | Based on 2 beds, sleeps 4, Cumbria & The Lake District | Based on 3 beds, sleeps 6, Cumbria & The Lake District                               |
+	| letyourcottage/In-Your-Area/Northumberland                | Based on 2 beds, sleeps 4, Northumberland              | Based on 3 beds, sleeps 6, Northumberland                                            |
+	| letyourcottage/In-Your-Area/Wales                         | Based on 2 beds, sleeps 4, North Wales                 | Based on 2 beds, sleeps 4, South Wales                                               |
+	| letyourcottage/In-Your-Area/Ireland                       | Based on 2 beds, sleeps 4, Northern Ireland            | Based on 3 beds, sleeps 6, Northern Ireland                                          |
+	| letyourcottage/In-Your-Area/Scotland                      | Based on 2 beds, sleeps 4, Perthshire & Fife           | Based on 2 beds, sleeps 4, The Highlands                                             |

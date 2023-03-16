@@ -358,14 +358,16 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I enter (.*) in the following form field: (.*)")]
         public void WhenIEnterInTheFollowingFormField(string text, string field)
         {
-            WaitUntilClickable(field, 10);
+            WaitUntilClickable(field, 5);
+            WaitASecond();
             Type(field, text);
         }
 
         [Then(@"I enter (.*) in the following form field: (.*)")]
         public void ThenIEnterInTheFollowingFormField(string text, string field)
         {
-            WaitUntilClickable(field, 10);
+            WaitUntilClickable(field, 5);
+            WaitASecond();
             Type(field, text);
         }
 
@@ -380,6 +382,13 @@ namespace SykesCottagesTestAutomation.BaseClass
                 Console.WriteLine("Position: " + dictionary[section]);
                 AssertElementDisplayed("//section[" + dictionary[section] + " and contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@id,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(text(),'" + section + "')]|//section[" + dictionary[section] + " and contains(@class,'" + section + "')]|//section[" + dictionary[section] + "]//*[contains(@class,'" + section + "')]");
             }
+        }
+
+        [Then(@"I take a screenshot")]
+        public void ThenITakeAScreenshot()
+        {
+            string filename = "Screenshot_" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss");
+            Screenshot(filename, "viewable area");
         }
 
         [When(@"I log in with the following credentials")]

@@ -50,15 +50,16 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I store the active experiment IDs")]
         public void WhenIStoreTheActiveExperimentIDs()
         {
-            experimentalExperiments = GetJavaScriptText("experimental_experiments");
+            activeExperiments = GetJavaScriptText("control_experiments") + "," + GetJavaScriptText("experimental_experiments");
         }
 
         [When(@"I search for the experiment details")]
         public void WhenISearchForTheExperimentDetails()
         {
+            string experimentList = "\nActive experiments:\n";
             WaitASecond(2);
             Console.WriteLine("Experiment details:");
-            var array = experimentalExperiments.Split(",");
+            var array = activeExperiments.Split(",");
             for (int i = 0; i < array.Length; i++)
             {
                 string id = array[i].ToString().Trim();
@@ -66,8 +67,9 @@ namespace SykesCottagesTestAutomation.BaseClass
                 WaitASecond();
                 string experimentId = shared.driver.FindElement(By.XPath("//a[@class='ng-binding']")).Text;
                 string experimentName = shared.driver.FindElement(By.XPath("//p[@class='name ng-binding']")).Text;
-                Console.WriteLine(experimentId + " " + experimentName);
+                experimentList += "\n" + id + " " + experimentId + " " + experimentName; 
             }
+            Console.WriteLine(experimentList + "\n");
         }
 
         [When(@"I return the experiment details (.*)")]
