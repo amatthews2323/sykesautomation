@@ -18,10 +18,9 @@ Scenario: The relevent elements are present on the Managed Services page
 
 @FAQ @LYPRegressionSuite
 Scenario: The relevant links are displayed on the FAQ page
-	Given I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.sykescottages.co.uk/letyourcottage/holiday-let-owner-information/
+	Given I have navigated to the following page: letyourcottage/holiday-let-owner-information
 	Then the relevant elements are dislpayed
 	| Element |
-	| /letyourcottage/holiday-let-owner-information/ |
 	| /letyourcottage/ |
 	| /account/login |
 	| /letyourcottage/holiday-homes-for-sale/ |
@@ -59,7 +58,7 @@ Scenario: The relevant links are displayed on the FAQ page
 	| /letyourcottage/investment-advice-for-holiday-lets/#holiday-rentals-business-model |
 	| /letyourcottage/investment-advice-for-holiday-lets/#long-term-lets-vs-holiday-letting |
 	| /letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission |
-	| /letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets |
+	| /letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holiday lets |
 	| /letyourcottage/regulations-for-holiday-lets/#council-building-regulations |
 	| /letyourcottage/regulations-for-holiday-lets/#health-and-safety-guidelines |
 	| /letyourcottage/regulations-for-holiday-lets/#free-legal-guidance-for-letting |
@@ -86,8 +85,6 @@ Scenario: The relevant links are displayed on the FAQ page
 	| https://twitter.com/sykescottages |
 	| https://pinterest.com/sykescottages/ |
 	| https://instagram.com/sykescottages/ |
-	| https://policies.google.com/privacy |
-	| https://policies.google.com/terms |
 
 @FAQ @LYPRegressionSuite
 Scenario: The FAQ page links work as intended
@@ -132,7 +129,7 @@ Scenario: The FAQ page links work as intended
 	| /letyourcottage/investment-advice-for-holiday-lets/#holiday-rentals-business-model |
 	| /letyourcottage/investment-advice-for-holiday-lets/#long-term-lets-vs-holiday-letting |
 	| /letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission |
-	| /letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets |
+	| /letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holiday%20lets |
 	| /letyourcottage/regulations-for-holiday-lets/#council-building-regulations |
 	| /letyourcottage/regulations-for-holiday-lets/#health-and-safety-guidelines |
 	| /letyourcottage/regulations-for-holiday-lets/#free-legal-guidance-for-letting |
@@ -148,16 +145,9 @@ Scenario: The FAQ page links work as intended
 	| /letyourcottage/tax-information-on-holiday-lets/#vat-registration |
 	| /letyourcottage/tax-information-on-holiday-lets/#council-tax |
 	| /letyourcottage/tax-information-on-holiday-lets/#reducing-tax-amount |
-	| mailto:letwithsykes@sykescottages.co.uk |
 	| https://showcase.sykescottages.co.uk/winter-22-23.html |
 	| /blog/category/cottage-owners/ |
 	| /terms/privacypolicy |
 	| /terms/cookiepolicy |
 	| /press-and-media.html |
 	| /letyourcottage/holiday-homes-for-sale/ |
-	| https://www.facebook.com/sykescottages.co.uk |
-	| https://twitter.com/sykescottages |
-	| https://pinterest.com/sykescottages/ |
-	| https://instagram.com/sykescottages/ |
-	| https://policies.google.com/privacy |
-	| https://policies.google.com/terms |

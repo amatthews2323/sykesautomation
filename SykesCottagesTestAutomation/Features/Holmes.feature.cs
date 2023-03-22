@@ -252,8 +252,6 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table70 = new TechTalk.SpecFlow.Table(new string[] {
                             "Example"});
                 table70.AddRow(new string[] {
-                            "LetYourCottages_InfoPageInvestmentAdviceLYP223"});
-                table70.AddRow(new string[] {
                             "LetYourCottages_ShowAllPropertiesTOB702"});
                 table70.AddRow(new string[] {
                             "LetYourCottages_DisplayIncomeProjectionHHFSTOB764"});
@@ -279,6 +277,16 @@ this.ScenarioInitialize(scenarioInfo);
                             "LetYourCottages_SearchResultsShowMoreLYP242"});
                 table70.AddRow(new string[] {
                             "LetYourCottages_AddRegionalPagestoSearchResultsLYP247"});
+                table70.AddRow(new string[] {
+                            "LetYourCottages_LYPIterationMoreInformation264"});
+                table70.AddRow(new string[] {
+                            "LetYourCottages_InsuranceSectionExclusionTestLYP269"});
+                table70.AddRow(new string[] {
+                            "LetYourCottages_AddedValueSection246"});
+                table70.AddRow(new string[] {
+                            "LetYourCottages_WhatHappensAfterTheFormLYP265"});
+                table70.AddRow(new string[] {
+                            "LetYourCottages_WeAreStillOpenIteration282"});
 #line 44
  testRunner.Then("I search for the experient and store the status", ((string)(null)), table70, "Then ");
 #line hidden
@@ -295,7 +303,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolmesExperiments"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get experiments infomation from Holmes", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 62
+#line 66
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -305,10 +313,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 63
+#line 67
  testRunner.Given("I am on the following webpage: http://holmes.prod.sykes.cloud/experiments", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 64
+#line 68
  testRunner.When("I return the experiment details 4557,3960,4045,4717,4765,4774,4758,4708,4730,4790" +
                         ",4733,4762,4457,4648", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden

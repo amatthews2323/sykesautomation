@@ -359,7 +359,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterInTheFollowingFormField(string text, string field)
         {
             WaitUntilClickable(field, 5);
-            WaitASecond();
+            //WaitASecond();
             Type(field, text);
         }
 
@@ -367,7 +367,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenIEnterInTheFollowingFormField(string text, string field)
         {
             WaitUntilClickable(field, 5);
-            WaitASecond();
+            //WaitASecond();
             Type(field, text);
         }
 

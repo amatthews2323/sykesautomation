@@ -72,7 +72,7 @@ Scenario: The MultiStep form is displayed correctly
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
-	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 ##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 ##	Then the relevant elements are dislpayed
 ##	| Element                                                                                                   |
@@ -297,13 +297,12 @@ Scenario: The number of bedrooms is included in the earnings calculator
 @LetYourProperty @LYPRegressionSuite
 Scenario: Performing a search returns the relevant results
 	Given I have navigated to the following page: letyourcottage
-	Then the relevant elements are dislpayed within the searcher-section section
+	Then the relevant elements are dislpayed within the floating-searcher-container section
 	| Element                                |
 	| Search for holiday letting information |
 	| searchTerm                             |
 	| Search                                 |
 	| Managed services                       |
-	| Investment advice                      |
 	| How to run a holiday let               |
 	When I try clicking nav_top_link nav_search_container
 	And I enter Mortgage in the following form field: searchTerm
@@ -333,12 +332,6 @@ Scenario: The relevant headers are displayed on the page
 	| How to run your holiday let                                    |
 	| Tax information and advice                                     |
 	| Advertising and marketing                                      |
-	| Video visits                                                   |
-	| Unaccompanied visits                                           |
-	| Contact-free photoshoots                                       |
-	| List your property online                                      |
-	| Dedicated Account Manager                                      |
-	| Large network of cleaning suppliers                            |
 	| Sykes Cottages                                                 |
 	| Quick Links                                                    |
 	| Social                                                         |
@@ -351,7 +344,6 @@ Scenario: The relevant links are displayed on the page
 	| /letyourcottage/                                                |
 	| /terms/privacypolicy                                            |
 	| /letyourcottage/search?searchTerm=Managed+services              |
-	| /letyourcottage/search?searchTerm=Investment+advice             |
 	| /letyourcottage/search?searchTerm=How+to+run+a+holiday+let      |
 	| /account/login                                                  |
 	| https://www.youtube.com/watch?v=x68mFIbCqCg                     |

@@ -43,7 +43,6 @@ Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
 	| Example                                                              |
-	| LetYourCottages_InfoPageInvestmentAdviceLYP223                       |
 	| LetYourCottages_ShowAllPropertiesTOB702                              |
 	| LetYourCottages_DisplayIncomeProjectionHHFSTOB764                    |
 	| LetYourCottages_MobileHeaderandNavRedesignLYP222                     |
@@ -57,6 +56,11 @@ Scenario: Get experiment status
 	| LetYourCottages_HeaderNavRedesignLYP224                              |
 	| LetYourCottages_SearchResultsShowMoreLYP242                          |
 	| LetYourCottages_AddRegionalPagestoSearchResultsLYP247                |
+	| LetYourCottages_LYPIterationMoreInformation264                       |
+	| LetYourCottages_InsuranceSectionExclusionTestLYP269                  |
+	| LetYourCottages_AddedValueSection246                                 |
+	| LetYourCottages_WhatHappensAfterTheFormLYP265                        |
+	| LetYourCottages_WeAreStillOpenIteration282                           |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

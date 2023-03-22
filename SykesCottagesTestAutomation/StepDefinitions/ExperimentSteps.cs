@@ -146,7 +146,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenISearchForTheExperientAndStoreTheStatus(Table table)
         {
             string status = "";
-
             var experiments = table.Rows.Select(r => r[0]).ToArray();
             foreach (var experiment in experiments)
             {
@@ -154,7 +153,8 @@ namespace SykesCottagesTestAutomation.BaseClass
                 var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//tbody[@*='experiment in filteredExperiments']/tr/td[4]")));
                 string _status = shared.driver.FindElement(By.XPath("//tbody[@*='experiment in filteredExperiments']/tr/td[4]")).Text.Trim();
-                status += "\n" + _status.Replace("Active", "Started").Replace("Off", "Stopped");
+                string date = shared.driver.FindElement(By.XPath("//tbody[@*='experiment in filteredExperiments']/tr/td[5]")).GetAttribute("title");
+                status += "\n" + _status.Replace("Active", "Started").Replace("Off", "Stopped") + "\t" + date;
             }
             Console.WriteLine("Experiment statuses: " + status);
         }

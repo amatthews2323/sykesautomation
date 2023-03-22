@@ -148,13 +148,11 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
- testRunner.Given("I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.syk" +
-                        "escottages.co.uk/letyourcottage/holiday-let-owner-information/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have navigated to the following page: letyourcottage/holiday-let-owner-informat" +
+                        "ion", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table96 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table96.AddRow(new string[] {
-                            "/letyourcottage/holiday-let-owner-information/"});
                 table96.AddRow(new string[] {
                             "/letyourcottage/"});
                 table96.AddRow(new string[] {
@@ -235,8 +233,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table96.AddRow(new string[] {
                             "/letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission"});
                 table96.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets" +
-                                ""});
+                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holiday let" +
+                                "s"});
                 table96.AddRow(new string[] {
                             "/letyourcottage/regulations-for-holiday-lets/#council-building-regulations"});
                 table96.AddRow(new string[] {
@@ -289,10 +287,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "https://pinterest.com/sykescottages/"});
                 table96.AddRow(new string[] {
                             "https://instagram.com/sykescottages/"});
-                table96.AddRow(new string[] {
-                            "https://policies.google.com/privacy"});
-                table96.AddRow(new string[] {
-                            "https://policies.google.com/terms"});
 #line 22
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table96, "Then ");
 #line hidden
@@ -311,7 +305,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "LYPRegressionSuite"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The FAQ page links work as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 93
+#line 90
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -321,7 +315,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 94
+#line 91
  testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table97 = new TechTalk.SpecFlow.Table(new string[] {
@@ -408,8 +402,8 @@ this.ScenarioInitialize(scenarioInfo);
                 table97.AddRow(new string[] {
                             "/letyourcottage/regulations-for-holiday-lets/#guidelines-for-planning-permission"});
                 table97.AddRow(new string[] {
-                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holidaylets" +
-                                ""});
+                            "/letyourcottage/regulations-for-holiday-lets/#planning-permission-for-holiday%20l" +
+                                "ets"});
                 table97.AddRow(new string[] {
                             "/letyourcottage/regulations-for-holiday-lets/#council-building-regulations"});
                 table97.AddRow(new string[] {
@@ -441,8 +435,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table97.AddRow(new string[] {
                             "/letyourcottage/tax-information-on-holiday-lets/#reducing-tax-amount"});
                 table97.AddRow(new string[] {
-                            "mailto:letwithsykes@sykescottages.co.uk"});
-                table97.AddRow(new string[] {
                             "https://showcase.sykescottages.co.uk/winter-22-23.html"});
                 table97.AddRow(new string[] {
                             "/blog/category/cottage-owners/"});
@@ -454,19 +446,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "/press-and-media.html"});
                 table97.AddRow(new string[] {
                             "/letyourcottage/holiday-homes-for-sale/"});
-                table97.AddRow(new string[] {
-                            "https://www.facebook.com/sykescottages.co.uk"});
-                table97.AddRow(new string[] {
-                            "https://twitter.com/sykescottages"});
-                table97.AddRow(new string[] {
-                            "https://pinterest.com/sykescottages/"});
-                table97.AddRow(new string[] {
-                            "https://instagram.com/sykescottages/"});
-                table97.AddRow(new string[] {
-                            "https://policies.google.com/privacy"});
-                table97.AddRow(new string[] {
-                            "https://policies.google.com/terms"});
-#line 95
+#line 92
  testRunner.Then("the following links load correctly", ((string)(null)), table97, "Then ");
 #line hidden
             }

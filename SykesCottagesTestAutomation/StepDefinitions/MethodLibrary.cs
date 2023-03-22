@@ -113,6 +113,8 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("//head/title"))).Count != 0, "ERROR MESSAGE: Page failed to load");
+
             //Check for system errors
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("503 Service Temporarily Unavailable"))).Count == 0, "ERROR MESSAGE: 503 Service Temporarily Unavailable");
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("An error has occurred"))).Count == 0, "ERROR MESSAGE: An error has occurred");
@@ -494,8 +496,19 @@ namespace SykesCottagesTestAutomation
         {
             Console.WriteLine("Type \"" + text + "\" into the \"" + formField + "\" field");
             IWebElement _element = shared.driver.FindElement(By.XPath(XPath(formField, element)));
-            _element.Clear();
-            _element.SendKeys(text);
+            try
+            {
+                _element.Clear();
+                _element.SendKeys(text);
+            }
+            catch
+            {
+                Console.WriteLine("Entry failed; trying again...");
+                WaitASecond(2);
+                _element.Click();
+                _element.Clear();
+                _element.SendKeys(text);
+            }
             if (waitTime != 0)
             {
                 WaitASecond(waitTime);
