@@ -12,20 +12,21 @@ namespace SykesCottagesTestAutomation
     public class Hooks : MethodLibrary
     {
         public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Ephemeral | Live
-        public static string browser = "Edge"; //Set browser: Chrome | Firefox | Edge
+        public static string browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
         public static string domainOverride = ""; //Overrides the test URL
         public static string ephemeralEnvironmentName = "";
 
-        public static bool screenshots = false; //Take a screenshot at the end of each scenario
-        public static bool reporting = false; //Turn on Extent Reports
-        public static string reportName = "LYPRegressionSuite_"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
+        public static bool screenshots = true; //Take a screenshot at the end of each scenario
+        public static string screenshotType = "Viewable area"; //Type of screenshot: Full page | Viewable area
 
+        public static bool reporting = true; //Turn on Extent Reports
+        public static string reportName = "InfoCentrePages"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
         public static string cookieBanner = "Accept"; //Accept | Reject | Ignore
         public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
@@ -83,7 +84,7 @@ namespace SykesCottagesTestAutomation
             }
             else
             {
-                Console.WriteLine("Extert Reports not enabled");
+                Console.WriteLine("Extert Reports not enabled. To enable set Hooks.reporting paramenter to 'true'.");
             }
         }
 

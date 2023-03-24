@@ -503,9 +503,9 @@ namespace SykesCottagesTestAutomation
             }
             catch
             {
-                Console.WriteLine("Entry failed; trying again...");
+                Console.WriteLine("Entry failed; trying clicking in the field...");
                 WaitASecond(2);
-                _element.Click();
+                Click(formField, element, 2);
                 _element.Clear();
                 _element.SendKeys(text);
             }
@@ -694,33 +694,40 @@ namespace SykesCottagesTestAutomation
             Console.WriteLine("\n");
         }
 
-        public void Screenshot(string fileName = "screenshot", string type = "full webpage")
+        public void Screenshot(string fileName = "screenshot")
         {
-            //Name of directory
-            string dir = @Hooks.reportDir + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.reportName + "_" + Hooks.environemt + "_" + Hooks.browser;
-            if (Hooks.browserSize != "")
+            if (Hooks.screenshots == true)
             {
-                dir += "_" + Hooks.browserSize;
-            }
-            dir += "//Screenshots";
+                //Name of directory
+                string dir = @Hooks.reportDir + "//" + DateTime.Now.ToString("yyyy-MM-dd") + "//" + Hooks.reportName + "_" + Hooks.environemt + "_" + Hooks.browser;
+                if (Hooks.browserSize != "")
+                {
+                    dir += "_" + Hooks.browserSize;
+                }
+                dir += "//Screenshots";
 
-            // If directory does not exist, create it
-            if (!Directory.Exists(dir))
-            {
-                Directory.CreateDirectory(dir);
-            }
+                // If directory does not exist, create it
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
 
-            if (type == "full webpage")
-            {
-                //Take screenshot of entire webpage
-                VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
-                shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + fileName + ".png", ImageMagick.MagickFormat.Png);
+                if (Hooks.screenshotType.Contains("Full"))
+                {
+                    //Take screenshot of entire webpage
+                    VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker().RemoveScrollBarsWhileShooting());
+                    shared.driver.TakeScreenshot(vcd).ToMagickImage().Write(dir + "//" + fileName + ".png", ImageMagick.MagickFormat.Png);
+                }
+                else
+                {
+                    //Take screenshot of viewable area
+                    Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
+                    image.SaveAsFile(dir + "//" + fileName + ".png", ScreenshotImageFormat.Png);
+                }
             }
             else
             {
-                //Take screenshot of viewable area
-                Screenshot image = ((ITakesScreenshot)shared.driver).GetScreenshot();
-                image.SaveAsFile(dir + "//" + fileName + ".png", ScreenshotImageFormat.Png);
+                Console.WriteLine("Screenshots not enabled. To enable set Hooks.screenshots parameter to 'true'.");
             }
         }
     }

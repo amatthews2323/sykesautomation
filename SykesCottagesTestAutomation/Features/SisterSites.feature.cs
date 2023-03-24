@@ -124,31 +124,31 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given(string.Format("I have navigated to the following brand: {0}", brand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table102 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table102.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "first_name"});
-                table102.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "last_name"});
-                table102.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table102.AddRow(new string[] {
+                table103.AddRow(new string[] {
                             "/terms/privacypolicy"});
 #line 7
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table102, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table103, "Then ");
 #line hidden
 #line 13
  testRunner.When("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table103 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table103.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Please enter your first name"});
-                table103.AddRow(new string[] {
+                table104.AddRow(new string[] {
                             "Please enter your surname"});
 #line 14
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table103, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table104, "Then ");
 #line hidden
 #line 18
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
@@ -161,15 +161,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 20
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table104 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table104.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "In order to receive email communications from our expert team, please provide you" +
                                 "r email address."});
-                table104.AddRow(new string[] {
+                table105.AddRow(new string[] {
                             "Email address"});
 #line 21
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table104, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table105, "Then ");
 #line hidden
 #line 25
  testRunner.When("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -209,15 +209,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table105.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "To allow our property experts to contact you by phone (including an initial call " +
                                 "regarding your enquiry), please provide your phone number."});
-                table105.AddRow(new string[] {
+                table106.AddRow(new string[] {
                             "Phone number"});
 #line 36
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table105, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table106, "Then ");
 #line hidden
 #line 40
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -312,19 +312,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 84
  testRunner.Then("the following text is displayed: Start your  holiday letting journey today", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table107 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table106.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "first_name"});
-                table106.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "last_name"});
-                table106.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table106.AddRow(new string[] {
+                table107.AddRow(new string[] {
                             "/terms/privacypolicy"});
 #line 85
- testRunner.And("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table106, "And ");
+ testRunner.And("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table107, "And ");
 #line hidden
 #line 91
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
@@ -337,15 +337,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 93
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table107 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table107.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "In order to receive email communications from our expert team, please provide you" +
                                 "r email address."});
-                table107.AddRow(new string[] {
+                table108.AddRow(new string[] {
                             "Email address"});
 #line 94
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table107, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table108, "Then ");
 #line hidden
 #line 98
  testRunner.When("I enter testowner@sykescottages.co.uk in the following form field: //*[@*=\'enquir" +
@@ -360,15 +360,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 101
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table109 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table108.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "To allow our property experts to contact you by phone (including an initial call " +
                                 "regarding your enquiry), please provide your phone number."});
-                table108.AddRow(new string[] {
+                table109.AddRow(new string[] {
                             "Phone number"});
 #line 102
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table108, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table109, "Then ");
 #line hidden
 #line 106
  testRunner.And("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -397,17 +397,17 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'4\']/button[@*=\'submit\'" +
                         "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table109 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table110 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table109.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Please ensure the following details are correct"});
-                table109.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table109.AddRow(new string[] {
+                table110.AddRow(new string[] {
                             "Submit enquiry"});
 #line 114
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table109, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table110, "Then ");
 #line hidden
 #line 119
  testRunner.When("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

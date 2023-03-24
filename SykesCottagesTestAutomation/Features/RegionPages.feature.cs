@@ -120,22 +120,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Then(string.Format("the following text is displayed: {0}", region), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table100 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "c-lyc-form"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "trustpilot-widget"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Local Holiday Letting Expertise"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Here\'s why our local experts love their job"});
-                table100.AddRow(new string[] {
+                table101.AddRow(new string[] {
                             "Back To Top"});
 #line 8
- testRunner.And("the relevant elements are dislpayed", ((string)(null)), table100, "And ");
+ testRunner.And("the relevant elements are dislpayed", ((string)(null)), table101, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -239,14 +239,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 53
  testRunner.When("I apply the following experiment: LetYourCottages_CalcInHeroOnRegionalPages262", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table101 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table102 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table101.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Your potential earnings"});
-                table101.AddRow(new string[] {
+                table102.AddRow(new string[] {
                             "Find out more"});
 #line 54
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table101, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table102, "Then ");
 #line hidden
 #line 58
  testRunner.And(string.Format("the following text is displayed: {0}", region1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

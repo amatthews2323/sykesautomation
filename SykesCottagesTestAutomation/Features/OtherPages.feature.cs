@@ -452,6 +452,189 @@ this.ScenarioInitialize(scenarioInfo);
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The Information Centre pages load as intended")]
+        [NUnit.Framework.CategoryAttribute("Search")]
+        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
+        public void TheInformationCentrePagesLoadAsIntended()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Search",
+                    "LYPRegressionSuite"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Information Centre pages load as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 157
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 158
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/about-us"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/a-guide-to-buying-a-ho" +
+                                "liday-let"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/are-holiday-homes-a-go" +
+                                "od-investment"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/benefits-short-term-le" +
+                                "tting"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/building-holiday-let"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/buying-a-holiday-home"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/buy-own-sell-holiday-l" +
+                                "ets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/capital-gains-tax"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/cottage-owner"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/damage-protection-term" +
+                                "s"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/e-i-l"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/expert-guide-to-advert" +
+                                "ise-your-holiday-home"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/farm-diversification-h" +
+                                "oliday-letting"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/furnished-holiday-let-" +
+                                "tax-guide"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-chalet-letting" +
+                                "-business"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-cottage-rates"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-cleaning"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-finance"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-taxes"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-agency"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-business-s" +
+                                "uccess"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-investment" +
+                                ""});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-marketing"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgage-i" +
+                                "nformation"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgages"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgages-" +
+                                "a-complete-guide"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-gettin" +
+                                "g-started"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-inform" +
+                                "ation"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-rules"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/holiday-management-ser" +
+                                "vices"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/how-to-run-your-holida" +
+                                "y-let"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/investment-advice-for-" +
+                                "holiday-lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/leading-holiday-let-ag" +
+                                "ency"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/legal-regulations-for-" +
+                                "holiday-lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/letting-a-log-cabin"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/make-the-switch"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/marketing-your-holiday" +
+                                "-let"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/n-t-l"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/regulations-for-holida" +
+                                "y-lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/renting-out-your-prope" +
+                                "rty"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/run-holiday-let-as-bus" +
+                                "iness"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/running-your-holiday-l" +
+                                "et"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/shepherd-huts-for-holi" +
+                                "day-lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/Stamp-Duty-On-Holiday-" +
+                                "Lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/Tax-information-on-hol" +
+                                "iday-lets"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/t-o-b"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/video-test-let-agency"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/welcome-gift"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/information/welcome-gift-terms"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/East-Anglia/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Heart-of-England/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Ireland/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Northumberland/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/North-York-Moors-and-" +
+                                "Coast/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Peak-District/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Scotland/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/South-of-England/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/South-West/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/The-Lake-District-and" +
+                                "-Cumbria/"});
+                table98.AddRow(new string[] {
+                            "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Wales/"});
+#line 159
+ testRunner.Then("the following links load correctly", ((string)(null)), table98, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using TechTalk.SpecFlow;
 
 namespace SykesCottagesTestAutomation.BaseClass
@@ -388,7 +389,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenITakeAScreenshot()
         {
             string filename = "Screenshot_" + DateTime.Now.ToString("yyyy-MM-dd-hh-mm-ss");
-            Screenshot(filename, "viewable area");
+            Screenshot(filename);
         }
 
         [When(@"I log in with the following credentials")]
@@ -456,6 +457,10 @@ namespace SykesCottagesTestAutomation.BaseClass
                 {
                     GoTo(url + link);
                 }
+
+                Regex word = new(@".*/(.*)");
+                Match m = word.Match(link.ToString());
+                Screenshot(m.Groups[1].ToString());
             }
         }
     }

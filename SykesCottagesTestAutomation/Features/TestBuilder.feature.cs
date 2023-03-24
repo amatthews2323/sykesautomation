@@ -122,7 +122,8 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 11
- testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage/sea" +
+                        "rch/?searchTerm=th", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
  testRunner.Then("I store all links on the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

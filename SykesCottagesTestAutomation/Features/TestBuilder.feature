@@ -8,7 +8,7 @@ Scenario: Get all headers on the page
 
 @TestBuilder
 Scenario: Get all links on the page
-	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage
+	Given I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage/search/?searchTerm=th
 	Then I store all links on the page
 
 @TestBuilder
