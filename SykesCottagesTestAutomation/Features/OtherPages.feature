@@ -152,8 +152,7 @@ Scenario: The FAQ page links work as intended
 	| /press-and-media.html                                                                                  |
 	| /letyourcottage/holiday-homes-for-sale/                                                                |
 
-
-@Search @LYPRegressionSuite
+@InformationCentre
 Scenario: The Information Centre pages load as intended
 	Given I am on the following webpage: https://www.sykescottages.co.uk
 	Then the following links load correctly

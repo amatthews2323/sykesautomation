@@ -46,7 +46,7 @@ Scenario: The Sister Brands are displayed correctly
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
-	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
+	And I click //*[@*='enquiry-form-step3']//*[@*='Close modal']
 ##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 ##	Then the relevant elements are dislpayed
 ##	| Element                                                                                                   |

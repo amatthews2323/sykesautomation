@@ -126,13 +126,13 @@ namespace SykesCottagesTestAutomation.BaseClass
         [When(@"I select (.*) within the (.*) section")]
         public void WhenISelectWithinTheSection(string element, string section)
         {
-            Click(XPath(section) + XPath(element));
+            Click(XPathBuilder(section) + XPathBuilder(element));
         }
 
         [Then(@"I select (.*) within the (.*) section")]
         public void ThenISelectWithinTheSection(string element, string section)
         {
-            Click(XPath(section) + XPath(element));
+            Click(XPathBuilder(section) + XPathBuilder(element));
         }
 
         [When(@"I select the Partially Managed Enquire Now button")]
@@ -208,8 +208,8 @@ namespace SykesCottagesTestAutomation.BaseClass
             var elements = table.Rows.Select(r => r[0]).ToArray();
             foreach (var element in elements)
             {
-                WaitUntilExists(XPath(section) + XPath(element.ToString()), 5);
-                AssertElementDisplayed(XPath(section) + XPath(element.ToString()));
+                WaitUntilExists(XPathBuilder(section) + XPathBuilder(element.ToString()), 5);
+                AssertElementDisplayed(XPathBuilder(section) + XPathBuilder(element.ToString()));
             }
         }
 
@@ -360,7 +360,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void WhenIEnterInTheFollowingFormField(string text, string field)
         {
             WaitUntilClickable(field, 5);
-            //WaitASecond();
             Type(field, text);
         }
 
@@ -368,7 +367,6 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenIEnterInTheFollowingFormField(string text, string field)
         {
             WaitUntilClickable(field, 5);
-            //WaitASecond();
             Type(field, text);
         }
 
@@ -411,6 +409,29 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void ThenIStoreAllHeadersOnThePage()
         {
             GetAllHeaders();
+        }
+
+        [Then(@"I store the header on the following pages")]
+        public void ThenIStoreTheHeaderOnTheFollowingPages(Table table)
+        {
+            string headers = "Headers:|\n";
+            var links = table.Rows.Select(r => r[0]).ToArray();
+
+            foreach (var link in links)
+            {
+                if (link.Contains("http"))
+                {
+                    GoTo(link);
+                }
+                else
+                {
+                    GoTo(url + link);
+                }
+                string header = GetHeader();
+                headers += "\n| " + link + " | " + header + " |";
+                //Console.WriteLine("| " + link + " | " + header + " |");
+            }
+            Console.WriteLine("\n" + headers + "\n");
         }
 
         [Then(@"I store all links on the page")]

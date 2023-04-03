@@ -162,14 +162,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Build a test that checks all headers on the page")]
+        [NUnit.Framework.DescriptionAttribute("Get the header of the page")]
         [NUnit.Framework.CategoryAttribute("TestBuilder")]
-        public void BuildATestThatChecksAllHeadersOnThePage()
+        public void GetTheHeaderOfThePage()
         {
             string[] tagsOfScenario = new string[] {
                     "TestBuilder"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Build a test that checks all headers on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the header of the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -181,9 +181,138 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 21
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table111 = new TechTalk.SpecFlow.Table(new string[] {
+                            "WebPage"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/about-us"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/a-guide-to-buying-a-holiday-let"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/are-holiday-homes-a-good-investment"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/benefits-short-term-letting"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/building-holiday-let"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/buying-a-holiday-home"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/buy-own-sell-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/capital-gains-tax"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/cottage-owner"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/damage-protection-terms"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/e-i-l"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/expert-guide-to-advertise-your-holiday-home"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/farm-diversification-holiday-letting"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/furnished-holiday-let-tax-guide"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-chalet-letting-business"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-cottage-rates"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-cleaning"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-finance"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-taxes"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-agency"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-business-success"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-investment"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-marketing"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgage-information"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgages"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgages-a-complete-guide"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-getting-started"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-information"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-rules"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/holiday-management-services"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/how-to-run-your-holiday-let"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/investment-advice-for-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/leading-holiday-let-agency"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/legal-regulations-for-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/letting-a-log-cabin"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/make-the-switch"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/marketing-your-holiday-let"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/n-t-l"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/regulations-for-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/renting-out-your-property"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/run-holiday-let-as-business"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/running-your-holiday-let"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/shepherd-huts-for-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/Stamp-Duty-On-Holiday-Lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/Tax-information-on-holiday-lets"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/t-o-b"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/video-test-let-agency"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/welcome-gift"});
+                table111.AddRow(new string[] {
+                            "letyourcottage/information/welcome-gift-terms"});
+#line 22
+ testRunner.Then("I store the header on the following pages", ((string)(null)), table111, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Build a test that checks all headers on the page")]
+        [NUnit.Framework.CategoryAttribute("TestBuilder")]
+        public void BuildATestThatChecksAllHeadersOnThePage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "TestBuilder"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Build a test that checks all headers on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 75
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 76
  testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 77
  testRunner.Then("I store the headers and output a test script", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -199,7 +328,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "TestBuilder"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Build a test that checks all links on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
+#line 80
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -209,11 +338,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 26
+#line 81
  testRunner.Given("I am on the following webpage: https://sykes:1.sykes@lyp238dedicatedfaqpa.dev.syk" +
                         "escottages.co.uk/letyourcottage/holiday-let-owner-information/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 27
+#line 82
  testRunner.Then("I store the links and output a test script", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -229,7 +358,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "TestBuilder"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Build a test that checks all images on the page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 30
+#line 85
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -239,10 +368,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
+#line 86
  testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk/letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 32
+#line 87
  testRunner.Then("I store the images and output a test script", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

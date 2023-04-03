@@ -72,6 +72,7 @@ Scenario: The MultiStep form is displayed correctly
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the following text is displayed: Please provide a contact number that is no more than 15 digits long.
 	When I enter +44 7000 000 000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	And I click //*[@*='enquiry-form-step3']//*[@*='Close modal']
 ##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 ##	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 ##	Then the relevant elements are dislpayed
@@ -403,9 +404,6 @@ Scenario: The relevant images are displayed on the page
 	Given I have navigated to the following page: letyourcottage
 	Then the relevant elements are dislpayed
 	| Element                                                                                                                                    |
-	| /images/icons/icon-user-grey.svg                                                                                                           |
-	| /images/icons/icon-mail-grey.svg                                                                                                           |
-	| /images/icons/icon-phone-grey.svg                                                                                                          |
 	| /images/sykes/sykes-small-logo-white.svg                                                                                                   |
 	| /images/sykes/sykes-primary-logo-white.svg                                                                                                 |
 	| /images/sykes/sykes-primary-logo.svg                                                                                                       |

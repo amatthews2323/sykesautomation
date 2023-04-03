@@ -455,16 +455,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Information Centre pages load as intended")]
-        [NUnit.Framework.CategoryAttribute("Search")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
+        [NUnit.Framework.CategoryAttribute("InformationCentre")]
         public void TheInformationCentrePagesLoadAsIntended()
         {
             string[] tagsOfScenario = new string[] {
-                    "Search",
-                    "LYPRegressionSuite"};
+                    "InformationCentre"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Information Centre pages load as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 157
+#line 156
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -474,7 +472,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 158
+#line 157
  testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table98 = new TechTalk.SpecFlow.Table(new string[] {
@@ -629,7 +627,7 @@ this.ScenarioInitialize(scenarioInfo);
                                 "-Cumbria/"});
                 table98.AddRow(new string[] {
                             "https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Wales/"});
-#line 159
+#line 158
  testRunner.Then("the following links load correctly", ((string)(null)), table98, "Then ");
 #line hidden
             }

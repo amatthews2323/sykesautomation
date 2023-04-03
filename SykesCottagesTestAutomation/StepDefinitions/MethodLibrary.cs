@@ -105,7 +105,7 @@ namespace SykesCottagesTestAutomation
             try
             {
                 GoTo(url);
-                WaitASecond();
+                //WaitASecond();
             }
             catch (Exception)
             {
@@ -113,13 +113,13 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("//head/title"))).Count != 0, "ERROR MESSAGE: Page failed to load");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("//head/title"))).Count != 0, "ERROR MESSAGE: Page failed to load");
 
             //Check for system errors
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("503 Service Temporarily Unavailable"))).Count == 0, "ERROR MESSAGE: 503 Service Temporarily Unavailable");
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("An error has occurred"))).Count == 0, "ERROR MESSAGE: An error has occurred");
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("Service Unavailable"))).Count == 0, "ERROR MESSAGE: Service Unavailable");
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath("504 Gateway Time-out"))).Count == 0, "ERROR MESSAGE: 504 Gateway Time-out");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("503 Service Temporarily Unavailable"))).Count == 0, "ERROR MESSAGE: 503 Service Temporarily Unavailable");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("An error has occurred"))).Count == 0, "ERROR MESSAGE: An error has occurred");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("Service Unavailable"))).Count == 0, "ERROR MESSAGE: Service Unavailable");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("504 Gateway Time-out"))).Count == 0, "ERROR MESSAGE: 504 Gateway Time-out");
 
             //Write active experiments to console
             try
@@ -128,7 +128,10 @@ namespace SykesCottagesTestAutomation
                 experimentalExperiments = GetJavaScriptText("experimental_experiments");
                 Console.WriteLine("On experiments: " + experimentalExperiments + "\nOff experiments: " + controlExperiments);
             }
-            catch {}
+            catch
+            {
+                Console.WriteLine("No experiments found");
+            }
 
             ClosePopups(); //Dismiss any pop-ups or alerts
 
@@ -144,7 +147,6 @@ namespace SykesCottagesTestAutomation
             }
 
             SetBrowserSize(); //Set the browser width and height
-            Console.WriteLine("");
         }
 
         public void SetBrowserSize()
@@ -199,11 +201,13 @@ namespace SykesCottagesTestAutomation
             //Accept, reject or ignore the cookie banner
             if (Hooks.cookieBanner == "Accept")
             {
-                ClickIfDisplayed("Accept all", waitTime: 2);
+                WaitUntilVisible("Accept all");
+                Click("Accept all");
+                WaitUntilExists("Manage Your Cookie Preferences");
             }
             if (Hooks.cookieBanner == "Reject")
             {
-                ClickIfDisplayed("Reject all", waitTime: 2);
+                Click("Reject all");
             }
 
             //Dismiss overlay tint
@@ -221,7 +225,7 @@ namespace SykesCottagesTestAutomation
                     ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
                 }
 
-                //Dismiss alerts
+/*                //Dismiss alerts
                 if (shared.driver.FindElements(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Count != 0)
                 {
                     ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
@@ -231,7 +235,7 @@ namespace SykesCottagesTestAutomation
                 else
                 {
                     Console.WriteLine("No alerts found");
-                }
+                }*/
             }
             else
             {
@@ -259,7 +263,7 @@ namespace SykesCottagesTestAutomation
             return csvValue;
         }
 
-        public static string XPath(string value, string element = "*")
+        public static string XPathBuilder(string value, string element = "*")
         {
             //If "value" parameter is already an XPath, return the origninal string; else return an XPath containing the "value" parameter
             if (value.Contains("//") & !value.Contains("http"))
@@ -340,7 +344,7 @@ namespace SykesCottagesTestAutomation
             try
             {
                 var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPath(value))));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath(XPathBuilder(value))));
             }
             catch (Exception)
             {
@@ -353,11 +357,24 @@ namespace SykesCottagesTestAutomation
             try
             {
                 var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPath(value))));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath(XPathBuilder(value))));
             }
             catch (Exception)
             {
                 Console.WriteLine(value + " not visible after " + seconds + " seconds");
+            }
+        }
+
+        public void WaitUntilNotVisible(string value, int seconds = 10)
+        {
+            try
+            {
+                var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.InvisibilityOfElementLocated(By.XPath(XPathBuilder(value))));
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(value + " still visible after " + seconds + " seconds");
             }
         }
 
@@ -366,7 +383,7 @@ namespace SykesCottagesTestAutomation
             try
             {
                 var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, seconds));
-                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value))));
+                wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPathBuilder(value))));
             }
             catch (Exception)
             {
@@ -379,18 +396,18 @@ namespace SykesCottagesTestAutomation
             string scrollElementIntoMiddle = "var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);"
                                            + "var elementTop = arguments[0].getBoundingClientRect().top;"
                                            + "window.scrollBy(0, elementTop-(viewPortHeight/2));";
-            ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath(XPath(value))));
+            ((IJavaScriptExecutor)shared.driver).ExecuteScript(scrollElementIntoMiddle, shared.driver.FindElement(By.XPath(XPathBuilder(value))));
             WaitASecond(2);
         }
 
         public bool ElementDisplayed(string value, string element = "*")
         {
-            return shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0;
+            return shared.driver.FindElements(By.XPath(XPathBuilder(value, element))).Count != 0;
         }
 
         public bool ElementNotDisplayed(string value, string element = "*")
         {
-            return shared.driver.FindElements(By.XPath(XPath(value, element))).Count == 0;
+            return shared.driver.FindElements(By.XPath(XPathBuilder(value, element))).Count == 0;
         }
 
         public void AssertPageTitle(string title)
@@ -409,7 +426,7 @@ namespace SykesCottagesTestAutomation
         public void AssertElementDisplayed(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is displayed: " + value);
-            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPath(value, element))).Count != 0, "\"" + value + "\" not found");
+            Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder(value, element))).Count != 0, "\"" + value + "\" not found");
         }
 
         public void AssertElementNotDisplayed(string value, string element = "*")
@@ -421,7 +438,7 @@ namespace SykesCottagesTestAutomation
         public void AssertElementVisible(string value, string element = "*")
         {
             Console.WriteLine("Assert the following element is visible: " + value);
-            Assert.IsTrue(shared.driver.FindElement(By.XPath(XPath(value, element))).Displayed, "\"" + value + "\" not visible");
+            Assert.IsTrue(shared.driver.FindElement(By.XPath(XPathBuilder(value, element))).Displayed, "\"" + value + "\" not visible");
         }
 
         public void AssertElementNotVisible(string value, string element = "*")
@@ -433,9 +450,19 @@ namespace SykesCottagesTestAutomation
         public void Click(string value, string element = "*", int waitTime = 0)
         {
             var wait = new WebDriverWait(shared.driver, new TimeSpan(0, 0, 30));
-            var _element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPath(value, element))));
+            var _element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(XPathBuilder(value, element))));
             Console.WriteLine("Click: \"" + value + "\"");
-            _element.Click();
+
+            try
+            {
+                _element.Click();
+            }
+            catch
+            {
+                Console.WriteLine("Click failed. Wait a second and try again...");
+                WaitASecond();
+                _element.Click();
+            }
             if (waitTime != 0)
             {
                 WaitASecond(waitTime);
@@ -446,7 +473,7 @@ namespace SykesCottagesTestAutomation
         {
             Console.WriteLine(" JS click: \"" + value + "\"");
             IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)shared.driver;
-            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath(XPath(value, element))));
+            jsExecutor.ExecuteScript("arguments[0].click()", shared.driver.FindElement(By.XPath(XPathBuilder(value, element))));
             if (waitTime != 0)
             {
                 WaitASecond(waitTime);
@@ -460,7 +487,7 @@ namespace SykesCottagesTestAutomation
                 if (ElementDisplayed(value, element))
                 {
                     Console.WriteLine("Click \"" + value + "\"");
-                    shared.driver.FindElement(By.XPath(XPath(value, element))).Click();
+                    shared.driver.FindElement(By.XPath(XPathBuilder(value, element))).Click();
                     if (waitTime != 0)
                     {
                         WaitASecond(waitTime);
@@ -486,7 +513,7 @@ namespace SykesCottagesTestAutomation
 
         public void MouseOver(string value, string element = "*")
         {
-            IWebElement _element = shared.driver.FindElement(By.XPath(XPath(value, element)));
+            IWebElement _element = shared.driver.FindElement(By.XPath(XPathBuilder(value, element)));
             Actions action = new Actions(shared.driver);
             action.MoveToElement(_element).Perform();
             WaitASecond();
@@ -495,7 +522,7 @@ namespace SykesCottagesTestAutomation
         public void Type(string formField, string text, string element = "input", int waitTime = 0)
         {
             Console.WriteLine("Type \"" + text + "\" into the \"" + formField + "\" field");
-            IWebElement _element = shared.driver.FindElement(By.XPath(XPath(formField, element)));
+            IWebElement _element = shared.driver.FindElement(By.XPath(XPathBuilder(formField, element)));
             try
             {
                 _element.Clear();
@@ -529,10 +556,10 @@ namespace SykesCottagesTestAutomation
         {
             try
             {
-                if (shared.driver.FindElement(By.XPath(XPath(formField, "input"))).Displayed)
+                if (shared.driver.FindElement(By.XPath(XPathBuilder(formField, "input"))).Displayed)
                 {
                     Console.WriteLine("Type " + text + " into the " + formField + " field");
-                    IWebElement _element = shared.driver.FindElement(By.XPath(XPath(formField, element)));
+                    IWebElement _element = shared.driver.FindElement(By.XPath(XPathBuilder(formField, element)));
                     _element.Clear();
                     _element.SendKeys(text);
                     if (waitTime != 0)
@@ -572,6 +599,11 @@ namespace SykesCottagesTestAutomation
                 dictionary.Add(row[0], row[1]);
             }
             return dictionary;
+        }
+
+        public string GetHeader()
+        {
+            return shared.driver.FindElement(By.XPath("//h1")).Text;
         }
 
         public void GetAllHeaders()
