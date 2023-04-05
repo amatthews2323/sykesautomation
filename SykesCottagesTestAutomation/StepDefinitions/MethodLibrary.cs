@@ -201,13 +201,15 @@ namespace SykesCottagesTestAutomation
             //Accept, reject or ignore the cookie banner
             if (Hooks.cookieBanner == "Accept")
             {
-                WaitUntilVisible("Accept all");
+                //WaitASecond();
                 Click("Accept all");
-                WaitUntilExists("Manage Your Cookie Preferences");
+                WaitUntilNotVisible("Manage Your Cookie Preferences");
             }
             if (Hooks.cookieBanner == "Reject")
             {
+                //WaitASecond();
                 Click("Reject all");
+                WaitUntilNotVisible("Manage Your Cookie Preferences");
             }
 
             //Dismiss overlay tint

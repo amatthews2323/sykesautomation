@@ -175,39 +175,40 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/furnished-holiday-let-tax-guide", "Tax information on holiday lets", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-chalet-letting-business", "Holiday Chalet Letting Business", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-cottage-rates", "What rates of taxes do I need to pay on my holiday cottage?", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-cleaning", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-finance", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-taxes", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-agency", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-business-success", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-investment", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-marketing", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-mortgage-information", "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-cleaning", "Cleaning your holiday home - what are the options?", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-finance", "Holiday Let Finance", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-home-taxes", "Holiday home tax - what are the rules?", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-agency", "How to Choose the Best Holiday Let Agency", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-business-success", "Running a Successful Holiday Let Business", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-investment", "Are Holiday Homes a Good Investment?", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-marketing", "Marketing Your Holiday Let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-mortgage-information", "Holiday Let Mortgages", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-mortgages", "Holiday let mortgages", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-mortgages-a-complete-guide", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-getting-started", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-information", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-rules", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-management-services", "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-let-mortgages-a-complete-guide", "A Complete Guide to Holiday Let Mortgages", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-getting-started", "Holiday Letting: Getting Started", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-information", "Holiday Letting: The Pros & Cons", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-letting-rules", "Holiday letting - what are the rules and regulations for a furnished holiday let?" +
+            "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-management-services", "How Sykes Can Manage Your Holiday Home", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/how-to-run-your-holiday-let", "How to run your holiday let", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/investment-advice-for-holiday-lets", "Investment advice for holiday lets", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/leading-holiday-let-agency", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/legal-regulations-for-holiday-lets", "Legal regulations for holiday lets", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/letting-a-log-cabin", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/make-the-switch", "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/leading-holiday-let-agency", "Why You Should Let Your Property With The Leading Holiday Lettings Agency", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/legal-regulations-for-holiday-lets", "Holiday Let Rules and Regulations - The Legal Requirements", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/letting-a-log-cabin", "Letting Out A Log Cabin", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/make-the-switch", "Make the Switch to Sykes - it\'s easier than you think...", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/marketing-your-holiday-let", "Advertising and Marketing", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/n-t-l", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/regulations-for-holiday-lets", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/renting-out-your-property", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/run-holiday-let-as-business", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/running-your-holiday-let", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/shepherd-huts-for-holiday-lets", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/Stamp-Duty-On-Holiday-Lets", "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/n-t-l", "Are you new to the holiday home market and looking to let out your property?", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/regulations-for-holiday-lets", "Legal regulations for holiday lets", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/renting-out-your-property", "Let Sykes help you with everything you need to rent out your property", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/run-holiday-let-as-business", "How to Run a Holiday Let as a Business", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/running-your-holiday-let", "Running your Holiday Let", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/shepherd-huts-for-holiday-lets", "Holiday Letting With Shepherd huts", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/Stamp-Duty-On-Holiday-Lets", "Stamp Duty On Holiday Lets", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/Tax-information-on-holiday-lets", "Tax information on holiday lets", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/t-o-b", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/video-test-let-agency", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/welcome-gift", "", null)]
-        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/welcome-gift-terms", "", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/t-o-b", "Are you thinking of buying a holiday let?", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/video-test-let-agency", "How to Choose the Best Holiday Let Agency", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/welcome-gift", "Earn a welcome cashback offer when you list your property with Sykes Cottages", null)]
+        [NUnit.Framework.TestCaseAttribute("letyourcottage/information/welcome-gift-terms", "Welcome Gift Offer 2023 - Terms and Conditions", null)]
         public void TheReleventElementsArePresentOnTheInformationCentrePages(string path, string header, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -252,6 +253,135 @@ this.ScenarioInitialize(scenarioInfo);
                             "How much could I earn with Sykes?"});
 #line 30
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table71, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("The Information Centre pages load as intended")]
+        [NUnit.Framework.CategoryAttribute("InformationCentre")]
+        public void TheInformationCentrePagesLoadAsIntended()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "InformationCentre"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Information Centre pages load as intended", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 89
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 90
+ testRunner.Given("I am on the following webpage: https://www.sykescottages.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table72 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Element"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/about-us"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/a-guide-to-buying-a-holiday-let"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/are-holiday-homes-a-good-investment"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/benefits-short-term-letting"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/building-holiday-let"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/buying-a-holiday-home"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/buy-own-sell-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/capital-gains-tax"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/cottage-owner"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/damage-protection-terms"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/e-i-l"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/expert-guide-to-advertise-your-holiday-home"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/farm-diversification-holiday-letting"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/furnished-holiday-let-tax-guide"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-chalet-letting-business"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-cottage-rates"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-cleaning"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-finance"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-home-taxes"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-agency"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-business-success"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-investment"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-marketing"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgage-information"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgages"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-let-mortgages-a-complete-guide"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-getting-started"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-information"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-letting-rules"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/holiday-management-services"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/how-to-run-your-holiday-let"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/investment-advice-for-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/leading-holiday-let-agency"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/legal-regulations-for-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/letting-a-log-cabin"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/make-the-switch"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/marketing-your-holiday-let"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/n-t-l"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/regulations-for-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/renting-out-your-property"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/run-holiday-let-as-business"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/running-your-holiday-let"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/shepherd-huts-for-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/Stamp-Duty-On-Holiday-Lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/Tax-information-on-holiday-lets"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/t-o-b"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/video-test-let-agency"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/welcome-gift"});
+                table72.AddRow(new string[] {
+                            "letyourcottage/information/welcome-gift-terms"});
+#line 91
+ testRunner.Then("the following links load correctly", ((string)(null)), table72, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

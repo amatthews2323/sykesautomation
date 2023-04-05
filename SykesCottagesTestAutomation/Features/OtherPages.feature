@@ -86,7 +86,7 @@ Scenario: The relevant links are displayed on the FAQ page
 	| https://pinterest.com/sykescottages/ |
 	| https://instagram.com/sykescottages/ |
 
-@FAQ @LYPRegressionSuite
+@FAQ
 Scenario: The FAQ page links work as intended
 	Given I am on the following webpage: https://www.sykescottages.co.uk
 	Then the following links load correctly
@@ -151,69 +151,3 @@ Scenario: The FAQ page links work as intended
 	| /terms/cookiepolicy                                                                                    |
 	| /press-and-media.html                                                                                  |
 	| /letyourcottage/holiday-homes-for-sale/                                                                |
-
-@InformationCentre
-Scenario: The Information Centre pages load as intended
-	Given I am on the following webpage: https://www.sykescottages.co.uk
-	Then the following links load correctly
-	| Element                                                                                                |
-	| https://www.sykescottages.co.uk/letyourcottage/information/about-us                                    |
-	| https://www.sykescottages.co.uk/letyourcottage/information/a-guide-to-buying-a-holiday-let             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/are-holiday-homes-a-good-investment         |
-	| https://www.sykescottages.co.uk/letyourcottage/information/benefits-short-term-letting                 |
-	| https://www.sykescottages.co.uk/letyourcottage/information/building-holiday-let                        |
-	| https://www.sykescottages.co.uk/letyourcottage/information/buying-a-holiday-home                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/buy-own-sell-holiday-lets                   |
-	| https://www.sykescottages.co.uk/letyourcottage/information/capital-gains-tax                           |
-	| https://www.sykescottages.co.uk/letyourcottage/information/cottage-owner                               |
-	| https://www.sykescottages.co.uk/letyourcottage/information/damage-protection-terms                     |
-	| https://www.sykescottages.co.uk/letyourcottage/information/e-i-l                                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/expert-guide-to-advertise-your-holiday-home |
-	| https://www.sykescottages.co.uk/letyourcottage/information/farm-diversification-holiday-letting        |
-	| https://www.sykescottages.co.uk/letyourcottage/information/furnished-holiday-let-tax-guide             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-chalet-letting-business             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-cottage-rates                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-cleaning                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-finance                        |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-home-taxes                          |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-agency                          |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-business-success                |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-investment                      |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-marketing                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgage-information            |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgages                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-let-mortgages-a-complete-guide      |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-getting-started             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-information                 |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-letting-rules                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/holiday-management-services                 |
-	| https://www.sykescottages.co.uk/letyourcottage/information/how-to-run-your-holiday-let                 |
-	| https://www.sykescottages.co.uk/letyourcottage/information/investment-advice-for-holiday-lets          |
-	| https://www.sykescottages.co.uk/letyourcottage/information/leading-holiday-let-agency                  |
-	| https://www.sykescottages.co.uk/letyourcottage/information/legal-regulations-for-holiday-lets          |
-	| https://www.sykescottages.co.uk/letyourcottage/information/letting-a-log-cabin                         |
-	| https://www.sykescottages.co.uk/letyourcottage/information/make-the-switch                             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/marketing-your-holiday-let                  |
-	| https://www.sykescottages.co.uk/letyourcottage/information/n-t-l                                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/regulations-for-holiday-lets                |
-	| https://www.sykescottages.co.uk/letyourcottage/information/renting-out-your-property                   |
-	| https://www.sykescottages.co.uk/letyourcottage/information/run-holiday-let-as-business                 |
-	| https://www.sykescottages.co.uk/letyourcottage/information/running-your-holiday-let                    |
-	| https://www.sykescottages.co.uk/letyourcottage/information/shepherd-huts-for-holiday-lets              |
-	| https://www.sykescottages.co.uk/letyourcottage/information/Stamp-Duty-On-Holiday-Lets                  |
-	| https://www.sykescottages.co.uk/letyourcottage/information/Tax-information-on-holiday-lets             |
-	| https://www.sykescottages.co.uk/letyourcottage/information/t-o-b                                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/video-test-let-agency                       |
-	| https://www.sykescottages.co.uk/letyourcottage/information/welcome-gift                                |
-	| https://www.sykescottages.co.uk/letyourcottage/information/welcome-gift-terms                          |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/East-Anglia/                               |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Heart-of-England/                          |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Ireland/                                   |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Northumberland/                            |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/North-York-Moors-and-Coast/                |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Peak-District/                             |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Scotland/                                  |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/South-of-England/                          |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/South-West/                                |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/The-Lake-District-and-Cumbria/             |
-	| https://www.sykescottages.co.uk/letyourcottage/In-Your-Area/Wales/                                     |

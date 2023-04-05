@@ -414,7 +414,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         [Then(@"I store the header on the following pages")]
         public void ThenIStoreTheHeaderOnTheFollowingPages(Table table)
         {
-            string headers = "Headers:|\n";
+            string headers = "Headers:\n";
             var links = table.Rows.Select(r => r[0]).ToArray();
 
             foreach (var link in links)

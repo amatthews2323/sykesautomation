@@ -145,30 +145,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table73 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table74 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Customer reviews powered by Trustpilot"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "What do our owners say?"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Holiday home management with Sykes"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Information centre"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Owner Information Pack"});
-                table73.AddRow(new string[] {
+                table74.AddRow(new string[] {
                             "Looking to get started with holiday letting?"});
 #line 16
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table73, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table74, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -227,31 +227,31 @@ this.ScenarioInitialize(scenarioInfo);
 #line 32
  testRunner.When("I try clicking open-multistep-modal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table74 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table75 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table74.AddRow(new string[] {
+                table75.AddRow(new string[] {
                             "first_name"});
-                table74.AddRow(new string[] {
+                table75.AddRow(new string[] {
                             "last_name"});
-                table74.AddRow(new string[] {
+                table75.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table74.AddRow(new string[] {
+                table75.AddRow(new string[] {
                             "/terms/privacypolicy"});
 #line 33
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table74, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table75, "Then ");
 #line hidden
 #line 39
  testRunner.When("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table75 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table75.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Please enter your first name"});
-                table75.AddRow(new string[] {
+                table76.AddRow(new string[] {
                             "Please enter your surname"});
 #line 40
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table75, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table76, "Then ");
 #line hidden
 #line 44
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
@@ -264,15 +264,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 46
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table76 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table76.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "In order to receive email communications from our expert team, please provide you" +
                                 "r email address."});
-                table76.AddRow(new string[] {
+                table77.AddRow(new string[] {
                             "Email address"});
 #line 47
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table76, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table77, "Then ");
 #line hidden
 #line 51
  testRunner.When("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -312,15 +312,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 61
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table77 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table77.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "To allow our property experts to contact you by phone (including an initial call " +
                                 "regarding your enquiry), please provide your phone number."});
-                table77.AddRow(new string[] {
+                table78.AddRow(new string[] {
                             "Phone number"});
 #line 62
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table77, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table78, "Then ");
 #line hidden
 #line 66
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -414,19 +414,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 109
  testRunner.When("I try clicking open-multistep-modal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table78 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table78.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "first_name"});
-                table78.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "last_name"});
-                table78.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table78.AddRow(new string[] {
+                table79.AddRow(new string[] {
                             "/terms/privacypolicy"});
 #line 110
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table78, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table79, "Then ");
 #line hidden
 #line 116
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
@@ -439,15 +439,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 118
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table79 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table79.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "In order to receive email communications from our expert team, please provide you" +
                                 "r email address."});
-                table79.AddRow(new string[] {
+                table80.AddRow(new string[] {
                             "Email address"});
 #line 119
- testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table79, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table80, "Then ");
 #line hidden
 #line 123
  testRunner.And("I enter testowner@sykescottages.co.uk in the following form field: //*[@*=\'enquir" +
@@ -459,15 +459,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 125
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table80 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table80.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "To allow our property experts to contact you by phone (including an initial call " +
                                 "regarding your enquiry), please provide your phone number."});
-                table80.AddRow(new string[] {
+                table81.AddRow(new string[] {
                             "Phone number"});
 #line 126
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table80, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table81, "Then ");
 #line hidden
 #line 130
  testRunner.When("I enter 07123456789 in the following form field: //*[@*=\'enquiry-multi-step\' and " +
@@ -493,17 +493,17 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'4\']/button[@*=\'submit\'" +
                         "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table81 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table81.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Please ensure the following details are correct"});
-                table81.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Your details will be used by the Sykes group to send you information about our pr" +
                                 "operty letting services."});
-                table81.AddRow(new string[] {
+                table82.AddRow(new string[] {
                             "Submit enquiry"});
 #line 137
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table81, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table82, "Then ");
 #line hidden
 #line 142
  testRunner.When("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -663,22 +663,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 193
  testRunner.Given("I have navigated to the following page: letyourcottage/?dev_tools=product", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table82 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/market-leading.png"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/payment_in_advance.png"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/dedicated-account-manager.png"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/helpline-24h.png"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/full-property-management.png"});
-                table82.AddRow(new string[] {
+                table83.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/photography.png"});
 #line 194
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table82, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table83, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -706,41 +706,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 205
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table83 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
                             "Key",
                             "Position"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "navigation",
                             "1"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Gain exposure through our partners",
                             "2"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "What do our owners say",
                             "3"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "How much could I earn",
                             "4"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "We are still open as usual",
                             "5"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Holiday home management with Sykes",
                             "6"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Putting your property in the spotlight",
                             "7"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Holiday letting made easy",
                             "8"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Information centre",
                             "9"});
-                table83.AddRow(new string[] {
+                table84.AddRow(new string[] {
                             "Free Owner Information Pack",
                             "10"});
 #line 206
- testRunner.Then("the page sections are displayed in the relevant positions", ((string)(null)), table83, "Then ");
+ testRunner.Then("the page sections are displayed in the relevant positions", ((string)(null)), table84, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -772,25 +772,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 221
  testRunner.Given("I have navigated to the following page: letyourcottage/?app_view=true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table84 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table85 = new TechTalk.SpecFlow.Table(new string[] {
                             "Section"});
-                table84.AddRow(new string[] {
+                table85.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table84.AddRow(new string[] {
+                table85.AddRow(new string[] {
                             "How much could I earn"});
-                table84.AddRow(new string[] {
+                table85.AddRow(new string[] {
                             "Information centre"});
 #line 222
- testRunner.Then("the following sections are dislpayed", ((string)(null)), table84, "Then ");
+ testRunner.Then("the following sections are dislpayed", ((string)(null)), table85, "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table85 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table86 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table85.AddRow(new string[] {
+                table86.AddRow(new string[] {
                             "contact-to-book mobile"});
-                table85.AddRow(new string[] {
+                table86.AddRow(new string[] {
                             "navbar-toggle collapsed"});
 #line 227
- testRunner.And("the relevant elements are not dislpayed", ((string)(null)), table85, "And ");
+ testRunner.And("the relevant elements are not dislpayed", ((string)(null)), table86, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -820,28 +820,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 234
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table86 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Information centre"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Enquire now"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Buying, owning and selling"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "How to run your holiday let"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Tax information and advice"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Advertising and marketing"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Investment advice"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Holiday let mortgages"});
-                table86.AddRow(new string[] {
+                table87.AddRow(new string[] {
                             "Legal regulations"});
 #line 235
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table86, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table87, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -871,16 +871,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 249
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table87 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table87.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "arrow-prev.svg"});
-                table87.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "arrow-next.svg"});
-                table87.AddRow(new string[] {
+                table88.AddRow(new string[] {
                             "slick-dots"});
 #line 250
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table87, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table88, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -913,48 +913,48 @@ this.ScenarioInitialize(scenarioInfo);
 #line 259
  testRunner.When("I scroll to the following element: page-footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table88 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table89 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Sykes Cottages"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "© 2023 All rights reserved"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "One City Place, Chester, Cheshire, CH1 3BQ, United Kingdom"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Registration No: 4469189"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "VAT Registration No: 204 9794 88"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Email us at letwithsykes@sykescottages.co.uk"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Sykes Product Showcase Winter 2022/23"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Read our blog"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Privacy Policy"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "/terms/cookiepolicy"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Cookie Policy"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Manage cookie preferences"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Press and media"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Holiday homes for sale"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Facebook"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Twitter"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Pinterest"});
-                table88.AddRow(new string[] {
+                table89.AddRow(new string[] {
                             "Instagram"});
 #line 260
- testRunner.Then("the relevant elements are dislpayed within the page-footer section", ((string)(null)), table88, "Then ");
+ testRunner.Then("the relevant elements are dislpayed within the page-footer section", ((string)(null)), table89, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1021,16 +1021,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 291
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table89 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table89.AddRow(new string[] {
+                table90.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table89.AddRow(new string[] {
+                table90.AddRow(new string[] {
                             "Property information"});
-                table89.AddRow(new string[] {
+                table90.AddRow(new string[] {
                             "Average potential earnings"});
 #line 292
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table89, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table90, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1060,21 +1060,21 @@ this.ScenarioInitialize(scenarioInfo);
 #line 300
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table90 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table90.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "Search for holiday letting information"});
-                table90.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "searchTerm"});
-                table90.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "Search"});
-                table90.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "Managed services"});
-                table90.AddRow(new string[] {
+                table91.AddRow(new string[] {
                             "How to run a holiday let"});
 #line 301
  testRunner.Then("the relevant elements are dislpayed within the floating-searcher-container sectio" +
-                        "n", ((string)(null)), table90, "Then ");
+                        "n", ((string)(null)), table91, "Then ");
 #line hidden
 #line 308
  testRunner.When("I try clicking nav_top_link nav_search_container", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -1085,12 +1085,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 310
  testRunner.And("I click searcher-bar__action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table91 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table91.AddRow(new string[] {
+                table92.AddRow(new string[] {
                             "results for \'Mortgage\'"});
 #line 311
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table91, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table92, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1120,48 +1120,48 @@ this.ScenarioInitialize(scenarioInfo);
 #line 317
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table92 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table93 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Let your property with Sykes and earn up to £125,000 per year*"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Start your Sykes holiday letting journey today"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Holiday letting made easy"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Information centre"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Gain exposure through our partners"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "What do our owners say?"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "How much could I earn with Sykes?"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Holiday home management with Sykes"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Partially managed"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Fully managed"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Putting your property in the spotlight"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Enquire now"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Buying, owning and selling"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "How to run your holiday let"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Tax information and advice"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Advertising and marketing"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Sykes Cottages"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Quick Links"});
-                table92.AddRow(new string[] {
+                table93.AddRow(new string[] {
                             "Social"});
 #line 318
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table92, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table93, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1191,122 +1191,122 @@ this.ScenarioInitialize(scenarioInfo);
 #line 342
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table93 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/search?searchTerm=Managed+services"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/search?searchTerm=How+to+run+a+holiday+let"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/account/login"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=x68mFIbCqCg"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=tqjT8KkjgAs"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=Ub391Pv_DA0"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=PM3uFo0QwXs"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=x68mFIbCqCg"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=tqjT8KkjgAs"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=Ub391Pv_DA0"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=PM3uFo0QwXs"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=x68mFIbCqCg"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=tqjT8KkjgAs"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=Ub391Pv_DA0"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=3PBQ5MN4Ko4"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=hEgStYWsKgA"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=ejktTVkAaSw"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=y-LyBJdDSWg"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=adhP_dRJQGM"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=ZaVr02lqZu4"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=eSh0rqAtPc0"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=3PBQ5MN4Ko4"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=hEgStYWsKgA"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=ejktTVkAaSw"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=y-LyBJdDSWg"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=adhP_dRJQGM"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=ZaVr02lqZu4"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=eSh0rqAtPc0"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=3PBQ5MN4Ko4"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=hEgStYWsKgA"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.youtube.com/watch?v=ejktTVkAaSw"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/managed-services"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/buy-own-sell-holiday-lets/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/how-to-run-your-holiday-let/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/tax-information-on-holiday-lets/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/marketing-your-holiday-let/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/investment-advice-for-holiday-lets/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/holiday-let-mortgages/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/information/regulations-for-holiday-lets/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/download-owner-pack"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/advice"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "mailto:letwithsykes@sykescottages.co.uk"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://showcase.sykescottages.co.uk/winter-22-23.html"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/blog/category/cottage-owners/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/terms/privacypolicy"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/terms/cookiepolicy"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/press-and-media.html"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "/letyourcottage/holiday-homes-for-sale/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://www.facebook.com/sykescottages.co.uk"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://twitter.com/sykescottages"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://pinterest.com/sykescottages/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://instagram.com/sykescottages/"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://policies.google.com/privacy"});
-                table93.AddRow(new string[] {
+                table94.AddRow(new string[] {
                             "https://policies.google.com/terms"});
 #line 343
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table93, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table94, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -1336,168 +1336,168 @@ this.ScenarioInitialize(scenarioInfo);
 #line 404
  testRunner.Given("I have navigated to the following page: letyourcottage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table94 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table95 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/sykes-small-logo-white.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/sykes-primary-logo-white.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/sykes-primary-logo.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/close_solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/close_solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/envelope-solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/close_solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/phone-solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/close_solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/user-solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/envelope-solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/phone-solid.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/properties/testimonials/Chalmers-Brown.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/properties/testimonials/Hunt.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/properties/testimonials/Martin.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-next.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/x68mFIbCqCg/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/tqjT8KkjgAs/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/Ub391Pv_DA0/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/PM3uFo0QwXs/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/x68mFIbCqCg/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/tqjT8KkjgAs/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/Ub391Pv_DA0/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/PM3uFo0QwXs/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/x68mFIbCqCg/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/tqjT8KkjgAs/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/Ub391Pv_DA0/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/3PBQ5MN4Ko4/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/hEgStYWsKgA/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/ejktTVkAaSw/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/y-LyBJdDSWg/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/adhP_dRJQGM/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/ZaVr02lqZu4/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/eSh0rqAtPc0/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/3PBQ5MN4Ko4/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/hEgStYWsKgA/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/ejktTVkAaSw/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/y-LyBJdDSWg/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/adhP_dRJQGM/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/ZaVr02lqZu4/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/eSh0rqAtPc0/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/3PBQ5MN4Ko4/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/hEgStYWsKgA/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://img.youtube.com/vi/ejktTVkAaSw/maxresdefault.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/managed-services/banner-images/18583/1.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/managed-services/banner-images/18583/2.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/managed-services/banner-images/18583/3.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/managed-services/banner-images/18583/4.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/managed-services/banner-images/18583/5.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-next.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/navigation/chevron/icon-chevron-down.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/navigation/chevron/icon-chevron-down.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-prev.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1094" +
                                 "201/sc_1641918857_1094201_26.jpeg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090" +
                                 "686/sc_1642422693_1090686_38.jpeg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1070" +
                                 "174/sc_1619444116_1070174_18.jpeg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1090" +
                                 "491/sc_1638542947_1090491_50.jpeg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1039" +
                                 "764/sc_15917942106716_1039764_67.jpg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://property-images-cdn.sykesassets.co.uk/images/property_images/500x375/1040" +
                                 "635/sc_1643110076_1040635_45.jpeg?access=3214T3370T840"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/icons/arrow-next.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/market-leading.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/payment_in_advance.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/dedicated-account-manager.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/helpline-24h.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/full-property-management.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/let_your_cottage/letting_easy/photography.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/infopack-18588.jpg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/letyourcottage/thank-you-page/bedrock-18588.png"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/sykes/sykes-primary-logo-white.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/social-media-icons/lyc/facebook.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/social-media-icons/lyc/twitter.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/social-media-icons/lyc/pinterest.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "/images/icons-svg/social-media-icons/lyc/instagram.svg"});
-                table94.AddRow(new string[] {
+                table95.AddRow(new string[] {
                             "https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg"});
 #line 405
- testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table94, "Then ");
+ testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table95, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
