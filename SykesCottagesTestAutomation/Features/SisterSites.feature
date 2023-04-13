@@ -88,14 +88,14 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| last_name                                                                                                 |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| /terms/privacypolicy                                                                                      |
-	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
-	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
+	When I enter RFX in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
+	And I enter BrandTest003 in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
 	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
+	When I enter rfxbrandtest003@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I wait 2 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
@@ -104,7 +104,7 @@ Scenario: The Sister Brand MultiStep form can be submitted
 	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
 	| Phone number                                                                                                                                |
 	And I wait 2 seconds
-	When I enter 03555999555 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
+	When I enter 05425425422 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	And I wait 2 seconds

@@ -1,7 +1,7 @@
 ﻿Feature: LandingPages
 	Landing pages content and functionality
 
-@LandingPages @LYPSmokeTest @LYPRegressionSuite
+@LandingPages
 Scenario: The Landing pages are displayed correctly
 	Given I have navigated to the following page: <Path>
 	Then the relevant elements are dislpayed

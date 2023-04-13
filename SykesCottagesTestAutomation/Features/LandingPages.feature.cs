@@ -76,17 +76,13 @@ namespace SykesCottagesTestAutomation.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("The Landing pages are displayed correctly")]
         [NUnit.Framework.CategoryAttribute("LandingPages")]
-        [NUnit.Framework.CategoryAttribute("LYPSmokeTest")]
-        [NUnit.Framework.CategoryAttribute("LYPRegressionSuite")]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/run-holiday-let-as-business", "How to Run a Holiday Let as a Business", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/leading-holiday-let-agency", "Why You Should Let Your Property With The Leading Holiday Lettings Agency", null)]
         [NUnit.Framework.TestCaseAttribute("letyourcottage/information/holiday-management-services", "How Sykes Can Manage Your Holiday Home", null)]
         public void TheLandingPagesAreDisplayedCorrectly(string path, string title, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "LandingPages",
-                    "LYPSmokeTest",
-                    "LYPRegressionSuite"};
+                    "LandingPages"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

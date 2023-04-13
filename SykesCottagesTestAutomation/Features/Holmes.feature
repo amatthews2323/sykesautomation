@@ -42,25 +42,23 @@ Scenario: Get experiment conversion precentage
 Scenario: Get experiment status
 	Given I am on the following webpage: https://holmes.prod.sykes.cloud/experiments
 	Then I search for the experient and store the status
-	| Example                                                              |
-	| LetYourCottages_ShowAllPropertiesTOB702                              |
-	| LetYourCottages_DisplayIncomeProjectionHHFSTOB764                    |
-	| LetYourCottages_MobileHeaderandNavRedesignLYP222                     |
-	| LetYourCottages_InfoPageBuyOwnSellComponentContentLYP226             |
-	| LetYourCottages_LYPAdvancedEarningCalculatorLYP209                   |
-	| LetYourCottages_ExplainForm232                                       |
-	| LetYourCottages_MediaCentreCaseStudiesandInformationalVideosLYP191   |
-	| LetYourCottages_InfoPagesCalcinHeroLYP225                            |
-	| LetYourCottages_InfoPageHowtoRunYourHolidayLetComponentContentLYP228 |
-	| LetYourCottages_HowWePriceYourPropertySectionLYP241                  |
-	| LetYourCottages_HeaderNavRedesignLYP224                              |
-	| LetYourCottages_SearchResultsShowMoreLYP242                          |
-	| LetYourCottages_AddRegionalPagestoSearchResultsLYP247                |
-	| LetYourCottages_LYPIterationMoreInformation264                       |
-	| LetYourCottages_InsuranceSectionExclusionTestLYP269                  |
-	| LetYourCottages_AddedValueSection246                                 |
-	| LetYourCottages_WhatHappensAfterTheFormLYP265                        |
-	| LetYourCottages_WeAreStillOpenIteration282                           |
+	| Example                                                     |
+	| LetYourCottages_HowWePriceYourPropertySectionLYP241         |
+	| LetYourCottages_HeaderNavRedesignLYP224                     |
+	| LetYourCottages_SearchResultsShowMoreLYP242                 |
+	| LetYourCottages_AddRegionalPagestoSearchResultsLYP247       |
+	| LetYourCottages_InsuranceSectionExclusionTestLYP269         |
+	| LetYourCottages_AddedValueSection246                        |
+	| LetYourCottages_LYPIterationMoreInformation264              |
+	| LetYourCottages_InfoPagesCalcinHeroLYP225                   |
+	| LetYourCottages_WhatHappensAfterTheFormLYP265               |
+	| LetYourCottages_RegionalPageLinks267                        |
+	| LetYourCottages_LYPAdvancedEarningCalculatorLYP209          |
+	| LetYourCottages_WeAreStillOpenIteration282                  |
+	| LetYourCottages_ElasticAppSearch20627                       |
+	| LetYourCottages_RegionalPageLinks267                        |
+	| LetYourCottages_LYPSearchNotSureSection268                  |
+	| LetYourCottages_AddingThirdVideoSectiontoMediaCentreYETI326 |
 
 @HolmesExperiments
 Scenario: Get experiments infomation from Holmes

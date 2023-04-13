@@ -16,23 +16,23 @@ namespace SykesCottagesTestAutomation
         public static string domainOverride = ""; //Overrides the test URL
         public static string ephemeralEnvironmentName = "";
 
-        public static bool screenshots = true; //Take a screenshot at the end of each scenario
+        public static bool screenshots = false; //Take a screenshot at the end of each scenario
         public static string screenshotType = "FullPage"; //Type of screenshot: FullPage | ViewableArea
 
-        public static bool reporting = true; //Turn on Extent Reports
+        public static bool reporting = false; //Turn on Extent Reports
         public static string reportName = "FormSubmission"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
 
-        public static string cookieBanner = "Accept"; //Accept | Reject | Ignore
+        public static string cookieBanner = "Ignore"; //Accept | Reject | Ignore
         public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
 
-        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
+        public static string browserSize = "Fullscreen"; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
         public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
         public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
 
         public static string experiments = ""; //Set experiment(s) - comma separated list
 
-        public static int timeOut = 10; //Set pageload timeout
+        public static int timeOut = 15; //Set pageload timeout
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;

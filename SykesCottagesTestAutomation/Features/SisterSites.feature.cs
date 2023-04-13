@@ -327,12 +327,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table107, "And ");
 #line hidden
 #line 91
- testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
-                        "\'first_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter RFX in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=\'" +
+                        "first_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 92
- testRunner.And("I enter Owner in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*" +
-                        "=\'last_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I enter BrandTest003 in the following form field: //*[@*=\'enquiry-multi-step\']//i" +
+                        "nput[@*=\'last_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 93
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -348,8 +348,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table108, "Then ");
 #line hidden
 #line 98
- testRunner.When("I enter testowner@sykescottages.co.uk in the following form field: //*[@*=\'enquir" +
-                        "y-multi-step\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I enter rfxbrandtest003@sykescottages.co.uk in the following form field: //*[@*=\'" +
+                        "enquiry-multi-step\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 99
  testRunner.And("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -374,7 +374,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I wait 2 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 107
- testRunner.When("I enter 03555999555 in the following form field: //*[@*=\'enquiry-multi-step\' and " +
+ testRunner.When("I enter 05425425422 in the following form field: //*[@*=\'enquiry-multi-step\' and " +
                         "@data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 108

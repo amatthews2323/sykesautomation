@@ -67,7 +67,7 @@ namespace SykesCottagesTestAutomation.BaseClass
                 WaitASecond();
                 string experimentId = shared.driver.FindElement(By.XPath("//a[@class='ng-binding']")).Text;
                 string experimentName = shared.driver.FindElement(By.XPath("//p[@class='name ng-binding']")).Text;
-                experimentList += "\n" + id + " " + experimentId + " " + experimentName; 
+                experimentList += "\n" + id + " " + experimentId + " " + experimentName;
             }
             Console.WriteLine(experimentList + "\n");
         }
@@ -90,7 +90,7 @@ namespace SykesCottagesTestAutomation.BaseClass
         }
 
         [Given(@"the following experiment is active: (.*)")]
-        public void GivenTheFollowingExperimentIsActiveLetYourCottages_InfoPageInvestmentAdviceLYP(string experiment)
+        public void GivenTheFollowingExperimentIsActive(string experiment)
         {
             LaunchWebsite("https://holmes.prod.sykes.cloud/experiments/");
             Type("text_search", experiment);
@@ -157,112 +157,6 @@ namespace SykesCottagesTestAutomation.BaseClass
                 status += "\n" + _status.Replace("Active", "Started").Replace("Off", "Stopped") + "\t" + date;
             }
             Console.WriteLine("Experiment statuses: " + status);
-        }
-
-        [Then(@"experiment LetYourCottages_LinkbackforconsumertrafficLYP192 is applied")]
-        public void ThenExperimentLetYourCottages_LinkbackforconsumertrafficLYP192IsApplied()
-        {
-            if (experimentalExperiments.Contains("4912"))
-            {
-                Console.WriteLine("\nExperiment LetYourCottages_LinkbackforconsumertrafficLYP192 (4912) enabled.\n");
-                Click("Book a holiday");
-                MouseOver("Let Your Property");
-                Click("Let Your Property");
-                AssertElementDisplayed("Go back to booking a holiday");
-            }
-            else
-            {
-                if (controlExperiments.Contains("4912"))
-                {
-                    Console.WriteLine("\nExperiment LetYourCottages_LinkbackforconsumertrafficLYP192 (4912) not enabled this session.\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nExperiment LetYourCottages_LinkbackforconsumertrafficLYP192 (4912) not found.\n");
-                }
-            }
-        }
-
-        [Then(@"experiment LetYourCottages_RemovereadingtimefrominformationpageheroLYP216 is applied")]
-        public void ThenExperimentLetYourCottages_RemovereadingtimefrominformationpageheroLYP216IsApplied()
-        {
-            string experimentName = "LetYourCottages_RemovereadingtimefrominformationpageheroLYP216";
-            string experimentId = "4931";
-
-            if (experimentalExperiments.Contains(experimentId))
-            {
-                Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") enabled.\n");
-                LaunchWebsite(Hooks.domainOverride, "/letyourcottage/information/marketing-your-holiday-let/");
-                AssertElementNotDisplayed("Reading time");
-            }
-            else
-            {
-                if (controlExperiments.Contains(experimentId))
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not enabled this session.\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not found.\n");
-                }
-            }
-        }
-
-        [Then(@"experiment LetYourCottages_LYPStickyHeader202 is applied")]
-        public void ThenExperimentLetYourCottages_LYPStickyHeader202IsApplied()
-        {
-            string experimentName = "LetYourCottages_LYPStickyHeader202";
-            string experimentId = "4933";
-
-            if (experimentalExperiments.Contains(experimentId))
-            {
-                Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") enabled.\n");
-                ScrollTo("Holiday letting made easy");
-                AssertElementDisplayed("lyc-header");
-                Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") present and working as expected.\n");
-            }
-            else
-            {
-                if (controlExperiments.Contains(experimentId))
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not enabled this session.\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not found.\n");
-                }
-            }
-        }
-
-        [Then(@"experiment LetYourCottages_InfoPageInvestmentAdviceLYP223 is applied")]
-        public void ThenExperimentLetYourCottages_InfoPageInvestmentAdviceLYP223IsApplied()
-        {
-            string experimentName = "LetYourCottages_InfoPageInvestmentAdviceLYP223";
-            string experimentId = "4948";
-
-            if (experimentalExperiments.Contains(experimentId))
-            {
-                Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") enabled.\n");
-                LaunchWebsite(Hooks.domainOverride, "/letyourcottage/information/investment-advice-for-holiday-lets/");
-                AssertElementDisplayed("What is the business model behind holiday home rentals?");
-                AssertElementDisplayed("We’ll work with you to make sure your property is perfectly priced");
-                AssertElementDisplayed("F.A.Q");
-                AssertElementDisplayed("What's a better investment – long-term lets or holiday lets?");
-                AssertElementDisplayed("Should I start a B&B or holiday let business? What's the difference and can I change from one to the other?");
-                AssertElementDisplayed("How do I calculate ROI on a holiday rental property?");
-                AssertElementDisplayed("How do I work out yield on a rental property?");
-            }
-            else
-            {
-                if (controlExperiments.Contains(experimentId))
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not enabled this session.\n");
-                }
-                else
-                {
-                    Console.WriteLine("\nExperiment " + experimentName + " (" + experimentId + ") not found.\n");
-                }
-            }
         }
     }
 }

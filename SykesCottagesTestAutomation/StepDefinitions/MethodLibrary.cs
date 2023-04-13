@@ -91,21 +91,20 @@ namespace SykesCottagesTestAutomation
                 domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt); //Get the URL based on the Hooks.Environemt value
             }
 
-            //If ephemeral environment, add the branch name to the URL
+            //If using an ephemeral environment, add the branch name to the URL
             if (domain.Contains("ephemeral"))
             {
                 domain = Regex.Replace(domain, "ephemeralName", Hooks.ephemeralEnvironmentName);
             }
 
-            url = domain + path; //Build the URL
-            SelectBrowser(Hooks.browser); //Set the driver and browser
-            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.timeOut); //Set the timeout duration
+            url = domain + path; /*Build the URL*/
+            SelectBrowser(Hooks.browser); /*Set the driver and browser*/
+            shared.driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(Hooks.timeOut); /*Set the timeout duration*/
 
             //Launch website - if it takes too long to load, hit Escape and continue
             try
             {
                 GoTo(url);
-                //WaitASecond();
             }
             catch (Exception)
             {
@@ -113,40 +112,14 @@ namespace SykesCottagesTestAutomation
                 shared.driver.FindElement(By.TagName("body")).SendKeys("Keys.ESCAPE");
             }
 
+            //Check for errors
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("//head/title"))).Count != 0, "ERROR MESSAGE: Page failed to load");
-
-            //Check for system errors
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("503 Service Temporarily Unavailable"))).Count == 0, "ERROR MESSAGE: 503 Service Temporarily Unavailable");
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("An error has occurred"))).Count == 0, "ERROR MESSAGE: An error has occurred");
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("Service Unavailable"))).Count == 0, "ERROR MESSAGE: Service Unavailable");
             Assert.IsTrue(shared.driver.FindElements(By.XPath(XPathBuilder("504 Gateway Time-out"))).Count == 0, "ERROR MESSAGE: 504 Gateway Time-out");
 
-            //Write active experiments to console
-            try
-            {
-                controlExperiments = GetJavaScriptText("control_experiments");
-                experimentalExperiments = GetJavaScriptText("experimental_experiments");
-                Console.WriteLine("On experiments: " + experimentalExperiments + "\nOff experiments: " + controlExperiments);
-            }
-            catch
-            {
-                Console.WriteLine("No experiments found");
-            }
-
-            ClosePopups(); //Dismiss any pop-ups or alerts
-
-            //Check for experiments and apply them
-            if (Hooks.experiments != "")
-            {
-                //If Dev Tools not found, launch website with Dev Tools activated
-                if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
-                {
-                    GoTo(url + "/?dev_tools=product");
-                }
-                ApplyExperiment(Hooks.experiments);
-            }
-
-            SetBrowserSize(); //Set the browser width and height
+            SetBrowserSize(); /*Set the browser width and height*/
         }
 
         public void SetBrowserSize()
@@ -178,22 +151,50 @@ namespace SykesCottagesTestAutomation
             }
         }
 
-        public void ApplyExperiment(string experimentIds)
+        public void ApplyExperiment(string experimentIds = "")
         {
-            if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
+            //Write active experiments to console
+            try
             {
-                GoTo(url + "/?dev_tools=product");
+                controlExperiments = GetJavaScriptText("control_experiments");
+                experimentalExperiments = GetJavaScriptText("experimental_experiments");
+                Console.WriteLine("On experiments: " + experimentalExperiments + "\nOff experiments: " + controlExperiments);
             }
-            JSClick("Dev Tools");
-            var array = experimentIds.Split(",");
-            for (int i = 0; i < array.Length; i++)
+            catch
             {
-                string Experiment = array[i].ToString().Trim();
-                Type("experiment-search", Experiment);
-                Click("//li[contains(@data-name,\"" + Experiment + "\")]");
+                Console.WriteLine("No experiments found");
             }
-            JSClick("//a[@class='dev-panel-toggle' and text()='Close']");
-            Refresh();
+
+            //If no experiment IDs specified, get IDs from Hooks.experiments
+            if (experimentIds == "")
+            {
+                experimentIds = Hooks.experiments;
+            }
+
+            if (experimentIds != "")
+            {
+                //If Dev Tools not found, launch website with Dev Tools activated
+                if (shared.driver.FindElements(By.XPath("//a[text()='Dev Tools']")).Count == 0)
+                {
+                    GoTo(url + "/?dev_tools=product");
+                }
+                JSClick("Dev Tools"); /*Open Dev Tools*/
+
+                //Search for and apply all experiments listed in 
+                var array = experimentIds.Split(",");
+                for (int i = 0; i < array.Length; i++)
+                {
+                    string Experiment = array[i].ToString().Trim();
+                    Type("experiment-search", Experiment);
+                    Click("//li[contains(@data-name,\"" + Experiment + "\")]");
+                }
+                JSClick("//a[@class='dev-panel-toggle' and text()='Close']");
+                Refresh();
+            }
+            else
+            {
+                Console.WriteLine("No experiments IDs specified.");
+            }
         }
 
         public void ClosePopups()
@@ -201,13 +202,11 @@ namespace SykesCottagesTestAutomation
             //Accept, reject or ignore the cookie banner
             if (Hooks.cookieBanner == "Accept")
             {
-                //WaitASecond();
                 Click("Accept all");
                 WaitUntilNotVisible("Manage Your Cookie Preferences");
             }
             if (Hooks.cookieBanner == "Reject")
             {
-                //WaitASecond();
                 Click("Reject all");
                 WaitUntilNotVisible("Manage Your Cookie Preferences");
             }
@@ -226,18 +225,6 @@ namespace SykesCottagesTestAutomation
                 {
                     ClickIfDisplayed("_hj-102w7__styles__openStateToggleIcon _hj-3Iftt__styles__surveyIcons");
                 }
-
-/*                //Dismiss alerts
-                if (shared.driver.FindElements(By.XPath("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]")).Count != 0)
-                {
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[1]/*[contains(@class,'close')]", waitTime: 2);
-                    ClickIfDisplayed("//*[@*='o-lyc-alerts ']/*[2]/*[contains(@class,'close')]");
-                    ClickIfDisplayed("close c-alert__close js-alert-close");
-                }
-                else
-                {
-                    Console.WriteLine("No alerts found");
-                }*/
             }
             else
             {
@@ -532,7 +519,7 @@ namespace SykesCottagesTestAutomation
             }
             catch
             {
-                Console.WriteLine("Entry failed; trying clicking in the field...");
+                Console.WriteLine("Entry failed; try clicking in the field...");
                 WaitASecond(2);
                 Click(formField, element, 2);
                 _element.Clear();

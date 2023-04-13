@@ -16,18 +16,24 @@ namespace SykesCottagesTestAutomation.BaseClass
         public void GivenIAmOnTheFollowingWebpage(string domain = "")
         {
             LaunchWebsite(domain);
+            ClosePopups();
+            ApplyExperiment();
         }
 
         [Given(@"I am on the Sykes Homepage")]
         public void GivenIAmOnTheSykesHomepage()
         {
             LaunchWebsite();
+            ClosePopups();
+            ApplyExperiment();
         }
 
         [Given(@"I have navigated to the following page: (.*)")]
         public void GivenIHaveNavigatedToTheFollowingPage(string path = "")
         {
             LaunchWebsite(Hooks.domainOverride, path);
+            ClosePopups();
+            ApplyExperiment();
         }
 
         [Given(@"I have navigated to the following brand: (.*)")]
@@ -35,12 +41,8 @@ namespace SykesCottagesTestAutomation.BaseClass
         {
             string domain = ReadFromCSV(fileName: "EnvironmentURLs", columnName: "URL", rowName: "Name", searchTerm: Hooks.environemt + " " + brand);
             LaunchWebsite(domain);
-        }
-
-        [Given(@"I have navigated to the following page without dismissing alerts: (.*)")]
-        public void GivenIHaveNavigatedToTheFollowingPageWithoutDismissingAlerts(string path = "")
-        {
-            LaunchWebsite("", path);
+            ClosePopups();
+            ApplyExperiment();
         }
 
         [When(@"I navigate to (.*)")]
@@ -85,6 +87,7 @@ namespace SykesCottagesTestAutomation.BaseClass
             catch
             {
                 Console.WriteLine("Click failed; try with JavaScript...");
+                WaitASecond(2);
                 JSClick(value);
             }
         }
