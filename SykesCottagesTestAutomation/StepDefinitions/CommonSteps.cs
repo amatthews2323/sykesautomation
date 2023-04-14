@@ -45,6 +45,17 @@ namespace SykesCottagesTestAutomation.BaseClass
             ApplyExperiment();
         }
 
+        [Given(@"I am not on the Live environment")]
+        public void GivenIAmNotOnTheLiveEnvironment()
+        {
+            if (!url.Contains(".staging") && !url.Contains(".dev"))
+            {
+                Console.WriteLine("LIVE ENVIRONMENT: STOPPING TEST");
+                Exception exception = new();
+                throw exception;
+            }
+        }
+
         [When(@"I navigate to (.*)")]
         public void WhenINavigateTo(string url = "")
         {
