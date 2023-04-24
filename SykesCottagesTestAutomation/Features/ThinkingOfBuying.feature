@@ -89,7 +89,6 @@ Scenario: The relevant sections are displayed on the A Guide to Buying a Holiday
 	Then the relevant elements are dislpayed
 	| Element                                              |
 	| A Guide to Buying a Holiday Let                      |
-	| Let's Work Together                                  |
 	| The key benefits of buying a holiday let             |
 	| A guide to buying your holiday home                  |
 	| Where to buy your holiday home                       |
@@ -105,7 +104,6 @@ Scenario: The relevant sections are displayed on the Are Holiday Lets a Good Inv
 	Then the relevant elements are dislpayed
 	| Element                                                   |
 	| Are Holiday Lets a Good Investment?                       |
-	| Let's Work Together                                       |
 	| Are holiday lets a good investment?                       |
 	| What types of holiday let mortgages are there?            |
 	| What Return on Investment can you get from a holiday let? |
@@ -121,7 +119,6 @@ Scenario: The relevant sections are displayed on the Buying a Holiday Home Abroa
 	Then the relevant elements are dislpayed
 	| Element                                    |
 	| Buying a Holiday Home Abroad vs. in the UK |
-	| Let's Work Together                        |
 	| Benefits of Holiday Letting in the UK      |
 	| Disadvantages of Holiday Letting in the UK |
 	| Benefits of Holiday Letting Abroad         |

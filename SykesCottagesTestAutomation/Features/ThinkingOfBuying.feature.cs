@@ -396,8 +396,6 @@ this.ScenarioInitialize(scenarioInfo);
                 table118.AddRow(new string[] {
                             "A Guide to Buying a Holiday Let"});
                 table118.AddRow(new string[] {
-                            "Let\'s Work Together"});
-                table118.AddRow(new string[] {
                             "The key benefits of buying a holiday let"});
                 table118.AddRow(new string[] {
                             "A guide to buying your holiday home"});
@@ -433,7 +431,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Are Holiday Lets a Good Investment pag" +
                     "e", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 103
+#line 102
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -443,7 +441,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 104
+#line 103
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/why-are-hol" +
                         "iday-lets-a-good-investment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
@@ -451,8 +449,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "Element"});
                 table119.AddRow(new string[] {
                             "Are Holiday Lets a Good Investment?"});
-                table119.AddRow(new string[] {
-                            "Let\'s Work Together"});
                 table119.AddRow(new string[] {
                             "Are holiday lets a good investment?"});
                 table119.AddRow(new string[] {
@@ -469,7 +465,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Buying a Holiday Home General Guides"});
                 table119.AddRow(new string[] {
                             "Contact us"});
-#line 105
+#line 104
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table119, "Then ");
 #line hidden
             }
@@ -489,7 +485,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevant sections are displayed on the Buying a Holiday Home Abroad vs. in th" +
                     "e UK page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 119
+#line 117
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -499,7 +495,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 120
+#line 118
  testRunner.Given("I have navigated to the following page: letyourcottage/advice/article/buying-a-ho" +
                         "liday-home-abroad-vs-uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
@@ -507,8 +503,6 @@ this.ScenarioInitialize(scenarioInfo);
                             "Element"});
                 table120.AddRow(new string[] {
                             "Buying a Holiday Home Abroad vs. in the UK"});
-                table120.AddRow(new string[] {
-                            "Let\'s Work Together"});
                 table120.AddRow(new string[] {
                             "Benefits of Holiday Letting in the UK"});
                 table120.AddRow(new string[] {
@@ -521,7 +515,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Where to Buy Guides"});
                 table120.AddRow(new string[] {
                             "Contact us"});
-#line 121
+#line 119
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table120, "Then ");
 #line hidden
             }
@@ -541,7 +535,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "HolidayHomesForSale"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The relevent elements are present on the Holiday Homes for Sale page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 133
+#line 130
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -551,10 +545,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 134
+#line 131
  testRunner.Given("I have navigated to the following page: letyourcottage/holiday-homes-for-sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 135
+#line 132
     testRunner.Then("the following page title is displayed: Holiday Homes for Sale UK | Holiday Let Bu" +
                         "siness for Sale", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

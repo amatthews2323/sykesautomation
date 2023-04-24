@@ -448,9 +448,16 @@ namespace SykesCottagesTestAutomation
             }
             catch
             {
-                Console.WriteLine("Click failed. Wait a second and try again...");
-                WaitASecond();
-                _element.Click();
+                try
+                {
+                    Console.WriteLine("Click failed. Wait a second and try again...");
+                    WaitASecond();
+                    _element.Click();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("ERROR: failed click on " + value);
+                }
             }
             if (waitTime != 0)
             {

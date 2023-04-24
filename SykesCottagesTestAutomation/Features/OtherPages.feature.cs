@@ -158,7 +158,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table97.AddRow(new string[] {
                             "/account/login"});
                 table97.AddRow(new string[] {
-                            "/letyourcottage/holiday-homes-for-sale/"});
+                            "/letyourcottage/advice/holiday-homes-for-sale"});
                 table97.AddRow(new string[] {
                             "/letyourcottage/information/marketing-your-holiday-let/"});
                 table97.AddRow(new string[] {
@@ -202,7 +202,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table97.AddRow(new string[] {
                             "/letyourcottage/information/investment-advice-for-holiday-lets/"});
                 table97.AddRow(new string[] {
-                            "/letyourcottage/advice/holiday-homes-for-sale/"});
+                            "/letyourcottage/advice/holiday-homes-for-sale"});
                 table97.AddRow(new string[] {
                             "/letyourcottage/information/holiday-let-mortgages/"});
                 table97.AddRow(new string[] {

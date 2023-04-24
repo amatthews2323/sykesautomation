@@ -17,18 +17,22 @@ Scenario: The Sister Brands are displayed correctly
 	| Please enter your surname    |	
 	When I enter Test in the following form field: //*[@*='enquiry-multi-step']//input[@*='first_name']
 	And I enter Owner in the following form field: //*[@*='enquiry-multi-step']//input[@*='last_name']
-	And I click //*[@*='enquiry-multi-step']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step']/button[@*='submit']
 	Then the relevant elements are dislpayed within the enquiry-multi-step section
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	When I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
 	When I enter sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'sykescottages.co.uk' is missing an '@'. Please include an '@' in the email address.
 	When I enter testowner@sykescottages in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'testowner@sykescottages' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']

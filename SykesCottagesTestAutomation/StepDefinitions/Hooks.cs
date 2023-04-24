@@ -11,28 +11,28 @@ namespace SykesCottagesTestAutomation
     [Binding]
     public class Hooks : MethodLibrary
     {
-        public static string environemt = "Live"; //Set base URL: Tech | Product | Cro | Project | Ephemeral | Live
-        public static string browser = "Chrome"; //Set browser: Chrome | Firefox | Edge
-        public static string domainOverride = ""; //Overrides the test URL
+        public static string environemt = "Live"; /*Set base URL: Tech | Product | Cro | Project | Ephemeral | Live*/
         public static string ephemeralEnvironmentName = "";
+        public static string browser = "Edge"; /*Set browser: Chrome | Firefox | Edge*/
+        public static string domainOverride = ""; /*Overrides the test URL*/
 
-        public static bool screenshots = true; //Take a screenshot at the end of each scenario
-        public static string screenshotType = "ViewableArea"; //Type of screenshot: FullPage | ViewableArea
+        public static bool screenshots = false; /*Take a screenshot at the end of each scenario*/
+        public static string screenshotType = "FullPage"; /*Type of screenshot: FullPage | ViewableArea*/
 
-        public static bool reporting = true; //Turn on Extent Reports
-        public static string reportName = "LYPRegressionSuite"; //Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding
-        public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; //Location for reports and screenshots
+        public static bool reporting = false; /*Turn on Extent Reports*/
+        public static string reportName = "TOBSmokeTest"; /*Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding*/
+        public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; /*Location for reports and screenshots*/
 
-        public static string cookieBanner = "Accept"; //Accept | Reject | Ignore
-        public static bool dismissPopups = true; //Dismiss popups, alerts and surveys
+        public static string cookieBanner = "Accept"; /*Accept | Reject | Ignore*/
+        public static bool dismissPopups = true; /*Dismiss popups, alerts and surveys*/
 
-        public static string browserSize = ""; //Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom
-        public static int pageWidth = 768; //Set the browser window width: 768 (iPhone)
-        public static int pageHeight = 1024; //Set the browser window height: 1024 (iPhone)
+        public static string browserSize = ""; /*Set the browser window size: Fullscreen | Desktop | Tablet | Mobile | Custom*/
+        public static int pageWidth = 768; /*Set the browser window width: 768 (iPhone)*/
+        public static int pageHeight = 1024; /*Set the browser window height: 1024 (iPhone)*/
 
-        public static string experiments = ""; //Set experiment(s) - comma separated list
+        public static string experiments = ""; /*Set experiment(s) - comma separated list*/
 
-        public static int timeOut = 15; //Set pageload timeout
+        public static int timeOut = 15; /*Set pageload timeout*/
 
         private static ExtentTest featureName;
         private static ExtentTest scenario;

@@ -48,13 +48,16 @@ Scenario: The MultiStep form is displayed correctly
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	When I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
 	When I enter sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'sykescottages.co.uk' is missing an '@'. Please include an '@' in the email address.
 	When I enter testowner@sykescottages in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'testowner@sykescottages' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
@@ -176,7 +179,7 @@ Scenario: The floating action button is displayed on the Let Your Property page
 	Given I have navigated to the following page: letyourcottage
 	When I scroll to the following element: page-footer container_sykes_grid
 	Then the following element is displayed: Back To Top Button
-	When I click Back To Top Button
+	When I click //body/div[@class='o-fixed-bottom o-fixed-bottom--fab-button js-live-chat']//a[@id='backtotop']
 	Then the enquiry form is displayed with the tint applied
 
 @LetYourProperty @LYPRegressionSuite
@@ -286,13 +289,23 @@ Scenario: The alerts disapear after an amount of time
 	Then the alerts are not displayed on the page
 
 @LetYourProperty @LYPRegressionSuite
-Scenario: The number of bedrooms is included in the earnings calculator
+Scenario: The earnings calculator returns pricing data
 	Given I have navigated to the following page: letyourcottage
-	Then the relevant elements are dislpayed
-	| Element                           |
-	| How much could I earn with Sykes? |
-	| Property information              |
-	| Average potential earnings        |
+	Then the relevant elements are dislpayed within the 209-calculator section
+	| Element                                   |
+	| How much could I earn with Sykes?         |
+	| Property information                      |
+	| Guests                                    |
+	| Bedrooms                                  |
+	| Average potential earnings                |
+	| Get in touch for a more accurate estimate |
+	When I enter TA12AD in the following form field: //input[@id='address']
+	And I wait 1 seconds
+	And I click calculator-address
+	And I wait 1 seconds
+	And I click calculator-address
+	And I wait 1 seconds
+	Then I wait up to 3 seconds for the following to be displayed: //div[contains(@class,'earnings')]/span[contains(text(),'£')]
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: Performing a search returns the relevant results

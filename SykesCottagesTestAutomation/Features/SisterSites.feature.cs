@@ -159,7 +159,10 @@ this.ScenarioInitialize(scenarioInfo);
                         "=\'last_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table105 = new TechTalk.SpecFlow.Table(new string[] {
                             "Element"});
@@ -168,45 +171,60 @@ this.ScenarioInitialize(scenarioInfo);
                                 "r email address."});
                 table105.AddRow(new string[] {
                             "Email address"});
-#line 21
+#line 22
  testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table105, "Then ");
 #line hidden
-#line 25
- testRunner.When("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 26
- testRunner.Then("the following text is displayed: Please enter an email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+ testRunner.Then("the following text is displayed: Please enter an email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 29
  testRunner.When("I enter sykescottages.co.uk in the following form field: //*[@*=\'enquiry-multi-st" +
                         "ep\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 28
- testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 29
+#line 31
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 32
  testRunner.Then("the following text is displayed: \'sykescottages.co.uk\' is missing an \'@\'. Please " +
                         "include an \'@\' in the email address.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 30
+#line 33
  testRunner.When("I enter testowner@sykescottages in the following form field: //*[@*=\'enquiry-mult" +
                         "i-step\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
- testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
+#line 35
+ testRunner.And("I try clicking //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\'" +
+                        "]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
  testRunner.Then("the following text is displayed: \'testowner@sykescottages\' is an incomplete email" +
                         " address. Please include e.g. \'.com\', \'.co.uk\', \'.net\'.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 33
+#line 37
  testRunner.When("I enter testowner@sykescottages.co.uk in the following form field: //*[@*=\'enquir" +
                         "y-multi-step\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 34
+#line 38
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 35
+#line 39
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table106 = new TechTalk.SpecFlow.Table(new string[] {
@@ -216,42 +234,42 @@ this.ScenarioInitialize(scenarioInfo);
                                 "regarding your enquiry), please provide your phone number."});
                 table106.AddRow(new string[] {
                             "Phone number"});
-#line 36
+#line 40
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table106, "Then ");
 #line hidden
-#line 40
+#line 44
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 45
  testRunner.Then("the following text is displayed: Please enter a contact number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 42
+#line 46
  testRunner.When("I enter 070000000 in the following form field: //*[@*=\'enquiry-multi-step\' and @d" +
                         "ata-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
+#line 47
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 44
+#line 48
  testRunner.Then("the following text is displayed: Please provide a contact number that is no less " +
                         "than 10 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 45
+#line 49
  testRunner.When("I enter 0700000000000000 in the following form field: //*[@*=\'enquiry-multi-step\'" +
                         " and @data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
+#line 50
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 47
+#line 51
  testRunner.Then("the following text is displayed: Please provide a contact number that is no more " +
                         "than 15 digits long.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 48
+#line 52
  testRunner.When("I enter +44 7000 000 000 in the following form field: //*[@*=\'enquiry-multi-step\'" +
                         " and @data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
+#line 53
  testRunner.And("I click //*[@*=\'enquiry-form-step3\']//*[@*=\'Close modal\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -296,7 +314,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Brand", brand);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The Sister Brand MultiStep form can be submitted", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 82
+#line 86
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -306,13 +324,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 83
+#line 87
  testRunner.Given(string.Format("I have navigated to the following brand: {0}", brand), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 84
+#line 88
  testRunner.And("I am not on the Live environment", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 85
+#line 89
  testRunner.Then("the following text is displayed: Start your  holiday letting journey today", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
                 TechTalk.SpecFlow.Table table107 = new TechTalk.SpecFlow.Table(new string[] {
@@ -326,18 +344,18 @@ this.ScenarioInitialize(scenarioInfo);
                                 "operty letting services."});
                 table107.AddRow(new string[] {
                             "/terms/privacypolicy"});
-#line 86
+#line 90
  testRunner.And("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table107, "And ");
 #line hidden
-#line 92
+#line 96
  testRunner.When("I enter Test in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*=" +
                         "\'first_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 93
+#line 97
  testRunner.And("I enter Owner in the following form field: //*[@*=\'enquiry-multi-step\']//input[@*" +
                         "=\'last_name\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 94
+#line 98
  testRunner.And("I click //*[@*=\'enquiry-multi-step\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table108 = new TechTalk.SpecFlow.Table(new string[] {
@@ -347,21 +365,21 @@ this.ScenarioInitialize(scenarioInfo);
                                 "r email address."});
                 table108.AddRow(new string[] {
                             "Email address"});
-#line 95
+#line 99
  testRunner.Then("the relevant elements are dislpayed within the enquiry-multi-step section", ((string)(null)), table108, "Then ");
 #line hidden
-#line 99
+#line 103
  testRunner.When("I wait up to 2 seconds for the following to be displayed: //*[@*=\'enquiry-multi-s" +
                         "tep\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 100
+#line 104
  testRunner.And("I enter testowner@sykescottages.co.uk in the following form field: //*[@*=\'enquir" +
                         "y-multi-step\' and @data-step=\'2\']//input[@*=\'email\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 101
+#line 105
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 102
+#line 106
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'2\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table109 = new TechTalk.SpecFlow.Table(new string[] {
@@ -371,21 +389,21 @@ this.ScenarioInitialize(scenarioInfo);
                                 "regarding your enquiry), please provide your phone number."});
                 table109.AddRow(new string[] {
                             "Phone number"});
-#line 103
+#line 107
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table109, "Then ");
 #line hidden
-#line 107
+#line 111
  testRunner.When("I wait up to 2 seconds for the following to be displayed: //*[@*=\'enquiry-multi-s" +
                         "tep\' and @data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 108
+#line 112
  testRunner.And("I enter 07000000000 in the following form field: //*[@*=\'enquiry-multi-step\' and " +
                         "@data-step=\'3\']//input[@*=\'phone\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 109
+#line 113
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 110
+#line 114
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'3\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table110 = new TechTalk.SpecFlow.Table(new string[] {
@@ -397,24 +415,24 @@ this.ScenarioInitialize(scenarioInfo);
                                 "operty letting services."});
                 table110.AddRow(new string[] {
                             "Submit enquiry"});
-#line 111
+#line 115
  testRunner.Then("the relevant elements are dislpayed", ((string)(null)), table110, "Then ");
 #line hidden
-#line 116
+#line 120
  testRunner.When("I wait up to 2 seconds for the following to be displayed: //*[@*=\'enquiry-multi-s" +
                         "tep\' and @data-step=\'4\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 117
+#line 121
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'5\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 118
+#line 122
  testRunner.And("I click //*[@*=\'enquiry-multi-step\' and @data-step=\'5\']/button[@*=\'submit\']", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 119
+#line 123
  testRunner.And("I wait up to 5 seconds for the following to be displayed: Thank you for your enqu" +
                         "iry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 120
+#line 124
  testRunner.Then("the following page title is displayed: Thank you for your enquiry | Sykes Cottage" +
                         "s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
