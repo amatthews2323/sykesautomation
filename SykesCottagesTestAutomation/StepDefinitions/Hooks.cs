@@ -16,11 +16,11 @@ namespace SykesCottagesTestAutomation
         public static string browser = "Edge"; /*Set browser: Chrome | Firefox | Edge*/
         public static string domainOverride = ""; /*Overrides the test URL*/
 
-        public static bool screenshots = false; /*Take a screenshot at the end of each scenario*/
+        public static bool screenshots = true; /*Take a screenshot at the end of each scenario*/
         public static string screenshotType = "FullPage"; /*Type of screenshot: FullPage | ViewableArea*/
 
-        public static bool reporting = false; /*Turn on Extent Reports*/
-        public static string reportName = "TOBSmokeTest"; /*Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding*/
+        public static bool reporting = true; /*Turn on Extent Reports*/
+        public static string reportName = "LYPRegressionSuite"; /*Name of the report: LYPRegressionSuite | FormSubmission | TOBSmokeTest | ActiveExperiments | DigitalOnboarding*/
         public static string reportDir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "//OneDrive - Sykes Cottages Ltd//AutomatedTestResults"; /*Location for reports and screenshots*/
 
         public static string cookieBanner = "Accept"; /*Accept | Reject | Ignore*/

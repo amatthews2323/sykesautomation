@@ -1069,8 +1069,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I wait 1 seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 308
- testRunner.Then("the following element is displayed: //div[contains(@class,\'earnings\')]/span[conta" +
-                        "ins(text(),\'£\')]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I wait up to 3 seconds for the following to be displayed: //div[contains(@class,\'" +
+                        "earnings\')]/span[contains(text(),\'£\')]", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
