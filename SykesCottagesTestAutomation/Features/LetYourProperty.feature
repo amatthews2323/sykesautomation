@@ -48,24 +48,25 @@ Scenario: The MultiStep form is displayed correctly
 	| Element                                                                                           |
 	| In order to receive email communications from our expert team, please provide your email address. |
 	| Email address                                                                                     |
-	When I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 1 seconds
+	When I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: Please enter an email address
 	When I enter sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 1 seconds
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'sykescottages.co.uk' is missing an '@'. Please include an '@' in the email address.
 	When I enter testowner@sykescottages in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
-	And I try clicking //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 1 seconds
+	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the following text is displayed: 'testowner@sykescottages' is an incomplete email address. Please include e.g. '.com', '.co.uk', '.net'.
 	When I enter testowner@sykescottages.co.uk in the following form field: //*[@*='enquiry-multi-step' and @data-step='2']//input[@*='email']
-	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
+	And I wait 1 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
-	| Element                                                                                                                                     |
-	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
-	| Phone number                                                                                                                                |
+	| Element                                                                                                                                             |
+	| To allow our holiday letting advisors to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
+	| Phone number                                                                                                                                        |
+	And I wait 1 seconds
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
 	Then the following text is displayed: Please enter a contact number
 	When I enter 070000000 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
@@ -129,9 +130,9 @@ Scenario: The MultiStep form is displayed correctly
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='2']/button[@*='submit']
 	Then the relevant elements are dislpayed
-	| Element                                                                                                                                     |
-	| To allow our property experts to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
-	| Phone number                                                                                                                                |
+	| Element                                                                                                                                             |
+	| To allow our holiday letting advisors to contact you by phone (including an initial call regarding your enquiry), please provide your phone number. |
+	| Phone number                                                                                                                                        |
 	When I wait up to 2 seconds for the following to be displayed: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	When I enter 07123456789 in the following form field: //*[@*='enquiry-multi-step' and @data-step='3']//input[@*='phone']
 	And I click //*[@*='enquiry-multi-step' and @data-step='3']/button[@*='submit']
@@ -141,7 +142,11 @@ Scenario: The MultiStep form is displayed correctly
 	| Please ensure the following details are correct                                                           |
 	| Your details will be used by the Sykes group to send you information about our property letting services. |
 	| Submit enquiry                                                                                            |
-	When I wait up to 2 seconds for the following to be displayed: //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
+	When I wait up to 2 seconds for the following to be displayed: //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking No, but I'm thinking of buying
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I try clicking //*[@*='enquiry-multi-step' and @data-step='4']/button[@*='submit']
+	And I wait up to 2 seconds for the following to be displayed: //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
 	And I click //*[@*='enquiry-multi-step' and @data-step='5']/button[@*='submit']
 	And I wait up to 5 seconds for the following to be displayed: Thank you for your enquiry
@@ -273,13 +278,15 @@ Scenario: The footer content is displayed correctly
 	| Privacy Policy                                             |
 	| /terms/cookiepolicy                                        |
 	| Cookie Policy                                              |
-	| Manage cookie preferences									 |
+	| Manage cookie preferences                                  |
 	| Press and media                                            |
 	| Holiday homes for sale                                     |
 	| Facebook                                                   |
 	| Twitter                                                    |
 	| Pinterest                                                  |
 	| Instagram                                                  |
+	| B Corp                                                     |
+	| Better Business Act		                                 |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The alerts disapear after an amount of time
@@ -410,6 +417,7 @@ Scenario: The relevant links are displayed on the page
 	| https://instagram.com/sykescottages/                            |
 	| https://policies.google.com/privacy                             |
 	| https://policies.google.com/terms                               |
+	| /about-us.html                                                  |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The relevant images are displayed on the page
@@ -491,7 +499,8 @@ Scenario: The relevant images are displayed on the page
 	| /images/icons-svg/social-media-icons/lyc/twitter.svg                                                                                       |
 	| /images/icons-svg/social-media-icons/lyc/pinterest.svg                                                                                     |
 	| /images/icons-svg/social-media-icons/lyc/instagram.svg                                                                                     |
-	| https://cdn.cookielaw.org/logos/static/poweredBy_ot_logo.svg                                                                               |
+	| https://media.sykesassets.co.uk/whitelabels/footer/logo_b_corp.svg                                                                         |
+	| https://media.sykesassets.co.uk/whitelabels/footer/logo_bba.svg															                 |
 
 @LetYourProperty @LYPRegressionSuite
 Scenario: The sticky header is displayed on the page
